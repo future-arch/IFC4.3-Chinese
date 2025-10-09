@@ -1,0 +1,726 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.10.3.16 IfcStructuralLoadGroup (结构载荷组) - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.10.3.16 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a> (结构载荷组)</h1>
+<div class="mvd" title="Included in Group Assignment, IfcStructuralLoadCase">RV ⓘ</div>
+<div class="mvd" title="Included in Group Assignment, IfcStructuralLoadCase">AbV ⓘ</div>
+<h2><a class="anchor" id="7.10.3.16.1-Semantic-definition-"></a>
+    7.10.3.16.1 语义定义（Semantic definition）
+<a class="link" href="#7.10.3.16.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p>实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 用于结构化物理影响。通过使用从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em> 继承的组功能，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em>（或其子类）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 的实例可用于定义载荷组、载荷工况和载荷组合。（另请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a></em>。）</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 新增实体。</aside><blockquote>
+<p>NOTE：通过现有的 IFC 实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em> 派生出的描述承载系统的功能非常重要。此类通过关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a></em> 提供所需的组机制。这样，可以明确确定属于特定载荷组的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 实例。</p>
+<p>NOTE：关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 用于将载荷工况分组到载荷组合中。此分配关系中提供的系数与可选的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>.Coefficient</em> 一起应用。与此系数始终影响载荷组不同，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a>.Factor</em> 特定于载荷工况-载荷组合对。在一个载荷组合中，使用与在载荷组合中应用的载荷工况的 <em>Factor</em> 相同数量的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 实例。另一方面，一个载荷工况可能出现在多个载荷组合中，并在每次通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 的分配中具有不同的 <em>Factor</em>。</p>
+<p>IFC4 变更：新增子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em>。新增了非正式命题和 WHERE 规则。预定义类型 LOAD_COMBINATION_GROUP 已废弃并移除。</p>
+</blockquote>
+<p><strong>非正式命题</strong></p>
+<ol>
+<li>类型为 LOAD_GROUP 的载荷组只能包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 的实例。</li>
+<li>类型为 LOAD_CASE 的载荷组应始终实例化自子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em>，而不是直接从通用类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 本身实例化。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em> 的实例只能包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 的实例或/和类型为 LOAD_GROUP 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 的实例。</li>
+<li>类型为 LOAD_COMBINATION 的载荷组只能包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em> 的实例。</li>
+</ol>
+<h2><a class="anchor" id="7.10.3.16.2-Entity-inheritance-"></a>
+    7.10.3.16.2 实体继承（Entity inheritance）
+<a class="link" href="#7.10.3.16.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcContext.htm">IfcContext</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActor.htm">IfcActor</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcControl.htm">IfcControl</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsset.htm">IfcAsset</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInventory.htm">IfcInventory</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralResultGroup.htm">IfcStructuralResultGroup</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSystem.htm">IfcSystem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes">
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="7.10.3.16.3-Attributes-"></a>
+    7.10.3.16.3 特性（Attributes）
+<a class="link" href="#7.10.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a class="anchor" id="-2eb7b38c-d7d0-47f7-8f7c-7483992f6306"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>特性（Attributes）</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
+<small>(7)</small>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击显示 18 个隐藏的继承特性
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击隐藏 18 个继承特性
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>
+<small>(7)</small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.10.3.16.A<a class="link" href="#-2eb7b38c-d7d0-47f7-8f7c-7483992f6306"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.10.3.16.4-Formal-propositions-"></a>
+    7.10.3.16.4 形式化命题（Formal propositions）
+<a class="link" href="#7.10.3.16.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-c47a6389-f664-4cda-8676-cdaff3b31149"></a><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HasObjectType</td>
+<td>
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(
+  (PredefinedType &lt;&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a>.USERDEFINED) AND
+  (ActionType &lt;&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActionTypeEnum.htm">IfcActionTypeEnum</a>.USERDEFINED) AND
+  (ActionSource &lt;&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActionSourceTypeEnum.htm">IfcActionSourceTypeEnum</a>.USERDEFINED)
+) OR EXISTS(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>.ObjectType)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.10.3.16.B<a class="link" href="#-c47a6389-f664-4cda-8676-cdaff3b31149"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.10.3.16.5-"></a>
+    7.10.3.16.5 属性集
+<a class="link" href="#7.10.3.16.5-"><i data-feather="link"></i></a></h2>
+<p>
+</p><ul class="psets">
+<li>
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Risk.htm">Pset_Risk</a>
+<ul>
+<li>RiskName</li>
+<li>RiskType</li>
+<li>NatureOfRisk</li>
+<li>RiskAssessmentMethodology</li>
+<li>UnmitigatedRiskLikelihood</li>
+<li>UnmitigatedRiskConsequence</li>
+<li>UnmitigatedRiskSignificance</li>
+<li>MitigationPlanned</li>
+<li>MitigatedRiskLikelihood</li>
+<li>MitigatedRiskConsequence</li>
+<li>MitigatedRiskSignificance</li>
+<li>MitigationProposed</li>
+<li>AssociatedProduct</li>
+<li>AssociatedActivity</li>
+<li>AssociatedLocation</li>
+</ul>
+</li>
+</ul>
+<p>
+</p><h2><a class="anchor" id="7.10.3.16.6-Concept-usage-"></a>
+    7.10.3.16.6 概念用法（Concept usage）
+<a class="link" href="#7.10.3.16.6-Concept-usage-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-c2fa91d9-485a-449b-97c4-cf277034721d"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>概念</th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
+<small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Constraint_Association/content.html">Constraint Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Document_Association/content.html">Document Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Library_Association/content.html">Library Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/content.html">Material Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/Material_Single/content.html">Material Single</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Nesting/content.html">Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>此概念可应用于以下资源</p>
+<ul>
+<li>
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Group_Assignment/content.html">Group Assignment</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>此概念可应用于以下资源</p>
+<ul>
+<li>
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Risk.htm">Pset_Risk</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    点击显示 18 个隐藏的继承概念
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    点击隐藏 18 个继承概念
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.10.3.16.C<a class="link" href="#-c2fa91d9-485a-449b-97c4-cf277034721d"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.10.3.16.7-Formal-representation-"></a>
+    7.10.3.16.7 形式化表示（Formal representation）
+<a class="link" href="#7.10.3.16.7-Formal-representation-"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>
+ SUPERTYPE OF (ONEOF
+	(<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a>))
+ SUBTYPE OF (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a>);
+	PredefinedType : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a>;
+	ActionType : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActionTypeEnum.htm">IfcActionTypeEnum</a>;
+	ActionSource : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActionSourceTypeEnum.htm">IfcActionSourceTypeEnum</a>;
+	Coefficient : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a>;
+	Purpose : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>;
+ INVERSE
+	SourceOfResultGroup : SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralResultGroup.htm">IfcStructuralResultGroup</a> FOR ResultForLoadGroup;
+	LoadGroupFor : SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a> FOR LoadedBy;
+ WHERE
+	HasObjectType : (
+  (PredefinedType &lt;&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a>.USERDEFINED) AND
+  (ActionType &lt;&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActionTypeEnum.htm">IfcActionTypeEnum</a>.USERDEFINED) AND
+  (ActionSource &lt;&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActionSourceTypeEnum.htm">IfcActionSourceTypeEnum</a>.USERDEFINED)
+) OR EXISTS(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>.ObjectType);
+END_ENTITY;</code></pre>
+<h2><a class="anchor" id="7.10.3.16.8-"></a>
+    7.10.3.16.8 参考文献
+<a class="link" href="#7.10.3.16.8-"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralResultGroup.htm">IfcStructuralResultGroup</a></li>
+</ul>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/domain/IfcStructuralAnalysisDomain/Entities/IfcStructuralLoadGroup.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/domain/IfcStructuralAnalysisDomain/Entities/IfcStructuralLoadGroup.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>
