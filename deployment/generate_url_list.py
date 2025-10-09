@@ -67,22 +67,45 @@ def generate_urls():
             for type_name in types.keys():
                 urls.add(f"{BASE_URL}/IFC/RELEASE/IFC4x3/HTML/lexical/{type_name}.htm")
 
-    # Schema 模块页面
+    # Schema 模块页面 - 完整列表
     schema_modules = [
-        "ifckernel", "ifccontrolextension", "ifcprocessextension",
-        "ifcproductextension", "ifcactorresource", "ifcapprovalresource",
-        "ifcconstraintresource", "ifccostresource", "ifcdatetimeresource",
-        "ifcexternalreferenceresource", "ifcgeometricconstraintresource",
-        "ifcgeometricmodelresource", "ifcgeometryresource",
-        "ifcmaterialresource", "ifcmeasureresource",
-        "ifcpresentationappearanceresource", "ifcpresentationdefinitionresource",
-        "ifcpresentationorganizationresource", "ifcprofileresource",
-        "ifcpropertyresource", "ifcquantityresource",
-        "ifcrepresentationresource", "ifcstructuralloadresource",
-        "ifctopologyresource", "ifcutilityresource",
-        "ifcsharedbldgelements", "ifcsharedbldgserviceelements",
-        "ifcsharedcomponentelements", "ifcsharedfacilitieselements",
-        "ifcsharedinfrastructureelements", "ifcsharedmgmtelements",
+        # Core schemas
+        "ifckernel", "ifccontrolextension", "ifcprocessextension", "ifcproductextension",
+
+        # Resource schemas
+        "ifcactorresource", "ifcapprovalresource", "ifcconstraintresource",
+        "ifccostresource", "ifcdatetimeresource", "ifcexternalreferenceresource",
+        "ifcgeometricconstraintresource", "ifcgeometricmodelresource", "ifcgeometryresource",
+        "ifcmaterialresource", "ifcmeasureresource", "ifcpresentationappearanceresource",
+        "ifcpresentationdefinitionresource", "ifcpresentationorganizationresource",
+        "ifcprofileresource", "ifcpropertyresource", "ifcquantityresource",
+        "ifcrepresentationresource", "ifcstructuralloadresource", "ifctopologyresource",
+        "ifcutilityresource",
+
+        # Shared schemas
+        "ifcsharedbldgelements", "ifcsharedbldgserviceelements", "ifcsharedcomponentelements",
+        "ifcsharedfacilitieselements", "ifcsharedinfrastructureelements", "ifcsharedmgmtelements",
+
+        # Domain schemas (建筑相关)
+        "ifcarchitecturedomain", "ifcbuildingelementdomain", "ifcbuildingcontrolsdomain",
+
+        # Domain schemas (设施服务)
+        "ifcelectricaldomain", "ifchvacdomain", "ifcplumbingfiredomain",
+
+        # Domain schemas (结构)
+        "ifcstructuralelementsdomain", "ifcstructuralanalysisdomain",
+
+        # Domain schemas (施工)
+        "ifcconstructionmgmtdomain",
+
+        # Domain schemas (港口与水路)
+        "ifcportandwaterwaydomain",
+
+        # Domain schemas (铁路)
+        "ifcraildomain",
+
+        # Domain schemas (道路)
+        "ifcroaddomain",
     ]
 
     for module in schema_modules:
