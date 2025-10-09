@@ -1,9 +1,9 @@
 #!/bin/bash
 # IFC 4.3 中文版 - 快速同步命令
-# 使用方法: ./sync [选项]
+# 使用方法: cd deployment && ./sync [选项]
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SYNC_SCRIPT="$SCRIPT_DIR/deployment/sync_from_source.py"
+SYNC_SCRIPT="$SCRIPT_DIR/sync_from_source.py"
 
 # 帮助信息
 show_help() {
@@ -11,6 +11,7 @@ show_help() {
 IFC 4.3 中文版 - 快速同步命令
 
 使用方法:
+  cd deployment
   ./sync                    # 检查待同步的更改
   ./sync check              # 检查待同步的更改
   ./sync auto               # 自动同步（检测+渲染+提交+推送）
@@ -22,7 +23,7 @@ IFC 4.3 中文版 - 快速同步命令
   ./sync auto
   ./sync file /path/to/IfcTrimmedCurve.md
 
-详细文档: deployment/SYNC_GUIDE.md
+详细文档: SYNC_GUIDE.md
 EOF
 }
 
