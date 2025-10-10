@@ -1,0 +1,80 @@
+name: Deploy to Tencent Cloud
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy Static Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 43.161.249.104 >> ~/.ssh/known_hosts
+
+      - name: Deploy to server
+        run: |
+          echo "🚀 Starting deployment..."
+
+          # 同步所有静态文件到服务器
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='README.md' \
+            --exclude='.gitignore' \
+            ./ \
+            deployer@43.161.249.104:/home/deployer/IFC4.3-Chinese/
+
+          echo "✅ Files synced to server"
+
+      - name: Verify deployment
+        run: |
+          echo "🔍 Verifying deployment..."
+
+          ssh deployer@43.161.249.104 << 'ENDSSH'
+            # 检查文件是否存在
+            if [ -f ~/IFC4.3-Chinese/index.html ]; then
+              echo "✅ index.html found"
+            else
+              echo "❌ index.html not found"
+              exit 1
+            fi
+
+            # 显示文件列表
+            echo "📂 Deployed files:"
+            ls -lh ~/IFC4.3-Chinese/ | head -10
+          ENDSSH
+
+          # 测试网站访问
+          echo "🌐 Testing website..."
+          if curl -f -s -I https://ifc4-3-chinese.19650.org 2>&1 | head -1 | grep -E "200|301|302"; then
+            echo "✅ Website is accessible"
+          else
+            echo "⚠️  Website may not be fully accessible yet"
+          fi
+
+          echo "✨ Deployment completed!"
+
+      - name: Deployment notification
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "🎉 Deployment succeeded!"
+            echo "🌐 Visit: https://ifc4-3-chinese.19650.org"
+          else
+            echo "❌ Deployment failed!"
+            exit 1
+          fi
