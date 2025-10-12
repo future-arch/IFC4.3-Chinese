@@ -13,7 +13,7 @@
 ## 📝 许可证
 本项目的中文译文部分遵循[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/deed.zh-hans)。
 本项目内容基于的buildingSMART国际IFC 4.3 标准规范遵循 [MIT License](LICENSE)，如有疑问请联系buildingSMART国际。
-本项目所有者（WEI Lai）保留所有二次创作内容（包括但不限于中文译文）的权利。
+本项目所有者（WEI Lai）保留部分二次创作内容（包括但不限于中文译文）的权利。
 
 ## 🤝 贡献
 
