@@ -180,7 +180,7 @@
 <h2><a class="anchor" id="7.2.4.12.3-"></a>
     7.2.4.12.3 属性
 <a class="link" href="#7.2.4.12.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-069902a3-6539-48d9-b595-413aa457f83f"></a><table>
+<figure><a class="anchor" id="-500b48a7-7507-4c71-975d-f7176fe7e7a9"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -196,7 +196,27 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerTypeFloating.htm">PEnum_ControllerTypeFloating</a></td>
 <td>
-<p>类型控制器、实现的信号修改及适用的端口</p>
+<p>类型控制器、实现的信号修改及适用的端口</p><p>CONSTANT：无输入；SignalOffset 被写入输出值。
+MODIFIER：读取单个模拟输入，加上 SignalOffset，乘以 SignalFactor，然后写入输出值。
+ABSOLUTE：读取单个模拟输入，并将绝对值写入输出值。
+INVERSE：读取单个模拟输入，将 1.0 除以输入值并写入输出值。
+HYSTERISIS：读取单个模拟输入，根据 SignalTime 延迟后写入输出值。
+RUNNINGAVERAGE：读取单个模拟输入，在 SignalTime 内取平均值后写入输出值。
+DERIVATIVE：读取单个模拟输入，并将 SignalTime 期间的变化率写入输出值。
+INTEGRAL：读取单个模拟输入，并将 SignalTime 期间的平均值写入输出值。
+BINARY：读取单个二进制输入，如果为 True，则将 SignalOffset 写入输出值。
+ACCUMULATOR：读取单个二进制输入，对于每个脉冲，将 SignalOffset 累加到累加器中，当累加器大于 SignalFactor 时，累加器减去 SignalFactor，整数结果加一。
+PULSECONVERTER：读取单个整数输入，对于每个增量，将 SignalMultiplier 累加并写入输出值。
+SUM：读取两个模拟输入，相加后写入输出值。
+SUBTRACT：读取两个模拟输入，相减后写入输出值。
+PRODUCT：读取两个模拟输入，相乘后写入输出值。
+DIVIDE：读取两个模拟输入，相除后写入输出值。
+AVERAGE：读取两个模拟输入，并将平均值写入输出值。
+MAXIMUM：读取两个模拟输入，并将最大值写入输出值。
+MINIMUM：读取两个模拟输入，并将最小值写入输出值。
+INPUT：控制器元件为专用输入。
+OUTPUT：控制器元件为专用输出。
+VARIABLE：控制器元件为内存变量。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ControlType.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -205,7 +225,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>/<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>表将值映射到标签</p>
+<p>表将值映射到标签</p><p>标签指示过渡点，例如“高”、“低”、“高高”或“低低”。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Labels.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -223,7 +243,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>预期范围和默认值。</p>
+<p>预期范围和默认值。</p><p>预期范围和默认值。虽然属性数据类型为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a>（以支持所有情况，包括单位未知的情况），但可以选择提供一个单位以指示度量和单位。LowerLimitValue 和 UpperLimitValue 必须在物理范围内，并可用于在绘制 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerPHistory.htm">Pset_ControllerPHistory</a>.Value 时确定范围。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Value.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -255,7 +275,7 @@
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SignalTime.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.2.4.12.A<a class="link" href="#-069902a3-6539-48d9-b595-413aa457f83f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.2.4.12.A<a class="link" href="#-500b48a7-7507-4c71-975d-f7176fe7e7a9"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
