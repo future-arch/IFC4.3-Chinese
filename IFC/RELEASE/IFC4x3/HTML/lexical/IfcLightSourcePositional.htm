@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.14.3.7 IfcLightSourcePositional - IFC 4.3.2 Documentation</title>
+<title>8.14.3.7 IfcLightSourcePositional（光源-位置光） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,19 +189,19 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.14.3.7 IfcLightSourcePositional</h1>
+<h1>8.14.3.7 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightSourcePositional.htm">IfcLightSourcePositional</a>（光源-位置光）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.14.3.7.1-Semantic-definition-"></a>
     8.14.3.7.1 语义定义（Semantic definition）
 <a class="link" href="#8.14.3.7.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> 根据 ISO 10303-46 定义：
-位置光源实体是光源的子类型。此光源实体具有光源位置和衰减系数。位置光源根据表面的方向和位置影响表面。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/IEC 14772-1:1997 定义：
-点光源节点指定局部坐标系中的一个三维位置光源。点光源向所有方向均匀发射光线；即，它是全向的。点光源节点在局部坐标系中指定，并受祖先变换的影响。</aside><aside class="aside-note"><mark>注释</mark> 对应的 ISO 10303 实体：light_source_positional。请参考 ISO/IS 10303-46:1994，第 32 页，获取正式标准的最终定义。</aside><aside class="aside-note"><mark>注释</mark> 除了 ISO10303-46 中定义的特性外，还向此子类型添加了 ISO/IEC 14772-1:1997 (VRML) 中的附加属性 <em>Radius</em> 和 <em>QuadricAttenuation</em>，并且 <em>AmbientIntensity</em> 和 <em>Intensity</em> 从超类型继承而来。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体，IFC2x2 中重命名并增强。</aside><blockquote>
-<p>点光源节点的照明随距离衰减，由三个衰减系数指定。衰减因子为</p>
+<!-- 简短定义结束 -->
+<aside class="aside-note"><mark>注释</mark> 意 根据 ISO 10303-46 的定义：
+光源-位置光是光源的子类型。该实体具有光源位置和衰减系数。位置光源根据表面的朝向和位置来影响表面。</aside><aside class="aside-note"><mark>注释</mark> 意 根据 ISO/IEC 14772-1:1997 的定义：
+点光源节点在局部坐标系中指定一个 3D 位置的点光源。点光源在所有方向上均匀发光；也就是说，它是全向的。点光源节点在局部坐标系中指定，并受祖先变换的影响。</aside><aside class="aside-note"><mark>注释</mark> 意 对应的 ISO 10303 实体：light_source_positional。有关正式标准的最终定义，请参阅 ISO/IS 10303-46:1994 第 32 页。</aside><aside class="aside-note"><mark>注释</mark> 意 除了 ISO10303-46 中定义的属性外，来自 ISO/IEC 14772-1:1997 (VRML) 的附加属性 <em>Radius</em> 和 <em>QuadricAttenuation</em> 已添加到此子类型，而 <em>AmbientIntensity</em> 和 <em>Intensity</em> 则从超类型继承。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体，在 IFC2x2 中重命名并增强。</aside><blockquote>
+<p>点光源节点的光照随距离衰减，由三个衰减系数指定。衰减因子为</p>
 <blockquote>
-<p>1/max(attenuation[0] + attenuation[1] × r + attenuation[2] × r 2 , 1),
-其中 r 是从光源到被照亮表面的距离。默认值为无衰减。衰减值为 (0, 0, 0) 等同于 (1, 0, 0)。衰减值应大于或等于零。</p>
+<p>1/max(attenuation[0] + attenuation[1] × r + attenuation[2] × r 2 , 1)，
+其中 r 是从光源到被照明表面的距离。默认值为无衰减。衰减值 (0, 0, 0) 等同于 (1, 0, 0)。衰减值应大于或等于零。</p>
 </blockquote>
 </blockquote>
 <h2><a class="anchor" id="8.14.3.7.2-Entity-inheritance-"></a>
@@ -273,7 +273,7 @@
     8.14.3.7.3 特性（Attributes）
 <a class="link" href="#8.14.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c83f5d00-43e9-436b-adf7-6225c4bae662"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7d74102c-fd9d-4e5b-832f-bc6f7f87182a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -295,81 +295,10 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已限制为最多 1 个。文件交换的向后兼容性得到保证。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightSource.htm">IfcLightSource</a>
 <small>(4)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Name
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>在表示中为光源指定的名称。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                LightColour
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
-<td data-label="Description">
-<p>ISO/CD 10303-46:1992 定义：基于当前光照模型，用于着色的光的颜色。
-VRML97 - ISO/IEC 14772-1:1997 定义：color 字段指定直接和环境光发射的光谱颜色属性，作为 RGB 值。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                AmbientIntensity
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
-<td data-label="Description">
-<p>VRML97 - ISO/IEC 14772-1:1997 定义：ambientIntensity 指定光的环境发射强度。光强度范围可以从 0.0（无光发射）到 1.0（全强度）。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                Intensity
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
-<td data-label="Description">
-<p>VRML97 - ISO/IEC 14772-1:1997 定义：intensity 字段指定光直接发射的亮度。光强度范围可以从 0.0（无光发射）到 1.0（全强度）。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -390,70 +319,8 @@ VRML97 - ISO/IEC 14772-1:1997 定义：color 字段指定直接和环境光发�
 <small>(5)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                Position
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></td>
-<td data-label="Description">
-<p>ISO/CD 10303-46:1992 定义：笛卡尔坐标点指示光源的位置。
-VRML97 - ISO/IEC 14772-1:1997 定义：点光源节点照亮其位置半径范围内的几何体。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                Radius
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>表面仍被照亮的光源的最大距离。
-VRML97 - ISO/IEC 14772-1:1997 定义：点光源节点照亮其位置半径范围内的几何体。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">7</td>
-<td data-label="Name">
-                
-                ConstantAttenuation
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
-<td data-label="Description">
-<p>ISO/CD 10303-46:1992 定义：此实数指示照明方程中恒定衰减的值。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">8</td>
-<td data-label="Name">
-                
-                DistanceAttenuation
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
-<td data-label="Description">
-<p>ISO/CD 10303-46:1992 定义：此实数指示照明方程中与光源距离成比例的衰减值。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">9</td>
-<td data-label="Name">
-                
-                QuadricAttenuation
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
-<td data-label="Description">
-<p>此实数指示照明方程中与光源距离的平方成比例的衰减值。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.14.3.7.A<a class="link" href="#-c83f5d00-43e9-436b-adf7-6225c4bae662"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.14.3.7.A<a class="link" href="#-7d74102c-fd9d-4e5b-832f-bc6f7f87182a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.14.3.7.4-Formal-representation-"></a>
     8.14.3.7.4 形式化表示（Formal representation）
 <a class="link" href="#8.14.3.7.4-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -525,5 +392,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
