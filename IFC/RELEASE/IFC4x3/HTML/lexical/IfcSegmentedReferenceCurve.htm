@@ -284,7 +284,7 @@
     8.9.3.62.3 特性（Attributes）
 <a class="link" href="#8.9.3.62.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f4a37f34-000a-4750-95b5-0ab64fc13f6c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c9ceabca-4d85-43be-8609-fd07754dba96"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -306,16 +306,107 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a>
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
+<p>此抽象类的空间维度，对所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）有不同的定义。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a>
 <small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Segments
+                
+            </td>
+<td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegment.htm">IfcSegment</a></td>
+<td data-label="Description">
+<p>The component bounded curves, their transitions and senses. The transition attribute for the last segment defines the transition between the end of the last segment and the start of the first; this transition attribute may take the value discontinuous, which indicates an open curve.</p>
+<blockquote>
+<p>NOTE : For <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGradientCurve.htm">IfcGradientCurve</a></em> and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegmentedReferenceCurve.htm">IfcSegmentedReferenceCurve</a></em> the segments define the interpolation between segment start and and segment end.</p>
+</blockquote>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                SelfIntersect
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
+<td data-label="Description">
+<p>Indication of whether the curve intersects itself or not; this is for information only.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>NSegments</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">SIZEOF(Segments)</code></pre>
+<p>The number of component curves.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>ClosedCurve</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">Segments[NSegments].Transition &lt;&gt; Discontinuous</code></pre>
+<p>Indication whether the curve is closed or not; this is derived from the transition code of the last segment.</p>
 </td>
 </tr>
 <tr class="preview">
@@ -336,8 +427,32 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                BaseCurve
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a></td>
+<td data-label="Description">
+<p>为分段曲线定义提供线性参考系的基曲线。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                EndPoint
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a></td>
+<td data-label="Description">
+<p>提供分段参考曲线终止点位置和方向的显式端点放置。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.9.3.62.B<a class="link" href="#-f4a37f34-000a-4750-95b5-0ab64fc13f6c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.62.B<a class="link" href="#-c9ceabca-4d85-43be-8609-fd07754dba96"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.62.4-Formal-representation-"></a>
     8.9.3.62.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.62.4-Formal-representation-"><i data-feather="link"></i></a></h2>
