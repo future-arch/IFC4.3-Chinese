@@ -264,7 +264,7 @@
     8.9.3.2.3 特性（Attributes）
 <a class="link" href="#8.9.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0d5f42a0-4b93-41f7-8a80-9195dc990b35"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-89a4d213-a3e3-410a-bb1f-dba0f5c6760d"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -286,10 +286,58 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a>
 <small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Location
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></td>
+<td data-label="Description">
+<p>The geometric position of a reference point, such as the center of a circle, of the item to be located.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">Location.Dim</code></pre>
+<p>The space dimensionality of this class, derived from the dimensionality of the location.</p>
 </td>
 </tr>
 <tr class="preview">
@@ -310,12 +358,39 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                RefDirection
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>用于确定局部 X 轴方向的方向向量。如果省略该值，则默认为 [1.0, 0.0]。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>P</em>
+</td>
+<td data-label="Type">LIST [2:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuild2Axes.htm">IfcBuild2Axes</a>(RefDirection)</code></pre>
+<p><em>P[1]</em>：定位 X 轴的归一化方向。如果省略 <em>RefDirection</em>，则为 [1.0,0.0]。
+<em>P[2]</em>：定位 Y 轴的归一化方向。此为派生属性，且与 P[1] 正交。如果省略 <em>RefDirection</em>，则默认为 [0.0,1.0]。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.9.3.2.B<a class="link" href="#-0d5f42a0-4b93-41f7-8a80-9195dc990b35"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.2.B<a class="link" href="#-89a4d213-a3e3-410a-bb1f-dba0f5c6760d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.2.4-Formal-propositions-"></a>
     8.9.3.2.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.2.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d6bd0d43-d40e-4279-9ff7-67c9a294ce03"></a><table>
+<figure><a class="anchor" id="-8af0eb9e-73b8-4bde-ad46-256db47d3bef"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -363,7 +438,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.2.C<a class="link" href="#-d6bd0d43-d40e-4279-9ff7-67c9a294ce03"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.2.C<a class="link" href="#-8af0eb9e-73b8-4bde-ad46-256db47d3bef"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.2.5-Formal-representation-"></a>
     8.9.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>
