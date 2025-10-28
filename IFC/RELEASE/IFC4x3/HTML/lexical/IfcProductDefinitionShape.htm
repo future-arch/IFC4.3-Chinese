@@ -226,7 +226,7 @@
     8.18.3.9.3 特性（Attributes）
 <a class="link" href="#8.18.3.9.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-dfabdc3c-a2a7-47ef-9b46-93d66bfd0642"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6091fcfd-cd4a-44c8-9948-dfdde941d887"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -248,6 +248,42 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The word or group of words by which the product representation is known.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>The word or group of words that characterize the product representation. It can be used to add additional meaning to the name of the product representation.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Representations
+                
+            </td>
+<td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></td>
+<td data-label="Description">
+<p>Contained list of representations (including shape representations). Each member defines a valid representation of a particular type within a particular representation context.</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -266,12 +302,35 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ShapeOfProduct</em>
+</td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a> FOR Representation</td>
+<td data-label="Description">
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 应用于为一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 实例提供表示。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向关系基数放宽为1:N。</aside><blockquote>
+<p>IFC2x3变更 新增反向属性。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasShapeAspects</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeAspect.htm">IfcShapeAspect</a> FOR PartOfProductDefinitionShape</td>
+<td data-label="Description">
+<p>对表示形状部分或其特征的形状方面的引用。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.18.3.9.A<a class="link" href="#-dfabdc3c-a2a7-47ef-9b46-93d66bfd0642"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.9.A<a class="link" href="#-6091fcfd-cd4a-44c8-9948-dfdde941d887"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.9.4-Formal-propositions-"></a>
     8.18.3.9.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.9.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7fdae2d7-24e9-4874-9de4-fa41831ce3a5"></a><table>
+<figure><a class="anchor" id="-5ce0f3ef-1756-4bb5-8e05-0a12cf997444"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -293,7 +352,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.9.B<a class="link" href="#-7fdae2d7-24e9-4874-9de4-fa41831ce3a5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.9.B<a class="link" href="#-5ce0f3ef-1756-4bb5-8e05-0a12cf997444"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.9.5-Formal-representation-"></a>
     8.18.3.9.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.9.5-Formal-representation-"><i data-feather="link"></i></a></h2>
