@@ -155,7 +155,7 @@
 <p>根据 ISO 6707-1 的定义：表面及其交界的最终覆盖层和处理。</p>
 </blockquote>
 <p>覆盖层是与被覆盖元素及另一侧空间具有关联关系的元素，它们可能包含由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a></em> 分配的开洞、由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 分配的材料信息等。</p>
-<aside class="aside-example"><mark>示例</mark> 覆盖层包括墙面覆层、铺面、吊顶、线脚和踢脚板。</aside><aside class="aside-note"><mark>注释</mark> 关于空间覆层、铺面和顶棚的更基础信息可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceCommon.htm">Pset_SpaceCommon</a></em> 属性附加到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em>。此时仅能提供名称，覆盖层数量将从空间数量中解读。</aside>
+<aside class="aside-example"><mark>示例</mark> 覆盖层包括墙面覆层、路面、吊顶、线脚和踢脚板。</aside><aside class="aside-note"><mark>注释</mark> 关于空间覆层、路面和顶棚的更基础信息可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceCommon.htm">Pset_SpaceCommon</a></em> 属性附加到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em>。此时仅能提供名称，覆盖层数量将从空间数量中解读。</aside>
 <p>覆盖层可以被分配到：</p>
 <ul>
 <li>由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em> 表示的空间</li>
@@ -279,7 +279,7 @@
     6.1.3.12.3 特性（Attributes）
 <a class="link" href="#6.1.3.12.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e16c555d-916a-49ce-8a36-725c09b1486e"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-602c7047-d3a4-44b5-a2db-f6d7126cc76e"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -301,10 +301,134 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>在整个软件世界中分配全局唯一标识符。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>用于交换信息性注释的可选描述。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(7)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssignments</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssigns.htm">IfcRelAssigns</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>通过关联关系将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的其他子类型分配到此对象实例的关系对象引用。例如与产品、过程、控制、资源或组的关联。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Nests</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为组成部分。对象实例或类型只能是一个分解的组成部分（仅允许层次结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>Decomposes</em> 分离。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsNestedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>IsDecomposedBy</em> 分离。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>指向提供上下文信息（如项目单位或表示上下文）的上下文的引用。应仅对最顶层的非空间对象声明此属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDecomposedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Decomposes</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为组成部分。对象定义只能是一个分解的组成部分（仅允许层次结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>将外部引用或其他资源定义关联到对象的关系对象引用。例如与库、文档或分类的关联。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -313,16 +437,260 @@
 <small>(5)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ObjectType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>类型表示进一步指示对象的特定类型。其用途需在可实例化子类型层级确定。特别地，当 <em>PredefinedType</em> 属性枚举设置为USERDEFINED，或当实例化的具体实体没有PredefinedType属性时，该属性保存用户定义类型。后者出现在某些特殊的叶类以及直接实例化IfcBuiltElement时</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDeclaredBy</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>指向声明对象的关联关系链接，该声明对象为此对象实例提供对象定义。声明对象必须是对象类型分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型包含特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，基于文件交换的向上兼容性变更</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Declares</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>指向接收对象定义的反映对象的关联关系链接。反映对象必须是对象实例分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型提供特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，基于文件交换的向上兼容性变更</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsTypedBy</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>指向为此对象实例提供类型定义的对象类型的关联关系集合。随后关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 或其子类型包含特定信息（或类型、样式），这些信息对于引用相同类型的所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的实例是通用的</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，之前 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 的链接包含在逆关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 中。基于文件交换的向上兼容性变更</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDefinedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>附加到此对象的属性集定义的关联关系集合。这些静态或动态定义的属性包含进一步定义对象的字母数字信息内容</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，保持基于文件交换的向上兼容性</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>
 <small>(5)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                ObjectPlacement
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></td>
+<td data-label="Description">
+<p>这建立了对象坐标系和产品在空间中的放置。放置可以是绝对的（相对于世界坐标系）、相对的（相对于另一个产品的对象放置）或受约束的（例如相对于网格轴线或线性定位元素）。放置的类型由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 的各种子类型确定。如果存在表示，则必须提供对象放置。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                Representation
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></td>
+<td data-label="Description">
+<p>对产品表示的引用，可以是表示（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></em>）或作为形状表示的特殊情况（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em>）。产品定义形状在由对象放置定义的同一对象坐标系内提供对象形状属性的多个几何表示。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ReferencedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
+<td data-label="Description">
+<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 关系的引用，通过该关系，其他产品、过程、控制、资源或参与者（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的子类型）可以与此产品相关。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PositionedRelativeTo</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a> FOR RelatedProducts</td>
+<td data-label="Description">
+<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> 关系的引用，该关系定义了其与定位元素的关系。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ReferencedInStructures</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> FOR RelatedElements</td>
+<td data-label="Description">
+<p>对对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 的引用，可用于将产品与一个或多个空间结构元素相关联，除了其主要包含的空间结构元素。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a>
 <small>(13)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Tag
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>产品特定实例处的标签（或标记）标识符，例如序列号或位置编号。这是在实例级别的标识符。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>FillsVoids</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFillsElement.htm">IfcRelFillsElement</a> FOR RelatedBuildingElement</td>
+<td data-label="Description">
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFillsElement.htm">IfcRelFillsElement</a></em> 关系，该关系将构件作为填充物放入在另一个构件中创建的开口中。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ConnectedTo</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsElements.htm">IfcRelConnectsElements</a> FOR RelatingElement</td>
+<td data-label="Description">
+<p>引用构件连接关系。该关系随后引用此构件连接到的其他构件。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsInterferedByElements</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a> FOR RelatedElement</td>
+<td data-label="Description">
+<p>引用干涉关系以指示被干涉的构件。如果提供该关系，则表明此构件与一个或多个其他构件存在干涉。</p>
+<aside class="aside-note"><mark>注释</mark> <em>IsInterferedByElements</em> 和 <em>InterferesElements</em> 之间没有优先顺序指示。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向关系。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>InterferesElements</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a> FOR RelatingElement</td>
+<td data-label="Description">
+<p>引用干涉关系以指示进行干涉的构件。如果提供该关系，则表明此构件与一个或多个其他构件存在干涉。</p>
+<aside class="aside-note"><mark>注释</mark> <em>IsInterferedByElements</em> 和 <em>InterferesElements</em> 之间没有优先顺序指示。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向关系。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProjections</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelProjectsElement.htm">IfcRelProjectsElement</a> FOR RelatingElement</td>
+<td data-label="Description">
+<p>投影关系，向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltElement.htm">IfcBuiltElement</a></em> 添加特征（使用布尔并集）。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasOpenings</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a> FOR RelatingBuildingElement</td>
+<td data-label="Description">
+<p>引用在构件中创建开口的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a></em> 关系。一个构件可以包含零到多个开口。对于每个使构件形成空腔的开口，都会生成一个新的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a></em> 关系。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsConnectionRealization</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsWithRealizingElements.htm">IfcRelConnectsWithRealizingElements</a> FOR RealizingElements</td>
+<td data-label="Description">
+<p>引用与实现构件的连接关系。如果提供该关系，则将此构件分配为连接的实现构件，提供连接关系的物理表现。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ProvidesBoundaries</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a> FOR RelatedBuildingElement</td>
+<td data-label="Description">
+<p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> 引用空间边界。它定义了构件边界空间的概念。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ConnectedFrom</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsElements.htm">IfcRelConnectsElements</a> FOR RelatedElement</td>
+<td data-label="Description">
+<p>引用构件连接关系。该关系随后引用连接到此构件的其他构件。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ContainedInStructure</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a> FOR RelatedElements</td>
+<td data-label="Description">
+<p>与空间结构元素的包含关系，构件主要与此关联。此包含关系必须是层次性的，即构件只能直接分配给零个或一个空间结构。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasCoverings</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a> FOR RelatingBuildingElement</td>
+<td data-label="Description">
+<p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></em> 引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCovering.htm">IfcCovering</a></em>。它定义了具有相关覆盖物的构件概念。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasSurfaceFeatures</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAdheresToElement.htm">IfcRelAdheresToElement</a> FOR RelatingElement</td>
+<td data-label="Description">
+<p>引用将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceFeature.htm">IfcSurfaceFeature</a></em> 附着到构件的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAdheresToElement.htm">IfcRelAdheresToElement</a></em> 关系。一个构件可以在一个关系中包含零到多个表面特征。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -343,12 +711,46 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                PredefinedType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoveringTypeEnum.htm">IfcCoveringTypeEnum</a></td>
+<td data-label="Description">
+<p>预定义类型，用于定义覆盖层的特定类型。每个预定义类型可能有可用的属性集定义。</p>
+<aside class="aside-note"><mark>注释</mark> <em>PredefinedType</em> 应仅在未分配 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoveringType.htm">IfcCoveringType</a></em>（提供其自身的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoveringType.htm">IfcCoveringType</a>.PredefinedType</em>）时使用。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>CoversSpaces</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a> FOR RelatedCoverings</td>
+<td data-label="Description">
+<p>引用处理覆盖层与被覆盖空间关系的对象化关系。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>CoversElements</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a> FOR RelatedCoverings</td>
+<td data-label="Description">
+<p>引用处理覆盖层与被覆盖元素关系的对象化关系。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 为保持一致性，更名为 <em>CoversElements</em>。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 6.1.3.12.A<a class="link" href="#-e16c555d-916a-49ce-8a36-725c09b1486e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.12.A<a class="link" href="#-602c7047-d3a4-44b5-a2db-f6d7126cc76e"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.12.4-Formal-propositions-"></a>
     6.1.3.12.4 形式化命题（Formal propositions）
 <a class="link" href="#6.1.3.12.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-94319eef-906d-4469-9abf-67b0882794d0"></a><table>
+<figure><a class="anchor" id="-e1ce8fd4-f110-4f55-bab2-d55c487a95ff"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -382,7 +784,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.3.12.B<a class="link" href="#-94319eef-906d-4469-9abf-67b0882794d0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.12.B<a class="link" href="#-e1ce8fd4-f110-4f55-bab2-d55c487a95ff"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.12.5-"></a>
     6.1.3.12.5 属性集
 <a class="link" href="#6.1.3.12.5-"><i data-feather="link"></i></a></h2>
@@ -708,7 +1110,7 @@
 </p><h2><a class="anchor" id="6.1.3.12.6-Concept-usage-"></a>
     6.1.3.12.6 概念用法（Concept usage）
 <a class="link" href="#6.1.3.12.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-64f6e7f1-459a-47f8-84b4-ea1743268c74"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-eebf112e-4df4-4dae-b5b6-6050d3bccd6f"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -1848,6 +2250,22 @@
 </tr>
 <tr>
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Quantity_Sets/content.html">Quantity Sets</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>此概念可应用于以下资源</p>
+<ul>
+<li>
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_CoveringBaseQuantities.htm">Qto_CoveringBaseQuantities</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/Material_Layer_Set_Usage/content.html">Material Layer Set Usage</a>
 </td>
 <td data-label="Usage">
@@ -1976,24 +2394,8 @@
 </ul>
 </td>
 </tr>
-<tr>
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Quantity_Sets/content.html">Quantity Sets</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>此概念可应用于以下资源</p>
-<ul>
-<li>
-<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_CoveringBaseQuantities.htm">Qto_CoveringBaseQuantities</a>
-</li>
-</ul>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 6.1.3.12.C<a class="link" href="#-64f6e7f1-459a-47f8-84b4-ea1743268c74"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.12.C<a class="link" href="#-eebf112e-4df4-4dae-b5b6-6050d3bccd6f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.12.7-Formal-representation-"></a>
     6.1.3.12.7 形式化表示（Formal representation）
 <a class="link" href="#6.1.3.12.7-Formal-representation-"><i data-feather="link"></i></a></h2>
