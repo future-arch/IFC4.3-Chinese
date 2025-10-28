@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.10.3.16 IfcStructuralLoadGroup (结构载荷组) - IFC 4.3.2 Documentation</title>
+<title>7.10.3.16 IfcStructuralLoadGroup（结构荷载组） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -159,25 +159,22 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>7.10.3.16 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a> (结构载荷组)</h1>
+<h1>7.10.3.16 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>（结构荷载组）</h1>
 <div class="mvd" title="Included in Group Assignment, IfcStructuralLoadCase">RV ⓘ</div>
 <div class="mvd" title="Included in Group Assignment, IfcStructuralLoadCase">AbV ⓘ</div>
 <h2><a class="anchor" id="7.10.3.16.1-Semantic-definition-"></a>
     7.10.3.16.1 语义定义（Semantic definition）
 <a class="link" href="#7.10.3.16.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 用于结构化物理影响。通过使用从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em> 继承的组功能，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em>（或其子类）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 的实例可用于定义载荷组、载荷工况和载荷组合。（另请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a></em>。）</p>
-<!-- end of short definition -->
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 新增实体。</aside><blockquote>
-<p>NOTE：通过现有的 IFC 实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em> 派生出的描述承载系统的功能非常重要。此类通过关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a></em> 提供所需的组机制。这样，可以明确确定属于特定载荷组的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 实例。</p>
-<p>NOTE：关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 用于将载荷工况分组到载荷组合中。此分配关系中提供的系数与可选的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>.Coefficient</em> 一起应用。与此系数始终影响载荷组不同，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a>.Factor</em> 特定于载荷工况-载荷组合对。在一个载荷组合中，使用与在载荷组合中应用的载荷工况的 <em>Factor</em> 相同数量的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 实例。另一方面，一个载荷工况可能出现在多个载荷组合中，并在每次通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 的分配中具有不同的 <em>Factor</em>。</p>
-<p>IFC4 变更：新增子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em>。新增了非正式命题和 WHERE 规则。预定义类型 LOAD_COMBINATION_GROUP 已废弃并移除。</p>
+<p>实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 用于构建物理影响的结构。通过使用从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em> 继承的分组特性，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em>（或其子类）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 的实例可用于定义荷载组、荷载工况和荷载组合。（另见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a></em>。）</p>
+<aside class="aside-note"><mark>注释</mark> 描述承重系统的重要功能源自现有的 IFC 实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em>。该类通过关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a></em> 提供了所需的分组机制。通过这种方式，可以明确确定属于特定荷载组的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 实例。</aside><aside class="aside-note"><mark>注释</mark> 关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 用于将荷载工况分组为荷载组合。此分配关系中提供的系数应与可选的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>.Coefficient</em> 一起应用。与始终影响荷载组的该系数不同，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a>.Factor</em> 特定于荷载工况—荷载组合对。在一个荷载组合中使用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 实例数量与荷载组合中要应用于荷载工况的不同 <em>Factor</em> 数量相同。另一方面，一个荷载工况可能出现在多个荷载组合中，并且在每个通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 进行的分配中可以具有不同的 <em>Factor</em>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><blockquote>
+<p>IFC4 变更：添加了子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em>。添加了非正式命题和 WHERE 规则。预定义类型 LOAD_COMBINATION_GROUP 已过时并移除。</p>
 </blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>类型为 LOAD_GROUP 的载荷组只能包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 的实例。</li>
-<li>类型为 LOAD_CASE 的载荷组应始终实例化自子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em>，而不是直接从通用类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 本身实例化。</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em> 的实例只能包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 的实例或/和类型为 LOAD_GROUP 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 的实例。</li>
-<li>类型为 LOAD_COMBINATION 的载荷组只能包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em> 的实例。</li>
+<li>类型为 LOAD_GROUP 的荷载组应仅包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 的实例。</li>
+<li>类型为 LOAD_CASE 的荷载组应始终从子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em> 实例化，而不是直接从通用类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 本身实例化。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em> 的实例应仅包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 的实例和/或类型为 LOAD_GROUP 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 实例。</li>
+<li>类型为 LOAD_COMBINATION 的荷载组应仅包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em> 的实例。</li>
 </ol>
 <h2><a class="anchor" id="7.10.3.16.2-Entity-inheritance-"></a>
     7.10.3.16.2 实体继承（Entity inheritance）
@@ -237,7 +234,7 @@
     7.10.3.16.3 特性（Attributes）
 <a class="link" href="#7.10.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-2eb7b38c-d7d0-47f7-8f7c-7483992f6306"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-ee35c606-5672-45ce-89e9-5295a8e4cd3f"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -296,11 +293,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.3.16.A<a class="link" href="#-2eb7b38c-d7d0-47f7-8f7c-7483992f6306"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.16.A<a class="link" href="#-ee35c606-5672-45ce-89e9-5295a8e4cd3f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.16.4-Formal-propositions-"></a>
     7.10.3.16.4 形式化命题（Formal propositions）
 <a class="link" href="#7.10.3.16.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c47a6389-f664-4cda-8676-cdaff3b31149"></a><table>
+<figure><a class="anchor" id="-aa642727-8515-4ebf-9ae8-51cba0264a2d"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -311,9 +308,7 @@
 <tr>
 <td>HasObjectType</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>如果预定义类型、作用类型或作用源设置为 USERDEFINED，则应给出 ObjectType 属性。</p>
 </td>
 </tr>
 <tr>
@@ -326,7 +321,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.3.16.B<a class="link" href="#-c47a6389-f664-4cda-8676-cdaff3b31149"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.16.B<a class="link" href="#-aa642727-8515-4ebf-9ae8-51cba0264a2d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.16.5-"></a>
     7.10.3.16.5 属性集
 <a class="link" href="#7.10.3.16.5-"><i data-feather="link"></i></a></h2>
@@ -357,7 +352,7 @@
 </p><h2><a class="anchor" id="7.10.3.16.6-Concept-usage-"></a>
     7.10.3.16.6 概念用法（Concept usage）
 <a class="link" href="#7.10.3.16.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c2fa91d9-485a-449b-97c4-cf277034721d"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-7688f236-c99a-4dd6-9856-d86468fa872a"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -380,7 +375,9 @@
                 General
             </td>
 <td data-label="Description">
-<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -391,7 +388,9 @@
                 General
             </td>
 <td data-label="Description">
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -639,7 +638,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.3.16.C<a class="link" href="#-c2fa91d9-485a-449b-97c4-cf277034721d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.16.C<a class="link" href="#-7688f236-c99a-4dd6-9856-d86468fa872a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.16.7-Formal-representation-"></a>
     7.10.3.16.7 形式化表示（Formal representation）
 <a class="link" href="#7.10.3.16.7-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -722,5 +721,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
