@@ -201,7 +201,7 @@
     5.1.3.48.3 特性（Attributes）
 <a class="link" href="#5.1.3.48.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-75214406-f2ad-4381-ad0b-77912505c8b9"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-52b6acf7-ed94-41a8-91bd-c8a272eb4f70"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -456,11 +456,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.48.A<a class="link" href="#-75214406-f2ad-4381-ad0b-77912505c8b9"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.48.C<a class="link" href="#-52b6acf7-ed94-41a8-91bd-c8a272eb4f70"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.48.4-Formal-propositions-"></a>
     5.1.3.48.4 形式化命题（Formal propositions）
 <a class="link" href="#5.1.3.48.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-93d78d5c-df3f-4565-9c50-c5d9599cd94e"></a><table>
+<figure><a class="anchor" id="-92fe2e09-c8a4-40f2-b8c7-4cfef5be3958"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -483,7 +483,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.48.B<a class="link" href="#-93d78d5c-df3f-4565-9c50-c5d9599cd94e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.48.D<a class="link" href="#-92fe2e09-c8a4-40f2-b8c7-4cfef5be3958"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.48.5-"></a>
     5.1.3.48.5 属性集
 <a class="link" href="#5.1.3.48.5-"><i data-feather="link"></i></a></h2>
@@ -548,7 +548,7 @@
 </p><h2><a class="anchor" id="5.1.3.48.6-Concept-usage-"></a>
     5.1.3.48.6 概念用法（Concept usage）
 <a class="link" href="#5.1.3.48.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7b251822-e6e7-4133-84a4-4293b488c4a7"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-bfa3f8c4-dc91-4822-915e-cfa1847878b3"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -571,9 +571,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用IfcOwnerHistory捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -584,15 +582,24 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>IfcRoot分配全局唯一ID，同时还可为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例或对象类型都可以引用特定的分类参照，即分类系统中的特定分面。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -611,19 +618,6 @@
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
                 General
@@ -764,20 +758,22 @@
 </tr>
 <tr>
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/Product_Type_Geometric_Representation/content.html">Product Type Geometric Representation</a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/content.html">Product Type Shape</a>
 </td>
 <td data-label="Usage">
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><em>RepresentationMaps</em> 定义了类型产品形状，可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。引用是通过一个或多个具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为 <em>Items</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建的，这些表示将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置到空间上下文中，即通过使用笛卡尔变换运算符将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 变换到产品实例的对象坐标系中。</p>
+<p>图 5.1.3.48.A 展示了通过产品实例的形状表示引用表示映射的示例。此处笛卡尔变换运算符仅使用平移，而不使用旋转、镜像或缩放。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="表示映射" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 5.1.3.48.A — 具有单一放置的产品类型几何<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 5.1.3.48.B 展示了通过产品实例的形状表示多次引用表示映射的示例。此处笛卡尔变换运算符仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多次放置的模式。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="表示映射" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 5.1.3.48.B — 具有多次放置的产品类型几何<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/content.html">Product Type Shape</a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/Product_Type_Geometric_Representation/content.html">Product Type Geometric Representation</a>
 </td>
 <td data-label="Usage">
                 General
@@ -863,7 +859,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.48.C<a class="link" href="#-7b251822-e6e7-4133-84a4-4293b488c4a7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.48.E<a class="link" href="#-bfa3f8c4-dc91-4822-915e-cfa1847878b3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.48.7-Formal-representation-"></a>
     5.1.3.48.7 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.48.7-Formal-representation-"><i data-feather="link"></i></a></h2>
