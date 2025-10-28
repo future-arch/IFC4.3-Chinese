@@ -209,7 +209,7 @@
     6.5.3.2.3 特性（Attributes）
 <a class="link" href="#6.5.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-09986615-0392-4df2-854a-ef27a61eeac0"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3ec037bf-e2e1-4df6-aa43-0a9be734f0c7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -480,8 +480,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItemTypeEnum.htm">IfcCostItemTypeEnum</a></td>
 <td data-label="Description">
-<p>Predefined generic type for a cost item that is specified in an enumeration. There may be a property set given specifically for the predefined types.</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
+<p>在枚举中指定的成本项的预定义通用类型。可能有一个专门为预定义类型提供的属性集。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加该属性。</aside>
 </td>
 </tr>
 <tr>
@@ -493,10 +493,10 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></td>
 <td data-label="Description">
-<p>Component costs for which the total cost for the cost item is calculated, and then multiplied by the total <em>CostQuantities</em> if provided.</p>
-<p>If <em>CostQuantities</em> is provided then values indicate unit costs, otherwise values indicate total costs.</p>
-<p>For calculation purposes, the cost values may be directly added unless they have qualifications. Cost values with qualifications (e.g. <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.ApplicableDate</em>, <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.FixedUntilDate</em>) should be excluded from such calculation if they do not apply.</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
+<p>成本项的组件成本，用于计算成本项的总成本，如果提供了总 <em>CostQuantities</em>（成本数量），则乘以该数量。</p>
+<p>如果提供了 <em>CostQuantities</em>（成本数量），则值表示单位成本，否则值表示总成本。</p>
+<p>出于计算目的，除非成本值具有限定条件，否则可以直接相加。具有限定条件的成本值（例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.ApplicableDate</em>（成本值适用日期）、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.FixedUntilDate</em>（成本值固定至日期））如果不适用，则应从此类计算中排除。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加该属性。</aside>
 </td>
 </tr>
 <tr>
@@ -508,16 +508,16 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></td>
 <td data-label="Description">
-<p>Component quantities of the same type for which the total quantity for the cost item is calculated as the sum.</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
+<p>相同类型的组件数量，成本项的总数量计算为这些数量的总和。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加该属性。</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.5.3.2.A<a class="link" href="#-09986615-0392-4df2-854a-ef27a61eeac0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.2.B<a class="link" href="#-3ec037bf-e2e1-4df6-aa43-0a9be734f0c7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.2.4-Concept-usage-"></a>
     6.5.3.2.4 概念用法（Concept usage）
 <a class="link" href="#6.5.3.2.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-84769ee9-3014-484b-9787-01e7c0072a8e"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-a773bbce-3998-4644-83ea-f201aeb89d0a"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -540,9 +540,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用IfcOwnerHistory捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -553,15 +551,24 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>IfcRoot分配全局唯一ID，同时还可为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例或对象类型都可以引用特定的分类参照，即分类系统中的特定分面。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -580,19 +587,6 @@
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
                 General
@@ -689,19 +683,6 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
 </td>
 <td data-label="Usage">
@@ -721,6 +702,7 @@
                 General
             </td>
 <td data-label="Description">
+<p>任何对象实例都可通过分配至公共对象类型来实现类型化，这是通过本概念实现的。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型层级重写此概念，引入了限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 适用子类型的特定规则</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -737,14 +719,23 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型均可使用 <em>Name</em> 属性和可选的 <em>Description</em> 属性。对于具有对象类型定义的子类型（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例均可持有属性集，可直接在对象实例处作为元素特定属性集，或在对象类型处作为类型属性集。在这种情况下，提供给对象实例的属性是元素特定属性和类型属性的组合。如果在实例属性和类型属性中同时定义了相同属性（同一属性集内），则实例属性的属性值将覆盖类型属性的属性值</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
 </td>
 <td data-label="Usage">
                 General
@@ -769,6 +760,7 @@
                 General
             </td>
 <td data-label="Description">
+<p>控制通过使用关系对象 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a></em> 从产品、流程或其他对象进行分配。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -792,7 +784,24 @@
 <tr class="group">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>
-<small>(2)</small>
+<small>(3)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）实例用于成本估算、预算和其他形式，其中广泛使用各种识别代码来标识成本的含义。示例包括项目阶段代码、CSI 代码、提取序列号和成本账户。该模型允许所有最终为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型的类继承分配一个或多个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a>（分类引用）实例的能力。在需要识别代码的情况下，应使用通用的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesClassification.htm">IfcRelAssociatesClassification</a>（分类关联关系）功能。</p>
 </td>
 </tr>
 <tr>
@@ -809,6 +818,13 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）可以通过其与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）的关系，基于来自对象的数量进行计算。</p>
+<p>对于基于数量的成本计算，可以使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a>（元素）、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm">IfcTask</a>（任务）或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>（资源）出现子类型。可以分配相同或不同类型的多个元素，使用在每个对象上定义的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a>（物理数量）实体。每个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a>（物理数量）类型必须相同（例如，所有值都是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a>（面积数量）），以便它们可以相加。</p>
+<p>对于基于费率的成本计算（特别是对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostScheduleTypeEnum.htm">IfcCostScheduleTypeEnum</a>.SCHEDULEOFRATES</em>（成本计划类型枚举.费率表）），可以使用单个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a>（类型产品）、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProcess.htm">IfcTypeProcess</a>（类型流程）或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeResource.htm">IfcTypeResource</a>（类型资源）子类型来反映此类类型出现的费率。这使得能够基于具有基于费率的成本计划的类型，为出现生成基于数量的成本计划。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）也用于相反方向，将根 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）链接到 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>（成本计划），其中 RelatingControl（相关控制）是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>（成本计划）。</p>
+<p>图 6.5.3.2.A 说明了源自建筑元素的成本项分配。<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）指示了从中导出数量的建筑元素。未显示的是，成本也可以通过从分配的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>（产品）遍历到 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a>（流程）再到 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>（资源）的分配关系从建筑元素导出，其中所有成本最终源自资源。成本项也可以直接从流程或资源进行分配。</p>
+<figure><a class="anchor" id="-311-"></a><img alt="成本项" src="../figures/ifccostitem-assignment.png"/><figcaption>
+图 6.5.3.2.A — 成本分配<a class="link" href="#-311-"><i data-feather="link"></i></a></figcaption></figure>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -840,6 +856,8 @@
                 General
             </td>
 <td data-label="Description">
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）可以通过其与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>（嵌套关系）的关系嵌套其他 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）实例。这可用于实现复杂成本组的开发，如在成本计划中可能发现的，直至页面、部分和完整的成本计划。</p>
+<p>始终存在一个汇总成本项作为表示成本项嵌套的树的根项。后续的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）实例使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>（嵌套关系）分配给汇总成本项。汇总成本项本身通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>（成本计划）。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -849,7 +867,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.5.3.2.B<a class="link" href="#-84769ee9-3014-484b-9787-01e7c0072a8e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.2.C<a class="link" href="#-a773bbce-3998-4644-83ea-f201aeb89d0a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.2.5-Formal-representation-"></a>
     6.5.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#6.5.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>
