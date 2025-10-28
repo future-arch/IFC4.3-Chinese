@@ -277,7 +277,7 @@
     8.9.3.68.3 特性（Attributes）
 <a class="link" href="#8.9.3.68.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e706c26c-848a-4fde-9270-43048eecd14c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-b2da59bf-3aa1-4fd4-aaa0-0e2727b04037"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -299,10 +299,46 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
+<p>此抽象类的空间维度，对所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）有不同的定义。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -323,12 +359,64 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Curve3D
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
+<td data-label="Description">
+<p>作为曲面曲线三维表示形式的曲线。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                AssociatedGeometry
+                
+            </td>
+<td data-label="Type">LIST [1:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPcurve.htm">IfcPcurve</a></td>
+<td data-label="Description">
+<p>定义与曲面曲线关联的一个或两个曲面的参数曲线列表。列表中的两个元素表示该曲线具有两个曲面关联，这两个关联不必是不同曲面。作为参数曲线，它还在该曲面的参数空间中关联一条基曲线，作为曲面曲线的替代表示形式。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                MasterRepresentation
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreferredSurfaceCurveRepresentation.htm">IfcPreferredSurfaceCurveRepresentation</a></td>
+<td data-label="Description">
+<p><em>MasterRepresentation</em> 定义了用于确定 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceCurve.htm">IfcSurfaceCurve</a></em> 唯一参数化的曲线。
+主表示取 <em>Curve3D</em>、<em>PCurve_S1</em> 或 <em>PCurve_S2</em> 中的一个值，分别表示对关联几何列表中三维曲线、第一条参数曲线或第二条参数曲线的偏好。多重表示提供了以多种形式传递数据的能力，即使这些数据在几何上应是相同的。</p>
+<aside class="aside-note"><mark>注释</mark> 意 主表示属性承认确保多种形式确实完全相同的不可行性，并允许指示首选形式。这很可能由数据创建者确定。对于具有多重表示的实体，所有特性（如参数化、定义域和求值结果）均从主表示派生。使用其他表示形式是基于实际考虑的折衷方案。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>BasisSurface</em>
+</td>
+<td data-label="Type">SET [1:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(SELF)</code></pre>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceCurve.htm">IfcSurfaceCurve</a></em> 所位于的一个或多个曲面。这由 <em>AssociatedGeometry</em> 列表确定。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.9.3.68.A<a class="link" href="#-e706c26c-848a-4fde-9270-43048eecd14c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.68.A<a class="link" href="#-b2da59bf-3aa1-4fd4-aaa0-0e2727b04037"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.68.4-Formal-propositions-"></a>
     8.9.3.68.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.68.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-a25f61e2-197f-4b84-8c9a-cc592b9e4400"></a><table>
+<figure><a class="anchor" id="-e35f004b-244c-4f60-b385-f635bb336fb2"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -339,9 +427,7 @@
 <tr>
 <td>CurveIs3D</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p><em>Curve3D</em> 应在三维空间中定义。</p>
 </td>
 </tr>
 <tr>
@@ -352,9 +438,7 @@
 <tr>
 <td>CurveIsNotPcurve</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p><em>Curve3D</em> 不应是参数曲线。</p>
 </td>
 </tr>
 <tr>
@@ -363,7 +447,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.68.B<a class="link" href="#-a25f61e2-197f-4b84-8c9a-cc592b9e4400"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.68.B<a class="link" href="#-e35f004b-244c-4f60-b385-f635bb336fb2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.68.5-Formal-representation-"></a>
     8.9.3.68.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.68.5-Formal-representation-"><i data-feather="link"></i></a></h2>
