@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.24 IfcCosineSpiral - IFC 4.3.2 Documentation</title>
+<title>8.9.3.24 IfcCosineSpiral（余弦螺旋线） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,19 +189,19 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.24 IfcCosineSpiral</h1>
+<h1>8.9.3.24 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCosineSpiral.htm">IfcCosineSpiral</a>（余弦螺旋线）</h1>
 <div class="mvd" title="Included in Alignment Geometry - Horizontal, Alignment Geometry - Horizontal and Vertical, Alignment Geometry - Horizontal, Vertical and Cant">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.24.1-Semantic-definition-"></a>
     8.9.3.24.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.24.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCosineSpiral.htm">IfcCosineSpiral</a></em> 是一种螺旋曲线，其曲率变化取决于余弦函数。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCosineSpiral.htm">IfcCosineSpiral</a></em> 是一种螺旋曲线类型，其曲率变化依赖于余弦函数。</p>
 <!-- end of short definition -->
-<p>余弦螺旋曲线由其曲线长度参数化，对于给定的参数 \(s\)，航向角 \(\theta(s)\) 和曲率 \(\kappa(s)\) 定义如下。这里，\(A_0\) 对应于 <em>ConstantTerm</em>，\(A_1\) 对应于 <em>CosineTerm</em>。</p>
+<p>余弦螺旋线由其曲线长度参数化，对于给定参数 \(s\)，航向角 \(\theta(s)\) 和曲率 \(\kappa(s)\) 定义如下。其中，\(A_0\) 对应 <em>ConstantTerm</em>，\(A_1\) 对应 <em>CosineTerm</em>。</p>
 <p><strong>航向角：</strong></p>
-<p><em>航向角</em> \(\theta(s)\) 表示曲线在给定弧长处的切线方向。它指示了曲线在这一点“指向”的方向。当沿着曲线移动时，\(\theta(s)\) 会发生变化，显示了曲线方向的演变。</p>
+<p><em>航向角</em> \(\theta(s)\) 表示在给定弧长处曲线切线的方向。它指示曲线在该点的"指向"方向。当沿曲线移动时，\(\theta(s)\) 会发生变化，显示曲线方向的演变过程。</p>
 <p>$$\theta(s) = \frac{1}{A_0} s \;+\; \frac{L}{\pi A_1} \sin!\biggl(\frac{\pi}{L}s\biggr)$$</p>
 <p><strong>曲率：</strong></p>
-<p><em>曲率</em> \(\kappa(s)\) 描述了航向角相对于弧长 \(s\) 的变化速度。它反映了曲线的“弯曲程度”。较高的曲率值对应于更急的弯曲，而较低的曲率值对应于更直的段。</p>
+<p><em>曲率</em> \(\kappa(s)\) 描述了航向角相对于弧长 \(s\) 的变化速度。它反映了曲线的"紧密度"。较高的曲率值对应更急的弯道，较低的曲率值对应更平直的线段。</p>
 <p>$$\kappa(s) = \frac{L}{A_0} \;+\; \frac{L}{A_1}\cos!\biggl(\frac{\pi}{L}s\biggr)$$</p>
 <h2><a class="anchor" id="8.9.3.24.2-Entity-inheritance-"></a>
     8.9.3.24.2 实体继承（Entity inheritance）
@@ -281,7 +281,7 @@
     8.9.3.24.3 特性（Attributes）
 <a class="link" href="#8.9.3.24.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c9aa7e69-0baa-4602-bff4-5ed810e26cb2"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-41a2651b-6340-40f2-9de6-672615596e0a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -303,66 +303,16 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已限制为最多 1 个。文件交换的向后兼容性得到保证。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a>
 <small>(1)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，为所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）定义不同。</p>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpiral.htm">IfcSpiral</a>
 <small>(1)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Position
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
 </td>
 </tr>
 <tr class="preview">
@@ -383,36 +333,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                CosineTerm
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                ConstantTerm
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.9.3.24.A<a class="link" href="#-c9aa7e69-0baa-4602-bff4-5ed810e26cb2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.24.A<a class="link" href="#-41a2651b-6340-40f2-9de6-672615596e0a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.24.4-Formal-representation-"></a>
     8.9.3.24.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.24.4-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -478,5 +400,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
