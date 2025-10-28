@@ -166,9 +166,7 @@
     7.10.3.16.1 语义定义（Semantic definition）
 <a class="link" href="#7.10.3.16.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p>实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 用于构建物理影响的结构。通过使用从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em> 继承的分组特性，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em>（或其子类）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a></em> 的实例可用于定义荷载组、荷载工况和荷载组合。（另见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a></em>。）</p>
-<aside class="aside-note"><mark>注释</mark> 描述承重系统的重要功能源自现有的 IFC 实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em>。该类通过关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a></em> 提供了所需的分组机制。通过这种方式，可以明确确定属于特定荷载组的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 实例。</aside><aside class="aside-note"><mark>注释</mark> 关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 用于将荷载工况分组为荷载组合。此分配关系中提供的系数应与可选的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>.Coefficient</em> 一起应用。与始终影响荷载组的该系数不同，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a>.Factor</em> 特定于荷载工况—荷载组合对。在一个荷载组合中使用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 实例数量与荷载组合中要应用于荷载工况的不同 <em>Factor</em> 数量相同。另一方面，一个荷载工况可能出现在多个荷载组合中，并且在每个通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 进行的分配中可以具有不同的 <em>Factor</em>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><blockquote>
-<p>IFC4 变更：添加了子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em>。添加了非正式命题和 WHERE 规则。预定义类型 LOAD_COMBINATION_GROUP 已过时并移除。</p>
-</blockquote>
+<aside class="aside-note"><mark>注释</mark> 描述承重系统的重要功能源自现有的 IFC 实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em>。该类通过关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a></em> 提供了所需的分组机制。通过这种方式，可以明确确定属于特定荷载组的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 实例。</aside><aside class="aside-note"><mark>注释</mark> 关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 用于将荷载工况分组为荷载组合。此分配关系中提供的系数应与可选的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadGroup.htm">IfcStructuralLoadGroup</a>.Coefficient</em> 一起应用。与始终影响荷载组的该系数不同，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a>.Factor</em> 特定于荷载工况—荷载组合对。在一个荷载组合中使用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 实例数量与荷载组合中要应用于荷载工况的不同 <em>Factor</em> 数量相同。另一方面，一个荷载工况可能出现在多个荷载组合中，并且在每个通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 进行的分配中可以具有不同的 <em>Factor</em>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 添加了子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadCase.htm">IfcStructuralLoadCase</a></em>。添加了非正式命题和 WHERE 规则。预定义类型 LOAD_COMBINATION_GROUP 已过时并移除。</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
 <li>类型为 LOAD_GROUP 的荷载组应仅包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 的实例。</li>
@@ -234,7 +232,7 @@
     7.10.3.16.3 特性（Attributes）
 <a class="link" href="#7.10.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ee35c606-5672-45ce-89e9-5295a8e4cd3f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-16a603e7-5920-4756-a081-cfc02b9dc387"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -293,11 +291,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.3.16.A<a class="link" href="#-ee35c606-5672-45ce-89e9-5295a8e4cd3f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.16.A<a class="link" href="#-16a603e7-5920-4756-a081-cfc02b9dc387"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.16.4-Formal-propositions-"></a>
     7.10.3.16.4 形式化命题（Formal propositions）
 <a class="link" href="#7.10.3.16.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-aa642727-8515-4ebf-9ae8-51cba0264a2d"></a><table>
+<figure><a class="anchor" id="-86d9c1c0-038b-4282-a08e-c795b7a700dd"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -321,7 +319,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.3.16.B<a class="link" href="#-aa642727-8515-4ebf-9ae8-51cba0264a2d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.16.B<a class="link" href="#-86d9c1c0-038b-4282-a08e-c795b7a700dd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.16.5-"></a>
     7.10.3.16.5 属性集
 <a class="link" href="#7.10.3.16.5-"><i data-feather="link"></i></a></h2>
@@ -352,7 +350,7 @@
 </p><h2><a class="anchor" id="7.10.3.16.6-Concept-usage-"></a>
     7.10.3.16.6 概念用法（Concept usage）
 <a class="link" href="#7.10.3.16.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7688f236-c99a-4dd6-9856-d86468fa872a"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-8a957ae4-a52d-442d-a6a2-072d1a5a6f2d"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -638,7 +636,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.3.16.C<a class="link" href="#-7688f236-c99a-4dd6-9856-d86468fa872a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.16.C<a class="link" href="#-8a957ae4-a52d-442d-a6a2-072d1a5a6f2d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.16.7-Formal-representation-"></a>
     7.10.3.16.7 形式化表示（Formal representation）
 <a class="link" href="#7.10.3.16.7-Formal-representation-"><i data-feather="link"></i></a></h2>
