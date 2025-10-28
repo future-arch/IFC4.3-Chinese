@@ -270,7 +270,7 @@
     8.9.3.15.3 特性（Attributes）
 <a class="link" href="#8.9.3.15.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f1fec822-3065-47e9-b774-3a3d48c8c57a"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c3195312-dffa-4585-b696-c98235a0cb57"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -292,16 +292,129 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a>
 <small>(6)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Axis1
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>用于确定 U[1]（派生 X 轴方向）的方向。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Axis2
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>用于确定 U[2]（派生 Y 轴方向）的方向。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                LocalOrigin
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></td>
+<td data-label="Description">
+<p>所需的平移，指定为一个笛卡尔点。变换中包含的实际平移是从几何原点到局部原点。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Scale
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>为变换指定的缩放值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Scl</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">NVL(Scale, 1.0)</code></pre>
+<p>变换的派生缩放比例 S，如果存在 scale 则等于 scale，否则为 1.0。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">LocalOrigin.Dim</code></pre>
+<p>此类的空间维度，由局部原点的空间维度决定。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator2D.htm">IfcCartesianTransformationOperator2D</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>U</em>
+</td>
+<td data-label="Type">LIST [2:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBaseAxis.htm">IfcBaseAxis</a>(2,SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a>.Axis1,
+SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a>.Axis2,?)</code></pre>
+<p>相互正交的归一化向量列表，定义了变换矩阵 T。它们按顺序从显式属性 Axis1 和 Axis2 派生而来。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -322,12 +435,38 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Scale2
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>沿轴2指定的变换缩放值。通常为y轴缩放因子。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Scl2</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">NVL(Scale2, SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a>.Scl)</code></pre>
+<p>沿轴2（通常为y轴）变换的派生缩放比例S(2)，如果存在Scale2则等于Scale2，否则等于派生的Scl1（通常为x轴缩放因子）。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.9.3.15.A<a class="link" href="#-f1fec822-3065-47e9-b774-3a3d48c8c57a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.15.A<a class="link" href="#-c3195312-dffa-4585-b696-c98235a0cb57"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.15.4-Formal-propositions-"></a>
     8.9.3.15.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.15.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-ff5e15fb-7960-41e0-8227-7d61e8dc44d5"></a><table>
+<figure><a class="anchor" id="-73634025-c1a0-4b20-925d-c0c710a7d0e0"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -347,7 +486,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.15.B<a class="link" href="#-ff5e15fb-7960-41e0-8227-7d61e8dc44d5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.15.B<a class="link" href="#-73634025-c1a0-4b20-925d-c0c710a7d0e0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.15.5-Formal-representation-"></a>
     8.9.3.15.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.15.5-Formal-representation-"><i data-feather="link"></i></a></h2>
