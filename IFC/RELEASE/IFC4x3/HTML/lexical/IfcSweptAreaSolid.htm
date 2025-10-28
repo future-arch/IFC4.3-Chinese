@@ -280,7 +280,7 @@
     8.8.3.42.3 特性（Attributes）
 <a class="link" href="#8.8.3.42.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-189284c9-cb8b-457d-8bb3-a2635d75a4aa"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-ebb8fb48-0cd1-4bdc-92fe-367814e0410f"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -302,10 +302,46 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">3</code></pre>
+<p>本类的空间维度，始终为3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -326,12 +362,37 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                SweptArea
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
+<td data-label="Description">
+<p>The surface defining the area to be swept. It is given as a profile definition within the xy plane of the position coordinate system.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
+<td data-label="Description">
+<p>Position coordinate system for the resulting swept solid of the sweeping operation. The position coordinate system allows for re-positioning of the swept solid. If not provided, the swept solid remains within the position as determined by the cross section or by the directrix used for the sweeping operation.</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.8.3.42.A<a class="link" href="#-189284c9-cb8b-457d-8bb3-a2635d75a4aa"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.42.A<a class="link" href="#-ebb8fb48-0cd1-4bdc-92fe-367814e0410f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.42.4-Formal-propositions-"></a>
     8.8.3.42.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.42.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b019a7d0-2bf9-45e6-8f5d-d661567ad3a1"></a><table>
+<figure><a class="anchor" id="-db191f41-0ab7-4081-8c94-8b22584935ac"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -353,7 +414,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.42.B<a class="link" href="#-b019a7d0-2bf9-45e6-8f5d-d661567ad3a1"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.42.B<a class="link" href="#-db191f41-0ab7-4081-8c94-8b22584935ac"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.42.5-Formal-representation-"></a>
     8.8.3.42.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.42.5-Formal-representation-"><i data-feather="link"></i></a></h2>
