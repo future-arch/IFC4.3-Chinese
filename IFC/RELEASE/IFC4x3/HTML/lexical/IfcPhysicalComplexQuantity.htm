@@ -221,7 +221,7 @@
     8.17.3.1.3 特性（Attributes）
 <a class="link" href="#8.17.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c337f658-da4a-445f-895f-3ef03fb5e729"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6f191f3b-394c-4a9b-9762-b0f0a07d86c3"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -243,6 +243,51 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>元素数量或度量的名称。名称属性需要通过进一步协议使其可识别。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可能为数量提供的进一步说明。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与数量关联的外部引用，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PartOfComplex</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a> FOR HasQuantities</td>
+<td data-label="Description">
+<p>引用可能包含该物理数量的物理复合数量。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -261,12 +306,60 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                HasQuantities
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></td>
+<td data-label="Description">
+<p>根据给定区分标准，由此复合物理量分组的物理量集合。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Discrimination
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于区分此物理复合属性的标识。区分标准的示例包括 'layer'、'steel bar diameter' 等。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Quality
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>对此物理复合量下分组的工程量质量的附加说明。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Usage
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>对此物理复合量下分组的工程量使用类型的附加说明。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.17.3.1.A<a class="link" href="#-c337f658-da4a-445f-895f-3ef03fb5e729"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.17.3.1.A<a class="link" href="#-6f191f3b-394c-4a9b-9762-b0f0a07d86c3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.17.3.1.4-Formal-propositions-"></a>
     8.17.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#8.17.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-e4e15aeb-c146-4868-87fe-5be28115a3ba"></a><table>
+<figure><a class="anchor" id="-3aaa0d84-22ae-4b57-8233-135dc22ffdd0"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -298,7 +391,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.17.3.1.B<a class="link" href="#-e4e15aeb-c146-4868-87fe-5be28115a3ba"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.17.3.1.B<a class="link" href="#-3aaa0d84-22ae-4b57-8233-135dc22ffdd0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.17.3.1.5-Formal-representation-"></a>
     8.17.3.1.5 形式化表示（Formal representation）
 <a class="link" href="#8.17.3.1.5-Formal-representation-"><i data-feather="link"></i></a></h2>
