@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.36 IfcSectionedSpine - IFC 4.3.2 Documentation</title>
+<title>8.8.3.36 IfcSectionedSpine（截面脊线） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,31 +189,31 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.36 IfcSectionedSpine</h1>
+<h1>8.8.3.36 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a>（截面脊线）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.36.1-Semantic-definition-"></a>
     8.8.3.36.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.36.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em> 是一个三维对象的形状表示，由一系列平面横截面和一个脊线曲线组成。形状定义在横截面集合的第一个元素和最后一个元素之间。分段脊线可用于表示曲面或实体，但横截面之间的形状插值未定义。</p>
-<!-- end of short definition -->
-<p>所有横截面都必须通过闭合轮廓定义区域，以便表示实体。所有横截面都必须通过开放或闭合轮廓定义曲线，以便表示曲面。横截面由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 的子类型定义，其中连续轮廓可以通过起始轮廓或前一个连续轮廓的变换来派生。</p>
-<p>脊线曲线应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 类型，其每个由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a></em> 表示的段对应于两个连续横截面之间的部分。</p>
-<p>图 8.8.3.36.A 说明了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em> 的一个示例。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em> 是一种由多个平面横截面和一条脊线曲线组成的三维物体形状表示。形状在横截面的第一个元素和最后一个元素之间定义。截面脊线可用于表示曲面或实体，但横截面之间的形状插值未定义。</p>
+<!-- 简短定义结束 -->
+<p>所有横截面必须通过闭合轮廓定义面积以支持实体表示。所有横截面必须通过开放或闭合轮廓定义曲线以支持曲面表示。横截面由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 的子类型定义，其中连续轮廓可通过起始轮廓或前一个连续轮廓的变换推导得出。</p>
+<p>脊线曲线应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 类型，其由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a></em> 表示的每个线段应对应于恰好两个连续横截面之间的部分。</p>
+<p>图1展示了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em> 的示例。</p>
 <ul>
-<li><em>SpineCurve</em> 由一个具有两个 <em>Segments</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 给出。<em>Segments[1]</em> 的 <em>ParentCurve</em> 类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em>，<em>Transition</em> = CONTSAMEGRADIENT。<em>Segments[2]</em> 的 <em>ParentCurve</em> 类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>，<em>Transition</em> = DISCONTINUOUS。</li>
+<li><em>SpineCurve</em> 由具有两个 <em>Segments</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 给出。<em>Segments[1]</em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 类型的 <em>ParentCurve</em> 和 <em>Transition</em> = CONTSAMEGRADIENT。<em>Segments[2]</em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> 类型的 <em>ParentCurve</em> 和 <em>Transition</em> = DISCONTINUOUS。</li>
 <li>每个 <em>CrossSectionPosition</em> 位于 <em>Segments</em> 的起点或终点。</li>
 <li>每个 <em>CrossSections</em> 通过 <em>CrossSectionPositions</em> 插入。前两个横截面为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em> 类型，第三个为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a></em> 类型。</li>
 </ul>
-<figure><a class="anchor" id="-1-"></a><img alt="spine 1" src="../figures/ifcsectionedspine-layout1.gif"/><figcaption>图 8.8.3.36.A — 分段脊线几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.8.3.36.B 说明了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em> 的最终结果。主体（透明显示）未完全由交换定义定义。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="render" src="../figures/ifcsectionedspine.jpg"/><figcaption>图 8.8.3.36.B — 分段脊线结果<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> 定义根据 ISO/CD 10303-42:1992
-分段脊线是三维对象的形状表示，由脊线曲线和一系列平面横截面组成。形状定义在横截面集合的第一个元素和最后一个元素之间。</aside><aside class="aside-note"><mark>注释</mark> 分段脊线可用于表示曲面或实体，但横截面之间的形状插值未定义。对于实体的表示，所有横截面都是闭合曲线。</aside><aside class="aside-note"><mark>注释</mark> 实体的定义改编自 ISO 10303-42 中定义的 <strong>sectioned_spine</strong>。</aside><aside class="aside-history"><mark>沿革</mark> 新实体在 IFC2x 中引入。</aside>
-<p><strong>Informal Propositions</strong></p>
+<figure><a class="anchor" id="-1-"></a><img alt="spine 1" src="../figures/ifcsectionedspine-layout1.gif"/><figcaption>图1 — 截面脊线几何形状<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图2展示了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em> 的最终结果。实体（透明显示）未在交换定义中完全定义。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="render" src="../figures/ifcsectionedspine.jpg"/><figcaption>图2 — 截面脊线结果<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
+截面脊线是由一条脊线曲线和多个平面横截面组成的三维物体形状表示。形状在横截面集合的第一个元素和最后一个元素之间定义。</aside><aside class="aside-note"><mark>注释</mark> 截面脊线可用于表示曲面或实体，但横截面之间的形状插值未定义。对于实体的表示，所有横截面均为闭合曲线。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>sectioned_spine</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside>
+<p><strong>非正式命题</strong></p>
 <ol>
-<li>在放置后，任何横截面都不应相交。</li>
-<li>任何横截面都不应位于同一平面内。</li>
-<li>每个横截面位置的局部原点应位于复合曲线段的开始或结束处。</li>
+<li>所有横截面在通过横截面位置放置后均不得相交</li>
+<li>所有横截面在通过横截面位置放置后均不得位于同一平面</li>
+<li>每个横截面位置的局部原点应位于复合曲线线段的起点或终点。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.36.2-Entity-inheritance-"></a>
     8.8.3.36.2 实体继承（Entity inheritance）
@@ -269,7 +269,7 @@
     8.8.3.36.3 特性（Attributes）
 <a class="link" href="#8.8.3.36.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ebdc9215-26fa-4bcf-a08f-a956ec12361f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-997c8430-32f1-4056-a76c-ccd82e10cde6"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -291,28 +291,6 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已限制为最多 1 个。文件交换的向后兼容性得到保证。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -331,62 +309,12 @@
 <small>(4)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                SpineCurve
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></td>
-<td data-label="Description">
-<p>定义脊线曲线的单个复合曲线。复合曲线的每个段对应于两个横截面之间的部分。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                CrossSections
-                
-            </td>
-<td data-label="Type">LIST [2:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
-<td data-label="Description">
-<p>至少包含两个横截面的列表，每个横截面都在相应 <em>CrossSectionPositions</em> 的位置坐标系的 xy 平面内定义。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                CrossSectionPositions
-                
-            </td>
-<td data-label="Type">LIST [2:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
-<td data-label="Description">
-<p>构成分段脊线的横截面的位置坐标系。定义横截面的轮廓放置在相应位置坐标系的 xy 平面内。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs">3</code></pre>
-<p>脊线曲线的维度始终为 3。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.8.3.36.C<a class="link" href="#-ebdc9215-26fa-4bcf-a08f-a956ec12361f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.36.A<a class="link" href="#-997c8430-32f1-4056-a76c-ccd82e10cde6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.36.4-Formal-propositions-"></a>
     8.8.3.36.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.36.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-0395ade9-aa31-434d-8520-f5cdca7ef3d8"></a><table>
+<figure><a class="anchor" id="-b5dcc552-3d4c-4e7f-8944-bf9ee38a2487"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -397,7 +325,7 @@
 <tr>
 <td>ConsistentProfileTypes</td>
 <td>
-<p>在定义横截面的轮廓列表中，轮廓类型（AREA 或 CURVE）应保持一致。</p>
+<p>定义横截面的轮廓列表中的轮廓类型（AREA 或 CURVE）应保持一致。</p>
 </td>
 </tr>
 <tr>
@@ -408,7 +336,7 @@
 <tr>
 <td>CorrespondingSectionPositions</td>
 <td>
-<p>横截面集合和横截面位置集合的大小应相同。</p>
+<p>横截面集合与横截面位置集合应具有相同的大小。</p>
 </td>
 </tr>
 <tr>
@@ -419,7 +347,7 @@
 <tr>
 <td>SpineCurveDim</td>
 <td>
-<p>作为脊线曲线的曲线实体应具有三维性。</p>
+<p>作为基础脊线曲线的曲线实体应具有维度3。</p>
 </td>
 </tr>
 <tr>
@@ -428,7 +356,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.36.D<a class="link" href="#-0395ade9-aa31-434d-8520-f5cdca7ef3d8"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.36.C<a class="link" href="#-b5dcc552-3d4c-4e7f-8944-bf9ee38a2487"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.36.5-Formal-representation-"></a>
     8.8.3.36.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.36.5-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -501,5 +429,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
