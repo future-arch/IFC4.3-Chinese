@@ -198,9 +198,9 @@
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 定义了一个适用于产品多个几何表示的子上下文，它与父级 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 共享 <em>WorldCoordinateSystem</em>、<em>CoordinateSpaceDimension</em>、<em>Precision</em> 和 <em>TrueNorth</em> 属性。</p>
 <!-- 短定义结束 -->
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 用于根据表示视图和目标比例，为不同的信息内容定义语义上可区分的表示类型。它可用于控制最适用于此几何表示上下文的几何表示详细程度。此外，子上下文还用于控制 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 在出图视图中的最终显示效果。</p>
-<aside class="aside-note"><mark>注释</mark> 意：如果使用此子上下文的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 已将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 分配给 <em>Items</em>，则与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 关联的表示样式信息（例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveStyle.htm">IfcCurveStyle</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em>）将以目标出图尺寸给出。例如，线宽（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveStyle.htm">IfcCurveStyle</a>.CurveWidth</em>）通过一个与目标比例范围内出图线宽相关的厚度度量值给出。</aside>
+<aside class="aside-note"><mark>注释</mark> 如果使用此子上下文的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 已将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 分配给 <em>Items</em>，则与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 关联的表示样式信息（例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveStyle.htm">IfcCurveStyle</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em>）将以目标出图尺寸给出。例如，线宽（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveStyle.htm">IfcCurveStyle</a>.CurveWidth</em>）通过一个与目标比例范围内出图线宽相关的厚度度量值给出。</aside>
 <p>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 可以有多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 子类型的实例，每个实例都分配给一个不同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em>）。继承的 <em>ContextIdentifier</em> 属性的适用值应与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 中定义的 <em>RepresentationIdentifier</em> 属性相同。</p>
-<aside class="aside-note"><mark>注释</mark> 意：必须提供模型视图（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>.ContextType</em> = 'Model'）。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 的实例作为其 <em>ParentContext</em> 与之关联。</aside><aside class="aside-example"><mark>示例</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 的实例可用于处理多视图块或宏，这些块或宏在 CAD 程序中用于存储同一对象的多个与比例和/或视图相关的几何表示。然后，应用程序可以根据目标视图和比例，选择最合适的产品几何形状表示。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside>
+<aside class="aside-note"><mark>注释</mark> 必须提供模型视图（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>.ContextType</em> = 'Model'）。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 的实例作为其 <em>ParentContext</em> 与之关联。</aside><aside class="aside-example"><mark>示例</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 的实例可用于处理多视图块或宏，这些块或宏在 CAD 程序中用于存储同一对象的多个与比例和/或视图相关的几何表示。然后，应用程序可以根据目标视图和比例，选择最合适的产品几何形状表示。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside>
 <h2><a class="anchor" id="8.18.3.5.2-Entity-inheritance-"></a>
     8.18.3.5.2 实体继承（Entity inheritance）
 <a class="link" href="#8.18.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -228,7 +228,7 @@
     8.18.3.5.3 特性（Attributes）
 <a class="link" href="#8.18.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-983631e2-4c37-4315-8072-b0a06acbbccb"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d53cc54d-6c38-48ea-a7d3-fbe5e562c374"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -275,11 +275,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.5.A<a class="link" href="#-983631e2-4c37-4315-8072-b0a06acbbccb"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.5.A<a class="link" href="#-d53cc54d-6c38-48ea-a7d3-fbe5e562c374"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.5.4-Formal-propositions-"></a>
     8.18.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-98c82240-ae50-4eee-a6b1-0fe02df02121"></a><table>
+<figure><a class="anchor" id="-d3387178-a9e9-4018-96c7-9b78d5d71f4d"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -291,7 +291,7 @@
 <td>NoCoordOperation</td>
 <td>
 <p>不应向几何表示子上下文提供 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>，而只应提供给父级几何表示上下文。</p>
-<aside class="aside-note"><mark>注释</mark> 意：坐标操作用于定义项目工程坐标系到地理坐标参考系的坐标变换。</aside>
+<aside class="aside-note"><mark>注释</mark> 坐标操作用于定义项目工程坐标系到地理坐标参考系的坐标变换。</aside>
 </td>
 </tr>
 <tr>
@@ -323,7 +323,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.5.B<a class="link" href="#-98c82240-ae50-4eee-a6b1-0fe02df02121"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.5.B<a class="link" href="#-d3387178-a9e9-4018-96c7-9b78d5d71f4d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.5.5-Formal-representation-"></a>
     8.18.3.5.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.5.5-Formal-representation-"><i data-feather="link"></i></a></h2>
