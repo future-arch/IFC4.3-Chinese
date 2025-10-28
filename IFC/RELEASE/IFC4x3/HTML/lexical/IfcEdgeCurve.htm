@@ -254,7 +254,7 @@
     8.20.3.5.3 特性（Attributes）
 <a class="link" href="#8.20.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-de1cedf2-50f8-4587-baa6-ac907d3d9a8f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0b84a9fd-bb8c-474d-a96e-0e4208da687a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -276,10 +276,56 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a>
 <small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                EdgeStart
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
+<td data-label="Description">
+<p>边的起点（顶点）。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                EdgeEnd
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
+<td data-label="Description">
+<p>边的终点（顶点）。同一个顶点可以同时用于 EdgeStart 和 EdgeEnd。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -300,8 +346,32 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                EdgeGeometry
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
+<td data-label="Description">
+<p>定义边的形状和空间位置的曲线。该曲线可能是无界的，并隐式被边的顶点修剪；这定义了边域。多个边可以引用同一条曲线。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                SameSense
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>此逻辑标志指示边和定义边几何形状的曲线的方向是否相同（TRUE）或不同（FALSE）。边的方向是从边起点顶点到边终点顶点；曲线的方向是参数增加的方向。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.20.3.5.B<a class="link" href="#-de1cedf2-50f8-4587-baa6-ac907d3d9a8f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.5.B<a class="link" href="#-0b84a9fd-bb8c-474d-a96e-0e4208da687a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.5.4-Formal-representation-"></a>
     8.20.3.5.4 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.5.4-Formal-representation-"><i data-feather="link"></i></a></h2>
