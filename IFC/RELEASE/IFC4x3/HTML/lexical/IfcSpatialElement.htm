@@ -226,7 +226,7 @@
     5.4.3.66.3 特性（Attributes）
 <a class="link" href="#5.4.3.66.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-4d8382a8-b3b2-42a3-ba0f-744ff257856b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-a342216b-61c2-4a0c-919d-053eb84eddd3"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -589,7 +589,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.66.A<a class="link" href="#-4d8382a8-b3b2-42a3-ba0f-744ff257856b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.66.A<a class="link" href="#-a342216b-61c2-4a0c-919d-053eb84eddd3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.66.4-"></a>
     5.4.3.66.4 属性集
 <a class="link" href="#5.4.3.66.4-"><i data-feather="link"></i></a></h2>
@@ -855,7 +855,7 @@
 </p><h2><a class="anchor" id="5.4.3.66.5-Concept-usage-"></a>
     5.4.3.66.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.66.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-ea3fd97a-f754-4744-a107-d9e65059c6d4"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-dfa3fb2e-94fc-4dbd-bf89-03a8c302afd9"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -878,9 +878,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用IfcOwnerHistory捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -891,15 +889,24 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>IfcRoot分配全局唯一ID，同时还可为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例或对象类型都可以引用特定的分类参照，即分类系统中的特定分面。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -918,19 +925,6 @@
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
                 General
@@ -1027,19 +1021,6 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
 </td>
 <td data-label="Usage">
@@ -1059,6 +1040,7 @@
                 General
             </td>
 <td data-label="Description">
+<p>任何对象实例都可通过分配至公共对象类型来实现类型化，这是通过本概念实现的。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型层级重写此概念，引入了限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 适用子类型的特定规则</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -1075,14 +1057,23 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型均可使用 <em>Name</em> 属性和可选的 <em>Description</em> 属性。对于具有对象类型定义的子类型（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例均可持有属性集，可直接在对象实例处作为元素特定属性集，或在对象类型处作为类型属性集。在这种情况下，提供给对象实例的属性是元素特定属性和类型属性的组合。如果在实例属性和类型属性中同时定义了相同属性（同一属性集内），则实例属性的属性值将覆盖类型属性的属性值</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
 </td>
 <td data-label="Usage">
                 General
@@ -1102,6 +1093,70 @@
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/Body_Geometry/content.html">Body Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用细分曲面或边界表示定义。子类型可能提供关于可使用的其他表示类型的建议。用于保存此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的属性值应使用以下值：</p>
+<ul>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/content.html">Product Geometric Representation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许有多个几何表示。它使用 <em>产品放置</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<aside class="aside-note"><mark>注释</mark> 有关如何应用局部放置以及哪些形状表示适用的详细规范在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的子类型级别提供，并进一步由模型视图定义和实现者协议确定。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Colour/content.html">Product Geometry Colour</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Layer/content.html">Product Geometry Layer</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Relative_Positioning/content.html">Product Relative Positioning</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>产品放置</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 放置，则此关系涵盖了关于哪个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的信息。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Span_Positioning/content.html">Product Span Positioning</a>
 </td>
 <td data-label="Usage">
                 General
@@ -1175,72 +1230,7 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/content.html">Product Geometric Representation</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Colour/content.html">Product Geometry Colour</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Layer/content.html">Product Geometry Layer</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Placement/Product_Local_Placement/content.html">Product Local Placement</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Relative_Positioning/content.html">Product Relative Positioning</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Span_Positioning/content.html">Product Span Positioning</a>
 </td>
 <td data-label="Usage">
                 General
@@ -1369,7 +1359,24 @@
 <tr class="group">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a>
-<small>(10)</small>
+<small>(11)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/Body_Geometry/content.html">Body Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>空间构件通常不提供主体几何，而是依赖其构成元素。如果需要暴露独立的几何表示，可以提供主体几何。此几何通常由其外部元素或体积边界表示。</p>
 </td>
 </tr>
 <tr>
@@ -1396,28 +1403,6 @@
 <p>
 <em>无可用描述</em>
 </p>
-</td>
-</tr>
-<tr>
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<aside class="inherited">
-<small>
-<i data-feather="paperclip"></i>
-                        这是对继承概念的进一步阐述
-                    </small>
-</aside>
-<p>此概念可应用于以下资源</p>
-<ul>
-<li>
-<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElementType.htm">IfcSpatialElementType</a>
-</li>
-</ul>
 </td>
 </tr>
 <tr>
@@ -1465,6 +1450,54 @@
 </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ThermalLoad.htm">Pset_ThermalLoad</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Spatial_Structure/Spatial_Interference/content.html">Spatial Interference</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Spatial_Structure/Spatial_Interference/Spatial_Interference_With_Zones/content.html">Spatial Interference With Zones</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>此概念可应用于以下资源</p>
+<ul>
+<li>
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElementType.htm">IfcSpatialElementType</a>
 </li>
 </ul>
 </td>
@@ -1525,32 +1558,6 @@
 </tr>
 <tr>
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Spatial_Structure/Spatial_Interference/content.html">Spatial Interference</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr>
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Spatial_Structure/Spatial_Interference/Spatial_Interference_With_Zones/content.html">Spatial Interference With Zones</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr>
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Spatial_Service_Connectivity/content.html">Spatial Service Connectivity</a>
 </td>
 <td data-label="Usage">
@@ -1563,7 +1570,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.66.B<a class="link" href="#-ea3fd97a-f754-4744-a107-d9e65059c6d4"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.66.B<a class="link" href="#-dfa3fb2e-94fc-4dbd-bf89-03a8c302afd9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.66.6-Formal-representation-"></a>
     5.4.3.66.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.66.6-Formal-representation-"><i data-feather="link"></i></a></h2>
