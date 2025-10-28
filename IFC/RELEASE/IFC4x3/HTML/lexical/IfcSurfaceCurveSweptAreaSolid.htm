@@ -196,16 +196,16 @@
 <a class="link" href="#8.8.3.41.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceCurveSweptAreaSolid.htm">IfcSurfaceCurveSweptAreaSolid</a></em> 是通过沿着位于参考曲面上的准线扫掠一个面积而得到的结果。扫掠面积由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 的子类型提供。轮廓通过隐式笛卡尔变换运算符放置在扫掠起点处，在该点处轮廓法线与准线切线一致，轮廓的 x 轴与曲面法线一致。沿着准线的任意点，扫掠轮廓的原点位于准线上，轮廓的法线指向准线切线方向，轮廓的 x 轴与该点的曲面法线相同。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 意 轮廓面积的法线必须与准线在任意给定点的切线相同。如果准线在起点处有直线段，则该线段必须垂直于起点处的轮廓。</aside>
+<aside class="aside-note"><mark>注释</mark> 轮廓面积的法线必须与准线在任意给定点的切线相同。如果准线在起点处有直线段，则该线段必须垂直于起点处的轮廓。</aside>
 <p><em>Directrix</em> 和 <em>ReferenceSurface</em> 位于对象坐标系内。扫掠操作开始于 <em>StartParam</em>，参数值基于曲线参数化提供。如果未提供 <em>StartParam</em>，则默认从准线起点开始。扫掠操作结束于 <em>EndParam</em>，参数值基于曲线参数化提供。如果未提供 <em>EndParam</em>，则默认到准线终点结束。实体的几何形状不依赖于曲线参数化；体积取决于扫掠面积和 <em>Directrix</em> 的长度。</p>
-<aside class="aside-note"><mark>注释</mark> 意 <em>StartParam</em> 和 <em>EndParam</em> 默认不进行归一化，它们依赖于曲线的参数化。然而，在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReparametrisedCompositeCurveSegment.htm">IfcReparametrisedCompositeCurveSegment</a></em> 作为准线允许显式地对基础扫掠曲线进行重新参数化。如果准线是闭合曲线，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm">IfcEllipse</a></em>，则 <em>StartParam</em> 和 <em>EndParam</em> 不应超过参数范围，即不应 &gt; 360°。</aside><aside class="aside-example"><mark>示例</mark> 参考曲面是位于三维空间中并定位于对象坐标系内的任意曲面（平面、圆柱面、复合曲面）。在大多数情况下，它是一个平面或拉伸曲面。准线位于该曲面上，对于平面，它可能被定义为多段线或复合曲线；对于圆柱面或其他非平面参考曲面，它通常可能被定义为该参考曲面上的 p 曲线。</aside>
+<aside class="aside-note"><mark>注释</mark> <em>StartParam</em> 和 <em>EndParam</em> 默认不进行归一化，它们依赖于曲线的参数化。然而，在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReparametrisedCompositeCurveSegment.htm">IfcReparametrisedCompositeCurveSegment</a></em> 作为准线允许显式地对基础扫掠曲线进行重新参数化。如果准线是闭合曲线，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm">IfcEllipse</a></em>，则 <em>StartParam</em> 和 <em>EndParam</em> 不应超过参数范围，即不应 &gt; 360°。</aside><aside class="aside-example"><mark>示例</mark> 参考曲面是位于三维空间中并定位于对象坐标系内的任意曲面（平面、圆柱面、复合曲面）。在大多数情况下，它是一个平面或拉伸曲面。准线位于该曲面上，对于平面，它可能被定义为多段线或复合曲线；对于圆柱面或其他非平面参考曲面，它通常可能被定义为该参考曲面上的 p 曲线。</aside>
 <p>在准线的任意点处，可以构造一个平面。隐式平面位置坐标系的原点位于准线上。位置坐标系的 Axis3（z 轴，或法线）与该点处准线的切线相同，位置坐标系的 Axis1（x 轴，或 u）与该点处参考曲面的法线相同。Axis2（y 轴，或 v）由此构造而成。</p>
 <p>如果省略了继承的 <em>Position</em> 属性，则扫掠实体的结果体不会重新定位。否则，将使用 <em>Position</em> 属性建立的坐标系来相对于对象坐标系重新定位该体。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="曲面曲线扫掠面积实体" src="../figures/ifcsurfacecurvesweptareasolid_01.png"/><figcaption>图 8.8.3.41.A — 曲面曲线扫掠面积实体参数<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图 8.8.3.41.A 展示了一个使用圆柱参考曲面和 p 曲线扫掠矩形的例子。未提供 <em>Position</em>，因此它不会重新定位结果扫掠实体。图 8.8.3.41.B 显示了预期结果。</aside><aside class="aside-note"><mark>注释</mark> 意 如图所示，准线的起点位于对象坐标系的原点，<br/>这仅是巧合。准线的起点以及由此扫掠操作的起点可能位于对象坐标系内的任意点，并且仅取决于准线的位置。</aside>
+<aside class="aside-example"><mark>示例</mark> 图 8.8.3.41.A 展示了一个使用圆柱参考曲面和 p 曲线扫掠矩形的例子。未提供 <em>Position</em>，因此它不会重新定位结果扫掠实体。图 8.8.3.41.B 显示了预期结果。</aside><aside class="aside-note"><mark>注释</mark> 如图所示，准线的起点位于对象坐标系的原点，<br/>这仅是巧合。准线的起点以及由此扫掠操作的起点可能位于对象坐标系内的任意点，并且仅取决于准线的位置。</aside>
 <figure><a class="anchor" id="-2-"></a><img alt="曲面曲线扫掠面积实体" src="../figures/ifcsurfacecurvesweptareasolid_02.png"/><figcaption>图 8.8.3.41.B — 曲面曲线扫掠面积实体结果<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> 意 根据 ISO/CD 10303-42:1992 的定义
-曲面曲线扫掠面积实体是一种扫掠面积实体类型，它是沿着位于 <em>ReferenceSurface</em> 上的 <em>Directrix</em> 扫掠一个面的结果。<em>SweptArea</em> 的方向与曲面法线的方向相关。</aside><aside class="aside-note"><mark>注释</mark> 意 实体改编自 ISO 10303-42 中定义的 **surface_curve_swept_area_solid**。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><blockquote>
+<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
+曲面曲线扫掠面积实体是一种扫掠面积实体类型，它是沿着位于 <em>ReferenceSurface</em> 上的 <em>Directrix</em> 扫掠一个面的结果。<em>SweptArea</em> 的方向与曲面法线的方向相关。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 **surface_curve_swept_area_solid**。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><blockquote>
 <p><em>SweptArea</em> 必须是一个位于平面 z = 0 内的曲线边界曲面，并且它沿着 <em>Directrix</em> 扫掠，使得用于定义 <em>SweptArea</em> 的局部坐标系的原点位于 <em>Directrix</em> 上，并且局部 x 轴指向当前点处 <em>ReferenceSurface</em> 的法线方向。结果实体具有这样的属性：在任意点处垂直于 <em>Directrix</em> 的法平面与曲面的交线是 <em>SweptArea</em> 的副本。</p>
 <p><em>SweptArea</em> 沿着 <em>Directrix</em> 扫掠时的方向由具有以下属性的笛卡尔变换运算符 3D 精确定义： &gt; * 局部原点作为点 (0., 0., 0)，
 * 轴 1 作为在参数为 u 的准线点处参考曲面的法线 N。
@@ -295,7 +295,7 @@
     8.8.3.41.3 特性（Attributes）
 <a class="link" href="#8.8.3.41.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-43bc7e8f-4cad-42fb-b32f-b999778fa29c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d93b7f18-1ade-48fb-9f84-aff71ad43c70"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -354,7 +354,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.41.C<a class="link" href="#-43bc7e8f-4cad-42fb-b32f-b999778fa29c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.41.C<a class="link" href="#-d93b7f18-1ade-48fb-9f84-aff71ad43c70"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.41.4-Formal-representation-"></a>
     8.8.3.41.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.41.4-Formal-representation-"><i data-feather="link"></i></a></h2>
