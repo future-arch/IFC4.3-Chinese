@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.1.3.5 IfcPerson - IFC 4.3.2 Documentation</title>
+<title>8.1.3.5 IfcPerson（人员） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,15 +189,17 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.1.3.5 IfcPerson</h1>
+<h1>8.1.3.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a>（人员）</h1>
 <div class="mvd" title="Included in IfcWorkControl.Creators, Revision Control">RV ⓘ</div>
 <div class="mvd" title="Included in IfcWorkControl.Creators, Revision Control">AbV ⓘ</div>
 <h2><a class="anchor" id="8.1.3.5.1-Semantic-definition-"></a>
     8.1.3.5.1 语义定义（Semantic definition）
 <a class="link" href="#8.1.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>此实体表示一个单独的自然人。</p>
-<!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> 许多国家都有关于数据库中个人身份的立法。尽管 IFC 模型旨在作为数据交换和共享的规范，但在某些情况下，IFC 文件可能被视为一个数据库，允许根据此类立法的条款识别特定个人。用户应注意在 IFC 文件使用地点可能适用的立法限制。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-41 中定义的 <strong>person</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5.1 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>Id</em> 重命名为 <em>Identification</em>。WHERE 规则放宽，允许在提供 <em>Identification</em> 时省略姓名。</aside>
+<p>该实体表示单个自然人。</p>
+<!-- 简短定义结束 -->
+<aside class="aside-note"><mark>注释</mark> 许多国家/地区都有关于在数据库中识别个人身份的法律法规。尽管IFC模型的目的是作为数据交换和共享的规范，但在某些情况下，IFC文件可能被视为能够根据此类法律条款识别特定人员的数据库。用户应注意在使用IFC文件的地区可能适用的法律限制。</aside><aside class="aside-note"><mark>注释</mark> 该实体改编自ISO 10303-41中定义的<strong>person</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5.1中的新实体。</aside><blockquote>
+<p>IFC4变更 属性_Id_重命名为_Identification_。WHERE规则放宽，允许在提供_Identification_时省略名称。</p>
+</blockquote>
 <h2><a class="anchor" id="8.1.3.5.2-Entity-inheritance-"></a>
     8.1.3.5.2 实体继承（Entity inheritance）
 <a class="link" href="#8.1.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -213,7 +215,7 @@
     8.1.3.5.3 特性（Attributes）
 <a class="link" href="#8.1.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f540e169-6435-4444-a38c-5184da4abd96"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-9432a53d-5001-484e-a960-fd12babfccc9"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -235,122 +237,12 @@
 <small>(9)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Identification
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<p>个人的标识。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                FamilyName
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>可用于识别个人家庭身份的姓氏。</p>
-<aside class="aside-note"><mark>注释</mark> 根据地理位置和文化，姓氏可能出现在名字的第一个或最后一个部分。</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                GivenName
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>个人在家庭中为人所知的名字，可用于亲切地识别。</p>
-<aside class="aside-note"><mark>注释</mark> 根据地理位置和文化，名字可能出现在名字的第一个或最后一个部分。</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                MiddleNames
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>给予个人的附加名字，使其区别于具有相同或相似姓氏和名字的其他人。</p>
-<aside class="aside-note"><mark>注释</mark> 中间名通常不用于亲切的交流，但如有必要，可以断言以提供对特定个人的额外识别。当相关人员的姓氏在地理区域内很常见时，它们可能特别有用。</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                PrefixTitles
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>出现在名字之前的、指定个人社会和/或职业地位的词语或词组。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                SuffixTitles
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>出现在名字之后的、指定个人社会和/或职业地位的词语或词组。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">7</td>
-<td data-label="Name">
-                
-                Roles
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorRole.htm">IfcActorRole</a></td>
-<td data-label="Description">
-<p>个人扮演的角色。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">8</td>
-<td data-label="Name">
-                
-                Addresses
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAddress.htm">IfcAddress</a></td>
-<td data-label="Description">
-<p>个人的邮政和电信地址。</p>
-<aside class="aside-note"><mark>注释</mark> 一个人可能有多个地址。</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 此属性已弃用，不再使用。使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Address.htm">Pset_Address</a>，该属性与指向此实体的 <em>TheActor</em> 的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActor.htm">IfcActor</a> 相关。</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#"></td>
-<td data-label="Name">
-<em>EngagedIn</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPersonAndOrganization.htm">IfcPersonAndOrganization</a> FOR ThePerson</td>
-<td data-label="Description">
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPersonAndOrganization.htm">IfcPersonAndOrganization</a> 关系中 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a> 所参与的逆向关系。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.1.3.5.A<a class="link" href="#-f540e169-6435-4444-a38c-5184da4abd96"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.1.3.5.A<a class="link" href="#-9432a53d-5001-484e-a960-fd12babfccc9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.1.3.5.4-Formal-propositions-"></a>
     8.1.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#8.1.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-66373afd-ab08-4ed9-9a9c-a8c24d089dbc"></a><table>
+<figure><a class="anchor" id="-6a294ecc-2e12-4acc-8d91-6026a4694d00"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -361,9 +253,7 @@
 <tr>
 <td>IdentifiablePerson</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>要求提供标识和/或姓氏和/或名字作为最低信息。</p>
 </td>
 </tr>
 <tr>
@@ -374,9 +264,7 @@
 <tr>
 <td>ValidSetOfNames</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>如果提供了中间名，则也应提供姓氏和/或名字。</p>
 </td>
 </tr>
 <tr>
@@ -385,7 +273,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.1.3.5.B<a class="link" href="#-66373afd-ab08-4ed9-9a9c-a8c24d089dbc"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.1.3.5.B<a class="link" href="#-6a294ecc-2e12-4acc-8d91-6026a4694d00"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.1.3.5.5-Formal-representation-"></a>
     8.1.3.5.5 形式化表示（Formal representation）
 <a class="link" href="#8.1.3.5.5-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -468,5 +356,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
