@@ -236,7 +236,7 @@
     8.12.3.28.3 特性（Attributes）
 <a class="link" href="#8.12.3.28.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-5d193e7a-fb18-4e7b-85f2-e92e296c0c28"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-a36a3464-187c-4d0d-bb2c-3963675fed0f"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -258,6 +258,28 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -276,12 +298,52 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Item
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationItem.htm">IfcRepresentationItem</a></td>
+<td data-label="Description">
+<p>被分配样式的几何表现项。</p>
+<blockquote>
+<p>IFC2x2 增补 2 变更 <em>Item</em> 属性已设为可选。基于文件交换的向上兼容性得到保证。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Styles
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationStyle.htm">IfcPresentationStyle</a></td>
+<td data-label="Description">
+<p>被分配的表現样式，可以分配给几何表现项，也可以分配给材料定义。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已更改为 <em>IfcStyleAssignmentSelect</em>，基于文件交换的向上兼容性得到保证。</aside><aside class="aside-note"><mark>注释</mark> 从 IFC4 开始，仅应使用选择项 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationStyle.htm">IfcPresentationStyle</a></em>，<em>IfcPresentationStyleAssignment</em> 已被弃用。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于指代该样式化项的词或词组。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.12.3.28.B<a class="link" href="#-5d193e7a-fb18-4e7b-85f2-e92e296c0c28"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.28.B<a class="link" href="#-a36a3464-187c-4d0d-bb2c-3963675fed0f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.28.4-Formal-propositions-"></a>
     8.12.3.28.4 形式化命题（Formal propositions）
 <a class="link" href="#8.12.3.28.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-30f38031-1925-4051-ae07-e8f895a8726f"></a><table>
+<figure><a class="anchor" id="-5dd37e3c-4ca0-427b-8a17-76a079ea630c"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -301,7 +363,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.28.C<a class="link" href="#-30f38031-1925-4051-ae07-e8f895a8726f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.28.C<a class="link" href="#-5dd37e3c-4ca0-427b-8a17-76a079ea630c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.28.5-Formal-representation-"></a>
     8.12.3.28.5 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.28.5-Formal-representation-"><i data-feather="link"></i></a></h2>
