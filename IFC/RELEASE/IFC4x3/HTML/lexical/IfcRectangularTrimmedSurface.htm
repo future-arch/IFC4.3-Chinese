@@ -274,7 +274,7 @@
     8.9.3.55.3 特性（Attributes）
 <a class="link" href="#8.9.3.55.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-8b6e2225-b8db-4269-b1db-a5174684885b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-e0f2e035-8bf4-4881-b0e7-f16eb940e3f5"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -296,10 +296,47 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">3</code></pre>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是三维几何表示项。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 从子类型提升的派生属性。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -320,12 +357,96 @@
 <small>(7)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                BasisSurface
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a></td>
+<td data-label="Description">
+<p>被裁剪的曲面。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                U1
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>第一个 u 参数值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                V1
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>第一个 v 参数值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                U2
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>第二个 u 参数值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                V2
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>第二个 v 参数值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Usense
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>指示裁剪曲面的第一个参数方向是否与基础曲面中 u 的方向一致或相反的标志。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                Vsense
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>指示裁剪曲面的第二个参数方向是否与基础曲面中 v 的方向一致或相反的标志。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.9.3.55.A<a class="link" href="#-8b6e2225-b8db-4269-b1db-a5174684885b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.55.A<a class="link" href="#-e0f2e035-8bf4-4881-b0e7-f16eb940e3f5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.55.4-Formal-propositions-"></a>
     8.9.3.55.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.55.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-0c6e0981-8c39-436c-8068-0944477c5526"></a><table>
+<figure><a class="anchor" id="-62990d5e-b9f3-4d88-9aba-ec4b40ef9704"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -381,7 +502,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.55.B<a class="link" href="#-0c6e0981-8c39-436c-8068-0944477c5526"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.55.B<a class="link" href="#-62990d5e-b9f3-4d88-9aba-ec4b40ef9704"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.55.5-Formal-representation-"></a>
     8.9.3.55.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.55.5-Formal-representation-"><i data-feather="link"></i></a></h2>
