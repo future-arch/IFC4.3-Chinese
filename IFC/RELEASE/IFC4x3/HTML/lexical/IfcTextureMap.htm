@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.44 IfcTextureMap - IFC 4.3.2 Documentation</title>
+<title>8.12.3.44 IfcTextureMap（纹理映射） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,38 +189,32 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.44 IfcTextureMap</h1>
+<h1>8.12.3.44 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureMap.htm">IfcTextureMap</a>（纹理映射）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.12.3.44.1-Semantic-definition-"></a>
     8.12.3.44.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.44.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureMap.htm">IfcTextureMap</a></em> 提供二维纹理坐标到其映射到的表面的映射。它用于将纹理映射到基于顶点的几何模型的表面，例如</p>
-<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureMap.htm">IfcTextureMap</a></em> 提供了将二维纹理坐标映射到其所映射表面的功能。它用于将纹理映射到基于顶点几何模型的表面，例如：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm">IfcFacetedBrep</a></em></li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrepWithVoids.htm">IfcFacetedBrepWithVoids</a></em></li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></em></li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShellBasedSurfaceModel.htm">IfcShellBasedSurfaceModel</a></em></li>
 </ul>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureMap.htm">IfcTextureMap</a></em> 具有一个 <em>TextureVertex</em> 列表，该列表对应于基于顶点的几何项的外部面边界点。对应的点对列表是：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureMap.htm">IfcTextureMap</a></em> 包含一个 <em>TextureVertex</em> 列表，该列表对应于基于顶点几何项的外表面边界的点。对应的列表对包括：</p>
 <ol>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em> 的 <em>Polygon</em> 列表，类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em>，以及</li>
-<li><em>Vertices</em> 列表，类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a></em>。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em> 中类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em> 的 <em>Polygon</em> 列表，以及</li>
+<li>类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a></em> 的 <em>Vertices</em> 列表。</li>
 </ol>
-<p>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a></em>（以二维纹理坐标系统的 S、T 坐标给出）对应于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em> 的几何坐标（在几何项的对象坐标系中以三维 X、Y 和 Z 坐标给出）。</p>
+<p>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a></em>（以二维纹理坐标系的 S、T 坐标给出）对应于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em> 的几何坐标（以几何项对象坐标系内的三维 X、Y 和 Z 坐标给出）。</p>
 <aside class="aside-note"><mark>注释</mark> 根据 ISO/IEC 19775-1 的定义：
-TextureCoordinate 节点是一个几何属性节点，它指定一组二维纹理坐标，用于基于顶点的几何节点将纹理映射到顶点。</aside><blockquote>
-<p>注意：与 X3D 基于顶点的几何体（例如 IndexedFaceSet 和 ElevationGrid）不同，IFC 中的基于顶点的几何体可能包含内环。内环的区域必须从应用于外环的纹理中剪切掉。</p>
-</blockquote>
-<figure><a class="anchor" id="-1-"></a><img alt="IfcTextureMap_fig-1.png 35,6 KB" src="../figures/ifctexturemap_fig-1.png"/><figcaption>图 8.12.3.44.A — 纹理贴图<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.12.3.44.A 说明了将纹理贴图应用于基于顶点的几何体。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><blockquote>
-<p>IFC2x3 更改：已删除属性 Texture，并添加了属性 TextureMaps。</p>
-<p>IFC4 更改：属性 TextureMap 被替换为 <em>Vertices</em>，并添加了属性 <em>AppliedTo</em>。</p>
-</blockquote>
+TextureCoordinate 节点是一个几何属性节点，指定了一组二维纹理坐标，供基于顶点的几何节点用于将纹理映射到顶点。</aside><aside class="aside-note"><mark>注释</mark> 与 X3D 基于顶点的几何体（例如 IndexedFaceSet 和 ElevationGrid）相反，IFC 中基于顶点的几何体可能包含内环。内环区域必须从应用于外环的纹理中切除。</aside>
+<figure><a class="anchor" id="-1-"></a><img alt="IfcTextureMap_fig-1.png 35,6 KB" src="../figures/ifctexturemap_fig-1.png"/><figcaption>图 8.12.3.44.A — 纹理映射<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 8.12.3.44.A 展示了将纹理映射应用于基于顶点几何体的过程。</p>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> 删除了 Texture 属性，并添加了 TextureMaps 属性。</aside><aside class="aside-change"><mark>IFC4 变更</mark> TextureMap 属性被 <em>Vertices</em> 替换，并添加了 <em>AppliedTo</em> 属性。</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li><em>AppliedTo</em> 中引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a></em> 应由分配给此纹理贴图的基于顶点的几何体使用，该分配通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 进行。</li>
+<li>在 <em>AppliedTo</em> 中引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a></em> 应被基于顶点的几何体使用，该纹理映射通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 分配给该几何体。</li>
 </ol>
 <h2><a class="anchor" id="8.12.3.44.2-Entity-inheritance-"></a>
     8.12.3.44.2 实体继承（Entity inheritance）
@@ -267,7 +261,7 @@ TextureCoordinate 节点是一个几何属性节点，它指定一组二维纹�
     8.12.3.44.3 特性（Attributes）
 <a class="link" href="#8.12.3.44.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-48789a4d-583a-4f47-9632-a3186c696d44"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-087a98ee-7baa-4305-a7bc-639c76b5a9c7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -289,18 +283,6 @@ TextureCoordinate 节点是一个几何属性节点，它指定一组二维纹�
 <small>(1)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Maps
-                
-            </td>
-<td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceTexture.htm">IfcSurfaceTexture</a></td>
-<td data-label="Description">
-<p>指向由纹理坐标变换映射到几何表面的一个（或多个，在多纹理具有到几何表面身份变换的情况下）<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceTexture.htm">IfcSurfaceTexture</a></em> 子类型。</p>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -319,35 +301,8 @@ TextureCoordinate 节点是一个几何属性节点，它指定一组二维纹�
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Vertices
-                
-            </td>
-<td data-label="Type">LIST [3:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a></td>
-<td data-label="Description">
-<p>应用于定义面边界的多边形环的相应点的纹理坐标顶点列表。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                MappedTo
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a></td>
-<td data-label="Description">
-<p>定义面边界多边形环沿边界点列表的面。</p>
-<blockquote>
-<p>注意：该面可能具有额外的内环。 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureMap.htm">IfcTextureMap</a></em> 及其 <em>Vertices</em> 仅与代表外边界的多边形环的坐标对应。</p>
-</blockquote>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.12.3.44.B<a class="link" href="#-48789a4d-583a-4f47-9632-a3186c696d44"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.44.B<a class="link" href="#-087a98ee-7baa-4305-a7bc-639c76b5a9c7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.44.4-Formal-representation-"></a>
     8.12.3.44.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.44.4-Formal-representation-"><i data-feather="link"></i></a></h2>
