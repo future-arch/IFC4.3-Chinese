@@ -207,7 +207,7 @@
     6.5.3.3.3 特性（Attributes）
 <a class="link" href="#6.5.3.3.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-edae33de-088b-4f36-a860-e545d3427d02"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-94286c9c-910e-42ff-822c-9d0546d8e8ef"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -526,11 +526,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.5.3.3.A<a class="link" href="#-edae33de-088b-4f36-a860-e545d3427d02"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.3.A<a class="link" href="#-94286c9c-910e-42ff-822c-9d0546d8e8ef"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.3.4-Concept-usage-"></a>
     6.5.3.3.4 概念用法（Concept usage）
 <a class="link" href="#6.5.3.3.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-bfd0d711-2fd8-4a04-be15-e301023908f6"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-f3ba34aa-70f7-4ada-9f94-611cad335613"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -553,9 +553,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用IfcOwnerHistory捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -566,15 +564,24 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>IfcRoot分配全局唯一ID，同时还可为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例或对象类型都可以引用特定的分类参照，即分类系统中的特定分面。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -593,19 +600,6 @@
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
                 General
@@ -702,19 +696,6 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
 </td>
 <td data-label="Usage">
@@ -734,6 +715,7 @@
                 General
             </td>
 <td data-label="Description">
+<p>任何对象实例都可通过分配至公共对象类型来实现类型化，这是通过本概念实现的。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型层级重写此概念，引入了限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 适用子类型的特定规则</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -750,14 +732,23 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型均可使用 <em>Name</em> 属性和可选的 <em>Description</em> 属性。对于具有对象类型定义的子类型（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例均可持有属性集，可直接在对象实例处作为元素特定属性集，或在对象类型处作为类型属性集。在这种情况下，提供给对象实例的属性是元素特定属性和类型属性的组合。如果在实例属性和类型属性中同时定义了相同属性（同一属性集内），则实例属性的属性值将覆盖类型属性的属性值</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
 </td>
 <td data-label="Usage">
                 General
@@ -782,6 +773,7 @@
                 General
             </td>
 <td data-label="Description">
+<p>控制通过使用关系对象 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a></em> 从产品、流程或其他对象进行分配。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -805,7 +797,24 @@
 <tr class="group">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>
-<small>(1)</small>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>可以通过关联审批来指示接受或拒绝的状态，使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a> 关系，其中 RelatingApproval 引用一个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>，而 RelatedObjects 包含 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>。可以使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApprovalRelationship.htm">IfcApprovalRelationship</a> 将审批拆分为子审批，以分别跟踪各方的审批状态，其中 RelatingApproval 引用更高级别的审批，而 RelatedApprovals 包含一个或多个较低级别的审批。审批的层级结构意味着顺序性，即在其所有较低级别的审批都被接受之前，不会执行更高级别的审批。</p>
 </td>
 </tr>
 <tr>
@@ -822,6 +831,14 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
+<p>可以使用以下指示的关系将 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a> 分配给以下实体：</p>
+<ul>
+<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActor.htm">IfcActor</a> (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToActor.htm">IfcRelAssignsToActor</a>)：参与准备、提交以及作为目标用户的人员和组织。</li>
+</ul>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a> 可以使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a> 关系拥有其自身的分配，其中 RelatingControl 引用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>，而 RelatedObjects 包含以下类型的一个或多个对象：</p>
+<ul>
+<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>：指示在此成本计划中发布的成本，通常是一个单一的根成本项，形成嵌套成本项的层级结构。</li>
+</ul>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -834,7 +851,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.5.3.3.B<a class="link" href="#-bfd0d711-2fd8-4a04-be15-e301023908f6"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.3.B<a class="link" href="#-f3ba34aa-70f7-4ada-9f94-611cad335613"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.3.5-Formal-representation-"></a>
     6.5.3.3.5 形式化表示（Formal representation）
 <a class="link" href="#6.5.3.3.5-Formal-representation-"><i data-feather="link"></i></a></h2>
