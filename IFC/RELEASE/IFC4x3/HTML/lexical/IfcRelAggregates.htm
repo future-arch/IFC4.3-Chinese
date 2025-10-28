@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.20 IfcRelAggregates (聚合关系) - IFC 4.3.2 Documentation</title>
+<title>5.1.3.20 IfcRelAggregates（关联关系-聚合） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,18 +138,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.1.3.20 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> (聚合关系)</h1>
+<h1>5.1.3.20 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a>（关联关系-聚合）</h1>
 <div class="mvd" title="Included in Element Composition, Element Decomposition, Spatial Composition, Spatial Decomposition">RV ⓘ</div>
 <div class="mvd" title="Included in Alignment Aggregation To Project, Alignment Layout - Reusing Horizontal Layout, Element Composition, Element Decomposition, Spatial Composition, Spatial Decomposition">AbV ⓘ</div>
 <h2><a class="anchor" id="5.1.3.20.1-Semantic-definition-"></a>
     5.1.3.20.1 语义定义（Semantic definition）
 <a class="link" href="#5.1.3.20.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>聚合关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 是一种特殊的通用组合/分解（或整体/部分）关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em>。 聚合关系可以应用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的所有子类型。</p>
-<!-- end of short definition -->
-<p>在将物理构件聚合为物理集合体的情况下，整体的形状表达（在相同的表达标识符内）可以取自各部分的形状表达的总和。</p>
-<aside class="aside-example"><mark>示例</mark> 屋顶是屋面板、椽子、檩条等屋顶构件的聚合。在相同的表达标识符（例如实体几何表达）内，屋顶的形状表达由其各部分的形状表达给出。</aside>
-<p>分解意味着一种依赖关系，意味着整体依赖于部分的定义，而部分依赖于整体的存在。 依赖关系所隐含的行为必须在应用程序内部建立。</p>
-<aside class="aside-history"><mark>沿革</mark> 在IFC2x中新增的实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 特性 <em>RelatingObject</em> 和 <em>RelatedObjects</em> 从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 中降级。</aside>
+<p>关联关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 是一种特殊的整体组合/分解（或整体/部分）关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em>。该聚合关系可应用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的所有子类型。</p>
+<!-- 简短定义结束 -->
+<p>在将物理元素聚合为物理聚合体的情况下，整体（在同一表示标识符内）的形状表示可以从各部件形状表示的总和中得出。</p>
+<aside class="aside-example"><mark>示例</mark> 屋顶是屋顶构件（如屋面板、椽子、檩条等）的聚合。在同一表示标识符（如实体几何表示）内，屋顶的形状表示由其各部件形状表示给出。</aside>
+<p>分解意味着依赖关系，即整体依赖于各部分的定义，而各部分依赖于整体的存在。依赖关系所隐含的行为必须在应用程序内部建立。</p>
+<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>RelatingObject</em> 和 <em>RelatedObjects</em> 已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 中降级。</aside>
 <h2><a class="anchor" id="5.1.3.20.2-Entity-inheritance-"></a>
     5.1.3.20.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.20.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -194,7 +194,7 @@
     5.1.3.20.3 特性（Attributes）
 <a class="link" href="#5.1.3.20.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-56261048-ff93-46ea-a7da-ade859db9c15"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-10d483bd-96c5-4ab0-a4d1-d9add8df96b3"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -216,55 +216,6 @@
 <small>(4)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                GlobalId
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
-<td data-label="Description">
-<p>在整个软件世界中分配全局唯一标识符。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                OwnerHistory
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
-<td data-label="Description">
-<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该特性已更改为 OPTIONAL。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                Name
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                Description
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
-<td data-label="Description">
-<p>可选的描述，用于提供信息性注释。</p>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -283,38 +234,12 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                RelatingObject
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></td>
-<td data-label="Description">
-<p>对象定义，可以是对象类型或对象实例，表示聚合。 它是整体/部分关系中的整体。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 该特性已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 中降级，并定义了无序的聚合关系。</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                RelatedObjects
-                
-            </td>
-<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></td>
-<td data-label="Description">
-<p>正在聚合的对象定义，可以是对象实例或对象类型。 它们被定义为整体/部分关系中的部分。 各部分之间没有隐含的顺序。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 该特性已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 中降级，并定义了聚合中各部分的无序集合。</aside>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 5.1.3.20.A<a class="link" href="#-56261048-ff93-46ea-a7da-ade859db9c15"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.20.A<a class="link" href="#-10d483bd-96c5-4ab0-a4d1-d9add8df96b3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.20.4-Formal-propositions-"></a>
     5.1.3.20.4 形式化命题（Formal propositions）
 <a class="link" href="#5.1.3.20.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6738fb2c-28e6-41f0-bbff-bf42c8d36c54"></a><table>
+<figure><a class="anchor" id="-ebc8dc03-4978-44dd-ab78-aa8de3b7ea8b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -325,7 +250,7 @@
 <tr>
 <td>NoSelfReference</td>
 <td>
-<p><em>RelatingObject</em> 提供的关系指向的实例不得包含在 <em>RelatedObjects</em> 集合中。</p>
+<p>由 <em>RelatingObject</em> 提供的关系所指向的实例不得包含在 <em>RelatedObjects</em> 集合中。</p>
 </td>
 </tr>
 <tr>
@@ -334,11 +259,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.20.B<a class="link" href="#-6738fb2c-28e6-41f0-bbff-bf42c8d36c54"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.20.B<a class="link" href="#-ebc8dc03-4978-44dd-ab78-aa8de3b7ea8b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.20.5-Concept-usage-"></a>
     5.1.3.20.5 概念用法（Concept usage）
 <a class="link" href="#5.1.3.20.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-5ddc25cd-4dc8-4606-9af0-80733c7a9579"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-227c905b-0e27-4f9b-9b2d-625f1f542b54"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -361,7 +286,9 @@
                 General
             </td>
 <td data-label="Description">
-<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -372,7 +299,9 @@
                 General
             </td>
 <td data-label="Description">
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr class="preview">
@@ -388,7 +317,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.20.C<a class="link" href="#-5ddc25cd-4dc8-4606-9af0-80733c7a9579"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.20.C<a class="link" href="#-227c905b-0e27-4f9b-9b2d-625f1f542b54"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.20.6-Formal-representation-"></a>
     5.1.3.20.6 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.20.6-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -457,5 +386,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
