@@ -263,7 +263,7 @@
     8.8.3.9.3 特性（Attributes）
 <a class="link" href="#8.8.3.9.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-36bf97ec-3688-4781-b52d-38821b0f5fdd"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-1dbc84fe-48fa-4e24-ae7e-6c082a2f2675"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -285,10 +285,46 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointListDim.htm">IfcPointListDim</a>(SELF)</code></pre>
+<p>该类的空间维度，根据子类型的不同为 2 或 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -309,8 +345,32 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                CoordList
+                
+            </td>
+<td data-label="Type">LIST [1:?] OF LIST [2:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>由两个坐标提供的笛卡尔点的二维列表。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                TagList
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>与每个点对应的标签列表，可用于根据 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOffsetCurveByDistances.htm">IfcOffsetCurveByDistances</a></em> 中的 Tag 属性识别基准曲线。当在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 类型的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 曲线中使用时，也用于识别 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSolidHorizontal.htm">IfcSectionedSolidHorizontal</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSurface.htm">IfcSectionedSurface</a></em> 形状字符串线（"引导曲线"）。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.8.3.9.A<a class="link" href="#-36bf97ec-3688-4781-b52d-38821b0f5fdd"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.9.A<a class="link" href="#-1dbc84fe-48fa-4e24-ae7e-6c082a2f2675"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.9.4-Formal-representation-"></a>
     8.8.3.9.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.9.4-Formal-representation-"><i data-feather="link"></i></a></h2>
