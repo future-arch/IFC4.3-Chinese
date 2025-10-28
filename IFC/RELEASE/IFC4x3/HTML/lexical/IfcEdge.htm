@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.4 IfcEdge - IFC 4.3.2 Documentation</title>
+<title>8.20.3.4 IfcEdge（边） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,27 +189,27 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.20.3.4 IfcEdge</h1>
+<h1>8.20.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a>（边）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.20.3.4.1-Semantic-definition-"></a>
     8.20.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.20.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>An <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em>. The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> can therefore be used to exchange straight edges without an associated geometry provided by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em> or <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> thought <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a>.EdgeGeometry</em>.</p>
-<!-- end of short definition -->
-<figure><a class="anchor" id="Figure-8.20.3.4.A-Edge-representation"></a><img alt="edge representation" src="../figures/ifcedge.png"/><figcaption>Figure 8.20.3.4.A — Edge representation<a class="link" href="#Figure-8.20.3.4.A-Edge-representation"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> Figure 8.20.3.4.A illustrates an example where the bounds of the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> are given by the <em>EdgeStart</em> and <em>EdgeEnd</em>; this also determines the direction of the edge. The location within a coordinate space is determined by the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em> type for <em>EdgeStart</em> and <em>EdgeEnd</em>. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense.</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non-self-intersecting open curve in <em>R^M^</em>, that is, a connected 1-dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 ≤ Ξ ≤ ∞. Associated with an edge may be a geometric curve to locate the edge in a coordinate space; this is represented by the edge curve subtype. The curve shall be finite and non-self-intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus <em>G^e^</em> may be determined by the graph traversal algorithm. Since <em>M</em> = <em>E</em> = 1, the Euler equation (1) reduces in the case to:</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>edge</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2.0</aside><blockquote>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 定义了两个在拓扑上相连的顶点。如果未使用子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 分配曲线几何图形，则两个顶点之间连接的几何表示默认为直线。因此，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 可用于交换直线边，而无需通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a>.EdgeGeometry</em> 提供由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 定义的关联几何图形。</p>
+<!-- 简短定义结束 -->
+<figure><a class="anchor" id="-1-"></a><img alt="边表示" src="../figures/ifcedge.png"/><figcaption>图 8.20.3.4.A — 边表示<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> 图 8.20.3.4.A 展示了一个示例，其中 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 的边界由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 给出；这也决定了边的方向。在坐标空间中的位置由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em> 类型决定。由于未分配边几何图形，它默认为与方向一致的直线。</aside><aside class="aside-note"><mark>注释</mark> 意 根据 ISO/CD 10303-42:1992 的定义
+边是对应于两个顶点连接的拓扑构造。更抽象地说，它可以表示两个顶点之间的逻辑关系。边的定义域（如果存在）是 <em>R^M^</em> 中的一条有限、不自交的开曲线，即一个连通的一维流形。边的边界是两个顶点，这两个顶点不必不同。通过选择从第一个顶点到第二个顶点的遍历方向来确定边的方向。如果两个顶点相同，则该边是一个自环。边的定义域不包括其边界，且 0 ≤ Ξ ≤ ∞。边可以关联一个几何曲线以在坐标空间中定位该边；这由边曲线子类型表示。曲线在边的定义域内应是有限且不自交的。边是一个图，因此其重数 M 和图亏格 <em>G^e^</em> 可以通过图遍历算法确定。由于 <em>M</em> = <em>E</em> = 1，欧拉方程 (1) 在这种情况下简化为：</aside><aside class="aside-note"><mark>注释</mark> 意 实体改编自 ISO 10303-42 中定义的 <strong>edge</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。</aside><blockquote>
 <blockquote>
-<figure><a class="anchor" id="Figure-8.20.3.4.B"></a><img alt="Image" src="../figures/ifcedge-math1.gif"/>
-where <em>V</em> = 1 or 2, and <em>G^e^</em> = 1 or 0. Specifically, the topological edge defining data shall satisfy: &gt; * an edge has two vertices  <img alt="Image" src="../figures/ifcedge-math2.gif"/>
-* the vertices need not be distinct  <img alt="Image" src="../figures/ifcedge-math3.gif"/>
-* Equation shall hold  <img alt="Image" src="../figures/ifcedge-math4.gif"/><figcaption>Figure 8.20.3.4.B<a class="link" href="#Figure-8.20.3.4.B"><i data-feather="link"></i></a></figcaption><figcaption>Figure 8.20.3.4.C</figcaption><figcaption>Figure 8.20.3.4.D</figcaption><figcaption>Figure 8.20.3.4.E</figcaption></figure>
+<figure><a class="anchor" id="Figure-8.20.3.4.B"></a><img alt="图像" src="../figures/ifcedge-math1.gif"/>
+其中 <em>V</em> = 1 或 2，且 <em>G^e^</em> = 1 或 0。具体来说，定义拓扑边的数据应满足： &gt; * 一条边有两个顶点  <img alt="图像" src="../figures/ifcedge-math2.gif"/>
+* 顶点不必不同  <img alt="图像" src="../figures/ifcedge-math3.gif"/>
+* 方程应成立  <img alt="图像" src="../figures/ifcedge-math4.gif"/><figcaption>Figure 8.20.3.4.B<a class="link" href="#Figure-8.20.3.4.B"><i data-feather="link"></i></a></figcaption><figcaption>Figure 8.20.3.4.C</figcaption><figcaption>Figure 8.20.3.4.D</figcaption><figcaption>Figure 8.20.3.4.E</figcaption></figure>
 </blockquote>
 </blockquote>
-<p><strong>Informal Propositions</strong></p>
+<p><strong>非正式命题</strong></p>
 <ol>
-<li>The edge has dimensionality 1.</li>
-<li>The extent of an edge shall be finite and nonzero.</li>
+<li>边的维度为 1。</li>
+<li>边的范围应为有限且非零。</li>
 </ol>
 <h2><a class="anchor" id="8.20.3.4.2-Entity-inheritance-"></a>
     8.20.3.4.2 实体继承（Entity inheritance）
@@ -255,7 +255,7 @@ where <em>V</em> = 1 or 2, and <em>G^e^</em> = 1 or 0. Specifically, the topolog
     8.20.3.4.3 特性（Attributes）
 <a class="link" href="#8.20.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-aea89665-9f35-4fce-b084-92769203c045"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-11a1b257-4f56-430f-b60c-c0cdc297549a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -277,28 +277,6 @@ where <em>V</em> = 1 or 2, and <em>G^e^</em> = 1 or 0. Specifically, the topolog
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已限制为最多 1 个。文件交换的向后兼容性得到保证。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -317,32 +295,8 @@ where <em>V</em> = 1 or 2, and <em>G^e^</em> = 1 or 0. Specifically, the topolog
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                EdgeStart
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>Start point (vertex) of the edge.</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                EdgeEnd
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>End point (vertex) of the edge. The same vertex can be used for both EdgeStart and EdgeEnd.</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.20.3.4.F<a class="link" href="#-aea89665-9f35-4fce-b084-92769203c045"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.4.F<a class="link" href="#-11a1b257-4f56-430f-b60c-c0cdc297549a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.4.4-Formal-representation-"></a>
     8.20.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -415,5 +369,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
