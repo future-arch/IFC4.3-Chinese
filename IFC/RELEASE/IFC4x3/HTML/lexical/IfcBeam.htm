@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.1.3.1 梁 (IfcBeam) - IFC 4.3.2 Documentation</title>
+<title>6.1.3.1 IfcBeam（梁） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -144,20 +144,20 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.1.3.1 梁 (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a>)</h1>
+<h1>6.1.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a>（梁）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a> 的子类型，因此是每个标准化模式子集和实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="6.1.3.1.1-Semantic-definition-"></a>
     6.1.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#6.1.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> 通常是一个水平或近似水平的结构构件，主要通过抵抗弯曲来承受荷载。它也可以从建筑角度代表这样的构件。它不一定是承重的。</p>
-<!-- end of short definition -->
-<p>梁的出现主要有两种表示方式：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> 通常是一种水平或接近水平的结构构件，主要通过抵抗弯曲来承受荷载。它也可以从建筑角度表示此类构件。不要求其必须承重。</p>
+<!-- 简短定义结束 -->
+<p>梁实例有两种主要表示方式：</p>
 <ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> 配合 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 用于所有梁的出现，这些梁的截面沿样条线扫掠定义。截面可能沿样条线通过锥度定义均匀变化。截面参数及其插入的基点可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 完全描述。这些梁在几何上始终由“轴线”和“扫掠实体”或“高级扫掠实体”形状表示（或基于扫掠实体的“裁剪”几何体）表示，如果分配了 3D 几何表示。</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> 没有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 用于所有其他梁的出现，特别是对于沿扫掠线截面尺寸非均匀变化的梁，或者只有“AdvancedBrep”、“Brep”或“SurfaceModel”几何体的梁，如果不需要更参数化的表示。</li>
+<li>带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> 用于所有具有沿准线扫描定义的轮廓的梁实例。轮廓可能沿准线通过锥度定义均匀变化。轮廓参数及其插入基点可由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 完整描述。如果分配了 3D 几何表示，这些梁始终通过"轴线"和"扫描实体"或"高级扫描实体"形状表示（或基于扫描实体的"裁剪"几何）进行几何表示。</li>
+<li>不带 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> 用于所有其他梁实例，特别是沿扫描方向轮廓尺寸非均匀变化的梁，或仅具有"高级边界表示"、"边界表示"或"曲面模型"几何的梁，如果不打算使用更参数化的表示。</li>
 </ul>
-<p>对于任何其他纵向结构构件，不限于主要水平或垂直，或者当此语义信息无关紧要时，应使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMember.htm">IfcMember</a></em> 实体。</p>
-<aside class="aside-reference"><mark>参考</mark> ISO 6707-1 定义：用于在支撑点之间或之外承载荷载的结构构件，通常与其长度相比很窄，并且是水平或近似水平的。</aside><aside class="aside-note"><mark>注释</mark> 实体 <em>IfcBeamStandardCase</em> 已被删除，现使用带 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em>。</aside><aside class="aside-note"><mark>注释</mark> 结构分析模型中承重梁的表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em> 的一部分 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralMember.htm">IfcStructuralMember</a></em> 的子类型（主要适用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralCurveMember.htm">IfcStructuralCurveMember</a></em>）提供。梁的拱度可以通过分配具有位移坐标的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralCurveMember.htm">IfcStructuralCurveMember</a></em> 来定义。可以提供多个拱度坐标集，这些坐标集由特定荷载工况限定，通常使用全部恒载用于制造，其他场景用于施工等其他荷载条件。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 新实体</aside>
+<p>对于任何其他纵向结构构件，不限制为主要水平或垂直，或者此语义信息无关紧要时，应使用实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMember.htm">IfcMember</a></em>。</p>
+<aside class="aside-reference"><mark>参考</mark> 根据 ISO 6707-1 的定义：在支点之间或超出支点传递荷载的结构构件，通常相对于其长度较窄，且为水平或接近水平。</aside><aside class="aside-note"><mark>注释</mark> 意 实体 <em>IfcBeamStandardCase</em> 已被删除，改用带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em>。</aside><aside class="aside-note"><mark>注释</mark> 意 结构分析模型中承重梁的表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralMember.htm">IfcStructuralMember</a></em> 的子类型（主要适用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralCurveMember.htm">IfcStructuralCurveMember</a></em>）作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em> 的一部分提供。梁的拱度可通过分配具有位移坐标的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralCurveMember.htm">IfcStructuralCurveMember</a></em> 来定义。可提供多组拱度坐标，这些坐标由特定荷载工况限定，其中通常使用全恒载进行制造，其他场景用于其他荷载条件，如施工期间。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体</aside>
 <h2><a class="anchor" id="6.1.3.1.2-Entity-inheritance-"></a>
     6.1.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#6.1.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -264,7 +264,7 @@
     6.1.3.1.3 特性（Attributes）
 <a class="link" href="#6.1.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-bb89820d-7a94-40e8-a712-32949b7c3bee"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-9f74e7dd-ca5b-4083-9c3d-b3195478ff8d"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -286,136 +286,10 @@
 <small>(4)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                GlobalId
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
-<td data-label="Description">
-<p>在整个软件世界中分配全局唯一标识符。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                OwnerHistory
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
-<td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><blockquote>
-<p>IFC4变更 该属性已改为可选项。</p>
-</blockquote>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                Name
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                Description
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
-<td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(7)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasAssignments</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssigns.htm">IfcRelAssigns</a> FOR RelatedObjects</td>
-<td data-label="Description">
-<p>通过关联关系将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的其他子类型分配到此对象实例的关系对象引用。例如与产品、过程、控制、资源或组的关联。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>Nests</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
-<td data-label="Description">
-<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为组成部分。对象实例或类型只能是一个分解的组成部分（仅允许层次结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>Decomposes</em> 分离。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsNestedBy</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
-<td data-label="Description">
-<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>IsDecomposedBy</em> 分离。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasContext</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
-<td data-label="Description">
-<p>指向提供上下文信息（如项目单位或表示上下文）的上下文的引用。应仅对最顶层的非空间对象声明此属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsDecomposedBy</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
-<td data-label="Description">
-<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>Decomposes</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
-<td data-label="Description">
-<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为组成部分。对象定义只能是一个分解的组成部分（仅允许层次结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasAssociations</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
-<td data-label="Description">
-<p>将外部引用或其他资源定义关联到对象的关系对象引用。例如与库、文档或分类的关联。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -424,268 +298,16 @@
 <small>(5)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                ObjectType
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>类型表示进一步指示对象的特定类型。其用途需在可实例化子类型层级确定。特别地，当 <em>PredefinedType</em> 属性枚举设置为USERDEFINED，或当实例化的具体实体没有PredefinedType属性时，该属性保存用户定义类型。后者出现在某些特殊的叶类以及直接实例化IfcBuiltElement时</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsDeclaredBy</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatedObjects</td>
-<td data-label="Description">
-<p>指向声明对象的关联关系链接，该声明对象为此对象实例提供对象定义。声明对象必须是对象类型分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型包含特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
-<blockquote>
-<p>IFC4变更 新增逆关系，基于文件交换的向上兼容性变更</p>
-</blockquote>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>Declares</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatingObject</td>
-<td data-label="Description">
-<p>指向接收对象定义的反映对象的关联关系链接。反映对象必须是对象实例分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型提供特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
-<blockquote>
-<p>IFC4变更 新增逆关系，基于文件交换的向上兼容性变更</p>
-</blockquote>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsTypedBy</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a> FOR RelatedObjects</td>
-<td data-label="Description">
-<p>指向为此对象实例提供类型定义的对象类型的关联关系集合。随后关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 或其子类型包含特定信息（或类型、样式），这些信息对于引用相同类型的所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的实例是通用的</p>
-<blockquote>
-<p>IFC4变更 新增逆关系，之前 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 的链接包含在逆关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 中。基于文件交换的向上兼容性变更</p>
-</blockquote>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsDefinedBy</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatedObjects</td>
-<td data-label="Description">
-<p>附加到此对象的属性集定义的关联关系集合。这些静态或动态定义的属性包含进一步定义对象的字母数字信息内容</p>
-<blockquote>
-<p>IFC4变更 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，保持基于文件交换的向上兼容性</p>
-</blockquote>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>
 <small>(5)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                ObjectPlacement
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></td>
-<td data-label="Description">
-<p>这建立了对象坐标系和产品在空间中的放置。放置可以是绝对的（相对于世界坐标系）、相对的（相对于另一个产品的对象放置）或受约束的（例如相对于网格轴线或线性定位元素）。放置的类型由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 的各种子类型确定。如果存在表示，则必须提供对象放置。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">7</td>
-<td data-label="Name">
-                
-                Representation
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></td>
-<td data-label="Description">
-<p>对产品表示的引用，可以是表示（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></em>）或作为形状表示的特殊情况（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em>）。产品定义形状在由对象放置定义的同一对象坐标系内提供对象形状属性的多个几何表示。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ReferencedBy</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
-<td data-label="Description">
-<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 关系的引用，通过该关系，其他产品、过程、控制、资源或参与者（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的子类型）可以与此产品相关。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>PositionedRelativeTo</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a> FOR RelatedProducts</td>
-<td data-label="Description">
-<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> 关系的引用，该关系定义了其与定位元素的关系。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ReferencedInStructures</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> FOR RelatedElements</td>
-<td data-label="Description">
-<p>对对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 的引用，可用于将产品与一个或多个空间结构元素相关联，除了其主要包含的空间结构元素。</p>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a>
 <small>(13)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">8</td>
-<td data-label="Name">
-                
-                Tag
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<p>产品特定实例处的标签（或标记）标识符，例如序列号或位置编号。这是在实例级别的标识符。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>FillsVoids</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFillsElement.htm">IfcRelFillsElement</a> FOR RelatedBuildingElement</td>
-<td data-label="Description">
-<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFillsElement.htm">IfcRelFillsElement</a></em> 关系，该关系将构件作为填充物放入在另一个构件中创建的开口中。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ConnectedTo</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsElements.htm">IfcRelConnectsElements</a> FOR RelatingElement</td>
-<td data-label="Description">
-<p>引用构件连接关系。该关系随后引用此构件连接到的其他构件。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsInterferedByElements</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a> FOR RelatedElement</td>
-<td data-label="Description">
-<p>引用干涉关系以指示被干涉的构件。如果提供该关系，则表明此构件与一个或多个其他构件存在干涉。</p>
-<aside class="aside-note"><mark>注释</mark> <em>IsInterferedByElements</em> 和 <em>InterferesElements</em> 之间没有优先顺序指示。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向关系。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>InterferesElements</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a> FOR RelatingElement</td>
-<td data-label="Description">
-<p>引用干涉关系以指示进行干涉的构件。如果提供该关系，则表明此构件与一个或多个其他构件存在干涉。</p>
-<aside class="aside-note"><mark>注释</mark> <em>IsInterferedByElements</em> 和 <em>InterferesElements</em> 之间没有优先顺序指示。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向关系。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasProjections</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelProjectsElement.htm">IfcRelProjectsElement</a> FOR RelatingElement</td>
-<td data-label="Description">
-<p>投影关系，向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltElement.htm">IfcBuiltElement</a></em> 添加特征（使用布尔并集）。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasOpenings</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a> FOR RelatingBuildingElement</td>
-<td data-label="Description">
-<p>引用在构件中创建开口的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a></em> 关系。一个构件可以包含零到多个开口。对于每个使构件形成空腔的开口，都会生成一个新的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a></em> 关系。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsConnectionRealization</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsWithRealizingElements.htm">IfcRelConnectsWithRealizingElements</a> FOR RealizingElements</td>
-<td data-label="Description">
-<p>引用与实现构件的连接关系。如果提供该关系，则将此构件分配为连接的实现构件，提供连接关系的物理表现。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ProvidesBoundaries</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a> FOR RelatedBuildingElement</td>
-<td data-label="Description">
-<p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> 引用空间边界。它定义了构件边界空间的概念。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ConnectedFrom</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsElements.htm">IfcRelConnectsElements</a> FOR RelatedElement</td>
-<td data-label="Description">
-<p>引用构件连接关系。该关系随后引用连接到此构件的其他构件。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ContainedInStructure</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a> FOR RelatedElements</td>
-<td data-label="Description">
-<p>与空间结构元素的包含关系，构件主要与此关联。此包含关系必须是层次性的，即构件只能直接分配给零个或一个空间结构。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasCoverings</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a> FOR RelatingBuildingElement</td>
-<td data-label="Description">
-<p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></em> 引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCovering.htm">IfcCovering</a></em>。它定义了具有相关覆盖物的构件概念。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasSurfaceFeatures</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAdheresToElement.htm">IfcRelAdheresToElement</a> FOR RelatingElement</td>
-<td data-label="Description">
-<p>引用将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceFeature.htm">IfcSurfaceFeature</a></em> 附着到构件的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAdheresToElement.htm">IfcRelAdheresToElement</a></em> 关系。一个构件可以在一个关系中包含零到多个表面特征。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -706,27 +328,12 @@
 <small>(1)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">9</td>
-<td data-label="Name">
-                
-                PredefinedType
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamTypeEnum.htm">IfcBeamTypeEnum</a></td>
-<td data-label="Description">
-<p>梁的预定义通用类型，在枚举中指定。可能有一个专门为预定义类型提供的属性集。</p>
-<aside class="aside-note"><mark>注释</mark> 仅当未分配提供自身 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a>.PredefinedType</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em> 时，才应使用 <em>PredefinedType</em>。</aside><blockquote>
-<p>IFC4 变更：属性已添加到实体定义末尾。</p>
-</blockquote>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 6.1.3.1.A<a class="link" href="#-bb89820d-7a94-40e8-a712-32949b7c3bee"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.1.A<a class="link" href="#-9f74e7dd-ca5b-4083-9c3d-b3195478ff8d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.1.4-Formal-propositions-"></a>
     6.1.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#6.1.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b39f9115-52ec-4f84-9ef6-d4a0c7454c03"></a><table>
+<figure><a class="anchor" id="-667a5e1b-7019-42a9-9695-7b41b3b35124"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -737,7 +344,7 @@
 <tr>
 <td>CorrectPredefinedType</td>
 <td>
-<p><em>PredefinedType</em> 属性要么未设置（例如，因为关联了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），要么当 <em>PredefinedType</em> 设置为 USERDEFINED 时，必须提供继承的属性 <em>ObjectType</em>。</p>
+<p>要么 <em>PredefinedType</em> 属性未设置（例如因为关联了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），要么如果 <em>PredefinedType</em> 设置为 USERDEFINED，则应提供继承的属性 <em>ObjectType</em>。</p>
 </td>
 </tr>
 <tr>
@@ -750,7 +357,7 @@
 <tr>
 <td>CorrectTypeAssigned</td>
 <td>
-<p>要么没有关联的梁类型对象，即未提供 <em>IsTypedBy</em> 反向关系，要么关联的类型对象必须是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em> 类型。</p>
+<p>要么没有关联的梁类型对象，即未提供 <em>IsTypedBy</em> 反向关系，要么关联的类型对象必须为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em> 类型。</p>
 </td>
 </tr>
 <tr>
@@ -760,7 +367,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.3.1.B<a class="link" href="#-b39f9115-52ec-4f84-9ef6-d4a0c7454c03"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.1.B<a class="link" href="#-667a5e1b-7019-42a9-9695-7b41b3b35124"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.1.5-"></a>
     6.1.3.1.5 属性集
 <a class="link" href="#6.1.3.1.5-"><i data-feather="link"></i></a></h2>
@@ -1130,7 +737,7 @@
 </p><h2><a class="anchor" id="6.1.3.1.6-Concept-usage-"></a>
     6.1.3.1.6 概念用法（Concept usage）
 <a class="link" href="#6.1.3.1.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-5ba8f8a9-cb96-4386-a76d-b8cf4de40208"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-e75a820d-f178-4502-9b9e-2271f529ef7f"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -2408,7 +2015,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.3.1.C<a class="link" href="#-5ba8f8a9-cb96-4386-a76d-b8cf4de40208"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.1.C<a class="link" href="#-e75a820d-f178-4502-9b9e-2271f529ef7f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.1.7-Formal-representation-"></a>
     6.1.3.1.7 形式化表示（Formal representation）
 <a class="link" href="#6.1.3.1.7-Formal-representation-"><i data-feather="link"></i></a></h2>
