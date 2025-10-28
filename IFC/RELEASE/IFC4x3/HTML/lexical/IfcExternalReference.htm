@@ -233,7 +233,7 @@
     8.6.3.7.3 特性（Attributes）
 <a class="link" href="#8.6.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-d4bb263e-c4ff-4420-82ec-3365c5c61246"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-b33455b5-3cf9-4c9e-91a9-79e945c1834c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -255,12 +255,68 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Location
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></td>
+<td data-label="Description">
+<p>可通过电子方式访问外部源（分类、文档或库）的位置。电子位置以 URI 形式提供，通常作为 URL 位置字符串给出。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></em>
+。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Identification
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p><em>Identification</em> 提供外部源（分类、文档或库）内引用项目的唯一标识符。它可以作为以下形式提供：
+* 键，例如分类标记，如 NF2.3
+* 句柄
+* uuid 或 guid</p>
+<p>根据其使用上下文（必须通过本地协议确定），它可能是人类可读的（例如键），也可能不是（例如句柄或 uuid）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 为保持一致性，属性从 <em>ItemReference</em> 重命名。
+</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于进一步指定引用的可选名称。它可以提供人类可读的标识符（不一定需要在文档内部结构中有对应项）。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ExternalReferenceForResources</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatingReference</td>
+<td data-label="Description">
+<p>引用此外部引用与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceObjectSelect.htm">IfcResourceObjectSelect</a></em> 内由外部引用标记的对象之间的所有关联。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 添加了具有向上兼容性的新逆向属性。
+</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.6.3.7.A<a class="link" href="#-d4bb263e-c4ff-4420-82ec-3365c5c61246"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.7.A<a class="link" href="#-b33455b5-3cf9-4c9e-91a9-79e945c1834c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.3.7.4-Formal-propositions-"></a>
     8.6.3.7.4 形式化命题（Formal propositions）
 <a class="link" href="#8.6.3.7.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-faec68e8-5959-4905-a1a4-ad3fc5f25f84"></a><table>
+<figure><a class="anchor" id="-de9a33ed-046f-47f7-9b96-bbc3a1b35fc6"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -280,7 +336,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.6.3.7.B<a class="link" href="#-faec68e8-5959-4905-a1a4-ad3fc5f25f84"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.7.B<a class="link" href="#-de9a33ed-046f-47f7-9b96-bbc3a1b35fc6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.3.7.5-Formal-representation-"></a>
     8.6.3.7.5 形式化表示（Formal representation）
 <a class="link" href="#8.6.3.7.5-Formal-representation-"><i data-feather="link"></i></a></h2>
