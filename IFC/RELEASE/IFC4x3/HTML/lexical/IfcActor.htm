@@ -195,7 +195,7 @@
     5.1.3.1.3 特性（Attributes）
 <a class="link" href="#5.1.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c1c38c0d-10d2-4955-879b-b4ce91fb116e"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-2ca5a5bc-ec25-4c71-bf68-5e988409b5b3"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -450,7 +450,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.1.A<a class="link" href="#-c1c38c0d-10d2-4955-879b-b4ce91fb116e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.1.A<a class="link" href="#-2ca5a5bc-ec25-4c71-bf68-5e988409b5b3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.1.4-"></a>
     5.1.3.1.4 属性集
 <a class="link" href="#5.1.3.1.4-"><i data-feather="link"></i></a></h2>
@@ -490,7 +490,7 @@
 </p><h2><a class="anchor" id="5.1.3.1.5-Concept-usage-"></a>
     5.1.3.1.5 概念用法（Concept usage）
 <a class="link" href="#5.1.3.1.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6d625c97-1524-46cb-ad17-95ba94f983ce"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-973fd87a-d3ab-42f2-ae50-35c80e9c6e87"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -513,9 +513,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用IfcOwnerHistory捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -526,15 +524,24 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>IfcRoot分配全局唯一ID，同时还可为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例或对象类型都可以引用特定的分类参照，即分类系统中的特定分面。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -553,19 +560,6 @@
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
                 General
@@ -662,19 +656,6 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
 </td>
 <td data-label="Usage">
@@ -694,6 +675,7 @@
                 General
             </td>
 <td data-label="Description">
+<p>任何对象实例都可通过分配至公共对象类型来实现类型化，这是通过本概念实现的。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型层级重写此概念，引入了限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 适用子类型的特定规则</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -710,14 +692,23 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型均可使用 <em>Name</em> 属性和可选的 <em>Description</em> 属性。对于具有对象类型定义的子类型（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例均可持有属性集，可直接在对象实例处作为元素特定属性集，或在对象类型处作为类型属性集。在这种情况下，提供给对象实例的属性是元素特定属性和类型属性的组合。如果在实例属性和类型属性中同时定义了相同属性（同一属性集内），则实例属性的属性值将覆盖类型属性的属性值</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
 </td>
 <td data-label="Usage">
                 General
@@ -758,19 +749,39 @@
 <ul>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcControl.htm">IfcControl</a>
-</li>
+                        
+                        
+                         - 表示由参与方发布的项目指令。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a>
-</li>
+                        
+                        
+                         - 表示参与方负责的群组。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>
-</li>
+                        
+                        
+                         - 表示参与方负责的产品。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a>
-</li>
+                        
+                        
+                         - 表示参与方负责的流程。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>
-</li>
+                        
+                        
+                         - 表示参与方负责的资源。
+                        
+                    </li>
 </ul>
 </td>
 </tr>
@@ -794,7 +805,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.1.B<a class="link" href="#-6d625c97-1524-46cb-ad17-95ba94f983ce"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.1.B<a class="link" href="#-973fd87a-d3ab-42f2-ae50-35c80e9c6e87"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.1.6-Formal-representation-"></a>
     5.1.3.1.6 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.1.6-Formal-representation-"><i data-feather="link"></i></a></h2>
