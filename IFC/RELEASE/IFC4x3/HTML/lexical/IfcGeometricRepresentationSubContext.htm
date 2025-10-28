@@ -228,7 +228,7 @@
     8.18.3.5.3 特性（Attributes）
 <a class="link" href="#8.18.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-d53cc54d-6c38-48ea-a7d3-fbe5e562c374"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-89e63f28-45e4-4d44-8684-19f00ee5f4ef"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -250,10 +250,115 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ContextIdentifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>表示上下文的可选标识符，在项目内部使用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ContextType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>表示上下文类型的描述。上下文类型支持的具体取值需通过实施方协议进行规定。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>RepresentationsInContext</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a> FOR ContextOfItems</td>
+<td data-label="Description">
+<p>在同一表示上下文中定义的所有几何表示。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>
 <small>(6)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                CoordinateSpaceDimension
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>在几何表示上下文中建模的坐标空间的整数维度计数。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Precision
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>几何模型的模型精度值。它是一个双精度值（REAL），通常在 1E-5 到 1E-8 范围内，表示在此容差下两个给定点仍被视为相同。该值可用于例如在 brep 模型中设置边曲线到底层曲面面的最大距离。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                WorldCoordinateSystem
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
+<td data-label="Description">
+<p>为项目使用的所有表示上下文建立工程坐标系（在 CAD 中通常称为世界坐标系）。</p>
+<aside class="aside-note"><mark>注释</mark> 如果建筑物的位置远离原点，可以使用它来提供更好的数值稳定性。但在大多数情况下，它将被设置为原点：(0.,0.,0.) 和方向 x(1.,0.,0.)、y(0.,1.,0.)、z(0.,0.,1.)。</aside>
+<p>如果使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 提供了地理放置，则 <em>WorldCoordinateSystem</em> 属性用于定义局部工程坐标系的零点与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 偏移所关联的地理参考点之间的偏移。在首选实践中，这两个点（也称为"项目基准点"和"测量点"）应该是重合的。但是，可以将地理参考点从局部零点偏移。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                TrueNorth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>真北方向或地理北向方向相对于基础项目坐标系的方向。它由项目坐标系xy平面内的二维方向给出。如果未提供，则默认为 0. 1.，意味着项目坐标系的正Y轴等于地理北向方向。</p>
+<aside class="aside-note"><mark>注释</mark> 如果使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 提供了地理放置，则真北方向仅用于信息。如果存在不一致，应以 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 提供的值为准。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasSubContexts</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a> FOR ParentContext</td>
+<td data-label="Description">
+<p>引用此 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 的 <em>IfcGeometricRepresentationSubContexts</em> 集合。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasCoordinateOperation</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a> FOR SourceCRS</td>
+<td data-label="Description">
+<p>指示坐标系之间的转换。特别是指地理地图坐标参考系与此建筑项目的工程坐标系之间的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>。如果向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 提供了多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em>，则所有上下文应具有相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> 实例作为 <em>HasCoordinateOperation</em>，引用相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></em> 实例。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -274,12 +379,122 @@
 <small>(8)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                ParentContext
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></td>
+<td data-label="Description">
+<p>父级上下文，子上下文从中派生其世界坐标系、精度、空间坐标维度和真北方向。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                TargetScale
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
+<td data-label="Description">
+<p>此表示上下文所适用的表示的目标<font color="#ff0000">出图</font>比例。</p>
+<aside class="aside-note"><mark>注释</mark> 比例表示表示子上下文的目标出图比例，所有注释样式都根据此目标出图比例以出图尺寸给出。
+如果提供了多个具有相同 <em>TargetView</em> 值的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 实例，则目标出图比例适用于下一个较小比例，或适用于无限小的比例。</aside><aside class="aside-note"><mark>注释</mark> 比例 1:100（在 <em>TargetScale</em> 中给出为 0.01）大于 1:200（在 <em>TargetScale</em> 中给出为 0.005）。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                TargetView
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricProjectionEnum.htm">IfcGeometricProjectionEnum</a></td>
+<td data-label="Description">
+<p>此表示上下文所适用的表示的目标视图。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                UserDefinedTargetView
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用户定义的目标视图，如果 TargetView 属性设置为 USERDEFINED，则必须给出此属性值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5*</td>
+<td data-label="Name">
+                
+                WorldCoordinateSystem
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">ParentContext.WorldCoordinateSystem</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="#">3*</td>
+<td data-label="Name">
+                
+                CoordinateSpaceDimension
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">ParentContext.CoordinateSpaceDimension</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="#">6*</td>
+<td data-label="Name">
+                
+                TrueNorth
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">NVL(ParentContext.TrueNorth, <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConvertDirectionInto2D.htm">IfcConvertDirectionInto2D</a>(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>.WorldCoordinateSystem.P[2]))</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="#">4*</td>
+<td data-label="Name">
+                
+                Precision
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">NVL(ParentContext.Precision,1.E-5)</code></pre>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.18.3.5.A<a class="link" href="#-d53cc54d-6c38-48ea-a7d3-fbe5e562c374"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.5.A<a class="link" href="#-89e63f28-45e4-4d44-8684-19f00ee5f4ef"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.5.4-Formal-propositions-"></a>
     8.18.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d3387178-a9e9-4018-96c7-9b78d5d71f4d"></a><table>
+<figure><a class="anchor" id="-99bec666-d4d8-479f-b251-5519263b48b5"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -323,7 +538,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.5.B<a class="link" href="#-d3387178-a9e9-4018-96c7-9b78d5d71f4d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.5.B<a class="link" href="#-99bec666-d4d8-479f-b251-5519263b48b5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.5.5-Formal-representation-"></a>
     8.18.3.5.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.5.5-Formal-representation-"><i data-feather="link"></i></a></h2>
