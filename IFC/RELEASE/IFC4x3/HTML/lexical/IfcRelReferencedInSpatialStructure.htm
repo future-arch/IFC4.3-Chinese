@@ -214,7 +214,7 @@
     5.4.3.57.3 特性（Attributes）
 <a class="link" href="#5.4.3.57.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-962b0b2c-de09-4fd3-b7f2-8d9b37eb6a11"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-be124f29-96a1-422c-a145-dcb9b99734a0"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -236,6 +236,55 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>在整个软件世界中分配全局唯一标识符。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>用于交换信息性注释的可选描述。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -254,12 +303,36 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                RelatedElements
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialReferenceSelect.htm">IfcSpatialReferenceSelect</a></td>
+<td data-label="Description">
+<p>在此层级空间结构层次中被引用的对象集合。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                RelatingStructure
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a></td>
+<td data-label="Description">
+<p>空间结构元素，对象在其中被引用。一个对象可以在项目空间结构的多个元素中被引用。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.4.3.57.B<a class="link" href="#-962b0b2c-de09-4fd3-b7f2-8d9b37eb6a11"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.57.B<a class="link" href="#-be124f29-96a1-422c-a145-dcb9b99734a0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.57.4-Formal-propositions-"></a>
     5.4.3.57.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.57.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-cc4ff6f0-df93-402c-80d5-8cc7a55f777d"></a><table>
+<figure><a class="anchor" id="-e77c5136-3aa9-4904-83f6-1178c5ebac73"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -281,11 +354,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.57.C<a class="link" href="#-cc4ff6f0-df93-402c-80d5-8cc7a55f777d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.57.C<a class="link" href="#-e77c5136-3aa9-4904-83f6-1178c5ebac73"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.57.5-Concept-usage-"></a>
     5.4.3.57.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.57.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7aef88cf-460c-40df-a8a3-53232415ca71"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-b1095af1-6725-4f3e-8098-1822251680ea"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -339,7 +412,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.57.D<a class="link" href="#-7aef88cf-460c-40df-a8a3-53232415ca71"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.57.D<a class="link" href="#-b1095af1-6725-4f3e-8098-1822251680ea"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.57.6-Formal-representation-"></a>
     5.4.3.57.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.57.6-Formal-representation-"><i data-feather="link"></i></a></h2>
