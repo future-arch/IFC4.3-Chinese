@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.45 IfcPlacement (放置) - IFC 4.3.2 Documentation</title>
+<title>8.9.3.45 IfcPlacement（定位） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.45 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a> (放置)</h1>
+<h1>8.9.3.45 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a>（定位）</h1>
 <div class="mvd" title="Included in IfcAxis1Placement, IfcAxis2Placement2D, IfcAxis2Placement3D">RV ⓘ</div>
 <div class="mvd" title="Included in IfcAxis1Placement, IfcAxis2Placement2D, IfcAxis2Placement3D, IfcAxis2PlacementLinear, IfcPolynomialCurve.Position">AbV ⓘ</div>
 <div class="row">
@@ -202,10 +202,10 @@
 <h2><a class="anchor" id="8.9.3.45.1-Semantic-definition-"></a>
     8.9.3.45.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.45.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a></em> 是放置子类型的抽象超类型，它定义了项或整个形状表示的位置，并提供其方向。所有放置子类型都定义右手笛卡尔坐标系，并且不允许镜像。</p>
-<!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> 包括镜像和缩放的笛卡尔变换由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em> 支持。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-放置相对于其几何上下文的坐标系来定位几何项。它定位要定义的项，并且在轴放置子类型的情况下，提供其方向。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>placement</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a></em> 是一个抽象超类型，用于定义构件或整个几何表达的位置并提供其方向的定位子类型。所有定位子类型均定义右手笛卡尔坐标系，且不允许镜像变换。</p>
+<!-- 短定义结束 -->
+<aside class="aside-note"><mark>注释</mark> 意 包含镜像和缩放的笛卡尔变换由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em> 支持</aside><aside class="aside-note"><mark>注释</mark> 意 根据 ISO/CD 10303-42:1992 的定义
+定位用于确定几何构件相对于其几何上下文坐标系的位置。它确定了待定义构件的位置，并在轴定位子类型的情况下提供其方向。</aside><aside class="aside-note"><mark>注释</mark> 意 实体改编自 ISO 10303-42 中定义的 <strong>placement</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中新引入的实体</aside>
 <h2><a class="anchor" id="8.9.3.45.2-Entity-inheritance-"></a>
     8.9.3.45.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.45.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -269,7 +269,7 @@
     8.9.3.45.3 特性（Attributes）
 <a class="link" href="#8.9.3.45.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f69551a3-5d36-468d-bdfa-cefa0f6c5269"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-4228faad-2a50-40f3-a1bf-bbb6e8884add"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -291,28 +291,6 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已限制为最多 1 个。文件交换的向后兼容性得到保证。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -331,34 +309,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Location
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></td>
-<td data-label="Description">
-<p>The geometric position of a reference point, such as the center of a circle, of the item to be located.</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs">Location.Dim</code></pre>
-<p>The space dimensionality of this class, derived from the dimensionality of the location.</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.9.3.45.A<a class="link" href="#-f69551a3-5d36-468d-bdfa-cefa0f6c5269"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.45.A<a class="link" href="#-4228faad-2a50-40f3-a1bf-bbb6e8884add"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.45.4-Formal-representation-"></a>
     8.9.3.45.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.45.4-Formal-representation-"><i data-feather="link"></i></a></h2>
@@ -438,5 +390,6 @@ END_ENTITY;</code></pre>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>
