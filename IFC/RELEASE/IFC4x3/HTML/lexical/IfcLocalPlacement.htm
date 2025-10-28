@@ -247,7 +247,7 @@
     8.7.3.14.3 特性（Attributes）
 <a class="link" href="#8.7.3.14.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-992782ac-1055-4703-a089-bdd76223a40c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-539144a6-538e-4f0f-9164-ca9befd5da7c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -266,18 +266,55 @@
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a>
-<small>(2)</small>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                PlacementRelTo
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></td>
+<td data-label="Description">
+<p>引用提供相对定位的对象定位，其定位在网格、局部坐标系或线性参考定位中。如果省略，则在线性定位的情况下，由引用的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignment.htm">IfcAlignment</a> 轴的水平对齐原点确定；在局部定位的情况下，由几何表示上下文确定。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PlacesObject</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a> FOR ObjectPlacement</td>
+<td data-label="Description">
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 应用于为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 实例提供定位和对象坐标系。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 新增反向属性。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 基数已更改为 0..n，以允许在多个产品中重用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 实例作为定位对象。同时考虑到它可作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em> 的定位。</aside><blockquote>
+<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 被多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 实例共享，这并不表示需要维护共享定位的语义含义。使用相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 实例可以简单地减小交换文件的大小。</p>
+</blockquote>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ReferencedByPlacements</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a> FOR PlacementRelTo</td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承特性
+                    点击显示 3 个隐藏的继承特性
                 </small>
 <small class="hide-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承特性
+                    点击隐藏 3 个继承特性
                 </small>
 </td>
 </tr>
@@ -287,12 +324,24 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                RelativePlacement
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
+<td data-label="Description">
+<p>定义从相关坐标系到参照坐标系变换的几何定位。根据坐标系的维度数量，该定位可以是二维或三维的。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.7.3.14.A<a class="link" href="#-992782ac-1055-4703-a089-bdd76223a40c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.14.A<a class="link" href="#-539144a6-538e-4f0f-9164-ca9befd5da7c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.14.4-Formal-propositions-"></a>
     8.7.3.14.4 形式化命题（Formal propositions）
 <a class="link" href="#8.7.3.14.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7380ab99-2cdd-4cbc-8246-95140393d36c"></a><table>
+<figure><a class="anchor" id="-252e54ca-9d18-4bcc-b4da-337c16e99c1e"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -312,7 +361,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.7.3.14.B<a class="link" href="#-7380ab99-2cdd-4cbc-8246-95140393d36c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.14.B<a class="link" href="#-252e54ca-9d18-4bcc-b4da-337c16e99c1e"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.14.5-Formal-representation-"></a>
     8.7.3.14.5 形式化表示（Formal representation）
 <a class="link" href="#8.7.3.14.5-Formal-representation-"><i data-feather="link"></i></a></h2>
