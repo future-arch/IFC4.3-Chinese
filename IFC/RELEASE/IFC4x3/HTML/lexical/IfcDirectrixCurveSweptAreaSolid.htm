@@ -283,7 +283,7 @@
     8.8.3.13.3 特性（Attributes）
 <a class="link" href="#8.8.3.13.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-9b1a99e4-5ef4-4fe2-95f3-1752bde1299f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-e8d696ae-14a5-4218-9c4b-8288b94722b2"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -305,16 +305,77 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a>
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">3</code></pre>
+<p>本类的空间维度，始终为3。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>
 <small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                SweptArea
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
+<td data-label="Description">
+<p>The surface defining the area to be swept. It is given as a profile definition within the xy plane of the position coordinate system.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
+<td data-label="Description">
+<p>Position coordinate system for the resulting swept solid of the sweeping operation. The position coordinate system allows for re-positioning of the swept solid. If not provided, the swept solid remains within the position as determined by the cross section or by the directrix used for the sweeping operation.</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -335,12 +396,48 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Directrix
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
+<td data-label="Description">
+<p>用于定义扫掠操作的曲线。实体是通过将 SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.SweptArea 沿准线扫掠而生成的。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                StartParam
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveMeasureSelect.htm">IfcCurveMeasureSelect</a></td>
+<td data-label="Description">
+<p>扫掠操作开始的准线上的参数值。如果未提供值，则扫掠操作从准线的起点开始。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                EndParam
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveMeasureSelect.htm">IfcCurveMeasureSelect</a></td>
+<td data-label="Description">
+<p>扫掠操作结束的准线上的参数值。如果未提供值，则扫掠操作在准线的终点结束。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.8.3.13.A<a class="link" href="#-9b1a99e4-5ef4-4fe2-95f3-1752bde1299f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.13.A<a class="link" href="#-e8d696ae-14a5-4218-9c4b-8288b94722b2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.13.4-Formal-propositions-"></a>
     8.8.3.13.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.13.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-122bf3c7-facf-44e3-aa96-f833691df007"></a><table>
+<figure><a class="anchor" id="-f9e0580a-8a11-45d3-bc62-dea9f9917c50"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -361,7 +458,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.13.B<a class="link" href="#-122bf3c7-facf-44e3-aa96-f833691df007"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.13.B<a class="link" href="#-f9e0580a-8a11-45d3-bc62-dea9f9917c50"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.13.5-Formal-representation-"></a>
     8.8.3.13.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.13.5-Formal-representation-"><i data-feather="link"></i></a></h2>
