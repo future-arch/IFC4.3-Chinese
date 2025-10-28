@@ -170,7 +170,7 @@
 <a class="link" href="#7.5.4.18.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    None
+    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoil.htm">IfcCoil</a></li>
@@ -179,7 +179,7 @@
 <h2><a class="anchor" id="7.5.4.18.3-"></a>
     7.5.4.18.3 属性
 <a class="link" href="#7.5.4.18.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-a0b21099-3342-417c-9615-53bbbdf011d9"></a><table>
+<figure><a class="anchor" id="-05680cf1-ed42-40c7-a18d-fcd2ec267adc"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -261,8 +261,7 @@ CrossParallelFlow：空气和水流以相同方向进入。</p>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAreaMeasure.htm">IfcAreaMeasure</a></td>
 <td>
-<h2><a class="anchor" id="-"></a>次级表面积<a class="link" href="#-"><i data-feather="link"></i></a></h2>
-<p>由翅片产生的次级传热表面积。</p>
+<p>由翅片产生的二次传热表面积。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SecondarySurfaceArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -271,7 +270,7 @@ CrossParallelFlow：空气和水流以相同方向进入。</p>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVolumetricFlowRateMeasure.htm">IfcVolumetricFlowRateMeasure</a>/<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>总UA曲线，UA - 空气和水流速，UA = [(C1 * AirFlowRate\^0.8)\^-1 + (C2 * WaterFlowRate\^0.8)\^-1]\^-1。 注释：由于使用了两个变量，DefiningValues和DefinedValues为null，值存储在IfcTable中，顺序为：AirFlowRate,WaterFlowRate,UA。IfcTable通过IfcMetric和IfcResourceConstraintRelationship与IfcPropertyTableValue相关联。</p>
+<p>总UA曲线，UA - 空气和水流速，UA = [(C1 * AirFlowRate\^0.8)\^-1 + (C2 * WaterFlowRate\^0.8)\^-1]\^-1。注意：由于使用了两个变量，DefiningValues 和 DefinedValues 为空，值按以下顺序存储在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a> 中：AirFlowRate、WaterFlowRate、UA。该 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a> 通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a> 与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a> 关联。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TotalUACurves.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -298,7 +297,7 @@ CrossParallelFlow：空气和水流以相同方向进入。</p>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
 <td>
-<p>空气侧显热比，或显热传递与总热传递的比例。</p>
+<p>空气侧显热比，即显热传递占总热传递的比例。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SensibleHeatRatio.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -307,12 +306,12 @@ CrossParallelFlow：空气和水流以相同方向进入。</p>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
 <td>
-<p>Fraction of coil surface area that is wet (0-1).</p>
+<p>湿盘管表面面积的比例（0-1）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/WetCoilFraction.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.5.4.18.A<a class="link" href="#-a0b21099-3342-417c-9615-53bbbdf011d9"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.5.4.18.A<a class="link" href="#-05680cf1-ed42-40c7-a18d-fcd2ec267adc"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
