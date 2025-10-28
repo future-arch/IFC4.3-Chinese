@@ -348,7 +348,7 @@
     8.3.3.2.3 特性（Attributes）
 <a class="link" href="#8.3.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-50373ece-0e5f-4573-804a-f4e8b5901191"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-362152d6-29d8-4f56-8237-32ca9288c384"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -370,6 +370,112 @@
 <small>(9)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>约束的可读名称。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>约束的可读描述，可提供附加信息。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                ConstraintGrade
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraintEnum.htm">IfcConstraintEnum</a></td>
+<td data-label="Description">
+<p>限定约束类型的枚举。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                ConstraintSource
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>约束来源材料，如规范或标准。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                CreatingActor
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorSelect.htm">IfcActorSelect</a></td>
+<td data-label="Description">
+<p>创建约束的个人和/或组织。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                CreationTime
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>约束实例信息的创建时间。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                UserDefinedGrade
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>允许在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraintEnum.htm">IfcConstraintEnum</a></em> 类型的 ConstraintGrade 属性提供的枚举值（强制、建议、咨询）之外指定用户定义约束等级。
+当为 UserDefinedGrade 属性提供值时，ConstraintGrade 属性应同时设置为 USERDEFINED 枚举值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>与约束关联的外部引用（如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PropertiesForConstraint</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a> FOR RelatingConstraint</td>
+<td data-label="Description">
+<p>约束所应用属性的引用。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -388,8 +494,61 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Benchmark
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBenchmarkEnum.htm">IfcBenchmarkEnum</a></td>
+<td data-label="Description">
+<p>标识基准数据类型的枚举。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                ValueSource
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>数据值的参考源。</p>
+<p>如果 <em>DataValue</em> 引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a></em>，此属性标识由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a></em>.<em>Identifier</em> 指定的相关列。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                DataValue
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetricValueSelect.htm">IfcMetricValueSelect</a></td>
+<td data-label="Description">
+<p>要在关联对象上比较的值。空值表示与空值比较。</p>
+<blockquote>
+<p>IFC4 ADD1 CHANGE 此属性现在为可选。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                ReferencePath
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReference.htm">IfcReference</a></td>
+<td data-label="Description">
+<p>指向关联对象上要约束的属性的可选路径。
+如果提供，可通过将路径解析为关联对象上的当前值，并根据 <em>Benchmark</em> 将该值与 <em>DataValue</em> 进行比较来验证度量。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.3.3.2.B<a class="link" href="#-50373ece-0e5f-4573-804a-f4e8b5901191"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.3.3.2.B<a class="link" href="#-362152d6-29d8-4f56-8237-32ca9288c384"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.3.3.2.4-Formal-representation-"></a>
     8.3.3.2.4 形式化表示（Formal representation）
 <a class="link" href="#8.3.3.2.4-Formal-representation-"><i data-feather="link"></i></a></h2>
