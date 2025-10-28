@@ -198,7 +198,7 @@
 <!-- 简短定义结束 -->
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a></em>（库引用）还提供了处理多语言库条目的能力。_语言_属性保存了_名称_和_描述_属性中字符串所使用的语言标签。</p>
 <p>根据库所使用的技术类型，不同的<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>.Identification标识符将适用：</p>
-<figure><a class="anchor" id="-7af311e2-4983-4752-9473-28e515290e14"></a><table>
+<figure><a class="anchor" id="-204d1897-52ed-481e-8020-31650bfbdd47"></a><table>
 <thead>
 <tr>
 <th>发布者</th>
@@ -248,7 +248,7 @@
 <td>24位十六进制实例地址。</td>
 </tr>
 </tbody>
-</table><figcaption>表 8.6.3.10.A<a class="link" href="#-7af311e2-4983-4752-9473-28e515290e14"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.10.A<a class="link" href="#-204d1897-52ed-481e-8020-31650bfbdd47"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-history"><mark>沿革</mark> IFC2.0中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 添加了_描述_和_语言_属性；添加了_引用库_属性（反转了之前的ReferenceIntoLibrary反向关系）。</aside>
 <h2><a class="anchor" id="8.6.3.10.2-Entity-inheritance-"></a>
     8.6.3.10.2 实体继承（Entity inheritance）
@@ -276,7 +276,7 @@
     8.6.3.10.3 特性（Attributes）
 <a class="link" href="#8.6.3.10.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f63bde29-a3e2-475e-ac83-6c7e35e96ded"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-068e53d7-04f0-4794-b752-9d3251be7a00"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -298,6 +298,62 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Location
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></td>
+<td data-label="Description">
+<p>可通过电子方式访问外部源（分类、文档或库）的位置。电子位置以 URI 形式提供，通常作为 URL 位置字符串给出。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></em>
+。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Identification
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p><em>Identification</em> 提供外部源（分类、文档或库）内引用项目的唯一标识符。它可以作为以下形式提供：
+* 键，例如分类标记，如 NF2.3
+* 句柄
+* uuid 或 guid</p>
+<p>根据其使用上下文（必须通过本地协议确定），它可能是人类可读的（例如键），也可能不是（例如句柄或 uuid）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 为保持一致性，属性从 <em>ItemReference</em> 重命名。
+</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于进一步指定引用的可选名称。它可以提供人类可读的标识符（不一定需要在文档内部结构中有对应项）。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ExternalReferenceForResources</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatingReference</td>
+<td data-label="Description">
+<p>引用此外部引用与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceObjectSelect.htm">IfcResourceObjectSelect</a></em> 内由外部引用标记的对象之间的所有关联。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 添加了具有向上兼容性的新逆向属性。
+</aside>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -316,8 +372,57 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Additional description provided for the library reference.</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the attribute list.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Language
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLanguageId.htm">IfcLanguageId</a></td>
+<td data-label="Description">
+<p>The language in which a library reference is expressed.</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the attribute list.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                ReferencedLibrary
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a></td>
+<td data-label="Description">
+<p>The library information that is being referenced.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LibraryRefForObjects</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a> FOR RelatingLibrary</td>
+<td data-label="Description">
+<p>The library reference with which objects are associated.</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute.</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.6.3.10.B<a class="link" href="#-f63bde29-a3e2-475e-ac83-6c7e35e96ded"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.10.B<a class="link" href="#-068e53d7-04f0-4794-b752-9d3251be7a00"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.3.10.4-Formal-representation-"></a>
     8.6.3.10.4 形式化表示（Formal representation）
 <a class="link" href="#8.6.3.10.4-Formal-representation-"><i data-feather="link"></i></a></h2>
