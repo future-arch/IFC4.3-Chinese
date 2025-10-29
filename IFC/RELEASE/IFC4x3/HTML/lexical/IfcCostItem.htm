@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.5.3.2 IfcCostItem（成本项） - IFC 4.3.2 Documentation</title>
+<title>6.5.3.2 IfcCostItem - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -144,16 +144,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.5.3.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）</h1>
+<h1>6.5.3.2 IfcCostItem</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="6.5.3.2.1-Semantic-definition-"></a>
     6.5.3.2.1 语义定义（Semantic definition）
 <a class="link" href="#6.5.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em>（成本项）用于描述成本或财务价值，以及描述其背景信息的说明性内容，使其能够在成本计划中使用。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em>（成本项）可用于表示商品和服务的成本、通过流程执行工作的成本、生命周期成本等。</p>
-<!-- 简短定义结束 -->
-<p>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em>（成本项）实例可以具有名称和描述。根据成本用途的不同，这些值应基于协议进行声明。例如，<em>Name</em>（名称）属性可用于提供一个通用值，使得不同的实例能够在嵌套安排中组合在一起（见下文），而 <em>Description</em>（描述）属性可用于提供成本计划中项目描述所使用的文本。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em>（成本项）可以链接一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em>（成本值），这些值表示单位成本、总成本，或一个单位成本与一个或多个用于生成总成本的数量。数量可以作为单独的数量给出，或者这些数量由一个或多个建筑元素作为元素数量提供。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em>（成本值类别）属性表示成本的类别，可用于在特定列中呈现该值。对于嵌套成本项（具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a></em> 关系），<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em>（成本值类别）非常重要，使得 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.AppliedValue</em>（成本值应用值）计算为所有具有相同 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em>（成本值类别）的嵌套成本之和，或者如果设置为星号（'*'），则计算所有成本类型的所有嵌套成本之和。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em>（成本值）可以表示原始值或由公式导出的值。例如，税费可以计算为小计的百分比。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 添加了属性 <em>PredefinedType</em>（预定义类型）、<em>CostValues</em>（成本值）和 <em>CostQuantities</em>（成本数量）。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 描述了成本或财务价值以及描述其上下文的描述性信息，以便能够将其用于成本计划。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 可用于表示商品和服务的成本、通过流程执行的工作成本、生命周期成本等。</p>
+<!-- end of short definition -->
+<p>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 实例都可以有一个名称和描述。根据成本的预期用途，这些值应基于协议确定。例如，<em>Name</em> 属性可用于提供一个通用值，以便将不同的实例组合在嵌套安排中（如下所述），而 Description 属性可用于提供成本计划中项目描述的文本。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 可以链接一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em>，这些 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 表示单位成本、总成本，或带有用于生成总成本的一个或多个数量的单位成本。数量可以作为单独的数量提供，或者这些数量由一个或多个建筑构件作为构件数量提供。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em> 属性指示成本的类别，该类别可用于在特定列中显示该值。对于嵌套的成本项（具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a></em> 关系），<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em> 很重要，这样 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.AppliedValue</em> 将计算为具有相同 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em> 的所有嵌套成本的总和，或者如果设置为星号 ('*')，则为所有成本类型的嵌套成本的总和。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 可以表示原始值或由公式得出的值。例如，税款可以按总计的百分比计算。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2.0.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Attribute <em>PredefinedType</em>, <em>CostValues</em>, and <em>CostQuantities</em> added.</aside>
 <h2><a class="anchor" id="6.5.3.2.2-Entity-inheritance-"></a>
     6.5.3.2.2 实体继承（Entity inheritance）
 <a class="link" href="#6.5.3.2.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -209,7 +209,7 @@
     6.5.3.2.3 特性（Attributes）
 <a class="link" href="#6.5.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-3ec037bf-e2e1-4df6-aa43-0a9be734f0c7"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-19ddd655-03b8-45ab-9f49-09f941dc9dbf"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -252,8 +252,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -265,7 +265,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -277,7 +277,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -293,7 +293,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssigns.htm">IfcRelAssigns</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>通过关联关系将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的其他子类型分配到此对象实例的关系对象引用。例如与产品、过程、控制、资源或组的关联。</p>
+<p>引用分配（通过关联关系）其他 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型到此对象实例的关系对象。例如，与产品、过程、控制、资源或组的关联。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -303,8 +303,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为组成部分。对象实例或类型只能是一个分解的组成部分（仅允许层次结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>Decomposes</em> 分离。</aside>
+<p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的一部分。对象实例或类型只能是单个分解的一部分（仅允许分层结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>Decomposes</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -314,8 +314,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
 <td data-label="Description">
-<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>IsDecomposedBy</em> 分离。</aside>
+<p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>IsDecomposedBy</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -325,8 +325,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
 <td data-label="Description">
-<p>指向提供上下文信息（如项目单位或表示上下文）的上下文的引用。应仅对最顶层的非空间对象声明此属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型。</aside>
+<p>引用提供上下文信息的上下文，例如项目单位或表示上下文。它只应断言在最上层的非空间对象上。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -336,8 +336,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
 <td data-label="Description">
-<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
+<p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -347,8 +347,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为组成部分。对象定义只能是一个分解的组成部分（仅允许层次结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
+<p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的一部分。对象定义只能是单个分解的一部分（仅允许分层结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -358,7 +358,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>将外部引用或其他资源定义关联到对象的关系对象引用。例如与库、文档或分类的关联。</p>
+<p>引用将外部资源或资源定义与对象关联的关系对象。例如，与库、文档或分类的关联。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -376,7 +376,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>类型表示进一步指示对象的特定类型。其用途需在可实例化子类型层级确定。特别地，当 <em>PredefinedType</em> 属性枚举设置为USERDEFINED，或当实例化的具体实体没有PredefinedType属性时，该属性保存用户定义类型。后者出现在某些特殊的叶类以及直接实例化IfcBuiltElement时</p>
+<p>该类型表示指示对象的特定类型。必须在可实例化的子类型的级别上建立用法。特别是，如果特性 <em>PredefinedType</em> 的枚举设置为 USERDEFINED，或者当实例化的具体实体没有 PredefinedType 特性时，它保存用户定义的类型。后者发生在一些特殊的叶子类中，以及直接实例化 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltElement.htm">IfcBuiltElement</a> 时。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -386,8 +386,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向声明对象的关联关系链接，该声明对象为此对象实例提供对象定义。声明对象必须是对象类型分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型包含特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，基于文件交换的向上兼容性变更</aside>
+<p>链接到指向声明对象的关系对象，该声明对象为此对象实例提供对象定义。声明对象必须是对象类型分解的一部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型包含特定信息（作为类型或样式定义的一部分），该信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, change made with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -397,8 +397,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatingObject</td>
 <td data-label="Description">
-<p>指向接收对象定义的反映对象的关联关系链接。反映对象必须是对象实例分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型提供特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，基于文件交换的向上兼容性变更</aside>
+<p>链接到指向接收对象定义的反向对象的关系对象。反向对象必须是对象实例分解的一部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型提供特定信息（作为类型或样式定义的一部分），该信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反向实例是通用的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, change made with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -408,8 +408,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向为此对象实例提供类型定义的对象类型的关联关系集合。随后关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 或其子类型包含特定信息（或类型、样式），这些信息对于引用相同类型的所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的实例是通用的</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，之前 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 的链接包含在逆关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 中。基于文件交换的向上兼容性变更</aside>
+<p>与对象类型的关系集合，该对象类型为此对象实例提供类型定义。然后，关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 或其子类型包含特定信息（或类型或样式），该信息对于引用同一类型的所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的实例是通用的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, the link to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> was previously included in the inverse relationship <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em>. Change made with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -419,8 +419,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>附加到此对象的属性集定义的关联关系集合。这些静态或动态定义的属性包含进一步定义对象的字母数字信息内容</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，保持基于文件交换的向上兼容性</aside>
+<p>与附加到此对象的属性集定义的集合的关系。这些静态或动态定义的特性包含字母数字信息内容，这些内容进一步定义了对象。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The data type has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -438,9 +438,9 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p>赋予控制的标识名称
-  它是出现级别的标识符。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 通过从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcControl.htm">IfcControl</a></em> 的各种子类型提升来统一属性。</aside>
+<p>赋予控制的标识名称。
+  它是发生层级的标识符。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Attribute unified by promoting from various subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcControl.htm">IfcControl</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -450,7 +450,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a> FOR RelatingControl</td>
 <td data-label="Description">
-<p>引用将控制与被控制对象关联的关系。</p>
+<p>引用将控制与被控制对象相关联的关系。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -480,8 +480,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItemTypeEnum.htm">IfcCostItemTypeEnum</a></td>
 <td data-label="Description">
-<p>在枚举中指定的成本项的预定义通用类型。可能有一个专门为预定义类型提供的属性集。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加该属性。</aside>
+<p>成本项的预定义通用类型，在枚举中指定。可能有一个专门为预定义类型提供的属性集。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
 </td>
 </tr>
 <tr>
@@ -493,10 +493,10 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></td>
 <td data-label="Description">
-<p>成本项的组件成本，用于计算成本项的总成本，如果提供了总 <em>CostQuantities</em>（成本数量），则乘以该数量。</p>
-<p>如果提供了 <em>CostQuantities</em>（成本数量），则值表示单位成本，否则值表示总成本。</p>
-<p>出于计算目的，除非成本值具有限定条件，否则可以直接相加。具有限定条件的成本值（例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.ApplicableDate</em>（成本值适用日期）、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.FixedUntilDate</em>（成本值固定至日期））如果不适用，则应从此类计算中排除。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加该属性。</aside>
+<p>用于计算成本项总成本的组成成本，然后乘以提供的总 <em>CostQuantities</em>。</p>
+<p>如果提供了 <em>CostQuantities</em>，则值表示单位成本；否则，值表示总成本。</p>
+<p>出于计算目的，成本值可以直接相加，除非它们有限定条件。具有限定条件的成本值（例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.ApplicableDate</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.FixedUntilDate</em>）如果不适用，则应从计算中排除。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
 </td>
 </tr>
 <tr>
@@ -508,16 +508,16 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></td>
 <td data-label="Description">
-<p>相同类型的组件数量，成本项的总数量计算为这些数量的总和。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加该属性。</aside>
+<p>用于计算成本项总数量作为总和的相同类型的组成数量。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.5.3.2.B<a class="link" href="#-3ec037bf-e2e1-4df6-aa43-0a9be734f0c7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.2.A<a class="link" href="#-19ddd655-03b8-45ab-9f49-09f941dc9dbf"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.2.4-Concept-usage-"></a>
     6.5.3.2.4 概念用法（Concept usage）
 <a class="link" href="#6.5.3.2.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-a773bbce-3998-4644-83ea-f201aeb89d0a"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-64ea53b5-c67b-4214-b0a1-6b00b60e09f4"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -540,7 +540,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>使用IfcOwnerHistory捕获所有权、历史记录和合并状态。</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -551,13 +551,13 @@
                 General
             </td>
 <td data-label="Description">
-<p>IfcRoot分配全局唯一ID，同时还可为概念提供名称和描述。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
-<small>(9)</small>
+<small>(11)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -568,7 +568,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>任何对象实例或对象类型都可以引用特定的分类参照，即分类系统中的特定分面。</p>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -675,10 +675,44 @@
 </p>
 </td>
 </tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>
-<small>(5)</small>
+<small>(8)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -702,7 +736,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>任何对象实例都可通过分配至公共对象类型来实现类型化，这是通过本概念实现的。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型层级重写此概念，引入了限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 适用子类型的特定规则</p>
+<p>任何对象实例都可以通过被分配给一个使用此概念的通用对象类型来类型化。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的子类型级别覆盖此概念，引入了一个限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 子类型的特定规则。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -719,7 +753,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型均可使用 <em>Name</em> 属性和可选的 <em>Description</em> 属性。对于具有对象类型定义的子类型（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联</p>
+<p>特性 <em>Name</em> 和可选的 <em>Description</em> 可用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的所有子类型。对于那些具有对象类型定义的子类型，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>，通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -730,7 +764,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>任何对象实例均可持有属性集，可直接在对象实例处作为元素特定属性集，或在对象类型处作为类型属性集。在这种情况下，提供给对象实例的属性是元素特定属性和类型属性的组合。如果在实例属性和类型属性中同时定义了相同属性（同一属性集内），则实例属性的属性值将覆盖类型属性的属性值</p>
+<p>任何对象实例都可以拥有属性集，可以直接在对象实例上作为元素特定的属性集，也可以在对象类型上作为类型属性集。在这种情况下，提供给对象实例的特性是元素特定特性和类型特性的组合。如果在实例和类型特性中都定义了相同的特性（在同一属性集中），则实例特性的特性值将覆盖类型特性的特性值。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -746,10 +780,61 @@
 </p>
 </td>
 </tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcControl.htm">IfcControl</a>
-<small>(1)</small>
+<small>(7)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -760,7 +845,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>控制通过使用关系对象 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a></em> 从产品、流程或其他对象进行分配。</p>
+<p>控制通过使用关系对象 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a></em> 从产品、过程或其他对象进行分配。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -769,22 +854,124 @@
 </ul>
 </td>
 </tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例都可以通过被分配给一个使用此概念的通用对象类型来类型化。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的子类型级别覆盖此概念，引入了一个限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 子类型的特定规则。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>特性 <em>Name</em> 和可选的 <em>Description</em> 可用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的所有子类型。对于那些具有对象类型定义的子类型，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>，通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例都可以拥有属性集，可以直接在对象实例上作为元素特定的属性集，也可以在对象类型上作为类型属性集。在这种情况下，提供给对象实例的特性是元素特定特性和类型特性的组合。如果在实例和类型特性中都定义了相同的特性（在同一属性集中），则实例特性的特性值将覆盖类型特性的特性值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 17 个隐藏的继承概念
+                    点击显示 28 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 17 个继承概念
+                    点击隐藏 28 个继承概念
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>
-<small>(3)</small>
+<small>(8)</small>
 </td>
 </tr>
 <tr>
@@ -801,7 +988,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）实例用于成本估算、预算和其他形式，其中广泛使用各种识别代码来标识成本的含义。示例包括项目阶段代码、CSI 代码、提取序列号和成本账户。该模型允许所有最终为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型的类继承分配一个或多个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a>（分类引用）实例的能力。在需要识别代码的情况下，应使用通用的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesClassification.htm">IfcRelAssociatesClassification</a>（分类关联关系）功能。</p>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
 </td>
 </tr>
 <tr>
@@ -818,33 +1005,51 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）可以通过其与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）的关系，基于来自对象的数量进行计算。</p>
-<p>对于基于数量的成本计算，可以使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a>（元素）、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm">IfcTask</a>（任务）或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>（资源）出现子类型。可以分配相同或不同类型的多个元素，使用在每个对象上定义的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a>（物理数量）实体。每个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a>（物理数量）类型必须相同（例如，所有值都是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a>（面积数量）），以便它们可以相加。</p>
-<p>对于基于费率的成本计算（特别是对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostScheduleTypeEnum.htm">IfcCostScheduleTypeEnum</a>.SCHEDULEOFRATES</em>（成本计划类型枚举.费率表）），可以使用单个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a>（类型产品）、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProcess.htm">IfcTypeProcess</a>（类型流程）或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeResource.htm">IfcTypeResource</a>（类型资源）子类型来反映此类类型出现的费率。这使得能够基于具有基于费率的成本计划的类型，为出现生成基于数量的成本计划。</p>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）也用于相反方向，将根 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）链接到 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>（成本计划），其中 RelatingControl（相关控制）是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>（成本计划）。</p>
-<p>图 6.5.3.2.A 说明了源自建筑元素的成本项分配。<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）指示了从中导出数量的建筑元素。未显示的是，成本也可以通过从分配的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>（产品）遍历到 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a>（流程）再到 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>（资源）的分配关系从建筑元素导出，其中所有成本最终源自资源。成本项也可以直接从流程或资源进行分配。</p>
-<figure><a class="anchor" id="-311-"></a><img alt="成本项" src="../figures/ifccostitem-assignment.png"/><figcaption>
-图 6.5.3.2.A — 成本分配<a class="link" href="#-311-"><i data-feather="link"></i></a></figcaption></figure>
+<p>控制通过使用关系对象 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a></em> 从产品、过程或其他对象进行分配。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>
-</li>
+                        
+                        
+                         - 用于基于产品实例、空间结构或其他物理构件的数量成本。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a>
-</li>
+                        
+                        
+                         - 用于基于任务、流程或事件的数量成本。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>
-</li>
+                        
+                        
+                         - 用于基于资源分配的数量成本。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a>
-</li>
+                        
+                        
+                         - 用于基于产品模型的成本费率。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProcess.htm">IfcTypeProcess</a>
-</li>
+                        
+                        
+                         - 用于基于历史或预测持续时间的流程模型的成本费率。
+                        
+                    </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeResource.htm">IfcTypeResource</a>
-</li>
+                        
+                        
+                         - 用于基于历史或预测生产力的资源模型的成本费率。
+                        
+                    </li>
 </ul>
 </td>
 </tr>
@@ -856,8 +1061,8 @@
                 General
             </td>
 <td data-label="Description">
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）可以通过其与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>（嵌套关系）的关系嵌套其他 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）实例。这可用于实现复杂成本组的开发，如在成本计划中可能发现的，直至页面、部分和完整的成本计划。</p>
-<p>始终存在一个汇总成本项作为表示成本项嵌套的树的根项。后续的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）实例使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>（嵌套关系）分配给汇总成本项。汇总成本项本身通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>（分配到控制关系）分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>（成本计划）。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a> 可以通过其与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> 的关系嵌套其他 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a> 实例。这可用于实现成本计划中发现的复杂成本组的开发，从页面、部分到完整的成本计划。</p>
+<p>总有一个汇总成本项作为成本项嵌套树的根项。后续的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a> 实例使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> 分配给汇总成本项。汇总成本项本身通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a> 关系分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -866,8 +1071,93 @@
 </ul>
 </td>
 </tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例都可以通过被分配给一个使用此概念的通用对象类型来类型化。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的子类型级别覆盖此概念，引入了一个限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 子类型的特定规则。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>特性 <em>Name</em> 和可选的 <em>Description</em> 可用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的所有子类型。对于那些具有对象类型定义的子类型，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>，通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例都可以拥有属性集，可以直接在对象实例上作为元素特定的属性集，也可以在对象类型上作为类型属性集。在这种情况下，提供给对象实例的特性是元素特定特性和类型特性的组合。如果在实例和类型特性中都定义了相同的特性（在同一属性集中），则实例特性的特性值将覆盖类型特性的特性值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 6.5.3.2.C<a class="link" href="#-a773bbce-3998-4644-83ea-f201aeb89d0a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.2.B<a class="link" href="#-64ea53b5-c67b-4214-b0a1-6b00b60e09f4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.2.5-Formal-representation-"></a>
     6.5.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#6.5.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>
