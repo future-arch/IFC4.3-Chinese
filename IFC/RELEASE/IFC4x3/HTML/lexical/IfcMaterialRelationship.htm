@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.10.3.17 IfcMaterialRelationship（材料关系） - IFC 4.3.2 Documentation</title>
+<title>8.10.3.17 IfcMaterialRelationship - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,14 +189,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.10.3.17 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialRelationship.htm">IfcMaterialRelationship</a>（材料关系）</h1>
+<h1>8.10.3.17 IfcMaterialRelationship</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.10.3.17.1-Semantic-definition-"></a>
     8.10.3.17.1 语义定义（Semantic definition）
 <a class="link" href="#8.10.3.17.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialRelationship.htm">IfcMaterialRelationship</a></em> 定义了材料定义中部分与整体之间的关系（如复合材料中的构成关系）。通过 <em>RelatedMaterials</em> 集合表示的各组成部分，是构成单一材料聚合体的材料组分。</p>
-<!-- 短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC4 中新增实体</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialRelationship.htm">IfcMaterialRelationship</a></em> 定义了材料定义中（如复合材料）的组成部分与整体之间的关系。<em>RelatedMaterials</em> 集合所表示的组成部分是构成单一材料集合体的材料成分。</p>
+<!-- end of short definition -->
+<blockquote>
+<p>HISTORY New entity in IFC4</p>
+</blockquote>
 <h2><a class="anchor" id="8.10.3.17.2-Entity-inheritance-"></a>
     8.10.3.17.2 实体继承（Entity inheritance）
 <a class="link" href="#8.10.3.17.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -226,7 +228,7 @@
     8.10.3.17.3 特性（Attributes）
 <a class="link" href="#8.10.3.17.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f18b9113-25a0-40e8-b8c9-ab78cff4c67c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-90737373-75ea-43b5-92e8-f5fb5a7cc684"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -257,7 +259,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>A name used to identify or qualify the relationship.</p>
+<p>用于标识或限定关系的名称。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -269,7 +271,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>A description that may apply additional information about the relationship.</p>
+<p>可能适用于关系的附加信息的描述。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -299,7 +301,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></td>
 <td data-label="Description">
-<p>对关联材料（复合材料）的引用。</p>
+<p>指向关联材料（复合材料）的引用。</p>
 </td>
 </tr>
 <tr>
@@ -311,7 +313,7 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></td>
 <td data-label="Description">
-<p>对相关材料（作为复合材料组分）的引用。</p>
+<p>指向相关材料（作为复合材料的组成部分）的引用。</p>
 </td>
 </tr>
 <tr>
@@ -329,7 +331,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.10.3.17.A<a class="link" href="#-f18b9113-25a0-40e8-b8c9-ab78cff4c67c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.17.A<a class="link" href="#-90737373-75ea-43b5-92e8-f5fb5a7cc684"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.17.4-Formal-representation-"></a>
     8.10.3.17.4 形式化表示（Formal representation）
 <a class="link" href="#8.10.3.17.4-Formal-representation-"><i data-feather="link"></i></a></h2>
