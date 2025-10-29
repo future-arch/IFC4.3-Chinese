@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.42 IfcRelationship（关系） - IFC 4.3.2 Documentation</title>
+<title>5.1.3.42 IfcRelationship - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,7 +138,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.1.3.42 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>（关系）</h1>
+<h1>5.1.3.42 IfcRelationship</h1>
 <div class="mvd" title="Included in IfcRelAggregates, IfcRelAssignsToGroup, IfcRelAssociatesClassification, IfcRelAssociatesDocument, IfcRelAssociatesMaterial, IfcRelConnectsPorts, IfcRelContainedInSpatialStructure, IfcRelCoversBldgElements, IfcRelDeclares, IfcRelDefinesByProperties, IfcRelDefinesByType, IfcRelFillsElement, IfcRelNests, IfcRelReferencedInSpatialStructure, IfcRelVoidsElement">RV ⓘ</div>
 <div class="mvd" title="Included in IfcRelAggregates, IfcRelAssignsToGroup, IfcRelAssociatesClassification, IfcRelAssociatesDocument, IfcRelAssociatesMaterial, IfcRelConnectsPorts, IfcRelContainedInSpatialStructure, IfcRelCoversBldgElements, IfcRelDeclares, IfcRelDefinesByProperties, IfcRelDefinesByType, IfcRelFillsElement, IfcRelInterferesElements, IfcRelNests, IfcRelPositions, IfcRelReferencedInSpatialStructure, IfcRelVoidsElement">AbV ⓘ</div>
 <div class="row">
@@ -151,14 +151,14 @@
 <h2><a class="anchor" id="5.1.3.42.1-Semantic-definition-"></a>
     5.1.3.42.1 语义定义（Semantic definition）
 <a class="link" href="#5.1.3.42.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a></em> 是 IFC 中所有对象化关系的抽象泛化。对象化关系是处理对象间关系的首选方式。这种方式允许将关系特定属性直接保留在关系中，并为后续处理关系特定行为提供了可能性。</p>
-<!-- 短定义结束 -->
-<p>在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a></em> 的子类型中，存在两种不同类型的关系：一对一关系和一对多关系。以下约定适用于所有子类型：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a></em> 是 IFC 中所有对象化关系的抽象泛化。对象化关系是处理对象之间关系的首选方式。这允许将特定于关系的信息直接保留在关系中，并为将来处理特定于关系的行为提供了可能性。</p>
+<!-- end of short definition -->
+<p>在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a></em> 的子类型中，有两种不同类型的关系：1 对 1 的关系和 1 对多的关系。以下约定适用于所有子类型：</p>
 <ul>
-<li>对象化关系的两端分别命名为 Relating+&lt;关联对象名称&gt; 和 Related+&lt;被关联对象名称&gt;</li>
-<li>对于一对多关系，关系的被关联端应为集合类型，表示一个基数 1..n 的集合</li>
+<li>对象化关系的两个方面分别命名为 Relating+<relating name="" object=""> 和 Related+<related name="" object=""></related></relating></li>
+<li>对于 1 对多的关系，关系的关联方应为聚合体，表示基数为 1..n 的集合。</li>
 </ul>
-<aside class="aside-history"><mark>沿革</mark> IFC1.0 中新增实体。</aside>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0.</aside>
 <h2><a class="anchor" id="5.1.3.42.2-Entity-inheritance-"></a>
     5.1.3.42.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.42.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -193,7 +193,7 @@
     5.1.3.42.3 特性（Attributes）
 <a class="link" href="#5.1.3.42.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-3b0b0756-96b0-40db-a509-e52ed2afae18"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-4fca1bf1-62f7-41a0-af0f-24f0742c8e06"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -236,8 +236,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr>
@@ -249,7 +249,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr>
@@ -261,15 +261,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.42.A<a class="link" href="#-3b0b0756-96b0-40db-a509-e52ed2afae18"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.42.A<a class="link" href="#-4fca1bf1-62f7-41a0-af0f-24f0742c8e06"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.42.4-Concept-usage-"></a>
     5.1.3.42.4 概念用法（Concept usage）
 <a class="link" href="#5.1.3.42.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-34edf3ef-0005-43e8-a6fe-f93a743412ec"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-3a8f66a2-f80e-4cad-b36a-fadae8f7ad18"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -292,9 +292,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -305,9 +303,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -322,8 +318,48 @@
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.1.3.42.B<a class="link" href="#-34edf3ef-0005-43e8-a6fe-f93a743412ec"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.42.B<a class="link" href="#-3a8f66a2-f80e-4cad-b36a-fadae8f7ad18"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.42.5-Formal-representation-"></a>
     5.1.3.42.5 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.42.5-Formal-representation-"><i data-feather="link"></i></a></h2>
