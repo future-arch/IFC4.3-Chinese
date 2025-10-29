@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.4 IfcBooleanClippingResult（布尔裁剪结果） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.4 IfcBooleanClippingResult - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,15 +189,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanClippingResult.htm">IfcBooleanClippingResult</a>（布尔裁剪结果）</h1>
+<h1>8.8.3.4 IfcBooleanClippingResult</h1>
 <div class="mvd" title="Included in Body Clipping Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.8.3.4.1-Semantic-definition-"></a>
     8.8.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>布尔裁剪结果被定义为通用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm">IfcBooleanResult</a></em> 的特殊子类型。它对布尔结果的操作数和运算符进行了约束。</p>
-<!-- 简短定义结束 -->
-<p>布尔裁剪结果是扫掠实体与半空间实体之间的布尔差，或者是布尔差结果与半空间实体之间的布尔差。因此，可以应用多个差运算来实现最终的布尔结果。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside>
+<p>剪切结果定义为通用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm">IfcBooleanResult</a></em> 的一个特殊子类型。它约束了布尔运算的操作数和运算符。</p>
+<!-- end of short definition -->
+<p>剪切结果是扫掠实体和半空间实体之间的布尔差集，或者是在布尔差集结果和半空间实体之间的布尔差集。因此，可以应用多个差集运算来实现最终的布尔结果。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside>
 <h2><a class="anchor" id="8.8.3.4.2-Entity-inheritance-"></a>
     8.8.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.8.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -258,7 +258,7 @@
     8.8.3.4.3 特性（Attributes）
 <a class="link" href="#8.8.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-24387746-7015-41fa-9821-a82bd8e33208"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-521ab781-64c0-4f11-b40f-afed62ae15b8"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -287,8 +287,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -298,8 +298,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -329,7 +329,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanOperator.htm">IfcBooleanOperator</a></td>
 <td data-label="Description">
-<p>用于创建结果的布尔运算中所使用的运算符。</p>
+<p>用于创建结果的运算所使用的布尔运算符。</p>
 </td>
 </tr>
 <tr>
@@ -341,7 +341,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanOperand.htm">IfcBooleanOperand</a></td>
 <td data-label="Description">
-<p>布尔运算中要操作的第一个操作数。</p>
+<p>要由布尔运算操作的第一个操作数。</p>
 </td>
 </tr>
 <tr>
@@ -367,15 +367,15 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">FirstOperand.Dim</code></pre>
-<p>此实体的空间维度。它与第一个操作数的空间维度相同。存在性规则确保两个操作数具有相同的空间维度。</p>
+<p>此实体的空间维度。它与第一个操作数的空间维度相同。一个 where 规则确保两个操作数具有相同的空间维度。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.4.A<a class="link" href="#-24387746-7015-41fa-9821-a82bd8e33208"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.4.A<a class="link" href="#-521ab781-64c0-4f11-b40f-afed62ae15b8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.4.4-Formal-propositions-"></a>
     8.8.3.4.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.4.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6e9bff6c-019d-498a-8fd0-bb7921d1506e"></a><table>
+<figure><a class="anchor" id="-10c14725-6cbb-4f85-b7aa-eaceb085591f"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -386,7 +386,7 @@
 <tr>
 <td>FirstOperandType</td>
 <td>
-<p>布尔裁剪运算的第一个操作数应为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a> 或（在多次裁剪的情况下）<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm">IfcBooleanResult</a>。</p>
+<p>布尔剪切操作的第一个操作数应为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>，或者（在有多个剪切的情况下）为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm">IfcBooleanResult</a>。</p>
 </td>
 </tr>
 <tr>
@@ -399,7 +399,7 @@
 <tr>
 <td>OperatorType</td>
 <td>
-<p>用于裁剪的布尔运算符始终为 "Difference"。</p>
+<p>剪切的布尔运算符始终为“Difference”（差集）。</p>
 </td>
 </tr>
 <tr>
@@ -410,7 +410,7 @@
 <tr>
 <td>SecondOperandType</td>
 <td>
-<p>布尔裁剪运算的第二个操作数应为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>。</p>
+<p>布尔剪切操作的第二个操作数应为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>。</p>
 </td>
 </tr>
 <tr>
@@ -419,7 +419,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.4.B<a class="link" href="#-6e9bff6c-019d-498a-8fd0-bb7921d1506e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.4.B<a class="link" href="#-10c14725-6cbb-4f85-b7aa-eaceb085591f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.4.5-Formal-representation-"></a>
     8.8.3.4.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.4.5-Formal-representation-"><i data-feather="link"></i></a></h2>
