@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.5.3.1 IfcEventTime（事件时间） - IFC 4.3.2 Documentation</title>
+<title>8.5.3.1 IfcEventTime - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,17 +189,17 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.5.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEventTime.htm">IfcEventTime</a>（事件时间）</h1>
+<h1>8.5.3.1 IfcEventTime</h1>
 <div class="mvd" title="Included in IfcEvent.EventOccurenceTime">RV ⓘ</div>
 <div class="mvd" title="Included in IfcEvent.EventOccurenceTime">AbV ⓘ</div>
 <h2><a class="anchor" id="8.5.3.1.1-Semantic-definition-"></a>
     8.5.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.5.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEventTime.htm">IfcEventTime</a></em> 捕获与事件相关的时间信息，包括不同类型的事件日期（即实际日期、计划日期、最早日期和最晚日期）。</p>
-<!-- 短定义结束 -->
-<p>所有给定的值都应由应用程序提供，即IFC模式不处理过程时间值之间的依赖关系。在此阶段，也没有通过规则进行一致性检查来保证日期值的合理填充。因此，应用程序有责任提供合理的值，并且如果应用程序接收到事件日期，则必须自行进行一致性检查。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEventTime.htm">IfcEventTime</a></em> 还提供了一种通用机制，用于区分用户给定的时间值和从用户给定的时间值以及其他约束（如工作日历和分配的资源）推导出的时间值（源自过程图）。数据来源标志作为单个属性提供，适用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEventTime.htm">IfcEventTime</a></em> 的所有与日期时间相关的属性。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEventTime.htm">IfcEventTime</a></em> 捕获关于事件的时间信息，包括不同类型的事件日期（即实际、计划、最早和最晚）。</p>
+<!-- end of short definition -->
+<p>所有给定的值应由应用程序提供，也就是说，IFC schema 不处理过程时间值之间的依赖关系。在此阶段，也没有通过保证有意义的日期值填充的规则进行一致性检查。因此，应用程序负责提供合理的值，并且如果应用程序接收到事件日期，则必须自行进行一致性检查。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEventTime.htm">IfcEventTime</a></em> 此外还提供了一个通用机制，用于区分用户给定的时间值与从用户给定的时间值和其他约束（如工作日历和分配的资源（来自过程图））派生的时间值。数据来源标志作为一个单一属性应用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEventTime.htm">IfcEventTime</a></em> 的所有日期时间相关属性。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.5.3.1.2-Entity-inheritance-"></a>
     8.5.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.5.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -225,7 +225,7 @@
     8.5.3.1.3 特性（Attributes）
 <a class="link" href="#8.5.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-7e6142de-f906-46aa-8efe-b9a2b7d7e6ca"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d480ae01-dbf8-4662-8ea2-a9888c728db4"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -256,7 +256,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>Optional name for the time definition.</p>
+<p>时间定义的可选名称。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -268,8 +268,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDataOriginEnum.htm">IfcDataOriginEnum</a></td>
 <td data-label="Description">
-<p>Specifies the origin of the scheduling time entity. It currently
-  differentiates between predicted, simulated, measured, and user defined values.</p>
+<p>指定调度时间实体的来源。它目前
+  区分预测值、模拟值、测量值和用户定义值。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -281,7 +281,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>Value of the data origin if DataOrigin attribute is USERDEFINED.</p>
+<p>如果 <em>DataOrigin</em> 特性为 USERDEFINED，则为数据来源的值。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -348,12 +348,12 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
 <p>事件计划发生的日期。
-  该值可能是测量值或以某种方式计算得出的，具体由
+  该值可能是测量的，也可能是以某种方式计算的，具体由
   <em>ScheduleDataOrigin</em> 定义。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.5.3.1.A<a class="link" href="#-7e6142de-f906-46aa-8efe-b9a2b7d7e6ca"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.5.3.1.A<a class="link" href="#-d480ae01-dbf8-4662-8ea2-a9888c728db4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.5.3.1.4-Formal-representation-"></a>
     8.5.3.1.4 形式化表示（Formal representation）
 <a class="link" href="#8.5.3.1.4-Formal-representation-"><i data-feather="link"></i></a></h2>
