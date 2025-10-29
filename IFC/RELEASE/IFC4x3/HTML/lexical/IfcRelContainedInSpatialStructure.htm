@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.52 IfcRelContainedInSpatialStructure（关系包含于空间结构） - IFC 4.3.2 Documentation</title>
+<title>5.4.3.52 IfcRelContainedInSpatialStructure - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,22 +138,22 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.4.3.52 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a>（关系包含于空间结构）</h1>
+<h1>5.4.3.52 IfcRelContainedInSpatialStructure</h1>
 <div class="mvd" title="Included in Spatial Container, Spatial Containment">RV ⓘ</div>
 <div class="mvd" title="Included in Spatial Container, Spatial Containment">AbV ⓘ</div>
 <h2><a class="anchor" id="5.4.3.52.1-Semantic-definition-"></a>
     5.4.3.52.1 语义定义（Semantic definition）
 <a class="link" href="#5.4.3.52.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>此对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 用于将构件分配到空间项目结构的特定层级。任何构件只能被分配到空间结构的某个特定层级一次。关于哪种类型的构件与哪个层级相关的问题，只能在特定项目背景下回答，并且可能在不同区域间有所变化。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-example"><mark>示例</mark> 一个多层空间包含（或属于）其地面所在的建筑楼层，但它被其跨越的所有其他建筑楼层所引用。电梯井可能被包含在地下室中，但被其穿过的所有楼层所引用。</aside>
-<p>构件在空间结构内的包含关系必须是层次关系；一个构件只能包含在单个空间结构元素中。构件与空间结构之间的引用关系不必是层次关系；也就是说，一个构件可以引用多个空间结构元素。</p>
-<aside class="aside-note"><mark>注释</mark> 引用关系通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 表示。</aside>
-<p>相同构件类型的实例可以根据其出现的上下文被分配到不同的空间结构元素。</p>
-<aside class="aside-example"><mark>示例</mark> 墙体通常可能被分配到某个楼层，但幕墙可能被分配到整个建筑，而地形中的挡土墙可能被分配到场地。</aside>
-<p>图1展示了使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 将楼梯和两面墙体分配到空间结构内两个不同层级的情况。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="图1" src="../figures/ifcrelcontainedinspatialstructure-fig1.png" title="图1 — 空间结构包含关系"/><figcaption>图1 — 空间结构包含关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><aside class="aside-change"><mark>IFC2x 变更</mark> 属性 <em>RelatedElements</em> 的数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 更改为其超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>，并保持基于文件交换的向上兼容性。</aside>
+<p>此对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 用于将元素分配到空间项目结构的特定层级。任何元素只能被分配一次到空间结构的特定层级。哪个层级与哪种类型的元素相关的问题，只能在特定项目的上下文中回答，并且可能在不同区域有所不同。</p>
+<!-- end of short definition -->
+<aside class="aside-example"><mark>示例</mark> A multi-storey space is contained (or belongs to) the building storey at which its ground level is, but it is referenced by all the other building storeys, in which it spans. A lift shaft might be contained by the basement, but referenced by all storeys, through which it spans.</aside>
+<p>元素在空间结构中的包含关系必须是层级关系；一个元素只能包含在一个空间结构元素中。元素与空间结构之间的引用关系不必是层级关系；也就是说，一个元素可以引用多个空间结构元素。</p>
+<aside class="aside-note"><mark>注释</mark> The reference relationship is expressed by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em>.</aside>
+<p>同一类型元素的实例可以根据实例的上下文分配给不同的空间结构元素。</p>
+<aside class="aside-example"><mark>示例</mark> A wall might be normally assigned to a storey, however the curtain wall might be assigned to the building and the retaining wall in the terrain might be assigned to the site.</aside>
+<p>图 5.4.3.52.A 显示了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 在空间结构内不同层级分配楼梯和两堵墙的使用。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="fig1" src="../figures/ifcrelcontainedinspatialstructure-fig1.png" title="图 5.4.3.52.A — 空间结构包含关系"/><figcaption>图 5.4.3.52.A — 空间结构包含关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC2x 变更</mark> The data type of the attribute <em>RelatedElements</em> has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> to its supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> with upward compatibility for file based exchange.</aside>
 <h2><a class="anchor" id="5.4.3.52.2-Entity-inheritance-"></a>
     5.4.3.52.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.52.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -209,7 +209,7 @@
     5.4.3.52.3 特性（Attributes）
 <a class="link" href="#5.4.3.52.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-4917502b-db0e-4130-8ea4-d66eb7fde2a8"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-f70e253f-105d-4ba7-bee7-82b838615285"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -252,8 +252,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -265,7 +265,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -277,7 +277,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -307,8 +307,8 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></td>
 <td data-label="Description">
-<p>产品集合，这些产品包含在此空间结构层次结构的层级内。</p>
-<aside class="aside-change"><mark>IFC2x 变更</mark> 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>，并保持向上兼容性。</aside>
+<p>包含在此空间结构层级中的产品集合。</p>
+<aside class="aside-change"><mark>IFC2x 变更</mark> The data type has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> with upward compatibility</aside>
 </td>
 </tr>
 <tr>
@@ -320,16 +320,16 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a></td>
 <td data-label="Description">
-<p>空间结构元素，构件包含于其中。任何构件只能包含在项目空间结构的一个元素内。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>RelatingStructure</em> 已提升至新的超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a></em>，并保持基于文件交换的向上兼容性。</aside>
+<p>元素所包含的空间结构元素。任何元素只能包含在项目空间结构的一个元素中。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute <em>RelatingStructure</em> as been promoted to the new supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a></em> with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.52.B<a class="link" href="#-4917502b-db0e-4130-8ea4-d66eb7fde2a8"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.52.B<a class="link" href="#-f70e253f-105d-4ba7-bee7-82b838615285"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.52.4-Formal-propositions-"></a>
     5.4.3.52.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.52.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-60112cf5-1e63-4eca-8ed5-ba12469b026d"></a><table>
+<figure><a class="anchor" id="-6ffe76eb-04ef-474c-bcaf-dd31685cec0b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -340,7 +340,7 @@
 <tr>
 <td>WR31</td>
 <td>
-<p>此关系对象不得用于将其他空间结构元素包含到某个空间结构元素中。空间结构的层次结构使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 定义。</p>
+<p>关系对象不得用于将其他空间结构元素包含到空间结构元素中。空间结构的层级通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 定义。</p>
 </td>
 </tr>
 <tr>
@@ -349,11 +349,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.52.C<a class="link" href="#-60112cf5-1e63-4eca-8ed5-ba12469b026d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.52.C<a class="link" href="#-6ffe76eb-04ef-474c-bcaf-dd31685cec0b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.52.5-Concept-usage-"></a>
     5.4.3.52.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.52.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-46cba42b-c7b1-48ad-92a2-43a62f4ec51e"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-6eff1a04-09f9-4a1d-b328-f2c5b9aa4c28"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -376,9 +376,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -389,25 +387,143 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承概念
+                    点击显示 6 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承概念
+                    点击隐藏 6 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.4.3.52.D<a class="link" href="#-46cba42b-c7b1-48ad-92a2-43a62f4ec51e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.52.D<a class="link" href="#-6eff1a04-09f9-4a1d-b328-f2c5b9aa4c28"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.52.6-Formal-representation-"></a>
     5.4.3.52.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.52.6-Formal-representation-"><i data-feather="link"></i></a></h2>
