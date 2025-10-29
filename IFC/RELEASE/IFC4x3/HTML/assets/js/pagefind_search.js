@@ -1,4 +1,5 @@
-// IFC 4.3 中文版 - Pagefind 客户端搜索集成 (简化版)
+// IFC 4.3 中文版 - Pagefind 客户端搜索集成
+// 使用 Pagefind JavaScript API: https://pagefind.app/docs/api/
 
 (function() {
     'use strict';
@@ -10,7 +11,7 @@
         initSearch();
     }
 
-    let pagefindInstance = null;
+    let pagefind = null;
 
     function initSearch() {
         // 查找搜索表单
@@ -47,24 +48,22 @@
 
         try {
             // 初始化 Pagefind (如果还没有初始化)
-            if (!pagefindInstance) {
-                console.log('初始化 Pagefind...');
-                // 动态加载 Pagefind
-                await loadPagefindScript();
+            if (!pagefind) {
+                console.log('加载 Pagefind...');
+                // 使用动态 import 加载 Pagefind
+                pagefind = await import('/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js');
 
-                // 创建 Pagefind 实例
-                pagefindInstance = new window.PagefindInstance({
-                    basePath: '/IFC/RELEASE/IFC4x3/HTML/pagefind/'
+                // 配置选项 (可选)
+                await pagefind.options({
+                    bundlePath: '/IFC/RELEASE/IFC4x3/HTML/pagefind/'
                 });
 
-                // 初始化 (自动检测语言)
-                await pagefindInstance.init('zh-cn', { load_wasm: true });
-                console.log('Pagefind 初始化完成');
+                console.log('Pagefind 加载完成');
             }
 
             // 执行搜索
             console.log('执行搜索:', query);
-            const search = await pagefindInstance.search(query);
+            const search = await pagefind.search(query);
 
             console.log('搜索结果:', search.results.length);
 
@@ -80,31 +79,6 @@
             console.error('搜索失败:', error);
             showSearchError(error);
         }
-    }
-
-    function loadPagefindScript() {
-        return new Promise((resolve, reject) => {
-            // 如果已经加载,直接返回
-            if (window.PagefindInstance) {
-                resolve();
-                return;
-            }
-
-            const script = document.createElement('script');
-            script.src = '/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js';
-
-            script.onload = function() {
-                console.log('Pagefind 脚本加载成功');
-                // 等待一小会儿确保全局对象可用
-                setTimeout(resolve, 100);
-            };
-
-            script.onerror = function() {
-                reject(new Error('无法加载 Pagefind 脚本'));
-            };
-
-            document.head.appendChild(script);
-        });
     }
 
     function showSearchLoading() {
@@ -164,28 +138,26 @@
         // 限制显示前 30 个结果
         const maxResults = Math.min(results.length, 30);
 
-        for (let i = 0; i < maxResults; i++) {
-            const result = results[i];
+        // 批量加载结果数据以提高性能
+        const resultDataPromises = results.slice(0, maxResults).map(r => r.data());
+        const resultDataList = await Promise.all(resultDataPromises);
 
-            try {
-                const data = await result.data();
+        for (let i = 0; i < resultDataList.length; i++) {
+            const data = resultDataList[i];
 
-                html += `
-                    <div class="search-result-item" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h3 style="margin-bottom: 10px;">
-                            <a href="${data.url}">${escapeHtml(data.meta.title || data.url)}</a>
-                        </h3>
-                        <p style="color: #666; margin-bottom: 10px;">
-                            ${data.excerpt}
-                        </p>
-                        <p style="font-size: 0.9em; color: #999;">
-                            <a href="${data.url}" style="text-decoration: none;">${data.url}</a>
-                        </p>
-                    </div>
-                `;
-            } catch (err) {
-                console.error('加载结果数据失败:', err);
-            }
+            html += `
+                <div class="search-result-item" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                    <h3 style="margin-bottom: 10px;">
+                        <a href="${data.url}">${escapeHtml(data.meta.title || data.url)}</a>
+                    </h3>
+                    <p style="color: #666; margin-bottom: 10px;">
+                        ${data.excerpt}
+                    </p>
+                    <p style="font-size: 0.9em; color: #999;">
+                        <a href="${data.url}" style="text-decoration: none;">${data.url}</a>
+                    </p>
+                </div>
+            `;
         }
 
         html += `</div>`;
