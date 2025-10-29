@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.69 IfcSurfaceOfLinearExtrusion（线性拉伸曲面） - IFC 4.3.2 Documentation</title>
+<title>8.9.3.69 IfcSurfaceOfLinearExtrusion - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,22 +189,22 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.69 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceOfLinearExtrusion.htm">IfcSurfaceOfLinearExtrusion</a>（线性拉伸曲面）</h1>
+<h1>8.9.3.69 IfcSurfaceOfLinearExtrusion</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.9.3.69.1-Semantic-definition-"></a>
     8.9.3.69.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.69.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceOfLinearExtrusion.htm">IfcSurfaceOfLinearExtrusion</a></em> 是通过沿矢量拉伸曲线而导出的曲面。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-该曲面是通过在给定方向上拉伸曲线而获得的简单拉伸曲面或广义圆柱体。参数化如下，其中曲线具有参数化 λ(<em>u</em>)：</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>surface_of_linear_extrusion</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><blockquote>
-<p>V = 拉伸轴</p>
-<figure><a class="anchor" id="Figure-8.9.3.69.A"></a><img alt="图像" src="../figures/ifcsurfaceoflinearextrusion-math1.gif"/>
-<em>v</em> 的参数化范围为 -∞ &lt; <em>v</em> &lt; ∞，而 <em>u</em> 的范围由曲线参数化定义。<figcaption>Figure 8.9.3.69.A<a class="link" href="#Figure-8.9.3.69.A"><i data-feather="link"></i></a></figcaption></figure>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceOfLinearExtrusion.htm">IfcSurfaceOfLinearExtrusion</a></em> 是通过沿向量扫描曲线派生的曲面。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+This surface is a simple swept surface or a generalized cylinder obtained by sweeping a curve in a given direction. The parameterization is as follows where the curve has a parameterization λ(<em>u</em>):</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>surface_of_linear_extrusion</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><blockquote>
+<p>V = ExtrusionAxis</p>
+<figure><a class="anchor" id="Figure-8.9.3.69.A"></a><img alt="Image" src="../figures/ifcsurfaceoflinearextrusion-math1.gif"/>
+The parameterization range for <em>v</em> is -∞ &lt; <em>v</em> &lt; ∞ and for <em>u</em> it is defined by the curve parameterization.<figcaption>Figure 8.9.3.69.A<a class="link" href="#Figure-8.9.3.69.A"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>曲面不得自相交</li>
+<li>曲面不得自相交。</li>
 </ol>
 <h2><a class="anchor" id="8.9.3.69.2-Entity-inheritance-"></a>
     8.9.3.69.2 实体继承（Entity inheritance）
@@ -276,7 +276,7 @@
     8.9.3.69.3 特性（Attributes）
 <a class="link" href="#8.9.3.69.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-90edca72-b7a7-4a60-b5c8-29dad3bbecea"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-f9348d1f-d751-4dea-bbd2-727cddfc2204"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -305,8 +305,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -316,8 +316,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -337,8 +337,8 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是三维几何表示项。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 从子类型提升的派生属性。</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是一个三维几何表示项。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Derived attribute promoted from subtypes.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -356,7 +356,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
 <td data-label="Description">
-<p>在定义曲面时要扫掠的曲线。该曲线在位置坐标系中定义为轮廓。</p>
+<p>用于定义曲面的扫描曲线。该曲线在位置坐标系内定义为轮廓。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -368,8 +368,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>扫掠曲面的位置坐标系，由 <em>Position</em> 坐标的 XY 平面内的轮廓定义提供。如果未提供，被扫掠轮廓的位置由对象坐标系确定。在这种情况下，扫掠曲面不会被重新定位。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选，支持基于文件交换的向上兼容性。</aside>
+<p>扫描曲面的位置坐标系，由 <em>Position</em> 坐标内的轮廓定义提供。如果未提供，则扫描轮廓的位置由对象坐标系确定。在这种情况下，扫描曲面不会重新定位。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -399,7 +399,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
 <td data-label="Description">
-<p>拉伸的方向。</p>
+<p>挤出的方向。</p>
 </td>
 </tr>
 <tr>
@@ -411,7 +411,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>拉伸的深度，它决定了参数化。</p>
+<p>挤出的深度，它决定了参数化。</p>
 </td>
 </tr>
 <tr>
@@ -425,15 +425,15 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationItem.htm">IfcRepresentationItem</a>() || <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a> () || <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a> (ExtrudedDirection, Depth)</code></pre>
-<p>定义为矢量的拉伸轴。</p>
+<p>定义为向量的挤出轴。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.69.B<a class="link" href="#-90edca72-b7a7-4a60-b5c8-29dad3bbecea"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.69.B<a class="link" href="#-f9348d1f-d751-4dea-bbd2-727cddfc2204"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.69.4-Formal-propositions-"></a>
     8.9.3.69.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.69.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6370e155-666f-4cab-883b-32406c2f09d7"></a><table>
+<figure><a class="anchor" id="-3c7f461e-0134-4a87-8f76-31729fa2a5f5"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -455,7 +455,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.69.C<a class="link" href="#-6370e155-666f-4cab-883b-32406c2f09d7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.69.C<a class="link" href="#-3c7f461e-0134-4a87-8f76-31729fa2a5f5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.69.5-Formal-representation-"></a>
     8.9.3.69.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.69.5-Formal-representation-"><i data-feather="link"></i></a></h2>
