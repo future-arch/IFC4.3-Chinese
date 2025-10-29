@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.22 IfcRoundedRectangleProfileDef（圆角矩形轮廓定义） - IFC 4.3.2 Documentation</title>
+<title>8.15.3.22 IfcRoundedRectangleProfileDef - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,26 +189,26 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.15.3.22 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoundedRectangleProfileDef.htm">IfcRoundedRectangleProfileDef</a>（圆角矩形轮廓定义）</h1>
+<h1>8.15.3.22 IfcRoundedRectangleProfileDef</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.15.3.22.1-Semantic-definition-"></a>
     8.15.3.22.1 语义定义（Semantic definition）
 <a class="link" href="#8.15.3.22.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoundedRectangleProfileDef.htm">IfcRoundedRectangleProfileDef</a></em> 定义了一个具有等圆角的矩形，作为扫掠表面几何或扫掠面积实体所使用的轮廓定义。它通过X方向尺寸、Y方向尺寸和圆角半径给出，并放置在由 <em>Position</em> 属性建立的二维位置坐标系内。它位于位置坐标系的中心，即边界框的中心。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><aside class="aside-change"><mark>IFC2x 变更</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoundedRectangleProfileDef.htm">IfcRoundedRectangleProfileDef</a></em> 现在从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em> 子类型化。<em>XDim</em> 和 <em>YDim</em> 属性已被移除（现在从超类型继承）。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoundedRectangleProfileDef.htm">IfcRoundedRectangleProfileDef</a></em> 定义了一个具有等半径圆角的矩形，作为扫掠曲面几何体或扫掠面积实体使用的轮廓定义。它由 X 尺寸、Y 尺寸和圆角半径给出，并放置在由 <em>Position</em> 属性建立的二维位置坐标系中。它在位置坐标系中居中放置，即在边界框的中心。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC2x 变更</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoundedRectangleProfileDef.htm">IfcRoundedRectangleProfileDef</a></em> is now subtyped from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em>. The <em>XDim</em> and <em>YDim</em> attributes have been removed (now inherited from supertype).</aside>
 <p>图1说明了圆角矩形轮廓定义的参数。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="圆角矩形轮廓" src="../figures/ifcroundedrectangleprofiledef-layout1.gif"/><figcaption>图1 — 圆角矩形轮廓<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p><u>位置</u></p>
-<p>参数化轮廓定义其自身的位置坐标系。基础坐标系由使用该轮廓定义的扫掠表面或扫掠面积实体定义。它是以下任一情况的xy平面：</p>
+<p>参数化轮廓定义了自己的位置坐标系。底层坐标系由使用轮廓定义的扫掠曲面或扫掠面积实体定义。它是以下任一的 xy 平面：</p>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a>.Position</li>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</li>
 </ul>
-<p>或在截面脊线的情况下，<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a>.CrossSectionPositions 每个列表成员的xy平面。</p>
-<p>通过使用位置坐标的偏移量，参数化轮廓可以居中定位（使用x、y偏移量=0.），或相对于轮廓的任何位置。显式坐标偏移用于定义基点（例如左上边界）。</p>
+<p>或者在分段脊的情况下，是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a>.CrossSectionPositions 的每个列表成员的 xy 平面。</p>
+<p>通过使用位置偏移，参数化轮廓可以定位在中心（使用 x,y 偏移量 = 0.），或相对于轮廓的任何位置。显式坐标偏移用于定义基点（例如，左上边界）。</p>
 <p><u>参数</u></p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoundedRectangleProfileDef.htm">IfcRoundedRectangleProfileDef</a></em> 在位置坐标系内定义，其中 <em>XDim</em> 定义矩形的长度尺寸（沿正x轴的一半），<em>YDim</em> 定义矩形的宽度尺寸（沿正y轴的一半），<em>RoundingRadius</em> 定义矩形所有四个角的曲率半径。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoundedRectangleProfileDef.htm">IfcRoundedRectangleProfileDef</a></em> 在位置坐标系中定义，其中 <em>XDim</em> 定义了矩形长度的度量（沿正 x 轴的一半），<em>YDim</em> 定义了矩形宽度的度量（沿正 y 轴的一半），<em>RoundingRadius</em> 定义了矩形所有四个角的曲率半径。</p>
 <h2><a class="anchor" id="8.15.3.22.2-Entity-inheritance-"></a>
     8.15.3.22.2 实体继承（Entity inheritance）
 <a class="link" href="#8.15.3.22.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -258,7 +258,7 @@
     8.15.3.22.3 特性（Attributes）
 <a class="link" href="#8.15.3.22.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-9460cfe4-f808-4da7-b1b6-d749077b1815"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-ad79ac36-f804-4462-b2e1-0ef7a4997775"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -289,7 +289,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
 <td data-label="Description">
-<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+<p>定义此轮廓定义应解析成的几何类型，是曲线还是曲面区域。对于曲线，轮廓应由扫掠曲面引用；对于区域，轮廓应由扫掠面积实体引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -301,7 +301,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference_中提供。</p>
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓标识符应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -311,8 +311,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>与轮廓关联的外部信息（如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>指向与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -322,8 +322,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
 <td data-label="Description">
-<p>轮廓的附加属性，例如力学属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>轮廓的附加属性，例如机械性能。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -341,7 +341,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></td>
 <td data-label="Description">
-<p>参数化轮廓定义的位置坐标系。如果未指定，则不应用平移和旋转。</p>
+<p>参数化轮廓定义的定位坐标系。如果未指定，则不应用平移和旋转。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -359,7 +359,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>矩形在x轴方向上的尺寸。</p>
+<p>矩形在 x 轴方向上的范围。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -371,7 +371,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>矩形在y轴方向上的尺寸。</p>
+<p>矩形在 y 轴方向上的范围。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -401,15 +401,15 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>矩形所有四个角等圆角的圆弧半径。</p>
+<p>矩形所有四个角等半径圆角的圆弧半径。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.22.B<a class="link" href="#-9460cfe4-f808-4da7-b1b6-d749077b1815"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.22.B<a class="link" href="#-ad79ac36-f804-4462-b2e1-0ef7a4997775"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.22.4-Formal-propositions-"></a>
     8.15.3.22.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.22.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-4c78a576-c71c-4d0a-b7fc-a7e832320816"></a><table>
+<figure><a class="anchor" id="-5125d001-d415-4bd8-bbc2-4928cd610d73"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -420,7 +420,7 @@
 <tr>
 <td>ValidRadius</td>
 <td>
-<p>属性 RoundingRadius 的值应小于或等于 XDim 和 YDim 属性值两者中的任一半值。</p>
+<p>属性 RoundingRadius 的值应小于或等于 Xdim 和 YDim 属性值的一半。</p>
 </td>
 </tr>
 <tr>
@@ -430,7 +430,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.22.C<a class="link" href="#-4c78a576-c71c-4d0a-b7fc-a7e832320816"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.22.C<a class="link" href="#-5125d001-d415-4bd8-bbc2-4928cd610d73"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.22.5-"></a>
     8.15.3.22.5 属性集
 <a class="link" href="#8.15.3.22.5-"><i data-feather="link"></i></a></h2>
@@ -471,7 +471,7 @@
 </p><h2><a class="anchor" id="8.15.3.22.6-Concept-usage-"></a>
     8.15.3.22.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.22.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-303a1e9b-5323-462d-9e79-3f0acf2ccdee"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-9d28c975-9962-451b-a32b-5b83577ce674"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -515,7 +515,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.22.D<a class="link" href="#-303a1e9b-5323-462d-9e79-3f0acf2ccdee"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.22.D<a class="link" href="#-9d28c975-9962-451b-a32b-5b83577ce674"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.22.7-Formal-representation-"></a>
     8.15.3.22.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.22.7-Formal-representation-"><i data-feather="link"></i></a></h2>
