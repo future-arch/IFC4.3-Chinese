@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.4.3.1 IfcAppliedValue（应用值） - IFC 4.3.2 Documentation</title>
+<title>8.4.3.1 IfcAppliedValue - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,22 +189,22 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.4.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a>（应用值）</h1>
+<h1>8.4.3.1 IfcAppliedValue</h1>
 <div class="mvd" title="Included in IfcConstructionResourceType.BaseCosts">RV ⓘ</div>
 <div class="mvd" title="Included in IfcConstructionResourceType.BaseCosts">AbV ⓘ</div>
 <h2><a class="anchor" id="8.4.3.1.1-Semantic-definition-"></a>
     8.4.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.4.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>该实体通过公式驱动捕获一个数值，并包含单位基准、有效日期范围和分类等附加限定条件。</p>
-<!-- 简短定义结束 -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 的范围由 <em>AppliedValue</em> 属性确定，该属性可通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValueSelect.htm">IfcAppliedValueSelect</a></em> 类型定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryMeasure.htm">IfcMonetaryMeasure</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></em>。</p>
-<p>可选地，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 可具有适用日期。此日期用于确定该数值开始适用的时间点，可以是数值在模型中设置的日期，也可以是数值开始生效的过去或未来日期。类似地，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 可具有"固定至"日期，用于确定该数值停止适用的时间点。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 实例可声明单位基准，该基准定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></em>，用于确定应用场景中单位数值的范围。当声明此属性时，假定赋予 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 的数值为单数量值。此约束未在模式中强制实施，需在应用程序内部进行控制。</p>
-<p>应用值可从文档（如价格表）中引用。通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a></em> 实现一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em>（或其子类型）实例与文档的关联，其中文档作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a>.RelatingExtReference</em>，而数值实例作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a>.RelatedResourceObjects</em>。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中新增加的实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 实体改为非抽象以支持约束的通用公式表达式，基于日期的属性数据类型更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></em>，<em>ValueType</em> 和 <em>Condition</em> 从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 提升而来，新增 <em>Components</em> 和 <em>ArithmeticOperator</em> 属性以替代 <em>IfcAppliedValueRelationship</em> 实现更高效的编码和引用追踪。</aside>
+<p>此实体捕获由公式驱动的值，并附加了单位基础、有效日期范围和分类等附加限定。</p>
+<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 的范围由 <em>AppliedValue</em> 特性确定，该特性可以定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryMeasure.htm">IfcMonetaryMeasure</a></em> 或通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValueSelect.htm">IfcAppliedValueSelect</a></em> 类型定义的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></em>。</p>
+<p>可选地，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 可以具有适用日期。这旨在固定值开始生效的日期。它可以是模型中设置值的日期，也可以是值生效的之前或之后的日期。同样，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 可以具有“固定至”日期。这旨在固定值不再相关的日期。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 的实例可以断言单位基础。这被定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></em>，它确定了应用目的的单位值的范围。假定当断言此特性时，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 的值是单位数量的值。这在模式中并未强制执行，因此需要在应用程序中进行控制。</p>
+<p>应用的值可以从文档（如价格表）中引用。一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em>（或其子类型）的实例之间的关系是通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a></em> 实现的，其中文档提供了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a>.RelatingExtReference</em>，值实例是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a>.RelatedResourceObjects</em>。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Entity made non-abstract to support general formula expressions of constraints, data type of date-based attributes changed into <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></em>, <em>ValueType</em> and <em>Condition</em> promoted from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em>, <em>Components</em> and <em>ArithmeticOperator</em> attributes added to replace <em>IfcAppliedValueRelationship</em> for more efficient encoding and reference tracking.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>当 <em>ArithmeticOperator</em> 等于 <code>MODULO</code> 时，<em>Components</em> 列表应恰好包含两个值，且必须为正整数。</li>
+<li>当 <em>ArithmeticOperator</em> 等于 <code>MODULO</code> 时，<em>Components</em> 列表应包含正好两个值，这两个值应为正整数。</li>
 </ol>
 <h2><a class="anchor" id="8.4.3.1.2-Entity-inheritance-"></a>
     8.4.3.1.2 实体继承（Entity inheritance）
@@ -227,7 +227,7 @@
     8.4.3.1.3 特性（Attributes）
 <a class="link" href="#8.4.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ce453866-4ee8-4b70-9f60-d10bc863b5c1"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-1376905f-b343-426b-93d6-d6e07a58d2dc"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -258,7 +258,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>为成本值提供的名称或补充说明。</p>
+<p>给成本值起的名称或附加说明。</p>
 </td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>可为成本值提供附加信息的描述。</p>
+<p>可能适用于成本值的附加信息的描述。</p>
 </td>
 </tr>
 <tr>
@@ -294,9 +294,9 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></td>
 <td data-label="Description">
-<p>单位成本所依据的数量和计量单位。</p>
-<p>注：除通常预期的长度、面积、体积等计量单位外，成本可能基于需要定义的计量单位（如袋、桶、托盘、件等）。单位成本可能基于大于（或小于）基准计量单位值的数量。例如，木材的单位成本费率可能基于 X 米（X &gt; 1）；电缆、管道及许多其他物品亦如此。基准数可以是整数或实数值。</p>
-<p>注：对于所有按单位数量应用成本的情况，均应声明此属性。即使对于使用单项价格的情况也可声明此属性，此时单位成本基准应按项（或等效定义）确定。</p>
+<p>单位成本所基于的度量单位和数量。</p>
+<p>注释：除了通常预期的度量单位（如长度、面积、体积等）之外，成本还可以基于需要定义的度量单位，例如：袋、桶、托盘、件等。单位成本可以基于大于（或小于）基本度量单位值的数量。例如，木材的单位成本可能按每 X 米计算，其中 X &gt; 1；电缆、管道和许多其他项目也类似。基数可以是整数或实数值。</p>
+<p>注释：在所有成本按单位数量应用的场合，都应断言此特性。即使在项目价格被使用的场合，也可以断言此特性，在这种情况下，单位成本基础应按项目（或等效定义）计算。</p>
 </td>
 </tr>
 <tr>
@@ -308,8 +308,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></td>
 <td data-label="Description">
-<p>应用值开始适用的日期。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 类型从 IfcDateTimeSelect 更改。</aside>
+<p>应用值适用的日期或开始日期。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Type changed from IfcDateTimeSelect.</aside>
 </td>
 </tr>
 <tr>
@@ -321,8 +321,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></td>
 <td data-label="Description">
-<p>应用值停止适用的日期。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 类型从 IfcDateTimeSelect 更改。</aside>
+<p>应用值适用的截止日期。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Type changed from IfcDateTimeSelect.</aside>
 </td>
 </tr>
 <tr>
@@ -334,9 +334,9 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>所用成本类型的规范说明。</p>
-<aside class="aside-note"><mark>注释</mark> 可能存在多种需要识别的成本值类型。虽然对不同类型成本名称的含义存在广泛共识，但尚无成本类型命名的通用标准，也没有广泛定义的分类。为支持任何类型的成本值，此处分配了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></em> 数据类型。</aside>
-<p>在缺乏明确定义标准的情况下，建议通过局部协议来定义项目或区域内允许且可理解的成本值类型。</p>
+<p>使用的成本类型的规范。</p>
+<aside class="aside-note"><mark>注释</mark> There are many possible types of cost value that may be identified. Whilst there is a broad understanding of the meaning of names that may be assigned to different types of costs, there is no general standard for naming cost types nor are there any broadly defined classifications. To allow for any type of cost value, the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></em> datatype is assigned.</aside>
+<p>在没有明确定义的标准的情况下，建议在项目或区域内达成本地协议来定义允许的、可理解的成本值类型。</p>
 </td>
 </tr>
 <tr>
@@ -349,7 +349,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
 <p>成本值适用的条件。</p>
-<p>例如，在投标提交的上下文中，这可能指代可能选择或可能不选择的选项。</p>
+<p>例如，在投标提交的背景下，这可能指的是一个可能被选择也可能不被选择的选项。</p>
 </td>
 </tr>
 <tr>
@@ -373,7 +373,7 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></td>
 <td data-label="Description">
-<p>用于计算 <em>AppliedValue</em> 的可选组件值。</p>
+<p>可选的组件值，用于计算 <em>AppliedValue</em>。</p>
 </td>
 </tr>
 <tr>
@@ -383,12 +383,12 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>关联到 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a> 的外部引用（如库、分类或文档信息）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向属性。</aside>
+<p>对与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a> 关联的外部引用（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.4.3.1.A<a class="link" href="#-ce453866-4ee8-4b70-9f60-d10bc863b5c1"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.4.3.1.A<a class="link" href="#-1376905f-b343-426b-93d6-d6e07a58d2dc"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.4.3.1.4-Formal-representation-"></a>
     8.4.3.1.4 形式化表示（Formal representation）
 <a class="link" href="#8.4.3.1.4-Formal-representation-"><i data-feather="link"></i></a></h2>
