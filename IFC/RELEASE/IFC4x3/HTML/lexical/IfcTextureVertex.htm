@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.45 IfcTextureVertex（纹理顶点） - IFC 4.3.2 Documentation</title>
+<title>8.12.3.45 IfcTextureVertex - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,21 +189,21 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.45 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a>（纹理顶点）</h1>
+<h1>8.12.3.45 IfcTextureVertex</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.12.3.45.1-Semantic-definition-"></a>
     8.12.3.45.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.45.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a></em> 是一个包含 2 个 (S, T) 纹理坐标的列表。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/IEC 19775-1 的定义：</aside><aside class="aside-note"><mark>注释</mark> 纹理坐标可以通过提供 TextureTransform 作为纹理定义的组成部分来进行变换（缩放、旋转、平移）。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><blockquote>
-<p>每个基于顶点的几何节点使用一组二维纹理坐标将纹理映射到顶点。纹理贴图值（ImageTexture、PixelTexture）沿 S 轴和 T 轴的范围为 [0.0, 1.0]。然而，纹理坐标值的范围可能为 (-∞,∞)。纹理坐标标识纹理贴图中的位置（从而标识颜色值）。首先指定水平坐标 S，然后是垂直坐标 T。如果纹理贴图在给定方向（S 轴或 T 轴）上重复，则纹理坐标 C（s 或 t）将映射到在给定方向上具有 N 个像素的纹理贴图，如下所示：</p><pre style=" font-size:larger;">
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureVertex.htm">IfcTextureVertex</a></em> 是一个包含 2 个（S, T）纹理坐标的列表。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/IEC 19775-1 :</aside><aside class="aside-note"><mark>注释</mark> Texture coordinates may be transformed (scaled, rotated, translated) by supplying a TextureTransform as a component of the texture's definition.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><blockquote>
+<p>Each vertex-based geometry node uses a set of 2D texture coordinates that map textures to vertices. Texture map values ( ImageTexture, PixelTexture) range from [0.0, 1.0] along the S-axis and T-axis. However, texture coordinate values may be in the range (-∞,∞). Texture coordinates identify a location (and thus a colour value) in the texture map. The horizontal coordinate S is specified first, followed by the vertical coordinate T. If the texture map is repeated in a given direction (S-axis or T-axis), a texture coordinate C (s or t) is mapped into a texture map that has N pixels in the given direction as follows: </p><pre style=" font-size:larger;">
 <b>纹理贴图位置 = (C - floor(C)) × N</b>
 </pre>
-<p>如果纹理贴图不重复，则纹理坐标将被限制在 0.0 到 1.0 的范围内，如下所示：</p><pre style=" font-size:larger;">
+<p>If the texture map is not repeated, the texture coordinates are clamped to the 0.0 to 1.0 range as follows: </p><pre style=" font-size:larger;">
 <b>纹理贴图位置 = N,   如果 C &gt; 1.0,
 <br/>           = 0.0,  如果 C &lt; 0.0,
-<br/>           = C × N, 如果 0.0 ≤ C ≤ 1.0。</b>
+<br/>           = C × N, 如果 0.0 ≤ C ≤ 1.0.</b>
 </pre>
 </blockquote>
 <h2><a class="anchor" id="8.12.3.45.2-Entity-inheritance-"></a>
@@ -243,7 +243,7 @@
     8.12.3.45.3 特性（Attributes）
 <a class="link" href="#8.12.3.45.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-7119342a-6e5b-480c-9b2b-2f96bb723188"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-4863751c-53ea-4127-aa7d-0af048ee5b04"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -274,11 +274,11 @@
             </td>
 <td data-label="Type">LIST [2:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterValue.htm">IfcParameterValue</a></td>
 <td data-label="Description">
-<p>第一个坐标[1]是 S 参数值，第二个坐标[2]是 T 参数值。</p>
+<p>第一个坐标 Coordinate[1] 是 S，第二个坐标 Coordinate[2] 是 T 参数值。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.45.A<a class="link" href="#-7119342a-6e5b-480c-9b2b-2f96bb723188"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.45.A<a class="link" href="#-4863751c-53ea-4127-aa7d-0af048ee5b04"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.45.4-Formal-representation-"></a>
     8.12.3.45.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.45.4-Formal-representation-"><i data-feather="link"></i></a></h2>
