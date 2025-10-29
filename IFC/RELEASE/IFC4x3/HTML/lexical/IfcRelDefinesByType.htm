@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.40 IfcRelDefinesByType（关联关系-按类型定义） - IFC 4.3.2 Documentation</title>
+<title>5.1.3.40 IfcRelDefinesByType - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,32 +138,32 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.1.3.40 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>（关联关系-按类型定义）</h1>
+<h1>5.1.3.40 IfcRelDefinesByType</h1>
 <div class="mvd" title="Included in Object Predefined Type, Object Type Predefined Type, Object Typing, Object User Identity, Property Sets with Override">RV ⓘ</div>
 <div class="mvd" title="Included in Object Predefined Type, Object Type Predefined Type, Object Typing, Object User Identity, Property Sets with Override">AbV ⓘ</div>
 <h2><a class="anchor" id="5.1.3.40.1-Semantic-definition-"></a>
     5.1.3.40.1 语义定义（Semantic definition）
 <a class="link" href="#5.1.3.40.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 定义了对象类型与其对象实例之间的关系。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 是一种一对多关系，因为它允许将一个类型定义分配给一个或多个对象。这些对象随后共享相同的对象类型，以及分配给对象类型的属性集和属性。</p>
-<!-- 简短定义结束 -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 将对象类型定义与对象实例相连接。对象类型和对象实例都可以通过分配 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em>（包括一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> 子类型）来定义属性，如图1所示。</p>
+<p>对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 定义了对象类型与其对象实例之间的关系。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 是一个 1 对 N 的关系，因为它允许一个类型定义分配给一个或多个对象。这些对象然后共享相同的对象类型，以及分配给对象类型的属性集和属性。</p>
+<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 链接对象类型定义与对象实例。对象类型和对象实例都可以通过分配 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em>（包括一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> 的子类型）给对象类型或对象实例来定义属性，如图 5.1.3.40.A 所示。</p>
 <p>在对象类型定义和对象实例端定义相同属性集有几种情况：</p>
 <ol>
-<li>公共对象类型的所有对象实例的所有属性都具有相同的值 - 那么只有对象类型定义分配了属性集。</li>
-<li>所有对象实例的所有属性都不同，即对象类型定义没有共同的属性值 - 那么每个对象实例都分配了属性集。</li>
-<li>同一属性集中的某些属性具有共同值并分配给对象类型定义，而某些属性是实例特定的并（可能具有不同值）分配给对象实例 - 那么：</li>
-<li>适用于对象实例的给定属性集中的所有属性总和是分配给对象类型定义的属性与分配给对象实例的属性的并集。</li>
-<li>如果对象实例在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 中具有与相应对象类型定义相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a>.Name</em> 属性，则实例定义的属性值将覆盖类型定义的值。</li>
+<li>公共对象类型的所有对象实例的所有属性值都相同——那么只有对象类型定义分配了属性集。</li>
+<li>所有对象实例的所有属性都不同，即对象类型定义没有公共属性值——那么每个对象实例都分配了属性集。</li>
+<li>同一个属性集中的某些属性具有公共值并分配给对象类型定义，而某些属性是实例特定的并分配给（可能具有不同值的）对象实例——那么：</li>
+<li>适用于对象实例的给定属性集中的所有属性的总和是分配给对象类型定义的属性与分配给对象实例的属性的并集。</li>
+<li>如果对象实例在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 中具有与相应对象类型定义相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a>.Name</em> 的属性，则在实例处定义的属性值将覆盖在类型处定义的属性值。</li>
 </ol>
-<figure><a class="anchor" id="-1-"></a><img alt="实例图" src="../figures/ifcreldefinesbytype_fig-1.png"/><figcaption>
-图1 — 类型定义关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>下表提供了属性分配示例以及实例值如何覆盖类型值。</p>
-<figure><a class="anchor" id="-dbb8e437-f515-4473-ac10-ace9945e7573"></a><table>
+<figure><a class="anchor" id="-1-"></a><img alt="instance diagram" src="../figures/ifcreldefinesbytype_fig-1.png"/><figcaption>
+图 5.1.3.40.A — 类型定义关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>下表提供了属性分配的示例以及实例值如何覆盖类型值。</p>
+<figure><a class="anchor" id="-948cf279-ac0b-473d-98fa-19e02b02fa56"></a><table>
 <thead>
 <tr>
 <th>分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallType.htm">IfcWallType</a></em> 的属性</th>
 <th>分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a></em> 的属性</th>
-<th>单个墙的最终属性值</th>
+<th>每个墙体的结果属性值</th>
 </tr>
 </thead>
 <tbody>
@@ -183,8 +183,8 @@
 <td>ExtendToStructure = FALSE</td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.40.B<a class="link" href="#-dbb8e437-f515-4473-ac10-ace9945e7573"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>RelatedObjects</em> 已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 降级到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em>。</aside>
+</table><figcaption>表 5.1.3.40.B<a class="link" href="#-948cf279-ac0b-473d-98fa-19e02b02fa56"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute <em>RelatedObjects</em> had been demoted from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em>.</aside>
 <h2><a class="anchor" id="5.1.3.40.2-Entity-inheritance-"></a>
     5.1.3.40.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.40.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -228,7 +228,7 @@
     5.1.3.40.3 特性（Attributes）
 <a class="link" href="#5.1.3.40.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e49cd267-7775-4053-8df2-b4660d79a2b2"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-03271887-12d3-43bd-b45b-74e592571b85"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -271,8 +271,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -284,7 +284,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -296,7 +296,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -340,15 +340,15 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></td>
 <td data-label="Description">
-<p>对该对象或对象集的类型（或样式）信息的引用。</p>
+<p>指向该对象或对象集的类型（或样式）信息的引用。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.40.C<a class="link" href="#-e49cd267-7775-4053-8df2-b4660d79a2b2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.40.C<a class="link" href="#-03271887-12d3-43bd-b45b-74e592571b85"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.40.4-Concept-usage-"></a>
     5.1.3.40.4 概念用法（Concept usage）
 <a class="link" href="#5.1.3.40.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-0b0c7c9d-c427-42d6-939b-6c47ad991040"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-90e23ff7-a5e9-4e3e-9860-2dd71d3d8fa1"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -371,9 +371,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -384,25 +382,143 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承概念
+                    点击显示 6 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承概念
+                    点击隐藏 6 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.1.3.40.D<a class="link" href="#-0b0c7c9d-c427-42d6-939b-6c47ad991040"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.40.D<a class="link" href="#-90e23ff7-a5e9-4e3e-9860-2dd71d3d8fa1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.40.5-Formal-representation-"></a>
     5.1.3.40.5 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.40.5-Formal-representation-"><i data-feather="link"></i></a></h2>
