@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.61 IfcRelSpaceBoundary2ndLevel（关系空间边界二级） - IFC 4.3.2 Documentation</title>
+<title>5.4.3.61 IfcRelSpaceBoundary2ndLevel - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,33 +138,37 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.4.3.61 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary2ndLevel.htm">IfcRelSpaceBoundary2ndLevel</a>（关系空间边界二级）</h1>
+<h1>5.4.3.61 IfcRelSpaceBoundary2ndLevel</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="5.4.3.61.1-Semantic-definition-"></a>
     5.4.3.61.1 语义定义（Semantic definition）
 <a class="link" href="#5.4.3.61.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>二级空间边界通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary2ndLevel.htm">IfcRelSpaceBoundary2ndLevel</a></em> 关系与周边构件建立关联，定义了空间的物理或虚拟边界。二级空间边界具有以下特征：</p>
+<p>2 级空间边界通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary2ndLevel.htm">IfcRelSpaceBoundary2ndLevel</a></em> 与周围元素的关系来定义空间的物理或虚拟分隔。2 级空间边界的特点是：</p>
 <ul>
-<li>二级空间边界仍代表围合空间的建筑构件，但在以下任一情况下会进行更细粒度的划分：</li>
-<li>材料和/或材料组合存在差异（例如，墙裙或墙板位于墙体下部）</li>
-<li>空间边界所代表的建筑构件（或虚拟边界）另一侧的空间或区域存在差异（例如，墙体另一侧有两个不同空间）</li>
-<li>二级空间边界通过两种方式区分：虚拟或物理，内部或外部。任何同时具有内部和外部属性的空间边界都必须分割为纯内部或纯外部的区段</li>
-<li>二级空间边界代表传热表面的两侧，这些表面通过建筑构件的厚度进行分隔。可进一步细分为：</li>
-<li>2a型：当提供空间边界的建筑构件另一侧存在空间时出现</li>
-<li>2b型：当提供空间边界的建筑构件另一侧存在其他建筑构件时出现</li>
-<li>二级空间边界的连接几何形状仅限于平面表面，这意味着曲面必须进行分段处理</li>
+<li>2 级空间边界仍然表示边界空间的建筑元素，但更精细，因为它们被细分为以下任何一种情况：<ul>
+<li>材料和/或材料组合物的差异（例如，墙壁下部的护壁板或镶板）。</li>
+<li>提供空间边界的建筑元素（或虚拟边界）另一侧的空间或区域的差异（例如，墙壁另一侧的两个不同空间）。</li>
 </ul>
-<!-- 短定义结束 -->
-<p>二级空间边界定义了分隔空间的建筑构件两侧的传热表面。生成二级空间边界时需考虑另一侧的建筑构件和空间。</p>
-<aside class="aside-note"><mark>注释</mark> 二级空间边界被许多分析软件包使用，这些软件包需要能够转换为各种简单拓扑模型的建筑表面视图。此类分析软件包包括：（1）能量分析（2）照明分析（3）流体动力学</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中新增实体</aside>
+</li>
+<li>2 级空间边界通过两种方式区分：虚拟或物理，以及内部或外部，其中任何同时是内部和外部的空间边界都必须分割成内部或外部的段。</li>
+<li>2 级空间边界表示分隔空间的建筑元素的传热表面的两侧。它们可以进一步区分：<ul>
+<li>2a 型，当提供空间边界的建筑元素另一侧有一个空间时出现。</li>
+<li>2b 型，当提供空间边界的建筑元素另一侧有一个建筑元素时出现。</li>
+</ul>
+</li>
+<li>2 级空间边界的连接几何体仅限于平面。这意味着曲面必须被分段。</li>
+</ul>
+<!-- end of short definition -->
+<p>2 级空间边界定义了分隔空间的建筑元素两侧的传热表面。2 级空间边界的生成必须考虑另一侧的建筑元素和空间。</p>
+<aside class="aside-note"><mark>注释</mark> 2nd level space boundaries are used by many analysis packages that require a surface view of the building that can be transformed into the various simple topological models. Examples of such analysis packages include: (1) energy analysis, (2) lighting analysis, (3) fluid dynamics</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <p>关系使用定义</p>
-<p>如图1所示，通过具有反向关联 <em>InnerBoundaries</em> 的属性 <em>ParentBoundary</em>，可将门、窗和洞口的空间边界链接到父边界（如墙体或楼板）。</p>
-<aside class="aside-note"><mark>注释</mark> 父级空间边界不会被内部边界切割——两者是重叠的。</aside>
-<p>通过具有反向关联 <em>Corresponds</em> 的属性 <em>CorrespondingBoundary</em>，可链接建筑构件相对两侧的一对空间边界。</p>
-<aside class="aside-note"><mark>注释</mark> 只有A型二级空间边界具有对应边界。</aside>
-<figure><a class="anchor" id="-1-"></a><img alt="IfcRelSpaceBoundary2ndLevel" src="../figures/ifcrelspaceboundary2ndlevel-fig1.png" title="图1 — 空间边界二级关系"/><figcaption>图1 — 空间边界二级关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>如图 5.4.3.61.A 所示，<em>ParentBoundary</em> 属性和反向 <em>InnerBoundaries</em> 用于将门、窗和开口的空间边界链接到父边界，例如墙壁或楼板的父边界。</p>
+<aside class="aside-note"><mark>注释</mark> The space boundary of the parent is not cut by the inner boundary - both overlap.</aside>
+<p><em>CorrespondingBoundary</em> 属性和反向 <em>Corresponds</em> 用于链接建筑元素两侧的空间边界对。</p>
+<aside class="aside-note"><mark>注释</mark> Only 2nd level space boundaries of type A have corresponding boundaries.</aside>
+<figure><a class="anchor" id="-1-"></a><img alt="IfcRelSpaceBoundary2ndLevel" src="../figures/ifcrelspaceboundary2ndlevel-fig1.png" title="图 5.4.3.61.A — 空间边界第二级关系"/><figcaption>图 5.4.3.61.A — 空间边界第二级关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p>几何使用定义</p>
-<p>关于二级空间边界连接几何形状的使用指南，请参阅超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> 中的定义。</p>
+<p>有关为第二级空间边界使用连接几何体的指导，请参见超类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> 的定义。</p>
 <h2><a class="anchor" id="5.4.3.61.2-Entity-inheritance-"></a>
     5.4.3.61.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.61.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -232,7 +236,7 @@
     5.4.3.61.3 特性（Attributes）
 <a class="link" href="#5.4.3.61.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-791456da-b799-4af6-8eaf-69c3ed4cf0aa"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-71a16883-12ad-44a2-b74f-d8b6cdf39cd6"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -275,8 +279,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -288,7 +292,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -300,7 +304,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -318,7 +322,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpaceBoundarySelect.htm">IfcSpaceBoundarySelect</a></td>
 <td data-label="Description">
-<p>引用由此边界界定的一个空间。</p>
+<p>指向由该边界界定的一个空间的引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -330,10 +334,8 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></td>
 <td data-label="Description">
-<p>引用定义空间边界的构件。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已变为必需。</aside><blockquote>
-<p>IFC2x变更 数据类型已从 <em>IfcBuildingElement</em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em>，具有基于文件交换的向上兼容性。</p>
-</blockquote>
+<p>指向定义空间边界的元素的引用。</p>
+<aside class="aside-change"><mark>IFC2x 变更</mark> The data type has been changed from <em>IfcBuildingElement</em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> with upward compatibility for file based exchange.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be mandatory.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -345,10 +347,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></td>
 <td data-label="Description">
-<p>空间边界的物理表示。作为在空间局部坐标系中给出的曲线或表面提供。</p>
-<blockquote>
-<p>IFC2x变更 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em>，具有基于文件交换的向上兼容性。</p>
-</blockquote>
+<p>空间边界的物理表示。以空间局部坐标系中的曲线或曲面形式提供。</p>
+<aside class="aside-change"><mark>IFC2x 变更</mark> The data type has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em> with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -360,7 +360,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a></td>
 <td data-label="Description">
-<p>定义空间边界是 <em>PHYSICAL</em>（物理）还是 <em>VIRTUAL</em>（虚拟）。</p>
+<p>定义空间边界是 <em>PHYSICAL</em> 还是 <em>VIRTUAL</em>。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -372,7 +372,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInternalOrExternalEnum.htm">IfcInternalOrExternalEnum</a></td>
 <td data-label="Description">
-<p>定义空间边界是 INTERNAL（内部）还是 EXTERNAL（外部），即与可以是部分封闭空间（如露台）的开放空间相邻。</p>
+<p>定义空间边界是内部的还是外部的，即邻近开放空间，该空间可以是部分封闭的空间，例如露台。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -390,7 +390,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary1stLevel.htm">IfcRelSpaceBoundary1stLevel</a></td>
 <td data-label="Description">
-<p>引用此内部边界定义所基于的主体或父空间边界。</p>
+<p>指向在此内部边界定义的宿主或父空间边界的引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -400,7 +400,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary1stLevel.htm">IfcRelSpaceBoundary1stLevel</a> FOR ParentBoundary</td>
 <td data-label="Description">
-<p>引用空间边界的内部边界。内部边界由开口、门和窗的空间边界定义。</p>
+<p>指向空间边界的内部边界的引用。内部边界由开口、门和窗的空间边界定义。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -430,7 +430,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary2ndLevel.htm">IfcRelSpaceBoundary2ndLevel</a></td>
 <td data-label="Description">
-<p>指向空间分隔热边界构件两侧成对空间边界中另一侧边界的引用。</p>
+<p>指向分隔空间的热边界元素的任一侧的两个空间边界对的另一个空间边界的引用。</p>
 </td>
 </tr>
 <tr>
@@ -440,15 +440,15 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary2ndLevel.htm">IfcRelSpaceBoundary2ndLevel</a> FOR CorrespondingBoundary</td>
 <td data-label="Description">
-<p>指向空间分隔热边界构件两侧成对空间边界中另一侧边界的引用。</p>
+<p>指向分隔空间的热边界元素的任一侧的两个空间边界对的另一个空间边界的引用。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.61.B<a class="link" href="#-791456da-b799-4af6-8eaf-69c3ed4cf0aa"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.61.B<a class="link" href="#-71a16883-12ad-44a2-b74f-d8b6cdf39cd6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.61.4-Concept-usage-"></a>
     5.4.3.61.4 概念用法（Concept usage）
 <a class="link" href="#5.4.3.61.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-9a314229-7dee-4160-aabf-bc0d7d0961af"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-1443aeea-fbfb-424c-8360-c3d922bc7ad0"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -471,9 +471,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -484,25 +482,223 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary1stLevel.htm">IfcRelSpaceBoundary1stLevel</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承概念
+                    点击显示 10 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承概念
+                    点击隐藏 10 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary2ndLevel.htm">IfcRelSpaceBoundary2ndLevel</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.4.3.61.C<a class="link" href="#-9a314229-7dee-4160-aabf-bc0d7d0961af"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.61.C<a class="link" href="#-1443aeea-fbfb-424c-8360-c3d922bc7ad0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.61.5-Formal-representation-"></a>
     5.4.3.61.5 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.61.5-Formal-representation-"><i data-feather="link"></i></a></h2>
