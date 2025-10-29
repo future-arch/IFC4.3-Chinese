@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.2.3.1 IfcApproval（审批） - IFC 4.3.2 Documentation</title>
+<title>8.2.3.1 IfcApproval - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,14 +189,14 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.2.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>（审批）</h1>
+<h1>8.2.3.1 IfcApproval</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.2.3.1.1-Semantic-definition-"></a>
     8.2.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.2.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a></em> 表示关于审批流程的信息，例如建筑或设施管理项目中的计划、设计、提案或变更单的审批。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a></em> 在 <em>IfcControlExtension</em> 模式中通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a></em> 引用，从而可以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 的所有子类型相关联。审批也可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a></em> 授予资源对象。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 Identifier 和 Name 变为可选，并添加规则要求至少其中一个被声明。添加了逆向属性 ApprovedObjects、ApprovedResources 和 HasExternalReferences。删除了逆向属性 Properties（改为通过逆向 ApprovedResources 使用更通用的关系）。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a></em> 表示有关审批流程的信息，例如建筑或设施管理项目中的计划、设计、提案或变更单。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a></em> 由 <em>IfcControlExtension</em> 模式中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a></em> 引用，从而可以与所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 的子类型相关联。也可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a></em> 将审批给予资源对象。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2.0</aside><aside class="aside-change"><mark>IFC4 变更</mark> Attributes Identifier and Name made optional, where rule added to require at least one of them being asserted. Inverse attributes ApprovedObjects, ApprovedResources and HasExternalReferences added. Inverse attribute Properties deleted (more general relationship via inverse ApprovedResources to be used instead).</aside>
 <h2><a class="anchor" id="8.2.3.1.2-Entity-inheritance-"></a>
     8.2.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.2.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -212,7 +212,7 @@
     8.2.3.1.3 特性（Attributes）
 <a class="link" href="#8.2.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-122f7cb6-ff11-49dd-8e21-40cc6d10db7e"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-893d755f-7156-4b5c-8b17-74e90f6609e9"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -243,7 +243,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p>计算机可解释的标识符，用于识别该审批。</p>
+<p>计算机可解释的标识符，用于识别审批。</p>
 </td>
 </tr>
 <tr>
@@ -255,7 +255,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>赋予审批的人类可读名称。</p>
+<p>为审批提供的人类可读名称。</p>
 </td>
 </tr>
 <tr>
@@ -267,7 +267,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>对正在审批的设计、工作任务、计划等的通用文本描述。</p>
+<p>关于被批准的设计、工作任务、计划等的通用文本描述。</p>
 </td>
 </tr>
 <tr>
@@ -279,8 +279,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
-<p>审批流程结果产生的日期和时间。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 属性数据类型更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></em>，使用 ISO 8601 表示，从 ApprovalDateTime 重命名并变为可选。</aside>
+<p>产生审批流程结果的日期和时间。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Attribute data type changed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></em> using ISO 8601 representation, renamed from ApprovalDateTime and made OPTIONAL.</aside>
 </td>
 </tr>
 <tr>
@@ -304,7 +304,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>审批的级别，例如：草案与已完成设计。</p>
+<p>审批的级别，例如草稿与完成设计。</p>
 </td>
 </tr>
 <tr>
@@ -316,7 +316,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>对审批的特殊约束或条件的文本描述。</p>
+<p>关于审批的特殊约束或条件的文本描述。</p>
 </td>
 </tr>
 <tr>
@@ -328,8 +328,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorSelect.htm">IfcActorSelect</a></td>
 <td data-label="Description">
-<p>在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrganization.htm">IfcOrganization</a></em> 中指定的角色中行动或单独在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a></em> 中行动并请求审批的执行者。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 用于审批请求的新属性，取代已删除的 IfcApprovalActorRelationship。</aside>
+<p>以 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrganization.htm">IfcOrganization</a></em> 中指定的角色或以个人身份在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a></em> 中行事并请求审批的参与者。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute for approval request replacing IfcApprovalActorRelationship (being deleted).</aside>
 </td>
 </tr>
 <tr>
@@ -341,8 +341,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorSelect.htm">IfcActorSelect</a></td>
 <td data-label="Description">
-<p>在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrganization.htm">IfcOrganization</a></em> 中指定的角色中行动或单独在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a></em> 中行动并给予审批的执行者。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 用于审批提供的新属性，取代已删除的 IfcApprovalActorRelationship。</aside>
+<p>以 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrganization.htm">IfcOrganization</a></em> 中指定的角色或以个人身份在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a></em> 中行事并给予审批的参与者。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute for approval provision replacing IfcApprovalActorRelationship (being deleted).</aside>
 </td>
 </tr>
 <tr>
@@ -352,8 +352,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>对与审批相关联的外部引用（例如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新的逆向属性。</aside>
+<p>对与审批关联的外部引用（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute.</aside>
 </td>
 </tr>
 <tr>
@@ -363,7 +363,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a> FOR RelatingApproval</td>
 <td data-label="Description">
-<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a></em> 实例的引用，这些实例将此审批与对象（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 的子类型）关联。</p>
+<p>对将此审批与对象（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 的子类型）关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a></em> 实例的引用。</p>
 </td>
 </tr>
 <tr>
@@ -373,7 +373,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a> FOR RelatingApproval</td>
 <td data-label="Description">
-<p>通过此关系集可以获知哪些资源对象被此审批批准。</p>
+<p>通过此审批批准的资源对象已知的关系集合。</p>
 </td>
 </tr>
 <tr>
@@ -383,7 +383,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatedApprovals</td>
 <td data-label="Description">
-<p>通过此关系集可以获知此审批与其他审批的关系。</p>
+<p>此审批与其他审批相关联的关系集合。</p>
 </td>
 </tr>
 <tr>
@@ -393,15 +393,15 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatingApproval</td>
 <td data-label="Description">
-<p>通过此关系集可以获知其他审批与此审批的关系。</p>
+<p>其他审批与此审批相关联的关系集合。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.2.3.1.A<a class="link" href="#-122f7cb6-ff11-49dd-8e21-40cc6d10db7e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.2.3.1.A<a class="link" href="#-893d755f-7156-4b5c-8b17-74e90f6609e9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.2.3.1.4-Formal-propositions-"></a>
     8.2.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#8.2.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-81dc8e51-b711-4874-a910-4f77cc00f854"></a><table>
+<figure><a class="anchor" id="-71f938c1-bda5-4cf1-bb85-1218a432379b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -412,7 +412,7 @@
 <tr>
 <td>HasIdentifierOrName</td>
 <td>
-<p>必须提供用于识别该审批的 Identifier 或 Name（或两者）。</p>
+<p>应提供用于识别审批的标识符或名称（或两者）。</p>
 </td>
 </tr>
 <tr>
@@ -421,7 +421,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.2.3.1.B<a class="link" href="#-81dc8e51-b711-4874-a910-4f77cc00f854"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.2.3.1.B<a class="link" href="#-71f938c1-bda5-4cf1-bb85-1218a432379b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.2.3.1.5-Formal-representation-"></a>
     8.2.3.1.5 形式化表示（Formal representation）
 <a class="link" href="#8.2.3.1.5-Formal-representation-"><i data-feather="link"></i></a></h2>
