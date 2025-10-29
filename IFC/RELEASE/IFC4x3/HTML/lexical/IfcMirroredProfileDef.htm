@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.14 IfcMirroredProfileDef（镜像轮廓定义） - IFC 4.3.2 Documentation</title>
+<title>8.15.3.14 IfcMirroredProfileDef - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,18 +189,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.15.3.14 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a>（镜像轮廓定义）</h1>
+<h1>8.15.3.14 IfcMirroredProfileDef</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.15.3.14.1-Semantic-definition-"></a>
     8.15.3.14.1 语义定义（Semantic definition）
 <a class="link" href="#8.15.3.14.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><code>_IfcMirroredProfileDef_</code> 通过将父轮廓绕其坐标系 y 轴进行镜像来定义轮廓。也就是说，父轮廓的左右部分会被互换。</p>
-<!-- 短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a></em> 通过围绕父轮廓坐标系的 y 轴镜像父轮廓来定义轮廓。也就是说，父轮廓的左右被交换。</p>
+<!-- end of short definition -->
 <p>说明：</p>
-<p><code>_IfcMirroredProfileDef_</code> 主要与 <code>_IfcCShapeProfileDef_</code>、<code>_IfcLShapeProfileDef_</code>、<code>_IfcUShapeProfileDef_</code> 或 <code>_IfcZShapeProfileDef_</code> 作为父轮廓一起使用，但也可与其他父轮廓类型配合使用。</p>
-<p>对 <code>_IfcParameterizedProfileDef_</code> 的镜像操作是在根据其 <code>_Position_</code> 属性进行平移和旋转之后执行的。例如，如果父轮廓的 <code>_Position_</code> 将其向右偏移其宽度的一半，则镜像后的轮廓将向左偏移其宽度的一半。</p>
-<p>绕 x 轴镜像（即上下互换）可通过绕 y 轴镜像并绕 z 轴旋转 180 度来实现。通常，旋转发生在包含对象中（例如 <code>_IfcSweptAreaSolid_</code>），即在 <code>_IfcMirroredProfileDef_</code> 执行镜像之后。如果父轮廓是 <code>_IfcParameterizedProfileDef_</code>，则旋转也可通过其 <code>_Position_</code> 属性在父轮廓中提前进行，即在 <code>_IfcMirroredProfileDef_</code> 执行镜像之前。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中新增实体。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a></em> 主要与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCShapeProfileDef.htm">IfcCShapeProfileDef</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLShapeProfileDef.htm">IfcLShapeProfileDef</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUShapeProfileDef.htm">IfcUShapeProfileDef</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcZShapeProfileDef.htm">IfcZShapeProfileDef</a></em> 作为父轮廓一起使用，但也可以与其他父轮廓类型一起使用。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em> 的镜像是在根据其 <em>Position</em> 属性进行平移和旋转之后执行的。例如，如果父轮廓的 <em>Position</em> 将其向右偏移了其宽度的一半，则镜像轮廓将向左偏移其宽度的一半。</p>
+<p>关于 x 轴的镜像（即交换顶部和底部）可以通过关于 y 轴的镜像结合绕 z 轴的 180 度旋转来实现。通常，旋转发生在包含对象（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>）中，即在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a></em> 执行镜像之后。如果父轮廓是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em>，则可以通过其 <em>Position</em> 属性在父轮廓中进行旋转，即在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a></em> 执行镜像之前。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.15.3.14.2-Entity-inheritance-"></a>
     8.15.3.14.2 实体继承（Entity inheritance）
 <a class="link" href="#8.15.3.14.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -233,7 +233,7 @@
     8.15.3.14.3 特性（Attributes）
 <a class="link" href="#8.15.3.14.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-334d115e-0219-49fa-881b-a7bfd516be23"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-ef97a68f-d972-4f82-97dd-da913c5b38d9"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -264,7 +264,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
 <td data-label="Description">
-<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+<p>定义此轮廓定义应解析成的几何类型，是曲线还是曲面区域。对于曲线，轮廓应由扫掠曲面引用；对于区域，轮廓应由扫掠面积实体引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -276,7 +276,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference_中提供。</p>
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓标识符应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -286,8 +286,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>与轮廓关联的外部信息（如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>指向与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -297,8 +297,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
 <td data-label="Description">
-<p>轮廓的附加属性，例如力学属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>轮廓的附加属性，例如机械性能。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -316,7 +316,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
 <td data-label="Description">
-<p>父轮廓提供变换的起点。</p>
+<p>父剖面提供变换的原点。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -328,7 +328,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator2D.htm">IfcCartesianTransformationOperator2D</a></td>
 <td data-label="Description">
-<p>应用于父轮廓的变换运算符。</p>
+<p>应用于父剖面的变换算子。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -340,7 +340,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>可用于指代此变换的名称。名称的实际含义必须在应用上下文中定义。</p>
+<p>用于引用变换的名称。名称的实际含义应在应用程序的上下文中定义。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -390,7 +390,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.14.A<a class="link" href="#-334d115e-0219-49fa-881b-a7bfd516be23"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.14.A<a class="link" href="#-ef97a68f-d972-4f82-97dd-da913c5b38d9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.14.4-"></a>
     8.15.3.14.4 属性集
 <a class="link" href="#8.15.3.14.4-"><i data-feather="link"></i></a></h2>
@@ -431,7 +431,7 @@
 </p><h2><a class="anchor" id="8.15.3.14.5-Concept-usage-"></a>
     8.15.3.14.5 概念用法（Concept usage）
 <a class="link" href="#8.15.3.14.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c2a28dae-6b61-4bfd-9f52-c269b3700b12"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-b24df8b9-e7eb-4a9e-b074-09c72b3c2bb8"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -475,7 +475,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.14.B<a class="link" href="#-c2a28dae-6b61-4bfd-9f52-c269b3700b12"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.14.B<a class="link" href="#-b24df8b9-e7eb-4a9e-b074-09c72b3c2bb8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.14.6-Formal-representation-"></a>
     8.15.3.14.6 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.14.6-Formal-representation-"><i data-feather="link"></i></a></h2>
