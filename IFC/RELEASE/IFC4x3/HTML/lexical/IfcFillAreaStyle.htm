@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.14 IfcFillAreaStyle（填充区域样式） - IFC 4.3.2 Documentation</title>
+<title>8.12.3.14 IfcFillAreaStyle - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,39 +189,39 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.14 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a>（填充区域样式）</h1>
+<h1>8.12.3.14 IfcFillAreaStyle</h1>
 <div class="mvd" title="Included in Annotation 2D Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Annotation 2D Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.12.3.14.1-Semantic-definition-"></a>
     8.12.3.14.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.14.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 为注释填充区域或表面的填充图案和铺砖提供样式表。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 将填充图案定义为模型填充图案，即填充线之间的间距或填充线的曲线图案以模型空间尺寸给出（需使用目标出图比例进行缩放）。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 允许通过以下组合方式定义填充图案和铺砖样式：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 为分配给注释填充区域或用于填充和瓦片的表面的表示信息提供样式表。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 将填充定义为模型填充，即，填充线的距离或填充线的曲线图案以模型空间尺寸给出（需要使用目标绘图比例进行缩放）。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 允许通过以下组合定义填充和瓦片的样式：</p>
 <ul>
-<li>通过仅向 <em>FillStyles</em> 集合分配 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 来实现区域和表面的实心填充。此时它为填充区域或表面提供背景色。</li>
+<li>通过仅将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 分配给 <em>FillStyles</em> 集合来实现区域和表面的实心填充。然后，它为填充区域或表面提供背景颜色。</li>
 </ul>
-<!-- 短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 用于渲染的表面颜色信息通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyle.htm">IfcSurfaceStyle</a></em> 分配，而非使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em>。</aside>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Color information of surfaces for rendering is assigned by using <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyle.htm">IfcSurfaceStyle</a></em>, not by using <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em>.</aside>
 <ul>
-<li>通过向 <em>FillStyles</em> 集合分配单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 实例，实现基于单行填充线的区域和表面矢量填充。</li>
+<li>基于单行填充线的区域和表面的矢量填充，通过将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 的单个实例分配给 <em>FillStyles</em> 集合来实现。</li>
 <li>
-<p>如果在 <em>FillStyles</em> 集合之外还分配了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 实例，它将为填充图案提供背景色。</p>
+<p>如果除了 <em>FillStyles</em> 集合之外还分配了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 的实例，则它为填充提供背景颜色。</p>
 </li>
 <li>
-<p>通过向 <em>FillStyles</em> 集合分配两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 实例，实现基于两行（可能相交）填充线的区域和表面矢量填充。</p>
+<p>基于两行（可能交叉）填充线的区域和表面的矢量填充，通过将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 的两个实例分配给 <em>FillStyles</em> 集合来实现。</p>
 </li>
-<li>如果在 <em>FillStyles</em> 集合之外还分配了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 实例，它将为填充图案提供背景色。</li>
+<li>如果除了 <em>FillStyles</em> 集合之外还分配了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 的实例，则它为填充提供背景颜色。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 不鼓励分配超过两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 实例来定义三行或更多行填充线。</aside>
+<aside class="aside-note"><mark>注释</mark> 不鼓励将超过两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 实例分配给定义三行或更多填充线的填充。</aside>
 <ul>
-<li>通过向 <em>FillStyles</em> 集合分配单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternallyDefinedHatchStyle.htm">IfcExternallyDefinedHatchStyle</a></em> 实例，实现外部定义的填充样式。</li>
-<li>如果在 <em>FillStyles</em> 集合之外还分配了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 实例，它将为填充图案提供背景色。</li>
+<li>通过将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternallyDefinedHatchStyle.htm">IfcExternallyDefinedHatchStyle</a></em> 的单个实例分配给 <em>FillStyles</em> 集合来实现外部定义的填充样式。</li>
+<li>如果除了 <em>FillStyles</em> 集合之外还分配了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColour.htm">IfcColour</a></em> 的实例，则它为填充提供背景颜色。</li>
 </ul>
-<p>为填充图案或铺砖图案提供的尺寸以全局绘图长度单位给出。</p>
-<aside class="aside-note"><mark>注释</mark> 全局单位在单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 实例中定义，由 <em>UnitsInContext:<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 给出，几何表示项和样式定义使用相同的单位。</aside>
-<p>填充图案或铺砖图案的尺寸值适用于模型空间，同时需提供目标出图比例以确保在默认出图比例下的正确外观。</p>
-<aside class="aside-note"><mark>注释</mark> 目标出图比例由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a>.TargetScale</em> 给出。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-46:1992 的定义
-用于使用铺砖或填充图案填充可见曲线段、注释填充区域或表面的样式。</aside><aside class="aside-note"><mark>注释</mark> 对应的 ISO 10303 名称：fill_area_style。有关正式标准的最终定义，请参阅 ISO/IS 10303-46:1994。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><blockquote>
-<p>弃用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></em> 的使用已被弃用，因其定义可能在未来的版本中更改。</p>
+<p>给定的填充或瓦片图案的度量值以全局绘图长度单位给出。</p>
+<aside class="aside-note"><mark>注释</mark> Global units are defined at the single <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> instance, given by <em>UnitsInContext:<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em>, the same units are used for the geometric representation items and for the style definitions.</aside>
+<p>填充或瓦片图案的度量值适用于模型空间，并提供目标绘图比例以在默认绘图比例下获得正确的显示效果。</p>
+<aside class="aside-note"><mark>注释</mark> the target plot scale is given by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a>.TargetScale</em>.</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-46:1992
+The style for filling visible curve segments, annotation fill areas or surfaces with tiles or hatches.</aside><aside class="aside-note"><mark>注释</mark> Corresponding ISO 10303 name: fill_area_style. Please refer to ISO/IS 10303-46:1994 for the final definition of the formal standard.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><blockquote>
+<p>DEPRECATION The use of <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a> is deprecated, as its definition might change is future releases.</p>
 </blockquote>
 <h2><a class="anchor" id="8.12.3.14.2-Entity-inheritance-"></a>
     8.12.3.14.2 实体继承（Entity inheritance）
@@ -247,7 +247,7 @@
     8.12.3.14.3 特性（Attributes）
 <a class="link" href="#8.12.3.14.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-493bae4b-ce54-4476-b2e1-e55eb9d726b0"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-1ee67496-8b85-4d16-8a8f-065ab6532a8c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -278,7 +278,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>表现样式的名称。</p>
+<p>表示样式的名称。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -308,7 +308,7 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillStyleSelect.htm">IfcFillStyleSelect</a></td>
 <td data-label="Description">
-<p>用于呈现可见曲线段、注释填充区域或表面的填充区域样式集合。</p>
+<p>用于表示可见曲线段、注释填充区域或表面的填充区域样式集合。</p>
 </td>
 </tr>
 <tr>
@@ -320,16 +320,16 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td data-label="Description">
-<p>指示为呈现样式提供的长度度量是基于模型还是基于制图。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增属性。</aside>
+<p>指示为表示样式提供的长度度量是基于模型的还是基于制图的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.14.A<a class="link" href="#-493bae4b-ce54-4476-b2e1-e55eb9d726b0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.14.A<a class="link" href="#-1ee67496-8b85-4d16-8a8f-065ab6532a8c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.14.4-Formal-propositions-"></a>
     8.12.3.14.4 形式化命题（Formal propositions）
 <a class="link" href="#8.12.3.14.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-5c1f0ca6-aa6e-4190-b60c-108d540bf0c0"></a><table>
+<figure><a class="anchor" id="-c40dd18b-c22a-475a-877b-2270e910042d"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -340,7 +340,7 @@
 <tr>
 <td>ConsistentHatchStyleDef</td>
 <td>
-<p>填充区域样式要么包含来自外部定义填充样式的定义，要么包含来自（一个或多个）填充区域样式填充图案的定义，要么包含来自（一个或多个）填充区域样式铺砖的定义，但不能同时包含这三种类型的组合。</p>
+<p>填充区域样式要么包含来自外部定义的填充样式的定义，要么包含来自（一个或多个）填充区域样式填充的定义，要么包含来自（一个或多个）填充区域样式瓦片的定义，但不能组合这三种类型。</p>
 </td>
 </tr>
 <tr>
@@ -351,7 +351,7 @@
 <tr>
 <td>MaxOneColour</td>
 <td>
-<p>填充区域样式的颜色分配最多只能有一个。</p>
+<p>填充区域样式最多只能有一个颜色赋值。</p>
 </td>
 </tr>
 <tr>
@@ -365,7 +365,7 @@
 <tr>
 <td>MaxOneExtHatchStyle</td>
 <td>
-<p>填充区域样式的外部定义填充样式分配最多只能有一个。</p>
+<p>填充区域样式最多只能有一个外部定义的填充样式赋值。</p>
 </td>
 </tr>
 <tr>
@@ -377,7 +377,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.14.B<a class="link" href="#-5c1f0ca6-aa6e-4190-b60c-108d540bf0c0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.14.B<a class="link" href="#-c40dd18b-c22a-475a-877b-2270e910042d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.14.5-Formal-representation-"></a>
     8.12.3.14.5 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.14.5-Formal-representation-"><i data-feather="link"></i></a></h2>
