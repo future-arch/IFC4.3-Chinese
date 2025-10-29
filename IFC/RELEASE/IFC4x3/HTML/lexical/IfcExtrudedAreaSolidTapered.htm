@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.16 IfcExtrudedAreaSolidTapered（锥形拉伸面积实体） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.16 IfcExtrudedAreaSolidTapered - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,15 +189,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.16 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a>（锥形拉伸面积实体）</h1>
+<h1>8.8.3.16 IfcExtrudedAreaSolidTapered</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.16.1-Semantic-definition-"></a>
     8.8.3.16.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.16.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a></em> 通过沿线性脊线扫掠横截面来定义。横截面在扫掠过程中可能从起始横截面的形状逐渐变化为末端横截面的形状。生成的实体由三个或更多面界定：一个起始面、一个终止面（分别由起始和终止平面及截面定义）以及一个或多个侧面。每个侧面是由起始和末端截面的一对对应边定义的直纹曲面。</p>
-<!-- 短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 由于起始和末端截面由多边形提供，起始和末端横截面的对应顶点相互连接，在每对对应顶点之间形成四边形多边形。由边界四边形多边形定义的曲面是直纹曲面，可通过三角剖分进行近似。</aside>
-<p>线性脊线由以下要素定义：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a></em> 通过沿线性脊线扫掠横截面来定义。横截面可以沿着扫掠从起始横截面的形状变为结束横截面的形状。生成的实体由三个或更多面界定：起始面、结束面（均由起始和结束平面及截面定义）以及一个或多个侧面。每个侧面都是由起始和结束截面的成对相应边定义的规则曲面。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Given that the start and end section is provided by a polygon, the corresponding vertices of the start and end cross section are connected, forming a quadrilateral polygon between each pair of corresponding vertices. The surface defined by the bounding quadrilateral polygon is a ruled surface, that could be approximated by triangulation.</aside>
+<p>线性脊线由以下部分定义：</p>
 <ul>
 <li>起始点：<em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.Location</em></li>
 <li>方向：<em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.ExtrudedDirection</em></li>
@@ -205,37 +205,43 @@
 </ul>
 <p>起始横截面由 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.SweptArea</em> 定义：</p>
 <ul>
-<li>位于由 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.P[1]</em> 和 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.P[2]</em> 定义的位置坐标系 XY 平面内的有界平面</li>
-<li>线性脊线起始于起始横截面的平面。脊线不一定垂直于该平面。</li>
+<li>位于 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.P[1]</em> 和 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.P[2]</em> 定义的位置坐标系 XY 平面内的有界平面区域</li>
+<li>线性脊线从起始横截面的平面开始。脊线不一定垂直于平面。</li>
 </ul>
-<p>末端横截面由 <em>EndSweptArea</em> 定义：</p>
+<p>结束横截面由 <em>EndSweptArea</em> 定义：</p>
 <ul>
-<li>位于通过将 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em> 提供的起始位置坐标沿脊线方向平移脊线距离而生成的位置坐标系 XY 平面内的有界平面。末端横截面的平面与起始横截面的平面共面。</li>
-<li></li>
-<li>末端横截面在拓扑上与起始横截面相似（即具有相同数量的顶点和边）。</li>
-<li>末端横截面可以通过使用不同参数值的相同参数化轮廓定义，也可以通过起始轮廓在末端横截面平面内的二维笛卡尔变换定义。</li>
+<li>位于通过沿脊线方向按脊线距离平移起始位置坐标（由 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em> 提供）而确定的位置坐标系 XY 平面内的有界平面区域。结束横截面的平面与起始横截面的平面共面。
+*<ul>
+<li>结束横截面在拓扑上与起始横截面相似（即具有相同数量的顶点和边）。</li>
+<li>结束横截面可以通过使用不同参数值的相同参数化型材定义，或者通过结束横截面平面内起始型材的二维笛卡尔变换来定义。</li>
 </ul>
-<p>对于两个参数化轮廓的情况，形状构建如下：</p>
+</li>
+</ul>
+<p>在两个参数化型材的情况下，形状构造如下：</p>
 <ul>
-<li>基于与起始轮廓相同参数化定义的末端轮廓，沿脊线方向平移脊线距离。</li>
-<li>可以在末端位置坐标系的 XY 平面内平移，并可以使用旋转参数进行扭转。</li>
-<li>平移和旋转参数由类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em> 的末端横截面提供，其中：</li>
-<li>平移是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>.Position.Location</em></li>
-<li>旋转是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>.Position.RefDirection</em></li>
-<li>起始和末端横截面的对应顶点相互连接。侧面构建为起始和末端横截面对应边之间的直纹曲面。</li>
+<li>结束型材由基于与起始型材相同型材参数化的横截面定义，沿脊线方向按脊线距离平移。</li>
+<li>它可以在结束位置坐标系的 XY 平面内移动，并可以使用旋转参数进行扭曲。</li>
+<li>移位和旋转参数由 <em>EndSweptArea</em> 提供，其类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em>，其中：<ul>
+<li>Shift 是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>.Position.Location</em></li>
+<li>Rotation 是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>.Position.RefDirection</em></li>
 </ul>
-<p>对于起始横截面的笛卡尔变换情况，形状构建如下：</p>
+</li>
+<li>起始和结束横截面的相应顶点被连接起来。侧面由起始和结束横截面之间的相应边构成的规则曲面构成。</li>
+</ul>
+<p>在起始横截面的笛卡尔变换情况下，形状构造如下：</p>
 <ul>
-<li>起始作为位置坐标系 XY 平面内曲线的横截面曲线，首先绕原点按比例参数缩放。然后沿脊线方向平移脊线距离。可以使用旋转参数进行扭转。</li>
-<li>比例和旋转参数由类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a></em> 的末端横截面提供，其中：</li>
-<li>比例是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator.Scale</em></li>
-<li>旋转是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator.Axis1</em></li>
-<li>起始和末端横截面的对应顶点相互连接。侧面构建为起始和末端横截面对应边之间的直纹曲面。</li>
+<li>横截面曲线，最初是位置坐标系 XY 平面中的一条曲线，首先通过比例参数绕原点进行缩放。然后沿脊线方向按脊线距离平移。可以使用旋转参数进行扭曲。</li>
+<li>比例和旋转参数由结束横截面提供，其类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a></em>，其中：<ul>
+<li>Scale 是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator.Scale</em></li>
+<li>Rotation 是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator.Axis1</em></li>
 </ul>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+</li>
+<li>起始和结束横截面的相应顶点被连接起来。侧面由起始和结束横截面之间的相应边构成的规则曲面构成。</li>
+</ul>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator</em> 中不得使用镜像变换</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator</em> 中的镜像不得使用。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.16.2-Entity-inheritance-"></a>
     8.8.3.16.2 实体继承（Entity inheritance）
@@ -315,7 +321,7 @@
     8.8.3.16.3 特性（Attributes）
 <a class="link" href="#8.8.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-8fc3fb84-e967-4063-8ff6-e3a336c8dedf"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3e1e5ad0-5f94-462b-a7fd-612cc89f9ab7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -344,8 +350,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -355,8 +361,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -376,7 +382,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -394,7 +400,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
 <td data-label="Description">
-<p>The surface defining the area to be swept. It is given as a profile definition within the xy plane of the position coordinate system.</p>
+<p>定义要扫掠的区域的曲面。它在位置坐标系的 xy 平面内以轮廓定义的形式给出。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -406,7 +412,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>Position coordinate system for the resulting swept solid of the sweeping operation. The position coordinate system allows for re-positioning of the swept solid. If not provided, the swept solid remains within the position as determined by the cross section or by the directrix used for the sweeping operation.</p>
+<p>扫掠操作所得扫掠实体的放置坐标系。放置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保留在由横截面或用于扫掠操作的导曲线确定的位置内。</p>
 <aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 </td>
 </tr>
@@ -425,7 +431,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
 <td data-label="Description">
-<p>由 <em>SweptArea</em> 提供的曲面要沿此方向扫掠。</p>
+<p>将 <em>SweptArea</em> 提供的表面要扫掠的方向。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -437,7 +443,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>曲面要沿 <em>ExtrudedDirection</em> 扫掠的距离。</p>
+<p>表面沿 <em>ExtrudedDirection</em> 扫掠的距离。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -467,15 +473,15 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
 <td data-label="Description">
-<p>定义扫掠区域末端的曲面。以轮廓定义的形式给出。<em>EndSwptArea</em> 的位置坐标系通过将 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em> 沿 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.ExtrudedDirection</em> 平移 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.Depth</em> 的距离生成。</p>
+<p>定义扫掠区域结束的表面。它以型材定义的形式给出。<em>EndSwptArea</em> 的位置坐标系是通过沿 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.ExtrudedDirection</em> 按 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.Depth</em> 的距离平移 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em> 而生成的。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.16.A<a class="link" href="#-8fc3fb84-e967-4063-8ff6-e3a336c8dedf"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.16.A<a class="link" href="#-3e1e5ad0-5f94-462b-a7fd-612cc89f9ab7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.16.4-Formal-propositions-"></a>
     8.8.3.16.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.16.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-12ca67c8-7bab-4427-933a-077e15e1b4b2"></a><table>
+<figure><a class="anchor" id="-cbc100a9-d5be-4183-960f-dcc6a2b14d65"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -486,7 +492,7 @@
 <tr>
 <td>CorrectProfileAssignment</td>
 <td>
-<p>作为起始轮廓的 <em>SweptArea</em> 和作为末端轮廓的 <em>EndSweptArea</em> 应相互兼容。</p>
+<p><em>SweptArea</em> 作为起始型材，<em>EndSweptArea</em> 作为结束型材，它们必须兼容。</p>
 </td>
 </tr>
 <tr>
@@ -495,7 +501,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.16.B<a class="link" href="#-12ca67c8-7bab-4427-933a-077e15e1b4b2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.16.B<a class="link" href="#-cbc100a9-d5be-4183-960f-dcc6a2b14d65"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.16.5-Formal-representation-"></a>
     8.8.3.16.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.16.5-Formal-representation-"><i data-feather="link"></i></a></h2>
