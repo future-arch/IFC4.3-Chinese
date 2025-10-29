@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.5.3.13 IfcTimeSeriesValue（时间序列值） - IFC 4.3.2 Documentation</title>
+<title>8.5.3.13 IfcTimeSeriesValue - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,20 +189,20 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.5.3.13 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeSeriesValue.htm">IfcTimeSeriesValue</a>（时间序列值）</h1>
+<h1>8.5.3.13 IfcTimeSeriesValue</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.5.3.13.1-Semantic-definition-"></a>
     8.5.3.13.1 语义定义（Semantic definition）
 <a class="link" href="#8.5.3.13.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>时间序列值是指构成时间序列的数值列表。必须至少提供一个数值。应用程序应通过应用以下三条规则对数值进行标准化处理：</p>
+<p>时间序列值是构成时间序列的值列表。至少必须提供一个值。应用程序应通过应用以下三个规则来规范化值：</p>
 <ul>
-<li>所有时间类型（世界时、地方时、夏令时和太阳时）均按照 ISO 8601 标准的 GMT/UTC（协调世界时）进行标准化。</li>
-<li>任何数据翻转由提供数据的应用程序处理。例如，当测量设备在测量过程中自行重置，且记录数据不包含重置前测量的数据时，就会发生数据翻转。</li>
-<li>标准化数据指向前一个时间单位。下图1所示的时间序列示例包含四个时间点：时间"a"表示时间序列的起点，其关联数据无实际意义。时间点"b"、"c"和"d"处的数据分别关联数值1、2和3。</li>
+<li>所有时间（通用、本地、夏令时和太阳时）都根据 ISO 8601 标准 GMT/UTC（协调世界时）进行规范化。</li>
+<li>任何回滚都由提供数据的应用程序处理。例如，当测量设备在测量时自行重置，并且记录的数据不包括重置前测量的数据时，就会发生回滚。</li>
+<li>规范化后的数据引用前一个时间单位。下图所示的时间序列示例包含四个时间点：“a”时间表示时间序列的开始，关联的数据没有意义。时间点“b”、“c”和“d”的数据分别与值 1、2 和 3 相关联。</li>
 </ul>
-<!-- 短定义结束 -->
-<figure><a class="anchor" id="-1-"></a><img alt="时间序列值" src="../figures/ifctimeseries_timeseriesvalue.gif" title="图1 — 时间序列值"/><figcaption>图1 — 时间序列值<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中新增实体。</aside>
+<!-- end of short definition -->
+<figure><a class="anchor" id="-1-"></a><img alt="time series values" src="../figures/ifctimeseries_timeseriesvalue.gif" title="图 8.5.3.13.A — 时间序列值"/><figcaption>图 8.5.3.13.A — 时间序列值<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
 <h2><a class="anchor" id="8.5.3.13.2-Entity-inheritance-"></a>
     8.5.3.13.2 实体继承（Entity inheritance）
 <a class="link" href="#8.5.3.13.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -218,7 +218,7 @@
     8.5.3.13.3 特性（Attributes）
 <a class="link" href="#8.5.3.13.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-a4337bf0-09c4-4dcc-a725-433e9431ef8b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-e2311745-e612-4c80-9f2e-929b098daf88"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -249,11 +249,11 @@
             </td>
 <td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a></td>
 <td data-label="Description">
-<p>时间序列数值列表。必须至少包含一个数值。</p>
+<p>时间序列值的列表。至少需要一个值。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.5.3.13.B<a class="link" href="#-a4337bf0-09c4-4dcc-a725-433e9431ef8b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.5.3.13.B<a class="link" href="#-e2311745-e612-4c80-9f2e-929b098daf88"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.5.3.13.4-Formal-representation-"></a>
     8.5.3.13.4 形式化表示（Formal representation）
 <a class="link" href="#8.5.3.13.4-Formal-representation-"><i data-feather="link"></i></a></h2>
