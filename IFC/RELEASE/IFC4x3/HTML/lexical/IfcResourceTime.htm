@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.5.3.7 IfcResourceTime（资源时间） - IFC 4.3.2 Documentation</title>
+<title>8.5.3.7 IfcResourceTime - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,15 +189,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.5.3.7 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceTime.htm">IfcResourceTime</a>（资源时间）</h1>
+<h1>8.5.3.7 IfcResourceTime</h1>
 <div class="mvd" title="Included in IfcConstructionResource.Usage">RV ⓘ</div>
 <div class="mvd" title="Included in IfcConstructionResource.Usage">AbV ⓘ</div>
 <h2><a class="anchor" id="8.5.3.7.1-Semantic-definition-"></a>
     8.5.3.7.1 语义定义（Semantic definition）
 <a class="link" href="#8.5.3.7.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceTime.htm">IfcResourceTime</a></em> 用于记录与施工资源相关的时间信息。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC4 中新增实体。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceTime.htm">IfcResourceTime</a></em> 捕获与施工资源相关的时间信息。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.5.3.7.2-Entity-inheritance-"></a>
     8.5.3.7.2 实体继承（Entity inheritance）
 <a class="link" href="#8.5.3.7.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -223,7 +223,7 @@
     8.5.3.7.3 特性（Attributes）
 <a class="link" href="#8.5.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e1717ba6-f0f3-4e31-a867-4cafa5688712"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d3e65912-f294-4028-935e-10a72514a7f7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -254,7 +254,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>Optional name for the time definition.</p>
+<p>时间定义的可选名称。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -266,8 +266,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDataOriginEnum.htm">IfcDataOriginEnum</a></td>
 <td data-label="Description">
-<p>Specifies the origin of the scheduling time entity. It currently
-  differentiates between predicted, simulated, measured, and user defined values.</p>
+<p>指定调度时间实体的来源。它目前
+  区分预测值、模拟值、测量值和用户定义值。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -279,7 +279,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>Value of the data origin if DataOrigin attribute is USERDEFINED.</p>
+<p>如果 <em>DataOrigin</em> 特性为 USERDEFINED，则为数据来源的值。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -309,8 +309,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
 <td data-label="Description">
-<p>表示代表该资源分配给任务的总工作量（例如：人工时）。
-注意：这不一定等同于任务持续时间（<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm">IfcTaskTime</a>.ScheduleDuration）；它可能根据资源使用率及分配给该任务的其他资源而变化。</p>
+<p>指示代表该资源分配给任务的总工作量（例如，人时）。
+注释：这不一定与任务持续时间 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm">IfcTaskTime</a>.ScheduleDuration</em>) 相同；它可能因资源使用率和其他分配给任务的资源而异。</p>
 </td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td data-label="Description">
-<p>表示并发使用的资源量。例如，100% 表示 1 个工人，300% 表示 3 个工人，50% 表示在可多任务处理的情况下占用 1 个工人一半的时间。如未提供，则使用率默认为 100%。</p>
+<p>指示并发使用的资源量。例如，100% 表示 1 个工人，300% 表示 3 个工人，50% 表示在可能进行多任务处理的情况下，1 个工人时间的一半。如果未提供，则使用率被视为 100%。</p>
 </td>
 </tr>
 <tr>
@@ -334,7 +334,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
-<p>表示资源计划开始工作的时间。</p>
+<p>指示资源计划开始工作的时间。</p>
 </td>
 </tr>
 <tr>
@@ -346,7 +346,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
-<p>表示资源计划完成工作的时间。</p>
+<p>指示资源计划完成工作的时间。</p>
 </td>
 </tr>
 <tr>
@@ -358,7 +358,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>表示应如何根据指定曲线调整资源使用率，以实现资源随时间均衡分配。标准值包括："Flat"、"BackLoaded"、"FrontLoaded"、"DoublePeak"、"EarlyPeak"、"LatePeak"、"Bell" 和 "Turtle"。自定义值可指定自定义名称或公式。</p>
+<p>指示应如何根据指定曲线调整资源使用情况，从而在时间上进行资源平滑。标准值包括：“Flat”（平坦）、“BackLoaded”（后载）、“FrontLoaded”（前载）、“DoublePeak”（双峰）、“EarlyPeak”（早峰）、“LatePeak”（晚峰）、“Bell”（钟形）和“Turtle”（龟形）。自定义值可以指定自定义名称或公式。</p>
 </td>
 </tr>
 <tr>
@@ -370,7 +370,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
 <td data-label="Description">
-<p>表示因均衡分配导致的计划开始时间延迟。</p>
+<p>指示由平滑引起的 <em>ScheduleStart</em> 的延迟。</p>
 </td>
 </tr>
 <tr>
@@ -382,7 +382,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td data-label="Description">
-<p>表示该资源的计划分配量超出其容量。</p>
+<p>指示资源计划超出其容量。</p>
 </td>
 </tr>
 <tr>
@@ -394,7 +394,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
-<p>表示状态值适用的日期和时间；特别是完成值、实际值和剩余值。如果值是分时间段的（引用的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">IfcConstructionResource</a> 具有属性的关联时间序列值），则状态值可根据截至 StatusTime 的此类分时间段数据确定。</p>
+<p>指示状态值适用的日期和时间；特别是完成、实际和剩余值。如果值是按时间分段的（引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">IfcConstructionResource</a></em> 具有与属性相关的时间序列值），则状态值可以根据 <em>StatusTime</em> 的时间分段数据确定。</p>
 </td>
 </tr>
 <tr>
@@ -406,7 +406,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
 <td data-label="Description">
-<p>表示截至 StatusTime 该资源实际完成的工作量。</p>
+<p>指示截至 <em>StatusTime</em> 资源已执行的实际工作量。</p>
 </td>
 </tr>
 <tr>
@@ -418,7 +418,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td data-label="Description">
-<p>表示实际并发使用的资源量。</p>
+<p>指示并发使用的资源的实际数量。</p>
 </td>
 </tr>
 <tr>
@@ -430,7 +430,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
-<p>表示资源实际开始工作的时间。</p>
+<p>指示资源实际开始工作的时间。</p>
 </td>
 </tr>
 <tr>
@@ -442,7 +442,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
-<p>表示资源实际完成工作的时间。</p>
+<p>指示资源实际完成工作的时间。</p>
 </td>
 </tr>
 <tr>
@@ -454,7 +454,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
 <td data-label="Description">
-<p>表示该资源剩余待完成的工作量。</p>
+<p>指示资源剩余需要完成的工作量。</p>
 </td>
 </tr>
 <tr>
@@ -466,7 +466,9 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td data-label="Description">
-<p>表示剩余待使用的资源量。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -478,11 +480,11 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td data-label="Description">
-<p>表示该资源的完成百分比。如果资源已分配给任务，则表示代表该资源的任务完成情况；如果资源被划分为子分配，则表示子分配的整体完成情况。</p>
+<p>指示此资源的完成百分比。如果资源分配给任务，则表示代表该资源的任务完成情况；如果资源被划分为子分配，则表示子分配的总体完成情况。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.5.3.7.A<a class="link" href="#-e1717ba6-f0f3-4e31-a867-4cafa5688712"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.5.3.7.A<a class="link" href="#-d3e65912-f294-4028-935e-10a72514a7f7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.5.3.7.4-Formal-representation-"></a>
     8.5.3.7.4 形式化表示（Formal representation）
 <a class="link" href="#8.5.3.7.4-Formal-representation-"><i data-feather="link"></i></a></h2>
