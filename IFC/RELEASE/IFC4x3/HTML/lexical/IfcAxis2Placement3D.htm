@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.3 IfcAxis2Placement3D（三维轴定位） - IFC 4.3.2 Documentation</title>
+<title>8.9.3.3 IfcAxis2Placement3D - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,20 +189,20 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.3 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a>（三维轴定位）</h1>
+<h1>8.9.3.3 IfcAxis2Placement3D</h1>
 <div class="mvd" title="Included in Body SweptSolid PolyCurve Geometry, IfcStructuralAnalysisModel.OrientationOf2DPlane, Mapped Geometry, Port Nesting, Product Local Placement, Project Representation Context, Project Representation Context 2D, Project Representation Context 3D, Reference SweptSolid PolyCurve Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Body Clipping Geometry, Body SweptSolid PolyCurve Geometry, IfcElementarySurface.Position, Mapped Geometry, Port Nesting, Product Local Placement, Project Representation Context, Project Representation Context 2D, Project Representation Context 3D, Reference SweptSolid PolyCurve Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.3.1-Semantic-definition-"></a>
     8.9.3.3.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.3.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 提供位置和方向，用于在三维空间中放置项目。属性 <em>Axis</em> 定义 Z 方向，<em>RefDirection</em> 定义 X 方向。Y 方向为派生方向。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> <em>RefDirection</em> 不必与 <em>Axis</em> 正交。</aside>
-<p>如果未给出 <em>Axis</em> 和 <em>RefDirection</em> 的属性值，则放置默认为 P[1]（x 轴）为 [1.,0.,0.]，P[2]（y 轴）为 [0.,1.,0.]，P[3]（z 轴）为 [0.,0.,1.]。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="axis2 placement 2D" src="../figures/ifcaxis2placement3d-layout1.gif"/><figcaption>图 8.9.3.3.A — 三维轴定位<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.9.3.3.A 说明了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 在三维坐标系中的定义。</p>
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-三个相互垂直的轴在三维空间中的位置和方向。axis2_placement_3D 通过一个点（从放置超类型继承）和两个（理想情况下正交的）轴来定义。它可用于在空间中定位和定向非轴对称对象，并定义放置坐标系。该实体包含一个构成放置坐标系原点的点。需要两个方向向量来完成放置坐标系的定义。axis 是放置 Z 轴方向，ref_direction 是放置 X 轴方向的近似值。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO10303-42 中定义的 <strong>axis2_placement_3d</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新实体。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 提供在三维空间中放置项的位置和方向。属性 <em>Axis</em> 定义 Z 方向，<em>RefDirection</em> 定义 X 方向。Y 方向是派生的。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> The <em>RefDirection</em> does not have to be orthogonal to <em>Axis</em>.</aside>
+<p>如果省略 <em>Axis</em> 和 <em>RefDirection</em> 的属性值，则放置默认 P[1]（x 轴）为 [1.,0.,0.]，P[2]（y 轴）为 [0.,1.,0.]，P[3]（z 轴）为 [0.,0.,1.]。</p>
+<figure><a class="anchor" id="Figure-8.9.3.3.A-Axis2-placement-3D"></a><img alt="axis2 placement 2D" src="../figures/ifcaxis2placement3d-layout1.gif"/><figcaption>Figure 8.9.3.3.A — Axis2 placement 3D<a class="link" href="#Figure-8.9.3.3.A-Axis2-placement-3D"><i data-feather="link"></i></a></figcaption></figure>
+<p>Figure 8.9.3.3.A 演示了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 在三维坐标系中的定义。</p>
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+The location and orientation in three dimensional space of three mutually perpendicular axes. An axis2_placement_3D is defined in terms of a point (inherited from placement supertype) and two (ideally orthogonal) axes. It can be used to locate and orientate a non axi-symmetric object in space and to define a placement coordinate system. The entity includes a point which forms the origin of the placement coordinate system. Two direction vectors are required to complete the definition of the placement coordinate system. The axis is the placement Z axis direction and the ref_direction is an approximation to the placement X axis direction.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>axis2_placement_3d</strong> defined in ISO10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.</aside>
 <h2><a class="anchor" id="8.9.3.3.2-Entity-inheritance-"></a>
     8.9.3.3.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.3.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -266,7 +266,7 @@
     8.9.3.3.3 特性（Attributes）
 <a class="link" href="#8.9.3.3.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-bcf2364e-b96d-48f4-81cb-49c58865f26a"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3f9a8fbe-8d97-44ca-99b1-9ce15e808bbd"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -295,8 +295,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -306,8 +306,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -325,7 +325,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></td>
 <td data-label="Description">
-<p>The geometric position of a reference point, such as the center of a circle, of the item to be located.</p>
+<p>要定位的项的参考点的几何位置，例如圆心。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -339,7 +339,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">Location.Dim</code></pre>
-<p>The space dimensionality of this class, derived from the dimensionality of the location.</p>
+<p>此类的空间维度，由位置的维度派生。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -369,7 +369,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
 <td data-label="Description">
-<p>局部 Z 轴的确切方向。</p>
+<p>局部 Z 轴的精确方向。</p>
 </td>
 </tr>
 <tr>
@@ -381,7 +381,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
 <td data-label="Description">
-<p>用于确定局部 X 轴方向的方向。如有必要，会进行调整以保持与 Axis 方向的正交性。如果省略 Axis 和/或 RefDirection，则这些方向取自几何坐标系。</p>
+<p>用于确定局部 X 轴方向的方向。如有必要，将进行调整以保持与 Axis 方向的正交性。如果省略 Axis 和/或 RefDirection，则方向取自几何坐标系。</p>
 </td>
 </tr>
 <tr>
@@ -399,11 +399,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.3.B<a class="link" href="#-bcf2364e-b96d-48f4-81cb-49c58865f26a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.3.B<a class="link" href="#-3f9a8fbe-8d97-44ca-99b1-9ce15e808bbd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.3.4-Formal-propositions-"></a>
     8.9.3.3.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.3.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-96da0fe2-bbee-4c98-90bd-186522b663dc"></a><table>
+<figure><a class="anchor" id="-b82698e1-e4a7-45c1-97e0-8db421c5bd87"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -414,7 +414,7 @@
 <tr>
 <td>AxisAndRefDirProvision</td>
 <td>
-<p>要么 <em>Axis</em> 和 <em>RefDirection</em> 都未给出并因此默认为默认值，要么两者都应给出。</p>
+<p>要么同时提供 <em>Axis</em> 和 <em>RefDirection</em>（因此默认为），要么两者都必须提供。</p>
 </td>
 </tr>
 <tr>
@@ -425,7 +425,7 @@
 <tr>
 <td>AxisIs3D</td>
 <td>
-<p>当给出 Axis 时，应仅引用三维 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a>。</p>
+<p>Axis（如果给出）应仅引用三维 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a>。</p>
 </td>
 </tr>
 <tr>
@@ -436,7 +436,7 @@
 <tr>
 <td>AxisToRefDirPosition</td>
 <td>
-<p><em>Axis</em> 和 <em>RefDirection</em> 不应平行或反平行。</p>
+<p><em>Axis</em> 和 <em>RefDirection</em> 不得平行或反平行。</p>
 </td>
 </tr>
 <tr>
@@ -447,7 +447,7 @@
 <tr>
 <td>LocationIs3D</td>
 <td>
-<p>放置位置的维数应为 3。</p>
+<p>放置位置的坐标空间维度应为 3。</p>
 </td>
 </tr>
 <tr>
@@ -471,7 +471,7 @@
 <tr>
 <td>RefDirIs3D</td>
 <td>
-<p>当给出 RefDirection 时，应仅引用三维 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a>。</p>
+<p>RefDirection（如果给出）应仅引用三维 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a>。</p>
 </td>
 </tr>
 <tr>
@@ -480,7 +480,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.3.C<a class="link" href="#-96da0fe2-bbee-4c98-90bd-186522b663dc"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.3.C<a class="link" href="#-b82698e1-e4a7-45c1-97e0-8db421c5bd87"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.3.5-Formal-representation-"></a>
     8.9.3.3.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.3.5-Formal-representation-"><i data-feather="link"></i></a></h2>
