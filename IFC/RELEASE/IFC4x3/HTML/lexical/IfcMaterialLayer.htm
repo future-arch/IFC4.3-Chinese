@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.10.3.6 IfcMaterialLayer（材料层） - IFC 4.3.2 Documentation</title>
+<title>8.10.3.6 IfcMaterialLayer - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,18 +189,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.10.3.6 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a>（材料层）</h1>
+<h1>8.10.3.6 IfcMaterialLayer</h1>
 <div class="mvd" title="Included in IfcMaterialLayerSet.MaterialLayers, Material Set">RV ⓘ</div>
 <div class="mvd" title="Included in IfcMaterialLayerSet.MaterialLayers, Material Set">AbV ⓘ</div>
 <h2><a class="anchor" id="8.10.3.6.1-Semantic-definition-"></a>
     8.10.3.6.1 语义定义（Semantic definition）
 <a class="link" href="#8.10.3.6.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 是构件中由若干层（一层或多层）构成的可识别单一部件。每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 具有恒定厚度，并相对于引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em> 沿材料层集基准（MlsBase）定位。</p>
-<!-- 简短定义结束 -->
-<p>材料层集中的空气间层通过 <em>IsVentilated</em> 属性值为 TRUE 或 UNKNOWN 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 表示。此类空气间层应解释为空隙（不具有材料）。</p>
-<aside class="aside-example"><mark>示例</mark> 带有砖砌体和中间空气间层的空心墙将使用三个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 进行建模：[1] 砖，[2] 空气间层，[3] 砖。内层"砖"将具有 <em>Name</em> = "Brick"、单独的 <em>LayerThickness</em>，可能还有指示其为"承重"的 <em>Category</em>，以及控制该材料层在墙体连接中与其他材料层交互方式的 <em>Priority</em>。</aside>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 可能具有材料层名称，该名称可能与引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> 名称不同。</p>
-<aside class="aside-example"><mark>示例</mark> 保温层的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 名称可以是"Insulation"，而 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> 名称为"polystyrene insulating boards"。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新实体</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>Name</em>、<em>Description</em>、<em>Category</em>、<em>Priority</em> 已添加到属性列表末尾。<em>LayerThickness</em> 的数据类型放宽为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 是由一层或多层构成的元素的单个且可识别的部分。每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 具有恒定的厚度，并相对于引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em> 沿材料层集基线（MlsBase）定位。</p>
+<!-- end of short definition -->
+<p>材料层集中的空气间隙表示为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em>，其 <em>IsVentilated</em> 属性值为 TRUE 或 UNKNOWN。此类空气间隙应解释为空隙（不具有材料）。</p>
+<aside class="aside-example"><mark>示例</mark> A cavity wall with brick masonry used with an air gap in between would be modeled using three <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em>'s: [1] Brick, [2] Air gap, [3] Brick. The inner layer "Brick" would have a <em>Name</em> = "Brick", an individual <em>LayerThickness</em>, and potentially a <em>Category</em> indicating it as "load bearing", and a <em>Priority</em> that controls how this material layer interacts with other material layers in wall connections.</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> 可以有一个材料层名称，该名称可能与引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> 名称不同。</p>
+<aside class="aside-example"><mark>示例</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayer.htm">IfcMaterialLayer</a></em> name of an insulation layer can be "Insulation", whereas the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> name is "polystyrene insulating boards".</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attributes <em>Name</em>, <em>Description</em>, <em>Category</em>, <em>Priority</em> have been added at the end of attribute list. Data type of <em>LayerThickness</em> relaxed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
 <h2><a class="anchor" id="8.10.3.6.2-Entity-inheritance-"></a>
     8.10.3.6.2 实体继承（Entity inheritance）
 <a class="link" href="#8.10.3.6.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -234,7 +234,7 @@
     8.10.3.6.3 特性（Attributes）
 <a class="link" href="#8.10.3.6.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-9225605e-9651-4981-8bb7-0fe7c0d95e81"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3f4c4e03-aa97-4c1d-b8ef-5630ad58805a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -263,8 +263,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a> FOR RelatingMaterial</td>
 <td data-label="Description">
-<p>在构件实例或构件类型的材料关联中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型。该关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型在元素实例或元素类型材料关联中的使用。关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute has been added.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -274,8 +274,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>引用与材料相关的外部参考，例如库、分类或文档信息。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+<p>指向与材料关联的外部引用，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute has been added.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -286,7 +286,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProperties.htm">IfcMaterialProperties</a> FOR Material</td>
 <td data-label="Description">
 <p>分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型实例的材料属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute has been added.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -316,7 +316,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></td>
 <td data-label="Description">
-<p>对构成层的材料的可选引用。请注意，如果未给出此值，并不表示该层没有材料（空气间层），仅表示此时未指定材料。</p>
+<p>可选的指向构成该层的材料的引用。请注意，如果未提供此值，则不表示没有材料的层（空气间隙），它仅表示在该点未指定材料。</p>
 </td>
 </tr>
 <tr>
@@ -328,8 +328,8 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td data-label="Description">
-<p>材料层的厚度。"厚度"的含义取决于其使用方式。对于利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 的构件元素，该尺寸沿 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 中指定的正 <em>LayerSetDirection</em> 方向测量。</p>
-<aside class="aside-note"><mark>注释</mark> 对于厚度接近零的材料（如膜材料），属性值可以为 0。厚度为 0 的材料层可能不会在几何表示中渲染。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性数据类型已更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>，允许厚度为 0。</aside>
+<p>材料层的厚度。“厚度”的含义取决于其用途。在使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 的建筑构件的情况下，尺寸沿 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 中指定的正 <em>LayerSetDirection</em> 测量。</p>
+<aside class="aside-note"><mark>注释</mark> The attribute value can be 0. for material thicknesses very close to zero, such as for a membrane. Material layers with thickess 0. may not be rendered in the geometric representation.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute datatype has been changed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em> allowing for 0. as thickness.</aside>
 </td>
 </tr>
 <tr>
@@ -341,10 +341,10 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
 <td data-label="Description">
-<p>指示材料层是否代表空气层（或空腔）。
-* 如果材料层是空气间层且提供从该层到外部空气的通风，则设置为 TRUE。
-* 如果材料层是空气间层但不提供通风（或当空气间层的通风信息不可用时），则设置为 UNKNOWN。
-* 如果材料层是实体材料层（默认值），则设置为 FALSE。</p>
+<p>指示材料层是否表示空气层（或空腔）。
+* 如果材料层是空气间隙并且提供从该层到外部空气的空气交换，则设置为 TRUE。
+* 如果材料层是空气间隙但不提供空气交换（或空气间隙的空气交换信息不可用），则设置为 UNKNOWN。
+* 如果材料层是实心材料层（默认），则设置为 FALSE。</p>
 </td>
 </tr>
 <tr>
@@ -356,7 +356,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>材料层的已知名称。</p>
+<p>材料层所知的名称。</p>
 </td>
 </tr>
 <tr>
@@ -368,7 +368,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>以比属性 Name 或 Category 更具描述性的方式定义材料层。</p>
+<p>比 Name 或 Category 属性更具描述性的材料层定义。</p>
 </td>
 </tr>
 <tr>
@@ -380,11 +380,11 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>材料层的类别，例如其在所属层集中的角色（如"承重"、"保温"等）。关键词列表可通过模型视图定义进行扩展，但以下关键词通常适用：
-* 'LoadBearing' — 适用于所有具有承重功能的材料层。
-* 'Insulation' — 适用于所有具有保温功能的材料层。
-* 'Inner finish' — 适用于作为内装修的材料层。
-* 'Outer finish' — 适用于作为外装修的材料层。</p>
+<p>材料层的类别，例如它在其所属的层集中的作用（如“承重”、“保温”等）。关键字列表可以通过模型视图定义进行扩展，但以下关键字通常适用：
+* 'LoadBearing' — 对于所有具有承重功能的材料层。
+* 'Insulation' — 对于所有具有保温功能的材料层。
+* 'Inner finish' — 对于作为内饰面的材料层。
+* 'Outer finish' — 对于作为外饰面的材料层。</p>
 </td>
 </tr>
 <tr>
@@ -396,8 +396,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
 <td data-label="Description">
-<p>层的相对优先级，表示为标准化整数范围 [0..100]。控制构件连接处和转角处层的相交方式：在构件连接处，如果一个构件的层优先级高于另一个构件的层，则前者的层会凸入（即取代）后者的层。构件中材料层的优先级值必须由软件应用程序根据连接构件中的材料层进行设置和维护。</p>
-<aside class="aside-note"><mark>注释</mark> 如果使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> 的关系在两个具有层结构的构件之间建立逻辑连接，则连接处的层优先级可能被 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> 的优先级属性覆盖。</aside>
+<p>层的相对优先级，表示为归一化的整数范围 [0..100]。控制层在建筑构件的连接和角落处的相交方式：一个构件的层在连接处会突出到（即取代）另一个构件的层，如果前者构件的层比后者具有更高的优先级。软件应用程序必须根据连接构件中的材料层来设置和维护构件中材料层的优先级值。</p>
+<aside class="aside-note"><mark>注释</mark> The layer priority at a connection may be overridden by the priority attributes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> if that relationship is used to establish a logical connection between two building elements having a layer structure.</aside>
 </td>
 </tr>
 <tr>
@@ -407,15 +407,15 @@
 </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a> FOR MaterialLayers</td>
 <td data-label="Description">
-<p>对包含该材料层的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em> 的引用。</p>
+<p>包含该材料层的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em> 的引用。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.10.3.6.A<a class="link" href="#-9225605e-9651-4981-8bb7-0fe7c0d95e81"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.6.A<a class="link" href="#-3f4c4e03-aa97-4c1d-b8ef-5630ad58805a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.6.4-Formal-propositions-"></a>
     8.10.3.6.4 形式化命题（Formal propositions）
 <a class="link" href="#8.10.3.6.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-79bdc827-8237-4021-a9b4-352b11ecd218"></a><table>
+<figure><a class="anchor" id="-7f14d7c2-2e15-4288-98c2-89c3fe867ff6"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -426,7 +426,7 @@
 <tr>
 <td>NormalizedPriority</td>
 <td>
-<p><em>Property</em> 应全部以标准化整数范围 [0..100] 给出，其中 0 表示材料层的最低优先级，100 表示最高优先级。</p>
+<p><em>Property</em> 应全部以归一化的整数范围 [0..100] 提供，其中 0 是材料层的最低优先级，100 是最高优先级。</p>
 </td>
 </tr>
 <tr>
@@ -435,7 +435,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.10.3.6.B<a class="link" href="#-79bdc827-8237-4021-a9b4-352b11ecd218"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.6.B<a class="link" href="#-7f14d7c2-2e15-4288-98c2-89c3fe867ff6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.6.5-Formal-representation-"></a>
     8.10.3.6.5 形式化表示（Formal representation）
 <a class="link" href="#8.10.3.6.5-Formal-representation-"><i data-feather="link"></i></a></h2>
