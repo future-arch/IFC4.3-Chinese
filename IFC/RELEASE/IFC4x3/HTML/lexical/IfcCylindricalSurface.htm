@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.29 IfcCylindricalSurface（圆柱面） - IFC 4.3.2 Documentation</title>
+<title>8.9.3.29 IfcCylindricalSurface - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,22 +189,22 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.29 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm">IfcCylindricalSurface</a>（圆柱面）</h1>
+<h1>8.9.3.29 IfcCylindricalSurface</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.9.3.29.1-Semantic-definition-"></a>
     8.9.3.29.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.29.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>圆柱面是在 <em>z</em> 方向上无界的曲面。有界圆柱面通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedSurface.htm">IfcBoundedSurface</a></em> 的子类型来定义，其中 <em>BasisSurface</em> 为圆柱面。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 1：有界圆柱面可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></em> 来定义，其中 <em>BasisSurface</em> 为圆柱面，<em>U1</em> = 0°，<em>U2</em> = 360°，<em>V1</em> = <strong>z</strong> 方向的下界，<em>V2</em> = <strong>z</strong> 方向的上界（如果平面角度单位为度）。有界圆柱弧面满足 |U1 - U2| &lt; 360°（假设 Usense 和 Vsense 与基础曲面的方向一致）。</aside><aside class="aside-note"><mark>注释</mark> 2：非矩形的有界圆柱面，例如斜屋顶下方的圆形墙面，可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a></em> 来定义，其中 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundaryCurve.htm">IfcBoundaryCurve</a></em> 是 p-曲线段的集合。p-曲线是位于曲面基础上并在该曲面的参数空间中定义的曲线。</aside>
-<p>继承属性的解释如下：</p>
+<p>圆柱面是在 <em>z</em> 方向上无界的曲面。有界的圆柱面是通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedSurface.htm">IfcBoundedSurface</a></em> 的子类型，并将 <em>BasisSurface</em> 设置为圆柱面来定义的。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> 1 A bounded cylindrical surface can be defined by an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></em> with <em>BasisSurface</em> being the cylindrical surface and <em>U1</em> = 0°, <em>U2</em> = 360° and <em>V1</em> = lower bound in <strong>z</strong>, <em>V2</em> = upper bound in <strong>z</strong> (if the plane angle measure is degree). A bounded cylindrical arc surface is provided with |U1 - U2| &lt; 360° (assuming the Usense and Vsense agree to the sense of the basis surface).</aside><aside class="aside-note"><mark>注释</mark> 2 A non-rectangular bounded cylindrical surface, e.g. the surface of a round wall underneath a sloped roof, cab be defined by an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a></em> with <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundaryCurve.htm">IfcBoundaryCurve</a></em>'s, being a collection of p-curve segments. A p-curve is curve which lies on the basis of a surface and is defined in the parameter space of that surface.</aside>
+<p>继承的属性解释如下：</p>
 <ul>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position</em> 定义圆柱面的位置和方向。</li>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Location</em> 定义圆柱面轴上的一个点。</li>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.P[3]</em> 定义圆柱面轴的方向。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position</em> 定义了圆柱面的位置和方向。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Location</em> 定义了圆柱面轴上的一个点。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.P[3]</em> 定义了圆柱面轴的方向。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-圆柱面是与一条直线保持恒定距离（半径）的曲面。圆柱面由其半径、方向和位置定义。数据应解释如下：</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>cylindrical_surface</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside><blockquote>
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+A cylindrical surface is a surface at a constant distance (the radius) from a straight line. A cylindrical surface is defined by its radius and its orientation and location. The data is to be interpreted as follows:</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>cylindrical_surface</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside><blockquote>
 <blockquote>
 <p></p><pre style=" font-size:x-small;">
 C = Position.Location
@@ -213,17 +213,18 @@ y = Position.P[2]
 z = Position.P[3]
 <em>R</em> = Radius
 </pre>
-曲面参数化如下：
-<figure><a class="anchor" id="Figure-8.9.3.29.A"></a><img alt="公式" src="../figures/ifccylindricalsurface-math1.gif"/>
-其中参数范围为 -∞ &lt; <em>u,v</em> &lt; ∞。<figcaption>Figure 8.9.3.29.A<a class="link" href="#Figure-8.9.3.29.A"><i data-feather="link"></i></a></figcaption></figure>
+and the surface is parameterized as:
+<figure><a class="anchor" id="Figure-8.9.3.29.A"></a><img alt="formula" src="../figures/ifccylindricalsurface-math1.gif"/>
+where the parametric range is -∞ &lt; <em>u,v</em> &lt; ∞ .<figcaption>Figure 8.9.3.29.A<a class="link" href="#Figure-8.9.3.29.A"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
-<p>在上述参数化中，单位向量 <strong>z</strong> 的长度单位与半径 <strong><em>R</em></strong> 的单位相同。在上述定义的放置坐标系中，曲面由方程 <em>S</em> = 0 表示，其中：</p>
+<p>In the above parameterization the length unit for the unit vectors <strong>z</strong> is equal to that of the radius <strong><em>R</em></strong>. In the placement coordinate system defined above, the surface is represented by the equation <em>S</em> = 0, where</p>
 <blockquote>
-<figure><a class="anchor" id="Figure-8.9.3.29.B"></a><img alt="公式" src="../figures/ifccylindricalsurface-math2.gif"/>
-曲面上任意点处曲面的法向正方向由下式给出：<figcaption>Figure 8.9.3.29.B<a class="link" href="#Figure-8.9.3.29.B"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="Figure-8.9.3.29.C"></a><img alt="公式" src="../figures/ifccylindricalsurface-math3.gif"/>，或作为单位法向由下式给出：<figcaption>Figure 8.9.3.29.C<a class="link" href="#Figure-8.9.3.29.C"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="Figure-8.9.3.29.D"></a><img alt="公式" src="../figures/ifccylindricalsurface-math4.gif"/><figcaption>Figure 8.9.3.29.D<a class="link" href="#Figure-8.9.3.29.D"><i data-feather="link"></i></a></figcaption></figure>
-<p>法向方向远离圆柱的轴线。</p>
+<figure><a class="anchor" id="Figure-8.9.3.29.B"></a><img alt="formula" src="../figures/ifccylindricalsurface-math2.gif"/>
+The positive direction of the normal to the surface at any point on the surface is given by<figcaption>Figure 8.9.3.29.B<a class="link" href="#Figure-8.9.3.29.B"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="Figure-8.9.3.29.C"></a><img alt="formula" src="../figures/ifccylindricalsurface-math3.gif"/>，或作为单位法线由<figcaption>Figure 8.9.3.29.C<a class="link" href="#Figure-8.9.3.29.C"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="Figure-8.9.3.29.D"></a><img alt="formula" src="../figures/ifccylindricalsurface-math4.gif"/><figcaption>Figure 8.9.3.29.D<a class="link" href="#Figure-8.9.3.29.D"><i data-feather="link"></i></a></figcaption></figure>
+<p>The direction of the normal is away from the axis of the cylinder.
+</p>
 </blockquote>
 </blockquote>
 <h2><a class="anchor" id="8.9.3.29.2-Entity-inheritance-"></a>
@@ -298,7 +299,7 @@ z = Position.P[3]
     8.9.3.29.3 特性（Attributes）
 <a class="link" href="#8.9.3.29.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0a9b0cba-8783-4c43-bdf8-b093a95010d7"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-222bb29f-a153-4066-aa71-710cc13768c7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -327,8 +328,8 @@ z = Position.P[3]
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -338,8 +339,8 @@ z = Position.P[3]
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -359,8 +360,8 @@ z = Position.P[3]
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是三维几何表示项。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 从子类型提升的派生属性。</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是一个三维几何表示项。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Derived attribute promoted from subtypes.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -378,7 +379,7 @@ z = Position.P[3]
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>曲面的位置和方向。该属性用于定义曲面的参数化。</p>
+<p>曲面的位置和方向。此属性用于定义曲面的参数化。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -412,7 +413,7 @@ z = Position.P[3]
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.29.E<a class="link" href="#-0a9b0cba-8783-4c43-bdf8-b093a95010d7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.29.E<a class="link" href="#-222bb29f-a153-4066-aa71-710cc13768c7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.29.4-Formal-representation-"></a>
     8.9.3.29.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.29.4-Formal-representation-"><i data-feather="link"></i></a></h2>
