@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.39 IfcSolidModel（实体模型） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.39 IfcSolidModel - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.39 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a>（实体模型）</h1>
+<h1>8.8.3.39 IfcSolidModel</h1>
 <div class="mvd" title="Included in IfcFacetedBrep, IfcSweptAreaSolid, IfcSweptDiskSolid, Product Geometry Colour">RV ⓘ</div>
 <div class="mvd" title="Included in Body Clipping Geometry, Body SurfaceOrSolidModel Geometry, IfcFacetedBrep, IfcSectionedSolidHorizontal, IfcSweptAreaSolid, IfcSweptDiskSolid, Product Geometry Colour">AbV ⓘ</div>
 <div class="row">
@@ -202,10 +202,10 @@
 <h2><a class="anchor" id="8.8.3.39.1-Semantic-definition-"></a>
     8.8.3.39.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.39.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a></em> 通过不同类型的实体模型表示方式来描述三维形状。它是边界表示法、CSG表示法、扫描表示法及其他适用的实体表示方案的通用抽象超类型。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-实体模型是对产品标称形状的完整表示，其内部所有点均相互连通。任何点均可被判定为位于实体内部、外部或边界上。存在多种不同类型的实体模型表示方式。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>solid_model</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新增实体</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a></em> 通过不同类型的实体模型表示三维形状。它是边界表示、CSG 表示、扫描表示和其他合适的实体表示方案的通用抽象超类型。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+A solid model is a complete representation of the nominal shape of a product such that all points in the interior are connected. Any point can be classified as being inside, outside, or on the boundary of a solid. There are several different types of solid model representations.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>solid_model</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5</aside>
 <h2><a class="anchor" id="8.8.3.39.2-Entity-inheritance-"></a>
     8.8.3.39.2 实体继承（Entity inheritance）
 <a class="link" href="#8.8.3.39.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -270,7 +270,7 @@
     8.8.3.39.3 特性（Attributes）
 <a class="link" href="#8.8.3.39.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-39c69ba6-9bf0-49a6-9c99-e064ccb9cb83"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-e11795cd-b149-4504-9adb-94be9cc0fe18"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -299,8 +299,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -310,8 +310,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -343,11 +343,11 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.39.A<a class="link" href="#-39c69ba6-9bf0-49a6-9c99-e064ccb9cb83"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.39.A<a class="link" href="#-e11795cd-b149-4504-9adb-94be9cc0fe18"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.39.4-Formal-representation-"></a>
     8.8.3.39.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.39.4-Formal-representation-"><i data-feather="link"></i></a></h2>
