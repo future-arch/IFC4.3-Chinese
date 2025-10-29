@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.35 IfcIndexedPolyCurve（索引多段线） - IFC 4.3.2 Documentation</title>
+<title>8.9.3.35 IfcIndexedPolyCurve - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,33 +189,33 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.35 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>（索引多段线）</h1>
+<h1>8.9.3.35 IfcIndexedPolyCurve</h1>
 <div class="mvd" title="Included in Annotation 2D Geometry, Body AdvancedSwept DiskSolid PolyCurve Geometry, Body SweptSolid PolyCurve Geometry, Reference SweptSolid PolyCurve Geometry, Single Survey Line">RV ⓘ</div>
 <div class="mvd" title="Included in Annotation 2D Geometry, Body AdvancedSwept DiskSolid PolyCurve Geometry, Body Clipping Geometry, Body SweptSolid PolyCurve Geometry, Reference SweptSolid PolyCurve Geometry, Single Survey Line">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.35.1-Semantic-definition-"></a>
     8.9.3.35.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.35.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 是一种有界曲线，仅包含通过笛卡尔点列表和可选的线段列表定义的直线段和圆弧段，线段列表提供指向笛卡尔点列表的索引。如果未提供 <em>Segments</em> 列表，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 中的所有点按照它们在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 中出现的顺序通过直线段连接。</p>
-<!-- 短定义结束 -->
-<p>如果提供了 <em>Segments</em> 列表，则按以下方式解释：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 是一个有界曲线，仅包含线性段和圆弧段，由笛卡尔点列表和可选的段列表定义，段列表提供了指向笛卡尔点列表的索引。如果未提供 <em>Segments</em> 列表，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 中的所有点都按其在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 中出现的顺序通过直线段连接。</p>
+<!-- end of short definition -->
+<p>如果提供了 <em>Segments</em> 列表，则其解释如下：</p>
 <ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLineIndex.htm">IfcLineIndex</a></em> 类型的线段：第一个索引是多段线段的起点，最后一个索引是多段线段的终点。如果包含两个以上的索引，则所有中间索引按照索引出现的顺序定义多段线的中间点；</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 类型的线段：第一个索引是圆弧的起点，第二个索引是圆弧上的一个点，第三个索引是圆弧的终点。这三个点不应共线。如果未满足此非正式命题，则圆弧段应被视为多段线段。</li>
+<li>类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLineIndex.htm">IfcLineIndex</a></em> 的段：第一个索引是折线段的起点，最后一个索引是折线段的终点。如果包含超过两个索引，则所有中间索引定义了折线的中点，按索引出现的顺序连接；</li>
+<li>类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 的段：第一个索引是圆弧的起点，第二个索引是圆弧上的一个点，第三个索引是圆弧的终点。这三个点不应共线。如果此非正式命题未得到满足，则该圆弧段应被视为折线段。</li>
 </ul>
-<aside class="aside-example"><mark>示例</mark> 图2展示了一个具有直线段和圆弧段的有界开放 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em>。在此示例中，直线段仅有两个点和一个边，但笛卡尔点列表中可包含两个以上的索引，从而定义多边多段线段。</aside>
-<figure><a class="anchor" id="-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"></a><img alt="带圆弧的多段线示例" src="../figures/ifcindexedpolycurve-fig1.png" title="图2 — 具有直线段和圆弧段的有界开放 _IfcIndexedPolyCurve_"/><figcaption>图2 — 具有直线段和圆弧段的有界开放 _IfcIndexedPolyCurve_<a class="link" href="#-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图2展示了一个仅包含直线段的有界开放 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em>。在此示例中，未提供 <em>Segments</em> 列表，因此点按照它们在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 中出现的顺序绘制。</aside>
-<figure><a class="anchor" id="-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"></a><img alt="多段线示例" src="../figures/ifcindexedpolycurve-fig2.png" title="图2 — 仅包含直线段的有界开放 _IfcIndexedPolyCurve_"/><figcaption>图2 — 仅包含直线段的有界开放 _IfcIndexedPolyCurve_<a class="link" href="#-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> Figure 8.9.3.35.B illustrates a bounded open <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> having straight and arc segments. In this example, the straight segments only have two points and one edge, however more then two indices into the Cartesian point list can be includes, defining a multi edge polyline segment.</aside>
+<figure><a class="anchor" id="-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"></a><img alt="poly curve with arcs examples" src="../figures/ifcindexedpolycurve-fig1.png" title="图 8.9.3.35.B — 具有直线和圆弧段的有界开放 _IfcIndexedPolyCurve_"/><figcaption>图 8.9.3.35.B — 具有直线和圆弧段的有界开放 _IfcIndexedPolyCurve_<a class="link" href="#-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> Figure 8.9.3.35.B illustrates a bounded open <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> having only straight segments. In this example, no list of <em>Segments</em> is provided, hence the points are drawn in the order of their appearance in the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em>.</aside>
+<figure><a class="anchor" id="-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"></a><img alt="poly curve examples" src="../figures/ifcindexedpolycurve-fig2.png" title="图 8.9.3.35.B — 仅具有直线段的有界开放 _IfcIndexedPolyCurve_"/><figcaption>图 8.9.3.35.B — 仅具有直线段的有界开放 _IfcIndexedPolyCurve_<a class="link" href="#-2-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm'&gt;IfcIndexedPolyCurve&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 表示开放或闭合曲线，具体取决于以下条件：</p>
 <ul>
-<li>如果提供了 <em>Segments</em> 列表：如果最后一个 <em>Segment</em> 的最后一个索引与第一个 <em>Segment</em> 的第一个索引相同，则多段线为闭合曲线，否则为开放曲线。</li>
-<li>如果未提供 <em>Segments</em> 列表：如果笛卡尔点列表中的第一个和最后一个笛卡尔点相同，则多段线为闭合曲线，否则为开放曲线。</li>
+<li>如果提供了 <em>Segments</em> 列表：如果最后一个 <em>Segment</em> 的最后一个索引与第一个 <em>Segment</em> 的第一个索引相同，则该多曲线是闭合曲线，否则它是开放曲线。</li>
+<li>如果未提供 <em>Segments</em> 列表：如果笛卡尔点列表的第一个和最后一个点相同，则该多曲线是闭合曲线，否则它是开放曲线。</li>
 </ul>
-<aside class="aside-history"><mark>沿革</mark> IFC4 ADD1 中的新实体</aside>
-<p><strong>非正式命题</strong></p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4 ADD1</aside>
+<p><strong>Informal Propositions</strong></p>
 <ol>
-<li>在考虑适用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 提供的 <em>Precision</em> 因子后，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 的任何两个连续点不应重合。</li>
-<li>在考虑适用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 提供的 <em>Precision</em> 因子后，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 的任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 线段的三个点不应共线。</li>
+<li>考虑到适用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 提供的 <em>Precision</em> 因子后，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 的任意两个连续点不应重合。</li>
+<li>考虑到适用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 提供的 <em>Precision</em> 因子后，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 的任意 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 段的三个点不应共线。</li>
 </ol>
 <h2><a class="anchor" id="8.9.3.35.2-Entity-inheritance-"></a>
     8.9.3.35.2 实体继承（Entity inheritance）
@@ -294,7 +294,7 @@
     8.9.3.35.3 特性（Attributes）
 <a class="link" href="#8.9.3.35.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-65a2fa90-2fe4-4245-a02f-914ee51ba59e"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-2a7e1f94-58c3-40f6-85c0-09bf29431ed4"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -323,8 +323,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -334,8 +334,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -355,7 +355,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，对所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）有不同的定义。</p>
+<p>此抽象类的空间维度，为所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）定义不同。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -385,7 +385,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></td>
 <td data-label="Description">
-<p>由二维或三维点列表提供的点列表，用于定义多段线。如果未提供 <em>Segments</em> 属性，则通过按点在点列表中出现的顺序连接点来生成多段线。如果提供了 <em>Segments</em> 属性，则线段决定如何使用点创建直线段和圆弧段。</p>
+<p>一个点列表，由二维或三维点列表提供，用于定义多曲线。如果未提供 <em>Segments</em> 属性，则多曲线将通过按点列表中的出现顺序连接点来生成折线。如果提供了 <em>Segments</em> 属性，则段决定了如何使用这些点来创建直线段和圆弧段。</p>
 </td>
 </tr>
 <tr>
@@ -397,7 +397,7 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegmentIndexSelect.htm">IfcSegmentIndexSelect</a></td>
 <td data-label="Description">
-<p>直线段和圆弧段的列表，每个线段提供指向笛卡尔点列表的索引列表。索引应保持线段之间的连续连接性，下一个线段的起始索引应与前一个线段的结束索引相同。</p>
+<p>直线段和圆弧段的列表，每个段提供一个指向笛卡尔点列表的索引列表。索引应保持段之间的连续连接，下一个段的起始索引应与前一个段的结束索引相同。</p>
 </td>
 </tr>
 <tr>
@@ -409,15 +409,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td data-label="Description">
-<p>指示曲线是否自相交；此信息仅供参考。</p>
+<p>曲线是否自相交的指示；这仅供参考。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.35.A<a class="link" href="#-65a2fa90-2fe4-4245-a02f-914ee51ba59e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.35.A<a class="link" href="#-2a7e1f94-58c3-40f6-85c0-09bf29431ed4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.35.4-Formal-propositions-"></a>
     8.9.3.35.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.35.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-1d56303a-e104-4eed-b140-e0b1c2a99f18"></a><table>
+<figure><a class="anchor" id="-68025248-8028-43a4-b0c5-ed45803d5475"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -428,7 +428,7 @@
 <tr>
 <td>Consecutive</td>
 <td>
-<p>如果提供了索引线段列表，它们需要是连续的，即所有线段（除最后一个外）的最后一个索引应与下一个线段的第一个索引相同。</p>
+<p>如果提供了索引段列表，则它们需要是连续的，这意味着除最后一个段之外的所有段的最后一个索引应与下一个段的第一个索引相同。</p>
 </td>
 </tr>
 <tr>
@@ -437,7 +437,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.35.C<a class="link" href="#-1d56303a-e104-4eed-b140-e0b1c2a99f18"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.35.C<a class="link" href="#-68025248-8028-43a4-b0c5-ed45803d5475"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.35.5-Formal-representation-"></a>
     8.9.3.35.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.35.5-Formal-representation-"><i data-feather="link"></i></a></h2>
