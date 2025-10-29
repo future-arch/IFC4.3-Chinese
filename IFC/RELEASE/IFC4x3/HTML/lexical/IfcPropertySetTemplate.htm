@@ -155,7 +155,7 @@
 <p>继承的 <em>HasContext</em> 逆向关系到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a></em> 用于在项目库中声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em>。如果包含在交换数据集里，那么可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectLibrary.htm">IfcProjectLibrary</a></em> 遍历它。提供 <em>Defines</em> 逆向关系到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em>，以保持 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> 和多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 之间的定义关系，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> 为这些 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 提供了模板。图1 说明了用于属性集模板的关系。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="属性集模板" src="../figures/ifcpropertysettemplate_fig-1.png" title="图 5.1.3.16.A — 属性集模板关系"/><figcaption>图 5.1.3.16.A — 属性集模板关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p>在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 的 <em>HasProperties</em> 集合中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> 之间，其 <em>Name</em> 特性值与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> 的 <em>HasPropertyTemplates</em> 集合中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 的 <em>Name</em> 特性值相同，建立了一个隐式的定义关系，该关系将模板分配给各个属性。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="5.1.3.16.2-Entity-inheritance-"></a>
     5.1.3.16.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.16.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -193,7 +193,7 @@
     5.1.3.16.3 特性（Attributes）
 <a class="link" href="#5.1.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-77b4897e-3292-48f1-b95f-412dfc12ddb5"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7750d1fe-5170-43bc-a67e-83add0f7cfbf"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -337,7 +337,7 @@
 <li>如果特定分配对象的性能历史对象由属性集模板进行属性化，则实体名称（并可能由预定义类型修改）通过添加“[PerformanceHistory]”来扩展</li>
 <li>如果一个属性集模板适用于多个类型和/或实例对象，则这些对象名称应以逗号“,”分隔，形成逗号分隔的字符串。</li>
 </ul>
-<aside class="aside-example"><mark>示例</mark> 将锅炉类型作为适用实体表示为“<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>”，将蒸汽锅炉类型作为适用实体表示为“<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>/STEAM”，将墙和墙类型表示为“<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a>, <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallType.htm">IfcWallType</a>”。分配给实例或类型对象的适用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a></em> 将由 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>[PerformanceHistory] 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>/STEAM[PerformanceHistory] 分别指示。</aside>
+<aside class="aside-example"><mark>示例</mark> Referring to a boiler type as applicable entity would be expressed as '<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>', referring to a steam boiler type as applicable entity would be expressed as '<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>/STEAM', referring to a wall and a wall type would be expressed as '<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a>, <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallType.htm">IfcWallType</a>'. An applicable <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a></em> assigned to an occurrence or type object would be indicated by <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>[PerformanceHistory], or respectively <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoilerType.htm">IfcBoilerType</a>/STEAM[PerformanceHistory].</aside>
 </td>
 </tr>
 <tr>
@@ -363,11 +363,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.16.B<a class="link" href="#-77b4897e-3292-48f1-b95f-412dfc12ddb5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.16.B<a class="link" href="#-7750d1fe-5170-43bc-a67e-83add0f7cfbf"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.16.4-Formal-propositions-"></a>
     5.1.3.16.4 形式化命题（Formal propositions）
 <a class="link" href="#5.1.3.16.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-f9542747-9c76-4acc-8a60-2d01bfd38d6d"></a><table>
+<figure><a class="anchor" id="-ca7f5306-e7a6-4c9b-9b52-88fff9bae6e8"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -398,11 +398,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.16.C<a class="link" href="#-f9542747-9c76-4acc-8a60-2d01bfd38d6d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.16.C<a class="link" href="#-ca7f5306-e7a6-4c9b-9b52-88fff9bae6e8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.16.5-Concept-usage-"></a>
     5.1.3.16.5 概念用法（Concept usage）
 <a class="link" href="#5.1.3.16.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-093ac23e-78da-4765-adf4-c73a9ef87374"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-e0692f9a-b442-4945-aff9-16ae33511751"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -572,7 +572,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.16.D<a class="link" href="#-093ac23e-78da-4765-adf4-c73a9ef87374"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.16.D<a class="link" href="#-e0692f9a-b442-4945-aff9-16ae33511751"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.16.6-Formal-representation-"></a>
     5.1.3.16.6 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.16.6-Formal-representation-"><i data-feather="link"></i></a></h2>
