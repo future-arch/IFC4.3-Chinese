@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.54 IfcRelInterferesElements（关系干涉构件） - IFC 4.3.2 Documentation</title>
+<title>5.4.3.54 IfcRelInterferesElements - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,39 +138,43 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.4.3.54 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a>（关系干涉构件）</h1>
+<h1>5.4.3.54 IfcRelInterferesElements</h1>
 <div class="mvd" title="Included in Spatial Interference">AbV ⓘ</div>
 <h2><a class="anchor" id="5.4.3.54.1-Semantic-definition-"></a>
     5.4.3.54.1 语义定义（Semantic definition）
 <a class="link" href="#5.4.3.54.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></em> 对象化关系表示两个构件之间存在干涉。</p>
-<!-- 简短定义结束 -->
-<p>这是一种一对一关系，两个构件在物理或逻辑上相互干涉的概念独立于构件本身进行描述。</p>
-<p>可通过提供干涉几何体或区域的方式，将干涉与实体的形状表示相关联：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></em> 对象化关系指示两个元素发生干扰。</p>
+<!-- end of short definition -->
+<p>它是一种一对一的关系，两个元素发生物理或逻辑干扰的概念独立于这些元素本身。</p>
+<p>可以通过提供干扰几何体或干扰区域来将干扰与实体的形状表示相关联：</p>
 <ul>
-<li>当干涉发生在两个物理产品之间时，使用 <em>InterferenceGeometry</em> 属性定义物理干涉形状，它可以是关系中使用的某个构件形状的一部分，也可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em> 定义两个形状之间的接口。</li>
-<li>当干涉发生在两个空间对象之间时，使用 <em>InterferenceSpace</em> 属性定义与空间对象相关联的两个覆盖区之间的干涉空间，通过预定义类型为 INTERFERENCE 的特定 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZoneTypeEnum.htm">IfcSpatialZoneTypeEnum</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZone.htm">IfcSpatialZone</a></em> 来表达。</li>
+<li>当干扰发生在两个物理产品之间时，<em>InterferenceGeometry</em> 属性用于定义物理干扰形状，它可以是关系中使用的其中一个元素的形状的一部分，或者使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em> 定义两个形状之间的接口。</li>
+<li>当干扰发生在两个空间对象之间时，<em>InterferenceSpace</em> 属性用于定义与空间对象关联的两个足迹之间的干扰空间，该空间通过预定义类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZoneTypeEnum.htm">IfcSpatialZoneTypeEnum</a></em> INTERFERENCE 的特定 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZone.htm">IfcSpatialZone</a></em> 来表达。</li>
 </ul>
-<p>如果省略干涉几何体和区域，则干涉以逻辑关系的形式提供。在这种情况下，连接点、曲线、曲面或实体必须由接收应用程序重新计算。</p>
-<p><em>RelatingElement</em> 和 <em>RelatedElement</em> 定义了关系中的两个构件，它们可能具有不同的角色。
-某些 <em>InterferenceType</em> 值或 <em>InterferenceGeometry</em> 计算可能需要关系方向，这通过相应设置 <em>ImpliedOrder</em> 属性来实现：</p>
+<p>如果省略了干扰几何体和区域，则干扰被视为逻辑关系。在这种情况下，接收应用程序必须重新计算连接点、曲线、曲面或实体。</p>
+<p><em>RelatingElement</em> 和 <em>RelatedElement</em> 定义了关系中的两个元素，它们可能具有不同的角色。
+根据 <em>InterferenceType</em> 值或 <em>InterferenceGeometry</em> 计算的需要，可能需要关系的方向，这可以通过相应地设置 <em>ImpliedOrder</em> 属性来完成：</p>
 <ul>
-<li><em>ImpliedOrder</em>=TRUE <em>RelatingElement</em> 构成干涉关系的主要构件，方向从 <em>RelatingElement</em>（源）指向 <em>RelatedElement</em>（目标）。如果通过减去重叠部分来解决干涉，则应从 <em>RelatingElement</em> 中减去。最终结果将是 <em>RelatingElement</em> 减去 <em>InterferenceGeometry</em>。这适用于 <em>RelatedElement</em> 在 <em>RelatingElement</em> 中动态创建空腔的干涉关系。</li>
-<li><em>ImpliedOrder</em>=FALSE <em>RelatingElement</em> 和 <em>RelatedElement</em> 彼此之间没有优先级。如果要解决干涉，则无法追溯 <em>InterferenceGeometry</em> 应从 <em>RelatingElement</em> 还是 <em>RelatedElement</em> 中减去的信息。这适用于碰撞检测结果。</li>
-<li><em>ImpliedOrder</em>=UNKNOWN 未提供有关优先级的信息。</li>
+<li><em>ImpliedOrder</em>=TRUE <em>RelatingElement</em> 构成干扰关系的主要元素，其方向从 <em>RelatingElement</em>（源）到 <em>RelatedElement</em>（目标）。如果干扰需要通过减去重叠部分来解决，则应从 <em>RelatingElement</em> 中减去。净结果将是 <em>RelatingElement</em> 减去 <em>InterferenceGeometry</em>。这适用于 <em>RelatedElement</em> 动态创建 <em>RelatingElement</em> 中空隙的干扰关系。</li>
+<li><em>ImpliedOrder</em>=FALSE <em>RelatingElement</em> 和 <em>RelatedElement</em> 之间没有优先级。如果需要解决干扰，则无法追溯有关是否应从 <em>RelatingElement</em> 或 <em>RelatedElement</em> 中减去 <em>InterferenceGeometry</em> 的信息。这适用于碰撞检测结果。</li>
+<li><em>ImpliedOrder</em>=UNKNOWN 未提供有关优先级的任何信息。</li>
 </ul>
-<p><em>InterferenceType</em> 属性可选地指定两个构件之间的干涉类型，提供了两组默认类型：</p>
+<p><em>InterferenceType</em> 属性可选地指定两个元素之间的干扰类型，提供了两组默认类型：</p>
 <ul>
-<li><strong>定向干涉类型</strong> 暗示使用设置为 TRUE 的 <em>ImpliedOrder</em>，并且需要特定选择 <em>RelatingElement</em> 和 <em>RelatedElement</em> 以使其有意义：</li>
-<li>Crosses：<em>RelatingElement</em> 穿过 <em>RelatedElement</em>（例如，铁路穿过道路）</li>
-<li>PassesThrough：<em>RelatingElement</em> 穿过 <em>RelatedElement</em>（例如，道路穿过隧道内部）</li>
-<li>PassesOver：<em>RelatingElement</em> 从 <em>RelatedElement</em> 上方通过（例如，桥梁从水渠上方通过）</li>
-<li>PassesUnder：<em>RelatingElement</em> 从 <em>RelatedElement</em> 下方通过（例如，隧道从道路下方通过）</li>
-<li><strong>非定向干涉类型</strong> 不暗示特定的 <em>ImpliedOrder</em> 值（但仍可设置以详细说明形状干涉计算）</li>
-<li>Clash：<em>RelatingElement</em> 和 <em>RelatedElement</em> 存在基于空间或形状的碰撞</li>
-<li>Along：<em>RelatingElement</em> 和 <em>RelatedElement</em> 具有共同的边界/曲面</li>
+<li><strong>定向干扰类型</strong> 暗示 <em>ImpliedOrder</em> 设置为 TRUE，并且 <em>RelatingElement</em> 和 <em>RelatedElement</em> 的特定选择是有意义的：<ul>
+<li>Crosses（交叉）：<em>RelatingElement</em> 交叉 <em>RelatedElement</em>（例如，铁路交叉道路）</li>
+<li>PassesThrough（穿过）：<em>RelatingElement</em> 穿过 <em>RelatedElement</em>（例如，道路穿过隧道）</li>
+<li>PassesOver（越过）：<em>RelatingElement</em> 越过 <em>RelatedElement</em>（例如，桥梁越过水渠）</li>
+<li>PassesUnder（穿过下方）：<em>RelatingElement</em> 穿过 <em>RelatedElement</em> 的下方（例如，隧道穿过道路下方）</li>
 </ul>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+</li>
+<li><strong>非定向干扰类型</strong> 不暗示 <em>ImpliedOrder</em> 的特定值（但仍可用于详细的形状干扰计算）<ul>
+<li>Clash（碰撞）：<em>RelatingElement</em> 和 <em>RelatedElement</em> 存在空间或基于形状的碰撞</li>
+<li>Along（沿）：<em>RelatingElement</em> 和 <em>RelatedElement</em> 具有共同的边界/表面</li>
+</ul>
+</li>
+</ul>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="5.4.3.54.2-Entity-inheritance-"></a>
     5.4.3.54.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.54.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -226,7 +230,7 @@
     5.4.3.54.3 特性（Attributes）
 <a class="link" href="#5.4.3.54.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-4d11fd8a-ee7b-4ffe-81f0-ff64b6877b64"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-2aa8b0f0-3827-45a7-8d32-942d340438db"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -269,8 +273,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -282,7 +286,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -294,7 +298,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -324,7 +328,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInterferenceSelect.htm">IfcInterferenceSelect</a></td>
 <td data-label="Description">
-<p>对 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a> 子类型的引用，该子类型是干涉关系中的 RelatingElement。根据 ImpliedOrder 的值，RelatingElement 可能带有应从其减去干涉几何体的含义。</p>
+<p>指向干扰关系中作为 RelatingElement 的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a> 的子类型的引用。根据 ImpliedOrder 的值，RelatingElement 可能带有从其减去干扰几何体的概念。</p>
 </td>
 </tr>
 <tr>
@@ -336,7 +340,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInterferenceSelect.htm">IfcInterferenceSelect</a></td>
 <td data-label="Description">
-<p>对 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a> 子类型的引用，该子类型是干涉关系中的 RelatedElement。根据 ImpliedOrder 的值，RelatedElement 可能带有不应从其减去干涉几何体的含义。</p>
+<p>指向干扰关系中作为 RelatedElement 的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a> 的子类型的引用。根据 ImpliedOrder 的值，RelatedElement 可能带有不从中减去干扰几何体的概念。</p>
 </td>
 </tr>
 <tr>
@@ -348,7 +352,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></td>
 <td data-label="Description">
-<p>干涉几何体的几何形状表示，在 RelatingElement 的对象坐标系中（强制）以及在 RelatedElement 的对象坐标系中（可选）提供。</p>
+<p>提供的干扰几何体的几何形状表示，位于 RelatingElement 的对象坐标系中（必需）和 RelatedElement 的对象坐标系中（可选）。</p>
 </td>
 </tr>
 <tr>
@@ -360,7 +364,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p>可选标识符，描述干涉的性质。</p>
+<p>可选标识符，描述干扰的性质。</p>
 </td>
 </tr>
 <tr>
@@ -372,7 +376,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
 <td data-label="Description">
-<p>逻辑值，指示 <em>RelatingElement</em> 是否被视为源，<em>RelatedElement</em> 是否被视为目标（为关系提供形式方向）。应根据 <em>InterferenceGeometry</em> 使用和 <em>InterferenceType</em> 声明提供。</p>
+<p>逻辑值，指示 <em>RelatingElement</em> 是否被视为源，<em>RelatedElement</em> 是否被视为目标（为关系提供正式方向）。它应根据 <em>InterferenceGeometry</em> 的使用和 <em>InterferenceType</em> 的声明来提供。</p>
 </td>
 </tr>
 <tr>
@@ -384,15 +388,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZone.htm">IfcSpatialZone</a></td>
 <td data-label="Description">
-<p>可选属性，表示 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a></em> 实例的干涉空间。</p>
+<p>可选属性，用于表达 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">IfcSpatialElement</a> 实例的干扰空间。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.54.A<a class="link" href="#-4d11fd8a-ee7b-4ffe-81f0-ff64b6877b64"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.54.A<a class="link" href="#-2aa8b0f0-3827-45a7-8d32-942d340438db"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.54.4-Formal-propositions-"></a>
     5.4.3.54.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.54.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-3febdebe-169e-4461-9e1b-b6e5c3978dac"></a><table>
+<figure><a class="anchor" id="-5de6582a-7a4f-4714-b1c5-c87c948140f4"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -403,7 +407,7 @@
 <tr>
 <td>NoSelfReference</td>
 <td>
-<p><em>RelatingElement</em> 的实例不应与 <em>RelatedElement</em> 的实例相同。</p>
+<p><em>RelatingElement</em> 的实例不得与 <em>RelatedElement</em> 的实例相同。</p>
 </td>
 </tr>
 <tr>
@@ -412,11 +416,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.54.B<a class="link" href="#-3febdebe-169e-4461-9e1b-b6e5c3978dac"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.54.B<a class="link" href="#-5de6582a-7a4f-4714-b1c5-c87c948140f4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.54.5-Concept-usage-"></a>
     5.4.3.54.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.54.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-bebe4371-0e78-45b6-8cda-7eb2003edd28"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-2bb867e2-622c-4cb6-8820-03dbc93c33a4"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -439,9 +443,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -452,25 +454,143 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承概念
+                    点击显示 6 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承概念
+                    点击隐藏 6 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.4.3.54.C<a class="link" href="#-bebe4371-0e78-45b6-8cda-7eb2003edd28"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.54.C<a class="link" href="#-2bb867e2-622c-4cb6-8820-03dbc93c33a4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.54.6-Formal-representation-"></a>
     5.4.3.54.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.54.6-Formal-representation-"><i data-feather="link"></i></a></h2>
