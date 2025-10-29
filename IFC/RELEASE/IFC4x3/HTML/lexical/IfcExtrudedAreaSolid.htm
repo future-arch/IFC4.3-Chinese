@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.15 IfcExtrudedAreaSolid（拉伸面积实体） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.15 IfcExtrudedAreaSolid - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,38 +189,25 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.15 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>（拉伸面积实体）</h1>
+<h1>8.8.3.15 IfcExtrudedAreaSolid</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.15.1-Semantic-definition-"></a>
     8.8.3.15.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.15.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></em> 通过扫掠剖面定义提供的横截面来定义。拉伸方向由 <em>ExtrudedDirection</em> 属性给出，拉伸长度由 <em>Depth</em> 属性给出。如果平面区域具有内部边界（定义的孔洞），则这些孔洞应被扫掠为实体的孔洞。</p>
-<!-- 简短定义结束 -->
-<p>生成的实体通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>.<em>Position</em> 相对于对象坐标系进行定位。如果提供此属性，则允许重新定位拉伸实体。如果未提供，则默认为当前对象坐标系。<em>ExtrudedDirection</em> 在由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>.<em>Position</em> 定义的位置坐标系内给出。拉伸方向可以是任何不垂直于位置坐标系 z 轴的方向。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="拉伸面积实体" src="../figures/ifcextrudedareasolid-fig1.png"/><figcaption>图 8.8.3.15.A — 拉伸面积实体几何图形<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图 8.8.3.15.A 说明了拉伸面积实体的几何参数。拉伸面积实体通过方向和深度定义二维区域的拉伸。结果是一个实体。</aside>
-<ul>
-<li>要扫掠的剖面定义如下：</li>
-<li>作为一个二维图元，此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em>，它相对于对象坐标系的 xy 平面放置</li>
-<li>由于未提供二维剖面位置坐标系，此处 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em>.<em>Position</em> = NIL，剖面在无变换的情况下定位到对象坐标系的 xy 平面（默认情况下，以 0.,0. 为中心且无旋转）</li>
-<li>生成的扫掠实体未被重新定位，因为未提供位置坐标系，此处 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.<em>Position</em> = NIL。</li>
-</ul>
-<figure><a class="anchor" id="-2-"></a><img alt="重新定位的拉伸面积实体" src="../figures/ifcextrudedareasolid-fig2.png"/><figcaption>图 8.8.3.15.B — 重新定位的拉伸面积实体几何图形<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图 8.8.3.15.B 说明了拉伸面积实体的几何参数和附加定位参数。拉伸面积实体通过方向和深度定义二维区域的拉伸。由参数化剖面定义提供的二维区域可以相对于对象坐标系定位（而不是默认在 0.,0. 且无旋转）。结果是一个可以在对象坐标系内重新定位的实体。</aside>
-<ul>
-<li>要扫掠的剖面定义如下：</li>
-<li>作为一个二维图元，此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em>，它相对于对象坐标系的 xy 平面放置</li>
-<li>提供了一个二维剖面位置坐标系，将剖面相对于 xy 平面定位（此处位于矩形的一个角点）</li>
-<li>生成的扫掠实体被重新定位，此处它被移动到局部 z 轴并沿 y 轴旋转了 15 度。</li>
-</ul>
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-拉伸面积实体是通过扫掠有界平面定义的实体。平移方向由方向向量定义，平移长度由距离深度定义。平面区域可能具有孔洞，这些孔洞将扫掠为实体中的孔洞。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>extruded_area_solid</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新实体</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></em> 通过扫掠型材定义提供的横截面来定义。挤出方向由 <em>ExtrudedDirection</em> 特性给出，挤出长度由 <em>Depth</em> 特性给出。如果平面区域有内边界（定义了孔洞），则这些孔洞将被扫掠成实体的孔洞。</p>
+<!-- end of short definition -->
+<p>生成的实体由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>.<em>Position</em> 相对于对象坐标系定位。如果提供，它允许重新定位挤出实体。如果未提供，则默认为当前对象坐标系。<em>ExtrudedDirection</em> 在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>.<em>Position</em> 定义的放置坐标系内给出。挤出方向可以是任何不垂直于放置坐标系 z 轴的方向。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="extruded area solid" src="../figures/ifcextrudedareasolid-fig1.png"/><figcaption>图 8.8.3.15.A — 挤出区域实体几何<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> Figure 8.8.3.15.A illustrates geometric parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The result is a solid.</aside>
+<figure><a class="anchor" id="-2-"></a><img alt="extruded area solid repositioned" src="../figures/ifcextrudedareasolid-fig2.png"/><figcaption>图 8.8.3.15.B — 重新定位的挤出区域实体几何<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> Figure 8.8.3.15.B illustrates geometric parameters and additional positioning parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system (other then by default at 0.,0. with no rotation). The result is a solid that can be repositioned within the object coordinate system.</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+An extruded area solid is a solid defined by sweeping a bounded planar surface. The direction of translation is defined by a direction vector, and the length of the translation is defined by a distance depth. The planar area may have holes which will sweep into holes in the solid.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>extruded_area_solid</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5</aside>
 <p>纹理使用定义</p>
-<p>对于侧面，纹理沿着侧面连续朝上对齐，原点位于任意剖面的第一个点，并沿剖面外边界逆时针方向（从上方观察）。对于参数化剖面，原点定义在圆角剖面（没有锐利边缘）的 +Y 范围处，以及所有其他剖面从 +Y 范围逆时针方向的第一个锐利边缘处。纹理根据 <em>RepeatS</em> 沿着剖面的外边界在每个侧面上拉伸或重复。纹理根据 <em>RepeatT</em> 沿着拉伸轴在每个侧面上拉伸或重复。</p>
-<p>对于顶部和底部端盖，纹理朝前向后对齐，原点位于最小 X 和 Y 范围处。纹理根据 <em>RepeatS</em> 和 <em>RepeatT</em> 在顶部和底部拉伸或重复到每个面的范围。</p>
-<p>对于带有孔洞的剖面，纹理沿着内侧朝上对齐，原点位于任意剖面的第一个点，并沿剖面内边界顺时针方向（从上方观察）。对于参数化剖面，内侧的原点定义在圆角剖面（没有锐利边缘，例如空心椭圆或圆角矩形）的 +Y 范围处，以及所有其他剖面从 +Y 范围顺时针方向的第一个锐利边缘处。</p>
-<figure><a class="anchor" id="-3-"></a><img alt="纹理" src="../figures/ifcextrudedareasolid-texture.png"/><figcaption>图 8.8.3.15.C — 拉伸面积实体纹理<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图 8.8.3.15.C 说明了使用重复纹理的默认纹理映射（RepeatS=True 且 RepeatT=True）。左侧图像显示纹理，其中 S 轴指向右侧，T 轴指向上方。右侧图像显示应用于几何图形的纹理，其中 X 轴指向后方右侧，Y 轴指向后方左侧，Z 轴指向上方。对于具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></em> 剖面的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></em>，侧面纹理坐标原点是自 +Y 轴逆时针方向的第一个角点，等于<br/><br/> (-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallWidth, +0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallDepth)，<br/><br/> 而顶部（端盖）纹理坐标起始于 <br/><br/>(-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallWidth, -0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallDepth)。</aside>
+<p>对于侧面，纹理沿侧面向上对齐，原点位于任意型材的第一个点，并沿型材外边界逆时针方向（从上方看）。对于参数化型材，原点定义在圆形轮廓（无锐边）的 +Y 延伸处，对于所有其他型材，则定义在从 +Y 延伸处开始的第一个逆时针方向的锐边处。纹理根据 <em>RepeatS</em> 在型材外边界的每个侧面上拉伸或重复。纹理根据 <em>RepeatT</em> 沿挤出轴的每个侧面上拉伸或重复。</p>
+<p>对于顶部和底部盖板，纹理沿前后方向对齐，原点位于最小的 X 和 Y 延伸处。纹理根据 <em>RepeatS</em> 和 <em>RepeatT</em> 在顶部和底部拉伸或重复到每个面的范围内。</p>
+<p>对于带孔洞的型材，纹理沿内侧向上对齐，原点位于任意型材的第一个点，并沿型材内边界顺时针方向（从上方看）。对于参数化型材，内侧的原点定义在圆形轮廓（无锐边，如空心椭圆或圆角矩形）的 +Y 延伸处，对于所有其他型材，则定义在从 +Y 延伸处开始的第一个顺时针方向的锐边处。</p>
+<figure><a class="anchor" id="-3-"></a><img alt="texture" src="../figures/ifcextrudedareasolid-texture.png"/><figcaption>图 8.8.3.15.C — 挤出区域实体纹理<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> Figure 8.8.3.15.C illustrates default texture mapping with a repeated texture (RepeatS=True and RepeatT=True). The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. For an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></em> having a profile of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></em>, the side texture coordinate origin is the first corner counter-clockwise from the +Y axis, which equals<br/><br/> (-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallWidth, +0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallDepth),<br/><br/> while the top (end cap) texture coordinates start at <br/><br/>(-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallWidth, -0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>.OverallDepth).</aside>
 <h2><a class="anchor" id="8.8.3.15.2-Entity-inheritance-"></a>
     8.8.3.15.2 实体继承（Entity inheritance）
 <a class="link" href="#8.8.3.15.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -299,7 +286,7 @@
     8.8.3.15.3 特性（Attributes）
 <a class="link" href="#8.8.3.15.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-8574aaa6-b569-4e1e-9ba1-7424adc3949b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-47bab929-3a67-42b2-95e6-5e3ce8ce85b1"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -328,8 +315,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -339,8 +326,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -360,7 +347,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -378,7 +365,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
 <td data-label="Description">
-<p>The surface defining the area to be swept. It is given as a profile definition within the xy plane of the position coordinate system.</p>
+<p>定义要扫掠的区域的曲面。它在位置坐标系的 xy 平面内以轮廓定义的形式给出。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -390,7 +377,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>Position coordinate system for the resulting swept solid of the sweeping operation. The position coordinate system allows for re-positioning of the swept solid. If not provided, the swept solid remains within the position as determined by the cross section or by the directrix used for the sweeping operation.</p>
+<p>扫掠操作所得扫掠实体的放置坐标系。放置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保留在由横截面或用于扫掠操作的导曲线确定的位置内。</p>
 <aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 </td>
 </tr>
@@ -421,7 +408,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
 <td data-label="Description">
-<p>由 <em>SweptArea</em> 提供的曲面要沿此方向扫掠。</p>
+<p>将 <em>SweptArea</em> 提供的表面要扫掠的方向。</p>
 </td>
 </tr>
 <tr>
@@ -433,15 +420,15 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>曲面要沿 <em>ExtrudedDirection</em> 扫掠的距离。</p>
+<p>表面沿 <em>ExtrudedDirection</em> 扫掠的距离。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.15.D<a class="link" href="#-8574aaa6-b569-4e1e-9ba1-7424adc3949b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.15.D<a class="link" href="#-47bab929-3a67-42b2-95e6-5e3ce8ce85b1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.15.4-Formal-propositions-"></a>
     8.8.3.15.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.15.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7a133342-805b-47eb-8604-bfcc88e9405f"></a><table>
+<figure><a class="anchor" id="-aa9ff62b-287c-4b98-9f42-5b616c80658f"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -452,7 +439,7 @@
 <tr>
 <td>ValidExtrusionDirection</td>
 <td>
-<p><em>ExtrudedDirection</em> 不应垂直于局部 z 轴。</p>
+<p><em>ExtrudedDirection</em> 不得垂直于局部 z 轴。</p>
 </td>
 </tr>
 <tr>
@@ -461,7 +448,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.15.E<a class="link" href="#-7a133342-805b-47eb-8604-bfcc88e9405f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.15.E<a class="link" href="#-aa9ff62b-287c-4b98-9f42-5b616c80658f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.15.5-Formal-representation-"></a>
     8.8.3.15.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.15.5-Formal-representation-"><i data-feather="link"></i></a></h2>
