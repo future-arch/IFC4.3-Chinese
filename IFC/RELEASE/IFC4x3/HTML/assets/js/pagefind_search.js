@@ -53,9 +53,15 @@
                 // 使用动态 import 加载 Pagefind
                 pagefind = await import('/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js');
 
-                // 配置选项 (可选)
+                // 配置选项 - 优化排名算法以提升精确匹配的权重
                 await pagefind.options({
-                    bundlePath: '/IFC/RELEASE/IFC4x3/HTML/pagefind/'
+                    bundlePath: '/IFC/RELEASE/IFC4x3/HTML/pagefind/',
+                    ranking: {
+                        termSimilarity: 1.0,      // 提升精确匹配的排名(默认1.0,最大1.0)
+                        termFrequency: 0.9,       // 略微降低词频权重(默认1.0)
+                        pageLength: 0.5,          // 降低页面长度影响(默认0.75)
+                        termSaturation: 1.0       // 降低词饱和度影响(默认1.4)
+                    }
                 });
 
                 console.log('Pagefind 加载完成');
