@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.19.3.20 IfcSurfaceReinforcementArea（表面配筋面积） - IFC 4.3.2 Documentation</title>
+<title>8.19.3.20 IfcSurfaceReinforcementArea - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,14 +189,14 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.19.3.20 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceReinforcementArea.htm">IfcSurfaceReinforcementArea</a>（表面配筋面积）</h1>
+<h1>8.19.3.20 IfcSurfaceReinforcementArea</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.19.3.20.1-Semantic-definition-"></a>
     8.19.3.20.1 语义定义（Semantic definition）
 <a class="link" href="#8.19.3.20.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>描述表面构件所需或提供的配筋面积。</p>
+<p>描述面构件所需的或提供的钢筋面积。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> 构件设计参数如混凝土保护层、有效深度、钢筋网或钢筋的方向（两个或可选三个方向）等未在 <em>IfcStructuralLoadResource</em> 模式中指定。这些参数应在结构构件级别进行指定。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新增实体。</aside>
+<aside class="aside-note"><mark>注释</mark> Member design parameters like concrete cover, effective depth, orientation of meshes or rebars (two, optionally three directions) etc. are not specified in <em>IfcStructuralLoadResource</em> schema. They shall be specified at the level of structural members.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.19.3.20.2-Entity-inheritance-"></a>
     8.19.3.20.2 实体继承（Entity inheritance）
 <a class="link" href="#8.19.3.20.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -226,7 +226,7 @@
     8.19.3.20.3 特性（Attributes）
 <a class="link" href="#8.19.3.20.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ded5a655-8d8f-4d7e-bc7d-90a1ef840842"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-00d28239-1119-480a-8778-76e9519b65f8"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -257,7 +257,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>Optionally defines a name for this load.</p>
+<p>可选地为此荷载定义一个名称。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -287,7 +287,7 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [2:3] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>位于表面构件局部 z 轴正方向侧面的构件表面配筋。按单位长度面积指定，例如平方米每米（因此为长度度量，例如米）。可为两个或三个方向的钢筋指定配筋面积。</p>
+<p>构件表面的钢筋，位于面构件的局部z正方向一侧。以每长度面积的形式指定，例如平方米/米（因此是长度度量，例如米）。钢筋面积可以为两个或三个方向的钢筋指定。</p>
 </td>
 </tr>
 <tr>
@@ -299,7 +299,7 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [2:3] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>位于表面构件局部 z 轴负方向侧面的构件表面配筋。按单位长度面积指定，例如平方米每米（因此为长度度量，例如米）。可为两个或三个方向的钢筋指定配筋面积。</p>
+<p>构件表面的钢筋，位于面构件的局部z负方向一侧。以每长度面积的形式指定，例如平方米/米（因此是长度度量，例如米）。钢筋面积可以为两个或三个方向的钢筋指定。</p>
 </td>
 </tr>
 <tr>
@@ -311,15 +311,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></td>
 <td data-label="Description">
-<p>抗剪配筋。按单位面积面积指定，例如平方米每平方米（因此为比率度量，即无量纲）。</p>
+<p>剪力钢筋。以每面积面积的形式指定，例如平方米/平方米（因此是比率度量，即无量纲）。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.19.3.20.A<a class="link" href="#-ded5a655-8d8f-4d7e-bc7d-90a1ef840842"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.19.3.20.A<a class="link" href="#-00d28239-1119-480a-8778-76e9519b65f8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.19.3.20.4-Formal-propositions-"></a>
     8.19.3.20.4 形式化命题（Formal propositions）
 <a class="link" href="#8.19.3.20.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-9a7dee52-fdf3-4c4d-91a0-928e7d8f6b19"></a><table>
+<figure><a class="anchor" id="-d94fa7a4-b7d6-4157-b366-e3dadf61b6df"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -330,7 +330,7 @@
 <tr>
 <td>NonnegativeArea1</td>
 <td>
-<p>表面配筋面积不得小于 0。</p>
+<p>表面钢筋面积不得小于0。</p>
 </td>
 </tr>
 <tr>
@@ -345,7 +345,7 @@
 <tr>
 <td>NonnegativeArea2</td>
 <td>
-<p>表面配筋面积不得小于 0。</p>
+<p>表面钢筋面积不得小于0。</p>
 </td>
 </tr>
 <tr>
@@ -360,7 +360,7 @@
 <tr>
 <td>NonnegativeArea3</td>
 <td>
-<p>抗剪配筋面积不得小于 0。</p>
+<p>剪力钢筋面积不得小于0。</p>
 </td>
 </tr>
 <tr>
@@ -371,7 +371,7 @@
 <tr>
 <td>SurfaceAndOrShearAreaSpecified</td>
 <td>
-<p>必须至少指定一个配筋面积属性。</p>
+<p>应指定至少一个钢筋面积特性。</p>
 </td>
 </tr>
 <tr>
@@ -380,7 +380,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.19.3.20.B<a class="link" href="#-9a7dee52-fdf3-4c4d-91a0-928e7d8f6b19"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.19.3.20.B<a class="link" href="#-d94fa7a4-b7d6-4157-b366-e3dadf61b6df"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.19.3.20.5-Formal-representation-"></a>
     8.19.3.20.5 形式化表示（Formal representation）
 <a class="link" href="#8.19.3.20.5-Formal-representation-"><i data-feather="link"></i></a></h2>
