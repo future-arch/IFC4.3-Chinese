@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.16 IfcFillAreaStyleTiles（填充区域样式-铺砖） - IFC 4.3.2 Documentation</title>
+<title>8.12.3.16 IfcFillAreaStyleTiles - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,22 +189,23 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.16 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a>（填充区域样式-铺砖）</h1>
+<h1>8.12.3.16 IfcFillAreaStyleTiles</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.12.3.16.1-Semantic-definition-"></a>
     8.12.3.16.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.16.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></em> 通过重复的样式化二维几何图案（称为铺砖）来定义 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em> 的填充方式。重复图案由两个向量决定，这两个向量以规则形式对铺砖进行倍增。</p>
-<!-- 简短定义结束 -->
-<p>这两个向量作为二维重复因子，确定了铺砖的八个新位置。</p>
-<aside class="aside-note"><mark>注释</mark> 根据 ISO 10303-46 的定义：
-填充区域样式-铺砖定义了一个二维铺砖，用于填充注释填充区域或其他封闭区域。铺砖的内容由铺砖集定义，每个铺砖的位置由填充图案决定，该图案指示如何将铺砖彼此相邻放置。注释填充区域或封闭区域之外的铺砖或铺砖部分应在区域或区域的边界处被裁剪。</aside><blockquote>
-<figure><a class="anchor" id="Figure-8.12.3.16.A"></a><em>I + k~1~* R~1~ + k~2~* R~2~</em> <em>k~1~,k~2~</em>= -1,0,1 , <img alt="公式" src="../figures/ifcfillareastyletilesymbolwithstyle_fig1.gif"/>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></em> 通过重复的带样式的二维几何图形（称为瓦片）来定义 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em> 的填充。重复模式由两个矢量确定，这两个矢量将瓦片以规则形式进行乘法运算。</p>
+<!-- end of short definition -->
+<p>这两个矢量作为二维重复因子，确定了瓦片的八个新位置。</p>
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-46:
+The fill area style tiles defines a two dimensional tile to be used for the filling of annotation fill areas or other closed regions. The content of a tile is defined by the tile set, and the placement of each tile determined by the filling pattern which indicates how to place tiles next to each other. Tiles or parts of tiles outside of the annotation fill area or closed region shall be clipped at the of the area or region.</aside><blockquote>
+<figure><a class="anchor" id="Figure-8.12.3.16.A"></a><em>I + k~1~* R~1~ +
+k~2~* R~2~</em> <em>k~1~,k~2~</em>= -1,0,1 , <img alt="formula" src="../figures/ifcfillareastyletilesymbolwithstyle_fig1.gif"/>
 <figcaption>Figure 8.12.3.16.A<a class="link" href="#Figure-8.12.3.16.A"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
-<p>图 8.12.3.16.B 展示了使用向量定义填充线间距</p>
-<figure><a class="anchor" id="-1-"></a><img alt="IfcFillAreaStyleTiles_Fig1.gif 12,9 KB" src="../figures/ifcfillareastyletiles_fig1.gif"/><figcaption>图 8.12.3.16.B — 两个向量作为双向重复因子<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> 实体改编自 ISO10303-46 中定义的 <strong>fill_area_style_tiles</strong></aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> <em>TilingPattern</em> 更改为两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em> 的列表，<em>Tiles</em> 直接引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>。</aside>
+<p>图 8.12.3.16.B 显示了使用矢量作为填充线距离。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="IfcFillAreaStyleTiles_Fig1.gif 12,9 KB" src="../figures/ifcfillareastyletiles_fig1.gif"/><figcaption>图 8.12.3.16.B — 两个矢量作为二维重复因子<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>fill_area_style_tiles</strong> defined in ISO10303-46</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> <em>TilingPattern</em> changed to list of two <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em>, <em>Tiles</em> refer directly to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>.</aside>
 <h2><a class="anchor" id="8.12.3.16.2-Entity-inheritance-"></a>
     8.12.3.16.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.16.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -259,7 +260,7 @@
     8.12.3.16.3 特性（Attributes）
 <a class="link" href="#8.12.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e1b1cea2-55e3-4682-a558-028dffe46da9"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-df97e445-92ec-43e0-8ca2-9f4ec6c681fe"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -288,8 +289,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -299,8 +300,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -330,8 +331,8 @@
             </td>
 <td data-label="Type">LIST [2:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></td>
 <td data-label="Description">
-<p>一个双向重复因子，定义铺砖的形状和相对位置。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 属性类型已更改为直接引用两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em>。</aside>
+<p>一个二维重复因子，定义瓦片的形状和相对位置。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute type has changed to directly reference two <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em>'s.</aside>
 </td>
 </tr>
 <tr>
@@ -343,8 +344,8 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></td>
 <td data-label="Description">
-<p>铺砖的一组组成部分，作为一个样式化项，用作填充区域的注释符号以进行铺砖。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>。</aside><aside class="aside-note"><mark>注释</mark> 仅应使用引用兼容几何表示项和表示样式的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>。</aside>
+<p>瓦片组成部分的集合，是作为瓦片填充填充区域的注释符号的带样式项。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The data type has been changed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>.</aside><aside class="aside-note"><mark>注释</mark> Only <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>'s that refer to a compatible geometric representation item and presentation style shall be used.</aside>
 </td>
 </tr>
 <tr>
@@ -356,11 +357,11 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td data-label="Description">
-<p>应用于每个铺砖在注释填充区域中放置时的比例因子。</p>
+<p>放置在注释填充区域中的每个瓦片所应用的比例因子。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.16.C<a class="link" href="#-e1b1cea2-55e3-4682-a558-028dffe46da9"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.16.C<a class="link" href="#-df97e445-92ec-43e0-8ca2-9f4ec6c681fe"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.16.4-Formal-representation-"></a>
     8.12.3.16.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.16.4-Formal-representation-"><i data-feather="link"></i></a></h2>
