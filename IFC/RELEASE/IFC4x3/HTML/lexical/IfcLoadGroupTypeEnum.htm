@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.10.2.5 IfcLoadGroupTypeEnum（荷载组类型枚举） - IFC 4.3.2 Documentation</title>
+<title>7.10.2.5 IfcLoadGroupTypeEnum - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -159,17 +159,17 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>7.10.2.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLoadGroupTypeEnum.htm">IfcLoadGroupTypeEnum</a>（荷载组类型枚举）</h1>
+<h1>7.10.2.5 IfcLoadGroupTypeEnum</h1>
 <h2><a class="anchor" id="7.10.2.5.1-Semantic-definition-"></a>
     7.10.2.5.1 语义定义（Semantic definition）
 <a class="link" href="#7.10.2.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>此枚举用于区分不同级别的荷载分组。它允许区分荷载组、荷载工况和荷载组合。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中新增枚举。</aside><aside class="aside-change"><mark>IFC4 变更</mark> LOAD_COMBINATION_GROUP 已弃用。荷载工况通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 直接分配给荷载组合，并为每个荷载工况-荷载组合对采用不同的系数。</aside>
+<p>此枚举用于区分不同级别的载荷分组。它允许区分载荷组、载荷工况和载荷组合。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New enumeration in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> LOAD_COMBINATION_GROUP deprecated. Load cases are directly assigned to load combinations with different factors for each load case—load combination pair by means of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em>.</aside>
 <h2><a class="anchor" id="7.10.2.5.2-"></a>
     7.10.2.5.2 类型值
 <a class="link" href="#7.10.2.5.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-da0ccafd-8da8-4e9b-843b-52b7be3a1fe3"></a><table class="striped type-values">
+<figure><a class="anchor" id="-4d8fe421-6b1f-4acd-82d5-e300282af70f"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -180,36 +180,36 @@
 <tr>
 <td data-label="Name"><code>LOAD_CASE
             <td data-label="Description">
-<p>对 LOAD_GROUP 及 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 子类型的实例进行分组。
-   应作为具有相同来源的荷载容器使用。</p>
+<p>分组 LOAD_GROUPs 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 子类型的实例。
+   它应作为具有相同来源的载荷的容器。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>LOAD_COMBINATION
             <td data-label="Description">
-<p>介于 LOAD_CASE 和 LOAD_COMBINATION 之间的中间层级。该层级已过时并弃用。在引入 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 之前，该层级的目的是为荷载组合中一个或多个荷载工况的出现提供系数。</p>
+<p>LOAD_CASE 和 LOAD_COMBINATION 之间的中间级别。此级别已过时并被弃用。在引入 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroupByFactor.htm">IfcRelAssignsToGroupByFactor</a></em> 之前，此级别的目的是提供一个系数，通过该系数，一个或多个 LOAD_CASEs 出现在 LOAD_COMBINATION 中。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>LOAD_GROUP
             <td data-label="Description">
-<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 子类型的实例进行分组。应作为特定目的（如属于特殊荷载模式的荷载）的荷载组合容器使用。</p>
+<p>分组 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAction.htm">IfcStructuralAction</a></em> 子类型的实例。它应作为为特定目的分组的载荷的容器，例如属于特殊载荷模式的载荷。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>USERDEFINED
             <td data-label="Description">
-<p>不遵循标准荷载组类型层级的自定义分组级别。</p>
+<p>不遵循标准载荷组类型层次结构的自定义分组级别。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>NOTDEFINED
             <td data-label="Description">
-<p>分组级别尚未确定。</p>
+<p>分组级别尚不确定。</p>
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 7.10.2.5.A<a class="link" href="#-da0ccafd-8da8-4e9b-843b-52b7be3a1fe3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.2.5.A<a class="link" href="#-4d8fe421-6b1f-4acd-82d5-e300282af70f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.2.5.3-Formal-representation-"></a>
     7.10.2.5.3 形式化表示（Formal representation）
 <a class="link" href="#7.10.2.5.3-Formal-representation-"><i data-feather="link"></i></a></h2>
