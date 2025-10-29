@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.32 IfcSurfaceStyleRendering（表面样式-渲染） - IFC 4.3.2 Documentation</title>
+<title>8.12.3.32 IfcSurfaceStyleRendering - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,21 +189,21 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.32 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRendering.htm">IfcSurfaceStyleRendering</a>（表面样式-渲染）</h1>
+<h1>8.12.3.32 IfcSurfaceStyleRendering</h1>
 <div class="mvd" title="Included in Product Geometry Colour, Surface Tessellation Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Product Geometry Colour, Surface Tessellation Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.12.3.32.1-Semantic-definition-"></a>
     8.12.3.32.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.32.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRendering.htm">IfcSurfaceStyleRendering</a> 保存与特定表面样式相关的可视化属性。支持三种光照模型：</p>
-<!-- 简短定义结束 -->
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRendering.htm">IfcSurfaceStyleRendering</a> 存储与特定曲面样式相关的可视化属性。支持三种照明模型：</p>
+<!-- end of short definition -->
 <ul>
-<li>Phong 光照模型</li>
-<li>基于物理的光照模型</li>
-<li>忽略光源的平面光照模型</li>
+<li>Phong照明模型</li>
+<li>基于物理的照明模型</li>
+<li>忽略光源的平面照明模型</li>
 </ul>
-<p>材质参数被指定为标量或 RGB 颜色。每个材质参数都可以使用纹理进行调整。这允许在表面各处变化该参数。从纹理采样的信息始终与简单的标量/颜色字段相乘。</p>
-<aside class="aside-note"><mark>注释</mark> 有关光照模型方程的详细说明，请参阅 ISO/IEC 19775-1 X3D <a href="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-CD/Part01/components/lighting.html">17 光照组件</a>部分。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside>
+<p>材料参数指定为标量或RGB颜色。可以使用纹理调整每个材料参数。这允许在曲面上改变此参数。从纹理采样的信息总是与简单的标量/颜色字段相乘。</p>
+<aside class="aside-note"><mark>注释</mark> Refer to the ISO/IEC 19775-1 X3D <a href="https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-CD/Part01/components/lighting.html">17 Lighting component</a> section for a detailed description of the lighting model equations.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside>
 <h2><a class="anchor" id="8.12.3.32.2-Entity-inheritance-"></a>
     8.12.3.32.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.32.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -247,7 +247,7 @@
     8.12.3.32.3 特性（Attributes）
 <a class="link" href="#8.12.3.32.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-4008ebfb-0df2-46fc-a164-a91ee23f9b8c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-cffdaf59-e708-4761-8842-2cea58633813"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -278,7 +278,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
 <td data-label="Description">
-<p>用于渲染表面的颜色。通过指定红、绿、蓝的强度来定义用于可视化的表面颜色。</p>
+<p>用于渲染曲面的颜色。可视化曲面颜色通过指定红、绿、蓝的强度来定义。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -290,8 +290,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
 <td data-label="Description">
-<p>透明度字段指定对象的"透明"程度，1.0 表示完全透明，0.0 表示完全不透明。如果未指定，则假定值为 0.0（不透明）。</p>
-<aside class="aside-note"><mark>注释</mark> 1 表示透明、0 表示不透明的定义与 alpha 通道中的定义相反，在 alpha 通道中 0.0 表示完全透明，1.0 表示完全不透明。此定义是为了与之前版本的标准保持向上兼容性，与 <code>_IfcIndexedColourMap_</code> 中的定义不同。</aside>
+<p>透明度字段指定对象的“清晰度”，1.0表示完全透明，0.0表示完全不透明。如果未给出，则假定值为0.0（不透明）。</p>
+<aside class="aside-note"><mark>注释</mark> The definition of 1 being transparent and 0 being opaque is the opposite of the definition in alpha channels, where 0.0 is completely transparent and 1.0 is completely opaque. This definition is due to upward compatibility to previous versions of this standard in different to the definition in <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedColourMap.htm">IfcIndexedColourMap</a></em>.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -321,8 +321,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourOrFactor.htm">IfcColourOrFactor</a></td>
 <td data-label="Description">
-<p>在 PHONG 反射方法中，DiffuseColour 对应于 X3D Phong 光照模型中的 diffuseColor 属性。漫反射颜色根据表面相对于光源的角度反射所有 X3D 光源。表面正对光源的程度越高，漫反射光就越多。在 PHYSICAL 反射方法中，假设采用基于物理的光照模型，因此 DiffuseColour 对应于 X3D 物理光照模型中使用的 baseColor 属性。在 FLAT 反射方法中，DiffuseColour 对应于 X3D 无光照模型中使用的 emissiveColor 属性。</p>
-<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> 该属性已被重新调整用途以适应 X3D 反射方法。</aside>
+<p>在PHONG反射方法中，DiffuseColour对应于X3D Phong照明模型中的diffuseColor属性。漫射颜色根据曲面与光源的角度反射所有X3D光源。曲面面向光源的角度越大，反射的漫射光越多。在PHYSICAL反射方法中，假定为基于物理的照明模型，因此DiffuseColour对应于X3D物理照明模型中使用的baseColor属性。在FLAT反射方法中，DiffuseColour对应于X3D非照明模型中使用的emissiveColor属性。</p>
+<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> Attribute has been repurposed to fit the X3D reflectance methods.</aside>
 </td>
 </tr>
 <tr>
@@ -334,10 +334,10 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourOrFactor.htm">IfcColourOrFactor</a></td>
 <td data-label="Description">
-<p>反射方程的透射部分可以指定为颜色或标量因子。它仅适用于 Transparency 字段大于零的材质。
-透射颜色字段指定穿过透明材质的颜色（例如透过玻璃的颜色）。
-透射因子定义透射部分，透射颜色则由表面颜色 * 透射因子定义。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 此属性已弃用，不应再使用。</aside>
+<p>反射方程的透射部分可以作为颜色或标量因子给出。它仅适用于Transparency字段大于零的材料。
+透射颜色字段指定穿过透明材料的颜色（例如，透过玻璃的光的颜色）。
+透射因子定义了透射部分，透射颜色由曲面颜色 * 透射因子定义。</p>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 <tr>
@@ -349,10 +349,10 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourOrFactor.htm">IfcColourOrFactor</a></td>
 <td data-label="Description">
-<p>反射方程的漫透射部分可以指定为颜色或标量因子。它仅适用于 Transparency 字段大于零的材质。
-漫透射颜色指定在材质表面另一侧反射多少漫射光。
-漫透射因子字段指定此表面应在材质表面另一侧反射多少来自光源的漫射光。漫透射颜色则由表面颜色 * 漫透射因子定义。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 此属性已弃用，不应再使用。</aside>
+<p>反射方程的漫射透射部分可以作为颜色或标量因子给出。它仅适用于Transparency字段大于零的材料。
+漫射透射颜色指定了在材料表面的另一侧反射多少漫射光。
+漫射透射因子字段指定了来自光源的多少漫射光应在材料表面的另一侧反射。然后，漫射透射颜色由曲面颜色 * 漫射透射因子定义。</p>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 <tr>
@@ -364,10 +364,10 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourOrFactor.htm">IfcColourOrFactor</a></td>
 <td data-label="Description">
-<p>反射方程的反射（或镜面）部分可以指定为颜色或标量因子。适用于"玻璃"和"镜面"反射模型。
-反射颜色指定来自镜面方向的光线（即从表面反射的光线）所做的贡献。
-反射因子指定来自镜面方向的光线所做的贡献量。反射颜色则由表面颜色 * 反射因子定义。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 此属性已弃用，不应再使用。</aside>
+<p>反射方程的反射（或镜面）部分可以作为颜色或标量因子给出。适用于“玻璃”和“镜面”反射模型。
+反射颜色指定了来自镜面方向的光的贡献，即从表面反射的光。
+反射因子指定了来自镜面方向的光的贡献量。然后，反射颜色由曲面颜色 * 反射因子定义。</p>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 <tr>
@@ -379,8 +379,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourOrFactor.htm">IfcColourOrFactor</a></td>
 <td data-label="Description">
-<p>在 PHONG 反射方法中，SpecularColour 对应于 X3D Phong 光照模型中的 specularColor 属性。镜面反射颜色决定镜面高光的颜色（例如，苹果上的亮斑）。在 PHYSICAL 反射方法中，假设采用基于物理的光照模型，因此 SpecularColour 被指定为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>，它对应于 X3D 物理光照模型中使用的 metallic 属性。在 FLAT 反射方法中，SpecularColour 无效。</p>
-<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> 该属性已被重新调整用途以适应 X3D 反射方法。</aside>
+<p>在PHONG反射方法中，SpecularColour对应于X3D Phong照明模型中的specularColor属性。镜面颜色决定了镜面高光（例如，苹果上的闪亮斑点）的颜色。在PHYSICAL反射方法中，假定为基于物理的照明模型，因此SpecularColour指定为<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>，它对应于X3D物理照明模型中使用的metallic属性。在FLAT反射方法中，SpecularColour无效。</p>
+<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> Attribute has been repurposed to fit the X3D reflectance methods.</aside>
 </td>
 </tr>
 <tr>
@@ -392,8 +392,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpecularHighlightSelect.htm">IfcSpecularHighlightSelect</a></td>
 <td data-label="Description">
-<p>在 PHONG 反射方法中，SpecularHighlight 被指定为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpecularRoughness.htm">IfcSpecularRoughness</a>，并对应于 X3D Phong 光照模型中 shininess 属性的倒数。SpecularHighlight 决定镜面高光的性质（例如，苹果上的亮斑）。较低的光泽度值产生柔和的光晕，而较高的值导致更锐利、更小的高光。在 PHYSICAL 反射方法中，假设采用基于物理的光照模型，因此 SpecularHighlight 被指定为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpecularRoughness.htm">IfcSpecularRoughness</a>，它对应于 X3D 物理光照模型中使用的 roughness 属性。在 FLAT 反射方法中，SpecularHighlight 无效。</p>
-<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> 该属性已被重新调整用途以适应 X3D 反射方法。</aside>
+<p>在PHONG反射方法中，SpecularHighlight指定为<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpecularRoughness.htm">IfcSpecularRoughness</a>，对应于X3D Phong照明模型中的shininess属性的倒数。SpecularHighlight决定了镜面高光的性质（例如，苹果上的闪亮斑点）。较低的亮度值产生柔和的光晕，而较高的值则产生更锐利、更小的亮点。在PHYSICAL反射方法中，假定为基于物理的照明模型，因此SpecularHighlight指定为<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpecularRoughness.htm">IfcSpecularRoughness</a>，它对应于X3D物理照明模型中使用的roughness属性。在FLAT反射方法中，SpecularHighlight无效。</p>
+<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> Attribute has been repurposed to fit the X3D reflectance methods.</aside>
 </td>
 </tr>
 <tr>
@@ -405,12 +405,12 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReflectanceMethodEnum.htm">IfcReflectanceMethodEnum</a></td>
 <td data-label="Description">
-<p>标识预定义的反射方法类型，可以从中设置所需的方法。PHONG 对应于 X3D Phong 光照模型。PHYSICAL 对应于 X3D 物理光照模型。FLAT 对应于 X3D 无光照模型。其他反射方法的确切行为可由视图定义或实施者协议确定。</p>
-<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> 该属性已被重新调整用途以适应 X3D 反射方法。</aside>
+<p>标识反射方法预定义类型，从中可以选择所需的方法。PHONG对应于X3D Phong照明模型。PHYSICAL对应于X3D物理照明模型。FLAT对应于X3D非照明模型。其他反射方法的确切行为可能由视图定义或实施者协议确定。</p>
+<aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> Attribute has been repurposed to fit the X3D reflectance methods.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.32.A<a class="link" href="#-4008ebfb-0df2-46fc-a164-a91ee23f9b8c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.32.A<a class="link" href="#-cffdaf59-e708-4761-8842-2cea58633813"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.32.4-Formal-representation-"></a>
     8.12.3.32.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.32.4-Formal-representation-"><i data-feather="link"></i></a></h2>
