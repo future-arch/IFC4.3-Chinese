@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.6.3.1 IfcClassification（分类） - IFC 4.3.2 Documentation</title>
+<title>8.6.3.1 IfcClassification - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,22 +189,24 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.6.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a>（分类）</h1>
+<h1>8.6.3.1 IfcClassification</h1>
 <div class="mvd" title="Included in Classification Association, Project Classification Information">RV ⓘ</div>
 <div class="mvd" title="Included in Classification Association, Project Classification Information">AbV ⓘ</div>
 <h2><a class="anchor" id="8.6.3.1.1-Semantic-definition-"></a>
     8.6.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.6.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 用于根据共同目的或共同特征将对象安排到某个类别或分类中。在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 的意义上，分类是一种按层次结构排列的分类法或分类方案。对象的类别通过泛化-特化关系与其他类别相关联。因此，分类中的分类项以树形结构组织。</p>
-<!-- 简短定义结束 -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 标识了分类引用所指向的分类系统或来源。每个分类引用可以引用一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 实例。声明的分类系统可以是正式发布的，也可以是本地定义的信息分类方法。</p>
-<aside class="aside-note"><mark>注释</mark> 此类正式发布的分类示例包括 Omniclass、Uniclass、Masterformat 或 DIN277。</aside>
-<p>定义和引用分类系统有两种方法：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 用于根据共同的目的或共同的特征将对象排列到一个类或类别中。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 意义上的分类是分类法或分类体系，以分层结构排列。对象的一个类别与其他类别在泛化-特化关系中相关联。因此，分类中的分类项以树状结构组织。</p>
+<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 标识分类引用所指向的分类系统或源。每个分类引用都可以引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 的一个实例。声明的分类系统可以是正式发布的，也可以是本地定义的分类信息的方法。</p>
+<aside class="aside-note"><mark>注释</mark> Examples for such formally published classifications are Omniclass, Uniclass, Masterformat, or DIN277.</aside>
+<p>有两种方法可以定义和引用分类系统：</p>
 <ol>
-<li>在数据集中包含分类系统结构：此处包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 的层次树，用于定义分类系统，包括分类项之间的关系。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 的 <em>ReferencedSource</em> 属性将分类项链接到父项，最终将父项链接到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em>。</li>
-<li>通过分类键或 ID 引用分类系统：此处使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 将分类 ID 或键分配为 <em>Identification</em> 属性，并且可以通过 <em>ReferencedSource</em> 属性直接链接到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em>。</li>
+<li>在数据集中包含分类系统结构：此处包含一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 的分层树，该树定义了分类系统，包括分类项之间的关系。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 的 <em>ReferencedSource</em> 特性将分类项链接到父项，父项最终链接到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em>。</li>
+<li>通过分类键或 ID 引用分类系统：此处使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 作为 <em>Identification</em> 特性来分配分类 ID 或键，并且它可以通过 <em>ReferencedSource</em> 特性直接链接到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em>。</li>
 </ol>
-<aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新实体。</aside><aside class="aside-change"><mark>IFC2x4 变更</mark> 属性 <em>Edition</em> 设为可选。添加了属性：<em>Description</em>、<em>Location</em> 和 <em>ReferenceTokens</em> 以及反向属性 <em>HasReferences</em>。</aside>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5</aside><blockquote>
+<p>IFC 2x4 CHANGE Attribute <em>Edition</em> made optional. Attributes: <em>Description</em>, <em>Location</em>, and <em>ReferenceTokens</em> and inverse attribute <em>HasReferences</em> added.</p>
+</blockquote>
 <h2><a class="anchor" id="8.6.3.1.2-Entity-inheritance-"></a>
     8.6.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.6.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -228,7 +230,7 @@
     8.6.3.1.3 特性（Attributes）
 <a class="link" href="#8.6.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-3df751b9-56d0-43d3-9345-1540b0f8ae1b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-ffb89cc7-c3cb-4a78-8dc4-972c106fffec"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -260,7 +262,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
 <p>此分类的来源（或发布者）。</p>
-<aside class="aside-note"><mark>注释</mark> 分类的来源意味着原始作者或当前作为发布者的个人或组织。</aside>
+<aside class="aside-note"><mark>注释</mark> that the source of the classification means the person or organization that was the original author or the person or organization currently acting as the publisher.</aside>
 </td>
 </tr>
 <tr>
@@ -272,8 +274,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>从中派生分类标记的分类系统的版本或版次。</p>
-<aside class="aside-note"><mark>注释</mark> 版本标签系统特定于分类系统。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
+<p>从中派生分类符号的分类系统的版本或发行版。</p>
+<aside class="aside-note"><mark>注释</mark> the version labeling system is specific to the classification system.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be optional.</aside>
 </td>
 </tr>
 <tr>
@@ -285,8 +287,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></td>
 <td data-label="Description">
-<p>所使用的分类版本生效的日期。</p>
-<aside class="aside-note"><mark>注释</mark> 版本的指示可能足以唯一标识分类来源，但版本日期作为可选属性提供，以便在需要时进行更精确的标识。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></em>，即符合 ISO8601 的日期字符串。</aside>
+<p>用于分类的版本生效的日期。</p>
+<aside class="aside-note"><mark>注释</mark> The indication of edition may be sufficient to identify the classification source uniquely but the edition date is provided as an optional attribute to enable more precise identification where required.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The data type has been changed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></em>, the date string according to ISO8601.</aside>
 </td>
 </tr>
 <tr>
@@ -298,8 +300,8 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>通常用于识别该分类的名称或标签。</p>
-<aside class="aside-note"><mark>注释</mark> 名称示例包括 CI/SfB、Masterformat、BSAB、Uniclass、STABU、DIN276、DIN277 等。</aside>
+<p>通常用于识别分类的名称或标签。</p>
+<aside class="aside-note"><mark>注释</mark> Examples of names include CI/SfB, Masterformat, BSAB, Uniclass, STABU, DIN276, DIN277 etc.</aside>
 </td>
 </tr>
 <tr>
@@ -311,8 +313,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>为该分类提供的附加描述。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 在属性列表末尾添加了新属性。</aside>
+<p>为分类提供的附加描述。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the attribute list.</aside>
 </td>
 </tr>
 <tr>
@@ -324,8 +326,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></td>
 <td data-label="Description">
-<p>作为 URI、URN 或 URL 提供的分类的资源标识符或定位符。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 在属性列表末尾添加了新属性。</aside>
+<p>分类的资源标识符或定位符，以 URI、URN 或 URL 的形式提供。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the attribute list.</aside>
 </td>
 </tr>
 <tr>
@@ -338,8 +340,8 @@
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
 <p>用于标记分类引用中各个分面（子字符串）边界的分隔符标记。</p>
-<p>这通常适用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 结合使用的情况。如果只提供一个 <em>ReferenceToken</em>，则它适用于所有分面的边界；如果提供多个 <em>ReferenceToken</em>，则第一个标记适用于第一个边界，第二个标记适用于第二个边界，第 n^th^ 个标记适用于第 n^th^ 个及任何其他边界。</p>
-<aside class="aside-note"><mark>注释</mark> 标记通常在分类本身内建议使用，每个标记都有特定的作用。</aside><aside class="aside-example"><mark>示例</mark> 1 为了指示用于 DIN277-2 引用键 "2.1"（"办公室"）的分面分隔符是 "."，提供了一个 <em>ReferenceToken</em> ['.']。为了指示用于 Omniclass 表 13（按功能划分的空间）引用键 "13-15 11 34 11"（"办公室"）的分面分隔符是 "-" 和 " "，提供了两个 <em>ReferenceToken</em> ['-', ' ']。</aside><aside class="aside-example"><mark>示例</mark> 2 <em>ReferenceTokens</em> 的使用也可以扩展到包括掩码。其使用需要在视图定义或实施者协议中约定，规定应使用的"掩码语法"。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 在属性列表末尾添加了新属性。</aside>
+<p>这通常在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 结合使用时适用。如果只提供一个 <em>ReferenceToken</em>，则它适用于所有各个分面的边界；如果提供多个 <em>ReferenceToken</em>，则第一个标记适用于第一个边界，第二个标记适用于第二个边界，第 n 个标记适用于第 n 个及任何附加边界。</p>
+<aside class="aside-note"><mark>注释</mark> 标记通常在分类本身中推荐，每个标记都有特定的作用。</aside><aside class="aside-example"><mark>示例</mark> 1 为了指示用于 DIN277-2 参考键 "2.1"（"办公室房间"）的分面分隔符是 "."，提供了一个单独的 <em>ReferenceToken</em> ['.']。为了指示用于 Omniclass 表 13（按功能划分的空间）参考键 "13-15 11 34 11"（"办公室"）的分隔符是 "-" 和 " "，提供了两个 <em>ReferenceToken</em> ['-', ' ']。</aside><aside class="aside-example"><mark>示例</mark> 2 <em>ReferenceTokens</em> 的使用也可以扩展到包括掩码。使用需要在视图定义或规定了应使用“掩码语法”的实施协议中约定。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 新增属性，位于属性列表末尾。</aside>
 </td>
 </tr>
 <tr>
@@ -350,7 +352,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesClassification.htm">IfcRelAssociatesClassification</a> FOR RelatingClassification</td>
 <td data-label="Description">
 <p>与对象关联的分类。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新的反向属性。</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向属性。</aside>
 </td>
 </tr>
 <tr>
@@ -360,12 +362,11 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a> FOR ReferencedSource</td>
 <td data-label="Description">
-<p>分类适用的分类引用。它可以是最终分类标记，也可以是中间分类项。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新的反向属性。</aside>
+<p>分类引用，分类适用于这些分类引用。它可以是最终的分类符号，也可以是中间的分类项。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.6.3.1.A<a class="link" href="#-3df751b9-56d0-43d3-9345-1540b0f8ae1b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.1.A<a class="link" href="#-ffb89cc7-c3cb-4a78-8dc4-972c106fffec"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.3.1.4-Formal-representation-"></a>
     8.6.3.1.4 形式化表示（Formal representation）
 <a class="link" href="#8.6.3.1.4-Formal-representation-"><i data-feather="link"></i></a></h2>
