@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.6 IfcMapConversion（地图转换） - IFC 4.3.2 Documentation</title>
+<title>8.18.3.6 IfcMapConversion - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,27 +189,27 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.18.3.6 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>（地图转换）</h1>
+<h1>8.18.3.6 IfcMapConversion</h1>
 <div class="mvd" title="Included in Project Global Positioning">RV ⓘ</div>
 <div class="mvd" title="Included in Project Global Positioning">AbV ⓘ</div>
 <h2><a class="anchor" id="8.18.3.6.1-Semantic-definition-"></a>
     8.18.3.6.1 语义定义（Semantic definition）
 <a class="link" href="#8.18.3.6.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>地图转换处理将局部工程坐标系（通常称为世界坐标系）转换为底层地图的坐标参考系。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 不处理从大地坐标参考系进行地图投影。</aside>
+<p>地图转换处理将局部工程坐标系（通常称为世界坐标系）转换为底层地图的坐标参考系统。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> does not handle the projection of a map from the geodetic coordinate reference system.</aside>
 <p>对于此转换，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 数据用于：
-1. 通过相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.Scale</em> 对三个轴（x、y、z）进行缩放
-2. 然后绕 z 轴<strong>逆时针</strong>旋转 <em>θ</em> 角度，其中：</p>
+1. 通过相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.Scale</em> 对三个轴（x、y、z）进行缩放。
+2. 然后绕 z 轴进行 <em>θ</em> 的<strong>逆时针</strong>旋转，其中：</p>
 <p>$$
 \theta=arctan\left(\frac{XAxisOrdinate}{XAxisAbscissa}\right)
 $$</p>
 <ol>
-<li>接着进行 (x,y,z) 方向的平移，平移量为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.Eastings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.Northings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.OrthogonalHeight</em></li>
+<li>然后在 (x,y,z) 方向上进行平移，平移量分别为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.Eastings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.Northings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a>.OrthogonalHeight</em>。</li>
 </ol>
-<p>使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 时，<strong>一个比例因子</strong>同等应用于 x、y 和 z 轴，<strong>用于转换单位</strong>。
-使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 时，额外的<strong>不同因子</strong>分别乘以 x、y 和 z 轴，用于<strong>缩放坐标</strong>——而非单位。</p>
-<aside class="aside-note"><mark>注释</mark> 局部工程坐标系的 z 轴始终与地图坐标系的 z 轴平行。</aside><aside class="aside-note"><mark>注释</mark> 当地图坐标系三个轴的长度单位与本项目设定的长度单位（参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a>.UnitsInContext</em>）不一致时，可使用 <em>Scale</em>——例如将英尺转换为米。如果省略，则假定比例因子为 1.0。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体</aside>
+<p>使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em>，<strong>一个比例因子</strong>等比例应用于 x、y 和 z，以<strong>转换单位</strong>。
+使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em>，<strong>不同的附加因子</strong>会乘以 x、y 和 z，以<strong>缩放坐标</strong>，而不是单位。</p>
+<aside class="aside-note"><mark>注释</mark> The z-axis of the local engineering coordinate system is always parallel to the z-axis of the map coordinate system.</aside><aside class="aside-note"><mark>注释</mark> The <em>Scale</em> can be used when the length unit for the 3 axes of the map coordinate system are not identical with the length unit established for this project (see <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a>.UnitsInContext</em>) - for example to convert feet into metres. If omitted, the scale factor 1.0 is assumed.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4</aside>
 <h2><a class="anchor" id="8.18.3.6.2-Entity-inheritance-"></a>
     8.18.3.6.2 实体继承（Entity inheritance）
 <a class="link" href="#8.18.3.6.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -238,7 +238,7 @@ $$</p>
     8.18.3.6.3 特性（Attributes）
 <a class="link" href="#8.18.3.6.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-623cf52f-0cd0-4cf0-b664-45f0e30ce19c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-aa012ab5-548f-4413-b360-a0062b136e88"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -269,7 +269,7 @@ $$</p>
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystemSelect.htm">IfcCoordinateReferenceSystemSelect</a></td>
 <td data-label="Description">
-<p>操作的源坐标参考系。</p>
+<p>操作的源坐标参考系统。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -281,7 +281,7 @@ $$</p>
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></td>
 <td data-label="Description">
-<p>操作的目标坐标参考系。</p>
+<p>操作的目标坐标参考系统。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -311,8 +311,8 @@ $$</p>
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>指定目标地图坐标参考系坐标系中东向的位置。</p>
-<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 x 轴的位置。</aside>
+<p>指定目标地图坐标参考系统坐标系沿东向的位置。</p>
+<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the x axis.</aside>
 </td>
 </tr>
 <tr>
@@ -324,8 +324,8 @@ $$</p>
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>指定目标地图坐标参考系坐标系中北向的位置。</p>
-<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 y 轴的位置。</aside>
+<p>指定目标地图坐标参考系统坐标系沿北向的位置。</p>
+<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the y axis</aside>
 </td>
 </tr>
 <tr>
@@ -338,7 +338,7 @@ $$</p>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
 <p>相对于指定垂直基准面的正交高度。</p>
-<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 z 轴的位置。</aside>
+<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the z axis</aside>
 </td>
 </tr>
 <tr>
@@ -350,8 +350,8 @@ $$</p>
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
-<p>指定表示工程坐标参考系局部 x 轴位置的向量终点在东向轴上的值。</p>
-<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 x 轴的位置。</aside><aside class="aside-note"><mark>注释</mark> 与 <em>XAxisOrdinate</em> 一起，它提供了地图坐标系水平面内局部 x 轴的方向。</aside>
+<p>指定指示局部工程坐标参考系统 x 轴位置的向量终点的东向坐标值。</p>
+<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the x axis</aside><aside class="aside-note"><mark>注释</mark> together with the <em>XAxisOrdinate</em> it provides the direction of the local x axis within the horizontal plane of the map coordinate system</aside>
 </td>
 </tr>
 <tr>
@@ -363,9 +363,9 @@ $$</p>
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
-<p>指定表示工程坐标参考系局部 x 轴位置的向量终点在北向轴上的值。</p>
-<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 y 轴的位置。</aside>
-<p>与 <em>XAxisAbscissa</em> 一起，它提供了地图坐标系水平面内局部 x 轴的方向。</p>
+<p>指定指示局部工程坐标参考系统 x 轴位置的向量终点的北向坐标值。</p>
+<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the y axis</aside>
+<p><em>XAxisAbscissa</em> 提供了地图坐标系水平平面内局部 x 轴的方向。</p>
 </td>
 </tr>
 <tr>
@@ -377,15 +377,15 @@ $$</p>
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
-<p>当坐标参考系的单位与工程坐标系的单位不一致时使用的比例因子。如果省略，则假定值为 1.0。</p>
+<p>缩放比例，当 CRS 的单位与工程坐标系的单位不一致时使用。如果省略，则假定值为 1.0。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.6.A<a class="link" href="#-623cf52f-0cd0-4cf0-b664-45f0e30ce19c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.6.A<a class="link" href="#-aa012ab5-548f-4413-b360-a0062b136e88"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.6.4-Formal-propositions-"></a>
     8.18.3.6.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.6.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-5e63cbf7-9714-479f-9818-d1c0d1940790"></a><table>
+<figure><a class="anchor" id="-227c8dec-61fe-4595-b682-50555aaabff1"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -407,7 +407,7 @@ $$</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.6.B<a class="link" href="#-5e63cbf7-9714-479f-9818-d1c0d1940790"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.6.B<a class="link" href="#-227c8dec-61fe-4595-b682-50555aaabff1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.6.5-Formal-representation-"></a>
     8.18.3.6.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.6.5-Formal-representation-"><i data-feather="link"></i></a></h2>
