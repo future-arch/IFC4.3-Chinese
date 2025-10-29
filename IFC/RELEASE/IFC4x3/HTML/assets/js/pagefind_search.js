@@ -145,10 +145,48 @@
         const mainContent = document.getElementById('main-content');
         if (!mainContent) return;
 
+        // 批量加载所有结果数据
+        const resultDataPromises = results.map(r => r.data());
+        const resultDataList = await Promise.all(resultDataPromises);
+
+        // 客户端排序 - 优先显示标题中包含搜索词的结果
+        const queryLower = query.toLowerCase();
+        const sortedResults = resultDataList.sort((a, b) => {
+            const titleA = (a.meta.title || extractTitleFromUrl(a.url)).toLowerCase();
+            const titleB = (b.meta.title || extractTitleFromUrl(b.url)).toLowerCase();
+
+            // 优先级1: 标题完全匹配
+            const exactMatchA = titleA === queryLower ? 1 : 0;
+            const exactMatchB = titleB === queryLower ? 1 : 0;
+            if (exactMatchA !== exactMatchB) return exactMatchB - exactMatchA;
+
+            // 优先级2: 标题以搜索词开头(如 IfcWall 搜索 "wall")
+            const startsWithA = titleA.startsWith(queryLower) ? 1 : 0;
+            const startsWithB = titleB.startsWith(queryLower) ? 1 : 0;
+            if (startsWithA !== startsWithB) return startsWithB - startsWithA;
+
+            // 优先级3: 标题包含搜索词(如 IfcWallStandardCase 搜索 "wall")
+            const containsA = titleA.includes(queryLower) ? 1 : 0;
+            const containsB = titleB.includes(queryLower) ? 1 : 0;
+            if (containsA !== containsB) return containsB - containsA;
+
+            // 优先级4: 保持 Pagefind 原始排序
+            return 0;
+        });
+
         // 限制显示前 30 个结果(参考英文版)
-        const maxResults = Math.min(results.length, 30);
+        const maxResults = Math.min(sortedResults.length, 30);
 
         let html = `
+            <style>
+                /* 自定义搜索结果中高亮标记的样式 */
+                mark {
+                    background-color: #e0e0e0;  /* 灰色背景 */
+                    color: #000;                 /* 黑色文字 */
+                    padding: 1px 2px;
+                    border-radius: 2px;
+                }
+            </style>
             <h2>搜索</h2>
             <form method="get" action="" style="margin-bottom: 20px;">
                 <input type="text" name="query" value="${escapeHtml(query)}" style="padding: 5px; width: 300px;"/>
@@ -157,12 +195,8 @@
             <ul style="list-style: none; padding: 0;">
         `;
 
-        // 批量加载结果数据以提高性能
-        const resultDataPromises = results.slice(0, maxResults).map(r => r.data());
-        const resultDataList = await Promise.all(resultDataPromises);
-
-        for (let i = 0; i < resultDataList.length; i++) {
-            const data = resultDataList[i];
+        for (let i = 0; i < maxResults; i++) {
+            const data = sortedResults[i];
 
             // 提取标题(从 meta 或 URL 中)
             const title = data.meta.title || extractTitleFromUrl(data.url);
@@ -180,14 +214,14 @@
         }
 
         // 如果没有结果
-        if (resultDataList.length === 0) {
+        if (sortedResults.length === 0) {
             html += `<li><span>未找到与您的查询匹配的结果</span></li>`;
         }
 
         html += `</ul>`;
 
-        if (results.length > maxResults) {
-            html += `<p style="color: #666; font-style: italic;">显示前 ${maxResults} 个结果,共 ${results.length} 个匹配项</p>`;
+        if (sortedResults.length > maxResults) {
+            html += `<p style="color: #666; font-style: italic;">显示前 ${maxResults} 个结果,共 ${sortedResults.length} 个匹配项</p>`;
         }
 
         mainContent.innerHTML = html;
