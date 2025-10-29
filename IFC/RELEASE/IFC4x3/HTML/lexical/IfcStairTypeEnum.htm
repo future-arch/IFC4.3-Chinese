@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.1.2.21 IfcStairTypeEnum（楼梯类型枚举） - IFC 4.3.2 Documentation</title>
+<title>6.1.2.21 IfcStairTypeEnum - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -144,17 +144,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.1.2.21 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStairTypeEnum.htm">IfcStairTypeEnum</a>（楼梯类型枚举）</h1>
+<h1>6.1.2.21 IfcStairTypeEnum</h1>
 <h2><a class="anchor" id="6.1.2.21.1-Semantic-definition-"></a>
     6.1.2.21.1 语义定义（Semantic definition）
 <a class="link" href="#6.1.2.21.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>该枚举定义了楼梯类型的基本配置，包括楼梯段数量和平台数量。该类型还通过斜踏步或平台来区分转向。此外，还包括直行楼梯和转向楼梯的细分。给出的楼梯配置适用于无平台、一个平台、两个平台或三个平台的楼梯。</p>
-<p>被细分为超过三个平台的楼梯，或具有不规则形状的楼梯，应定义为 USERDEFINED（用户定义）或 NOTDEFINED（未定义）类型。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2.0 中新增枚举。</aside>
+<p>该枚举定义了楼梯类型的基本配置，包括楼梯段（flight）的数量和平台（landing）的数量。该类型还区分了盘旋（winding）或平台转弯。此外，还包括了直跑和转弯楼梯的细分。楼梯配置包括无平台、一个、两个或三个平台的楼梯。</p>
+<!-- end of short definition -->
+<p>具有三个以上平台的楼梯或形状不规则的楼梯应定义为 USERDEFINED 或 NOTDEFINED 类型。</p>
+<aside class="aside-history"><mark>沿革</mark> New enumeration in IFC2.0.</aside>
 <h2><a class="anchor" id="6.1.2.21.2-"></a>
     6.1.2.21.2 类型值
 <a class="link" href="#6.1.2.21.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-863530c8-a955-4d33-ba69-476553e7fa71"></a><table class="striped type-values">
+<figure><a class="anchor" id="-a8d41d2f-8a4c-4d62-8062-9bd8110f943f"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -165,107 +166,109 @@
 <tr>
 <td data-label="Name"><code>CURVED_RUN_STAIR
             <td data-label="Description">
-<p>从一层延伸到另一层无转向或斜踏步的楼梯。该楼梯由一段弧形梯段组成。</p><figure><a class="anchor" id="Figure-6.1.2.21.A"></a><img alt="" src="../figures/ifcstairtypeenum-fig11.gif"/><figcaption>Figure 6.1.2.21.A<a class="link" href="#Figure-6.1.2.21.A"><i data-feather="link"></i></a></figcaption></figure>
+<p>弧形楼梯：从一个楼层延伸到另一个楼层，没有转弯或盘旋。楼梯由一个弧形楼梯段组成。</p><figure><a class="anchor" id="Figure-6.1.2.21.A"></a><img alt="" src="../figures/ifcstairtypeenum-fig11.gif"/><figcaption>Figure 6.1.2.21.A<a class="link" href="#Figure-6.1.2.21.A"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>DOUBLE_RETURN_STAIR
             <td data-label="Description">
-<p>有一段直行梯段通向一个宽四分之一平台，并从该平台向相反方向延伸出两个侧向梯段的楼梯。该楼梯实现 90° 转向。交通方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.B"></a><img alt="" src="../figures/ifcstairtypeenum-fig09.gif"/><figcaption>Figure 6.1.2.21.B<a class="link" href="#Figure-6.1.2.21.B"><i data-feather="link"></i></a></figcaption></figure>
+<p>双回楼梯：有一个直跑到一个宽的四分之一平台，然后从该平台向相反方向延伸出两个侧跑。楼梯进行 90° 转弯。交通方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.B"></a><img alt="" src="../figures/ifcstairtypeenum-fig09.gif"/><figcaption>Figure 6.1.2.21.B<a class="link" href="#Figure-6.1.2.21.B"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>HALF_TURN_STAIR
             <td data-label="Description">
-<p>实现 180° 转向的楼梯，由两段直行梯段通过一个二分之一平台连接而成。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.C"></a><img alt="" src="../figures/ifcstairtypeenum-fig08.gif"/><figcaption>Figure 6.1.2.21.C<a class="link" href="#Figure-6.1.2.21.C"><i data-feather="link"></i></a></figcaption></figure>
+<p>半转楼梯：进行 180° 转弯，由两个直跑组成，</p><figure><a class="anchor" id="Figure-6.1.2.21.C"></a><img alt="" src="../figures/ifcstairtypeenum-fig08.gif"/><figcaption>Figure 6.1.2.21.C<a class="link" href="#Figure-6.1.2.21.C"><i data-feather="link"></i></a></figcaption></figure><p>由一个半平台连接。转弯方向由行走线确定。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>HALF_WINDING_STAIR
             <td data-label="Description">
-<p>由一段带有一个二分之一斜踏步的梯段组成的楼梯，该斜踏步实现 180° 转向。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.D"></a><img alt="" src="../figures/ifcstairtypeenum-fig04.gif"/><figcaption>Figure 6.1.2.21.D<a class="link" href="#Figure-6.1.2.21.D"><i data-feather="link"></i></a></figcaption></figure>
+<p>半盘旋楼梯：由一个带有半盘旋的楼梯段组成，进行 180° 转弯。转弯方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.D"></a><img alt="" src="../figures/ifcstairtypeenum-fig04.gif"/><figcaption>Figure 6.1.2.21.D<a class="link" href="#Figure-6.1.2.21.D"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>LADDER
             <td data-label="Description">
-<p>一种设备，由两个直立构件之间的一系列横杆或踏板组成，用于攀爬上下</p>
+<p>梯子：一种设备，由两个垂直元件之间的一系列横档或踏板组成，用于向上或向下攀爬某物</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>QUARTER_TURN_STAIR
             <td data-label="Description">
-<p>实现 90° 转向的楼梯，由两段直行梯段通过一个四分之一平台连接而成。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.E"></a><img alt="" src="../figures/ifcstairtypeenum-fig07.gif"/><figcaption>Figure 6.1.2.21.E<a class="link" href="#Figure-6.1.2.21.E"><i data-feather="link"></i></a></figcaption></figure>
+<p>四分之一转楼梯：进行 90° 转弯，由两个直跑组成，由一个四分之一平台连接。转弯方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.E"></a><img alt="" src="../figures/ifcstairtypeenum-fig07.gif"/><figcaption>Figure 6.1.2.21.E<a class="link" href="#Figure-6.1.2.21.E"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>QUARTER_WINDING_STAIR
             <td data-label="Description">
-<p>由一段带有四分之一斜踏步的梯段组成的楼梯，该斜踏步实现 90° 转向。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.F"></a><img alt="" src="../figures/ifcstairtypeenum-fig02.gif"/><figcaption>Figure 6.1.2.21.F<a class="link" href="#Figure-6.1.2.21.F"><i data-feather="link"></i></a></figcaption></figure>
+<p>四分之一盘旋楼梯：由一个带有四分之一盘旋的楼梯段组成，进行 90° 转弯。转弯方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.F"></a><img alt="" src="../figures/ifcstairtypeenum-fig02.gif"/><figcaption>Figure 6.1.2.21.F<a class="link" href="#Figure-6.1.2.21.F"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>SPIRAL_STAIR
             <td data-label="Description">
-<p>围绕中心柱用斜踏步建造的楼梯，通常没有平台。根据外部边界，可以是圆形、椭圆形或矩形螺旋楼梯。螺旋楼梯的旋转方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.G"></a><img alt="" src="../figures/ifcstairtypeenum-fig05.gif"/><figcaption>Figure 6.1.2.21.G<a class="link" href="#Figure-6.1.2.21.G"><i data-feather="link"></i></a></figcaption></figure>
+<p>螺旋楼梯：围绕中心柱建造，通常没有平台。根据外边界，可以是圆形、椭圆形或矩形螺旋楼梯。盘旋楼梯的方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.G"></a><img alt="" src="../figures/ifcstairtypeenum-fig05.gif"/><figcaption>Figure 6.1.2.21.G<a class="link" href="#Figure-6.1.2.21.G"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>STRAIGHT_RUN_STAIR
             <td data-label="Description">
-<p>从一层延伸到另一层无转向或斜踏步的楼梯。该楼梯由一段直行梯段组成。</p><figure><a class="anchor" id="Figure-6.1.2.21.H"></a><img alt="" src="../figures/ifcstairtypeenum-fig01.gif"/><figcaption>Figure 6.1.2.21.H<a class="link" href="#Figure-6.1.2.21.H"><i data-feather="link"></i></a></figcaption></figure>
+<p>直跑楼梯：从一个楼层延伸到另一个楼层，没有转弯或盘旋。楼梯由一个直跑组成。</p><figure><a class="anchor" id="Figure-6.1.2.21.H"></a><img alt="" src="../figures/ifcstairtypeenum-fig01.gif"/><figcaption>Figure 6.1.2.21.H<a class="link" href="#Figure-6.1.2.21.H"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>THREE_QUARTER_TURN_STAIR
             <td data-label="Description">
-<p>实现 270° 转向的楼梯，由四段直行梯段通过三个四分之一平台连接而成。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.I"></a><img alt="" src="../figures/ifcstairtypeenum-fig10a.gif"/><figcaption>Figure 6.1.2.21.I<a class="link" href="#Figure-6.1.2.21.I"><i data-feather="link"></i></a></figcaption></figure>
+<p>四分之三转楼梯：进行 270° 转弯，由四个直跑组成，由三个四分之一平台连接。转弯方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.I"></a><img alt="" src="../figures/ifcstairtypeenum-fig10a.gif"/><figcaption>Figure 6.1.2.21.I<a class="link" href="#Figure-6.1.2.21.I"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>THREE_QUARTER_WINDING_STAIR
             <td data-label="Description">
-<p>由一段带有三个四分之一斜踏步的梯段组成的楼梯，每个斜踏步实现 90° 转向。该楼梯整体实现 270° 转向。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.J"></a><img alt="" src="../figures/ifcstairtypeenum-fig03a.gif"/><figcaption>Figure 6.1.2.21.J<a class="link" href="#Figure-6.1.2.21.J"><i data-feather="link"></i></a></figcaption></figure>
+<p>四分之三盘旋楼梯：由一个带有三个四分之一盘旋的楼梯段组成，进行 90° 转弯。楼梯进行 270° 转弯。转弯方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.J"></a><img alt="" src="../figures/ifcstairtypeenum-fig03a.gif"/><figcaption>Figure 6.1.2.21.J<a class="link" href="#Figure-6.1.2.21.J"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TWO_CURVED_RUN_STAIR
             <td data-label="Description">
-<p>由两段弧形梯段组成、无转向但有一个平台的弧形楼梯。</p><figure><a class="anchor" id="Figure-6.1.2.21.K"></a><img alt="" src="../figures/ifcstairtypeenum-fig12.gif"/><figcaption>Figure 6.1.2.21.K<a class="link" href="#Figure-6.1.2.21.K"><i data-feather="link"></i></a></figcaption></figure>
+<p>双弧形楼梯：由两个弧形楼梯段组成，没有转弯，但有一个平台。</p><figure><a class="anchor" id="Figure-6.1.2.21.K"></a><img alt="" src="../figures/ifcstairtypeenum-fig12.gif"/><figcaption>Figure 6.1.2.21.K<a class="link" href="#Figure-6.1.2.21.K"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TWO_QUARTER_TURN_STAIR
             <td data-label="Description">
-<p>实现 180° 转向的楼梯，由三段直行梯段通过两个四分之一平台连接而成。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.L"></a><img alt="" src="../figures/ifcstairtypeenum-fig10.gif"/><figcaption>Figure 6.1.2.21.L<a class="link" href="#Figure-6.1.2.21.L"><i data-feather="link"></i></a></figcaption></figure>
+<p>双四分之一转楼梯：进行 180° 转弯，由三个直跑组成，由两个四分之一平台连接。转弯方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.L"></a><img alt="" src="../figures/ifcstairtypeenum-fig10.gif"/><figcaption>Figure 6.1.2.21.L<a class="link" href="#Figure-6.1.2.21.L"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TWO_QUARTER_WINDING_STAIR
             <td data-label="Description">
-<p>由一段带有两个四分之一斜踏步的梯段组成的楼梯，每个斜踏步实现 90° 转向。该楼梯整体实现 180° 转向。转向方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.M"></a><img alt="" src="../figures/ifcstairtypeenum-fig03.gif"/><figcaption>Figure 6.1.2.21.M<a class="link" href="#Figure-6.1.2.21.M"><i data-feather="link"></i></a></figcaption></figure>
+<p>双四分之一盘旋楼梯：由一个带有两个四分之一盘旋的楼梯段组成，进行 90° 转弯。楼梯进行 180° 转弯。转弯方向由行走线确定。</p><figure><a class="anchor" id="Figure-6.1.2.21.M"></a><img alt="" src="../figures/ifcstairtypeenum-fig03.gif"/><figcaption>Figure 6.1.2.21.M<a class="link" href="#Figure-6.1.2.21.M"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TWO_STRAIGHT_RUN_STAIR
             <td data-label="Description">
-<p>由两段直行梯段组成、无转向但有一个平台的直行楼梯。</p><figure><a class="anchor" id="Figure-6.1.2.21.N"></a><img alt="" src="../figures/ifcstairtypeenum-fig06.gif"/><figcaption>Figure 6.1.2.21.N<a class="link" href="#Figure-6.1.2.21.N"><i data-feather="link"></i></a></figcaption></figure>
+<p>双直跑楼梯：由两个直跑组成，没有转弯，但有一个平台。</p><figure><a class="anchor" id="Figure-6.1.2.21.N"></a><img alt="" src="../figures/ifcstairtypeenum-fig06.gif"/><figcaption>Figure 6.1.2.21.N<a class="link" href="#Figure-6.1.2.21.N"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>USERDEFINED
             <td data-label="Description">
-<p>自由形式楼梯（用户定义的操作类型）。</p>
+<p>自由形式楼梯（用户定义操作类型）。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>NOTDEFINED
             <td data-label="Description">
-<p>未定义</p>
+<p>
+<em>No description available.</em>
+</p>
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 6.1.2.21.O<a class="link" href="#-863530c8-a955-4d33-ba69-476553e7fa71"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.2.21.O<a class="link" href="#-a8d41d2f-8a4c-4d62-8062-9bd8110f943f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.2.21.3-Formal-representation-"></a>
     6.1.2.21.3 形式化表示（Formal representation）
 <a class="link" href="#6.1.2.21.3-Formal-representation-"><i data-feather="link"></i></a></h2>
