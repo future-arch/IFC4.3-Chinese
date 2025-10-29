@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.26 IfcManifoldSolidBrep（流形实体边界表示） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.26 IfcManifoldSolidBrep - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.26 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a>（流形实体边界表示）</h1>
+<h1>8.8.3.26 IfcManifoldSolidBrep</h1>
 <div class="mvd" title="Included in IfcFacetedBrep">RV ⓘ</div>
 <div class="mvd" title="Included in IfcFacetedBrep">AbV ⓘ</div>
 <div class="row">
@@ -202,29 +202,28 @@
 <h2><a class="anchor" id="8.8.3.26.1-Semantic-definition-"></a>
     8.8.3.26.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.26.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> 是一种实体表示形式，由一组相连的表面构成，这些表面将实体与周围的非实体区域分隔开来。</p>
-<!-- 简短定义结束 -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> 类型的实例应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm">IfcFacetedBrep</a></em> 类型（仅使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyLoop.htm">IfcPolyLoop</a></em> 作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceBound.htm">IfcFaceBound</a></em> 的边界），或为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm">IfcAdvancedBrep</a></em> 类型（仅使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em> 作为面几何，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 作为边几何）。</p>
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-流形实体边界表示是一个有限的、弧连通的体积，由一个或多个表面围成，每个表面都是一个连通的、有向的、有限的、闭合的二维流形。该体积的亏格不受限制，体积内的空洞数量也不受限制。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>manifold_solid_brep</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC Release 1.0 中的新实体</aside><blockquote>
-<p>流形实体的边界表示（B-rep）利用嵌入在连通的、有向的、有限的、闭合的二维流形表面中的边和顶点图。该嵌入图将表面划分为弧连通的区域，称为面。因此，边和顶点构成了面的边界，而面的定义域不包括其边界。嵌入图可以是不连通的，也可以是伪图。该图是带标签的，即图中的每个实体都有唯一的标识。用于指定面几何的几何表面定义必须是二维流形，可在该面定义域内嵌入平面。换句话说，它必须是连通的、有向的、有限的、不自交的，且表面亏格为 0。</p>
-<p>面除了沿其边界外不相交。面边界上的每条边最多由组合中的另一个面共享。B-rep 中的边组合除了在其边界（即顶点）处外不相交。用于指定边几何的几何曲线定义必须是弧连通的，并且在边的定义域内不得自交或重叠。边的几何必须与其构成部分边界的面的几何一致。用于定义顶点的几何必须与其构成部分边界的面和边的几何一致。</p>
-<p>用于定义顶点的几何必须与其构成部分边界的面和边的几何一致。</p>
-<p>B-rep 由一个或多个互不相交的闭合壳表示。一个壳（外层壳）必须完全包围所有其他壳，且其他壳不得包围任何壳。通过子类型提供了定义一个或多个内部空洞的 B-rep 的功能。必须满足以下欧拉公式版本：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> 是一个实体，表示为一组连接的曲面，这些曲面界定了实体与周围的非实体部分。</p>
+<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> 类型实例应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm">IfcFacetedBrep</a></em> 类型，仅使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyLoop.htm">IfcPolyLoop</a></em> 作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceBound.htm">IfcFaceBound</a></em> 的边界，或为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm">IfcAdvancedBrep</a></em> 类型，仅使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em> 作为面几何，并使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 作为边。</p>
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+A manifold solid b-rep is a finite, arcwise connected volume bounded by one or more surfaces, each of which is a connected, oriented, finite, closed 2-manifold. There is no restriction on the genus of the volume, nor on the number of voids within the volume.</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>manifold_solid_brep</strong>。</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>manifold_solid_brep</strong> defined in ISO 10303-42.</aside><blockquote>
+<p>The Boundary Representation (B-rep) of a manifold solid utilizes a graph of edges and vertices embedded in a connected, oriented, finite, closed two manifold surface. The embedded graph divides the surface into arcwise connected areas known as faces. The edges and vertices, therefore, form the boundaries of the face and the domain of a face does not include its boundaries. The embedded graph may be disconnected and may be a pseudo graph. The graph is labeled; that is, each entity in the graph has a unique identity. The geometric surface definition used to specify the geometry of a face shall be 2-manifold embeddable in the plane within the domain of the face. In other words, it shall be connected, oriented, finite, non-self-intersecting, and of surface genus 0.</p>
+<p>Faces do not intersect except along their boundaries. Each edge along the boundary of a face is shared by at most one other face in the assemblage. The assemblage of edges in the B-rep do not intersect except at their boundaries (i.e., vertices). The geometry curve definition used to specify the geometry of an edge shall be arcwise connected and shall not self intersect or overlap within the domain of the edge. The geometry of an edge shall be consistent with the geometry of the faces of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound.</p>
+<p>The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound.</p>
+<p>A B-rep is represented by one or more closed shells which shall be disjoint. One shell, the outer, shall completely enclose all the other shells and no other shell may enclose a shell. The facility to define a B-rep with one or more internal voids is provided by a subtype. The following version of the Euler formula shall be satisfied,</p>
 <blockquote>
 <figure><a class="anchor" id="Figure-8.8.3.26.A"></a><img alt="math" src="../figures/ifcmanifoldsolidbrep-math1.gif"/>
-其中 V、E、F、L~l~ 和 S 分别是模型中唯一顶点、边、面、环使用和壳的数量，G^s^ 是壳的亏格之和。
-<figcaption>Figure 8.8.3.26.A<a class="link" href="#Figure-8.8.3.26.A"><i data-feather="link"></i></a></figcaption></figure>
+where V, E, F, L~l~ and S are the numbers of unique vertices, edges, faces, loop uses and shells in the model and G^s^ is the sum of the genus of the shells.<figcaption>Figure 8.8.3.26.A<a class="link" href="#Figure-8.8.3.26.A"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
 </blockquote>
 <p><strong>非正式命题</strong>：</p>
 <ol>
-<li>流形实体边界表示的维数必须为 3。</li>
-<li>流形实体边界表示的范围必须有限且非零。</li>
-<li>流形实体边界表示的所有元素必须具有定义的关联几何。</li>
-<li>壳法线必须与 B-rep 法线一致，并指向 B-rep 所表示的实体外部。</li>
-<li>每个面只能被流形实体边界表示的壳引用一次。</li>
-<li>边界表示必须满足欧拉方程，其中亏格项“壳项”是 B-rep 壳的亏格值之和。</li>
+<li>流形实体边界表示的维度应为 3。</li>
+<li>流形实体边界表示的范围应是有限且非零的。</li>
+<li>流形实体边界表示的所有元素都应具有定义的关联几何。</li>
+<li>壳法线应与实体边界表示法线一致，并指向实体表示的实体之外。</li>
+<li>每个面应仅被流形实体边界表示的壳引用一次。</li>
+<li>欧拉方程应满足边界表示，其中亏格项“壳项”是实体壳亏格值之和。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.26.2-Entity-inheritance-"></a>
     8.8.3.26.2 实体继承（Entity inheritance）
@@ -297,7 +296,7 @@
     8.8.3.26.3 特性（Attributes）
 <a class="link" href="#8.8.3.26.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-1edcf333-6d63-4f69-b002-fde8dc723c3e"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c9036a4d-2a6a-4264-b9f2-de1661ddf506"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -326,8 +325,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -337,8 +336,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -358,7 +357,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -388,11 +387,11 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClosedShell.htm">IfcClosedShell</a></td>
 <td data-label="Description">
-<p>定义实体外部边界的闭合壳。壳法线应指向实体内部的外部。</p>
+<p>定义实体外部边界的封闭壳。壳法线应指向实体内部之外。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.26.B<a class="link" href="#-1edcf333-6d63-4f69-b002-fde8dc723c3e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.26.B<a class="link" href="#-c9036a4d-2a6a-4264-b9f2-de1661ddf506"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.26.4-Formal-representation-"></a>
     8.8.3.26.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.26.4-Formal-representation-"><i data-feather="link"></i></a></h2>
