@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.20 IfcFixedReferenceSweptAreaSolid（固定引用扫掠面积实体） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.20 IfcFixedReferenceSweptAreaSolid - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,28 +189,28 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.20 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFixedReferenceSweptAreaSolid.htm">IfcFixedReferenceSweptAreaSolid</a>（固定引用扫掠面积实体）</h1>
+<h1>8.8.3.20 IfcFixedReferenceSweptAreaSolid</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.20.1-Semantic-definition-"></a>
     8.8.3.20.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.20.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFixedReferenceSweptAreaSolid.htm">IfcFixedReferenceSweptAreaSolid</a></em> 是一种扫掠面积实体类型，是通过沿着_导线_扫掠一个面积得到的结果。扫掠面积由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 的子类型提供。轮廓通过隐式笛卡尔变换算子放置在扫掠起点处，在该点处轮廓法线与导线在该点的起始切线一致，轮廓的 x 轴与_固定引用_方向在起始切线和_固定引用_平面内的正交投影一致。扫掠操作过程中曲线的方向由_固定引用_方向控制。</p>
-<!-- 简短定义结束 -->
-<p><em>SweptArea</em> 沿着_导线_扫掠的方式是：用于定义 <em>SweptArea</em> 的局部坐标系的原点位于_导线_上，并且局部 x 轴位于_固定引用_在该点处导线法平面上的投影方向。生成的实体具有这样的特性：在任何点处，通过垂直于_导线_的法平面与实体表面相交的横截面是 <em>SweptArea</em> 的副本。生成的扫掠实体通过 <em>Position</em> 坐标系放置。</p>
-<p><em>导线_和_参考曲面_位于对象坐标系内。扫掠操作开始于 _StartParam</em>，它可以是基于曲线参数化的参数值，也可以是从导线起点开始沿导线测量的长度。如果未提供 <em>StartParam</em>，则默认从导线起点开始。扫掠操作结束于 <em>EndParam</em>，它可以是基于曲线参数化的参数值，也可以是从导线起点开始沿导线测量的长度。如果未提供 <em>EndParam</em>，则默认到导线终点结束。</p>
-<aside class="aside-note"><mark>注释</mark> 如果 <em>StartParam</em> 和 <em>EndParam</em> 作为参数值提供，默认情况下它们不会被归一化，它们取决于曲线的参数化。然而，在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReparametrisedCompositeCurveSegment.htm">IfcReparametrisedCompositeCurveSegment</a></em> 作为导线允许显式地对基础扫掠曲线进行重新参数化。</aside><aside class="aside-note"><mark>注释</mark> 对于由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveSegment.htm">IfcCurveSegment</a></em> 组成的曲线，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 的 <em>Position</em> 取决于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveSegment.htm">IfcCurveSegment</a></em> 的 <em>StartPlacement</em> 以及定义段起点和终点（明确定义为下一个段的起点）之间_名称-函数_关系的 <em>BasisCurve</em> 类型。</aside><aside class="aside-example"><mark>示例</mark> 参考曲面是位于 3D 空间中并定位于对象坐标系内的任何曲面（平面、圆柱面、复合曲面）。在许多情况下，它是一个拉伸曲面。导线位于该曲面上，通常定义为该参考曲面上的 p 曲线。在导线的任何点处，都可以构造一个平面。位置坐标系的原点位于导线上。位置坐标系的 Axis3（z 轴，或法线）与该点处导线的切线相同，位置坐标系的 Axis1（x 轴，或 u）与_固定引用_方向相同。Axis2（y 轴，或 v）被构造出来。在这种情况下，生成的扫掠实体不会被重新定位。</aside>
-<p><em>SweptArea</em> 沿着_导线_扫掠时的方向通过具有以下属性的 <em>CartesianTransformationOperator3d</em> 精确定义：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFixedReferenceSweptAreaSolid.htm">IfcFixedReferenceSweptAreaSolid</a></em> 是一种扫掠区域实体，它是沿 <em>Directrix</em> 扫掠区域的结果。扫掠区域由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 的子类型提供。型材通过一个隐式的笛卡尔变换算子放置在扫掠的起始点，此时型材法线与该点处样条曲线的起始切线一致，并且型材的 x 轴与 <em>FixedReference</em> 方向在起始切线和 <em>FixedReference</em> 定义的平面内的正交投影一致。曲线在扫掠操作过程中的方向由 <em>FixedReference</em> 方向控制。</p>
+<!-- end of short definition -->
+<p><em>SweptArea</em> 沿 <em>Directrix</em> 扫掠的方式是，用于定义 <em>SweptArea</em> 的局部坐标系的原点位于 <em>Directrix</em> 上，并且局部 x 轴沿 <em>FixedReference</em> 方向在垂直于该点的法平面上的投影方向。生成的实体具有这样的特性：在任何点处，通过 <em>Directrix</em> 的法平面与 <em>Directrix</em> 的截面是 <em>SweptArea</em> 的副本。生成的扫掠实体由 <em>Position</em> 坐标系放置。</p>
+<p><em>Directrix</em> 和 <em>ReferenceSurface</em> 在对象坐标系内放置。扫掠操作的开始点是 <em>StartParam</em>，它可以是基于曲线参数化的参数值，也可以是沿样条曲线从其起点测量的长度。如果未提供 <em>StartParam</em>，则默认从样条曲线的起点开始。扫掠操作的结束点是 <em>EndParam</em>，它可以是基于曲线参数化的参数值，也可以是沿样条曲线从其起点测量的长度。如果未提供 <em>EndParam</em>，则默认从样条曲线的终点结束。</p>
+<aside class="aside-note"><mark>注释</mark> The <em>StartParam</em> and the <em>EndParam</em>, if provided as a parameter value, are not normalized by default, they depend upon the parameterization of the curve. However using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReparametrisedCompositeCurveSegment.htm">IfcReparametrisedCompositeCurveSegment</a></em> within an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> as the directrix allows to explicitly reparameterize the underlying sweeping curve.</aside><aside class="aside-note"><mark>注释</mark> In the case of a curve composed of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveSegment.htm">IfcCurveSegment</a></em>, the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> <em>Position</em> is dependent on the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveSegment.htm">IfcCurveSegment</a></em> <em>StartPlacement</em> and the type of <em>BasisCurve</em> which defines the <em>name-function</em> between the start and end (explicitly defined as the start point of the next segment) points of the segment</aside><aside class="aside-example"><mark>示例</mark> The reference surface is any surface (plane, cylindric, composite) situated in 3D space and positioned in the object coordinate system. In many cases, it is a surface of extrusion. The directrix lies on the surface, often defined as a p-curve at this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system lies at the directrix. The Axis3 (the z-axis, or normal) of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 (the x axis, or u) of the position coordinate system is identical to the <em>FixedReference</em> direction. The Axis2 (the y axis, or v) is constructed. In this case the resulting swept solid is not repositioned.</aside>
+<p>扫掠沿 <em>Directrix</em> 的 <em>SweptArea</em> 的方向由一个 <em>CartesianTransformationOperator3d</em> 精确定义，其属性如下：</p>
 <ul>
-<li><em>LocalOrigin</em> 作为点 (0; 0; 0)，</li>
-<li><em>Axis1</em> 作为 <em>FixedReference</em> 在由 <em>Axis3</em> 定义的法平面上的正交投影。</li>
-<li><em>Axis3</em> 作为参数为 <strong>u</strong> 的 <em>Directrix</em> 点处的切向量 <strong>t</strong> 的方向。</li>
+<li><em>LocalOrigin</em> 为点 (0; 0; 0)，</li>
+<li><em>Axis1</em> 为 <em>FixedReference</em> 在由 <em>Axis3</em> 定义的法平面上的投影。</li>
+<li><em>Axis3</em> 为 <em>Directrix</em> 参数 <strong>u</strong> 处的切线向量 <strong>t</strong> 的方向。</li>
 </ul>
-<p>其余属性默认为定义相应的变换矩阵 <strong>T(u)</strong>，该矩阵随 <em>Directrix</em> 参数 <strong>u</strong> 变化。</p>
-<aside class="aside-note"><mark>注释</mark> 实体的几何形状不依赖于曲线参数化；体积取决于扫掠的面积和_导线_的长度。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>fixed_reference_swept_surface</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+<p>其余属性默认为定义一个相应的变换矩阵 <strong>T(u)</strong>，该矩阵随 <em>Directrix</em> 参数 <strong>u</strong> 而变化。</p>
+<aside class="aside-note"><mark>注释</mark> The geometric shape of the solid is not dependent upon the curve parameterization; the volume depends upon the area swept and the length of the <em>Directrix</em>.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>fixed_reference_swept_surface</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li><em>SweptArea</em> 应位于平面 z = 0 内。</li>
-<li><em>FixedReference</em> 不应与此曲线上任意点处的导线切向量平行。</li>
+<li><em>SweptArea</em> 应位于 z = 0 的平面上。</li>
+<li><em>FixedReference</em> 不得平行于该曲线沿某一点的样条曲线切线向量。</li>
 <li><em>Directrix</em> 曲线应是切线连续的。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.20.2-Entity-inheritance-"></a>
@@ -298,7 +298,7 @@
     8.8.3.20.3 特性（Attributes）
 <a class="link" href="#8.8.3.20.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-d651512c-0a54-43db-a242-194e47e6548c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-548a66ee-5ecf-4a36-be41-2779d66f1466"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -327,8 +327,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -338,8 +338,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -359,7 +359,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -377,7 +377,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
 <td data-label="Description">
-<p>The surface defining the area to be swept. It is given as a profile definition within the xy plane of the position coordinate system.</p>
+<p>定义要扫掠的区域的曲面。它在位置坐标系的 xy 平面内以轮廓定义的形式给出。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -389,7 +389,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>Position coordinate system for the resulting swept solid of the sweeping operation. The position coordinate system allows for re-positioning of the swept solid. If not provided, the swept solid remains within the position as determined by the cross section or by the directrix used for the sweeping operation.</p>
+<p>扫掠操作所得扫掠实体的放置坐标系。放置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保留在由横截面或用于扫掠操作的导曲线确定的位置内。</p>
 <aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 </td>
 </tr>
@@ -408,7 +408,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
 <td data-label="Description">
-<p>用于定义扫掠操作的曲线。实体是通过将 SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.SweptArea 沿准线扫掠而生成的。</p>
+<p>用于定义扫掠操作的曲线。实体是通过沿 Directrix 扫掠 SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.SweptArea 来生成的。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -420,7 +420,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveMeasureSelect.htm">IfcCurveMeasureSelect</a></td>
 <td data-label="Description">
-<p>扫掠操作开始的准线上的参数值。如果未提供值，则扫掠操作从准线的起点开始。</p>
+<p>扫掠操作开始时 Directrix 上的参数值。如果未提供值，则扫掠操作的开始点是 Directrix 的起点。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -432,7 +432,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveMeasureSelect.htm">IfcCurveMeasureSelect</a></td>
 <td data-label="Description">
-<p>扫掠操作结束的准线上的参数值。如果未提供值，则扫掠操作在准线的终点结束。</p>
+<p>扫掠操作结束时 Directrix 上的参数值。如果未提供值，则扫掠操作的结束点是 Directrix 的终点。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -468,7 +468,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.20.A<a class="link" href="#-d651512c-0a54-43db-a242-194e47e6548c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.20.A<a class="link" href="#-548a66ee-5ecf-4a36-be41-2779d66f1466"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.20.4-Formal-representation-"></a>
     8.8.3.20.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.20.4-Formal-representation-"><i data-feather="link"></i></a></h2>
