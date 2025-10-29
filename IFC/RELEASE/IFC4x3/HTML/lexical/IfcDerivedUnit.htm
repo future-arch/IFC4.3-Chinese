@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.11.3.4 IfcDerivedUnit（派生单位） - IFC 4.3.2 Documentation</title>
+<title>8.11.3.4 IfcDerivedUnit - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,13 +189,13 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.11.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a>（派生单位）</h1>
+<h1>8.11.3.4 IfcDerivedUnit</h1>
 <div class="mvd" title="Included in Project Units">RV ⓘ</div>
 <div class="mvd" title="Included in Project Units">AbV ⓘ</div>
 <h2><a class="anchor" id="8.11.3.4.1-Semantic-definition-"></a>
     8.11.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.11.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>派生单位是通过其他单位的表达式构成的单位。</p>
+<p>派生单位是由其他单位的表达式形成的单位。</p>
 <!-- end of short definition -->
 <figure><a class="anchor" id="-MPH-"></a><svg height="409px" viewbox="0.00 0.00 766.00 409.00" width="766px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 405.25)">
@@ -382,7 +382,7 @@
 </g>
 </g>
 </svg><figcaption>图 8.11.3.4.A — 如何将英里每小时分配为派生单位的示例<a class="link" href="#-MPH-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-reference"><mark>参考</mark> 根据 ISO/CD 10303-41:1992 对 <code>derived_unit</code> 的定义。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5.1 中的新实体。</aside>
+<aside class="aside-reference"><mark>参考</mark> Definition according to ISO/CD 10303-41:1992 of <code>derived_unit</code>.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.1.</aside>
 <h2><a class="anchor" id="8.11.3.4.2-Entity-inheritance-"></a>
     8.11.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.11.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -398,7 +398,7 @@
     8.11.3.4.3 特性（Attributes）
 <a class="link" href="#8.11.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-eb384e46-5c90-4a5c-8a5b-49e5e58a1ef2"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-8aca3480-d914-44a1-bae8-75150f19f189"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -429,7 +429,7 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a></td>
 <td data-label="Description">
-<p>定义派生单位的单位组及其指数。</p>
+<p>构成派生单位的单位及其指数的集合。</p>
 </td>
 </tr>
 <tr>
@@ -441,8 +441,8 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a></td>
 <td data-label="Description">
-<p>从派生单位类型枚举中选择的派生单位类型，用于 IFC 模型。</p>
-<aside class="aside-example"><mark>示例</mark> 速度测量的英制单位名称为英里每小时，或 mph，其 UnitType 为 .LINEARVELOCITYUNIT。</aside>
+<p>派生单位的类型，从派生单位类型枚举中选择，用于 IFC 模型。</p>
+<aside class="aside-example"><mark>示例</mark> The imperial unit name for a velosity measure is miles per hour, or mph, with a UnitType of .LINEARVELOCITYUNIT.</aside>
 </td>
 </tr>
 <tr>
@@ -454,8 +454,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>如果 UnitType 属性设置为 USERDEFINED，则为派生单位的类型。</p>
-<aside class="aside-note"><mark>注释</mark> 仅当 UnitType 中不可用单位类型时，才应使用 UserDefinedType。</aside>
+<p>当 UnitType 属性设置为 USERDEFINED 时，派生单位的类型。</p>
+<aside class="aside-note"><mark>注释</mark> The UserDefinedType shall only be used if the unit type is not available in UnitType.</aside>
 </td>
 </tr>
 <tr>
@@ -467,8 +467,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>除单位类型外的单位名称，特别是当派生单位元素引用基于转换或上下文的单位时。</p>
-<aside class="aside-example"><mark>示例</mark> 速度测量的英制单位名称为英里每小时，或 MPH，其 <em>Name</em> 为 'MPH'。</aside>
+<p>除了单位类型之外的单位名称，特别是当派生单位元素引用转换单位或上下文相关单位时。</p>
+<aside class="aside-example"><mark>示例</mark> The imperial unit name for a velocity measure is miles per hour, or MPH, with a <em>Name</em> of 'MPH'.</aside>
 </td>
 </tr>
 <tr>
@@ -482,15 +482,15 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDeriveDimensionalExponents.htm">IfcDeriveDimensionalExponents</a>(Elements)</code></pre>
-<p>使用函数 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDeriveDimensionalExponents.htm">IfcDeriveDimensionalExponents</a> 并以 (SELF) 作为输入值导出的量纲指数。</p>
+<p>使用函数 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDeriveDimensionalExponents.htm">IfcDeriveDimensionalExponents</a> 以 (SELF) 作为输入值派生的维度指数。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.11.3.4.B<a class="link" href="#-eb384e46-5c90-4a5c-8a5b-49e5e58a1ef2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.11.3.4.B<a class="link" href="#-8aca3480-d914-44a1-bae8-75150f19f189"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.11.3.4.4-Formal-propositions-"></a>
     8.11.3.4.4 形式化命题（Formal propositions）
 <a class="link" href="#8.11.3.4.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-35c06ebd-136e-4c84-9bd5-a8bd86975188"></a><table>
+<figure><a class="anchor" id="-2490617f-d275-429d-ad79-e3a20e34c4af"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -501,7 +501,7 @@
 <tr>
 <td>WR1</td>
 <td>
-<p>单位本身不应重新定义为派生单位。</p>
+<p>单位本身不得被重新定义为派生单位。</p>
 </td>
 </tr>
 <tr>
@@ -512,7 +512,7 @@
 <tr>
 <td>WR2</td>
 <td>
-<p>当属性 UnitType 具有枚举值 USERDEFINED 时，属性 UserDefinedType 也应具有值。</p>
+<p>当属性 UnitType 的枚举值为 USERDEFINED 时，属性 UserDefinedType 也必须具有值。</p>
 </td>
 </tr>
 <tr>
@@ -523,7 +523,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.11.3.4.C<a class="link" href="#-35c06ebd-136e-4c84-9bd5-a8bd86975188"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.11.3.4.C<a class="link" href="#-2490617f-d275-429d-ad79-e3a20e34c4af"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.11.3.4.5-Formal-representation-"></a>
     8.11.3.4.5 形式化表示（Formal representation）
 <a class="link" href="#8.11.3.4.5-Formal-representation-"><i data-feather="link"></i></a></h2>
