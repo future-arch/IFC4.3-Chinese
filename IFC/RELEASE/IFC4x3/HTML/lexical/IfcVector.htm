@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.75 IfcVector（向量） - IFC 4.3.2 Documentation</title>
+<title>8.9.3.75 IfcVector - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,16 +189,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.75 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a>（向量）</h1>
+<h1>8.9.3.75 IfcVector</h1>
 <div class="mvd" title="Included in Annotation 2D Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Annotation 2D Geometry, IfcLine.Dir">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.75.1-Semantic-definition-"></a>
     8.9.3.75.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.75.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em> 是一种同时具有大小和方向的几何表示项。向量的大小完全由 <em>Magnitude</em> 属性定义，方向完全由 <em>Orientation</em> 属性定义。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> <em>Orientation</em> 属性的 <em>DirectionRatios</em> 不用于定义向量大小。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-向量通过其方向和大小来定义。magnitude 属性的值定义了向量的大小。向量的大小无法通过 orientation 属性的分量可靠计算得出。选择这种表示形式是为了减少数值不稳定性的问题。例如，一个大小为 2.0 毫米且与坐标轴等倾斜的向量可以用 (1.0,1.0,1.0) 的 Orientation 属性表示。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>vector</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em> 是一个同时具有大小和方向的几何表示项。向量的大小仅由 <em>Magnitude</em> 特性定义，方向仅由 <em>Orientation</em> 特性定义。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> The <em>DirectionRatios</em> of the <em>Orientation</em> attribute are not used to define the magnitude.</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+The vector is defined in terms of the direction and magnitude of the vector. The value of the magnitude attribute defines the magnitude of the vector. The magnitude of the vector can not be reliable calculated from the components of the orientation attribute. This form of representation was selected to reduce problems with numerical instability. For example a vector of magnitude 2.0 mm and equally inclined to the coordinate axes could be represented with Orientation attribute of (1.0,1.0,1.0).</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>vector</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0</aside>
 <h2><a class="anchor" id="8.9.3.75.2-Entity-inheritance-"></a>
     8.9.3.75.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.75.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -253,7 +253,7 @@
     8.9.3.75.3 特性（Attributes）
 <a class="link" href="#8.9.3.75.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-08a70198-f979-45f1-9e01-99b8436dfdc4"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-8653d5a7-a62b-4d4c-a382-cc81c2aaeb3e"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -282,8 +282,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -293,8 +293,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -336,7 +336,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>向量的大小。所有大小为 0.0 的向量无论 orientation 属性如何，均被视为等值。</p>
+<p>向量的大小。所有大小为 0.0 的向量，无论方向属性如何，都视为相等。</p>
 </td>
 </tr>
 <tr>
@@ -350,15 +350,15 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">Orientation.Dim</code></pre>
-<p>此类的空间维度，从 Orientation 派生而来。</p>
+<p>此类的空间维度，它派生自 Orientation。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.75.A<a class="link" href="#-08a70198-f979-45f1-9e01-99b8436dfdc4"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.75.A<a class="link" href="#-8653d5a7-a62b-4d4c-a382-cc81c2aaeb3e"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.75.4-Formal-propositions-"></a>
     8.9.3.75.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.75.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-07bc502b-d07c-4613-8b33-a108c340d897"></a><table>
+<figure><a class="anchor" id="-da1962ab-1a52-4d2f-890d-c5ac88532ce3"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -369,7 +369,7 @@
 <tr>
 <td>MagGreaterOrEqualZero</td>
 <td>
-<p>大小应为正数或零。</p>
+<p>大小必须为正数或零。</p>
 </td>
 </tr>
 <tr>
@@ -378,7 +378,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.75.B<a class="link" href="#-07bc502b-d07c-4613-8b33-a108c340d897"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.75.B<a class="link" href="#-da1962ab-1a52-4d2f-890d-c5ac88532ce3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.75.5-Formal-representation-"></a>
     8.9.3.75.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.75.5-Formal-representation-"><i data-feather="link"></i></a></h2>
