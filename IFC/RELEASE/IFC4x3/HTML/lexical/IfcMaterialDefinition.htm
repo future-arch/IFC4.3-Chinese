@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.10.3.5 IfcMaterialDefinition（材料定义） - IFC 4.3.2 Documentation</title>
+<title>8.10.3.5 IfcMaterialDefinition - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.10.3.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a>（材料定义）</h1>
+<h1>8.10.3.5 IfcMaterialDefinition</h1>
 <div class="mvd" title="Included in IfcMaterial, IfcMaterialConstituent, IfcMaterialConstituentSet, IfcMaterialLayer, IfcMaterialLayerSet, IfcMaterialProfile, IfcMaterialProfileSet, IfcMaterialProperties.Material">RV ⓘ</div>
 <div class="mvd" title="Included in IfcMaterial, IfcMaterialConstituent, IfcMaterialConstituentSet, IfcMaterialLayer, IfcMaterialLayerSet, IfcMaterialProfile, IfcMaterialProfileSet, IfcMaterialProperties.Material">AbV ⓘ</div>
 <div class="row">
@@ -202,16 +202,18 @@
 <h2><a class="anchor" id="8.10.3.5.1-Semantic-definition-"></a>
     8.10.3.5.1 语义定义（Semantic definition）
 <a class="link" href="#8.10.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 是 IFC 中所有材料相关信息项的通用超类型，这些信息项具有通用的材料相关属性，可能包括材料与某些形状参数的关联或对构件特定部分的分配。</p>
-<!-- 简短定义结束 -->
-<p>向单个构件或多个构件分配材料有三种方式，其特征如下：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 是 IFC 中所有与材料相关的项目信息的通用超类型，这些信息具有共同的与材料相关的属性，可能包括将材料与某些形状参数关联或分配给组件的已识别部分。</p>
+<!-- end of short definition -->
+<p>有三种将材料分配给单个组件或多个组件的方法；它们被描述为：</p>
 <ul>
-<li>按层分配 - 将材料分配给具有恒定厚度的层</li>
-<li>按轮廓分配 - 将材料分配给沿拉伸方向形状恒定或变化的轮廓</li>
-<li>按成分分配 - 将材料分配给构件形状的特定部分；通过关键字而非形状参数进行标识</li>
+<li>按层 - 将材料分配给具有恒定厚度的层</li>
+<li>按型材 - 将材料分配给沿挤压具有恒定或变化的形状的型材</li>
+<li>按构成部分 - 将材料分配给组件形状的已识别部分；标识是通过关键字而不是形状参数进行的</li>
 </ul>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 的每个可实例化子类型都可以分配材料属性，或具有外部分类定义。通过使用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>，可以将其分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 的子类型或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 的子类型。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中的新增实体</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 的每个可实例化子类型都可以分配材料属性，或具有其定义的外部分类。可以通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 将其分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 的子类型或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 的子类型。</p>
+<blockquote>
+<p>HISTORY  New entity in IFC4</p>
+</blockquote>
 <h2><a class="anchor" id="8.10.3.5.2-Entity-inheritance-"></a>
     8.10.3.5.2 实体继承（Entity inheritance）
 <a class="link" href="#8.10.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -239,7 +241,7 @@
     8.10.3.5.3 特性（Attributes）
 <a class="link" href="#8.10.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-bf86a555-bb43-4349-bc6c-667be3ea17fb"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-baaaa31c-60c1-450c-9105-3d16bd73f3d3"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -268,8 +270,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a> FOR RelatingMaterial</td>
 <td data-label="Description">
-<p>在构件实例或构件类型的材料关联中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型。该关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型在元素实例或元素类型材料关联中的使用。关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute has been added.</aside>
 </td>
 </tr>
 <tr>
@@ -279,8 +281,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>引用与材料相关的外部参考，例如库、分类或文档信息。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+<p>指向与材料关联的外部引用，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute has been added.</aside>
 </td>
 </tr>
 <tr>
@@ -291,11 +293,11 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProperties.htm">IfcMaterialProperties</a> FOR Material</td>
 <td data-label="Description">
 <p>分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型实例的材料属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute has been added.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.10.3.5.A<a class="link" href="#-bf86a555-bb43-4349-bc6c-667be3ea17fb"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.5.A<a class="link" href="#-baaaa31c-60c1-450c-9105-3d16bd73f3d3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.5.4-Formal-representation-"></a>
     8.10.3.5.4 形式化表示（Formal representation）
 <a class="link" href="#8.10.3.5.4-Formal-representation-"><i data-feather="link"></i></a></h2>
