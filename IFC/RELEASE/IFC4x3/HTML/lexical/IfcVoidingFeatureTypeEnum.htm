@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.11.2.12 IfcVoidingFeatureTypeEnum（孔洞特征类型枚举） - IFC 4.3.2 Documentation</title>
+<title>7.11.2.12 IfcVoidingFeatureTypeEnum - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -159,17 +159,17 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>7.11.2.12 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVoidingFeatureTypeEnum.htm">IfcVoidingFeatureTypeEnum</a>（孔洞特征类型枚举）</h1>
+<h1>7.11.2.12 IfcVoidingFeatureTypeEnum</h1>
 <h2><a class="anchor" id="7.11.2.12.1-Semantic-definition-"></a>
     7.11.2.12.1 语义定义（Semantic definition）
 <a class="link" href="#7.11.2.12.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>此枚举根据孔洞特征的形状及其相对于被开孔元素的配置对其进行分类。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC4 中新增类型。</aside>
+<p>该枚举根据其形状和相对于被镂空构件的配置来限定镂空特征。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New type in IFC4.</aside>
 <h2><a class="anchor" id="7.11.2.12.2-"></a>
     7.11.2.12.2 类型值
 <a class="link" href="#7.11.2.12.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-f1cd5713-53bb-4552-811c-5ca289479efa"></a><table class="striped type-values">
+<figure><a class="anchor" id="-ffe7729f-a640-4ef4-b224-79075263db5f"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -180,53 +180,53 @@
 <tr>
 <td data-label="Name"><code>CHAMFER
             <td data-label="Description">
-<p>倾斜的端面切割，仅在被开孔元素轮廓的一部分上移除材料。</p>
+<p>斜面端部切割，仅移除被镂空构件部分轮廓的材料。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>CUTOUT
             <td data-label="Description">
-<p>任意形状的内部切口（创建开口）或外部切口（创建凹槽）。切割平面之间的边缘可能被过度切割或欠切割，即呈圆角状。</p>
+<p>任意形状的内部镂空（创建开口）或外部镂空（创建凹槽）。切割平面之间的边缘可以是过切或欠切，即圆角。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>EDGE
             <td data-label="Description">
-<p>沿元素边缘的形状修改，以边缘长度作为特征的主要尺寸，且特征轮廓尺寸通常远小于边缘长度。例如可以是斜角边缘（通过尺寸比例与倒角区分，因此通常采用不同的制造工艺）、圆角边缘（凸边缘特征）或圆角过渡边缘（凹边缘特征）。</p>
+<p>构件边缘的形状修改，其中边缘长度是特征的主要尺寸，特征轮廓尺寸通常远小于边缘长度。例如可以是倒角边缘（与斜角不同，其尺寸比例不同，因此制造方式通常也不同）、圆角边缘（凸边特征）或圆角边缘（凹边特征）。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>HOLE
             <td data-label="Description">
-<p>圆形、槽形或螺纹孔，通常（但不一定）尺寸小于被视为切口的特征。</p>
+<p>圆形、长圆形或螺纹孔，通常尺寸小于被视为镂空孔的尺寸。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>MITER
             <td data-label="Description">
-<p>倾斜的端面切割，在整个被开孔元素轮廓上移除材料。</p>
+<p>斜面端部切割，移除被镂空构件整个轮廓的材料。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>NOTCH
             <td data-label="Description">
-<p>具有主要呈矩形切割轮廓的外部切口。切割平面之间的边缘可能被过度切割或欠切割，即呈圆角状。</p>
+<p>具有大部分矩形切割轮廓的外部镂空。切割平面之间的边缘可以是过切或欠切，即圆角。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>USERDEFINED
             <td data-label="Description">
-<p>用户定义的孔洞特征类型。</p>
+<p>用户定义的镂空特征类型。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>NOTDEFINED
             <td data-label="Description">
-<p>未定义的孔洞特征类型。</p>
+<p>未定义的镂空特征类型。</p>
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 7.11.2.12.A<a class="link" href="#-f1cd5713-53bb-4552-811c-5ca289479efa"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.11.2.12.A<a class="link" href="#-ffe7729f-a640-4ef4-b224-79075263db5f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.11.2.12.3-Formal-representation-"></a>
     7.11.2.12.3 形式化表示（Formal representation）
 <a class="link" href="#7.11.2.12.3-Formal-representation-"><i data-feather="link"></i></a></h2>
