@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7.2.1 IfcAlignmentCantSegmentTypeEnum（线形超高段类型枚举） - IFC 4.3.2 Documentation</title>
+<title>8.7.2.1 IfcAlignmentCantSegmentTypeEnum - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,25 +189,25 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.7.2.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentCantSegmentTypeEnum.htm">IfcAlignmentCantSegmentTypeEnum</a>（线形超高段类型枚举）</h1>
+<h1>8.7.2.1 IfcAlignmentCantSegmentTypeEnum</h1>
 <h2><a class="anchor" id="8.7.2.1.1-Semantic-definition-"></a>
     8.7.2.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.7.2.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentCantSegmentTypeEnum.htm">IfcAlignmentCantSegmentTypeEnum</a> 表示超高线形段（<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentCantSegment.htm">IfcAlignmentCantSegment</a>）的段类型。</p>
-<!-- 简短定义结束 -->
-<p>超高定义为在轨道横截面中，一根钢轨相对于另一根钢轨抬高的量值。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentCantSegmentTypeEnum.htm">IfcAlignmentCantSegmentTypeEnum</a> 指示了纵坡对齐段 (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentCantSegment.htm">IfcAlignmentCantSegment</a>) 的一个段的类型。</p>
+<!-- end of short definition -->
+<p>纵坡定义为在轨道横截面中，一个钢轨相对于另一个钢轨抬高的量。</p>
 <aside class="aside-note"><mark>注释</mark> 根据 EN 13803/2017 的定义</aside>
-<p>对于三维建模，超高值和超高角（倾斜角、横向角、横坡角）均相关。</p>
-<p>超高值 <strong>D</strong>、轨头距离 <strong>b</strong> 和超高角 <strong>ψ</strong> 之间的关系如下所示。</p>
+<p>对于 3D 建模，纵坡值和纵坡角度（横坡角、侧倾角、横向坡度角）都很重要。</p>
+<p>纵坡值 <strong>D</strong>、轨头距离 <strong>b</strong> 和纵坡角 <strong>ψ</strong> 之间的关系如下所示。</p>
 <p>$$ \displaylines {
 \psi = \arcsin \frac{D}{b} \\
 \sin \psi \approx \psi \approx \tan \psi
 } $$</p>
-<aside class="aside-note"><mark>注释</mark> 在现代轨道工程中，ψ 经常用 ψ 的正弦或正切来近似表示。</aside>
-<figure><a class="anchor" id="-ccc92962-a31c-40fd-a4cf-612d7413756d"></a><table>
+<aside class="aside-note"><mark>注释</mark> 在现代轨道工程中，ψ 经常近似为 ψ 的正弦或 ψ 的正切。</aside>
+<figure><a class="anchor" id="-32790e2a-5f08-446f-84c1-af84743acc23"></a><table>
 <thead>
 <tr>
-<th style="text-align: left;">超高变化</th>
+<th style="text-align: left;">纵坡变化</th>
 <th style="text-align: left;">段类型</th>
 <th style="text-align: left;">枚举值</th>
 </tr>
@@ -215,42 +215,42 @@
 <tbody>
 <tr>
 <td style="text-align: left;">0</td>
-<td style="text-align: left;">两根钢轨无相对高程</td>
+<td style="text-align: left;">两侧钢轨无相对高差</td>
 <td style="text-align: left;">CONSTANTCANT</td>
 </tr>
 <tr>
-<td style="text-align: left;">在整个段中为常数，&lt;&gt; 0</td>
-<td style="text-align: left;">抬高的钢轨</td>
+<td style="text-align: left;">在整个段内恒定，&lt;&gt; 0</td>
+<td style="text-align: left;">抬高钢轨</td>
 <td style="text-align: left;">CONSTANTCANT</td>
 </tr>
 <tr>
 <td style="text-align: left;">沿段变化</td>
-<td style="text-align: left;">具有线性超高变化的过渡段</td>
+<td style="text-align: left;">线性纵坡变化过渡</td>
 <td style="text-align: left;">LINEARTRANSITION</td>
 </tr>
 <tr>
 <td style="text-align: left;">沿段变化</td>
-<td style="text-align: left;">具有非线性超高变化的过渡段</td>
+<td style="text-align: left;">非线性纵坡变化过渡</td>
 <td style="text-align: left;">HELMERTCURVE, BLOSSCURVE, COSINECURVE, SINECURVE, VIENNESEBEND</td>
 </tr>
 </tbody>
-</table><figcaption>表 8.7.2.1.A<a class="link" href="#-ccc92962-a31c-40fd-a4cf-612d7413756d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.2.1.A<a class="link" href="#-32790e2a-5f08-446f-84c1-af84743acc23"><i data-feather="link"></i></a></figcaption></figure>
 <h3><a class="anchor" id="8.7.2.1.1.1-Cant-variation-in-high-performance-transition-bends"></a>8.7.2.1.1.1 Cant variation in high performance transition bends<a class="link" href="#8.7.2.1.1.1-Cant-variation-in-high-performance-transition-bends"><i data-feather="link"></i></a></h3>
-<p>对于水平缓和曲线和线性超高过渡的组合，在某些情况下沿基线的延伸长度不同，而对于高性能水平过渡弯道，曲率过渡和超高过渡应具有相同的起始位置和结束位置。在某些规范中，对高性能过渡弯道强制要求相同的线性延伸要求。</p>
-<p>超高变化是由与相应水平高性能过渡弯道的曲率相同的基本公式定义，还是由线性斜坡定义，在不同规范之间也可能有所不同。</p>
+<p>虽然水平曲线和线性纵坡过渡的组合在某些情况下基线长度不同，但高性能水平过渡曲线的曲率过渡和纵坡过渡预计具有相同的起始位置和结束位置。在某些规定中，高性能过渡曲线强制要求相同的线性长度。</p>
+<p>纵坡变化是由与相应高性能水平过渡曲线曲率相同的基准公式定义的，还是由线性斜坡定义的，也可能因规定而异。</p>
 <h3><a class="anchor" id="8.7.2.1.1.2-Used-Symbols-and-their-meaning"></a>8.7.2.1.1.2 Used Symbols and their meaning<a class="link" href="#8.7.2.1.1.2-Used-Symbols-and-their-meaning"><i data-feather="link"></i></a></h3>
-<figure><a class="anchor" id="-83e58dc8-50dc-4cd7-bbf7-aa8c09545b63"></a><table>
+<figure><a class="anchor" id="-8ad71c0c-925b-4829-bffb-ee718db11e83"></a><table>
 <thead>
 <tr>
 <th style="text-align: left;">符号</th>
 <th style="text-align: left;">含义</th>
-<th style="text-align: left;">单位、值范围</th>
+<th style="text-align: left;">单位，值范围</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">L</td>
-<td style="text-align: left;">段的完整长度</td>
+<td style="text-align: left;">段的总长度</td>
 <td style="text-align: left;">正长度 L &gt; 0</td>
 </tr>
 <tr>
@@ -260,46 +260,46 @@
 </tr>
 <tr>
 <td style="text-align: left;">ξ</td>
-<td style="text-align: left;">= s / L（希腊字母 "xi"）沿线形/轨道中心线的标准化无量纲路径长度</td>
+<td style="text-align: left;">= s / L (希腊字母 "xi") 标准化、无量纲的对齐线/轨道中心线路径长度</td>
 <td style="text-align: left;">0 &lt; ξ &lt; 1</td>
 </tr>
 <tr>
 <td style="text-align: left;">D</td>
-<td style="text-align: left;">超高 .... 在轨道横截面中，一根钢轨相对于另一根钢轨抬高的量值</td>
+<td style="text-align: left;">纵坡...在轨道横截面中，一个钢轨相对于另一个钢轨抬高的量</td>
 <td style="text-align: left;">长度</td>
 </tr>
 <tr>
 <td style="text-align: left;">D<sub>1</sub></td>
-<td style="text-align: left;">线形段起始处的超高</td>
+<td style="text-align: left;">对齐段开始处的纵坡</td>
 <td style="text-align: left;">长度</td>
 </tr>
 <tr>
 <td style="text-align: left;">D(s)</td>
-<td style="text-align: left;">沿超高线形段在站点 "s" 处的可变超高。</td>
+<td style="text-align: left;">沿对齐纵坡段的站点 "s" 的可变纵坡。</td>
 <td style="text-align: left;">长度</td>
 </tr>
 <tr>
 <td style="text-align: left;">b</td>
-<td style="text-align: left;">轨头距离；轮对两个接触斑名义中心点之间的距离（例如，对于标称轨距 1435 mm，约为 1500 mm）</td>
+<td style="text-align: left;">轨头距离；车轮组标称中心点之间的距离（例如，标称轨距 1435 毫米约为 1500 毫米）</td>
 <td style="text-align: left;">长度</td>
 </tr>
 <tr>
 <td style="text-align: left;">ψ</td>
-<td style="text-align: left;">（希腊字母 "psi"）超高角（横坡角、倾斜角）</td>
+<td style="text-align: left;">(希腊字母 "psi") 纵坡角（横向坡度角、横坡角）</td>
 <td style="text-align: left;">弧度</td>
 </tr>
 <tr>
 <td style="text-align: left;">φ</td>
-<td style="text-align: left;">（希腊字母 "phi"）方向角（方位角、象限角）</td>
+<td style="text-align: left;">(希腊字母 "phi") 方向角（方位角、方位）</td>
 <td style="text-align: left;">弧度</td>
 </tr>
 </tbody>
-</table><figcaption>表 8.7.2.1.1.2.A<a class="link" href="#-83e58dc8-50dc-4cd7-bbf7-aa8c09545b63"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.2.1.1.2.A<a class="link" href="#-8ad71c0c-925b-4829-bffb-ee718db11e83"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-note"><mark>注释</mark> 符号根据 EN 13803/2017</aside>
 <h2><a class="anchor" id="8.7.2.1.2-"></a>
     8.7.2.1.2 类型值
 <a class="link" href="#8.7.2.1.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-da9e8cb1-c647-41b5-965f-cf432fa9eb98"></a><table class="striped type-values">
+<figure><a class="anchor" id="-66e343c2-3b9a-49aa-b162-35c87840f731"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -310,7 +310,7 @@
 <tr>
 <td data-label="Name"><code>BLOSSCURVE
             <td data-label="Description">
-<p>根据 Bloss 曲线基本公式的非线性超高变化。<br/><br/></p><p><strong>基本公式（超高）</strong></p><p>$$ \displaylines{
+<p>根据 Bloss 曲线基准公式进行的非线性纵坡变化。<br/><br/></p><p><strong>基准公式（纵坡）</strong></p><p>$$ \displaylines {
 \xi = \frac{s}{L} \\
 D(s) = D_{1} + (3 - 2\xi) \cdot  \xi^2 \ \Delta D
 } $$</p>
@@ -319,33 +319,33 @@ D(s) = D_{1} + (3 - 2\xi) \cdot  \xi^2 \ \Delta D
 <tr>
 <td data-label="Name"><code>CONSTANTCANT
             <td data-label="Description">
-<p>对于水平直线，不需要且应避免横向加速度的补偿。因此，应用的超高值为常数 0。</p><p>对于水平圆曲线，横向加速度的补偿非常常见。在这些情况下，应用的超高值为大于 0 的常数。
- <br/><br/></p><p><strong>基本公式（超高）</strong></p><p>$$ D=Const $$</p>
+<p>对于水平直线，不需要补偿横向加速度，应避免。因此，应用的纵坡值为恒定的 0。</p><p>对于水平圆弧，通常需要补偿横向加速度。在这种情况下，应用的纵坡值为大于 0 的恒定值。
+ <br/><br/></p><p><strong>基准公式（纵坡）</strong></p><p>$$ D=Const $$</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>COSINECURVE
             <td data-label="Description">
-<p>根据余弦曲线基本公式的非线性超高变化。<br/><br/></p><p><strong>基本公式（超高）</strong></p><p>$$ \displaylines{
+<p>根据余弦曲线基准公式进行的非线性纵坡变化。<br/><br/></p><p><strong>基准公式（纵坡）</strong></p><p>$$ \displaylines{
 \xi = \frac{s}{L} \\
-D(s) = D_{1} + \frac{1}{2} \cdot (1- cos(\pi\xi) \ ) \Delta D
+D(s) = D_{1} + \frac{1}{2} \cdot (1- cos(\pi\xi) \ ) \ \Delta D
 } $$</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>HELMERTCURVE
             <td data-label="Description">
-<p>根据 Helmert 曲线基本公式的非线性超高变化。<br/><br/></p><p><strong>基本公式（超高）</strong></p><p>$$ \displaylines{
+<p>根据 Helmert 曲线基准公式进行的非线性纵坡变化。<br/><br/></p><p><strong>基准公式（纵坡）</strong></p><p>$$ \displaylines{
 \xi = \frac{s}{L} \\
-\text{前半段: } D(s) = D_{1} + 2 \cdot \xi^2 \ \Delta D \\
-\text{后半段: } D(s) = D_{1} + ( 1 - 2 \cdot (1 - \xi)^2) \ \Delta D
+\text{前半部分: } D(s) = D_{1} + 2 \cdot \xi^2 \ \Delta D \\
+\text{后半部分: } D(s) = D_{1} + ( 1 - 2 \cdot (1 - \xi)^2) \ \Delta D
 } $$</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>LINEARTRANSITION
             <td data-label="Description">
-<p>线性超高变化。这是水平缓和曲线的"自然"公式。<br/><br/></p><p><strong>基本公式（超高）</strong></p><p>$$ \displaylines {
+<p>线性纵坡变化。这是水平曲线的“自然”公式。<br/><br/></p><p><strong>基准公式（纵坡）</strong></p><p>$$ \displaylines {
 \xi = \frac{s}{L} \\
 D(s) = D_{1} + \xi \ \Delta D
 } $$</p>
@@ -354,7 +354,7 @@ D(s) = D_{1} + \xi \ \Delta D
 <tr>
 <td data-label="Name"><code>SINECURVE
             <td data-label="Description">
-<p>根据正弦曲线基本公式的非线性超高变化。<br/><br/></p><p><strong>基本公式（超高）</strong></p><p>$$ \displaylines {
+<p>根据正弦曲线基准公式进行的非线性纵坡变化。<br/><br/></p><p><strong>基准公式（纵坡）</strong></p><p>$$ \displaylines {
 \xi = \frac{s}{L} \\
 D(s) = D_{1} + ( \xi - \frac{1}{2\pi}\cdot sin(2\pi\xi) \ ) \ \Delta D
 } $$</p>
@@ -363,7 +363,7 @@ D(s) = D_{1} + ( \xi - \frac{1}{2\pi}\cdot sin(2\pi\xi) \ ) \ \Delta D
 <tr>
 <td data-label="Name"><code>VIENNESEBEND
             <td data-label="Description">
-<p>根据维也纳弯道基本公式的非线性超高变化。在所有其他过渡曲线中，超高变化对水平笛卡尔二维坐标空间中曲线的决定性影响是独特的。<br/><br/></p><p><strong>基本公式（超高）</strong></p><p>$$ \displaylines {
+<p>根据维也纳弯道基准公式进行的非线性纵坡变化。在水平笛卡尔二维坐标空间中，纵坡变化对曲线的决定性影响在所有其他过渡曲线中是独一无二的。<br/><br/></p><p>.<strong>基准公式（纵坡）</strong></p><p>$$ \displaylines {
 \xi = \frac{s}{L} \\
 \psi = \arcsin \frac{D}{b} \\
 \sin \psi \approx \psi \approx \tan \psi  \\
@@ -372,7 +372,7 @@ D(s) = D_{1} + ( \xi - \frac{1}{2\pi}\cdot sin(2\pi\xi) \ ) \ \Delta D
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 8.7.2.1.1.2.B<a class="link" href="#-da9e8cb1-c647-41b5-965f-cf432fa9eb98"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.2.1.1.2.B<a class="link" href="#-66e343c2-3b9a-49aa-b162-35c87840f731"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.2.1.3-Formal-representation-"></a>
     8.7.2.1.3 形式化表示（Formal representation）
 <a class="link" href="#8.7.2.1.3-Formal-representation-"><i data-feather="link"></i></a></h2>
