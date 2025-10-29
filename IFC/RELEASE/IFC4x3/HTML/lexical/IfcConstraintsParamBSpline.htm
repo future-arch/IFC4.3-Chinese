@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.6.6 IfcConstraintsParamBSpline（约束参数B样条） - IFC 4.3.2 Documentation</title>
+<title>8.9.6.6 IfcConstraintsParamBSpline - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,20 +189,19 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.6.6 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraintsParamBSpline.htm">IfcConstraintsParamBSpline</a>（约束参数B样条）</h1>
+<h1>8.9.6.6 IfcConstraintsParamBSpline</h1>
 <h2><a class="anchor" id="8.9.6.6.1-Semantic-definition-"></a>
     8.9.6.6.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.6.6.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 根据ISO/CD 10303-42:1992的定义
-此函数检查B样条曲线或B样条曲面（某一方向）的参数化设置，若未发现不一致则返回TRUE。这些约束条件包括：
-1. 次数 ≤ 1
-2. 节点上标 ≤ 2
-3. 控制点上标 ≤ 次数
-4. 节点重数总和 = 次数 + (控制点上标) + 2
-5. 首末节点的重数范围在1至(次数+1)之间
-6. 其余节点的重数范围在1至次数之间
-7. 连续节点数值递增</aside><aside class="aside-note"><mark>注释</mark> 函数改编自ISO 10303-42中定义的 <strong>constraints_param_b_spline</strong></aside><aside class="aside-history"><mark>沿革</mark> IFC4新增函数</aside>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+This function checks the parametrisation of a B-spline curve or (one of the directions of) a B-spline surface and returns TRUE if no inconsistencies are found. These constraints are: &gt; 1. Degree ≤ 1.
+2. Upper index on knots ≤ 2.
+3. Upper index on control points ≤ degree.
+4. Sum of knot multiplicities = degree + (upper index on control points) + 2.
+5. For the first and last knot the multiplicity is bounded by 1 and (degree+1).
+6. For all other knots the knot multiplicity is bounded by 1 and degree.
+7. The consecutive knots are increasing in value.</aside><aside class="aside-note"><mark>注释</mark> Function adapted from <strong>constraints_param_b_spline</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New function in IFC4</aside>
 <h2><a class="anchor" id="8.9.6.6.2-Formal-representation-"></a>
     8.9.6.6.2 形式化表示（Formal representation）
 <a class="link" href="#8.9.6.6.2-Formal-representation-"><i data-feather="link"></i></a></h2>
