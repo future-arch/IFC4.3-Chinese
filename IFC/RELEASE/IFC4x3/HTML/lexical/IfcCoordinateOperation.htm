@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.1 IfcCoordinateOperation（坐标操作） - IFC 4.3.2 Documentation</title>
+<title>8.18.3.1 IfcCoordinateOperation - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.18.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a>（坐标操作）</h1>
+<h1>8.18.3.1 IfcCoordinateOperation</h1>
 <div class="mvd" title="Included in IfcMapConversion, IfcRigidOperation">RV ⓘ</div>
 <div class="mvd" title="Included in IfcMapConversion, IfcRigidOperation">AbV ⓘ</div>
 <div class="row">
@@ -202,40 +202,40 @@
 <h2><a class="anchor" id="8.18.3.1.1-Semantic-definition-"></a>
     8.18.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.18.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> 是一个抽象超类型，用于处理两个坐标参考系（CRS）之间的任何操作（变换或转换）。</p>
-<!-- 简短定义结束 -->
-<p>按照惯例，坐标操作在<strong>源CRS</strong>（更局部或子级CRS）和<strong>目标CRS</strong>（更远程或父级CRS）之间给出。</p>
-<aside class="aside-example"><mark>示例</mark> 一个常见的坐标操作是建筑项目局部工程坐标系与任何地图或其他坐标参考系之间的操作。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> 是一个抽象的超类型，用于处理两个坐标参考系统（CRS）之间的任何操作（变换或转换）。</p>
+<!-- end of short definition -->
+<p>按照约定，坐标操作在 <strong>源 CRS</strong>（更局部或子 CRS）和 <strong>目标 CRS</strong>（更远程或父 CRS）之间进行。</p>
+<aside class="aside-example"><mark>示例</mark> A common coordinate operation is the one between the local engineering coordinate system of a construction project and any map or other coordinate reference system.</aside>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> 允许连接：
-- <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> —— 虚拟模型的参考系
-- 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></em> —— 通过基准面与现实世界相关的坐标系。</p>
-<aside class="aside-example"><mark>示例</mark> 这可以通过以下设置完成：
-- 将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a>.SourceCRS</em> 设置为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em>
-- 将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a>.TargetCRS</em> 设置为以下之一：
- - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em>，用于定义东坐标、北坐标和正交高度
- - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeographicCRS.htm">IfcGeographicCRS</a></em>，用于定义纬度、经度和椭球高度</aside><aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 可用于表示投影CRS或复合CRS，后者由投影CRS和垂直CRS组成。详见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em>。</aside><aside class="aside-note"><mark>注释</mark> 定义来自 OpenGIS 抽象规范，主题 2：
-如果任意两个坐标参考系之间的关系已知，则坐标可以变换或转换为另一个坐标参考系。坐标操作分为两个子类型：</aside><blockquote>
+- <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> – 虚拟模型的参考系统
+- <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></em> – 与真实世界通过基准相关的坐标系统。</p>
+<aside class="aside-example"><mark>示例</mark> This can is done by setting:
+- the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a>.SourceCRS</em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em>
+- the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a>.TargetCRS</em> either to:
+ -    <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em>, for defined easting, northing and orthogonal height
+ -    <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeographicCRS.htm">IfcGeographicCRS</a></em>, for defined latitude, longitude and ellipsoidal height</aside><aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> can be used to represent a projected CRS or a compound CRS, comprising of a projected CRS with a vertical CRS. See <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> for further details.</aside><aside class="aside-note"><mark>注释</mark> Definition from OpenGIS Abstract Specification, Topic 2:
+If the relationship between any two coordinate reference systems is known, coordinates can be transformed or converted to another coordinate reference system. Coordinate operations are divided into two subtypes:</aside><blockquote>
 <ul>
 <li>
-<p><em>坐标转换</em> —— 对坐标进行的数学操作，不涉及任何基准面的变更。最著名的坐标转换示例是地图投影。描述坐标转换的参数是定义的，而非经验推导的。注意某些转换没有参数。</p>
+<p><em>Coordinate conversion</em> – mathematical operation on coordinates that does not include any change of datum. The best-known example of a coordinate conversion is a map projection. The parameters describing coordinate conversions are defined rather than empirically derived. Note that some conversions have no parameters.</p>
 </li>
 <li>
-<p><em>坐标变换</em> —— 对坐标进行的数学操作，通常涉及基准面的变更。坐标变换的参数是从包含两个坐标参考系中一系列点坐标的数据中经验推导得出的。这种计算过程通常是“超定的”，允许推导变换的误差（或精度）估计。此外，参数的随机性可能导致同一坐标变换存在多个（不同的）版本。因此，对于给定的一对坐标参考系，可能存在几种变换，它们在变换方法、参数值和精度特性上有所不同。</p>
+<p><em>Coordinate transformation</em> – mathematical operation on coordinates that usually includes a change of datum. The parameters of a coordinate transformation are empirically derived from data containing the coordinates of a series of points in both coordinate reference systems. This computational process is usually ‘over-determined’, allowing derivation of error (or accuracy) estimates for the transformation. Also, the stochastic nature of the parameters may result in multiple (different) versions of the same coordinate transformation. Because of this several transformations may exist for a given pair of coordinate reference systems, differing in their transformation method, parameter values and accuracy characteristics.</p>
 </li>
 </ul>
 </blockquote>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> 有三种类型。具体使用哪一种取决于特定用例：</p>
+<p>有三种类型的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>。使用哪种取决于具体用例：</p>
 <ul>
 <li>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 涉及<strong>变换</strong>。这些坐标操作传达了虚拟模型的局部工程坐标系（这是一个局部切面CRS）被放置在引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 中。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 涉及<strong>变换</strong>。这些坐标操作表明，虚拟模型的局部工程坐标系统（这是一个大地测量坐标系）被放置在引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 中。</p>
 </li>
 <li>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRigidOperation.htm">IfcRigidOperation</a></em> 涉及三维空间中的<strong>平移</strong>。此坐标操作传达了整个虚拟模型以相同方式平移。例如，使用长度沿x、y、z轴平移；或使用角度进行二维平移（例如，λ, φ），外加高度的变化。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRigidOperation.htm">IfcRigidOperation</a></em> 涉及 3D 空间中的<strong>平移</strong>。此坐标操作表明整个虚拟模型以相同方式进行平移。例如，使用长度沿 x、y、z 平移；或使用角度进行 2D 平移（例如，lambda、phi），加上高度变化。</p>
 </li>
 </ul>
 <figure><a class="anchor" id="-COORDOPS-"></a><img alt="坐标操作" src="../figures/ifccoordinateoperation.png"/><figcaption>
-图 8.18.3.1.A — 坐标参考系之间可能的坐标操作<a class="link" href="#-COORDOPS-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+图 8.18.3.1.A — 坐标参考系统之间可能的坐标操作<a class="link" href="#-COORDOPS-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.18.3.1.2-Entity-inheritance-"></a>
     8.18.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.18.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -258,7 +258,7 @@
     8.18.3.1.3 特性（Attributes）
 <a class="link" href="#8.18.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-2cc360a3-33cd-41ab-bb77-b561a26baee8"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-98a693df-8212-4b32-b9c7-4e3cce7dbc26"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -289,7 +289,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystemSelect.htm">IfcCoordinateReferenceSystemSelect</a></td>
 <td data-label="Description">
-<p>操作的源坐标参考系。</p>
+<p>操作的源坐标参考系统。</p>
 </td>
 </tr>
 <tr>
@@ -301,11 +301,11 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></td>
 <td data-label="Description">
-<p>操作的目标坐标参考系。</p>
+<p>操作的目标坐标参考系统。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.1.B<a class="link" href="#-2cc360a3-33cd-41ab-bb77-b561a26baee8"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.1.B<a class="link" href="#-98a693df-8212-4b32-b9c7-4e3cce7dbc26"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.1.4-Formal-representation-"></a>
     8.18.3.1.4 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.1.4-Formal-representation-"><i data-feather="link"></i></a></h2>
