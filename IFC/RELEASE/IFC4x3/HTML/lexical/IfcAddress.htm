@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.1.3.2 IfcAddress（地址） - IFC 4.3.2 Documentation</title>
+<title>8.1.3.2 IfcAddress - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.1.3.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAddress.htm">IfcAddress</a>（地址）</h1>
+<h1>8.1.3.2 IfcAddress</h1>
 <div class="mvd" title="Included in IfcPerson.Addresses, IfcTelecomAddress, Revision Control">RV ⓘ</div>
 <div class="mvd" title="Included in IfcPerson.Addresses, IfcTelecomAddress, Revision Control">AbV ⓘ</div>
 <div class="row">
@@ -202,9 +202,9 @@
 <h2><a class="anchor" id="8.1.3.2.1-Semantic-definition-"></a>
     8.1.3.2.1 语义定义（Semantic definition）
 <a class="link" href="#8.1.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>此抽象实体表示各种类型的邮政和电信地址。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-41 中定义的 <strong>address</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5.1 中的新实体。</aside>
+<p>此抽象实体表示各种邮政和电信地址。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>address</strong> defined in ISO 10303-41.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.1.</aside>
 <h2><a class="anchor" id="8.1.3.2.2-Entity-inheritance-"></a>
     8.1.3.2.2 实体继承（Entity inheritance）
 <a class="link" href="#8.1.3.2.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -227,7 +227,7 @@
     8.1.3.2.3 特性（Attributes）
 <a class="link" href="#8.1.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-57c4f641-570f-423a-8c1b-88f513a58f56"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-06e36100-ac24-4c43-a5f9-c7debd55bc14"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -270,7 +270,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>说明地址性质的文本。</p>
+<p>与地址性质相关的文本。</p>
 </td>
 </tr>
 <tr>
@@ -282,8 +282,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>允许在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAddressTypeEnum.htm">IfcAddressTypeEnum</a> 类型的 Purpose 属性提供的枚举值之外，指定用户特定的地址用途。
-当为 UserDefinedPurpose 属性提供值时，同时 Purpose 属性应具有枚举值 USERDEFINED。</p>
+<p>允许指定超出 <em>Purpose</em> 属性（类型为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAddressTypeEnum.htm">IfcAddressTypeEnum</a>）提供的枚举值的用户特定地址用途。
+当 <em>UserDefinedPurpose</em> 属性具有值时，同时 <em>Purpose</em> 属性应具有枚举值 USERDEFINED。</p>
 </td>
 </tr>
 <tr>
@@ -293,7 +293,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a> FOR Addresses</td>
 <td data-label="Description">
-<p>与地址关联的人员的反向关系。</p>
+<p>与地址关联的个人的逆向关系。</p>
 </td>
 </tr>
 <tr>
@@ -303,15 +303,15 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrganization.htm">IfcOrganization</a> FOR Addresses</td>
 <td data-label="Description">
-<p>与地址关联的组织的反向关系。</p>
+<p>与地址关联的组织的逆向关系。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.1.3.2.A<a class="link" href="#-57c4f641-570f-423a-8c1b-88f513a58f56"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.1.3.2.A<a class="link" href="#-06e36100-ac24-4c43-a5f9-c7debd55bc14"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.1.3.2.4-Formal-propositions-"></a>
     8.1.3.2.4 形式化命题（Formal propositions）
 <a class="link" href="#8.1.3.2.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-8d9e08ea-7c08-401f-9160-c16b3a844e3a"></a><table>
+<figure><a class="anchor" id="-eb915ded-9749-427c-b000-0e1f5ee277d2"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -322,7 +322,9 @@
 <tr>
 <td>WR1</td>
 <td>
-<p>要么不提供属性值 Purpose，要么当属性 Purpose 具有枚举值 USERDEFINED 时，属性 UserDefinedPurpose 也应具有值。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -334,7 +336,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.1.3.2.B<a class="link" href="#-8d9e08ea-7c08-401f-9160-c16b3a844e3a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.1.3.2.B<a class="link" href="#-eb915ded-9749-427c-b000-0e1f5ee277d2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.1.3.2.5-Formal-representation-"></a>
     8.1.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#8.1.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>
