@@ -97,17 +97,27 @@
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
             mainContent.innerHTML = `
-                <div class="search-no-results" style="padding: 20px;">
-                    <h1>搜索结果</h1>
-                    <p>未找到与 "<strong>${escapeHtml(query)}</strong>" 相关的结果。</p>
-                    <p>建议：</p>
-                    <ul>
-                        <li>检查拼写是否正确</li>
-                        <li>尝试使用不同的关键词</li>
-                        <li>使用更通用的搜索词</li>
-                    </ul>
-                </div>
+                <h2>搜索</h2>
+                <form method="get" action="" style="margin-bottom: 20px;">
+                    <input type="text" name="query" value="${escapeHtml(query)}" style="padding: 5px; width: 300px;"/>
+                    <input type="submit" value="搜索" style="padding: 5px 15px;"/>
+                </form>
+                <ul style="list-style: none; padding: 0;">
+                    <li><span>未找到与您的查询匹配的结果</span></li>
+                </ul>
             `;
+
+            // 重新绑定搜索表单
+            const newForm = mainContent.querySelector('form');
+            if (newForm) {
+                newForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const newQuery = newForm.querySelector('input[name="query"]').value.trim();
+                    if (newQuery) {
+                        performSearch(newQuery);
+                    }
+                });
+            }
         }
     }
 
@@ -129,14 +139,17 @@
         const mainContent = document.getElementById('main-content');
         if (!mainContent) return;
 
-        let html = `
-            <h1>搜索结果</h1>
-            <p>找到 <strong>${results.length}</strong> 个与 "<strong>${escapeHtml(query)}</strong>" 相关的结果：</p>
-            <div class="search-results" style="margin-top: 20px;">
-        `;
-
-        // 限制显示前 30 个结果
+        // 限制显示前 30 个结果(参考英文版)
         const maxResults = Math.min(results.length, 30);
+
+        let html = `
+            <h2>搜索</h2>
+            <form method="get" action="" style="margin-bottom: 20px;">
+                <input type="text" name="query" value="${escapeHtml(query)}" style="padding: 5px; width: 300px;"/>
+                <input type="submit" value="搜索" style="padding: 5px 15px;"/>
+            </form>
+            <ul style="list-style: none; padding: 0;">
+        `;
 
         // 批量加载结果数据以提高性能
         const resultDataPromises = results.slice(0, maxResults).map(r => r.data());
@@ -145,28 +158,52 @@
         for (let i = 0; i < resultDataList.length; i++) {
             const data = resultDataList[i];
 
+            // 提取标题(从 meta 或 URL 中)
+            const title = data.meta.title || extractTitleFromUrl(data.url);
+
             html += `
-                <div class="search-result-item" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                    <h3 style="margin-bottom: 10px;">
-                        <a href="${data.url}">${escapeHtml(data.meta.title || data.url)}</a>
-                    </h3>
-                    <p style="color: #666; margin-bottom: 10px;">
+                <li style="margin-bottom: 15px;">
+                    <a href="${data.url}" style="font-weight: bold; color: #0066cc; text-decoration: none;">
+                        ${escapeHtml(title)}
+                    </a>
+                    <span style="display: block; margin-top: 5px; color: #333; line-height: 1.5;">
                         ${data.excerpt}
-                    </p>
-                    <p style="font-size: 0.9em; color: #999;">
-                        <a href="${data.url}" style="text-decoration: none;">${data.url}</a>
-                    </p>
-                </div>
+                    </span>
+                </li>
             `;
         }
 
-        html += `</div>`;
+        // 如果没有结果
+        if (resultDataList.length === 0) {
+            html += `<li><span>未找到与您的查询匹配的结果</span></li>`;
+        }
+
+        html += `</ul>`;
 
         if (results.length > maxResults) {
-            html += `<p style="color: #666;">...还有 ${results.length - maxResults} 个结果未显示</p>`;
+            html += `<p style="color: #666; font-style: italic;">显示前 ${maxResults} 个结果,共 ${results.length} 个匹配项</p>`;
         }
 
         mainContent.innerHTML = html;
+
+        // 重新绑定搜索表单
+        const newForm = mainContent.querySelector('form');
+        if (newForm) {
+            newForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const newQuery = newForm.querySelector('input[name="query"]').value.trim();
+                if (newQuery) {
+                    performSearch(newQuery);
+                }
+            });
+        }
+    }
+
+    function extractTitleFromUrl(url) {
+        // 从 URL 中提取文件名作为标题
+        // 例如: /IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm -> IfcWall
+        const match = url.match(/\/([^\/]+)\.htm?$/);
+        return match ? match[1] : url;
     }
 
     function escapeHtml(text) {
