@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.2.8.6 PEnum_ControllerTypeFloating（控制器类型-浮点） - IFC 4.3.2 Documentation</title>
+<title>7.2.8.6 PEnum_ControllerTypeFloating - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -159,7 +159,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>7.2.8.6 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerTypeFloating.htm">PEnum_ControllerTypeFloating</a>（控制器类型-浮点）</h1>
+<h1>7.2.8.6 PEnum_ControllerTypeFloating</h1>
 <h2><a class="anchor" id="7.2.8.6.1-Semantic-definition-"></a>
     7.2.8.6.1 语义定义（Semantic definition）
 <a class="link" href="#7.2.8.6.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
@@ -167,7 +167,7 @@
 <h2><a class="anchor" id="7.2.8.6.2-"></a>
     7.2.8.6.2 类型值
 <a class="link" href="#7.2.8.6.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d8f0a8eb-22de-4499-98fb-e5cc496ab1ca"></a><table class="striped type-values">
+<figure><a class="anchor" id="-58311efc-278c-43c2-9da4-8e685e28c7c3"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -184,19 +184,19 @@
 <tr>
 <td data-label="Name"><code>ACCUMULATOR
             <td data-label="Description">
-<p>读取单个二进制输入，每个脉冲将信号偏移量累加到累加器中，当累加器大于信号因子时，累加器减去信号因子，整数结果加一</p>
+<p>读取单个二进制输入，每次脉冲，SignalOffset 被加到累加器中，并且只要累加器大于 SignalFactor，累加器就减去 SignalFactor，并且整数结果加一</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>AVERAGE
             <td data-label="Description">
-<p>读取单个模拟输入，在信号时间内进行平均，并写入输出值</p>
+<p>读取单个模拟输入，在 SignalTime 内平均，然后写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>BINARY
             <td data-label="Description">
-<p>读取单个二进制输入，若为真则将信号偏移量写入输出值</p>
+<p>读取单个二进制输入，如果为真，则将 SignalOffset 写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
@@ -208,31 +208,31 @@
 <tr>
 <td data-label="Name"><code>DERIVATIVE
             <td data-label="Description">
-<p>读取单个模拟输入，并将信号时间内的变化率写入输出值</p>
+<p>读取单个模拟输入，并在 SignalTime 内的變化率写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>DIVIDE
             <td data-label="Description">
-<p>读取两个模拟输入，相除后写入输出值</p>
+<p>读取两个模拟输入，相除，并写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>HYSTERESIS
             <td data-label="Description">
-<p>迟滞</p>
+<p>滞后</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>INPUT
             <td data-label="Description">
-<p>控制器元件为专用输入</p>
+<p>控制器元件是专用输入</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>INTEGRAL
             <td data-label="Description">
-<p>读取单个模拟输入，并将信号时间内的平均值写入输出值</p>
+<p>读取单个模拟输入，并在 SignalTime 内的平均值写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
@@ -250,37 +250,37 @@
 <tr>
 <td data-label="Name"><code>MAXIMUM
             <td data-label="Description">
-<p>读取两个模拟输入，并将最大值写入输出值</p>
+<p>读取两个模拟输入，并写入最大值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>MINIMUM
             <td data-label="Description">
-<p>读取两个模拟输入，并将最小值写入输出值</p>
+<p>读取两个模拟输入，并写入最小值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>MODIFIER
             <td data-label="Description">
-<p>读取单个模拟输入，与信号偏移量相加，乘以信号因子，并写入输出值</p>
+<p>读取单个模拟输入，加上 SignalOffset，乘以 SignalFactor，然后写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>OUTPUT
             <td data-label="Description">
-<p>控制器元件为专用输出</p>
+<p>控制器元件是专用输出</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>PRODUCT
             <td data-label="Description">
-<p>读取两个模拟输入，相乘后写入输出值</p>
+<p>读取两个模拟输入，相乘，并写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>PULSECONVERTER
             <td data-label="Description">
-<p>读取单个整数输入，每个增量添加信号乘数并写入输出值</p>
+<p>读取单个整数输入，每次增量，SignalMultiplier 被加上并写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
@@ -292,25 +292,25 @@
 <tr>
 <td data-label="Name"><code>RUNNINGAVERAGE
             <td data-label="Description">
-<p>读取单个模拟输入，在信号时间内进行平均，并写入输出值</p>
+<p>读取单个模拟输入，在 SignalTime 内平均，然后写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>SPLIT
             <td data-label="Description">
-<p>分流</p>
+<p>拆分</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>SUBTRACT
             <td data-label="Description">
-<p>读取两个模拟输入，相减后写入输出值</p>
+<p>读取两个模拟输入，相减，并写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>SUM
             <td data-label="Description">
-<p>读取两个模拟输入，相加后写入输出值</p>
+<p>读取两个模拟输入，相加，并写入输出值</p>
 </td>
 </code></td></tr>
 <tr>
@@ -322,13 +322,13 @@
 <tr>
 <td data-label="Name"><code>VARIABLE
             <td data-label="Description">
-<p>控制器元件为内存变量</p>
+<p>控制器元件是内存变量</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>OTHER
             <td data-label="Description">
-<p>所需类别不在范围内</p>
+<p>所需的类别不在列表中</p>
 </td>
 </code></td></tr>
 <tr>
@@ -344,7 +344,7 @@
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 7.2.8.6.A<a class="link" href="#-d8f0a8eb-22de-4499-98fb-e5cc496ab1ca"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.2.8.6.A<a class="link" href="#-58311efc-278c-43c2-9da4-8e685e28c7c3"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
