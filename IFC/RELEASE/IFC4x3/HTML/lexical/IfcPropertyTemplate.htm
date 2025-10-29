@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.17 IfcPropertyTemplate（属性模板） - IFC 4.3.2 Documentation</title>
+<title>5.1.3.17 IfcPropertyTemplate (属性模板) - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,7 +138,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.1.3.17 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a>（属性模板）</h1>
+<h1>5.1.3.17 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a> (属性模板)</h1>
 <div class="mvd" title="Included in IfcPropertySetTemplate.HasPropertyTemplates">RV ⓘ</div>
 <div class="mvd" title="Included in IfcPropertySetTemplate.HasPropertyTemplates">AbV ⓘ</div>
 <div class="row">
@@ -151,18 +151,22 @@
 <h2><a class="anchor" id="5.1.3.17.1-Semantic-definition-"></a>
     5.1.3.17.1 语义定义（Semantic definition）
 <a class="link" href="#5.1.3.17.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 是一个抽象超类型，包含所有动态可扩展属性的模板，可以是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexPropertyTemplate.htm">IfcComplexPropertyTemplate</a></em>，也可以是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSimplePropertyTemplate.htm">IfcSimplePropertyTemplate</a></em>。这些模板决定了以下结构：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 是一个抽象的超类型，包含所有动态可扩展属性的模板，可以是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexPropertyTemplate.htm">IfcComplexPropertyTemplate</a></em>，也可以是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSimplePropertyTemplate.htm">IfcSimplePropertyTemplate</a></em>。这些模板决定了以下结构：</p>
 <ul>
-<li>对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexPropertyTemplate.htm">IfcComplexPropertyTemplate</a></em> 的情况</li>
+<li>对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexPropertyTemplate.htm">IfcComplexPropertyTemplate</a></em><ul>
 <li>一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm">IfcComplexProperty</a></em></li>
 <li>一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a></em></li>
-<li>对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSimplePropertyTemplate.htm">IfcSimplePropertyTemplate</a></em> 的情况</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSimpleProperty.htm">IfcSimpleProperty</a></em> 的子类型</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a></em> 的子类型</li>
 </ul>
-<!-- 简短定义结束 -->
-<p>各个属性模板根据其 <em>Name</em> 属性进行解释，并可能具有预定义的属性类型、属性单位和属性数据类型。但模板不应具有已分配的测量值或数量值。</p>
-<aside class="aside-note"><mark>注释</mark> 属性模板可以构成属性库的一部分，作为项目库的一部分使用和附加。通常，包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 子类型的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> 将直接链接到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectLibrary.htm">IfcProjectLibrary</a></em>。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+</li>
+<li>对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSimplePropertyTemplate.htm">IfcSimplePropertyTemplate</a></em><ul>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSimpleProperty.htm">IfcSimpleProperty</a></em> 的一个子类型</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a></em> 的一个子类型</li>
+</ul>
+</li>
+</ul>
+<!-- end of short definition -->
+<p>各个属性模板根据其 <em>Name</em> 特性进行解释，并且可以具有预定义的属性类型、属性单位和属性数据类型。但是，模板不应具有分配的测量值或数量值。</p>
+<aside class="aside-note"><mark>注释</mark> Property templates can form part of a property library used and attached as part of a project library. In general, the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em>, containing the subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> would be directly linked to the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectLibrary.htm">IfcProjectLibrary</a></em>.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="5.1.3.17.2-Entity-inheritance-"></a>
     5.1.3.17.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.17.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -207,7 +211,7 @@
     5.1.3.17.3 特性（Attributes）
 <a class="link" href="#5.1.3.17.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-8e620a46-2701-4a5a-9831-56c5f029acde"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6afd2a4e-9ebe-4c3b-99e7-9907103d596c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -250,8 +254,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -263,7 +267,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -275,7 +279,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -291,7 +295,7 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
 <td data-label="Description">
-<p>引用关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a></em>，从而引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectLibrary.htm">IfcProjectLibrary</a></em>。</p>
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a></em> 关系，从而引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectLibrary.htm">IfcProjectLibrary</a></em>。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -301,7 +305,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>引用关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a></em>，从而引用与属性定义相关联的那些外部定义的概念，如分类、文档或库信息。</p>
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a></em> 关系，从而引用那些外部定义的概念，如分类、文档或库信息，这些概念与属性定义相关联。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -329,7 +333,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexPropertyTemplate.htm">IfcComplexPropertyTemplate</a> FOR HasPropertyTemplates</td>
 <td data-label="Description">
-<p>对复杂属性模板的引用。仅当引用的复杂属性模板的 <em>PropertyType</em> 设置为 COMPLEX 时才应提供。</p>
+<p>引用一个复杂属性模板。只有当被引用复杂属性模板的 <em>PropertyType</em> 设置为 COMPLEX 时，才应提供此项。</p>
 </td>
 </tr>
 <tr>
@@ -339,15 +343,15 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> FOR HasPropertyTemplates</td>
 <td data-label="Description">
-<p>对定义 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 范围的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> 的引用。单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 可以在零个、一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> 实体的范围内定义。</p>
+<p>引用定义 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 范围的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em>。单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> 可以在零个、一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> 实体的范围内定义。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.17.A<a class="link" href="#-8e620a46-2701-4a5a-9831-56c5f029acde"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.17.A<a class="link" href="#-6afd2a4e-9ebe-4c3b-99e7-9907103d596c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.17.4-Concept-usage-"></a>
     5.1.3.17.4 概念用法（Concept usage）
 <a class="link" href="#5.1.3.17.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6c68a252-b6d7-4bf1-89e0-5fff66c16882"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-5d1ede14-497b-431d-a905-f22490cde5d7"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -370,9 +374,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -383,25 +385,143 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承概念
+                    点击显示 6 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承概念
+                    点击隐藏 6 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplate.htm">IfcPropertyTemplate</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.1.3.17.B<a class="link" href="#-6c68a252-b6d7-4bf1-89e0-5fff66c16882"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.17.B<a class="link" href="#-5d1ede14-497b-431d-a905-f22490cde5d7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.17.5-Formal-representation-"></a>
     5.1.3.17.5 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.17.5-Formal-representation-"><i data-feather="link"></i></a></h2>
