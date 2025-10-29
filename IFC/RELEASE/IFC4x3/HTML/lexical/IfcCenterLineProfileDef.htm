@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.6 IfcCenterLineProfileDef（中心线轮廓定义） - IFC 4.3.2 Documentation</title>
+<title>8.15.3.6 IfcCenterLineProfileDef - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,32 +189,32 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.15.3.6 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCenterLineProfileDef.htm">IfcCenterLineProfileDef</a>（中心线轮廓定义）</h1>
+<h1>8.15.3.6 IfcCenterLineProfileDef</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.15.3.6.1-Semantic-definition-"></a>
     8.15.3.6.1 语义定义（Semantic definition）
 <a class="link" href="#8.15.3.6.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>轮廓定义 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCenterLineProfileDef.htm">IfcCenterLineProfileDef</a></em> 定义了一个任意的二维开放、不自交的轮廓，用于扫掠实体几何中。它通过向中心线应用恒定厚度来定义区域，从而生成可用于构建实体的区域。</p>
-<!-- 简短定义结束 -->
-<p>除其他用途外，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCenterLineProfileDef.htm">IfcCenterLineProfileDef</a></em> 用于模拟冷弯型钢或铝型材（Sigma、Zeta、Omega 以及 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em> 子类型未涵盖的类似截面）。然而，由于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCenterLineProfileDef.htm">IfcCenterLineProfileDef</a></em> 除了厚度外不提供形状参数，通常需要通过以下方式进一步指定轮廓定义：</p>
+<p>轮廓 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCenterLineProfileDef.htm">IfcCenterLineProfileDef</a></em> 定义了一个任意的二维开放、不自相交的轮廓，用于扫掠实体几何体。它由一个通过对中心线应用恒定厚度生成的区域定义，该区域可用于构建实体。</p>
+<!-- end of short definition -->
+<p>除其他外，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCenterLineProfileDef.htm">IfcCenterLineProfileDef</a></em> 用于模拟冷弯钢或铝型材（Sigma、Zeta、Omega 和类似型材，这些型材不被 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em> 的子类型覆盖）。但是，由于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCenterLineProfileDef.htm">IfcCenterLineProfileDef</a></em> 除了厚度之外不提供形状参数，因此通常需要通过以下方式进一步指定轮廓定义：</p>
 <ul>
-<li>名称、</li>
-<li>对文档或库的外部引用、</li>
-<li>轮廓属性、</li>
+<li>名称</li>
+<li>对文档或库的外部引用</li>
+<li>轮廓属性</li>
 </ul>
-<p>或它们的组合。有关轮廓外部引用的指导，请参阅 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em>。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2x3 中的新实体。</aside>
+<p>或它们的组合。有关轮廓的外部引用的指导，请参阅 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em>。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li><em>Curve</em> 必须为开放曲线。</li>
-<li><em>Curve</em> 必须为非自交曲线。</li>
+<li><em>Curve</em> 必须是开放曲线。</li>
+<li><em>Curve</em> 必须是无自相交曲线。</li>
 </ol>
-<p>图 8.15.3.6.A 说明了中心线轮廓定义。<em>Curve</em> 在基础坐标系中定义。基础坐标系由使用该轮廓定义的扫掠曲面定义。它是以下对象的 xy 平面：</p>
+<p>图 8.15.3.6.A 说明了中心线轮廓定义。<em>Curve</em> 在底层坐标系中定义。底层坐标系由使用轮廓定义的扫掠曲面定义。它是：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a>.Position</em></li>
 </ul>
-<p><em>Curve</em> 属性定义了一条二维有界开放曲线。<em>Thickness</em> 属性定义了沿曲线的恒定厚度。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="中心线" src="../figures/ifcarbitraryprofiledef-layout4.gif" title="图 8.15.3.6.A — 中心线轮廓"/><figcaption>图 8.15.3.6.A — 中心线轮廓<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>的 xy 平面。<em>Curve</em> 属性定义了一个二维开放有界曲线。<em>Thickness</em> 属性定义了沿曲线的恒定厚度。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="center line" src="../figures/ifcarbitraryprofiledef-layout4.gif" title="图 8.15.3.6.A — 中心线轮廓"/><figcaption>图 8.15.3.6.A — 中心线轮廓<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.6.2-Entity-inheritance-"></a>
     8.15.3.6.2 实体继承（Entity inheritance）
 <a class="link" href="#8.15.3.6.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -247,7 +247,7 @@
     8.15.3.6.3 特性（Attributes）
 <a class="link" href="#8.15.3.6.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e2dea117-267f-4e41-962b-aaa0713e27da"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c92135ad-7566-4a56-b113-153e4516fee1"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -278,7 +278,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
 <td data-label="Description">
-<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+<p>定义此轮廓定义应解析成的几何类型，是曲线还是曲面区域。对于曲线，轮廓应由扫掠曲面引用；对于区域，轮廓应由扫掠面积实体引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -290,7 +290,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference_中提供。</p>
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓标识符应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -300,8 +300,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>与轮廓关联的外部信息（如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>指向与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -311,8 +311,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
 <td data-label="Description">
-<p>轮廓的附加属性，例如力学属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>轮廓的附加属性，例如机械性能。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -364,7 +364,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.6.B<a class="link" href="#-e2dea117-267f-4e41-962b-aaa0713e27da"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.6.B<a class="link" href="#-c92135ad-7566-4a56-b113-153e4516fee1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.6.4-"></a>
     8.15.3.6.4 属性集
 <a class="link" href="#8.15.3.6.4-"><i data-feather="link"></i></a></h2>
@@ -405,7 +405,7 @@
 </p><h2><a class="anchor" id="8.15.3.6.5-Concept-usage-"></a>
     8.15.3.6.5 概念用法（Concept usage）
 <a class="link" href="#8.15.3.6.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c91a8725-ef9b-4bd2-a708-2d9159fddce7"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-ae0b2ef2-72e9-43f0-a41f-14c6dfc42587"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -449,7 +449,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.6.C<a class="link" href="#-c91a8725-ef9b-4bd2-a708-2d9159fddce7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.6.C<a class="link" href="#-ae0b2ef2-72e9-43f0-a41f-14c6dfc42587"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.6.6-Formal-representation-"></a>
     8.15.3.6.6 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.6.6-Formal-representation-"><i data-feather="link"></i></a></h2>
