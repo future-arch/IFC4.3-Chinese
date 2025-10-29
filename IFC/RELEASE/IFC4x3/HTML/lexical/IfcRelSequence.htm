@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.3.3.5 IfcRelSequence（关系序列） - IFC 4.3.2 Documentation</title>
+<title>5.3.3.5 IfcRelSequence - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,19 +138,19 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.3.3.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>（关系序列）</h1>
+<h1>5.3.3.5 IfcRelSequence</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="5.3.3.5.1-Semantic-definition-"></a>
     5.3.3.5.1 语义定义（Semantic definition）
 <a class="link" href="#5.3.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 是过程之间的顺序关系，其中一个过程必须在另一个过程之前发生，且该关系的时间特性可描述为某种序列类型。关联过程（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>.RelatingProcess</em>）被视为关系中的前驱（具有优先性），而被关联过程（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>.RelatedProcess</em>）则是后继。</p>
-<!-- 简短定义结束 -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 被定义为一对一关系，因此它将一个前驱分配给一个后继。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 已移至 <em>IfcProcessExtension</em> 模式。 <em>TimeLag</em> 和 <em>SequenceType</em> 设为可选。 <em>USERDEFINED</em> 已添加到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSequenceEnum.htm">IfcSequenceEnum</a></em> 枚举中。 添加了 <em>UserDefinedSequenceType</em> 属性。 添加了控制 <em>USERDEFINED</em> 枚举使用的 WHERE 规则。</aside>
-<p><strong>使用定义</strong></p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 用于描述两个过程之间存在的逻辑顺序关系。此逻辑关系标识存在一个前驱或关联过程以及一个后继或被关联过程。在 IFC 中，关系中可以有一个前驱和一个后继。可能存在多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 实例来描述一个前驱任务与多个后继任务或多个前驱任务与一个后继任务的顺序关系，从而实现任务之间的多对多顺序关系。请注意，顺序关系既可用于定义过程实例之间的依赖关系，也可用于定义过程类型之间的依赖关系（更多信息请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskType.htm">IfcTaskType</a></em>）。在定义过程实例之间的依赖关系时，顺序关系应保持在有向无环图的限制范围内。</p>
-<p>可以为序列设置序列类型。对于分配给工作进度计划的任务，预期将断言序列类型。对于过程图，其中过程之间的顺序关系仅仅是逻辑流，则无需断言。</p>
-<p>可以为序列分配时间滞后，序列类型定义了时间滞后应用于序列的方式，可以是作为持续时间的比率或百分比（例如，当前驱任务完成 50% 时启动后继任务），也可以是作为时间度量（例如，在前驱任务开始一周后启动后继任务）。在根据序列类型的设置向序列分配时间滞后时应谨慎，因为不会检查时间滞后值是否与设置的序列类型一致。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 是进程之间的顺序关系，其中一个进程必须在时间上先于另一个进程发生，并且关系的时间可以描述为一种序列类型。关联进程（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>.RelatingProcess</em>）被视为关系中的前驱（具有优先权），而关联的进程（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>.RelatedProcess</em>）是后继。</p>
+<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 定义为一对一关系；因此，它将一个前驱分配给一个后继。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Relocated to <em>IfcProcessExtension</em> schema. <em>TimeLag</em> and <em>SequenceType</em> made optional. <em>USERDEFINED</em> added to the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSequenceEnum.htm">IfcSequenceEnum</a></em> enumeration. <em>UserDefinedSequenceType</em> attribute added. WHERE rule controlling use of the <em>USERDEFINED</em> enumeration added.</aside>
+<p><strong>Use definitions</strong></p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 用于描述两个进程之间存在的逻辑顺序关系。这种逻辑关系表明存在一个前驱或关联进程和一个后继或关联进程。在 IFC 中，关系中可以有一个前驱和一个后继。可以存在许多 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 实例来描述一个前驱任务与多个后继任务之间的顺序关系，或者描述多个前驱任务与一个后继任务之间的顺序关系，从而实现任务之间的 m:n 顺序关系。请注意，顺序关系可用于定义进程实例之间的依赖关系，也可用于定义进程类型之间的依赖关系（有关更多信息，请参阅 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskType.htm">IfcTaskType</a></em>）。在定义进程实例之间的依赖关系时，顺序关系应保持在有向无环图中。</p>
+<p>可以为序列设置序列类型。对于分配给工作计划的任务，预期将断言序列类型。对于流程图，其中进程之间的顺序关系仅仅是逻辑流，则不必断言。</p>
+<p>可以为序列分配时间滞后，并且序列类型定义了时间滞后应用于序列的方式，无论是作为持续时间的比例或百分比（例如，当前驱任务完成 50% 时开始后继任务），还是作为时间度量（例如，在前驱任务开始后一周开始后继任务）。在分配时间滞后给序列时，应谨慎使用，具体取决于序列类型的设置，因为没有检查时间滞后值是否与设置的序列类型一致。</p>
 <h2><a class="anchor" id="5.3.3.5.2-Entity-inheritance-"></a>
     5.3.3.5.2 实体继承（Entity inheritance）
 <a class="link" href="#5.3.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -206,7 +206,7 @@
     5.3.3.5.3 特性（Attributes）
 <a class="link" href="#5.3.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-b855fcb6-ed65-493f-935a-56d70b344bbe"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-9e2fd9d9-acfe-4522-80fe-f3c4cbd787af"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -249,8 +249,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -262,7 +262,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -274,7 +274,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -304,7 +304,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a></td>
 <td data-label="Description">
-<p>对作为前驱的过程的引用。</p>
+<p>指向作为前驱的进程的引用。</p>
 </td>
 </tr>
 <tr>
@@ -316,7 +316,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a></td>
 <td data-label="Description">
-<p>对作为后继的过程的引用。</p>
+<p>指向作为后继的进程的引用。</p>
 </td>
 </tr>
 <tr>
@@ -328,7 +328,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLagTime.htm">IfcLagTime</a></td>
 <td data-label="Description">
-<p>序列的时间持续时间，它是根据 <em>SequenceType</em> 指定的前驱和后继之间的时间滞后。</p>
+<p>序列的时间持续时间，即前驱和后继之间的时间滞后，由 <em>SequenceType</em> 指定。</p>
 </td>
 </tr>
 <tr>
@@ -352,16 +352,16 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>允许在 <em>SequenceType</em> 属性（类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSequenceEnum.htm">IfcSequenceEnum</a></em>）提供的枚举值（<em>START_START</em>、<em>START_FINISH</em>、<em>FINISH_START</em>、<em>FINISH_FINISH</em>）之外，指定用户定义的序列类型。当为属性 <em>UserDefinedSequenceType</em> 提供值时，同时属性 <em>SequenceType</em> 应具有枚举值 <em>USERDEFINED</em>。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加属性</aside>
+<p>允许指定序列的用户定义类型，超出 <em>SequenceType</em> 特性（<em>START_START</em>、<em>START_FINISH</em> <em>FINISH_START</em>、<em>FINISH_FINISH</em>）提供的枚举值。当在属性 <em>UserDefinedSequenceType</em> 中提供值时，属性 <em>SequenceType</em> 应具有枚举值 <em>USERDEFINED</em>。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Attribute added</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.3.3.5.A<a class="link" href="#-b855fcb6-ed65-493f-935a-56d70b344bbe"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.3.3.5.A<a class="link" href="#-9e2fd9d9-acfe-4522-80fe-f3c4cbd787af"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.3.3.5.4-Formal-propositions-"></a>
     5.3.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#5.3.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-3b9c143e-3346-44e2-b307-cfe6cc52cfa7"></a><table>
+<figure><a class="anchor" id="-9f1739f4-6fdd-44cc-b8a7-0a83d2082cfd"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -372,7 +372,7 @@
 <tr>
 <td>AvoidInconsistentSequence</td>
 <td>
-<p><em>RelatingProcess</em> 不应指向与 <em>RelatedProcess</em> 相同的实例。</p>
+<p><em>RelatingProcess</em> 不得指向与 <em>RelatedProcess</em> 相同的实例。</p>
 </td>
 </tr>
 <tr>
@@ -383,7 +383,7 @@
 <tr>
 <td>CorrectSequenceType</td>
 <td>
-<p>当 <em>SequenceType</em> 的值设置为 <em>USERDEFINED</em> 时，必须断言属性 <em>UserDefinedSequenceType</em>。</p>
+<p>当 <em>SequenceType</em> 的取值为 <em>USERDEFINED</em> 时，必须断言 <em>UserDefinedSequenceType</em> 特性。</p>
 </td>
 </tr>
 <tr>
@@ -392,11 +392,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.3.3.5.B<a class="link" href="#-3b9c143e-3346-44e2-b307-cfe6cc52cfa7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.3.3.5.B<a class="link" href="#-9f1739f4-6fdd-44cc-b8a7-0a83d2082cfd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.3.3.5.5-Concept-usage-"></a>
     5.3.3.5.5 概念用法（Concept usage）
 <a class="link" href="#5.3.3.5.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c14eb4dd-ee0c-4a07-b974-6e4d8da8b1e3"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-fdefda3a-303b-4f87-959b-5c3068034e4b"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -419,9 +419,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -432,25 +430,143 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承概念
+                    点击显示 6 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承概念
+                    点击隐藏 6 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 5.3.3.5.C<a class="link" href="#-c14eb4dd-ee0c-4a07-b974-6e4d8da8b1e3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.3.3.5.C<a class="link" href="#-fdefda3a-303b-4f87-959b-5c3068034e4b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.3.3.5.6-Formal-representation-"></a>
     5.3.3.5.6 形式化表示（Formal representation）
 <a class="link" href="#5.3.3.5.6-Formal-representation-"><i data-feather="link"></i></a></h2>
