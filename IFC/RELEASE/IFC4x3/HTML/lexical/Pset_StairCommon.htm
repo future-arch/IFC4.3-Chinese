@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.1.4.20 Pset_StairCommon（楼梯通用） - IFC 4.3.2 Documentation</title>
+<title>6.1.4.20 楼梯通用属性集 - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -144,18 +144,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.1.4.20 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_StairCommon.htm">Pset_StairCommon</a>（楼梯通用）</h1>
+<h1>6.1.4.20 楼梯通用属性集</h1>
 <h2><a class="anchor" id="6.1.4.20.1-Semantic-definition-"></a>
     6.1.4.20.1 语义定义（Semantic definition）
 <a class="link" href="#6.1.4.20.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>适用于所有 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStair.htm">IfcStair</a> 实例定义的通用属性。</p>
-<!-- 简短定义结束 -->
+<p>IfcStair所有实例的定义共有的属性。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="6.1.4.20.2-"></a>
     6.1.4.20.2 适用实体
 <a class="link" href="#6.1.4.20.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 的子类型处被同名属性集覆盖。
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStair.htm">IfcStair</a></li>
@@ -164,7 +164,7 @@
 <h2><a class="anchor" id="6.1.4.20.3-"></a>
     6.1.4.20.3 属性
 <a class="link" href="#6.1.4.20.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-4623eae2-413c-4adc-8e6f-fa48131e681f"></a><table>
+<figure><a class="anchor" id="-52d95bec-9f9d-4c90-9cee-9c9d21ff1d0f"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -180,8 +180,11 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td>
-<p>此项目中指定类型的基准ID（例如类型"A-1"），也称为"构造类型"。如果软件不支持对象类型且未使用已认可分类系统的分类基准，则应作为"对象类型"名称的替代方案提供。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> Reference属性已被弃用，不应再使用，请改用相关类型上的_Name_属性。</aside>
+<p>=========</p>
+<p>项目中指定类型的参考ID（例如，类型“A-1”），也称为“构造类型”。如果软件不支持对象类型且没有指向已知分类系统的分类参考，则应提供此项作为“对象类型”名称的替代。</p>
+<blockquote>
+<p>IFC4.3.0.0 弃用：Reference 属性已被弃用，不得再使用，请改用相关类型的 <em>Name</em> 属性。</p>
+</blockquote>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Reference.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -190,7 +193,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ElementStatus.htm">PEnum_ElementStatus</a></td>
 <td>
-<p>构件的状态，主要用于改造或翻新项目。状态可指定为"New"（新建）- 设计为新增构件，"Existing"（现有）- 构件已存在且保留，"Demolish"（拆除）- 构件已存在但将被拆除，"Temporary"（临时）- 构件仅临时存在（如临时支撑结构）。</p>
+<p>构件的状态，主要用于翻新或改造项目。状态可指定为“新建”（New）- 作为新增设计的构件，“现有”（Existing）- 构件存在并保留，“拆除”（Demolish）- 构件已存在但将被拆除，“临时”（Temporary）- 构件仅临时存在（如临时支撑结构）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Status.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -199,7 +202,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCountMeasure.htm">IfcCountMeasure</a></td>
 <td>
-<p>楼梯或梯段中包含的立管总数。</p>
+<p>楼梯或楼梯段中包含的立管总数。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NumberOfRiser.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -208,7 +211,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCountMeasure.htm">IfcCountMeasure</a></td>
 <td>
-<p>包含在楼梯或梯段中的踏步总数。</p>
+<p>楼梯或楼梯段中包含的踏步总数。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NumberOfTreads.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -217,8 +220,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>从一个踏步到下一个踏步的垂直距离。
-对于楼梯或楼梯段的所有踏步，立管高度应保持相等。</p>
+<p>踏步到踏步的垂直距离。
+踏步高度应等于楼梯或楼梯段所有踏步的高度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/RiserHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -227,8 +230,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>从踏板前缘到下一踏板前缘的水平距离。<br/>
-在行走线上，楼梯或梯段的所有台阶的踏板长度应相等。</p>
+<p>从踏板前缘到下一个踏板前缘的水平距离。
+踏板长度应在行走线上等于楼梯或楼梯段的所有踏步。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TreadLength.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -237,7 +240,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>从踏步板前缘到下方踢脚板的水平距离。这是踏步板的悬挑部分。</p>
+<p>踏板前缘到下方立板的水平距离。即踏板的悬垂长度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NosingLength.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -246,8 +249,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>行走线距离梯段内侧的偏移量。
-注意：行走线可能具有自身的形状表示（如存在不一致情况，应以形状表示导出的数值为准）。</p>
+<p>步行线与楼梯内侧的偏移量。
+注释：步行线可能有自己的形状表示（如果存在不一致，则以形状表示法派生的值为准）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/WalkingLineOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -256,8 +259,9 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>在给定偏移量处的踏板长度。<br/>
-行走线位置由 <code>WalkingLineOffset</code> 给出。通常情况下，该结果值应与 <em>TreadLength</em> 相同；如果建筑规范计算中使用的行走线偏移量与设计中使用的不同，则可以额外提供该值。</p>
+<p>===================</p>
+<p>给定偏移处的踏板长度。
+步行线位置由“WalkingLineOffset”给出。该值通常应与 TreadLength 相同，但如果用于建筑规范计算的步行线偏移与设计中使用的不同，则可以额外提供。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TreadLengthAtOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -266,8 +270,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>Minimum length of treads at the inner side of the winder.
-仅适用于扇形踏步的情况，对于直行梯段，该值与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStairFlight.htm">IfcStairFlight</a>.TreadLength 相同。这是一个预计算值，若存在不一致，应以从几何表示中导出的值为准。</p>
+<p>======================</p>
+<p>弯头楼梯踏板内侧的最小长度。仅在弯头梯段中相关，对于直梯梯段，它与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStairFlight.htm">IfcStairFlight</a>.TreadLength 相同。这是一个预先计算的值，如果存在不一致，则以形状表示派生的值为准。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TreadLengthAtInnerSide.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -276,7 +280,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>楼梯段的最小厚度，垂直于楼梯段坡度测量至踏步竖板和踏面的内角。这是一个预先计算的值，如果存在不一致，应以从形状表示中得出的值为准。</p>
+<p>楼梯踏板的最小厚度，垂直于踏板斜面测量至踏板和踢面内角的距离。这是一个预先计算的值，如果存在不一致，则以形状表示法派生的值为准。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/WaistThickness.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -285,7 +289,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>根据适用的建筑规范或附加要求，通道所需的最小净空高度。</p>
+<p>根据适用的建筑规范或附加要求，通道所需的净空高度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/RequiredHeadroom.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -294,7 +298,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示该对象专为残障人士无障碍通行而设计。若根据当地建筑规范该对象被评定为无障碍通行，则设置为（TRUE），否则为（FALSE）。该属性依据国家建筑规范的要求进行设定。</p>
+<p>表明该对象设计为残疾人可及。如果该对象根据当地建筑规范被评定为残疾人可及，则设置为 (TRUE)，否则设置为 (FALSE)。这是根据国家建筑规范的要求给出的。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/HandicapAccessible.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -303,7 +307,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示表面处理是否设计用于防滑（TRUE）或不防滑（FALSE）。</p>
+<p>指示表面处理是否设计为防滑（TRUE）或不防滑（FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/HasNonSkidSurface.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -312,7 +316,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示该构件是否设计用于外部（TRUE）或非外部（FALSE）。若为（TRUE）则表示该构件为外部构件，面向建筑外侧。</p>
+<p>指示构件是设计用于外部使用（TRUE）还是非外部使用（FALSE）。如果为（TRUE），则为外部构件，面向建筑物外部。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsExternal.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -321,7 +325,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThermalTransmittanceMeasure.htm">IfcThermalTransmittanceMeasure</a></td>
 <td>
-<p>构件在热流方向上的热传导系数（U值）（包含所有材料）。</p>
+<p>构件的传热系数（U值），沿热流方向（包括所有材料）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ThermalTransmittance.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -330,7 +334,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>表示对象是否用于承载荷载（TRUE）或不承载荷载（FALSE）。</p>
+<p>指示该对象是否用于承载荷载（TRUE）或不用于（FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/LoadBearing.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -339,7 +343,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>该对象的防火等级。根据国家消防安全分类标准给出。</p>
+<h1>FireRating</h1>
+<p>该对象的防火等级。根据国家消防安全分类给出。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/FireRating.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -348,12 +353,13 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示该对象是否设计用作火灾情况下的出口（TRUE 表示是，FALSE 表示否）。</p><p>此处根据国家建筑规范定义疏散楼梯。</p>
+<h1>FireExit</h1>
+<p>指示该对象是否设计为在火灾情况下用作出口（TRUE）或否（FALSE）。</p><p>此处定义了符合国家建筑规范的出口楼梯。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/FireExit.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.4.20.A<a class="link" href="#-4623eae2-413c-4adc-8e6f-fa48131e681f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.4.20.A<a class="link" href="#-52d95bec-9f9d-4c90-9cee-9c9d21ff1d0f"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
