@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.19 IfcFacetedBrepWithVoids（带孔洞面片边界表示） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.19 IfcFacetedBrepWithVoids - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,20 +189,20 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.19 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrepWithVoids.htm">IfcFacetedBrepWithVoids</a>（带孔洞面片边界表示）</h1>
+<h1>8.8.3.19 IfcFacetedBrepWithVoids</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.19.1-Semantic-definition-"></a>
     8.8.3.19.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.19.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrepWithVoids.htm">IfcFacetedBrepWithVoids</a></em> 是一种面片边界表示的特化形式，在其内部包含一个或多个孔洞。这些孔洞被表示为封闭壳体，其定义方式使得壳体法向指向孔洞内部。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 该实体改编自 ISO 10303-42 中定义的 <strong>brep_with_voids</strong> 和 <strong>faceted_brep</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体</aside><aside class="aside-change"><mark>IFC4 变更</mark> 子类型从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm">IfcFacetedBrep</a></em>，保持基于文件交换的向上兼容性。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrepWithVoids.htm">IfcFacetedBrepWithVoids</a></em> 是一个分面边界表示的特化，其中包含一个或多个内部空腔。空腔表示为封闭的壳，其定义使得壳法线指向空腔内部。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>brep_with_voids</strong> AND <strong>faceted_brep</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0</aside><aside class="aside-change"><mark>IFC4 变更</mark> Subtyping changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm">IfcFacetedBrep</a></em> with upward compatibility for file based exchange.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>每个孔洞壳体应与外壳体及所有其他孔洞壳体不相交</li>
-<li>每个孔洞壳体应被封闭在外壳体内，但不应被封闭在任何其他孔洞壳体内。特别地，外壳体不在孔洞壳体集合中</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> 中的每个壳体应仅被引用一次</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm">IfcFacetedBrep</a></em> 中所有壳体的所有面的所有边界环应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyLoop.htm">IfcPolyLoop</a></em> 类型</li>
+<li>每个空腔壳应与外壳以及其他所有空腔壳分离。</li>
+<li>每个空腔壳应包含在外壳内，但不得包含在任何其他空腔壳内。特别是，外壳不应包含在空腔壳集中。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> 中的每个壳只能被引用一次。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacetedBrep.htm">IfcFacetedBrep</a></em> 中所有壳的所有面的所有边界环都必须是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyLoop.htm">IfcPolyLoop</a></em> 类型。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.19.2-Entity-inheritance-"></a>
     8.8.3.19.2 实体继承（Entity inheritance）
@@ -281,7 +281,7 @@
     8.8.3.19.3 特性（Attributes）
 <a class="link" href="#8.8.3.19.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-cd9c89a5-96e0-4a2b-8c12-57991b8c25af"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-bc45a61c-d31a-448f-b473-3dc8c4e0e001"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -310,8 +310,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -321,8 +321,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -342,7 +342,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -360,7 +360,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClosedShell.htm">IfcClosedShell</a></td>
 <td data-label="Description">
-<p>定义实体外部边界的闭合壳。壳法线应指向实体内部的外部。</p>
+<p>定义实体外部边界的封闭壳。壳法线应指向实体内部之外。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -390,11 +390,11 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClosedShell.htm">IfcClosedShell</a></td>
 <td data-label="Description">
-<p>定义实体内部孔洞的封闭壳体集合。</p>
+<p>定义实体内部空腔的封闭壳集。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.19.A<a class="link" href="#-cd9c89a5-96e0-4a2b-8c12-57991b8c25af"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.19.A<a class="link" href="#-bc45a61c-d31a-448f-b473-3dc8c4e0e001"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.19.4-Formal-representation-"></a>
     8.8.3.19.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.19.4-Formal-representation-"><i data-feather="link"></i></a></h2>
