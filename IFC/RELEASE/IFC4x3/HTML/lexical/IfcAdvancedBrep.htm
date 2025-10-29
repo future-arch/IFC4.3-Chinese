@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.1 IfcAdvancedBrep（高级边界表示） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.1 IfcAdvancedBrep - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,27 +189,27 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm">IfcAdvancedBrep</a>（高级边界表示）</h1>
+<h1>8.8.3.1 IfcAdvancedBrep</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.1.1-Semantic-definition-"></a>
     8.8.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>高级边界表示是一种边界表示模型，其中所有面、边和顶点都被显式表示。它是一个具有显式拓扑和基本或自由形式几何的实体。该边界表示的面类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em>。高级边界表示必须满足与流形实体边界表示相同的拓扑约束。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 引入高级边界表示是为了支持越来越多能够基于NURBS或其他B样条曲面定义和交换边界表示模型的应用程序。</aside>
-<figure><a class="anchor" id="-1-B-"></a><img alt="高级边界表示 B样条曲面" src="../figures/ifcadvancedbrep_01.png"/><figcaption>图1 — 高级边界表示，B样条曲面<a class="link" href="#-1-B-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图1展示了使用<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm">IfcAdvancedBrep</a></em>处理具有B样条曲面的边界表示模型的应用。该图显示了基于<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em>的高级边界表示所使用的拓扑和几何表示项。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="高级边界表示基本曲面" src="../figures/ifcadvancedbrep_02.png"/><figcaption>图2 — 高级边界表示，基本曲面<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图2展示了使用<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm">IfcAdvancedBrep</a></em>处理具有基本曲面的边界表示模型的应用。该图显示了基于<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em>的高级边界表示所使用的拓扑和几何表示项。它展示了使用<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIntersectionCurve.htm">IfcIntersectionCurve</a></em>来提供边曲线的几何表示，既作为3D曲线，也作为相邻曲面参数空间中的u,v参数曲线。</p>
-<aside class="aside-note"><mark>注释</mark> 该实体改编自ISO 10303-514中定义的<strong>advanced_brep_shape_representation</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC4中的新实体</aside>
+<p>高级边界表示 (B-rep) 是一种边界表示模型，其中所有面、边和顶点都显式表示。它是一个具有显式拓扑和基本或自由形式几何的实体。B-rep 的面是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em> 类型。高级 B-rep 必须满足与流形实体 B-rep 相同的拓扑约束。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> The advanced B-rep has been introduced in order to support the increasing number of applications that can define and exchange B-rep models based on NURBS or other b-spline surfaces.</aside>
+<figure><a class="anchor" id="-1-B-rep-b-"></a><img alt="advanced brep b-spline surface" src="../figures/ifcadvancedbrep_01.png"/><figcaption>图 8.8.3.1.A — 高级 B-rep，b 样条曲面<a class="link" href="#-1-B-rep-b-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 8.8.3.1.A 说明了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm">IfcAdvancedBrep</a></em> 在具有 b 样条曲面的边界表示模型中的使用。该图显示了用于高级 B-rep 的拓扑和几何表示项，它们基于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em>。</p>
+<figure><a class="anchor" id="-2-B-rep-"></a><img alt="advanced brep elementary surface" src="../figures/ifcadvancedbrep_02.png"/><figcaption>图 8.8.3.1.B — 高级 B-rep，基本曲面<a class="link" href="#-2-B-rep-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 8.8.3.1.B 说明了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedBrep.htm">IfcAdvancedBrep</a></em> 在具有基本曲面的边界表示模型中的使用。该图显示了用于高级 B-rep 的拓扑和几何表示项，它们基于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em>。它显示了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIntersectionCurve.htm">IfcIntersectionCurve</a></em> 如何同时作为 3D 曲线和相邻曲面的参数空间中的 p 曲线来提供边曲线的几何表示。</p>
+<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>advanced_brep_shape_representation</strong> defined in ISO 10303-514.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>每个面都是一个曲面面；</li>
-<li>每个曲面面的几何由基本曲面、扫描曲面或B样条曲面定义；</li>
-<li>用于定义面边界的边都应引用边曲线；</li>
-<li>用于定义面和面边界几何的每条曲线应为圆锥曲线、直线、折线或B样条曲线；</li>
-<li>用于定义面边界的边都应通过顶点点类型的顶点进行裁剪；</li>
-<li>用于定义面边界的环不应是定向子类型。</li>
+<li>每个面都是一个面曲面；</li>
+<li>每个面曲面的几何由基本曲面、扫掠曲面或 b 样条曲面定义；</li>
+<li>用于定义面边界的边必须全部引用边曲线</li>
+<li>用于定义面几何和面边界的每条曲线必须是圆锥曲线、直线、折线或 b 样条曲线</li>
+<li>用于定义面边界的边必须全部由顶点类型的顶点修剪</li>
+<li>用于定义面的任何环不得为定向子类型</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.1.2-Entity-inheritance-"></a>
     8.8.3.1.2 实体继承（Entity inheritance）
@@ -288,7 +288,7 @@
     8.8.3.1.3 特性（Attributes）
 <a class="link" href="#8.8.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e4363616-fdb2-492c-bd7b-3fca8c164d52"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-2605fe50-3923-450b-ae63-d93beb2227d4"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -317,8 +317,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -328,8 +328,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -349,7 +349,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -379,15 +379,15 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClosedShell.htm">IfcClosedShell</a></td>
 <td data-label="Description">
-<p>定义实体外部边界的闭合壳。壳法线应指向实体内部的外部。</p>
+<p>定义实体外部边界的封闭壳。壳法线应指向实体内部之外。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.1.A<a class="link" href="#-e4363616-fdb2-492c-bd7b-3fca8c164d52"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.1.C<a class="link" href="#-2605fe50-3923-450b-ae63-d93beb2227d4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.1.4-Formal-propositions-"></a>
     8.8.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-489c061c-ea58-4c26-a41e-fda235e6e97b"></a><table>
+<figure><a class="anchor" id="-c5e9aa9e-ad5e-4fe2-bbd4-bf3e900d07e4"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -398,7 +398,7 @@
 <tr>
 <td>HasAdvancedFaces</td>
 <td>
-<p>高级边界表示的每个面都应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em> 类型。</p>
+<p>高级 B-rep 的每个面都必须是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em> 类型。</p>
 </td>
 </tr>
 <tr>
@@ -409,7 +409,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.1.C<a class="link" href="#-489c061c-ea58-4c26-a41e-fda235e6e97b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.1.D<a class="link" href="#-c5e9aa9e-ad5e-4fe2-bbd4-bf3e900d07e4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.1.5-Formal-representation-"></a>
     8.8.3.1.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.1.5-Formal-representation-"><i data-feather="link"></i></a></h2>
