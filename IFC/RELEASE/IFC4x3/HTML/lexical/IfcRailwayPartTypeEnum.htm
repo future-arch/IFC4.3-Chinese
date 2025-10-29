@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.8.2.2 IfcRailwayPartTypeEnum（铁路部件类型枚举） - IFC 4.3.2 Documentation</title>
+<title>7.8.2.2 IfcRailwayPartTypeEnum - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -159,55 +159,55 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>7.8.2.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayPartTypeEnum</a>（铁路部件类型枚举）</h1>
+<h1>7.8.2.2 IfcRailwayPartTypeEnum</h1>
 <h2><a class="anchor" id="7.8.2.2.1-Semantic-definition-"></a>
     7.8.2.2.1 语义定义（Semantic definition）
 <a class="link" href="#7.8.2.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayPartTypeEnum</a></em> 定义了可指定的不同类型铁路部件的范围。</p>
-<!-- 简短定义结束 -->
-<p>铁路线路可以根据垂直、纵向和横向标准在空间上划分为若干部分。线路的空间划分没有统一的标准方法，这取决于具体的使用场景。可用于在空间上组织线路的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a></em> 包括：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayPartTypeEnum</a></em> 定义了可以指定的铁路部件的不同类型的范围。</p>
+<!-- end of short definition -->
+<p>铁路线路可以通过垂直、纵向和横向标准在空间上划分为多个部分，具体取决于用例。 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a></em> 可用于空间划分线路，包括：</p>
 <ul>
-<li><strong>轨道</strong>，可进一步描述为：</li>
-<li>普通轨道</li>
-<li>道岔轨道</li>
-<li>伸缩调节轨道</li>
-<li>或其他轨道部件</li>
-<li><strong>线路旁</strong>，可进一步描述为：</li>
-<li>线路旁部件</li>
-<li><strong>下部结构</strong>（用于人工地基）</li>
-<li><strong>轨道上方</strong></li>
+<li><strong>Track</strong>（轨道），可进一步细分为</li>
+<li>Plain tracks（普通轨道）</li>
+<li>Turnout tracks（道岔轨道）</li>
+<li>Dilatation tracks（伸缩缝轨道）</li>
+<li>或其他轨道部分</li>
+<li><strong>Line-side</strong>（线路侧），可进一步细分为</li>
+<li>Line-side parts（线路侧部分）</li>
+<li><strong>Substructure</strong>（下部结构）（用于构筑地面）</li>
+<li><strong>Above-track</strong>（轨道上方）</li>
 </ul>
-<p>有关枚举类型的详细说明，请参见各枚举类型的描述。以下是一些关于如何使用部件在空间上组织铁路线路的建议。</p>
+<p>有关详细信息，请参阅枚举类型的描述。以下是一些关于如何使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a></em> 来空间组织铁路线路的建议。</p>
 <p><strong>垂直组织</strong></p>
-<figure><a class="anchor" id="-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"></a><img alt="铁路部件垂直组织" src="../figures/IfcRailwayPartTypeEnum-global.png"/><figcaption>图 7.8.2.2.A — 使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a></em> 对铁路线路元素进行垂直组织的示例<a class="link" href="#-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> 如果使用场景需要，轨道下方的部分可以区分为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a>.SUBSTRUCTURE</em>（用于人工地基）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPartCommon.htm">IfcFacilityPartCommon</a>.BELOWGROUND</em>（用于非人工、既有地基）。</aside><aside class="aside-note"><mark>注释</mark> 上图涵盖了常见的简单情况。例如，其他更复杂的情况可能包括：
-* 桥梁上的铁路线路
-* 隧道内的铁路线路（单洞或多洞）
-* 铁路线路枢纽（两条或多条线路交叉）
-* 主要站房建筑环境中的铁路线路
-* 在附近山丘上设有配套无线通信设备（例如，GSM-R设备、天线杆）的铁路线路</aside><blockquote>
-<p>此类更复杂的情况可能需要特定的空间组织方式。</p>
+<figure><a class="anchor" id="-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"></a><img alt="Railway part vertical organisation" src="../figures/IfcRailwayPartTypeEnum-global.png"/><figcaption>图 7.8.2.2.A — <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a></em> 用于垂直组织铁路线路元素的示例<a class="link" href="#-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>注释</mark> If required by the use case, the part below the track can be distinguished between <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a>.SUBSTRUCTURE</em> (for constructed ground) and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPartCommon.htm">IfcFacilityPartCommon</a>.BELOWGROUND</em> (for non constructed, existing ground).</aside><aside class="aside-note"><mark>注释</mark> The Figure above covers the average simple case. For example, other advanced cases could be:
+* Railway line on a bridge
+* Railway line in a tunnel (single or multiple tubes)
+* Railway line junction (two or more lines crossing)
+* Railway line in the context of a main station building
+* Railway line with its supporting radio communication equipment (e.g. GSM-R equipment, antenna poles) on a nearby hill</aside><blockquote>
+<p>Such more advanced cases might require a specific spatial organisation.</p>
 </blockquote>
 <p><strong>详细垂直组织</strong>
-如果使用场景需要，<em>SUBSTRUCTURE</em> 部分可以包含诸如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCourse.htm">IfcCourse</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEarthworksFill.htm">IfcEarthworksFill</a></em> 之类的元素，以区分不同的下部结构层。下图展示了一个示例。</p>
-<figure><a class="anchor" id="-2-SUBSTRUCTURE-"></a><img alt="铁路部件详细垂直组织" src="../figures/IfcRailwayPartTypeEnum-substructure.png"/><figcaption>图 7.8.2.2.B — <em>SUBSTRUCTURE</em> 部分可能包含的层及元素的示例<a class="link" href="#-2-SUBSTRUCTURE-"><i data-feather="link"></i></a></figcaption></figure>
+如果用例需要，<em>SUBSTRUCTURE</em> 部分可以包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCourse.htm">IfcCourse</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEarthworksFill.htm">IfcEarthworksFill</a></em> 等元素，以区分不同的下部结构层。下图展示了一个示例。</p>
+<figure><a class="anchor" id="-2-SUBSTRUCTURE-"></a><img alt="Railway part detailed vertical organization" src="../figures/IfcRailwayPartTypeEnum-substructure.png"/><figcaption>图 7.8.2.2.B — <em>SUBSTRUCTURE</em> 部分可能包含的课程和元素示例<a class="link" href="#-2-SUBSTRUCTURE-"><i data-feather="link"></i></a></figcaption></figure>
 <p><strong>纵向组织</strong></p>
-<p>轨道也可以根据轨道的具体特性进行纵向组织：</p>
+<p>轨道也可以根据其特性进行纵向组织：</p>
 <ul>
 <li>PLAINTRACK 用于普通线路轨道。</li>
 <li>TURNOUTTRACK 用于道岔区域。</li>
 </ul>
-<p>如下方示例图所示。示例中未包含的其他部分可能包括：
-* DILATATIONTRACK 用于伸缩调节板区域。
-* TRACKPART 用于轨道部件的通用纵向组织。</p>
-<figure><a class="anchor" id="-3-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"></a><img alt="铁路部件纵向组织" src="../figures/IfcRailwayPartTypeEnum-track.png"/><figcaption>图 7.8.2.2.C — 使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a></em> 对铁路线路元素进行纵向组织的示例<a class="link" href="#-3-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
+<p>如下图所示。图中未包含的其他部分可能包括：
+* DILATATIONTRACK 用于伸缩缝面板区域。
+* TRACKPART 用于轨道的通用目的纵向组织。</p>
+<figure><a class="anchor" id="-3-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"></a><img alt="Railway part longitudinal organisation" src="../figures/IfcRailwayPartTypeEnum-track.png"/><figcaption>图 7.8.2.2.C — <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm">IfcRailwayPart</a></em> 用于纵向组织铁路线路元素的示例<a class="link" href="#-3-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRailwayPart.htm'&gt;IfcRailwayPart&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
 <p><strong>混合组织</strong>
-属性 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPart.htm">IfcFacilityPart</a>.UsageType</em> 允许使用多个标准对同一数据集进行空间组织。例如，一个通用的垂直组织（如图1所示），以及仅针对轨道的进一步纵向组织（如图2所示）。</p>
-<aside class="aside-note"><mark>注释</mark> 这会在空间部件之间创建隐式层次结构，并增加模型的复杂性。</aside>
+属性 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPart.htm">IfcFacilityPart</a>.UsageType</em> 允许使用多种标准来空间组织相同的数据集。例如，如图 7.8.2.2.A 所示的通用垂直组织，以及如图 7.8.2.2.B 所示的仅针对轨道的进一步纵向组织。</p>
+<aside class="aside-note"><mark>注释</mark> This creates an implicit hierarchy among spatial parts and increases the complexity of the model.</aside>
 <h2><a class="anchor" id="7.8.2.2.2-"></a>
     7.8.2.2.2 类型值
 <a class="link" href="#7.8.2.2.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c79f3b3b-ede8-4015-b2a1-214548eb154c"></a><table class="striped type-values">
+<figure><a class="anchor" id="-f42ad83d-9b93-4b1c-ad42-6cc2cbf53ed7"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -218,7 +218,7 @@
 <tr>
 <td data-label="Name"><code>ABOVETRACK
             <td data-label="Description">
-<p>一个包含位于轨道上方或上空的元素（例如接触网线和悬挂系统）的空间结构元素。</p>
+<p>包含位于轨道上方或之上的元素的空间结构元素，例如接触网线和悬挂系统。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -232,49 +232,49 @@
 <tr>
 <td data-label="Name"><code>LINESIDE
             <td data-label="Description">
-<p>一个包含位于轨道内或轨道上方以外的铁路元素（即线路旁）的空间结构元素。</p>
+<p>包含铁路元素但不包含在轨道内或轨道上（即线路侧）的空间结构元素。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>LINESIDEPART
             <td data-label="Description">
-<p>用于进一步划分线路旁部件的空间结构元素。出于工程目的，它可用于将线路旁部件区分为更易于管理的体积。</p>
+<p>用于进一步划分线路侧部分的。它可以用于将线路侧部分划分为更易于管理的区域，以满足工程需求。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>PLAINTRACK
             <td data-label="Description">
-<p>用于进一步划分轨道的空间结构元素。它不包含任何道岔板或伸缩调节板。</p>
+<p>用于进一步划分轨道的空间结构元素。它不包含任何道岔面板或伸缩缝面板。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>SUBSTRUCTURE
             <td data-label="Description">
-<p>一个包含位于轨道下方的元素（例如土方平台、处理过的路基和路堤）的空间结构元素。这可以在竣工地面标高之上或之下。</p>
+<p>包含位于轨道下方的元素的空间结构元素，例如土方平台、准备好的路基和路堤。这可以位于完成地面以上或以下。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TRACK
             <td data-label="Description">
-<p>一个包含轨道相关元素（例如钢轨和轨枕）的空间结构元素。</p>
+<p>包含轨道相关元素的空间结构元素，例如钢轨和轨枕。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TRACKPART
             <td data-label="Description">
-<p>用于进一步划分轨道的空间结构元素，用于不属于以下类别的情况：普通轨道、道岔轨道、伸缩调节轨道。</p>
+<p>用于进一步划分轨道的空间结构元素，用于不属于普通轨道、道岔轨道、伸缩缝轨道类别的目的。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TURNOUTTRACK
             <td data-label="Description">
-<p>用于进一步划分轨道的空间结构元素。它包含道岔，不包含任何普通轨道或伸缩调节板。</p>
+<p>用于进一步划分轨道的空间结构元素。它包含道岔，不包含任何普通轨道或伸缩缝面板。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>USERDEFINED
             <td data-label="Description">
-<p>用户定义类型。</p>
+<p>用户定义类型</p>
 </td>
 </code></td></tr>
 <tr>
@@ -284,7 +284,7 @@
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 7.8.2.2.D<a class="link" href="#-c79f3b3b-ede8-4015-b2a1-214548eb154c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.8.2.2.D<a class="link" href="#-f42ad83d-9b93-4b1c-ad42-6cc2cbf53ed7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.8.2.2.3-Formal-representation-"></a>
     7.8.2.2.3 形式化表示（Formal representation）
 <a class="link" href="#7.8.2.2.3-Formal-representation-"><i data-feather="link"></i></a></h2>
