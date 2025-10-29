@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.21.3.4 IfcTableColumn（表列） - IFC 4.3.2 Documentation</title>
+<title>8.21.3.4 IfcTableColumn - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,15 +189,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.21.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>（表列）</h1>
+<h1>8.21.3.4 IfcTableColumn</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.21.3.4.1-Semantic-definition-"></a>
     8.21.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.21.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a></em> 是一种数据结构，用于捕获 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a></em> 中使用的列信息。每个实例定义了适用于与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a></em> 对象关联的列数据的标识符、名称、描述和计量单位。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a></em> 是一种数据结构，用于捕获 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a></em> 中使用的列信息。每个实例定义了适用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a></em> 对象关联的列数据的标识符、名称、描述和度量单位。</p>
 <!-- end of short definition -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a></em> 的使用取代了与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a></em> 关联的 <em>IsHeading</em> 标志。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC4 中新增实体。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a></em> 的使用取代了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a></em> 中关联的 <em>IsHeading</em> 标志。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.21.3.4.2-Entity-inheritance-"></a>
     8.21.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.21.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -213,7 +213,7 @@
     8.21.3.4.3 特性（Attributes）
 <a class="link" href="#8.21.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e8ffaa2d-c726-4eff-b5cd-1c0714a1835f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-873eee29-c997-4c26-ae20-3bd45f6f3d04"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -244,7 +244,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p><em>标识符</em> 用于在表中识别该列。如果提供，则必须在表中保持唯一。通过共享相同的列标识符，可以在多个表之间交叉引用列。</p>
+<p><em>Identifier</em> 在表格中标识列。如果提供，它在表格中必须是唯一的。可以通过共享相同的列标识符来跨多个表格交叉引用列。</p>
 </td>
 </tr>
 <tr>
@@ -256,7 +256,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p><em>名称</em> 是表列的人类可读标题。它不一定具有唯一性。</p>
+<p><em>Name</em> 是表格列的可读标题。它不一定唯一。</p>
 </td>
 </tr>
 <tr>
@@ -268,7 +268,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p><em>描述</em> 提供描述表列的人类可读文本。</p>
+<p><em>Description</em> 提供描述表格列的可读文本。</p>
 </td>
 </tr>
 <tr>
@@ -280,7 +280,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnit.htm">IfcUnit</a></td>
 <td data-label="Description">
-<p><em>单位</em> 表示用于此列数据的计量单位。如果未提供，则假定使用项目默认单位。如果提供了 <em>引用路径</em>，则单位必须与引用属性的度量相同。</p>
+<p><em>Unit</em> 指示此列数据要使用的度量单位。如果未提供，则假定为项目默认单位。如果提供了 <em>ReferencePath</em>，则单位必须与引用的属性具有相同的度量。</p>
 </td>
 </tr>
 <tr>
@@ -292,12 +292,12 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReference.htm">IfcReference</a></td>
 <td data-label="Description">
-<p><em>引用路径</em> 指示了此列数据要应用的对象和属性的相对路径。</p>
-<p>对于约束条件，此类路径相对于通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a></em>.RelatedObjects 关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>。为满足约束条件，对于设置了 <em>引用路径</em> 属性的所有列，必须恰好有一行表数据与引用的对象匹配。</p>
+<p><em>ReferencePath</em> 指示一个相对路径，指向要应用此列中数据的对象和属性。</p>
+<p>对于约束，此类路径相对于由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a></em>.RelatedObjects 关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>。为了满足约束，表格的每一行必须匹配所引用的对象，对于所有设置了 <em>ReferencePath</em> 属性的列。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.21.3.4.A<a class="link" href="#-e8ffaa2d-c726-4eff-b5cd-1c0714a1835f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.21.3.4.A<a class="link" href="#-873eee29-c997-4c26-ae20-3bd45f6f3d04"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.21.3.4.4-Formal-representation-"></a>
     8.21.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.21.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>
