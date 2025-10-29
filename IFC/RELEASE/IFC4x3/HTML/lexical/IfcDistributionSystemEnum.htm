@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.2.2.3 IfcDistributionSystemEnum（分布系统枚举） - IFC 4.3.2 Documentation</title>
+<title>6.2.2.3 IfcDistributionSystemEnum - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -144,18 +144,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.2.2.3 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystemEnum.htm">IfcDistributionSystemEnum</a>（分布系统枚举）</h1>
+<h1>6.2.2.3 IfcDistributionSystemEnum</h1>
 <h2><a class="anchor" id="6.2.2.3.1-Semantic-definition-"></a>
     6.2.2.3.1 语义定义（Semantic definition）
 <a class="link" href="#6.2.2.3.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>此枚举用于识别不同类型的分布系统。它通过系统的功能以及此类系统中设备的端口来指定系统，以限制与兼容连接的连接性。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC4 中新增枚举。</aside>
-<p>电缆托架的端口可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierSegment.htm">IfcCableCarrierSegment</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a></em> 进行连接。对于不特定于特定系统类型的电缆托架段和配件类型对象（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierSegmentType.htm">IfcCableCarrierSegmentType</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierFittingType.htm">IfcCableCarrierFittingType</a></em>），其端口可能具有 <em>PredefinedType</em> 为 NOTDEFINED，表示此类对象的实例可以连接到任何其他基于电缆托架的端口。电缆托架的有效枚举与电缆相同，并且如果所包含电缆的端口均为相同类型，则可以断言。</p>
+<p>此枚举用于标识不同类型的分布系统。它用于通过其功能以及此类系统内设备的端口来指定系统，以限制连接到兼容的连接。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New enumeration in IFC4.</aside>
+<p>电缆桥架的端口可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierSegment.htm">IfcCableCarrierSegment</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a></em> 进行连接。电缆桥架段和配件的类型对象（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierSegmentType.htm">IfcCableCarrierSegmentType</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierFittingType.htm">IfcCableCarrierFittingType</a></em>，它们不特定于特定系统类型）可能具有 <em>PredefinedType</em> 为 NOTDEFINED 的端口，这表示这些对象的实例可以连接到任何其他基于电缆桥架的端口。电缆桥架的有效枚举与电缆相同，如果包含的电缆端口类型都相同，则可以断言。</p>
 <h2><a class="anchor" id="6.2.2.3.2-"></a>
     6.2.2.3.2 类型值
 <a class="link" href="#6.2.2.3.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-45585f38-26e0-46dc-a197-b8070e8fc64c"></a><table class="striped type-values">
+<figure><a class="anchor" id="-6432c3ba-b812-4772-89a3-bcfed4e375f9"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -166,7 +166,7 @@
 <tr>
 <td data-label="Name"><code>AIRCONDITIONING
             <td data-label="Description">
-<p>用于维持一个或多个空间内温度范围的空调空气分布系统。</p>
+<p>用于维持一个或多个空间内温度范围的空调空气输送系统。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -178,25 +178,25 @@
 <tr>
 <td data-label="Name"><code>CATENARY_SYSTEM
             <td data-label="Description">
-<p>支撑接触线的纵向分布系统，包括承力索吊弦和缝合线。</p>
+<p>支撑接触线的纵向输电系统，包括接触线悬挂线和连接线。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>CHEMICAL
             <td data-label="Description">
-<p>通过属性集进一步限定的任意化学品，例如用于医疗或工业用途。</p>
+<p>任意化学品，通过属性集进一步限定，例如用于医疗或工业用途。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>CHILLEDWATER
             <td data-label="Description">
-<p>非饮用冷冻水，例如通过蒸发器循环的水。</p>
+<p>非饮用水，例如通过蒸发器循环。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>COMMUNICATION
             <td data-label="Description">
-<p>通信</p>
+<p>通信。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -208,19 +208,19 @@
 <tr>
 <td data-label="Name"><code>CONDENSERWATER
             <td data-label="Description">
-<p>非饮用水，例如通过冷凝器循环的水。</p>
+<p>非饮用水，例如通过冷凝器循环。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>CONTROL
             <td data-label="Description">
-<p>专用于控制系统用途的传输或网络。</p>
+<p>专用于控制系统使用的传输或网络。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>CONVEYING
             <td data-label="Description">
-<p>物质的任意供应。</p>
+<p>任意物质输送。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -232,19 +232,19 @@
 <tr>
 <td data-label="Name"><code>DISPOSAL
             <td data-label="Description">
-<p>物质的任意处置。</p>
+<p>任意物质处置。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>DOMESTICCOLDWATER
             <td data-label="Description">
-<p>未加热的饮用水分布系统。</p>
+<p>未加热的饮用水输送系统。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>DOMESTICHOTWATER
             <td data-label="Description">
-<p>加热的饮用水分布系统。</p>
+<p>加热的饮用水输送系统。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -256,7 +256,7 @@
 <tr>
 <td data-label="Name"><code>EARTHING
             <td data-label="Description">
-<p>用于等电位连接，将电流传导至地面的路径。</p>
+<p>等电位连接的路径，将电流导向大地。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -274,7 +274,7 @@
 <tr>
 <td data-label="Name"><code>EXHAUST
             <td data-label="Description">
-<p>用于从一个或多个空间排出污浊或有毒空气的排风收集系统。</p>
+<p>排风收集系统，用于从一个或多个空间排出陈旧或有害的空气。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -286,13 +286,13 @@
 <tr>
 <td data-label="Name"><code>FIXEDTRANSMISSIONNETWORK
             <td data-label="Description">
-<p>代表所有使用光缆、铜缆或两者提供数据传输通道的有线网络。它聚合了基于复用方法的多种技术。</p>
+<p>代表所有使用光纤电缆、铜缆或两者兼有的有线网络，提供数据传输通道。它聚合了许多基于复用方法的技术。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>FUEL
             <td data-label="Description">
-<p>燃料的任意供应。</p>
+<p>任意燃料供应。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -310,43 +310,43 @@
 <tr>
 <td data-label="Name"><code>HEATING
             <td data-label="Description">
-<p>从锅炉加热并通过散热器循环的水或蒸汽。</p>
+<p>从锅炉加热并循环通过散热器的水或蒸汽。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>LIGHTING
             <td data-label="Description">
-<p>专用于照明的电路，例如具有灯座的灯具。</p>
+<p>专用于照明的电路，例如带有灯座的灯具。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>LIGHTNINGPROTECTION
             <td data-label="Description">
-<p>用于将雷电流传导至地面的路径。</p>
+<p>将雷电流导向大地的路径。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>MOBILENETWORK
             <td data-label="Description">
-<p>移动网络通过为基础设施运营商（包括驾驶员、调度员、调车团队成员和车站控制器）之间的语音和数据通信提供安全平台来确保无线通信。</p>
+<p>移动网络通过提供安全的语音和数据通信平台，确保基础设施操作员（包括司机、调度员、编组人员和站控员）之间的无线通信。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>MONITORINGSYSTEM
             <td data-label="Description">
-<p>基于传感器的建筑和基础设施环境监测与控制系统。</p>
+<p>用于建筑和基础设施环境监测和控制的基于传感器的系统。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>MUNICIPALSOLIDWASTE
             <td data-label="Description">
-<p>消耗和丢弃的物品，通常称为垃圾或废物。</p>
+<p>消耗和丢弃的物品，通常称为垃圾。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>OIL
             <td data-label="Description">
-<p>油分布系统。</p>
+<p>石油输送系统。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -358,13 +358,13 @@
 <tr>
 <td data-label="Name"><code>OPERATIONALTELEPHONYSYSTEM
             <td data-label="Description">
-<p>允许运营中心（例如调度员、交通调节员、运营代理等）与基础设施现场（例如铁路、隧道或道路）的操作员之间通信的系统。</p>
+<p>允许操作员（例如信号员、交通调度员、运行人员等）在操作中心和基础设施现场（例如铁路、隧道或道路）之间进行通信的系统。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>OVERHEAD_CONTACTLINE_SYSTEM
             <td data-label="Description">
-<p>使用架空接触线和承力索系统向牵引单元供电的列车上限以上的架空接触线系统。</p>
+<p>位于列车上方区域的架空接触网系统，使用架空接触线和悬挂线为牵引单元供电。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -376,25 +376,25 @@
 <tr>
 <td data-label="Name"><code>RAINWATER
             <td data-label="Description">
-<p>直接降落在某地块上的降水产生的雨水。</p>
+<p>直接落在地块上的降水产生的雨水。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>REFRIGERATION
             <td data-label="Description">
-<p>用于完成制冷循环全部或部分的制冷剂分布系统。</p>
+<p>制冷剂输送系统，用于完成制冷循环的全部或部分。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>RETURN_CIRCUIT
             <td data-label="Description">
-<p>形成牵引回流和故障条件下电流预期路径的分布系统。</p>
+<p>形成牵引回流和故障电流预期路径的输电系统。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>SECURITY
             <td data-label="Description">
-<p>专用于安全系统用途的传输或网络。</p>
+<p>专用于安全系统使用的传输或网络。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -406,49 +406,49 @@
 <tr>
 <td data-label="Name"><code>SIGNAL
             <td data-label="Description">
-<p>原始模拟信号，例如调制数据或传感器测量值。</p>
+<p>原始模拟信号，例如来自传感器的调制数据或测量值。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>STORMWATER
             <td data-label="Description">
-<p>从地表径流或流经地表的降水产生的雨水。</p>
+<p>降水产生的地表径流或地表流动的雨水。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TELEPHONE
             <td data-label="Description">
-<p>专用于电话系统用途的传输或网络。</p>
+<p>专用于电话系统的传输或网络。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>TV
             <td data-label="Description">
-<p>多个媒体源的传输，例如模拟有线电视、卫星电视或无线电视。</p>
+<p>传输多个媒体源，例如模拟有线电视、卫星电视或地面电视。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>VACUUM
             <td data-label="Description">
-<p>真空分布系统。</p>
+<p>真空输送系统。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>VENT
             <td data-label="Description">
-<p>用于废水管道系统的通风系统。</p>
+<p>废水管道系统的通风口。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>VENTILATION
             <td data-label="Description">
-<p>涉及与外部空气交换以及建筑物内空气循环的通风空气分布系统。</p>
+<p>通风空气输送系统，涉及与外部的空气交换以及建筑物内的空气循环。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>WASTEWATER
             <td data-label="Description">
-<p>因人为影响而质量受到不利影响的水，可能源自污水、排水或其他来源。</p>
+<p>因人为影响而导致水质变差的水，可能来自污水、排水或其他来源。</p>
 </td>
 </code></td></tr>
 <tr>
@@ -460,17 +460,21 @@
 <tr>
 <td data-label="Name"><code>USERDEFINED
             <td data-label="Description">
-<p>用户定义</p>
+<p>
+<em>No description available.</em>
+</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>NOTDEFINED
             <td data-label="Description">
-<p>未定义</p>
+<p>
+<em>No description available.</em>
+</p>
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 6.2.2.3.A<a class="link" href="#-45585f38-26e0-46dc-a197-b8070e8fc64c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.2.2.3.A<a class="link" href="#-6432c3ba-b812-4772-89a3-bcfed4e375f9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.2.2.3.3-Formal-representation-"></a>
     6.2.2.3.3 形式化表示（Formal representation）
 <a class="link" href="#6.2.2.3.3-Formal-representation-"><i data-feather="link"></i></a></h2>
