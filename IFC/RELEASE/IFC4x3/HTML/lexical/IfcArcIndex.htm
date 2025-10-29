@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.2.1 IfcArcIndex（弧索引） - IFC 4.3.2 Documentation</title>
+<title>8.9.2.1 IfcArcIndex - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,16 +189,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.2.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a>（弧索引）</h1>
+<h1>8.9.2.1 IfcArcIndex</h1>
 <h2><a class="anchor" id="8.9.2.1.1-Semantic-definition-"></a>
     8.9.2.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.2.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 通过提供索引列表来描述多段曲线中的单个圆弧段。第一个索引是圆弧的起点，第二个索引是圆弧上的一个点，第三个索引是圆弧的终点。这三个点不应共线。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 该类型用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em>，指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em>，以提供多段曲线圆弧段的笛卡尔点。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 ADD1 中的新类型</aside>
-<p><strong>非正式命题</strong></p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 通过提供索引列表来描述多段曲线中的单个圆弧段。第一个索引是圆弧的起点，第二个索引是圆弧上的点，第三个索引是圆弧的终点。这三个点不能共线。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> The type is used for <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> to point into an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> for providing the Cartesian points of the circular arc segments of the poly curve.</aside><aside class="aside-history"><mark>沿革</mark> New Type in IFC4 ADD1</aside>
+<p><strong>Informal Propositions</strong></p>
 <ol>
-<li>第二个索引（解析为圆弧上的点）应解析为一个笛卡尔点，该点到圆弧起点和终点的距离大致相等。这是为了避免当圆弧上的点过于靠近起点或终点时出现数值不稳定性。</li>
+<li>第二个索引，解析为圆弧上的点，应解析为与圆弧的起点和终点距离大致相等的笛卡尔点。这是为了避免当圆弧上的点非常接近起点或终点时出现数值不稳定性。</li>
 </ol>
 <h2><a class="anchor" id="8.9.2.1.2-Formal-representation-"></a>
     8.9.2.1.2 形式化表示（Formal representation）
