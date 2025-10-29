@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.42 IfcSweptAreaSolid（扫掠面积实体） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.42 IfcSweptAreaSolid - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.42 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>（扫掠面积实体）</h1>
+<h1>8.8.3.42 IfcSweptAreaSolid</h1>
 <div class="mvd" title="Included in Body SweptSolid Geometry, Body SweptSolid PolyCurve Geometry, Reference SweptSolid Geometry, Reference SweptSolid PolyCurve Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Body SweptSolid Geometry, Body SweptSolid PolyCurve Geometry, Reference SweptSolid Geometry, Reference SweptSolid PolyCurve Geometry">AbV ⓘ</div>
 <div class="row">
@@ -202,12 +202,12 @@
 <h2><a class="anchor" id="8.8.3.42.1-Semantic-definition-"></a>
     8.8.3.42.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.42.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>（扫掠面积实体）通过扫掠表示方案表示三维形状，允许二维平面横截面在空间中扫掠。</p>
-<!-- 简短定义结束 -->
-<p>扫掠面积由横截面定义，该横截面由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 的子类型表示，作为隐式平面上的闭合二维边界提供。扫掠面积在对象坐标系的 xy 平面中定义。扫掠操作应用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 子类型中定义的扫掠面积，某些子类型需要在扫掠开始位置对扫掠面积进行隐式变换。</p>
-<p>可选的 <em>Position</em>（位置）坐标系允许相对于对象坐标系重新定位生成的扫掠实体。</p>
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-扫掠面积实体实体收集了通过在平面有界曲面上进行扫掠操作以程序化方式定义的实体。扫掠实体在空间中的位置将取决于扫掠面积的位置。扫掠面积将成为生成的扫掠面积实体的一个面，除非旋转角度等于 2π（或 360 度）的旋转面积实体情况。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>swept_area_solid</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新实体</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>Position</em> 已更改为可选，并保持基于文件交换的向上兼容性。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 通过一种扫掠表示方案来表示三维形状，该方案允许二维平面横截面在空间中扫掠。</p>
+<!-- end of short definition -->
+<p>扫掠区域由一个横截面定义，该横截面由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 的子类型表示，并作为隐式坐标系 xy 平面内的闭合二维边界提供。扫掠操作应用于子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 中定义的扫掠区域，某些子类型要求将扫掠区域隐式变换到扫描的起始位置。</p>
+<p>可选的 <em>Position</em> 坐标系允许将所得扫掠实体相对于对象坐标系重新定位。</p>
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+The swept area solid entity collects the entities which are defined procedurally by sweeping action on planar bounded surfaces. The position is space of the swept solid will be dependent upon the position of the swept area. The swept area will be a face of the resulting swept area solid, except for the case of a revolved area solid with angle equal to 2π (or 360 degrees).</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>swept_area_solid</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute <em>Position</em> has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 <h2><a class="anchor" id="8.8.3.42.2-Entity-inheritance-"></a>
     8.8.3.42.2 实体继承（Entity inheritance）
 <a class="link" href="#8.8.3.42.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -280,7 +280,7 @@
     8.8.3.42.3 特性（Attributes）
 <a class="link" href="#8.8.3.42.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-4c34d694-03de-4a57-b121-0eaa88008ea9"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-75379ab5-52f2-460f-ac26-e229b7fb4bff"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -309,8 +309,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -320,8 +320,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -341,7 +341,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
+<p>此类的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -371,7 +371,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
 <td data-label="Description">
-<p>定义要扫掠的面积的曲面。它在位置坐标系的 xy 平面内作为轮廓定义给出。</p>
+<p>定义要扫掠的区域的曲面。它在位置坐标系的 xy 平面内以轮廓定义的形式给出。</p>
 </td>
 </tr>
 <tr>
@@ -383,16 +383,16 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>扫掠操作生成的扫掠实体的位置坐标系。位置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保持在由横截面或用于扫掠操作的准线确定的位置内。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选，并保持基于文件交换的向上兼容性。</aside>
+<p>扫掠操作所得扫掠实体的放置坐标系。放置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保留在由横截面或用于扫掠操作的导曲线确定的位置内。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.42.A<a class="link" href="#-4c34d694-03de-4a57-b121-0eaa88008ea9"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.42.A<a class="link" href="#-75379ab5-52f2-460f-ac26-e229b7fb4bff"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.42.4-Formal-propositions-"></a>
     8.8.3.42.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.42.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-2516dd78-e911-4533-9381-ad619ef1ee39"></a><table>
+<figure><a class="anchor" id="-df00ffaf-90e2-47bb-bcaf-c09b50cdeea1"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -403,7 +403,7 @@
 <tr>
 <td>SweptAreaType</td>
 <td>
-<p>扫掠面积实体的轮廓定义应为 AREA（面积）类型。</p>
+<p>扫掠区域实体的轮廓定义应为 AREA 类型。</p>
 </td>
 </tr>
 <tr>
@@ -412,7 +412,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.42.B<a class="link" href="#-2516dd78-e911-4533-9381-ad619ef1ee39"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.42.B<a class="link" href="#-df00ffaf-90e2-47bb-bcaf-c09b50cdeea1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.42.5-Formal-representation-"></a>
     8.8.3.42.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.42.5-Formal-representation-"><i data-feather="link"></i></a></h2>
