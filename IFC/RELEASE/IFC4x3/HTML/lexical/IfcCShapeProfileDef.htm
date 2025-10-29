@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.5 IfcCShapeProfileDef（C形轮廓定义） - IFC 4.3.2 Documentation</title>
+<title>8.15.3.5 IfcCShapeProfileDef - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,20 +189,20 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.15.3.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCShapeProfileDef.htm">IfcCShapeProfileDef</a>（C形轮廓定义）</h1>
+<h1>8.15.3.5 IfcCShapeProfileDef</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.15.3.5.1-Semantic-definition-"></a>
     8.15.3.5.1 语义定义（Semantic definition）
 <a class="link" href="#8.15.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCShapeProfileDef.htm">IfcCShapeProfileDef</a></em> 定义了一个截面轮廓，提供用于扫掠体实体的C形截面的定义参数。该截面通常通过冷弯钢材生产。其参数和相对于位置坐标系统的方向遵循下图说明。位置坐标系统的中心位于轮廓边界框的中心。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> 所有轮廓原点现在位于边界框的中心。</aside><aside class="aside-change"><mark>IFC4 变更</mark> <em>InternalFilletRadius</em> 类型放宽以允许零半径。删除尾部属性 <em>CentreOfGravityInX</em>，改用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> 中的相应属性。</aside>
-<p>图1说明了C形轮廓定义的参数。参数化轮廓定义了其自身的位置坐标系统。基础坐标系统由使用该轮廓定义的扫掠体实体定义。它是以下项的xy平面：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCShapeProfileDef.htm">IfcCShapeProfileDef</a></em> 定义了一个截面轮廓，它提供了 C 形截面的定义参数，用于扫掠区域实体。这种截面通常由冷弯钢生产。其参数和相对于位置坐标系的定向符合以下图示。位置坐标系的中心位于轮廓边界框的中心。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> All profile origins are now in the center of the bounding box.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Type of <em>InternalFilletRadius</em> relaxed to allow for zero radius. Trailing attribute <em>CentreOfGravityInX</em> deleted, use respective property in <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> instead.</aside>
+<p>图 8.15.3.5.A 说明了 C 形截面定义的参数。参数化轮廓定义了自己的位置坐标系。底层坐标系由使用轮廓定义的扫掠区域实体定义。它是：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em></li>
 </ul>
-<p>通过使用位置偏移，参数化轮廓可以居中定位（使用x,y偏移=0.），或相对于轮廓的任何位置。参数化轮廓由一组参数属性定义。在所示示例中，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> 中的 'CentreOfGravityInX' 属性（如果提供）为负值。</p>
-<figure><a class="anchor" id="-1-C-"></a><img alt="C形轮廓" src="../figures/ifccshapeprofiledef.gif" title="图1 — C形轮廓"/><figcaption>图1 — C形轮廓<a class="link" href="#-1-C-"><i data-feather="link"></i></a></figcaption></figure>
+<p>的 xy 平面。通过使用位置偏移，参数化轮廓可以居中放置（使用 x,y 偏移量 = 0.），或相对于轮廓的任何位置。参数化轮廓由一组参数属性定义。在所示示例中，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> 中的“CentreOfGravityInX”属性（如果提供）为负值。</p>
+<figure><a class="anchor" id="-1-C-"></a><img alt="C-shape profile" src="../figures/ifccshapeprofiledef.gif" title="图 8.15.3.5.A — C 形截面"/><figcaption>图 8.15.3.5.A — C 形截面<a class="link" href="#-1-C-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.5.2-Entity-inheritance-"></a>
     8.15.3.5.2 实体继承（Entity inheritance）
 <a class="link" href="#8.15.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -245,7 +245,7 @@
     8.15.3.5.3 特性（Attributes）
 <a class="link" href="#8.15.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-1f22553e-9ec3-4621-a739-6e39e9be0053"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c84dcb5e-7e49-4359-b271-4a1961d5dc54"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -276,7 +276,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
 <td data-label="Description">
-<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+<p>定义此轮廓定义应解析成的几何类型，是曲线还是曲面区域。对于曲线，轮廓应由扫掠曲面引用；对于区域，轮廓应由扫掠面积实体引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -288,7 +288,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference_中提供。</p>
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓标识符应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -298,8 +298,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
-<p>与轮廓关联的外部信息（如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>指向与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -309,8 +309,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
 <td data-label="Description">
-<p>轮廓的附加属性，例如力学属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆属性</aside>
+<p>轮廓的附加属性，例如机械性能。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -328,7 +328,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></td>
 <td data-label="Description">
-<p>参数化轮廓定义的位置坐标系。如果未指定，则不应用平移和旋转。</p>
+<p>参数化轮廓定义的定位坐标系。如果未指定，则不应用平移和旋转。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -358,7 +358,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>轮廓深度，见上图说明 (= h)。</p>
+<p>截面深度，见上图（= h）。</p>
 </td>
 </tr>
 <tr>
@@ -370,7 +370,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>轮廓宽度，见上图说明 (= b)。</p>
+<p>截面宽度，见上图（= b）。</p>
 </td>
 </tr>
 <tr>
@@ -382,7 +382,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>轮廓的恒定壁厚 (= ts)。</p>
+<p>截面的恒定壁厚（= ts）。</p>
 </td>
 </tr>
 <tr>
@@ -394,7 +394,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>周长长度，见上图说明 (= c)。</p>
+<p>圆周长度，见上图（= c）。</p>
 </td>
 </tr>
 <tr>
@@ -406,15 +406,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td data-label="Description">
-<p>根据上图说明的内部圆角半径 (= r1)。</p>
+<p>内部圆角半径，根据上图（= r1）。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.5.B<a class="link" href="#-1f22553e-9ec3-4621-a739-6e39e9be0053"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.5.B<a class="link" href="#-c84dcb5e-7e49-4359-b271-4a1961d5dc54"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.5.4-Formal-propositions-"></a>
     8.15.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b8cfa831-2998-4654-bf84-71c31eddeee3"></a><table>
+<figure><a class="anchor" id="-cd66358a-db8d-4e68-aa90-8e3578efa16d"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -425,7 +425,7 @@
 <tr>
 <td>ValidGirth</td>
 <td>
-<p>周长应小于深度的一半。</p>
+<p>圆周长度应小于深度的一半。</p>
 </td>
 </tr>
 <tr>
@@ -436,7 +436,7 @@
 <tr>
 <td>ValidInternalFilletRadius</td>
 <td>
-<p>如果给出了InternalFilletRadius的值，它应足够小以适合内部空间。</p>
+<p>如果提供了内部圆角半径的值，则它应足够小以适合内部空间。</p>
 </td>
 </tr>
 <tr>
@@ -457,7 +457,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.5.C<a class="link" href="#-b8cfa831-2998-4654-bf84-71c31eddeee3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.5.C<a class="link" href="#-cd66358a-db8d-4e68-aa90-8e3578efa16d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.5.5-"></a>
     8.15.3.5.5 属性集
 <a class="link" href="#8.15.3.5.5-"><i data-feather="link"></i></a></h2>
@@ -498,7 +498,7 @@
 </p><h2><a class="anchor" id="8.15.3.5.6-Concept-usage-"></a>
     8.15.3.5.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.5.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c4c9a8ec-cf0d-44c2-8a35-b59829b5d14e"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-cefd44ed-dc08-47f8-931c-4c9694f68008"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -542,7 +542,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.5.D<a class="link" href="#-c4c9a8ec-cf0d-44c2-8a35-b59829b5d14e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.5.D<a class="link" href="#-cefd44ed-dc08-47f8-931c-4c9694f68008"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.5.7-Formal-representation-"></a>
     8.15.3.5.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.5.7-Formal-representation-"><i data-feather="link"></i></a></h2>
