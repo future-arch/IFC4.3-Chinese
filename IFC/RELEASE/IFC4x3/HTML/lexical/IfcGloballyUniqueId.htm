@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.21.2.2 IfcGloballyUniqueId（全局唯一标识符） - IFC 4.3.2 Documentation</title>
+<title>8.21.2.2 IfcGloballyUniqueId - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,25 +189,25 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.21.2.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a>（全局唯一标识符）</h1>
+<h1>8.21.2.2 IfcGloballyUniqueId</h1>
 <h2><a class="anchor" id="8.21.2.2.1-Semantic-definition-"></a>
     8.21.2.2.1 语义定义（Semantic definition）
 <a class="link" href="#8.21.2.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></em> 用于存储经过编码的字符串标识符，该标识符用于唯一标识 IFC 对象。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></em> 是一个全局唯一标识符（GUID），它是自动生成的 128 位数字。由于所有 IFC 对象实例都需要此标识符，因此需要对其进行压缩以减少开销。base 64 字符集的编码如下所示：</p>
-<!-- 简短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></em> 包含一个编码的字符串标识符，用于唯一标识 IFC 对象。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></em> 是一个全局唯一标识符（GUID），它是一个自动生成的 128 位数字。由于所有 IFC 对象实例都需要此标识符，因此希望对其进行压缩以减少开销。base64 字符集的编码如下所示：</p>
+<!-- end of short definition -->
 <pre>
       1     2     3     4     5     6
  0123456789012345678901234567890123456789012345678901234567890123
 "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_$";
 </pre>
-<p>生成的字符串是一个固定 22 字符长度的字符串，将在 IFC 交换文件结构中传输。</p>
-<p>base64 编码过程可能与常见的 base64 实现有所不同。使用以下步骤：</p>
+<p>生成的字符串是一个固定长度为 22 个字符的字符串，将在 IFC 交换文件结构中进行交换。</p>
+<p>base64 编码过程可能与常见的 base64 实现不同。使用以下步骤：</p>
 <ol>
-<li>第一个字节编码在前两个字符中</li>
-<li>剩余字节以 3 个为一组进行编码，占用 4 个字符</li>
+<li>第一个字节在前两个字符中编码</li>
+<li>剩余字节以 3 个一组进行编码，占用 4 个字符</li>
 </ol>
-<p>因此，第一个字符必须是 0、1、2 或 3。</p>
-<aside class="aside-example"><mark>示例</mark> 生成的 base16 数字 f70dd363-bfe3-495d-84a0-2c02dcb7d4d2 将被压缩为 3t3TDZl_D9NOIWB0BSjzJI</aside><aside class="aside-note"><mark>注释</mark> 有关更多信息和示例编码算法，请参考 BuildingSMART 网站 (<a href="http://technical.buildingsmart.org">technical.buildingsmart.org</a>)。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5.1 中的新类型。</aside>
+<p>结果是，第一个字符必须是 0、1、2 或 3。</p>
+<aside class="aside-example"><mark>示例</mark> the generated base16 number f70dd363-bfe3-495d-84a0-2c02dcb7d4d2 will compress to 3t3TDZl_D9NOIWB0BSjzJI</aside><aside class="aside-note"><mark>注释</mark> Refer to the BuildingSMART website (<a href="http://technical.buildingsmart.org">technical.buildingsmart.org</a>) for more information and sample encoding algorithms.</aside><aside class="aside-history"><mark>沿革</mark> New type in IFC1.5.1.</aside>
 <h2><a class="anchor" id="8.21.2.2.2-Formal-representation-"></a>
     8.21.2.2.2 形式化表示（Formal representation）
 <a class="link" href="#8.21.2.2.2-Formal-representation-"><i data-feather="link"></i></a></h2>
