@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.14.3.1 IfcLightDistributionData（光分布数据） - IFC 4.3.2 Documentation</title>
+<title>8.14.3.1 IfcLightDistributionData - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,26 +189,26 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.14.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionData.htm">IfcLightDistributionData</a>（光分布数据）</h1>
+<h1>8.14.3.1 IfcLightDistributionData</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.14.3.1.1-Semantic-definition-"></a>
     8.14.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.14.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionData.htm">IfcLightDistributionData</a></em> 定义了在特定主平面角度下光源的光强分布。它基于某些标准化的光分布曲线；<em>MainPlaneAngle</em> 可以是：</p>
-<!-- 简短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionData.htm">IfcLightDistributionData</a></em> 在特定主平面角度下定义了光源的发光强度。它基于一些标准化的光分布曲线；<em>MainPlaneAngle</em> 要么是</p>
+<!-- end of short definition -->
 <ul>
-<li>A 角度：当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_A 时</li>
-<li>B 角度：当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_B 时  </li>
-<li>C 角度：当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_C 时</li>
+<li>A 角；如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_A</li>
+<li>B 角；如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_B</li>
+<li>C 角；如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_C</li>
 </ul>
-<p>对于每个 <em>MainPlaneAngle</em>（视为表格的行），都会提供一组 <em>SecondaryPlaneAngle</em>（视为表格的列）。它们可以是：</p>
+<p>对于每个 <em>MainPlaneAngle</em>（被视为表格的行），都给出了一系列 _SecondaryPlaneAngle'_s（被视为表格的列）。它们要么是：</p>
 <ul>
-<li>α 角度：当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_A 时</li>
-<li>β 角度：当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_B 时</li>
-<li>γ 角度：当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_C 时</li>
+<li>α 角；如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_A</li>
+<li>β 角；如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_B</li>
+<li>γ 角；如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightDistributionCurveEnum.htm">IfcLightDistributionCurveEnum</a></em> 设置为 TYPE_C</li>
 </ul>
-<p>对于每对 <em>MainPlaneAngle</em> 和 <em>SecondaryPlaneAngle</em>，都会提供 <em>LuminousIntensity</em>（其单位由引用光强分布单位的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 给出，通常为 cd/klm）。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中新增实体。</aside>
+<p>对于每一对 <em>MainPlaneAngle</em> 和 <em>SecondaryPlaneAngle</em>，都提供了 <em>LuminousIntensity</em>（单位由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 指定，参考 LuminousIntensityDistributionUnit，通常是 cd/klm）。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
 <h2><a class="anchor" id="8.14.3.1.2-Entity-inheritance-"></a>
     8.14.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.14.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -224,7 +224,7 @@
     8.14.3.1.3 特性（Attributes）
 <a class="link" href="#8.14.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-309ba795-f3f2-4d25-ab8b-23262512bedd"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-fea7470f-ad0f-46a0-8598-44828c6fa47d"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -255,7 +255,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
 <td data-label="Description">
-<p>主平面角度（根据所选光分布曲线，可以是 A、B 或 C 角度）。</p>
+<p>主平面角度（根据所选光分布曲线的 A、B 或 C 角）。</p>
 </td>
 </tr>
 <tr>
@@ -267,8 +267,8 @@
             </td>
 <td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
 <td data-label="Description">
-<p>根据所选光分布曲线的次平面角度列表（α、β 或 γ 角度）。</p>
-<aside class="aside-note"><mark>注释</mark> <em>SecondaryPlaneAngle</em> 和 <em>LuminousIntensity</em> 列表为对应列表。</aside>
+<p>次平面角度列表（根据所选光分布曲线的 α、β 或 γ 角）。</p>
+<aside class="aside-note"><mark>注释</mark> The <em>SecondaryPlaneAngle</em> and <em>LuminousIntensity</em> lists are corresponding lists.</aside>
 </td>
 </tr>
 <tr>
@@ -280,11 +280,11 @@
             </td>
 <td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLuminousIntensityDistributionMeasure.htm">IfcLuminousIntensityDistributionMeasure</a></td>
 <td data-label="Description">
-<p>根据所选光分布曲线，对此主次平面角度对的光强分布测量值。</p>
+<p>根据所选光分布曲线，此主次平面角度对的发光强度分布测量值。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.14.3.1.A<a class="link" href="#-309ba795-f3f2-4d25-ab8b-23262512bedd"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.14.3.1.A<a class="link" href="#-fea7470f-ad0f-46a0-8598-44828c6fa47d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.14.3.1.4-Formal-representation-"></a>
     8.14.3.1.4 形式化表示（Formal representation）
 <a class="link" href="#8.14.3.1.4-Formal-representation-"><i data-feather="link"></i></a></h2>
