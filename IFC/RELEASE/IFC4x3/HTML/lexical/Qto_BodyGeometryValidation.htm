@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.5.1 Qto_BodyGeometryValidation（体几何验证） - IFC 4.3.2 Documentation</title>
+<title>5.1.5.1 Qto_BodyGeometryValidation (体几何验证量) - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,18 +138,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.1.5.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_BodyGeometryValidation.htm">Qto_BodyGeometryValidation</a>（体几何验证）</h1>
+<h1>5.1.5.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_BodyGeometryValidation.htm">Qto_BodyGeometryValidation</a> (体几何验证量)</h1>
 <h2><a class="anchor" id="5.1.5.1.1-Semantic-definition-"></a>
     5.1.5.1.1 语义定义（Semantic definition）
 <a class="link" href="#5.1.5.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>为验证导入时对体形状表示的正确解释而提供的数量。在存在多个表示项的情况下，各项的数量将被汇总（无论是否存在任何重叠）。选择适当的容差值以比较提供的数值与重构几何体计算得出的数值，由导入应用程序自行决定。</p>
-<!-- 简短定义结束 -->
+<p>在导入时用于验证体形状表示正确解释的量。如果存在多个表示项，则为每个项（无论是否有重叠）累加量。选择合适的容差值来比较提供的数字与从重构几何体计算出的数字，由导入应用程序自行决定。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="5.1.5.1.2-"></a>
     5.1.5.1.2 适用实体
 <a class="link" href="#5.1.5.1.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>QTO_OCCURRENCEDRIVEN</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的构件数量只能分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 的子类型。
+    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的构件量只能分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 的子类型。
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></li>
@@ -157,7 +157,7 @@
 <h2><a class="anchor" id="5.1.5.1.3-"></a>
     5.1.5.1.3 属性
 <a class="link" href="#5.1.5.1.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-1d86ec5d-d225-4ddd-90e9-ff4171be0d59"></a><table>
+<figure><a class="anchor" id="-6637feb9-ede7-48d9-bef0-2c7943959577"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -171,7 +171,7 @@
 <td>GrossSurfaceArea</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>物体的总表面积，通常计算为周长 × 长度 + 2 × 横截面积。它是 OuterSurfaceArea + (2 × CrossSectionArea) 的总和，仅当无法单独确定 OuterSurfaceArea 和 CrossSectionArea 时才应提供。</p><p>在应用产品级几何特征（如洞口和凸出部分）之前，构件的总毛表面积。</p>
+<p>对象的总表面积，通常生成为周长 * 长度 + 2 * 横截面积。它是 OuterSurfaceArea + (2 x CrossSectionArea) 的总和，并且仅在无法单独确定 OuterSurfaceArea 和 CrossSectionArea 时提供。</p><p>在应用产品级几何特征（如开口和凸起）之前的元素总表面积。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/GrossSurfaceArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -179,7 +179,7 @@
 <td>NetSurfaceArea</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>对象的净表面积，通常计算为周长 × 长度 + 2 × 横截面积，同时考虑可能的加工特征（切口等）或开口和凹槽。</p><p>在应用产品级几何特征（如洞口和凸出部分）之后，构件的总净表面积。</p>
+<p>对象的净表面积，通常通过周长 * 长度 + 2 * 横截面积计算得出，并考虑可能的加工特征（切口等）或开口和凹进。</p><p>在应用产品级几何特征（如开口和凸起）之后的元素总净表面积。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NetSurfaceArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -187,7 +187,7 @@
 <td>GrossVolume</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityVolume.htm">IfcQuantityVolume</a></td>
 <td>
-<p>物体的总毛体积。不考虑开口、凹槽、封闭物体和突出部分。</p><p>在应用产品级几何特征（如洞口和凸出部分）之前，构件的总毛体积。</p>
+<p>对象的总体积。不考虑开口、凹进、封闭对象和突出部分。</p><p>在应用产品级几何特征（如开口和凸起）之前的元素总体积。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/GrossVolume.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -195,7 +195,7 @@
 <td>NetVolume</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityVolume.htm">IfcQuantityVolume</a></td>
 <td>
-<p>物体的总净体积，考虑可能的加工特征（切口等）或开口和凹槽。</p><p>在应用产品级几何特征（如洞口和凸出部分）之前，构件的总净体积。</p>
+<p>对象的总净体积，考虑了可能的加工特征（切口等）或开口和凹进。</p><p>在应用产品级几何特征（如开口和凸起）之后的元素净体积。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NetVolume.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -203,13 +203,13 @@
 <td>SurfaceGenusBeforeFeatures</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a></td>
 <td>
-<p>在应用产品级几何特征（如开口和投影）之前，评估表示项的表面类型。</p>
-<p>表面类型是一种拓扑度量，表示表面上的"孔洞"或"手柄"数量。例如，球体的类型为0，圆环的类型为1。</p>
+<p>在应用了诸如开口和凸起之类的产品级几何特征之前，对评估的表示项计算的表面属（Surface Genus）。</p>
+<p>表面属（Surface Genus）是一个拓扑度量，表示表面上“孔”或“把手”的数量。例如，球体的属为 0，圆环体的属为 1。</p>
 <p>使用欧拉特征计算：</p>
 <p>$$\chi=V-E+F$$</p>
-<p>其中V为顶点数，E为边数，F为面数</p>
+<p>其中 V 是顶点数，E 是边数，F 是面数。</p>
 <p>$$\chi=2−2g−b$$</p>
-<p>其中g为表面类型，b为边界数量，在封闭体积的情况下后者为零。</p>
+<p>其中 g 是表面属，b 是边界数量（对于封闭体积，后者为零）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SurfaceGenusBeforeFeatures.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -217,18 +217,18 @@
 <td>SurfaceGenusAfterFeatures</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a></td>
 <td>
-<p>特征处理后表面类型是指在应用产品级几何特征（如洞口和凸出物）后，评估表示项的表面类型。</p>
-<p>表面类型是一种拓扑度量，表示表面上的"孔洞"或"手柄"数量。例如，球体的类型为0，环面的类型为1。</p>
+<p>在应用了诸如开口和凸起之类的产品级几何特征后，对评估的表示项计算的表面属（Surface Genus）。</p>
+<p>表面属（Surface Genus）是一个拓扑度量，表示表面上“孔”或“把手”的数量。例如，球体的属为 0，圆环体的属为 1。</p>
 <p>使用欧拉特征计算：</p>
 <p>$$\chi=V-E+F$$</p>
-<p>其中顶点数(V)、边数(E)和面数(F)</p>
+<p>其中 V 是顶点数，E 是边数，F 是面数。</p>
 <p>$$\chi=2−2g−b$$</p>
-<p>其中表面类型(g)和边界数量(b)，后者在封闭体积情况下为零。</p>
+<p>其中 g 是表面属，b 是边界数量（对于封闭体积，后者为零）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SurfaceGenusAfterFeatures.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.5.1.A<a class="link" href="#-1d86ec5d-d225-4ddd-90e9-ff4171be0d59"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.5.1.A<a class="link" href="#-6637feb9-ede7-48d9-bef0-2c7943959577"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
