@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7.3.16 IfcVirtualGridIntersection（虚拟网格交点） - IFC 4.3.2 Documentation</title>
+<title>8.7.3.16 IfcVirtualGridIntersection - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,39 +189,39 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.7.3.16 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a>（虚拟网格交点）</h1>
+<h1>8.7.3.16 IfcVirtualGridIntersection</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.7.3.16.1-Semantic-definition-"></a>
     8.7.3.16.1 语义定义（Semantic definition）
 <a class="link" href="#8.7.3.16.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em> 定义了两个网格轴线交点的派生位置。可提供偏移值以设置到网格轴线的偏移距离，用于计算虚拟网格交点。</p>
-<!-- 简短定义结束 -->
-<p>两条相交轴线（<em>IntersectingAxes</em>）定义了交点，其精确位置（以表示交点的笛卡尔点形式）必须根据两条参与曲线的几何表示进行计算。</p>
-<aside class="aside-note"><mark>注释</mark> 在计算 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em> 的绝对位置时，必须考虑 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的局部放置（该放置可以相对于另一个空间结构元素的局部放置提供）。规则和非正式规则确保 <em>IntersectingAxes</em> 属于同一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em>。</aside>
-<p>可提供偏移值（<em>OffsetDistances</em>）。如果提供，则 <em>OffsetDistances</em> 列表中的位置与 <em>IntersectingAxes</em> 列表中的位置相对应。因此：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em> 定义了两个网格轴线相交的派生位置。可以通过偏移值来设置相对于网格轴线的偏移距离，以计算虚拟网格交点。</p>
+<!-- end of short definition -->
+<p>两个相交的轴线 (<em>IntersectingAxes</em>) 定义了交点，该交点的精确位置（表示交点的笛卡尔点）必须从两个参与曲线的几何表示中计算得出。</p>
+<aside class="aside-note"><mark>注释</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> local placement, that can be provided relative to the local placement of another spatial structure element, has to be taken into account for calculating the absolute placement of the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em>. Where rules and informal rules ensure, that the <em>IntersectingAxes</em> belong to the same <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em></aside>
+<p>可以提供偏移值 (<em>OffsetDistances</em>)。如果提供了偏移值，则 <em>OffsetDistances</em> 列表中的位置与 <em>IntersectingAxes</em> 列表中的位置相对应。因此：</p>
 <ul>
-<li><em>OffsetDistances[1]</em> 设置到 <em>IntersectingAxes[1]</em> 的偏移，</li>
-<li><em>OffsetDistances[2]</em> 设置到 <em>IntersectingAxes[2]</em> 的偏移，以及</li>
-<li><em>OffsetDistances[3]</em> 设置到虚拟交点的偏移，方向为 <em>IntersectingAxes[1]</em> 与其正交补集的叉积方向（即设计网格位置的 z 轴正方向或负方向）。</li>
+<li><em>OffsetDistances[1]</em> 设置相对于 <em>IntersectingAxes[1]</em> 的偏移量，</li>
+<li><em>OffsetDistances[2]</em> 设置相对于 <em>IntersectingAxes[2]</em> 的偏移量，以及</li>
+<li><em>OffsetDistances[3]</em> 设置相对于 <em>IntersectingAxes[1]</em> 和 <em>IntersectingAxes[1]</em> 的正交补的叉积方向的虚拟交点的偏移量（即设计网格位置的 z 轴的正向或负向）。</li>
 </ul>
-<p>以下图例解释了 <em>OffsetDistances</em> 和 <em>IntersectingAxes</em> 属性的用法。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="二维偏移" src="../figures/ifcvirtualgridintersection-layout1.gif"/><figcaption>图 8.7.3.16.A — 具有两个偏移的虚拟网格交点<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.7.3.16.A 说明了给定两个偏移距离的情况，其中虚拟交点定义在网格轴线放置的 xy 平面内。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="三维偏移" src="../figures/ifcvirtualgridintersection-layout2.gif"/><figcaption>图 8.7.3.16.B — 具有三个偏移的虚拟网格交点<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.7.3.16.B 说明了给定三个偏移距离的情况，其中虚拟交点由网格轴线放置的 xy 平面内的虚拟交点沿设计网格放置的 z 轴方向的偏移定义。</p>
-<p>偏移曲线（<em>OffsetDistances[n]</em>）的距离是从基准曲线测量的。该距离可以是正数、负数或零。距离的正值定义了偏移方向，该方向垂直于曲线，方向为从给定点处的切向量 T 逆时针旋转 90 度（即正交补集(T)的方向）。这可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> 的 <em>SameSense</em> 属性来反转，该属性可以切换 <em>AxisCurve</em> 的方向。</p>
-<figure><a class="anchor" id="-3-"></a><img alt="偏移方向" src="../figures/ifcvirtualgridintersection-offset1.gif"/><figcaption>图 8.7.3.16.C — 虚拟网格交点负偏移<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.7.3.16.C 说明了负偏移的示例，图中显示了偏移的一侧。</p>
+<p>下图/图示解释了 <em>OffsetDistances</em> 和 <em>IntersectingAxes</em> 特性的用法。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="2D offsets" src="../figures/ifcvirtualgridintersection-layout1.gif"/><figcaption>图 8.7.3.16.A — 具有两个偏移量的虚拟网格交点<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 8.7.3.16.A 说明了提供了两个偏移距离，虚拟交点在网格轴线放置的 xy 平面上定义。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="3D offsets" src="../figures/ifcvirtualgridintersection-layout2.gif"/><figcaption>图 8.7.3.16.B — 具有三个偏移量的虚拟网格交点<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 8.7.3.16.B 说明了提供了三个偏移距离，虚拟交点在网格轴线放置的 xy 平面上通过一个偏移量（沿设计网格放置的 z 轴方向）来定义。</p>
+<p>偏移曲线 (<em>OffsetDistances[n]</em>) 的距离从基准曲线测量。距离可以是正数、负数或零。距离的正值定义了一个偏移，该偏移方向垂直于曲线，通过从给定点的切线向量 T 逆时针旋转 90 度来实现。（这与正交补 (T) 的方向相同）。这可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> 上的 <em>SameSense</em> 特性来反转，该特性可以切换 <em>AxisCurve</em> 的方向。</p>
+<figure><a class="anchor" id="-3-"></a><img alt="offset direction" src="../figures/ifcvirtualgridintersection-offset1.gif"/><figcaption>图 8.7.3.16.C — 虚拟网格交点负偏移<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 8.7.3.16.C 说明了一个负偏移的示例，图中显示了偏移的一侧。</p>
 <ul>
 <li><em>IntersectingAxes[1].AxisCurve</em> 是一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>，其 <em>BasisCurve</em> 为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em>，且 <em>SenseAgreement</em> = TRUE。</li>
 <li><em>IntersectingAxes[1].SameSense</em> = TRUE。</li>
-<li><em>OffsetDistances[1]</em> 是一个负的长度度量值。</li>
+<li><em>OffsetDistances[1]</em> 是一个负长度度量。</li>
 </ul>
-<aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新实体。</aside><aside class="aside-change"><mark>IFC2x 变更</mark> 从 IfcConstraintRelIntersection 重命名。</aside>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.</aside><aside class="aside-change"><mark>IFC2x 变更</mark> Renamed from IfcConstraintRelIntersection.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li><em>IntersectingAxes[1]</em> 和 <em>IntersectingAxes[2]</em> 都应为由同一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 定义的两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em>。</li>
-<li><em>IntersectingAxes[1]</em> 和 <em>IntersectingAxes[2]</em> 不应属于同一行网格轴线，即两者不应位于相应 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的同一组 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a>.UAxes</em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a>.VAxes</em> 中。</li>
+<li><em>IntersectingAxes[1]</em> 和 <em>IntersectingAxes[2]</em> 都必须是同一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 定义的两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em>。</li>
+<li><em>IntersectingAxes[1]</em> 和 <em>IntersectingAxes[2]</em> 不能是同一行网格轴线的一部分，即它们都不能在相应 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a>.UAxes</em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a>.VAxes</em> 的同一集合中。</li>
 </ol>
 <h2><a class="anchor" id="8.7.3.16.2-Entity-inheritance-"></a>
     8.7.3.16.2 实体继承（Entity inheritance）
@@ -238,7 +238,7 @@
     8.7.3.16.3 特性（Attributes）
 <a class="link" href="#8.7.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-22e0ac4a-6a99-4164-aa37-35166831e859"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-5f58bfb2-1625-41e4-80e6-9e81f681139c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -269,7 +269,7 @@
             </td>
 <td data-label="Type">LIST [2:2] OF UNIQUE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></td>
 <td data-label="Description">
-<p>两条网格轴线，它们恰好在一个交点处相交（另请参见 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a> 的非正式命题）。如果省略属性 OffsetDistances，则交点直接定义网格放置的位置或参考方向。如果给出了 OffsetDistances，则交点由网格轴线的偏移曲线定义。</p>
+<p>两个网格轴线，它们精确地相交于一个交点（另请参见 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a> 的非正式命题）。如果省略 <em>OffsetDistances</em> 特性，则交点直接定义网格放置的位置或参考方向。如果提供了 <em>OffsetDistances</em>，则交点由相对于网格轴线的偏移曲线定义。</p>
 </td>
 </tr>
 <tr>
@@ -281,11 +281,11 @@
             </td>
 <td data-label="Type">LIST [2:3] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>到网格轴线的偏移距离。如果给出，则定义了网格轴线的虚拟偏移曲线。偏移曲线的交点指定了虚拟网格交点。</p>
+<p>相对于网格轴线的偏移距离。如果提供，则定义相对于网格轴线的虚拟偏移曲线。偏移曲线的交点指定了虚拟网格交点。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.7.3.16.D<a class="link" href="#-22e0ac4a-6a99-4164-aa37-35166831e859"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.16.D<a class="link" href="#-5f58bfb2-1625-41e4-80e6-9e81f681139c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.16.4-Formal-representation-"></a>
     8.7.3.16.4 形式化表示（Formal representation）
 <a class="link" href="#8.7.3.16.4-Formal-representation-"><i data-feather="link"></i></a></h2>
