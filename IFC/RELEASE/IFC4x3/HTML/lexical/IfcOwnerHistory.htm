@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.21.3.2 IfcOwnerHistory（所有者历史） - IFC 4.3.2 Documentation</title>
+<title>8.21.3.2 IfcOwnerHistory - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,20 +189,20 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.21.3.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a>（所有者历史）</h1>
+<h1>8.21.3.2 IfcOwnerHistory</h1>
 <div class="mvd" title="Included in Revision Control">RV ⓘ</div>
 <div class="mvd" title="Included in Revision Control">AbV ⓘ</div>
 <h2><a class="anchor" id="8.21.3.2.1-Semantic-definition-"></a>
     8.21.3.2.1 语义定义（Semantic definition）
 <a class="link" href="#8.21.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></em> 定义了所有与历史和标识相关的信息。为提供快速访问，它直接附加到所有独立对象、关系和属性上。</p>
-<!-- 简短定义结束 -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></em> 用于标识关联对象的创建和所属应用程序及用户，同时记录最后修改的应用程序和用户。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> ChangeAction 现为可选属性，并通过相关 WHERE 规则强制约束其断言条件。</aside>
-<p><strong>非正式命题</strong></p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></em> 定义了所有历史和标识相关信息。为了提供快速访问，它直接附加到所有独立的 <a href="/ifc/IfcObject">object</a>、<a href="/ifc/IfcRelationship">relationship</a> 和 <a href="/ifc/IfcProperty">property</a> 上。</p>
+<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></em> 用于标识相关对象的创建应用程序和用户，以及捕获最后修改的应用程序和用户。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0.</aside><aside class="aside-change"><mark>IFC4 变更</mark> ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted.</aside>
+<p><strong>Informal Propositions</strong></p>
 <ol>
-<li>若 LastModifiedDate 已定义但 ChangeAction 未断言，则假定 ChangeAction 的状态为 UNDEFINED。</li>
-<li>若 LastModifiedDate 和 ChangeAction 均被断言，则 ChangeAction 的状态适用于 LastModifiedDate 中的断言值。</li>
+<li>如果 LastModifiedDate 已定义但 ChangeAction 未断言，则假定 ChangeAction 的状态为 UNDEFINED。</li>
+<li>如果 LastModifiedDate 和 ChangeAction 都已断言，则 ChangeAction 的状态适用于 LastModifiedDate 中断言的值。</li>
 </ol>
 <h2><a class="anchor" id="8.21.3.2.2-Entity-inheritance-"></a>
     8.21.3.2.2 实体继承（Entity inheritance）
@@ -219,7 +219,7 @@
     8.21.3.2.3 特性（Attributes）
 <a class="link" href="#8.21.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-2061ddb7-3d7f-4511-ad9c-89c9c4ef1dc7"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-b16a79c2-ed88-4f9a-9f03-26bf19b3c5d1"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -250,7 +250,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPersonAndOrganization.htm">IfcPersonAndOrganization</a></td>
 <td data-label="Description">
-<p>直接引用当前"拥有"此对象的终端用户。注意 IFC 包含所有权从一个用户转移至另一个用户的概念，因此需区分所属用户与创建用户。</p>
+<p>直接引用当前“拥有”此对象的最终用户。请注意，IFC 包含所有权从一个用户转移到另一个用户的概念，因此区分“拥有用户”和“创建用户”。</p>
 </td>
 </tr>
 <tr>
@@ -262,7 +262,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApplication.htm">IfcApplication</a></td>
 <td data-label="Description">
-<p>直接引用代表应用程序所属用户当前"拥有"此对象的应用程序。注意 IFC 包含所有权从一个应用程序转移至另一个应用程序的概念，因此需区分所属应用程序与创建应用程序。</p>
+<p>直接引用当前代表应用程序的拥有用户“拥有”此对象的应用程序。请注意，IFC 包含所有权从一个应用程序转移到另一个应用程序的概念，因此区分“拥有应用程序”和“创建应用程序”。</p>
 </td>
 </tr>
 <tr>
@@ -286,7 +286,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcChangeActionEnum.htm">IfcChangeActionEnum</a></td>
 <td data-label="Description">
-<p>定义与对象变更相关联操作的枚举。</p>
+<p>定义与对象更改相关的操作的枚举。</p>
 </td>
 </tr>
 <tr>
@@ -298,7 +298,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeStamp.htm">IfcTimeStamp</a></td>
 <td data-label="Description">
-<p>由 LastModifyingUser 和 LastModifyingApplication 进行最后修改的日期和时间（以 UTC 世界协调时表示，原格林威治标准时间）。</p>
+<p>最后修改（由 LastModifyingUser 和 LastModifyingApplication 进行）的日期和时间，以 UTC（协调世界时，以前称为格林威治标准时间或 GMT）表示。</p>
 </td>
 </tr>
 <tr>
@@ -310,7 +310,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPersonAndOrganization.htm">IfcPersonAndOrganization</a></td>
 <td data-label="Description">
-<p>使用 LastModifyingApplication 执行最后修改的用户。</p>
+<p>使用 LastModifyingApplication 进行最后修改的用户。</p>
 </td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApplication.htm">IfcApplication</a></td>
 <td data-label="Description">
-<p>用于执行最后修改的应用程序。</p>
+<p>用于进行最后修改的应用程序。</p>
 </td>
 </tr>
 <tr>
@@ -334,15 +334,15 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeStamp.htm">IfcTimeStamp</a></td>
 <td data-label="Description">
-<p>由原始 OwningApplication 首次创建时的日期和时间（以 UTC 世界协调时表示，原格林威治标准时间）。该值一旦定义，将在实体生命周期内保持不变。</p>
+<p>由原始 OwningApplication 首次创建时的日期和时间，以 UTC（协调世界时，以前称为格林威治标准时间或 GMT）表示。一旦定义，此值在实体的生命周期内保持不变。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.21.3.2.A<a class="link" href="#-2061ddb7-3d7f-4511-ad9c-89c9c4ef1dc7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.21.3.2.A<a class="link" href="#-b16a79c2-ed88-4f9a-9f03-26bf19b3c5d1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.21.3.2.4-Formal-propositions-"></a>
     8.21.3.2.4 形式化命题（Formal propositions）
 <a class="link" href="#8.21.3.2.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-f101b08b-6aa1-414a-821c-8cd5134e40d9"></a><table>
+<figure><a class="anchor" id="-2640f559-15ef-4854-98d6-269d040b0ab6"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -353,7 +353,7 @@
 <tr>
 <td>CorrectChangeAction</td>
 <td>
-<p>若 ChangeAction 被断言且 LastModifiedDate 未定义，则 ChangeAction 必须设置为 NOTDEFINED</p>
+<p>如果断言了 ChangeAction 但未定义 LastModifiedDate，则 ChangeAction 必须设置为 NOTDEFINED。</p>
 </td>
 </tr>
 <tr>
@@ -364,7 +364,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.21.3.2.B<a class="link" href="#-f101b08b-6aa1-414a-821c-8cd5134e40d9"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.21.3.2.B<a class="link" href="#-2640f559-15ef-4854-98d6-269d040b0ab6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.21.3.2.5-Formal-representation-"></a>
     8.21.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#8.21.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>
