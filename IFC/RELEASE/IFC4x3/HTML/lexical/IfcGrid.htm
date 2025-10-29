@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.35 IfcGrid（网格） - IFC 4.3.2 Documentation</title>
+<title>5.4.3.35 IfcGrid - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,31 +138,31 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.4.3.35 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a>（网格）</h1>
+<h1>5.4.3.35 IfcGrid</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a> 的子类型，因此是每个标准化模式子集和实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="5.4.3.35.1-Semantic-definition-"></a>
     5.4.3.35.1 语义定义（Semantic definition）
 <a class="link" href="#5.4.3.35.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 是在三维空间中定义的平面设计网格，用作定位结构和设计元素的辅助工具。网格的位置（<em>ObjectPlacement</em>）由三维坐标系定义（因此设计网格可用于平面图、剖面图或与世界坐标系相关的任何位置）。该位置可相对于其他产品或网格的对象放置。三维坐标系的 XY 平面用于放置网格轴线，这些轴线是二维曲线（例如，直线、圆、圆弧、多段线）。</p>
-<!-- 简短定义结束 -->
-<p>继承的属性 <em>Name</em> 和 <em>Description</em> 可用于定义网格的描述性名称并指示网格的用途。网格由（通常）两个或（在三角形网格的情况下）三个网格轴线列表定义。以下图示展示了一些示例。</p>
-<p>网格可支持矩形布局（如图 5.4.3.35.A 所示）、径向布局（如图 5.4.3.35.B 所示）或三角形布局（如图 5.4.3.35.C 所示）。</p>
-<aside class="aside-note"><mark>注释</mark> <em>PredefinedType</em> 表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 表示的网格类型。如果提供了 <em>PredefinedType</em>，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> 实体的实例化必须与其一致。</aside><aside class="aside-note"><mark>注释</mark> 在设计网格内定义的网格轴线是那些项目对象将使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em> 相对放置的元素。</aside>
-<figure><a class="anchor" id="-1-"></a><img alt="网格矩形布局" src="../figures/ifcdesigngrid-type1.gif"/><figcaption>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 是一个在 3D 空间中定义的平面设计网格，用于辅助定位结构和设计元素。网格的位置 (<em>ObjectPlacement</em>) 由一个 3D 坐标系定义（从而设计网格可以用于平面图、剖面图或相对于世界坐标系的任何位置）。该位置可以相对于其他产品或网格的对象放置。3D 坐标系的 XY 平面用于放置网格轴，这些网格轴是 2D 曲线（例如，直线、圆、圆弧、折线）。</p>
+<!-- end of short definition -->
+<p>继承的 <em>Name</em> 和 <em>Description</em> 特性可用于定义网格的描述性名称并指示网格的用途。网格由（通常）两个或（在三角形网格的情况下）三个网格轴列表定义。下图显示了一些示例。</p>
+<p>网格可以支持矩形布局（如图 5.4.3.35.A 所示）、径向布局（如图 5.4.3.35.B 所示）或三角形布局（如图 5.4.3.35.C 所示）。</p>
+<aside class="aside-note"><mark>注释</mark> The <em>PredefinedType</em> denotes the type of grid that is represented by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em>. The instantiation of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> entities has to agree to the <em>PredefinedType</em>, if provided.</aside><aside class="aside-note"><mark>注释</mark> The grid axes, defined within the design grid, are those elements to which project objects will be placed relatively using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em>.</aside>
+<figure><a class="anchor" id="-1-"></a><img alt="Grid rectangular layout" src="../figures/ifcdesigngrid-type1.gif"/><figcaption>
 图 5.4.3.35.A — 网格矩形布局<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="-2-"></a><img alt="网格径向布局" src="../figures/ifcdesigngrid-type2.gif"/><figcaption>
+<figure><a class="anchor" id="-2-"></a><img alt="Grid radial layout" src="../figures/ifcdesigngrid-type2.gif"/><figcaption>
 图 5.4.3.35.B — 网格径向布局<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="-3-"></a><img alt="网格三角形布局" src="../figures/ifcdesigngrid-type3.gif"/><figcaption>
+<figure><a class="anchor" id="-3-"></a><img alt="Grid triangular layout" src="../figures/ifcdesigngrid-type3.gif"/><figcaption>
 图 5.4.3.35.C — 网格三角形布局<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>PredefinedType</em> 已添加到属性列表的末尾。</aside>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute <em>PredefinedType</em> has been added at the end of the attribute list.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>在不同轴线列表（UAxes、VAxes、WAxes）中引用的网格轴线不应平行。</li>
-<li>网格轴线的定义应确保没有两条网格轴线相交两次（见图 5.4.3.35.D）。</li>
+<li>在不同轴列表中（UAxes, VAxes, WAxes）引用的网格轴不得平行。</li>
+<li>网格轴应定义为不存在两个网格轴相交两次（参见图 5.4.3.35.D）。</li>
 </ol>
-<aside class="aside-note"><mark>注释</mark> 左侧：模糊交点 A1 和 A2，包含此类网格轴线的网格不是有效的设计网格；右侧：通过拆分一条网格轴线以消除模糊交点的方式解决冲突。</aside>
-<figure><a class="anchor" id="-4-"></a><img alt="网格交点" src="../figures/ifcdesigngrid-ip2.gif"/><figcaption>
-图 5.4.3.35.D — 网格交点<a class="link" href="#-4-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>注释</mark> Left side: ambiguous intersections A1 and A2, a grid containing such grid axes is not a valid design grid; Right side: the conflict can be resolved by splitting one grid axis in a way such that no ambiguous intersections exist.</aside>
+<figure><a class="anchor" id="-4-"></a><img alt="Grid intersections" src="../figures/ifcdesigngrid-ip2.gif"/><figcaption>
+图 5.4.3.35.D — 网格相交<a class="link" href="#-4-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.35.2-Entity-inheritance-"></a>
     5.4.3.35.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.35.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -226,7 +226,7 @@
     5.4.3.35.3 特性（Attributes）
 <a class="link" href="#5.4.3.35.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-93a6af5b-3557-406c-8721-dd1de1d06580"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6122d91c-6507-47ee-8170-33e02d38e0eb"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -269,8 +269,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -282,7 +282,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -294,7 +294,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -310,7 +310,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssigns.htm">IfcRelAssigns</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>通过关联关系将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的其他子类型分配到此对象实例的关系对象引用。例如与产品、过程、控制、资源或组的关联。</p>
+<p>引用分配（通过关联关系）其他 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型到此对象实例的关系对象。例如，与产品、过程、控制、资源或组的关联。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -320,8 +320,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为组成部分。对象实例或类型只能是一个分解的组成部分（仅允许层次结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>Decomposes</em> 分离。</aside>
+<p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的一部分。对象实例或类型只能是单个分解的一部分（仅允许分层结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>Decomposes</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -331,8 +331,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
 <td data-label="Description">
-<p>指向嵌套分解关系的引用。它确定此对象定义在有序整体/部分分解关系中作为整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>IsDecomposedBy</em> 分离。</aside>
+<p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>IsDecomposedBy</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -342,8 +342,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
 <td data-label="Description">
-<p>指向提供上下文信息（如项目单位或表示上下文）的上下文的引用。应仅对最顶层的非空间对象声明此属性。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性数据类型。</aside>
+<p>引用提供上下文信息的上下文，例如项目单位或表示上下文。它只应断言在最上层的非空间对象上。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -353,8 +353,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
 <td data-label="Description">
-<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
+<p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -364,8 +364,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向聚合分解关系的引用。它确定此对象定义在无序整体/部分分解关系中作为组成部分。对象定义只能是一个分解的组成部分（仅允许层次结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
+<p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的一部分。对象定义只能是单个分解的一部分（仅允许分层结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -375,7 +375,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>将外部引用或其他资源定义关联到对象的关系对象引用。例如与库、文档或分类的关联。</p>
+<p>引用将外部资源或资源定义与对象关联的关系对象。例如，与库、文档或分类的关联。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -393,7 +393,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>类型表示进一步指示对象的特定类型。其用途需在可实例化子类型层级确定。特别地，当 <em>PredefinedType</em> 属性枚举设置为USERDEFINED，或当实例化的具体实体没有PredefinedType属性时，该属性保存用户定义类型。后者出现在某些特殊的叶类以及直接实例化IfcBuiltElement时</p>
+<p>该类型表示指示对象的特定类型。必须在可实例化的子类型的级别上建立用法。特别是，如果特性 <em>PredefinedType</em> 的枚举设置为 USERDEFINED，或者当实例化的具体实体没有 PredefinedType 特性时，它保存用户定义的类型。后者发生在一些特殊的叶子类中，以及直接实例化 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltElement.htm">IfcBuiltElement</a> 时。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -403,8 +403,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向声明对象的关联关系链接，该声明对象为此对象实例提供对象定义。声明对象必须是对象类型分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型包含特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，基于文件交换的向上兼容性变更</aside>
+<p>链接到指向声明对象的关系对象，该声明对象为此对象实例提供对象定义。声明对象必须是对象类型分解的一部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型包含特定信息（作为类型或样式定义的一部分），该信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, change made with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -414,8 +414,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatingObject</td>
 <td data-label="Description">
-<p>指向接收对象定义的反映对象的关联关系链接。反映对象必须是对象实例分解的组成部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型提供特定信息（作为类型或样式定义的一部分），这些信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反映实例是通用的</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，基于文件交换的向上兼容性变更</aside>
+<p>链接到指向接收对象定义的反向对象的关系对象。反向对象必须是对象实例分解的一部分。关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型提供特定信息（作为类型或样式定义的一部分），该信息对于声明 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的所有反向实例是通用的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, change made with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -425,8 +425,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>指向为此对象实例提供类型定义的对象类型的关联关系集合。随后关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 或其子类型包含特定信息（或类型、样式），这些信息对于引用相同类型的所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的实例是通用的</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆关系，之前 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 的链接包含在逆关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 中。基于文件交换的向上兼容性变更</aside>
+<p>与对象类型的关系集合，该对象类型为此对象实例提供类型定义。然后，关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 或其子类型包含特定信息（或类型或样式），该信息对于引用同一类型的所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 或其子类型的实例是通用的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, the link to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> was previously included in the inverse relationship <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em>. Change made with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -436,8 +436,8 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatedObjects</td>
 <td data-label="Description">
-<p>附加到此对象的属性集定义的关联关系集合。这些静态或动态定义的属性包含进一步定义对象的字母数字信息内容</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，保持基于文件交换的向上兼容性</aside>
+<p>与附加到此对象的属性集定义的集合的关系。这些静态或动态定义的特性包含字母数字信息内容，这些内容进一步定义了对象。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The data type has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefines.htm">IfcRelDefines</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -455,7 +455,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></td>
 <td data-label="Description">
-<p>这建立了对象坐标系和产品在空间中的放置。放置可以是绝对的（相对于世界坐标系）、相对的（相对于另一个产品的对象放置）或受约束的（例如相对于网格轴线或线性定位元素）。放置的类型由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 的各种子类型确定。如果存在表示，则必须提供对象放置。</p>
+<p>这建立了产品在空间中的对象坐标系和位置。位置可以是绝对的（相对于世界坐标系）、相对的（相对于另一个产品的对象位置）或约束的（例如，相对于网格轴或线性定位元素）。位置的类型由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 的各种子类型确定。如果存在表示，则必须提供对象位置。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -467,7 +467,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></td>
 <td data-label="Description">
-<p>对产品表示的引用，可以是表示（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></em>）或作为形状表示的特殊情况（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em>）。产品定义形状在由对象放置定义的同一对象坐标系内提供对象形状属性的多个几何表示。</p>
+<p>引用产品的表示，可以是表示 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></em>) 或作为形状表示 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em>) 的特例。产品定义形状为同一对象坐标系中的形状属性提供了多个几何表示，该坐标系由对象位置确定。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -477,7 +477,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
 <td data-label="Description">
-<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 关系的引用，通过该关系，其他产品、过程、控制、资源或参与者（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的子类型）可以与此产品相关。</p>
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 关系，通过该关系，其他产品、过程、控制、资源或参与者（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的子类型）可以与此产品相关联。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -487,7 +487,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a> FOR RelatedProducts</td>
 <td data-label="Description">
-<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> 关系的引用，该关系定义了其与定位元素的关系。</p>
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> 关系，该关系定义了其与定位元素的关系。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -497,7 +497,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> FOR RelatedElements</td>
 <td data-label="Description">
-<p>对对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 的引用，可用于将产品与一个或多个空间结构元素相关联，除了其主要包含的空间结构元素。</p>
+<p>引用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em>，可用于将产品与一个或多个空间结构元素相关联，除了它主要包含的那个。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -513,8 +513,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a> FOR RelatedElements</td>
 <td data-label="Description">
-<p>与空间结构元素的关系，定位构件主要与此类元素关联。</p>
-<aside class="aside-change"><mark>IFC2x 变更</mark> 反向关系已添加至 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em>，并具有向上兼容性</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向关系已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 提升至此新超类型，并具有向上兼容性</aside>
+<p>与定位元素主要关联的空间结构元素的关联关系。</p>
+<aside class="aside-change"><mark>IFC2x 变更</mark> The inverse relationship has been added to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> with upward compatibility</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse relationship has been promoted from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> to this new supertype with upward compatibility</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -556,7 +556,7 @@
             </td>
 <td data-label="Type">LIST [1:?] OF UNIQUE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></td>
 <td data-label="Description">
-<p>定义第一行网格线的网格轴线列表。</p>
+<p>定义第一行网格线的网格轴列表。</p>
 </td>
 </tr>
 <tr>
@@ -568,7 +568,7 @@
             </td>
 <td data-label="Type">LIST [1:?] OF UNIQUE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></td>
 <td data-label="Description">
-<p>定义第二行网格线的网格轴线列表。</p>
+<p>定义第二行网格线的网格轴列表。</p>
 </td>
 </tr>
 <tr>
@@ -580,7 +580,7 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF UNIQUE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></td>
 <td data-label="Description">
-<p>定义第三行网格线的网格轴线列表。在三角形网格的情况下可提供此属性。</p>
+<p>定义第三行网格线的网格轴列表。三角形网格的情况下可以提供。</p>
 </td>
 </tr>
 <tr>
@@ -592,12 +592,14 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridTypeEnum.htm">IfcGridTypeEnum</a></td>
 <td data-label="Description">
-<p>预定义类型，用于定义网格的特定类型。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增属性。</aside>
+<p>预定义的类型，用于定义网格的特定类型。</p>
+<blockquote>
+<p>IFC4 Change New attribute.</p>
+</blockquote>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.35.G<a class="link" href="#-93a6af5b-3557-406c-8721-dd1de1d06580"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.35.E<a class="link" href="#-6122d91c-6507-47ee-8170-33e02d38e0eb"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.35.4-"></a>
     5.4.3.35.4 属性集
 <a class="link" href="#5.4.3.35.4-"><i data-feather="link"></i></a></h2>
@@ -673,7 +675,7 @@
 </p><h2><a class="anchor" id="5.4.3.35.5-Concept-usage-"></a>
     5.4.3.35.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.35.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7ce26d78-02f0-4cbc-8f80-4be8a0505e20"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-84887ba5-0f9a-49f2-9c15-cb53ad66a8bc"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -696,7 +698,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>使用IfcOwnerHistory捕获所有权、历史记录和合并状态。</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -707,13 +709,13 @@
                 General
             </td>
 <td data-label="Description">
-<p>IfcRoot分配全局唯一ID，同时还可为概念提供名称和描述。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
-<small>(9)</small>
+<small>(11)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -724,7 +726,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>任何对象实例或对象类型都可以引用特定的分类参照，即分类系统中的特定分面。</p>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -831,10 +833,44 @@
 </p>
 </td>
 </tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>
-<small>(5)</small>
+<small>(8)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -852,13 +888,43 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
 </td>
 <td data-label="Usage">
                 General
             </td>
 <td data-label="Description">
-<p>任何对象实例都可通过分配至公共对象类型来实现类型化，这是通过本概念实现的。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型层级重写此概念，引入了限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 适用子类型的特定规则</p>
+<p>Any object occurrence can be typed by being assigned to a common object type utilizing this concept. A particular rule, restricting the applicable subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> that can be assigned, is introduced by overriding this concept at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>.</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -875,7 +941,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>所有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型均可使用 <em>Name</em> 属性和可选的 <em>Description</em> 属性。对于具有对象类型定义的子类型（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>），通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联</p>
+<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -886,26 +952,47 @@
                 General
             </td>
 <td data-label="Description">
-<p>任何对象实例均可持有属性集，可直接在对象实例处作为元素特定属性集，或在对象类型处作为类型属性集。在这种情况下，提供给对象实例的属性是元素特定属性和类型属性的组合。如果在实例属性和类型属性中同时定义了相同属性（同一属性集内），则实例属性的属性值将覆盖类型属性的属性值</p>
+<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
 </td>
 <td data-label="Usage">
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>
-<small>(18)</small>
+<small>(23)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -916,7 +1003,7 @@
                 General
             </td>
 <td data-label="Description">
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用细分曲面或边界表示定义。子类型可能提供关于可使用的其他表示类型的建议。用于保存此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的属性值应使用以下值：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
@@ -931,8 +1018,8 @@
                 General
             </td>
 <td data-label="Description">
-<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许有多个几何表示。它使用 <em>产品放置</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
-<aside class="aside-note"><mark>注释</mark> 有关如何应用局部放置以及哪些形状表示适用的详细规范在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的子类型级别提供，并进一步由模型视图定义和实现者协议确定。</aside>
+<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -969,7 +1056,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>产品放置</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 放置，则此关系涵盖了关于哪个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的信息。</p>
+<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -996,6 +1083,23 @@
 <p>
 <em>无可用描述</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1038,12 +1142,30 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
+<p>Any object occurrence can be typed by being assigned to a common object type utilizing this concept. A particular rule, restricting the applicable subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> that can be assigned, is introduced by overriding this concept at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>.</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a>
 </li>
 </ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1092,6 +1214,23 @@
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Uncertainty.htm">Pset_Uncertainty</a>
 </li>
 </ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1162,10 +1301,82 @@
 </p>
 </td>
 </tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a>
-<small>(1)</small>
+<small>(10)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/Body_Geometry/content.html">Body Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
+<ul>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1181,22 +1392,142 @@
 </p>
 </td>
 </tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>Any object occurrence can be typed by being assigned to a common object type utilizing this concept. A particular rule, restricting the applicable subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> that can be assigned, is introduced by overriding this concept at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/content.html">Product Geometric Representation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Relative_Positioning/content.html">Product Relative Positioning</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 35 个隐藏的继承概念
+                    点击显示 54 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 35 个继承概念
+                    点击隐藏 54 个继承概念
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a>
-<small>(3)</small>
+<small>(11)</small>
 </td>
 </tr>
 <tr>
@@ -1214,7 +1545,7 @@
 </tr>
 <tr>
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/FootPrint_Geometry/content.html">FootPrint Geometry</a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/Body_Geometry/content.html">Body Geometry</a>
 </td>
 <td data-label="Usage">
                 General
@@ -1226,27 +1557,148 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的二维几何表示使用“GeometricCurveSet”几何定义。应插入以下属性值：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
 <ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'FootPrint'</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 'GeometricCurveSet'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
 </ul>
-<p>以下约束适用于二维表示：</p>
-<ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricCurveSet.htm">IfcGeometricCurveSet</a></em> 应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的（且唯一的）<em>Item</em>。它应包含一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricCurveSet.htm">IfcGeometricCurveSet</a></em>，其中包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></em> 的子类型，每个子类型表示一条网格轴线。适用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></em> 子类型包括：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>（基于引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 的 <em>BaseCurve</em>）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOffsetCurve2D.htm">IfcOffsetCurve2D</a></em>。</li>
-<li>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></em> 子类型可使用引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveStyle.htm">IfcCurveStyle</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 分配曲线样式。</li>
-<li>可选地，网格轴线标签可作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextLiteral.htm">IfcTextLiteral</a></em> 添加，并可使用引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 分配文本样式。</li>
-</ul>
-<figure><a class="anchor" id="-31-"></a><img alt="设计网格" src="../figures/ifcdesigngrid-layout1.gif"/><figcaption>
-图 5.4.3.35.E — 网格布局<a class="link" href="#-31-"><i data-feather="link"></i></a></figcaption></figure>
-<blockquote>
-<p>如图 5.4.3.35.E 所示，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 使用 <em>ObjectPlacement</em> 定义放置坐标系。坐标系的 XY 平面用于放置二维网格轴线。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的 <em>Representation</em> 使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></em> 定义，引用一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>，该表示 <em>包含 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricCurveSet.htm">IfcGeometricCurveSet</a></em> 作为 <em>Items</em>。所有网格轴线作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 添加到 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricCurveSet.htm">IfcGeometricCurveSet</a></em> 中。</p>
-</blockquote>
-<figure><a class="anchor" id="-32-"></a><img alt="设计网格的表示" src="../figures/ifcgrid-representation.png"/><figcaption>
-图 5.4.3.35.F — 网格表示<a class="link" href="#-32-"><i data-feather="link"></i></a></figcaption></figure>
-<blockquote>
-<p>如图 5.4.3.35.F 所示，属性 <em>UAxes</em> 和 <em>VAxes</em> 在网格上下文中定义 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> 列表。每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> 实例引用包含在表示 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricCurveSet.htm">IfcGeometricCurveSet</a></em> 中的同一 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></em> 实例（此处为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em>）。</p>
-</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>Any object occurrence can be typed by being assigned to a common object type utilizing this concept. A particular rule, restricting the applicable subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> that can be assigned, is introduced by overriding this concept at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>.</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/content.html">Product Geometric Representation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Relative_Positioning/content.html">Product Relative Positioning</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr>
@@ -1266,7 +1718,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.35.H<a class="link" href="#-7ce26d78-02f0-4cbc-8f80-4be8a0505e20"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.35.F<a class="link" href="#-84887ba5-0f9a-49f2-9c15-cb53ad66a8bc"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.35.6-Formal-representation-"></a>
     5.4.3.35.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.35.6-Formal-representation-"><i data-feather="link"></i></a></h2>
