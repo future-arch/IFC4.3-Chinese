@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.6.2.2 IfcClassificationSelect（分类选择） - IFC 4.3.2 Documentation</title>
+<title>8.6.2.2 IfcClassificationSelect - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,17 +189,17 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.6.2.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationSelect.htm">IfcClassificationSelect</a>（分类选择）</h1>
+<h1>8.6.2.2 IfcClassificationSelect</h1>
 <h2><a class="anchor" id="8.6.2.2.1-Semantic-definition-"></a>
     8.6.2.2.1 语义定义（Semantic definition）
 <a class="link" href="#8.6.2.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationSelect.htm">IfcClassificationSelect</a></em> 用于选择分类引用是从外部源引用，还是直接引用某个分类。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 通常预期通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 来选择，以标识对建筑信息模型中元素进行分类的单个分类标记。例如，可通过分配一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em>（其 <em>Identification</em> = "L6814"，且 <em>ClassificationSource</em> 标识相应版本的 Uniclass）来进一步对某个元素（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTank.htm">IfcTank</a></em>）进行分类。仅当需要指示将使用的分类系统而不关联到单个对象的标记或引用时，才应选择 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em>。这可能发生在较高级别的对象中，如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSystem.htm">IfcSystem</a></em> 或类似对象。例如，可将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em> 分类为适用于特定版本的 EuroCode。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中新增的选择类型</aside><aside class="aside-change"><mark>IFC4 变更</mark> 选择类型从 IfcClassificationNotationSelect 重命名。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationSelect.htm">IfcClassificationSelect</a></em> 使能够选择分类引用是来自外部源进行引用，还是将分类本身作为引用。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Generally, it is expected that selection will be by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> to identify an individual classification notation that classifies an element in the building information model. For example an element, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTank.htm">IfcTank</a></em>, might be further classified by assigning an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> with <em>Identification</em> = "L6814" and a <em>ClassificationSource</em> identifying the appropriate version of Uniclass. <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassification.htm">IfcClassification</a></em> should only be selected in circumstances where there could be a need to indicate the classification system that will be used without associating a notation or reference to an individual object. This may occur for higher level objects such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em>, <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSystem.htm">IfcSystem</a></em>, or similar. For example an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em> might be classified to be applicable to a particular version of EuroCode.</aside><aside class="aside-history"><mark>沿革</mark> New select type in IFC2x</aside><aside class="aside-change"><mark>IFC4 变更</mark> Select renamed from IfcClassificationNotationSelect.</aside>
 <h2><a class="anchor" id="8.6.2.2.2-"></a>
     8.6.2.2.2 类型值
 <a class="link" href="#8.6.2.2.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-0932969c-f2dc-459a-9239-b6d8ddf4f6ef"></a><table class="striped type-values">
+<figure><a class="anchor" id="-866f047b-3180-4f2a-9746-e0b9e56c4ab7"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -213,7 +213,7 @@
 <td data-label="Name"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></td>
 </tr>
 </tbody>
-</table><figcaption>表 8.6.2.2.A<a class="link" href="#-0932969c-f2dc-459a-9239-b6d8ddf4f6ef"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.2.2.A<a class="link" href="#-866f047b-3180-4f2a-9746-e0b9e56c4ab7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.2.2.3-Formal-representation-"></a>
     8.6.2.2.3 形式化表示（Formal representation）
 <a class="link" href="#8.6.2.2.3-Formal-representation-"><i data-feather="link"></i></a></h2>
