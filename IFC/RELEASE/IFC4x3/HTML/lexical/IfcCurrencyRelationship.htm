@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.4.3.3 IfcCurrencyRelationship（货币关系） - IFC 4.3.2 Documentation</title>
+<title>8.4.3.3 IfcCurrencyRelationship - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,16 +189,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.4.3.3 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurrencyRelationship.htm">IfcCurrencyRelationship</a>（货币关系）</h1>
+<h1>8.4.3.3 IfcCurrencyRelationship</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.4.3.3.1-Semantic-definition-"></a>
     8.4.3.3.1 语义定义（Semantic definition）
 <a class="link" href="#8.4.3.3.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurrencyRelationship.htm">IfcCurrencyRelationship</a></em> 定义了在特定时间由特定来源发布的两种指定货币之间的汇率。</p>
 <!-- end of short definition -->
-<p>当需要将一种货币的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 与另一种货币的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 进行关联时，可使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurrencyRelationship.htm">IfcCurrencyRelationship</a></em>。该实体通过记录所使用的汇率日期、时间及发布该汇率的来源，来应对汇率可能波动的情况。汇率来源可能众多，且存在不同的货币兑换策略（如即期汇率、远期固定汇率购汇）。</p>
-<p>汇率来源被定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a></em> 的实例，其中包含名称和URL。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中新增实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceLevelRelationship.htm">IfcResourceLevelRelationship</a></em> 子类型化，属性顺序变更。</aside>
+<p>当需要将一种货币的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 引用到另一种货币的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 时，将使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurrencyRelationship.htm">IfcCurrencyRelationship</a></em>。它考虑到汇率可能发生变化的事实，要求记录所用汇率的日期和时间以及发布该汇率的来源。可能存在许多来源，并且存在不同的货币转换策略（即期汇率、固定利率远期购买）。</p>
+<p>货币汇率的来源定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a></em> 的一个实例，其中包含名称和 URL。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Subtyped from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceLevelRelationship.htm">IfcResourceLevelRelationship</a></em>, attribute order changed.</aside>
 <h2><a class="anchor" id="8.4.3.3.2-Entity-inheritance-"></a>
     8.4.3.3.2 实体继承（Entity inheritance）
 <a class="link" href="#8.4.3.3.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -228,7 +228,7 @@
     8.4.3.3.3 特性（Attributes）
 <a class="link" href="#8.4.3.3.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0b83e80b-3511-4e87-800a-bcbee1975990"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-13e4eb18-fffb-4f2c-b549-68a289fd89c9"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -259,7 +259,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>A name used to identify or qualify the relationship.</p>
+<p>用于标识或限定关系的名称。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -271,7 +271,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>A description that may apply additional information about the relationship.</p>
+<p>可能适用于关系的附加信息的描述。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -301,7 +301,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></td>
 <td data-label="Description">
-<p>作为汇率换算基准的货币单位。例如，在从英镑兑换为美元的案例中，基准货币单位为英镑。</p>
+<p>从中导出汇率的货币单位。例如，在从英镑兑换美元的情况下，关联的货币单位是英镑。</p>
 </td>
 </tr>
 <tr>
@@ -313,7 +313,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></td>
 <td data-label="Description">
-<p>汇率换算目标货币单位。例如，在从英镑兑换为美元的案例中，目标货币单位为美元。</p>
+<p>汇率转换后的货币单位。例如，在从英镑兑换美元的情况下，相关的货币单位是美元。</p>
 </td>
 </tr>
 <tr>
@@ -325,7 +325,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td data-label="Description">
-<p>在货币关系中，当前约定的目标货币单位金额与基准货币单位金额的兑换比率。例如，在从英镑兑换为美元的案例中，汇率值可能为1.486（美元）：1（英镑）。</p>
+<p>在货币关系中，与关联货币单位单位金额等效的相关货币单位的当前商定比率。例如，在从英镑兑换美元的情况下，汇率值为 1.486（美元）：1（英镑）。</p>
 </td>
 </tr>
 <tr>
@@ -338,7 +338,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
 <td data-label="Description">
 <p>汇率适用的日期和时间。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 类型从 IfcDateTimeSelect 修改。属性改为可选。</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> Type changed from IfcDateTimeSelect. Attribute made optional.</aside>
 </td>
 </tr>
 <tr>
@@ -354,7 +354,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.4.3.3.A<a class="link" href="#-0b83e80b-3511-4e87-800a-bcbee1975990"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.4.3.3.A<a class="link" href="#-13e4eb18-fffb-4f2c-b549-68a289fd89c9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.4.3.3.4-Formal-representation-"></a>
     8.4.3.3.4 形式化表示（Formal representation）
 <a class="link" href="#8.4.3.3.4-Formal-representation-"><i data-feather="link"></i></a></h2>
