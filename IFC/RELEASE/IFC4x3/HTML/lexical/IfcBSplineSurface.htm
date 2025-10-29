@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.7 IfcBSplineSurface（B样条曲面） - IFC 4.3.2 Documentation</title>
+<title>8.9.3.7 IfcBSplineSurface - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.7 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm">IfcBSplineSurface</a>（B样条曲面）</h1>
+<h1>8.9.3.7 IfcBSplineSurface</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <div class="row">
 <div class="card fluid warning">
@@ -201,26 +201,26 @@
 <h2><a class="anchor" id="8.9.3.7.1-Semantic-definition-"></a>
     8.9.3.7.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.7.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm">IfcBSplineSurface</a></em> 是一种通用形式的有理或多项式参数曲面。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-B样条曲面是一种通用形式的有理或多项式参数曲面，通过控制点、基函数以及可能的权重来表示。与相应的曲线实体类似，它有一些特殊子类型，其中部分数据可以推导得出。</aside>
-<p>此处使用的符号说明：</p>
-<figure><a class="anchor" id="-c8971ee9-8c8f-4032-84f5-bdffbcf191de"></a><table>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm">IfcBSplineSurface</a></em> 是有理或多项式参数曲面的通用形式。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
+A b_spline_surface is a general form of rational or polynomial parametric surface which is represented by control points, basis functions, and possibly, weights. As with the corresponding curve entity it has some special subtypes where some of the data can be derived.</aside>
+<p>此处使用的符号是：</p>
+<figure><a class="anchor" id="-c5d85375-f61e-4434-baf2-9596f5b0030f"></a><table>
 <thead>
 <tr>
-<th>变量</th>
-<th>定义</th>
+<th>Variable</th>
+<th>Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><em>K</em>1</td>
-<td>u向控制点上标</td>
+<td>u 方向的控制点上索引</td>
 </tr>
 <tr>
 <td><em>K</em>2</td>
-<td>v向控制点上标</td>
+<td>v 方向的控制点上索引</td>
 </tr>
 <tr>
 <td><b>P</b><sub>ij</sub></td>
@@ -232,27 +232,27 @@ B样条曲面是一种通用形式的有理或多项式参数曲面，通过控�
 </tr>
 <tr>
 <td><em>d</em>1</td>
-<td>u次数</td>
+<td>u 方向次数</td>
 </tr>
 <tr>
 <td><em>d</em>2</td>
-<td>v次数</td>
+<td>v 方向次数</td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.7.D<a class="link" href="#-c8971ee9-8c8f-4032-84f5-bdffbcf191de"><i data-feather="link"></i></a></figcaption></figure>
-<p>控制点的排序为：P<sub>00</sub>, P<sub>01</sub>, P<sub>02</sub>, ..., P<sub><em>K</em>1(<em>K</em>2-1)</sub>, P<sub><em>K</em>1<em>K</em>2</sub></p>
-<p>在有理子类型的情况下，权重的排序方式类似。</p>
-<p>对于每个参数 <em>s</em> = <em>u</em> 或 <em>v</em>，如果 <em>k</em> 是控制点的上标且 <em>d</em> 是 <em>s</em> 的次数，则节点数组是由 (<em>k</em> + <em>d</em> + 2) 个实数组成的数组 [s<sub>-d</sub>, ...., s<sub><em>k</em>+1</sub>]，使得对于所有在 [-<em>d</em>, <em>k</em>] 范围内的索引 j，都有 <em>s</em><sub><em>j</em></sub> ≤ <em>s</em><sub><em>j</em>+1</sub>。该数组通过根据重数重复每个多重节点，从相应的 u_knots 或 v_knots 列表获得。<br/>
+</table><figcaption>表 8.9.3.7.D<a class="link" href="#-c5d85375-f61e-4434-baf2-9596f5b0030f"><i data-feather="link"></i></a></figcaption></figure>
+<p>控制点按以下顺序排列：P<sub>00</sub>, P<sub>01</sub>, P<sub>02</sub>, ..., P<sub><em>K</em>1(<em>K</em>2-1)</sub>, P<sub><em>K</em>1<em>K</em>2</sub></p>
+<p>在有理子类型的情况下，权重按类似顺序排列。</p>
+<p>对于每个参数 <em>s</em> = <em>u</em> 或 <em>v</em>，如果 <em>k</em> 是控制点上的上索引，<em>d</em> 是 <em>s</em> 的次数，则节点数组是 (<em>k</em> + <em>d</em> + 2) 个实数的数组 [s<sub>-d</sub>, ...., s<sub><em>k</em>+1</sub>]，使得对于 [-<em>d</em>, <em>k</em>] 中的所有索引 j；<em>s</em><sub><em>j</em></sub> ≤ <em>s</em><sub><em>j</em>+1</sub>。此数组从相应的 u_knots 或 v_knots 列表中获得，通过根据重数重复每个多重节点。<br/>
 <br/>
-N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> 次归一化B样条基函数，定义在该数组的子集 [<em>s</em><sub>i-<em>d</em></sub>, ...., <em>s</em><sub><em>i</em>+1</sub>] 上。</p>
-<p>令 <em>L</em> 表示节点列表中不同节点值的数量；<em>L</em> 被称为"节点上标"。令 <em>m</em><sub><em>j</em></sub> 表示第 <em>j</em> 个不同节点值的重数（即重复次数）。则有：</p>
-<figure><a class="anchor" id="Figure-8.9.3.7.A"></a><img alt="公式" src="../figures/ifcbsplinecurve-math2.gif"/><figcaption>Figure 8.9.3.7.A<a class="link" href="#Figure-8.9.3.7.A"><i data-feather="link"></i></a></figcaption></figure>
-<p>除第一个和最后一个节点外，所有节点的重数应在 1, ...., <em>d</em> 范围内；第一个和最后一个节点的最大重数可为 <em>d</em>+1。在计算基函数时，例如重数为3的节点 <em>u</em> 在节点数组中被解释为序列 <em>u</em>, <em>u</em>, <em>u</em>。</p>
-<p>曲面形式用于识别特定的二次曲面类型（次数必须为二）、直纹曲面和旋转曲面。与B样条曲线类似，曲面形式仅为信息性说明，样条数据具有优先权。</p>
-<p>该曲面应按如下方式解释：在多项式情况下，曲面由以下方程给出：</p>
-<figure><a class="anchor" id="Figure-8.9.3.7.B"></a><img alt="公式" src="../figures/ifcbsplinesurface-math1.gif"/><figcaption>Figure 8.9.3.7.B<a class="link" href="#Figure-8.9.3.7.B"><i data-feather="link"></i></a></figcaption></figure>
+N<sub><em>i</em></sub><sup><em>d</em></sup>，度为 <em>d</em> 的第 i 个归一化 B 样条基函数，定义在该数组的子集 [<em>s</em><sub>i-<em>d</em></sub>, ...., <em>s</em><sub><em>i</em>+1</sub>] 上。</p>
+<p>令 <em>L</em> 表示节点列表中节点的不同值的数量；<em>L</em> 将被称为“节点上的上索引”。令 <em>m</em><sub><em>j</em></sub> 表示第 j 个不同节点值的重数（即重复次数）。则：</p>
+<figure><a class="anchor" id="Figure-8.9.3.7.A"></a><img alt="formula" src="../figures/ifcbsplinecurve-math2.gif"/><figcaption>Figure 8.9.3.7.A<a class="link" href="#Figure-8.9.3.7.A"><i data-feather="link"></i></a></figcaption></figure>
+<p>除第一个和最后一个节点外，所有节点重数必须在 1, ...., <em>d</em> 的范围内；第一个和最后一个可能具有 <em>d</em>+1 的最大值。在评估基函数时，例如重数为 3 的节点 <em>u</em> 被解释为节点数组中的一个序列 <em>u</em>, <em>u</em>, <em>u</em>,。</p>
+<p>曲面形式用于识别特定的二次曲面类型（次数应为 2）、规则曲面和旋转曲面。与 B 样条曲线一样，曲面形式仅供参考，样条数据优先。</p>
+<p>曲面应解释如下：在多项式情况下，曲面由以下方程给出：</p>
+<figure><a class="anchor" id="Figure-8.9.3.7.B"></a><img alt="formula" src="../figures/ifcbsplinesurface-math1.gif"/><figcaption>Figure 8.9.3.7.B<a class="link" href="#Figure-8.9.3.7.B"><i data-feather="link"></i></a></figcaption></figure>
 <p>在有理情况下，曲面方程为：</p>
-<figure><a class="anchor" id="Figure-8.9.3.7.C"></a><img alt="公式" src="../figures/ifcbsplinesurface-math2.gif"/><figcaption>Figure 8.9.3.7.C<a class="link" href="#Figure-8.9.3.7.C"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="Figure-8.9.3.7.C"></a><img alt="formula" src="../figures/ifcbsplinesurface-math2.gif"/><figcaption>Figure 8.9.3.7.C<a class="link" href="#Figure-8.9.3.7.C"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-note"><mark>注释</mark> 实体改编自 ISO10303-42 中定义的 <strong>b_spline_surface</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
 <h2><a class="anchor" id="8.9.3.7.2-Entity-inheritance-"></a>
     8.9.3.7.2 实体继承（Entity inheritance）
@@ -332,7 +332,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
     8.9.3.7.3 特性（Attributes）
 <a class="link" href="#8.9.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-70dcd3db-03d7-4cdb-9e1f-31677c3851f4"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-651af290-56bc-4d0f-877c-4cccd014881c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -361,8 +361,8 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -372,8 +372,8 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -393,8 +393,8 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是三维几何表示项。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 从子类型提升的派生属性。</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是一个三维几何表示项。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Derived attribute promoted from subtypes.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -448,7 +448,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
             </td>
 <td data-label="Type">LIST [2:?] OF LIST [2:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></td>
 <td data-label="Description">
-<p>这是一个控制点的列表的列表。</p>
+<p>这是控制点列表的列表。</p>
 </td>
 </tr>
 <tr>
@@ -460,7 +460,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurfaceForm.htm">IfcBSplineSurfaceForm</a></td>
 <td data-label="Description">
-<p>特殊曲面类型的指示符。</p>
+<p>特殊曲面类型的指示器。</p>
 </td>
 </tr>
 <tr>
@@ -472,7 +472,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
 <td data-label="Description">
-<p>指示曲面在 <em>u</em> 方向是否闭合；此信息仅供参考。</p>
+<p>指示曲面在 <em>u</em> 方向是否闭合；仅供参考。</p>
 </td>
 </tr>
 <tr>
@@ -484,7 +484,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
 <td data-label="Description">
-<p>指示曲面在 <em>v</em> 方向是否闭合；此信息仅供参考。</p>
+<p>指示曲面在 <em>v</em> 方向是否闭合；仅供参考。</p>
 </td>
 </tr>
 <tr>
@@ -496,7 +496,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
 <td data-label="Description">
-<p>指示曲面是否自相交的标志；此信息仅供参考。</p>
+<p>指示曲面是否自相交的标志；仅供参考。</p>
 </td>
 </tr>
 <tr>
@@ -510,7 +510,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">SIZEOF(ControlPointsList) - 1</code></pre>
-<p><em>u</em> 方向控制点的上标。</p>
+<p><em>u</em> 方向的控制点上索引。</p>
 </td>
 </tr>
 <tr>
@@ -524,7 +524,7 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">SIZEOF(ControlPointsList[1]) - 1</code></pre>
-<p><em>v</em> 方向控制点的上标。</p>
+<p><em>v</em> 方向的控制点上索引。</p>
 </td>
 </tr>
 <tr>
@@ -539,11 +539,11 @@ N<sub><em>i</em></sub><sup><em>d</em></sup>，即第 <em>i</em> 个 <em>d</em> �
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMakeArrayOfArray.htm">IfcMakeArrayOfArray</a>(ControlPointsList,
 0,UUpper,0,VUpper)</code></pre>
-<p>定义曲面几何形状的控制点的二维数组。该数组由控制点列表构造而成。</p>
+<p>定义曲面几何的控制点数组（二维）。此数组由控制点列表构成。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.7.E<a class="link" href="#-70dcd3db-03d7-4cdb-9e1f-31677c3851f4"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.7.E<a class="link" href="#-651af290-56bc-4d0f-877c-4cccd014881c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.7.4-Formal-representation-"></a>
     8.9.3.7.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.7.4-Formal-representation-"><i data-feather="link"></i></a></h2>
