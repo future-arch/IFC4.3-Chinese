@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.17.3.5 IfcQuantityCount（数量-计数） - IFC 4.3.2 Documentation</title>
+<title>8.17.3.5 IfcQuantityCount - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,15 +189,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.17.3.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a>（数量-计数）</h1>
+<h1>8.17.3.5 IfcQuantityCount</h1>
 <div class="mvd" title="Included in Quantity Sets">RV ⓘ</div>
 <div class="mvd" title="Included in Quantity Sets">AbV ⓘ</div>
 <h2><a class="anchor" id="8.17.3.5.1-Semantic-definition-"></a>
     8.17.3.5.1 语义定义（Semantic definition）
 <a class="link" href="#8.17.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a></em> 是一种物理量，用于定义派生计数度量以提供元素的物理属性。通常根据特定计量规则下的元素物理属性推导得出。</p>
-<!-- 短定义结束 -->
-<aside class="aside-example"><mark>示例</mark> 散热器可根据其盘管数量进行计量。实际计数方法取决于所使用的计量规则。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 版本新增实体。该实体取代了先前 IFC 版本中使用的 calcXxx 属性。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a></em> 是一个物理数量，它定义了一个派生的计数测量值，以提供构件的物理属性。它通常从构件的物理属性派生而来，具体取决于测量方法所给出的特定测量规则。</p>
+<!-- end of short definition -->
+<aside class="aside-example"><mark>示例</mark> An radiator may be measured according to its number of coils. The actual counting method depends on the method of measurement used.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases.</aside>
 <h2><a class="anchor" id="8.17.3.5.2-Entity-inheritance-"></a>
     8.17.3.5.2 实体继承（Entity inheritance）
 <a class="link" href="#8.17.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -232,7 +232,7 @@
     8.17.3.5.3 特性（Attributes）
 <a class="link" href="#8.17.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-be96f5d0-6ac8-45cd-9134-6f6405167d6a"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6f8f3d60-6bfd-4672-95fa-9a7effe919bf"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -263,7 +263,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>元素数量或度量的名称。名称属性需要通过进一步协议使其可识别。</p>
+<p>元素数量或测量值的名称。名称属性必须通过进一步的约定使其可识别。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -275,7 +275,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>可能为数量提供的进一步说明。</p>
+<p>可能为数量提供的进一步解释。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -286,7 +286,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
 <p>引用与数量关联的外部引用，例如库、分类或文档信息。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性。</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -296,7 +296,7 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a> FOR HasQuantities</td>
 <td data-label="Description">
-<p>引用可能包含该物理数量的物理复合数量。</p>
+<p>引用可能包含该物理量的物理复杂数量。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -314,7 +314,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNamedUnit.htm">IfcNamedUnit</a></td>
 <td data-label="Description">
-<p>单位的可选分配。如果未指定单位，则在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a> 中建立的全局单位分配将应用于数量测量值。</p>
+<p>可选的单位分配。如果没有给出单位，则 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a> 中建立的全局单位分配适用于数量测量值。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -344,7 +344,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCountMeasure.htm">IfcCountMeasure</a></td>
 <td data-label="Description">
-<p>此数量的计数度量值。</p>
+<p>此数量的计数测量值。</p>
 </td>
 </tr>
 <tr>
@@ -356,16 +356,16 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>用于计算数量的公式。除数量的实际值外，还可指定计算公式。公式可以是数学计算（如宽度 x 高度）、数据库链接或组合形式。该公式仅用于提供参考信息。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已添加至属性列表末尾。</aside>
+<p>计算该数量的公式。它可以作为实际数量值的附加信息。公式可以是数学计算（如宽度 x 高度）、数据库链接或组合。公式仅用于信息目的。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Attribute added to the end of the attribute list.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.17.3.5.A<a class="link" href="#-be96f5d0-6ac8-45cd-9134-6f6405167d6a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.17.3.5.A<a class="link" href="#-6f8f3d60-6bfd-4672-95fa-9a7effe919bf"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.17.3.5.4-Formal-propositions-"></a>
     8.17.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#8.17.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b755b22c-79a7-4fbd-85ca-6037fd2ca916"></a><table>
+<figure><a class="anchor" id="-f82cccc0-6c72-4a41-a49c-d93470affe50"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -376,7 +376,7 @@
 <tr>
 <td>WR21</td>
 <td>
-<p>计数值应大于或等于零。</p>
+<p>计数的值应大于或等于零。</p>
 </td>
 </tr>
 <tr>
@@ -385,7 +385,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.17.3.5.B<a class="link" href="#-b755b22c-79a7-4fbd-85ca-6037fd2ca916"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.17.3.5.B<a class="link" href="#-f82cccc0-6c72-4a41-a49c-d93470affe50"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.17.3.5.5-Formal-representation-"></a>
     8.17.3.5.5 形式化表示（Formal representation）
 <a class="link" href="#8.17.3.5.5-Formal-representation-"><i data-feather="link"></i></a></h2>
