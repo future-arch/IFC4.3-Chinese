@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.27 IfcPolygonalBoundedHalfSpace（多边形边界半空间） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.27 IfcPolygonalBoundedHalfSpace - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,31 +189,31 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.27 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a>（多边形边界半空间）</h1>
+<h1>8.8.3.27 IfcPolygonalBoundedHalfSpace</h1>
 <div class="mvd" title="Included in Body Clipping Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.8.3.27.1-Semantic-definition-"></a>
     8.8.3.27.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.27.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>多边形边界半空间是半空间实体的特殊子类型，在布尔表达式中使用的半空间材料由二维边界限定。半空间的基准表面通过其法线相对于对象坐标系定位（如超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em> 中所定义），其边界（包含直线段和圆弧段）在由 <em>Position</em> 属性建立的位置坐标系的 XY 平面内定义，减去体垂直于位置坐标系的 XY 平面拉伸，即沿着由 <em>Position</em> 属性定义的正 Z 轴方向。</p>
-<!-- 简短定义结束 -->
-<p>边界由位置坐标系 XY 平面内的二维折线（或二维复合曲线，由直线段和圆弧段组成，或索引多段曲线）定义。表面位于半空间的一侧由表面法线和一致标志确定。如果一致标志为 TRUE，则子集是法线指向远离的一侧。如果一致标志为 FALSE，则子集是法线指向进入的一侧。</p>
-<aside class="aside-note"><mark>注释</mark> 多边形边界半空间不是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a></em> 的子类型，半空间实体仅在布尔表达式中作为操作数有用。术语 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a></em> 是在仅允许类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 的曲线作为边界定义时创造的。</aside>
-<p>图 8.8.3.27.A 展示了多边形边界半空间。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="多边形边界半空间" src="../figures/ifcpolygonalboundedhalfspace-layout1.png"/><figcaption>图 8.8.3.27.A — 多边形半空间几何<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>多边形边界半空间是半空间实体的一个特殊子类型，其中布尔表达式中使用的半空间材料由二维边界限定。半空间的基准曲面相对于对象坐标系（在超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em> 中定义）由其法线定位，其边界（包含直线段和圆弧段）在由 <em>Position</em> 特性建立的位置坐标系的 XY 平面上定义，减去体垂直于位置坐标系的 XY 平面（即沿 <em>Position</em> 特性定义的 Z 轴正向）进行挤出。</p>
+<!-- end of short definition -->
+<p>边界由位置坐标系 XY 平面内的二维折线（或由直线段和圆弧段组成的二维复合曲线，或索引折线）定义。半空间所在的曲面一侧由曲面法线和约定标志确定。如果约定标志为 TRUE，则子集是法线指向外部的子集。如果约定标志为 FALSE，则子集是法线指向内部的子集。</p>
+<aside class="aside-note"><mark>注释</mark> A polygonal bounded half space is not a subtype of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a></em>, half space solids are only useful as operands in Boolean expressions. The term <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a></em> was coined when only curves of type <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> were allowed as boundary definitions.</aside>
+<p>图 8.8.3.27.A 说明了一个多边形边界半空间。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="polygonal bounded halfspace" src="../figures/ifcpolygonalboundedhalfspace-layout1.png"/><figcaption>图 8.8.3.27.A — 多边形半空间几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <ul>
 <li>黑色坐标表示对象坐标系（通常由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 提供）。</li>
-<li>绿色坐标表示位置坐标系；<em>PolygonalBoundary</em> 在此坐标系内给出。它由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a>.Position</em> 提供。此坐标系相对于对象坐标系。减去体的拉伸方向是正 Z 轴。</li>
-<li>红色坐标表示平面的法线。它由 <em>BaseSurface</em>（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a>.Position</em>）提供。此法线也相对于对象坐标系。</li>
+<li>绿色坐标表示位置坐标系；<em>PolygonalBoundary</em> 在此坐标系内给出。它由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a>.Position</em> 提供。此坐标系相对于对象坐标系。减去体的挤出方向是正 Z 轴。</li>
+<li>红色坐标表示平面的法线。它由 <em>BaseSurface</em> (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a>.Position</em>) 定义。此法线也相对于对象坐标系。</li>
 </ul>
-<p>多边形边界半空间用于在布尔差表达式中限制半空间的体积。仅由半空间实体与通过拉伸多边形边界定义的拉伸区域实体之间的理论交集定义的部分用于布尔表达式。</p>
-<p><em>PolygonalBoundary</em> 定义了在布尔表达式中限定半空间有效性的二维折线。<em>BaseSurface</em> 由平面定义，平面的法线与 <em>AgreementFlag</em> 一起定义了半空间材料的一侧。</p>
-<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside>
+<p>多边形边界半空间用于限制布尔差集表达式中的半空间体积。仅使用半空间实体和通过挤出多边形边界定义的挤出区域实体之间的理论交集所定义的区域用于布尔表达式。</p>
+<p><em>PolygonalBoundary</em> 定义了限定半空间在布尔表达式中有效性的二维折线。<em>BaseSurface</em> 由一个平面定义，平面的法线与 <em>AgreementFlag</em> 一起定义了半空间材料的侧面。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>提供 <em>PolygonalBoundary</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 应闭合。</li>
-<li>如果 <em>PolygonalBoundary</em> 由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 给出，它应仅包含类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>（具有类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 的 <em>BasisCurve</em>）的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a></em>。</li>
-<li>在超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em> 处定义的 <em>BaseSurface</em> 应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlane.htm">IfcPlane</a></em> 类型。</li>
-<li>作为 <em>BaseSurface</em> 的平面的法线不应垂直于位置坐标系的 Z 轴。</li>
+<li>提供 <em>PolygonalBoundary</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 应为闭合的。</li>
+<li>如果 <em>PolygonalBoundary</em> 由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 提供，则它只能包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 类型的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a></em>，或者 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>（其 <em>BasisCurve</em> 类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em>）。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em> 超类型中定义的 <em>BaseSurface</em> 应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlane.htm">IfcPlane</a></em> 类型。</li>
+<li>作为 <em>BaseSurface</em> 的平面的法线不应垂直于位置坐标系的 z 轴。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.27.2-Entity-inheritance-"></a>
     8.8.3.27.2 实体继承（Entity inheritance）
@@ -276,7 +276,7 @@
     8.8.3.27.3 特性（Attributes）
 <a class="link" href="#8.8.3.27.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-db436dca-0cdf-4a8b-a872-5a5fa57ee6a0"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-f77e6d7f-8ebf-46bd-8774-588a4b46e220"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -305,8 +305,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -316,8 +316,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -335,7 +335,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a></td>
 <td data-label="Description">
-<p>定义半空间边界的表面。</p>
+<p>定义半空间侧面的曲面。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -347,7 +347,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td data-label="Description">
-<p>如果BaseSurface的法向量指向远离IfcHalfSpaceSolid材料的方向，则一致标志为TRUE。否则为FALSE。</p>
+<p>如果基准曲面的法线指向 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a> 的材料之外，则一致性标志为 TRUE。否则为 FALSE。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -361,7 +361,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>此类的空间维度，始终为3。</p>
+<p>此类别的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -403,16 +403,16 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a></td>
 <td data-label="Description">
-<p>二维有界曲线，在位置坐标系的 xy 平面内定义。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 属性类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 更改为其超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a></em>，并具有基于文件交换的向上兼容性。</aside>
+<p>二维边界曲线，在位置坐标系的 xy 平面上定义。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The attribute type has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> to its supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a></em> with upward compatibility for file based exchange.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.27.B<a class="link" href="#-db436dca-0cdf-4a8b-a872-5a5fa57ee6a0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.27.B<a class="link" href="#-f77e6d7f-8ebf-46bd-8774-588a4b46e220"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.27.4-Formal-propositions-"></a>
     8.8.3.27.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.27.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-075b3922-d5e3-4394-bef7-cdc33e7d9ca8"></a><table>
+<figure><a class="anchor" id="-5d13cc10-8ecf-4621-9df6-74eda62f098a"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -423,7 +423,7 @@
 <tr>
 <td>BoundaryDim</td>
 <td>
-<p>边界折线应具有二维性。</p>
+<p>边界折线应为二维。</p>
 </td>
 </tr>
 <tr>
@@ -434,7 +434,7 @@
 <tr>
 <td>BoundaryType</td>
 <td>
-<p>仅类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 的有界曲线是有效的边界曲线。</p>
+<p>只有类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 的边界曲线才是有效的边界曲线。</p>
 </td>
 </tr>
 <tr>
@@ -447,7 +447,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.27.C<a class="link" href="#-075b3922-d5e3-4394-bef7-cdc33e7d9ca8"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.27.C<a class="link" href="#-5d13cc10-8ecf-4621-9df6-74eda62f098a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.27.5-Formal-representation-"></a>
     8.8.3.27.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.27.5-Formal-representation-"><i data-feather="link"></i></a></h2>
