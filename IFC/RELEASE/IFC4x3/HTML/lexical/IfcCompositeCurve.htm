@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.20 IfcCompositeCurve（复合曲线） - IFC 4.3.2 Documentation</title>
+<title>8.9.3.20 IfcCompositeCurve - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,43 +189,43 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.20 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a>（复合曲线）</h1>
+<h1>8.9.3.20 IfcCompositeCurve</h1>
 <div class="mvd" title="Included in IfcGradientCurve, Single Survey Line">RV ⓘ</div>
 <div class="mvd" title="Included in Alignment Geometry - Horizontal, Alignment Geometry - Horizontal and Vertical, Alignment Geometry - Horizontal, Vertical and Cant, IfcGradientCurve, IfcSegmentedReferenceCurve, Single Survey Line">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.20.1-Semantic-definition-"></a>
     8.9.3.20.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.20.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em> 是由曲线段组成的连续曲线。</p>
-<!-- 简短定义结束 -->
-<p>图1展示了一个复合曲线的示例。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="公式" src="../figures/ifccompositecurve.png" title="图1 — 复合曲线"/><figcaption>图1 — 复合曲线<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>考虑一个包含直线段和圆弧段的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em>。直线应参数化为：</p>
+<!-- end of short definition -->
+<p>图 8.9.3.20.A 说明了一个复合曲线的示例。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="formula" src="../figures/ifccompositecurve.png" title="图 8.9.3.20.A — 复合曲线"/><figcaption>图 8.9.3.20.A — 复合曲线<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>考虑一个具有直线段和圆弧段的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em>。直线应参数化为：</p>
 <ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em>，起点= 0.,0.，终点= 0.,1.，<em>SameSense</em>= TRUE，参数长度 = 1。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em>，起点= 0.,0.，终点= 0.,1.，<em>SameSense</em>= TRUE，参数长度= 1.</li>
 </ul>
 <p>圆弧应参数化为：</p>
 <ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>，起点= 180°，终点= 90°，<em>SameSense</em>= FALSE，参数长度 = 90。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>，起点= 180', 终点= 90', <em>SameSense</em>= FALSE，参数长度= 90.</li>
 </ul>
-<p>那么复合曲线的参数化为：</p>
+<p>然后复合曲线的参数化为：</p>
 <ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em>，0. ≤ T ≤ 1.（直线段）和 1. ≤ T ≤ 91.（圆弧段），参数长度 = 91。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a></em>，0. ≤ T ≤ 1.（直线段），1. ≤ T ≤ 91.（圆弧段），参数长度= 91.</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 根据ISO 10303-42的定义：
-复合曲线是首尾相连的曲线集合。曲线的各个段本身被定义为复合曲线段。复合曲线的参数化是引用的有界曲线参数范围的累积。第一段从 <em>0</em> 到 <em>l~<small>1</small>~</em> 参数化，对于 <em>i__≤__2</em>，第 <em>i^<small>th</small>^</em> 段从以下值参数化：</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>composite_curve</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体</aside><blockquote>
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-42:
+A composite curve is a collection of curves joined end-to-end. The individual segments of the curve are themselves defined as composite curve segments. The parameterization of the composite curve is an accumulation of the parametric ranges of the referenced bounded curves. The first segment is parameterized from <em>0</em> to <em>l~<small>1</small>~</em> and for <em>i__≤__2</em>, the <em>i^<small>th</small>^</em> segment is parameterized from:</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>composite_curve</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0</aside><blockquote>
 <blockquote>
-<figure><a class="anchor" id="Figure-8.9.3.20.B"></a><img alt="公式" src="../figures/ifccompositecurve-math1.gif"/>
-其中 <em>l~<small>k</small>~</em> 是第 <em>k^<small>th</small>^</em> 段基础曲线的参数长度（即最大和最小参数值之差）。令 <em>T</em> 表示复合曲线的参数。那么，如果第 <em>i</em> 段不是重新参数化的复合曲线段，<em>T</em> 与第 <em>i</em> 段的参数 <em>t~i~</em> 的关系为：<em>t~i0~__≤__t~i~__≤__t~i1~</em>；通过以下方程：<figcaption>Figure 8.9.3.20.B<a class="link" href="#Figure-8.9.3.20.B"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="Figure-8.9.3.20.C"></a><img alt="公式" src="../figures/ifccompositecurve-math2.gif"/> 如果 <em>Segments[i].SameSense</em> = TRUE；
-或通过以下方程：<figcaption>Figure 8.9.3.20.C<a class="link" href="#Figure-8.9.3.20.C"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="Figure-8.9.3.20.D"></a><img alt="公式" src="../figures/ifccompositecurve-math3.gif"/> 如果 <em>Segments[i].SameSense</em> = FALSE；
-如果 segments[i] 是重新参数化的复合曲线段类型，<figcaption>Figure 8.9.3.20.D<a class="link" href="#Figure-8.9.3.20.D"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="Figure-8.9.3.20.E"></a><img alt="公式" src="../figures/ifccompositecurve-math4.gif"/> 其中 <em>τ</em> 在重新参数化的复合曲线段中定义（参见 <em>IfcReparameterisedCompositeCurveSegment</em>）。<figcaption>Figure 8.9.3.20.E<a class="link" href="#Figure-8.9.3.20.E"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="Figure-8.9.3.20.B"></a><img alt="formula" src="../figures/ifccompositecurve-math1.gif"/>
+where <em>l~<small>k</small>~</em> is the parametric length (i.e., difference between maximum and minimum parameter values) of the curve underlying the <em>k^<small>th</small>^</em> segment. Let <em>T</em> denote the parameter for the composite curve. Then, if the <em>i_th segment is not a reparameterised composite curve segment, _T</em> is related to the parameter <em>t~i~</em>; <em>t~i0~__≤__t~i~__≤__t~i1~</em>; for the _i_th segment by the equation:<figcaption>Figure 8.9.3.20.B<a class="link" href="#Figure-8.9.3.20.B"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="Figure-8.9.3.20.C"></a><img alt="formula" src="../figures/ifccompositecurve-math2.gif"/> 如果 <em>Segments[i].SameSense</em> = TRUE；
+or by the equation:<figcaption>Figure 8.9.3.20.C<a class="link" href="#Figure-8.9.3.20.C"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="Figure-8.9.3.20.D"></a><img alt="formula" src="../figures/ifccompositecurve-math3.gif"/> 如果 <em>Segments[i].SameSense</em> = FALSE；
+If the segments[i] is of type reparameterised composite curve segment,<figcaption>Figure 8.9.3.20.D<a class="link" href="#Figure-8.9.3.20.D"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="Figure-8.9.3.20.E"></a><img alt="formula" src="../figures/ifccompositecurve-math4.gif"/> 其中 <em>τ</em> 在重新参数化的复合曲线段处定义（参见 <em>IfcReparameterisedCompositeCurveSegment</em>）。<figcaption>Figure 8.9.3.20.E<a class="link" href="#Figure-8.9.3.20.E"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
 </blockquote>
-<p><strong>非正式命题</strong></p>
+<p><strong>Informal Propositions</strong></p>
 <ol>
-<li>每个段的 <em>SameSense</em> 属性正确指定了组成曲线的方向。当按照 <em>SameSense</em> 指示的方向遍历时，各段应首尾相连。</li>
+<li>每个段的 <em>SameSense</em> 属性应正确指定分段的感知。当沿着 <em>SameSense</em> 指示的方向遍历时，各段应首尾相连。</li>
 </ol>
 <h2><a class="anchor" id="8.9.3.20.2-Entity-inheritance-"></a>
     8.9.3.20.2 实体继承（Entity inheritance）
@@ -312,7 +312,7 @@
     8.9.3.20.3 特性（Attributes）
 <a class="link" href="#8.9.3.20.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e1463775-ed91-4eda-98c0-45cbdcacbc63"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7e71d13f-1024-4cc5-ae26-4d24247c4c51"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -341,8 +341,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -352,8 +352,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -373,7 +373,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，对所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）有不同的定义。</p>
+<p>此抽象类的空间维度，为所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）定义不同。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -403,8 +403,10 @@
             </td>
 <td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegment.htm">IfcSegment</a></td>
 <td data-label="Description">
-<p>组成的有界曲线、它们的过渡和方向。最后一个段的过渡属性定义了最后一段的结束与第一段的开始之间的过渡；此过渡属性可以取不连续值，表示开放曲线。</p>
-<aside class="aside-note"><mark>注释</mark> 对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGradientCurve.htm">IfcGradientCurve</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegmentedReferenceCurve.htm">IfcSegmentedReferenceCurve</a></em>，段定义了段开始和段结束之间的插值。</aside>
+<p>组成有界曲线的段、它们的过渡和感知。最后一个段的过渡属性定义了最后一个段的末尾与第一个段的开头之间的过渡；此过渡属性可以取值为“不连续”，表示一条开放曲线。</p>
+<blockquote>
+<p>NOTE : For <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGradientCurve.htm">IfcGradientCurve</a></em> and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegmentedReferenceCurve.htm">IfcSegmentedReferenceCurve</a></em> the segments define the interpolation between segment start and and segment end.</p>
+</blockquote>
 </td>
 </tr>
 <tr>
@@ -416,7 +418,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
 <td data-label="Description">
-<p>指示曲线是否自相交；此信息仅供参考。</p>
+<p>曲线是否自相交的指示；这仅供参考。</p>
 </td>
 </tr>
 <tr>
@@ -444,15 +446,15 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">Segments[NSegments].Transition &lt;&gt; Discontinuous</code></pre>
-<p>指示曲线是否闭合；此值从最后一个段的过渡代码派生。</p>
+<p>曲线是否闭合的指示；这是从最后一个段的过渡代码派生的。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.20.F<a class="link" href="#-e1463775-ed91-4eda-98c0-45cbdcacbc63"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.20.F<a class="link" href="#-7e71d13f-1024-4cc5-ae26-4d24247c4c51"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.20.4-Formal-propositions-"></a>
     8.9.3.20.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.20.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-a255f7b1-a262-4b1a-9184-1b2fa1e575df"></a><table>
+<figure><a class="anchor" id="-53b6292d-1c2f-469c-854e-c8b0986a2d1b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -463,7 +465,7 @@
 <tr>
 <td>CurveContinuous</td>
 <td>
-<p>除了开放曲线的最后一个代码外，不应有任何过渡代码为不连续。</p>
+<p>除开放曲线的最后一个代码外，不应使用“不连续”过渡代码。</p>
 </td>
 </tr>
 <tr>
@@ -474,7 +476,7 @@
 <tr>
 <td>SameDim</td>
 <td>
-<p>确保曲线中使用的所有段具有相同的维度。</p>
+<p>确保曲线中使用的所有段都具有相同的维度。</p>
 </td>
 </tr>
 <tr>
@@ -483,7 +485,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.20.G<a class="link" href="#-a255f7b1-a262-4b1a-9184-1b2fa1e575df"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.20.G<a class="link" href="#-53b6292d-1c2f-469c-854e-c8b0986a2d1b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.20.5-Formal-representation-"></a>
     8.9.3.20.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.20.5-Formal-representation-"><i data-feather="link"></i></a></h2>
