@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.28 IfcStyledItem（样式化项） - IFC 4.3.2 Documentation</title>
+<title>8.12.3.28 IfcStyledItem - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,29 +189,29 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.28 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a>（样式化项）</h1>
+<h1>8.12.3.28 IfcStyledItem</h1>
 <div class="mvd" title="Included in Annotation 2D Geometry, Body AdvancedSwept DiskSolid PolyCurve Geometry, Body SweptSolid PolyCurve Geometry, Product Geometry Colour, Reference SweptSolid PolyCurve Geometry, Surface Tessellation Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Annotation 2D Geometry, Body AdvancedSwept DiskSolid PolyCurve Geometry, Body SweptSolid PolyCurve Geometry, Product Geometry Colour, Reference SweptSolid PolyCurve Geometry, Surface Tessellation Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.12.3.28.1-Semantic-definition-"></a>
     8.12.3.28.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.28.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 用于存储产品的表现样式信息，既可以显式地应用于作为产品形状表现组成部分的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a></em>，也可以通过为作为产品其他表现形式的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> 分配表现信息来实现。</p>
-<!-- 简短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 保存产品（Products）的表示样式信息，这些信息可以是显式地为分配给产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的一部分的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a></em> 提供的，也可以是通过分配给作为产品其他表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> 来提供的。</p>
+<!-- end of short definition -->
 <ul>
-<li>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 的引用中使用，则应提供一个 <em>Item</em>。</li>
-<li>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinitionRepresentation.htm">IfcMaterialDefinitionRepresentation</a></em> 的引用中使用，则不应提供 <em>Item</em>。</li>
+<li>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 的引用中使用，则必须提供一个 <em>Item</em>。</li>
+<li>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinitionRepresentation.htm">IfcMaterialDefinitionRepresentation</a></em> 的引用中使用，则不得提供 <em>Item</em>。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-46:1992 的定义
-样式化项是在表现中使用的几何表现项的样式分配。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO10303-46 中定义的 <strong>styled_item</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> <em>Item</em> 属性已设为可选，基于文件交换的向上兼容性得到保证。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 子类型 <em>IfcAnnotationOccurrence</em> 及其子类型已被删除。所有实例化均使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>。<em>Styles</em> 的数据类型已更改为 <em>IfcStyleAssignmentSelect</em>。</aside><blockquote>
-<p>IFC2x2 增补 1 变更 实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 已改为非抽象实体，并添加了 <em>Name</em> 属性。</p>
+<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-46:1992
+The styled item is an assignment of style for presentation to a geometric representation item as it is used in a representation.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>styled_item</strong> defined in ISO10303-46.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> The attribute <em>Item</em> has been made optional, upward compatibility for file based exchange is guaranteed.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The subtype <em>IfcAnnotationOccurrence</em> and its subtypes are deleted. Use <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> for all instantiations. The data type of <em>Styles</em> has been changed to <em>IfcStyleAssignmentSelect</em></aside><blockquote>
+<p>IFC2x2 Addendum 1 CHANGE The entity <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> has been made non abstract and the attribute <em>Name</em> added.</p>
 </blockquote>
 <p>使用定义</p>
-<p>图 8.12.3.28.A 说明了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 在两种使用示例中的应用：</p>
+<p>图1说明了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 在两个使用示例中的应用：</p>
 <ul>
-<li><small>作为几何表现项的表现</small></li>
-<li><small>作为材料定义的表现</small></li>
+<li><small>作为几何表示项的表示</small></li>
+<li><small>作为材料定义的表示</small></li>
 </ul>
-<figure><a class="anchor" id="-1-"></a><img alt="2x4 示例" src="../figures/ifcstyleditem_fig-1.png" title="图 8.12.3.28.A — 样式化项"/><figcaption>图 8.12.3.28.A — 样式化项<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="-1-"></a><img alt="2x4 example" src="../figures/ifcstyleditem_fig-1.png" title="图 8.12.3.28.A — 样式项"/><figcaption>图 8.12.3.28.A — 样式项<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.28.2-Entity-inheritance-"></a>
     8.12.3.28.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.28.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -236,7 +236,7 @@
     8.12.3.28.3 特性（Attributes）
 <a class="link" href="#8.12.3.28.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-a36a3464-187c-4d0d-bb2c-3963675fed0f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3321d6c7-f09b-48e6-aa06-2c9e3911d6be"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -265,8 +265,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -276,8 +276,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -307,9 +307,9 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationItem.htm">IfcRepresentationItem</a></td>
 <td data-label="Description">
-<p>被分配样式的几何表现项。</p>
+<p>分配样式的几何表示项。</p>
 <blockquote>
-<p>IFC2x2 增补 2 变更 <em>Item</em> 属性已设为可选。基于文件交换的向上兼容性得到保证。</p>
+<p>IFC2x2 Add2 CHANGE The attribute <em>Item</em> has been made optional. Upward compatibility for file based exchange is guaranteed.</p>
 </blockquote>
 </td>
 </tr>
@@ -322,8 +322,8 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationStyle.htm">IfcPresentationStyle</a></td>
 <td data-label="Description">
-<p>被分配的表現样式，可以分配给几何表现项，也可以分配给材料定义。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已更改为 <em>IfcStyleAssignmentSelect</em>，基于文件交换的向上兼容性得到保证。</aside><aside class="aside-note"><mark>注释</mark> 从 IFC4 开始，仅应使用选择项 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationStyle.htm">IfcPresentationStyle</a></em>，<em>IfcPresentationStyleAssignment</em> 已被弃用。</aside>
+<p>分配给几何表示项或材料定义的表示样式。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The data type has been changed to <em>IfcStyleAssignmentSelect</em> with upward compatibility for file based exchange.</aside><aside class="aside-note"><mark>注释</mark> Only the select item <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationStyle.htm">IfcPresentationStyle</a></em> shall be used from IFC4 onwards, the <em>IfcPresentationStyleAssignment</em> has been deprecated.</aside>
 </td>
 </tr>
 <tr>
@@ -335,15 +335,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>用于指代该样式化项的词或词组。</p>
+<p>样式项所引用的词语或词组。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.28.B<a class="link" href="#-a36a3464-187c-4d0d-bb2c-3963675fed0f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.28.B<a class="link" href="#-3321d6c7-f09b-48e6-aa06-2c9e3911d6be"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.28.4-Formal-propositions-"></a>
     8.12.3.28.4 形式化命题（Formal propositions）
 <a class="link" href="#8.12.3.28.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-5dd37e3c-4ca0-427b-8a17-76a079ea630c"></a><table>
+<figure><a class="anchor" id="-594e4dd5-3e75-4e99-a8ce-2e1065088461"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -354,7 +354,7 @@
 <tr>
 <td>ApplicableItem</td>
 <td>
-<p>一个样式化项不能被另一个样式化项赋予样式。</p>
+<p>样式项不能被另一个样式项进行样式化。</p>
 </td>
 </tr>
 <tr>
@@ -363,7 +363,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.28.C<a class="link" href="#-5dd37e3c-4ca0-427b-8a17-76a079ea630c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.28.C<a class="link" href="#-594e4dd5-3e75-4e99-a8ce-2e1065088461"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.28.5-Formal-representation-"></a>
     8.12.3.28.5 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.28.5-Formal-representation-"><i data-feather="link"></i></a></h2>
