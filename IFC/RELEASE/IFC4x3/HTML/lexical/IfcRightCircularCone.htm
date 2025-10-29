@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.32 IfcRightCircularCone（正圆锥） - IFC 4.3.2 Documentation</title>
+<title>8.8.3.32 IfcRightCircularCone - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,31 +189,31 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.32 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRightCircularCone.htm">IfcRightCircularCone</a>（正圆锥）</h1>
+<h1>8.8.3.32 IfcRightCircularCone</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.32.1-Semantic-definition-"></a>
     8.8.3.32.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.32.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRightCircularCone.htm">IfcRightCircularCone</a></strong> 是一个构造实体几何（CSG）三维图元。它是一个具有圆形底面和称为顶点的顶部点的实体，从底部向顶部逐渐变细。从圆形底面中心到顶点的轴线垂直于底面。继承的 <em>Position</em> 属性定义了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em>，并提供圆锥的位置和方向：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRightCircularCone.htm">IfcRightCircularCone</a></em> 是一个构造实体几何（CSG）三维图元。它是一个具有圆形底面和称为顶点的顶点的实体。它从底面锥形到底部。从圆形底面中心到顶点的轴垂直于底面。继承的 <em>Position</em> 特性定义了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 并提供了圆锥的位置和方向：</p>
 <ul>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position</em>：图元坐标系的位置和方向。</li>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position.Location</em>：作为圆锥底面的圆形区域中心。</li>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position.Position[3]</em>：继承的放置坐标系的 z 轴提供 <strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRightCircularCone.htm">IfcRightCircularCone</a></strong> 的中心轴，顶点位于 z 轴正方向上的 <em>Height</em> 值处。<em>BottomRadius</em> 定义了放置坐标系 xy 平面上的圆形底面。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position</em>：图元的轴系的位置和方向。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position.Location</em>：圆面的中心，即圆锥的底面。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position.Position[3]</em>：继承的放置坐标系的 z 轴提供了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRightCircularCone.htm">IfcRightCircularCone</a></em> 的中心轴，顶点位于 <em>Height</em> 值处，该值应用于 z 轴的正方向。<em>BottomRadius</em> 定义了放置坐标系 xy 平面上的圆形底面。</li>
 </ul>
-<!-- 短定义结束 -->
-<p>图 8.8.3.32.A 展示了圆锥的几何参数。圆锥位于其自身的放置坐标系中。原点是底部圆盘的中心，位于 XY 平面内。顶点位于正 z 轴上的 [0, 0, <em>Height</em>] 处。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="cone1" src="../figures/ifcrightcircularcone-layout1.png" title="图 8.8.3.32.A — 正圆锥几何"/><figcaption>图 8.8.3.32.A — 正圆锥几何<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>right_circular_cone</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x3 中的新实体</aside>
+<!-- end of short definition -->
+<p>图 8.8.3.32.A 说明了圆锥的几何参数。圆锥在其自身的放置坐标系中定位。原点是底部圆形盘的中心，位于 XY 平面。顶点位于正 z 轴上，坐标为 [0, 0, <em>Height</em>]。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="cone1" src="../figures/ifcrightcircularcone-layout1.png" title="图 8.8.3.32.A — 圆锥几何体"/><figcaption>图 8.8.3.32.A — 圆锥几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>right_circular_cone</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3</aside>
 <p>纹理使用定义</p>
-<p>在圆形侧面上，纹理朝上对齐，原点位于背面（+Y 方向），逆时针旋转。根据 RepeatS，纹理被拉伸或重复至底面圆周的范围。根据 RepeatT，纹理向上朝顶点线性压缩。</p>
-<p>在底面上，纹理朝前向后对齐，圆心与纹理中心对齐。</p>
-<p>图 8.8.3.32.B 展示了使用固定纹理（RepeatS=False 和 RepeatT=False）的默认纹理映射。左侧图像显示纹理，其中 S 轴指向右，T 轴指向上。右侧图像显示应用于几何体的纹理，其中 X 轴指向右后方，Y 轴指向左后方，Z 轴指向上方。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="texture" src="../figures/ifcrightcircularcone-texture.png"/><figcaption>图 8.8.3.32.B — 正圆锥纹理<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<p>在圆形侧面，纹理向上对齐，原点在后部（+Y 方向）逆时针旋转。纹理根据 RepeatS 拉伸或重复到基部圆周的范围。纹理根据 RepeatT 线性压缩，向上朝向顶点。</p>
+<p>在底部，纹理正面朝后对齐，圆心与纹理中心对齐。</p>
+<p>图 8.8.3.32.B 说明了默认纹理映射（纹理被钳制）（RepeatS=False 和 RepeatT=False）。左侧的图像显示了 S 轴指向右侧，T 轴指向上方的纹理。右侧的图像显示了应用于几何体的纹理，其中 X 轴指向右后方，Y 轴指向左后方，Z 轴指向上方。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="texture" src="../figures/ifcrightcircularcone-texture.png"/><figcaption>图 8.8.3.32.B — 圆锥纹理<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 <figure><a class="anchor" id="-3-"></a><table>
 <thead>
 <tr>
-<th>面</th>
-<th>法向量</th>
+<th>侧面</th>
+<th>法线</th>
 <th>原点 X</th>
 <th>原点 Y</th>
 <th>原点 Z</th>
@@ -229,10 +229,10 @@
 <td>+Radius</td>
 <td>0</td>
 <td>-X</td>
-<td>（朝向顶点）</td>
+<td>(朝向顶点)</td>
 </tr>
 <tr>
-<td>底面</td>
+<td>底部</td>
 <td>-Z</td>
 <td>-Radius</td>
 <td>+Radius</td>
@@ -306,7 +306,7 @@
     8.8.3.32.3 特性（Attributes）
 <a class="link" href="#8.8.3.32.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-aad3a25c-8796-4f22-abcc-ca7356cd23bf"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c049f430-8649-4e69-8e09-7054cff04e55"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -335,8 +335,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -346,8 +346,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -365,7 +365,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>The placement coordinate system to which the parameters of each individual CSG primitive apply.</p>
+<p>适用于每个单独 CSG 图元参数的放置坐标系。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -379,7 +379,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p>The space dimensionality of this geometric representation item, it is always 3.</p>
+<p>此几何表示项的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -409,7 +409,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>圆锥底面与顶点之间的距离。</p>
+<p>圆锥底面到顶点的距离。</p>
 </td>
 </tr>
 <tr>
@@ -421,11 +421,11 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>圆锥底部的半径。</p>
+<p>圆锥底面的半径。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.32.D<a class="link" href="#-aad3a25c-8796-4f22-abcc-ca7356cd23bf"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.32.D<a class="link" href="#-c049f430-8649-4e69-8e09-7054cff04e55"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.32.4-Formal-representation-"></a>
     8.8.3.32.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.32.4-Formal-representation-"><i data-feather="link"></i></a></h2>
