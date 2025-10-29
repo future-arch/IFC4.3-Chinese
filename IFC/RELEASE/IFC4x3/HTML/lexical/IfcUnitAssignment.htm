@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.11.3.11 IfcUnitAssignment（单位分配） - IFC 4.3.2 Documentation</title>
+<title>8.11.3.11 IfcUnitAssignment - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,17 +189,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.11.3.11 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>（单位分配）</h1>
+<h1>8.11.3.11 IfcUnitAssignment</h1>
 <div class="mvd" title="Included in IfcContext.UnitsInContext, Project Units">RV ⓘ</div>
 <div class="mvd" title="Included in IfcContext.UnitsInContext, Project Units">AbV ⓘ</div>
 <h2><a class="anchor" id="8.11.3.11.1-Semantic-definition-"></a>
     8.11.3.11.1 语义定义（Semantic definition）
 <a class="link" href="#8.11.3.11.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 表示一组可被分配的单位。在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 中，每个单位定义都应是唯一的；即对于同一单位类型（如长度单位或面积单位）不应存在冗余的单位定义。对于货币单位，在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 中应仅包含一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></em>。</p>
-<!-- 短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC1.5.1 中新增的实体。</aside><blockquote>
-<p>说明：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 具有一个单位分配，用于建立一组将在项目范围内全局使用的单位（除非另有定义）。如果其他对象需要使用不属于项目单位分配的单位，则这些对象可以具有局部单位分配。</p>
-</blockquote>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 指示一组可能被分配的单位。在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 中，每个单位定义都应该是唯一的；也就是说，对于相同的单位类型（如长度单位或面积单位），不应有冗余的单位定义。对于货币，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 中只能有一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></em>。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> A <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> has a unit assignment which establishes a set of units which will be used globally within the project, if not otherwise defined. Other objects may have local unit assignments if there is a requirement for them to make use of units which do not fall within the project unit assignment.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.1.</aside>
 <h2><a class="anchor" id="8.11.3.11.2-Entity-inheritance-"></a>
     8.11.3.11.2 实体继承（Entity inheritance）
 <a class="link" href="#8.11.3.11.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -215,7 +213,7 @@
     8.11.3.11.3 特性（Attributes）
 <a class="link" href="#8.11.3.11.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f4c13379-f8cb-4f13-9ede-98f167d4176f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0d299b50-6ca5-4605-8886-148401a73d35"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -246,15 +244,15 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnit.htm">IfcUnit</a></td>
 <td data-label="Description">
-<p>要包含在单位分配中的单位。</p>
+<p>要在单位分配中包含的单位。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.11.3.11.A<a class="link" href="#-f4c13379-f8cb-4f13-9ede-98f167d4176f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.11.3.11.A<a class="link" href="#-0d299b50-6ca5-4605-8886-148401a73d35"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.11.3.11.4-Formal-propositions-"></a>
     8.11.3.11.4 形式化命题（Formal propositions）
 <a class="link" href="#8.11.3.11.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-be904a3a-9d57-4a58-81d8-5a18cd3cbbaa"></a><table>
+<figure><a class="anchor" id="-50db1846-454c-4af5-a539-c9b263ac6153"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -265,7 +263,7 @@
 <tr>
 <td>WR01</td>
 <td>
-<p>检查全局分配的单位集合中每个单位类型（无论是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNamedUnit.htm">IfcNamedUnit</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a></em> 还是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></em> 类型）仅被定义一次。</p>
+<p>检查全局分配的单位集是否每个单位类型（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNamedUnit.htm">IfcNamedUnit</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></em> 类型）只定义一次，并且最多包含一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></em>。</p>
 </td>
 </tr>
 <tr>
@@ -274,7 +272,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.11.3.11.B<a class="link" href="#-be904a3a-9d57-4a58-81d8-5a18cd3cbbaa"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.11.3.11.B<a class="link" href="#-50db1846-454c-4af5-a539-c9b263ac6153"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.11.3.11.5-Formal-representation-"></a>
     8.11.3.11.5 形式化表示（Formal representation）
 <a class="link" href="#8.11.3.11.5-Formal-representation-"><i data-feather="link"></i></a></h2>
