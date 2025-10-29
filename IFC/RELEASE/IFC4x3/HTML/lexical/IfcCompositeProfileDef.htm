@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -197,7 +197,7 @@
 <a class="link" href="#8.15.3.9.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeProfileDef.htm">IfcCompositeProfileDef</a></em> 通过组合其他轮廓来定义轮廓。组合由一组至少两个其他轮廓定义组成。任何轮廓定义（除了另一个复合轮廓）都可以用来构建复合轮廓。</p>
 <!-- end of short definition -->
-<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside>
 <p>图 8.15.3.9.A 说明了复合轮廓定义。 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeProfileDef.htm">IfcCompositeProfileDef</a></em> 不定义自己的位置坐标系，它直接定义在底层坐标系中。底层坐标系由使用该轮廓定义的扫描曲面或扫描区域实体定义。它是以下任一项的位置的 xy 平面：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a>.Position</em></li>
@@ -208,7 +208,7 @@
 <li>对于参数化轮廓定义，这些标准轮廓的 <em>Position</em> 属性用于将轮廓相互相对放置。</li>
 <li>对于任意轮廓定义，每个笛卡尔坐标直接在底层坐标系中给出。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 黑色坐标轴显示了扫描曲面或扫描区域实体的底层坐标系。</aside>
+<aside class="aside-note"><mark>注释</mark> The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid.</aside>
 <figure><a class="anchor" id="-314"></a><img alt="composite" src="../figures/ifccompositeprofiledef-layout1.gif" title="图 8.15.3.9.A"/><figcaption>图 8.15.3.9.A<a class="link" href="#-314"><i data-feather="link"></i></a></figcaption></figure>
 <p>双轮廓特殊情况</p>
 <p>如果双轮廓由轮廓组合建模，则基准轮廓应只指定一次。然后它直接包含在复合轮廓中，并通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a></em> 间接包含。例如，一个由两个 L100x10 组成的双角钢，它们之间有 10mm 的空气间隙，即一个 <em>| |</em> 形状，可以建模为</p>
@@ -247,7 +247,7 @@
     8.15.3.9.3 特性（Attributes）
 <a class="link" href="#8.15.3.9.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-eb80e875-e7a4-41e1-b5f7-f5f56eb7c6cb"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-dc932139-d750-4b31-98e4-164aa9e35a9c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -301,7 +301,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
 <td data-label="Description">
 <p>指向与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新逆向属性</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -312,7 +312,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
 <td data-label="Description">
 <p>轮廓的附加属性，例如机械性能。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 新逆向属性</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -358,11 +358,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.9.B<a class="link" href="#-eb80e875-e7a4-41e1-b5f7-f5f56eb7c6cb"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.9.B<a class="link" href="#-dc932139-d750-4b31-98e4-164aa9e35a9c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.9.4-Formal-propositions-"></a>
     8.15.3.9.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.9.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-134a1132-f16a-4162-b2e1-0643731aadfe"></a><table>
+<figure><a class="anchor" id="-19a029d4-51eb-469c-9339-ccf9859c7d75"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -373,9 +373,7 @@
 <tr>
 <td>InvariantProfileType</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>所有轮廓要么是面积，要么是曲线。</p>
 </td>
 </tr>
 <tr>
@@ -386,9 +384,7 @@
 <tr>
 <td>NoRecursion</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>复合轮廓不应包含另一个复合轮廓，即不允许递归定义。</p>
 </td>
 </tr>
 <tr>
@@ -397,7 +393,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.9.C<a class="link" href="#-134a1132-f16a-4162-b2e1-0643731aadfe"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.9.C<a class="link" href="#-19a029d4-51eb-469c-9339-ccf9859c7d75"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.9.5-"></a>
     8.15.3.9.5 属性集
 <a class="link" href="#8.15.3.9.5-"><i data-feather="link"></i></a></h2>
@@ -438,7 +434,7 @@
 </p><h2><a class="anchor" id="8.15.3.9.6-Concept-usage-"></a>
     8.15.3.9.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.9.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-83ce0738-432e-48a5-bc40-dca76219d87e"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-bb487bde-ef47-4a5f-821b-4d111b109723"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -482,7 +478,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.9.D<a class="link" href="#-83ce0738-432e-48a5-bc40-dca76219d87e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.9.D<a class="link" href="#-bb487bde-ef47-4a5f-821b-4d111b109723"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.9.7-Formal-representation-"></a>
     8.15.3.9.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.9.7-Formal-representation-"><i data-feather="link"></i></a></h2>
