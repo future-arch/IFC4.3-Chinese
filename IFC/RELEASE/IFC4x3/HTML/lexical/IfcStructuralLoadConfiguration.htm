@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.19.3.10 IfcStructuralLoadConfiguration（结构荷载配置） - IFC 4.3.2 Documentation</title>
+<title>8.19.3.10 IfcStructuralLoadConfiguration - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,21 +189,21 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.19.3.10 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadConfiguration.htm">IfcStructuralLoadConfiguration</a>（结构荷载配置）</h1>
+<h1>8.19.3.10 IfcStructuralLoadConfiguration</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.19.3.10.1-Semantic-definition-"></a>
     8.19.3.10.1 语义定义（Semantic definition）
 <a class="link" href="#8.19.3.10.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>此类在一维或二维配置中组合一个或多个荷载或结果值。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC4 中新增实体。</aside>
+<p>此实体将一个或多个荷载或结果值组合在1维或2维配置中。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li><em>Values</em> 中的所有项应为相同类型。</li>
-<li>如果荷载或结果包含曲线活动，应给出沿曲线局部测量的一维位置。位置不应超出曲线活动的边界。荷载样本及对应位置应按位置升序给出。</li>
-<li>如果荷载或结果包含曲面活动，应给出在曲面活动局部 x 和 y 方向测量的二维位置。位置不应超出曲面活动的边界。</li>
+<li><em>Values</em> 中的所有项都应为同一类型。</li>
+<li>如果荷载或结果包含曲线活动，则应给出1维位置，该位置沿曲线局部测量。该位置不得超出曲线活动的边界。荷载样本和相应位置应按位置升序给出。</li>
+<li>如果荷载或结果包含曲面活动，则应给出2维位置，该位置在曲面活动的局部x和y方向上测量。该位置不得超出曲面活动的边界。</li>
 </ol>
-<aside class="aside-note"><mark>注释</mark> 二维情况没有排序要求，但一维情况为简化起见应进行空间排序。</aside>
+<aside class="aside-note"><mark>注释</mark> There are no ordering requirements in the 2-dimensional case, but the 1-dimensional case shall be spatially ordered for simplicity.</aside>
 <h2><a class="anchor" id="8.19.3.10.2-Entity-inheritance-"></a>
     8.19.3.10.2 实体继承（Entity inheritance）
 <a class="link" href="#8.19.3.10.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -226,7 +226,7 @@
     8.19.3.10.3 特性（Attributes）
 <a class="link" href="#8.19.3.10.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0ddd0daf-0861-464a-ac47-87e6d9ee65ba"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-ce881673-facb-4d92-a098-de2c4b29d26b"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -257,7 +257,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>Optionally defines a name for this load.</p>
+<p>可选地为此荷载定义一个名称。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -287,7 +287,7 @@
             </td>
 <td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadOrResult.htm">IfcStructuralLoadOrResult</a></td>
 <td data-label="Description">
-<p>荷载或结果值的列表。</p>
+<p>荷载或结果值列表。</p>
 </td>
 </tr>
 <tr>
@@ -299,15 +299,15 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF UNIQUE LIST [1:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>荷载样本或结果样本的位置，在使用此资源对象的实例定义的局部坐标系内给出。位置列表中的每个项对应于相同列表索引处的值列表项。对于通过高层定义隐式已知位置的情况，此属性为可选。</p>
+<p>荷载样本或结果样本的位置，在使用者此资源对象的实例定义的局部坐标系中给出。位置列表中的每个项对应于相同列表索引处的值列表项。对于位置可从更高级别定义隐式知晓的配置，此特性是可选的。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.19.3.10.A<a class="link" href="#-0ddd0daf-0861-464a-ac47-87e6d9ee65ba"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.19.3.10.A<a class="link" href="#-ce881673-facb-4d92-a098-de2c4b29d26b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.19.3.10.4-Formal-propositions-"></a>
     8.19.3.10.4 形式化命题（Formal propositions）
 <a class="link" href="#8.19.3.10.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-59d65d8c-8e2e-4925-b4fa-6015d3156ca0"></a><table>
+<figure><a class="anchor" id="-26ad8df7-7e9e-4bab-a26d-e86171afffc2"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -318,7 +318,7 @@
 <tr>
 <td>ValidListSize</td>
 <td>
-<p>如果提供了位置，则位置项数量应与值项数量相同。</p>
+<p>如果提供了位置，则位置项的数量应与值项的数量相同。</p>
 </td>
 </tr>
 <tr>
@@ -327,7 +327,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.19.3.10.B<a class="link" href="#-59d65d8c-8e2e-4925-b4fa-6015d3156ca0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.19.3.10.B<a class="link" href="#-26ad8df7-7e9e-4bab-a26d-e86171afffc2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.19.3.10.5-Formal-representation-"></a>
     8.19.3.10.5 形式化表示（Formal representation）
 <a class="link" href="#8.19.3.10.5-Formal-representation-"><i data-feather="link"></i></a></h2>
