@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.11 IfcProjectedCRS（投影坐标参考系统） - IFC 4.3.2 Documentation</title>
+<title>8.18.3.11 IfcProjectedCRS - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,27 +189,27 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.18.3.11 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a>（投影坐标参考系统）</h1>
+<h1>8.18.3.11 IfcProjectedCRS</h1>
 <div class="mvd" title="Included in Project Global Positioning, Project Global Positioning Mapped">RV ⓘ</div>
 <div class="mvd" title="Included in Project Global Positioning, Project Global Positioning Mapped">AbV ⓘ</div>
 <h2><a class="anchor" id="8.18.3.11.1-Semantic-definition-"></a>
     8.18.3.11.1 语义定义（Semantic definition）
 <a class="link" href="#8.18.3.11.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 是一种坐标参考系统（CRS），用于关联建筑或设施工程项目中局部工程坐标系与地图投影的转换关系。该投影坐标参考系统被假定为二维或三维右手笛卡尔坐标系，可选的 <em>MapUnit</em> 属性可用于确定地图所使用的长度单位。</p>
-<!-- 短定义结束 -->
-<p>尽管其名称暗示：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 是地图的坐标参考系统 (CRS)，局部施工或设施工程项目的地图转换与此 CRS 相关。假定投影坐标参考系统是 2D 或 3D 右手笛卡尔坐标系，可选的 <em>MapUnit</em> 属性可用于确定地图使用的长度单位。</p>
+<!-- end of short definition -->
+<p>尽管其名称暗示了这一点：</p>
 <ul>
 <li>
-<p>若引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 为三维，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 应为<strong>复合坐标参考系统</strong>，即多个CRS的组合，从中可明确识别 <em>GeodeticDatum</em>（大地基准面）和 <em>VerticalDatum</em>（垂直基准面）。</p>
+<p>如果引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 是 3D，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 应为<strong>复合坐标参考系统</strong>，即多个 CRS 的组合，从中可以始终明确无误地识别 <em>GeodeticDatum</em> 和 <em>VerticalDatum</em>。</p>
 </li>
 <li>
-<p>若引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 为二维，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 可以是<strong>投影坐标参考系统</strong>或<strong>复合坐标参考系统</strong>。</p>
+<p>如果引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 是 2D，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em> 可以是<strong>投影坐标参考系统</strong>或<strong>复合坐标参考系统</strong>。</p>
 </li>
 </ul>
-<aside class="aside-example"><mark>示例</mark> 代码 EPSG:9286（ETRS89 + NAP高程）是地理坐标参考系统（ETRS89）与垂直坐标参考系统（NAP高程）及其各自基准面的组合。</aside><aside class="aside-example"><mark>示例</mark> 代码 EPSG:9306（HS2测量网格 + HS2-VRF高程）是投影坐标参考系统（HS2测量网格）与垂直坐标参考系统（HS2-VRF高程）及其各自基准面的组合。</aside>
-<p>坐标参考系统的明确标识符存储于继承的 <em>Name</em> 属性中。完整定义的标识符应包含地图投影、地图区域信息及所有必需的基准面。在此情况下，可省略 <em>VerticalDatum</em>、<em>MapProjection</em>、<em>MapZone</em> 属性以及继承的 <em>GeodeticDatum</em> 属性。</p>
-<aside class="aside-example"><mark>示例</mark> 代码 'EPSG:5555' 标识了 <em>ETRS89 / UTM 32N区 + DHHN92高程</em> 的组合（即投影坐标参考系统 + 垂直坐标参考系统）。代码 <strong>'EPSG:6258'</strong> 标识了投影坐标参考系统 <em>ETRS89 / UTM 32N区</em>（其自身标识为EPSG:25832）的<strong>大地基准面</strong>。代码 <strong>'EPSG:5181'</strong> 标识了垂直坐标参考系统 <em>DHHN92高程</em>（其自身标识为EPSG:5783）的<strong>垂直基准面</strong>。</aside><aside class="aside-note"><mark>注释</mark> 定义源自OpenGIS抽象规范主题2：
-用于在平面投影面上近似表示地球形状的二维（或含垂直坐标轴的三维）坐标参考系统，其近似过程中固有的形变通过受控方式精确管理并已知。通常对计算的方位角和距离应用形变校正，以生成与实地测量值高度吻合的数值。</aside><aside class="aside-history"><mark>沿革</mark> IFC4中新增实体。</aside>
+<aside class="aside-example"><mark>示例</mark> The code EPSG:9286 (ETRS89 + NAP height) is the combination of a geographic CRS (ETRS89) and a vertical CRS (NAP height), with their respective datums.</aside><aside class="aside-example"><mark>示例</mark> The code EPSG:9306 (HS2 Survey Grid + HS2-VRF height) is the combination of a projected CRS (HS2 Survey Grid), and a vertical CRS (HS2-VRF height), with their respective datums.</aside>
+<p>坐标参考系统所知的明确标识符存储在继承的 <em>Name</em> 属性中。定义良好的标识符包括地图投影、地图区域信息以及所有必需的基准面。在这些情况下，可以省略 <em>VerticalDatum</em>、<em>MapProjection</em>、<em>MapZone</em> 以及继承的属性 <em>GeodeticDatum</em>。</p>
+<aside class="aside-example"><mark>示例</mark> The code 'EPSG:5555' identifies the combination of <em>ETRS89 / UTM zone 32N + DHHN92 height</em> (i.e., a projected CRS + a vertical CRS). The code <strong>'EPSG:6258'</strong> identifies the <strong>geodetic datum</strong> of the projected CRS <em>ETRS89 / UTM zone 32N</em> (itself identified as EPSG:25832). The code <strong>'EPSG:5181'</strong> identifies the <strong>vertical datum</strong> of the vertical CRS <em>DHHN92 height</em> (itself identified as EPSG:5783).</aside><aside class="aside-note"><mark>注释</mark> Definition from OpenGIS Abstract Specification, Topic 2:
+A 2D (or with vertical coordinate axis 3D) coordinate reference system used to approximate the shape of the earth on a planar surface, but in such a way that the distortion that is inherent to the approximation is carefully controlled and known. Distortion correction is commonly applied to calculated bearings and distances to produce values that are a close match to actual field values.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.18.3.11.2-Entity-inheritance-"></a>
     8.18.3.11.2 实体继承（Entity inheritance）
 <a class="link" href="#8.18.3.11.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -232,7 +232,7 @@
     8.18.3.11.3 特性（Attributes）
 <a class="link" href="#8.18.3.11.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-83e0fca7-3490-40b0-84f6-f5a1ec254fb0"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-aa137637-ce8f-4d96-b2de-33cce1496e23"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -264,7 +264,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
 <p>用于标识坐标参考系统的名称。</p>
-<aside class="aside-note"><mark>注释</mark> 该名称应从欧洲石油调查组 EPSG 认可的列表中选取。然后应通过 EPSG 命名空间进行限定，例如 'EPSG:5555'。</aside><aside class="aside-note"><mark>注释</mark> <em>Name</em> 应仅包含一个 EPSG 代码。当没有一个 EPSG 代码能明确标识坐标参考系统时，应使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a></em>。不允许在 <em>Name</em> 的一个字符串中组合多个 EPSG 代码（例如 'EPSG:2056,EPSG:5728'）。</aside><aside class="aside-note"><mark>注释</mark> 如果坐标参考系统（CRS）没有对应的 EPSG 代码，则名称应为 'WKT'。在这种情况下，应使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a></em> 实体进一步指定坐标参考系统。</aside>
+<aside class="aside-note"><mark>注释</mark> The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG namespace, for example as 'EPSG:5555'.</aside><aside class="aside-note"><mark>注释</mark> The <em>Name</em> shall contain only one EPSG code. When there is not one EPSG that unambiguously identifies the CRS, <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a></em> shall be used. Combining multiple EPSG codes in one string for <em>Name</em> (e.g., 'EPSG:2056,EPSG:5728') is not allowed.</aside><aside class="aside-note"><mark>注释</mark> The name shall be 'WKT' if an EPSG code does not exist for the coordinate reference system (CRS). In this case, the CRS shall be further specified using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a></em> entity.</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -288,11 +288,11 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p>用于标识此基准面的名称。大地基准面与坐标参考系统相关联，表示旋转椭球体的形状和大小，以及该椭球体与实际地球的连接和定向。如果 <em>Name</em> 标识符未同时明确地定义大地基准面，则需要提供此属性。</p>
-<aside class="aside-example"><mark>示例</mark> 大地基准面包括：</aside><blockquote>
-<p><strong>EPSG:6326</strong>（WGS84 世界大地测量系统 1984，用于 GPS）；
-<strong>ED50</strong>（欧洲基准 1950，也标识为 EPSG:6230）；
-<strong>EUREF89</strong>（欧洲地面参考框架 1989，也标识为 EPSG:1178）。</p>
+<p>用于标识此基准的名称。大地基准与坐标参考系统相关联，并指示旋转椭球体的形状和大小以及该椭球体与实际地球/地表的连接和方向。如果 <em>Name</em> 标识符不能无歧义地定义大地基准，则需要提供此信息。</p>
+<aside class="aside-example"><mark>示例</mark> geodetic datums include:</aside><blockquote>
+<p><strong>EPSG:6326</strong> (WGS84 World Geodetic System 1984, used in GPS);
+<strong>ED50</strong> (European Datum 1950, also identified as EPSG:6230);
+<strong>EUREF89</strong> (European Terrestrial Reference Frame 1989, also identified as EPSG:1178).</p>
 </blockquote>
 </td>
 </tr>
@@ -303,7 +303,7 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a> FOR SourceCRS</td>
 <td data-label="Description">
-<p>表示坐标参考系统之间的转换。特别是指此坐标参考系统与另一个坐标参考系统之间的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>。</p>
+<p>指示坐标参考系统之间的转换。特别是，它指的是此坐标参考系统与另一个坐标参考系统之间的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -313,7 +313,7 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a> FOR CoordinateReferenceSystem</td>
 <td data-label="Description">
-<p>作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a></em> 实体反向关联的此坐标参考系统的已知文本（WKT）定义。</p>
+<p>此坐标参考系统的 Well Known Text (WKT) 定义，作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a></em> 实体反向关联。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -343,8 +343,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p>垂直基准面的标识名称。垂直基准面与坐标参考系统的高程轴相关联，用于定义高程系统原点的参考平面和基准点。当 <em>Name</em> 标识符未明确定义垂直基准面且坐标参考系统为三维参考系统时，需提供此属性。</p>
-<aside class="aside-example"><mark>示例</mark> 垂直基准面包括：'EPSG:5181'（德国1992主干高程网）；'EPSG:5215'（欧洲2007垂直参考框架）</aside>
+<p>用于标识垂直基准面的名称。垂直基准面与坐标参考系统的高度轴相关联，并指示定义高度系统原点的参考平面和基本点。如果 <em>Name</em> 标识符未明确定义垂直基准面，并且坐标参考系统是 3D 参考系统，则需要提供此项。</p>
+<aside class="aside-example"><mark>示例</mark> vertical datums include: 'EPSG:5181' (Deutsches Haupthöhennetz 1992); 'EPSG:5215' (European Vertical Reference Frame 2007)</aside>
 </td>
 </tr>
 <tr>
@@ -356,8 +356,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p>地图投影的标识名称。</p>
-<aside class="aside-example"><mark>示例</mark> 地图投影包括：UTM；高斯-克吕格</aside>
+<p>用于标识地图投影的名称。</p>
+<aside class="aside-example"><mark>示例</mark> map projections include: UTM; Gauss-Krueger</aside>
 </td>
 </tr>
 <tr>
@@ -369,8 +369,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<p>与 <em>MapProjection</em> 相关的地图区域标识名称。</p>
-<aside class="aside-example"><mark>示例</mark> 地图区域包括：UTM投影的区号，如UTM32的32区；高斯-克吕格投影的区号，如GK3的3区</aside>
+<p>与 <em>MapProjection</em> 相关的地图区域的名称。</p>
+<aside class="aside-example"><mark>示例</mark> map zones includes: for UTM, the zone number, like 32 for UTM32; for Gauss-Krueger, the zone number, like 3 for GK3</aside>
 </td>
 </tr>
 <tr>
@@ -382,16 +382,16 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNamedUnit.htm">IfcNamedUnit</a></td>
 <td data-label="Description">
-<p>构成地图坐标系的坐标轴单位。</p>
-<aside class="aside-note"><mark>注释</mark> 仅涉及长度度量，且地图坐标系的所有两个或三个坐标轴应具有相同长度单位。</aside><aside class="aside-note"><mark>注释</mark> 若未提供MapUnit，坐标轴单位将采用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a>.UnitInContext中声明的默认单位。</aside>
+<p>构成地图坐标系的坐标轴的单位。</p>
+<aside class="aside-note"><mark>注释</mark> Only length measures are in scope and all two or three axes of the map coordinate system shall have the same length unit.</aside><aside class="aside-note"><mark>注释</mark> If MapUnit is omitted, the unit for the coordinate axes is taken from the default units, as stated in <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a>.UnitInContext.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.11.A<a class="link" href="#-83e0fca7-3490-40b0-84f6-f5a1ec254fb0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.11.A<a class="link" href="#-aa137637-ce8f-4d96-b2de-33cce1496e23"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.11.4-Formal-propositions-"></a>
     8.18.3.11.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.11.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-90185b69-2335-4d11-865a-2eb678ce0c49"></a><table>
+<figure><a class="anchor" id="-0186d72b-d5b6-4b66-a06f-7afafd7a3a5c"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -413,7 +413,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.11.B<a class="link" href="#-90185b69-2335-4d11-865a-2eb678ce0c49"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.11.B<a class="link" href="#-0186d72b-d5b6-4b66-a06f-7afafd7a3a5c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.11.5-Formal-representation-"></a>
     8.18.3.11.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.11.5-Formal-representation-"><i data-feather="link"></i></a></h2>
