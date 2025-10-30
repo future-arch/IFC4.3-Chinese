@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.4.4.23 Pset_Warranty（保修） - IFC 4.3.2 Documentation</title>
+<title>6.4.4.23 Pset_Warranty - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -144,18 +144,19 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.4.4.23 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Warranty.htm">Pset_Warranty</a>（保修）</h1>
+<h1>6.4.4.23 Pset_Warranty</h1>
 <h2><a class="anchor" id="6.4.4.23.1-Semantic-definition-"></a>
     6.4.4.23.1 语义定义（Semantic definition）
 <a class="link" href="#6.4.4.23.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>由产品卖方或提供方作出的保证，确保产品无缺陷，并在规定期限内按描述正常运行且不发生故障，若在此期间出现任何缺陷，将由卖方或提供方负责修复。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Warranty.htm">Pset_Warranty</a>（保修）</p>
+<p>由构件的卖方或提供者给出的保证，保证构件无缺陷，将在规定时间段内按描述运行且不会发生故障，并且如果在该时间段内确实出现缺陷，将由卖方或提供者纠正。</p>
 <!-- end of short definition -->
 <h2><a class="anchor" id="6.4.4.23.2-"></a>
     6.4.4.23.2 适用实体
 <a class="link" href="#6.4.4.23.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 的子类型处被同名属性集覆盖。
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></li>
@@ -164,7 +165,7 @@
 <h2><a class="anchor" id="6.4.4.23.3-"></a>
     6.4.4.23.3 属性
 <a class="link" href="#6.4.4.23.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7e397868-fe7b-41a5-8382-83566c683c4a"></a><table>
+<figure><a class="anchor" id="-b85d96ac-a2fb-41fc-be8c-00131058b54e"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -180,6 +181,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td>
+<p>WarrantyIdentifier（保修标识符）</p>
 <p>分配给保修的标识符。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/WarrantyIdentifier.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
@@ -189,7 +191,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></td>
 <td>
-<p>保修开始的日期。</p>
+<p>WarrantyStartDate（保修开始日期）</p>
+<p>保修开始日期。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/WarrantyStartDate.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -198,7 +201,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示这是否为延长期限超过通常分配给构件的保修（=TRUE）或不是（=FALSE）。</p>
+<p>指示这是否是持续时间大于通常分配给人工制品的延保（=TRUE）或不是（= FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsExtendedWarranty.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -207,7 +210,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
 <td>
-<p>制造商或供应商保证产品性能的时间期限。</p>
+<p>WarrantyPeriod（保修期限）</p>
+<p>制造商或供应商保证或担保制品性能的时间期限。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/WarrantyPeriod.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -216,6 +220,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td>
+<p>WarrantyContent（保修内容）</p>
 <p>保修内容。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/WarrantyContent.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
@@ -225,7 +230,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>根据保修条款应联系的组织。请注意，该组织的角色（制造商、供应商、安装商等）由 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrganization.htm">IfcOrganization</a> 的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorRole.htm">IfcActorRole</a> 属性确定。</p>
+<p>应根据保修条款联系采取行动的组织。注意，组织的角色（制造商、供应商、安装商等）由IfcOrganization的IfcActorRole属性确定。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/PointOfContact.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -234,13 +239,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td>
-<p>==========</p>
-<p>可能被排除在保修范围之外或可能导致保修失效的项目、条件或行为。</p>
+<p>可能被排除在保修范围之外或可能导致保修失效的项目、条件或操作。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Exclusions.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 6.4.4.23.A<a class="link" href="#-7e397868-fe7b-41a5-8382-83566c683c4a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.4.4.23.A<a class="link" href="#-b85d96ac-a2fb-41fc-be8c-00131058b54e"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">

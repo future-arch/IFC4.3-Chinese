@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.1.3.45 IfcWindowType（窗类型） - IFC 4.3.2 Documentation</title>
+<title>6.1.3.45 IfcWindowType - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -144,42 +144,43 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.1.3.45 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a>（窗类型）</h1>
+<h1>6.1.3.45 IfcWindowType</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a> 的子类型，因此是每个标准化模式子集和实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="6.1.3.45.1-Semantic-definition-"></a>
     6.1.3.45.1 语义定义（Semantic definition）
 <a class="link" href="#6.1.3.45.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a>（窗类型）</p>
 <p>元素类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 定义了窗实例共用的信息。共用信息集可能包括：</p>
 <ul>
-<li>共享属性集中的通用属性</li>
+<li>共用属性集中的通用属性</li>
 <li>通用材料信息</li>
-<li>窗扇的通用划分方式</li>
+<li>窗扇的通用划分</li>
 <li>窗扇的通用操作类型</li>
 <li>通用形状表示</li>
 </ul>
-<!-- 短定义结束 -->
-<p>窗类型通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em>（仅适用于窗的预定义属性集）定义了窗框和一个（或多个）窗扇的特定参数。</p>
-<p>它用于定义窗规格或窗样式（该窗类型所有实例共有的特定产品信息）。窗类型可以在未分配给具体实例的情况下进行交换。</p>
+<!-- 简短定义结束 -->
+<p>窗类型通过仅适用于窗的预定义属性集 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> 来定义窗框和一个（或多个）窗扇的具体参数。</p>
+<p>它用于定义窗规格或窗样式（该窗类型所有实例共有的特定产品信息）。窗类型可以在未分配给实例的情况下进行交换。</p>
 <p>建筑模型中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 实例由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindow.htm">IfcWindow</a></em> 的实例表示。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC4. The entity <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> replaces the previous definition <em>IfcWindowStyle</em> (which is deprecated in IFC4).</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 取代了之前的定义 <em>IfcWindowStyle</em>（在 IFC4 中已弃用）。</aside>
 <p>划分类型使用定义</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> 定义了窗类型的总体布局及其符号表示。根据枚举值，相应的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> 实例会附加到 <em>HasPropertySets</em> 列表中。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> 主要决定了将窗划分为单个窗扇的方式，从而决定了窗扇的数量和位置。</p>
-<p>关于正确使用窗扇划分以及不同窗扇操作类型的开启符号，请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> 的几何使用定义和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em>。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> 定义了窗类型的总体布局及其符号表示。根据枚举值，在 <em>HasPropertySets</em> 列表中附加了适当的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> 实例。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> 主要决定了将窗划分为单个窗扇的方式，从而决定了窗扇的数量和位置。</p>
+<p>有关窗扇划分的正确用法，请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> 的几何使用定义；有关不同窗扇操作类型的开启符号，请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em>。</p>
 <p>材料使用定义</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 的材料由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em> 定义，或者作为回退方案由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> 定义，并通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>.<em>RelatingMaterial</em> 附加。可通过反向关系 <em>HasAssociations</em> 访问。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a>.MaterialConstituents[n].Name</em> 应使用以下关键词：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 的材料由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em> 定义，或作为回退由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em> 定义，并通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>.<em>RelatingMaterial</em> 附加。可通过反向 <em>HasAssociations</em> 关系访问。</p>
+<p>应使用以下 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a>.MaterialConstituents[n].Name</em> 的关键字：</p>
 <ul>
-<li>'Lining' - 表示该材料成分应用于窗框</li>
-<li>'Framing' - 表示该材料成分应用于窗扇，如果未提供，则 'Lining' 材料信息也应用于窗扇</li>
-<li>'Glazing' - 表示该材料成分应用于玻璃部分</li>
+<li>'窗框' - 表示材料成分适用于窗框</li>
+<li>'窗扇' - 表示材料成分适用于窗扇，如果未提供，则"窗框"材料信息也适用于窗扇</li>
+<li>'玻璃' - 表示材料成分适用于玻璃部分</li>
 </ul>
-<p>如果引用了回退的单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em>，则它应用于窗的框和扇。</p>
+<p>如果引用回退的单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em>，则它适用于窗的窗框和窗扇。</p>
 <p>几何使用定义：</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 可以定义窗实例的通用形状。通用形状可以通过应用 <em>RepresentationMaps</em> 属性来定义，该属性引用一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 列表，允许存在多个几何表示（例如，具有 'Box'、'Profile'、'FootPrint' 或 'Body' 等 <em>RepresentationIdentifier</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>）。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 可以定义窗实例的通用形状。通用形状可以通过应用 <em>RepresentationMaps</em> 属性来引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 列表来定义，该列表允许多种几何表示（例如，具有 <em>RepresentationIdentifier</em> 'Box'、'Profile'、'FootPrint' 或 'Body' 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>）</p>
 <blockquote>
 <blockquote>
-<p>注意 产品形状表示被定义为 <em>RepresentationMaps</em>（超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a></em> 的属性），它们通过元素实例的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.Item[n]</em>（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em>）进行分配。更多信息请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a></em>。</p>
-<p>注意 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的属性 <em>RepresentationIdentifier</em> 和 <em>RepresentationType</em> 的值受到与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindow.htm">IfcWindow</a></em> 相同的限制。</p>
+<p>注意 产品形状表示被定义为 <em>RepresentationMaps</em>（超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a></em> 的属性），通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.Item[n]</em> 作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 由元素实例分配。有关更多信息，请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a></em>。</p>
+<p>注意 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的属性 <em>RepresentationIdentifier</em> 和 <em>RepresentationType</em> 的值以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindow.htm">IfcWindow</a></em> 相同的方式受到限制。</p>
 </blockquote>
 </blockquote>
 <h2><a class="anchor" id="6.1.3.45.2-Entity-inheritance-"></a>
@@ -275,7 +276,7 @@
     6.1.3.45.3 特性（Attributes）
 <a class="link" href="#6.1.3.45.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-d1f89451-5f4b-40d0-a720-e629655ed01d"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-e1c8ba1d-5bb8-474e-b807-098867bd043d"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -297,10 +298,134 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>在整个软件世界中分配全局唯一标识符。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可选的描述，用于提供信息性注释。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>
 <small>(7)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssignments</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssigns.htm">IfcRelAssigns</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>引用分配（通过关联关系）其他 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 子类型到此对象实例的关系对象。例如，与产品、过程、控制、资源或组的关联。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Nests</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的一部分。对象实例或类型只能是单个分解的一部分（仅允许分层结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>Decomposes</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsNestedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>IsDecomposedBy</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>引用提供上下文信息的上下文，例如项目单位或表示上下文。它只应断言在最上层的非空间对象上。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDecomposedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Decomposes</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的一部分。对象定义只能是单个分解的一部分（仅允许分层结构）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>引用将外部资源或资源定义与对象关联的关系对象。例如，与库、文档或分类的关联。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -309,16 +434,104 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ApplicableOccurrence
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>此特性可选地定义了实例对象的数据类型，类型对象可以关联到该实例对象。如果不存在，则不对类型对象适用于哪个实例对象给出任何限制。使用以下约定：</p>
+<ul>
+<li>使用 IFC 命名约定（驼峰式命名，带有“Ifc”前缀）的适用实例对象的 IFC 实体名称。</li>
+<li>可选地在“/”（正斜杠）之后，以大写形式跟上预定义类型。</li>
+<li>如果一个类型对象适用于多个实例对象，则这些实例对象名称应以逗号“,”分隔，形成一个逗号分隔的字符串。</li>
+</ul>
+<aside class="aside-example"><mark>示例</mark> Referring to a furniture as applicable occurrence entity would be expressed as '<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFurnishingElement.htm">IfcFurnishingElement</a>', referring to a brace as applicable entity would be expressed as '<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMember.htm">IfcMember</a>/BRACE'.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                HasPropertySets
+                
+            </td>
+<td data-label="Type">OPTIONAL SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></td>
+<td data-label="Description">
+<p>与对象类型关联的、并且是引用此对象类型的全部实例对象共有的属性集集合。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> The attribute aggregate type has been changed from LIST to SET.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Types</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a> FOR RelatingType</td>
+<td data-label="Description">
+<p>指向关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 的引用，从而指向由该类型定义的那些实例对象。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a>
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                RepresentationMaps
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF UNIQUE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></td>
+<td data-label="Description">
+<p>唯一的表示映射列表。每个表示映射描述了产品样式的形状块定义。通过提供多个表示映射，可以给出多视图块定义。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Tag
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>产品特定类型上的标签（或标识）标识符，例如货号（如 EAN）。这是特定层级的标识符。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ReferencedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
+<td data-label="Description">
+<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 关系的引用，通过该关系，其他产品、进程、控制、资源或参与者（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的子类型）可以与此产品类型相关联。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship.</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                ElementType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>类型表示特定的类型，该类型进一步指示对象。其使用必须在可实例化的子类型级别上建立。特别是，如果“PredefinedType”属性枚举设置为 USERDEFINED，则它包含用户定义的类型。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -339,12 +552,60 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                PredefinedType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypeEnum.htm">IfcWindowTypeEnum</a></td>
+<td data-label="Description">
+<p>标识窗元素的预定义类型，可以从中设置所需的类型。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                PartitioningType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></td>
+<td data-label="Description">
+<p>根据窗扇划分定义窗类型总体布局的类型。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">12</td>
+<td data-label="Name">
+                
+                ParameterTakesPrecedence
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>布尔值反映附加窗框和窗扇属性中给定的参数是否精确定义几何形状（TRUE），或者附加样式形状是否优先（FALSE）。在后一种情况下，参数仅具有参考价值。如果未提供，则无法推断此类信息。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">13</td>
+<td data-label="Name">
+                
+                UserDefinedPartitioningType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用户定义划分类型的标识符，仅当 <em>PartitioningType</em> 设置为 USERDEFINED 时才应提供。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 6.1.3.45.C<a class="link" href="#-d1f89451-5f4b-40d0-a720-e629655ed01d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.45.C<a class="link" href="#-e1c8ba1d-5bb8-474e-b807-098867bd043d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.45.4-Formal-propositions-"></a>
     6.1.3.45.4 形式化命题（Formal propositions）
 <a class="link" href="#6.1.3.45.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d0242223-30cf-44a0-b8c2-2fc3086ad2dc"></a><table>
+<figure><a class="anchor" id="-46e44062-245f-4d1f-9fc6-72abb25e72f5"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -355,7 +616,7 @@
 <tr>
 <td>CorrectPredefinedType</td>
 <td>
-<p>如果 <em>PredefinedType</em> 设置为 USERDEFINED，则必须提供继承的属性 <em>ElementType</em>。</p>
+<p>如果 <em>PredefinedType</em> 设置为 USERDEFINED，则应提供继承的属性 <em>ElementType</em>。</p>
 </td>
 </tr>
 <tr>
@@ -365,7 +626,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.3.45.D<a class="link" href="#-d0242223-30cf-44a0-b8c2-2fc3086ad2dc"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.45.D<a class="link" href="#-46e44062-245f-4d1f-9fc6-72abb25e72f5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.45.5-"></a>
     6.1.3.45.5 属性集
 <a class="link" href="#6.1.3.45.5-"><i data-feather="link"></i></a></h2>
@@ -685,7 +946,7 @@
 </p><h2><a class="anchor" id="6.1.3.45.6-Concept-usage-"></a>
     6.1.3.45.6 概念用法（Concept usage）
 <a class="link" href="#6.1.3.45.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-51c894c5-d40f-4ebb-89a4-09193e44413b"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-c75480b7-c690-4c6f-b476-44f304989eaf"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -1399,6 +1660,19 @@
 </tr>
 <tr>
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Type_Attributes/Window_Type_Attributes/content.html">Window Type Attributes</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
@@ -1519,21 +1793,8 @@
 <p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
-<tr>
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Type_Attributes/Window_Type_Attributes/content.html">Window Type Attributes</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 6.1.3.45.E<a class="link" href="#-51c894c5-d40f-4ebb-89a4-09193e44413b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.45.E<a class="link" href="#-c75480b7-c690-4c6f-b476-44f304989eaf"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.45.7-Formal-representation-"></a>
     6.1.3.45.7 形式化表示（Formal representation）
 <a class="link" href="#6.1.3.45.7-Formal-representation-"><i data-feather="link"></i></a></h2>

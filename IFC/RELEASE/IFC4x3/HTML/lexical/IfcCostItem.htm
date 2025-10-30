@@ -149,11 +149,12 @@
 <h2><a class="anchor" id="6.5.3.2.1-Semantic-definition-"></a>
     6.5.3.2.1 语义定义（Semantic definition）
 <a class="link" href="#6.5.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 描述了成本或财务价值以及描述其上下文的描述性信息，以便能够将其用于成本计划。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 可用于表示商品和服务的成本、通过流程执行的工作成本、生命周期成本等。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a>（成本项）</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 描述成本或财务价值以及描述性信息，以使其能够在成本计划中使用的形式描述其上下文。 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 可用于表示商品和服务的成本、通过过程执行工作的成本、生命周期成本等。</p>
 <!-- end of short definition -->
-<p>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 实例都可以有一个名称和描述。根据成本的预期用途，这些值应基于协议确定。例如，<em>Name</em> 属性可用于提供一个通用值，以便将不同的实例组合在嵌套安排中（如下所述），而 Description 属性可用于提供成本计划中项目描述的文本。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 可以链接一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em>，这些 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 表示单位成本、总成本，或带有用于生成总成本的一个或多个数量的单位成本。数量可以作为单独的数量提供，或者这些数量由一个或多个建筑构件作为构件数量提供。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em> 属性指示成本的类别，该类别可用于在特定列中显示该值。对于嵌套的成本项（具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a></em> 关系），<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em> 很重要，这样 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.AppliedValue</em> 将计算为具有相同 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.Category</em> 的所有嵌套成本的总和，或者如果设置为星号 ('*')，则为所有成本类型的嵌套成本的总和。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 可以表示原始值或由公式得出的值。例如，税款可以按总计的百分比计算。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2.0.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Attribute <em>PredefinedType</em>, <em>CostValues</em>, and <em>CostQuantities</em> added.</aside>
+<p>每个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 实例可能具有名称和描述。根据成本预期用途，这些值应基于协议断言。例如，_名称_属性可用于提供使不同实例能够在嵌套安排中组合在一起的公共值（见下文），而描述属性可用于提供成本计划中用于项描述的文本。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a></em> 可以链接一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em>，表示单位成本、总成本，或具有用于生成总成本的一个或多个数量的单位成本。数量可以作为单独数量给出，或者这些数量由一个或多个建筑构件作为构件数量提供。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.类别_属性指示成本类别，可用于在特定列中呈现值。对于嵌套成本项（具有 _<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a></em> 关系），<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.类别_很重要，使得_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.应用值_计算为所有具有相同_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.类别_的嵌套成本的总和，或者如果设置为星号（'*'），则所有成本类型的所有嵌套成本的总和。 _<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 可能表示原始值或从公式派生的值。例如，税费可能计算为小计的百分比。</p>
+<aside class="aside-history"><mark>沿革</mark> 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 变更 添加了属性_预定义类型_、<em>成本值_和_成本数量</em>。</aside>
 <h2><a class="anchor" id="6.5.3.2.2-Entity-inheritance-"></a>
     6.5.3.2.2 实体继承（Entity inheritance）
 <a class="link" href="#6.5.3.2.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -209,7 +210,7 @@
     6.5.3.2.3 特性（Attributes）
 <a class="link" href="#6.5.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-5472d5f1-4748-4a53-a6e7-a4af2378da9b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c639db11-bcaa-400d-8471-37dcf2984ecd"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -482,8 +483,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItemTypeEnum.htm">IfcCostItemTypeEnum</a></td>
 <td data-label="Description">
-<p>成本项的预定义通用类型，在枚举中指定。可能有一个专门为预定义类型提供的属性集。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
+<p>在枚举中指定的成本项的预定义通用类型。可能为预定义类型专门给出属性集。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 变更 已添加该属性。</aside>
 </td>
 </tr>
 <tr>
@@ -495,10 +496,10 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></td>
 <td data-label="Description">
-<p>用于计算成本项总成本的组成成本，然后乘以提供的总 <em>CostQuantities</em>。</p>
-<p>如果提供了 <em>CostQuantities</em>，则值表示单位成本；否则，值表示总成本。</p>
-<p>出于计算目的，成本值可以直接相加，除非它们有限定条件。具有限定条件的成本值（例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.ApplicableDate</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.FixedUntilDate</em>）如果不适用，则应从计算中排除。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
+<p>计算成本项总成本的组成部分成本，然后如果提供了总_成本数量_则乘以该数量。</p>
+<p>如果提供了_成本数量_，则值表示单位成本，否则值表示总成本。</p>
+<p>出于计算目的，除非成本值有限定条件，否则可以直接添加成本值。具有限定条件的成本值（例如_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.适用日期_、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a>.固定至日期</em>）如果不适用，则应从此类计算中排除。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 变更 已添加该属性。</aside>
 </td>
 </tr>
 <tr>
@@ -510,16 +511,16 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></td>
 <td data-label="Description">
-<p>用于计算成本项总数量作为总和的相同类型的组成数量。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added.</aside>
+<p>相同类型的组成部分数量，计算成本项的总数量作为总和。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 变更 已添加该属性。</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.5.3.2.A<a class="link" href="#-5472d5f1-4748-4a53-a6e7-a4af2378da9b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.2.A<a class="link" href="#-c639db11-bcaa-400d-8471-37dcf2984ecd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.2.4-Concept-usage-"></a>
     6.5.3.2.4 概念用法（Concept usage）
 <a class="link" href="#6.5.3.2.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6270d83e-5641-4759-9b39-b8570a0cda70"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-8e3f98dc-1712-444f-acda-3272f5e26f52"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -1014,42 +1015,42 @@
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>
                         
                         
-                         - 用于基于产品实例、空间结构或其他物理构件的数量成本。
+                         - 基于产品出现、空间结构或其他物理构件的基于数量的成本。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcess.htm">IfcProcess</a>
                         
                         
-                         - 用于基于任务、流程或事件的数量成本。
+                         - 基于任务、程序或事件的基于数量的成本。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>
                         
                         
-                         - 用于基于资源分配的数量成本。
+                         - 基于资源分配的基于数量的成本。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a>
                         
                         
-                         - 用于基于产品模型的成本费率。
+                         - 基于产品模型的成本费率。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProcess.htm">IfcTypeProcess</a>
                         
                         
-                         - 用于基于历史或预测持续时间的流程模型的成本费率。
+                         - 基于历史或预计持续时间的流程模型的成本费率。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeResource.htm">IfcTypeResource</a>
                         
                         
-                         - 用于基于历史或预测生产力的资源模型的成本费率。
+                         - 基于历史或预计生产率的资源模型的成本费率。
                         
                     </li>
 </ul>
@@ -1063,8 +1064,8 @@
                 General
             </td>
 <td data-label="Description">
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a> 可以通过其与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> 的关系嵌套其他 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a> 实例。这可用于实现成本计划中发现的复杂成本组的开发，从页面、部分到完整的成本计划。</p>
-<p>总有一个汇总成本项作为成本项嵌套树的根项。后续的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostItem.htm">IfcCostItem</a> 实例使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> 分配给汇总成本项。汇总成本项本身通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a> 关系分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostSchedule.htm">IfcCostSchedule</a>。</p>
+<p>IfcCostItem可通过其与IfcRelNests的关系嵌套其他IfcCostItem实例。这可用于启用复杂成本组的开发，如成本计划中可能发现的，直至页面、部分和完整成本计划。</p>
+<p>始终有一个摘要成本项作为表示成本项嵌套的树的根项。后续IfcCostItem实例使用IfcRelNests分配给摘要成本项。摘要成本项本身通过IfcRelAssignsToControl关系分配给IfcCostSchedule。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -1159,7 +1160,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.5.3.2.B<a class="link" href="#-6270d83e-5641-4759-9b39-b8570a0cda70"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.5.3.2.B<a class="link" href="#-8e3f98dc-1712-444f-acda-3272f5e26f52"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.5.3.2.5-Formal-representation-"></a>
     6.5.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#6.5.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>

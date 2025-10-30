@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.6.4.10 Pset_Stationing（定站） - IFC 4.3.2 Documentation</title>
+<title>6.6.4.10 Pset_Stationing - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -144,12 +144,13 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.6.4.10 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Stationing.htm">Pset_Stationing</a>（定站）</h1>
+<h1>6.6.4.10 Pset_Stationing</h1>
 <h2><a class="anchor" id="6.6.4.10.1-Semantic-definition-"></a>
     6.6.4.10.1 语义定义（Semantic definition）
 <a class="link" href="#6.6.4.10.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>指定 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a></em> 的定站参数。</p>
-<!-- 简短定义结束 -->
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Stationing.htm">Pset_Stationing</a>（定站）</p>
+<p>为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a></em> 指定桩号参数。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="6.6.4.10.2-"></a>
     6.6.4.10.2 适用实体
 <a class="link" href="#6.6.4.10.2-"><i data-feather="link"></i></a></h2>
@@ -163,7 +164,7 @@
 <h2><a class="anchor" id="6.6.4.10.3-"></a>
     6.6.4.10.3 属性
 <a class="link" href="#6.6.4.10.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-dc90006c-a841-493c-83c1-177b28dba753"></a><table>
+<figure><a class="anchor" id="-ce969805-2e97-423e-9901-d0feb6c653b4"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -179,7 +180,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>结束于此位置的进站段的可选站点值。如需指定站点方程（即站点编号发生变化的位置），则需设置此值。</p>
+<p>在此位置结束的传入区段的可选桩号值。如果意图是指定桩号方程，即桩号发生变化的位置，则需要设置此值。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IncomingStation.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -188,7 +189,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>该位置的车站值。</p>
+<p>Station（车站）</p>
+<p>此位置的站点值。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Station.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -197,14 +199,14 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>用于指示给定线形中嵌套参照物的里程值是递增还是递减。</p>
-<p>如果存在且为真，或者不存在，则相关后续嵌套参照物应具有更大的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Stationing.htm">Pset_Stationing</a>.Station</em> 值（即递增里程）。</p>
-<p>如果存在且为假，则相关后续嵌套参照物应具有更小的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Stationing.htm">Pset_Stationing</a>.Station</em> 值（即递减里程）。</p>
+<p>告知给定路线中嵌套的参照点的里程值递增或递减进度。</p>
+<p>如果存在且为true，或不存在，则相关的后续嵌套参照点预计具有更大的_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Stationing.htm">Pset_Stationing</a>.Station_值(即递增里程)。</p>
+<p>如果存在且为false，则相关的后续嵌套参照点预计具有更低的_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Stationing.htm">Pset_Stationing</a>.Station_值(即递减里程)。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/HasIncreasingStation.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 6.6.4.10.A<a class="link" href="#-dc90006c-a841-493c-83c1-177b28dba753"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.6.4.10.A<a class="link" href="#-ce969805-2e97-423e-9901-d0feb6c653b4"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">

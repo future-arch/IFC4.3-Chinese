@@ -149,17 +149,18 @@
 <h2><a class="anchor" id="6.2.3.4.1-Semantic-definition-"></a>
     6.2.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#6.2.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>配水控制构件 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 定义了用于控制配水系统构件的楼宇自控系统（BAS）的实例构件。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a>（配电控制构件）</p>
+<p>分布控制元素 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 定义了建筑自动化控制系统中用于对分布系统元素实施控制的实例元素。</p>
 <!-- end of short definition -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 定义了楼宇自控系统的构件。这些构件通常用于控制配水系统中的构件，通过调节、分级或排序机电设备来维持温度、湿度、压力、流量、功率或照明水平等变量。控制构件的三个通用功能类别如下：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 定义了建筑自动化控制系统的元素。这些元素通常用于通过机械或电气设备的调节、分级或排序来控制分布系统元素，以维持温度、湿度、压力、流量、功率或照明水平等变量。控制元素的三个通用功能类别如下：</p>
 <ul>
-<li>控制配水系统中的流量控制构件（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowController.htm">IfcFlowController</a></em>），如阀门、风阀或继电器，通常通过执行器（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActuator.htm">IfcActuator</a></em>）实现。</li>
-<li>传感构件（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSensor.htm">IfcSensor</a></em>），用于测量被控变量（如温度、湿度、压力或流量）的变化。</li>
-<li>控制器（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcController.htm">IfcController</a></em>），通常根据其试图执行的控制动作进行分类，并负责做出关于被控构件的决策。</li>
+<li>对分布系统中的流量控制元素（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowController.htm">IfcFlowController</a></em>）实施控制，例如风门、阀门或继电器，通常通过执行器（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActuator.htm">IfcActuator</a></em>）实现。</li>
+<li>传感元素（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSensor.htm">IfcSensor</a></em>）测量受控变量（如温度、湿度、压力或流量）的变化。</li>
+<li>控制器（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcController.htm">IfcController</a></em>）通常按其执行的控制动作分类，并负责对受控元素做出决策。</li>
 </ul>
-<p>由于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 及其子类型通常与许多不同的配水流构件（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em>）相关联，因此提供了对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></em> 来根据需要关联控制和流构件。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 之间的关键区别在于它们是位于流系统内部还是外部。例如，流量计（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em> 的子类型，测量流量）和流量仪表（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 的子类型，测量流量质量）之间的区别基于此原则。一个物理设备，如果它连接到其测量的流系统内部（具有被测物质的进出口管道），则遵循 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em> 层级（因此是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowMeter.htm">IfcFlowMeter</a></em>，它在内部测量流量）。否则，如果它进行监控/控制但不内联连接到流系统（它位于外部或是一个其他设备的组件），则遵循 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 层级（因此是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowInstrument.htm">IfcFlowInstrument</a></em>，它可以显示通过连接传感器获得的各种属性）。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2.0.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Attribute <em>ControlElementId</em> attribute deleted; replaced by classification usage. Ports are now primarily defined using <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a></em> to enable definition of ports at type definitions (both forward and backward compatible), provide a logical order, and reduce the number of relationship objects needed. The relationship <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></em> is still supported, however is now specific to dynamically connected ports.</aside>
+<p>由于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 及其子类型通常与许多不同的分布流元素（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em>）相关，因此提供了对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></em> 来按需关联控制和流元素。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 的关键区别在于它们分别位于流系统的内部或外部。例如， <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowMeter.htm">IfcFlowMeter</a></em>（测量流量的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em> 子类型）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowInstrument.htm">IfcFlowInstrument</a></em>（测量流质的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 子类型）之间的区别即基于此原则。在流系统内部连接并测量（具有被测物质的入口/出口管道）的物理设备遵循 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionFlowElement.htm">IfcDistributionFlowElement</a></em> 层次结构（因此 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowMeter.htm">IfcFlowMeter</a></em> 在内部测量流量）。否则，如果它监视/控制但不内联连接到流系统中（它是外部的或是另一设备的组件），则遵循 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></em> 层次结构（因此 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowInstrument.htm">IfcFlowInstrument</a></em> 可能通过连接的传感器显示各种属性）。</p>
+<aside class="aside-history"><mark>沿革</mark> IFC2.0中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 变更 删除了 <em>ControlElementId</em> 属性；由分类用法替代。端口现在主要使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a></em> 定义，以支持在类型定义中定义端口（向前和向后兼容），提供逻辑顺序，并减少所需的关系对象数量。关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></em> 仍受支持，但现在特定于动态连接的端口。</aside>
 <h2><a class="anchor" id="6.2.3.4.2-Entity-inheritance-"></a>
     6.2.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#6.2.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -250,7 +251,7 @@
     6.2.3.4.3 特性（Attributes）
 <a class="link" href="#6.2.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-dda24ce2-52f7-487b-93dc-e7e9e8f7391c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-90949bcb-9400-4d95-be6d-84ac15ee76c6"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -706,11 +707,11 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a> FOR RelatedControlElements</td>
 <td data-label="Description">
-<p>通过关系对象引用相关的配水流构件。</p>
+<p>通过关系对象引用相关的分布流元素。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.2.3.4.A<a class="link" href="#-dda24ce2-52f7-487b-93dc-e7e9e8f7391c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.2.3.4.A<a class="link" href="#-90949bcb-9400-4d95-be6d-84ac15ee76c6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.2.3.4.4-"></a>
     6.2.3.4.4 属性集
 <a class="link" href="#6.2.3.4.4-"><i data-feather="link"></i></a></h2>
@@ -1036,7 +1037,7 @@
 </p><h2><a class="anchor" id="6.2.3.4.5-Concept-usage-"></a>
     6.2.3.4.5 概念用法（Concept usage）
 <a class="link" href="#6.2.3.4.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c574c1bb-469a-47a2-900b-d25c8d182e2d"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-ced72dcd-42e8-4827-a1ff-37dbcb42983a"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -2811,7 +2812,7 @@
 <td data-label="Description">
 <p><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionControlElement.htm">IfcDistributionControlElement</a></strong> 可通过指示的关系分配给以下实体：</p>
 <ul>
-<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystem.htm">IfcDistributionSystem</a> (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>)：指示包含互连设备的系统，其中控制构件通常是预定义类型为 CONTROL 的控制系统的一部分。</li>
+<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystem.htm">IfcDistributionSystem</a> (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>)：指示包含互连设备的系统，其中控制元素通常是具有 <em>PredefinedType=CONTROL</em> 的控制系统的一部分。</li>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a> (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>)：指示为设备捕获的实时或历史信息。</li>
 </ul>
 <p>此概念可应用于以下资源</p>
@@ -2820,21 +2821,21 @@
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm">IfcTask</a>
                         
                         
-                         - 指示用于购买、安装、翻新、拆除、操作或以其他方式处理该构件的任务。如果该构件有类型，则可用的任务类型将分配给该构件类型。
+                         - 指示用于购买、安装、翻新、拆除、操作或以其他方式作用于元素的任务。如果元素有类型，可用任务类型将分配给元素类型。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcedure.htm">IfcProcedure</a>
                         
                         
-                         - 指示用于操作该构件的过程。如果该构件有类型，则可用的过程类型将分配给该构件类型。
+                         - 指示用于操作元素的程序。如果元素有类型，可用程序类型将分配给元素类型。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEvent.htm">IfcEvent</a>
                         
                         
-                         - 指示由该构件处理的事件，并按要遵循的过程排序。如果该构件有类型，则可用的事件类型将分配给该构件类型。
+                         - 指示由元素处理的事件，按要遵循的程序排序。如果元素有类型，可用事件类型将分配给元素类型。
                         
                     </li>
 </ul>
@@ -3127,7 +3128,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.2.3.4.D<a class="link" href="#-c574c1bb-469a-47a2-900b-d25c8d182e2d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.2.3.4.D<a class="link" href="#-ced72dcd-42e8-4827-a1ff-37dbcb42983a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.2.3.4.6-Formal-representation-"></a>
     6.2.3.4.6 形式化表示（Formal representation）
 <a class="link" href="#6.2.3.4.6-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -149,10 +149,11 @@
 <h2><a class="anchor" id="6.3.3.1.1-Semantic-definition-"></a>
     6.3.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#6.3.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPart.htm">IfcBuildingElementPart</a></em> 表示作为建筑构件的从属部分的重大组件。典型的用法示例包括预制混凝土夹心墙，其中各层可能具有不同的几何表示。在这种情况下，分层材料表示不足以描述构件。每一层都由一个独立的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPart.htm">IfcBuildingElementPart</a></em> 实例表示，并具有自己的几何描述。</p>
-<!-- end of short definition -->
-<p>建筑构件部分的类型通过相应的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPartType.htm">IfcBuildingElementPartType</a></em> 实例进一步指定，并通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 引用。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Moved from <em>IfcStructuralElementsDomain</em> schema to <em>IfcSharedComponentElements</em> schema, compatible change of supertype, attribute <em>PredefinedType</em> added.</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPart.htm">IfcBuildingElementPart</a>（建筑构件部件）</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPart.htm">IfcBuildingElementPart</a></em> 表示作为建筑元素从属部件的主要组件。典型使用示例包括预制混凝土夹心墙，其中各层可能具有不同的几何表示。在这种情况下，分层材料表示不足以描述元素。每个层由具有自身几何描述的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPart.htm">IfcBuildingElementPart</a></em> 的单独实例表示。</p>
+<!-- 简短定义结束 -->
+<p>建筑元素部件的种类通过相应的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPartType.htm">IfcBuildingElementPartType</a></em> 实例进一步指定，由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 引用。</p>
+<aside class="aside-history"><mark>沿革</mark> x2中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 变更 从 <em>IfcStructuralElementsDomain</em> 模式移动到 <em>IfcSharedComponentElements</em> 模式，超类型的兼容变更，添加了 <em>PredefinedType</em> 属性。</aside>
 <h2><a class="anchor" id="6.3.3.1.2-Entity-inheritance-"></a>
     6.3.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#6.3.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -238,7 +239,7 @@
     6.3.3.1.3 特性（Attributes）
 <a class="link" href="#6.3.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-34810ee8-80dd-4633-8c55-e3e7d3fca85b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-761ee2d4-a34c-4485-926f-042897585a0b"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -679,15 +680,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPartTypeEnum.htm">IfcBuildingElementPartTypeEnum</a></td>
 <td data-label="Description">
-<p>建筑构件部分的子类型</p>
+<p>建筑元素部件的子类型</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.3.3.1.A<a class="link" href="#-34810ee8-80dd-4633-8c55-e3e7d3fca85b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.3.3.1.A<a class="link" href="#-761ee2d4-a34c-4485-926f-042897585a0b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.3.3.1.4-Formal-propositions-"></a>
     6.3.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#6.3.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7a4f5af7-e4ac-4f95-8bb5-fb444cb8324f"></a><table>
+<figure><a class="anchor" id="-42c534e6-7531-4495-8b8b-0012bd237aa2"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -698,7 +699,7 @@
 <tr>
 <td>CorrectPredefinedType</td>
 <td>
-<p>如果 <em>PredefinedType</em> 属性未设置（例如，因为关联了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPartType.htm">IfcBuildingElementPartType</a></em>），或者如果 <em>PredefinedType</em> 设置为 USERDEFINED，则应提供继承的 <em>ObjectType</em> 属性。</p>
+<p>要么 <em>PredefinedType</em> 属性未设置（例如因为关联了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingElementPartType.htm">IfcBuildingElementPartType</a></em>），要么如果 <em>PredefinedType</em> 设置为 USERDEFINED，则应提供继承的属性 <em>ObjectType</em>。</p>
 </td>
 </tr>
 <tr>
@@ -721,7 +722,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.3.3.1.D<a class="link" href="#-7a4f5af7-e4ac-4f95-8bb5-fb444cb8324f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.3.3.1.D<a class="link" href="#-42c534e6-7531-4495-8b8b-0012bd237aa2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.3.3.1.5-"></a>
     6.3.3.1.5 属性集
 <a class="link" href="#6.3.3.1.5-"><i data-feather="link"></i></a></h2>
@@ -1008,7 +1009,7 @@
 </p><h2><a class="anchor" id="6.3.3.1.6-Concept-usage-"></a>
     6.3.3.1.6 概念用法（Concept usage）
 <a class="link" href="#6.3.3.1.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-a69ecd44-47ad-4d2d-a1a2-cfd4e3940aae"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-6122af34-f83e-4c85-b3ce-8463347ec25f"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -3036,7 +3037,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.3.3.1.E<a class="link" href="#-a69ecd44-47ad-4d2d-a1a2-cfd4e3940aae"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.3.3.1.E<a class="link" href="#-6122af34-f83e-4c85-b3ce-8463347ec25f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.3.3.1.7-Formal-representation-"></a>
     6.3.3.1.7 形式化表示（Formal representation）
 <a class="link" href="#6.3.3.1.7-Formal-representation-"><i data-feather="link"></i></a></h2>

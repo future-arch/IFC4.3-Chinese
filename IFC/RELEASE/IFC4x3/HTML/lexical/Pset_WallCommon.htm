@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.1.4.23 Pset_WallCommon（墙通用） - IFC 4.3.2 Documentation</title>
+<title>6.1.4.23 Pset_WallCommon - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -144,18 +144,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.1.4.23 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WallCommon.htm">Pset_WallCommon</a>（墙通用）</h1>
+<h1>6.1.4.23 Pset_WallCommon</h1>
 <h2><a class="anchor" id="6.1.4.23.1-Semantic-definition-"></a>
     6.1.4.23.1 语义定义（Semantic definition）
 <a class="link" href="#6.1.4.23.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>定义所有 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a> 实例的通用属性。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a> 的所有实例定义的通用特性。</p>
 <!-- end of short definition -->
 <h2><a class="anchor" id="6.1.4.23.2-"></a>
     6.1.4.23.2 适用实体
 <a class="link" href="#6.1.4.23.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 的子类型处被同名属性集覆盖。
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a></li>
@@ -164,7 +164,7 @@
 <h2><a class="anchor" id="6.1.4.23.3-"></a>
     6.1.4.23.3 属性
 <a class="link" href="#6.1.4.23.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-3f4ad313-6507-4173-a235-b88bc7c2aa53"></a><table>
+<figure><a class="anchor" id="-5c5b011e-20ef-49d3-a237-09d496013e61"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -180,8 +180,10 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td>
-<p>此项目中指定类型的基准ID（例如类型"A-1"），也称为"构造类型"。如果软件不支持对象类型且未使用已认可分类系统的分类基准，则应作为"对象类型"名称的替代方案提供。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> Reference属性已被弃用，不应再使用，请改用相关类型上的_Name_属性。</aside>
+<p>此项目中此指定类型的参考ID（例如类型'A-1'），也称为"构造类型"。如果软件不支持对象类型且未使用公认分类系统的分类参考，则应作为"对象类型"名称的替代提供。</p>
+<blockquote>
+<p>IFC4.3.0.0 弃用说明 Reference属性已弃用，不应再使用，请改用相关类型上的_Name_属性。</p>
+</blockquote>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Reference.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -190,7 +192,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ElementStatus.htm">PEnum_ElementStatus</a></td>
 <td>
-<p>构件的状态，主要用于改造或翻新项目。状态可指定为"New"（新建）- 设计为新增构件，"Existing"（现有）- 构件已存在且保留，"Demolish"（拆除）- 构件已存在但将被拆除，"Temporary"（临时）- 构件仅临时存在（如临时支撑结构）。</p>
+<p>Status（状态）</p>
+<p>构件的状态，主要用于翻新或改造项目。状态可指定为“新建”（New）- 作为新增设计的构件，“现有”（Existing）- 构件存在并保留，“拆除”（Demolish）- 构件已存在但将被拆除，“临时”（Temporary）- 构件仅临时存在（如临时支撑结构）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Status.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -199,8 +202,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>该对象的声学评级。<br/>
-根据国家建筑规范提供，通过指数比率表示该对象的隔声性能（而非提供完整的吸声值）。</p>
+<p>此对象的声学评级。
+根据国家建筑规范提供。通过指数比表示此对象的声传输阻力（而不是提供完整的吸声值）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/AcousticRating.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -209,7 +212,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>该对象的防火等级。根据国家消防安全分类标准给出。</p>
+<p>此对象的防火等级。根据国家消防安全分类给出。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/FireRating.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -218,7 +221,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示该物体是否由可燃材料制成（TRUE 表示是，FALSE 表示否）。</p>
+<p>指示对象是否由可燃材料制成（TRUE）或不是（FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Combustible.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -227,8 +230,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>关于火焰在表面周围蔓延情况的指示，
-根据规范材料防火性能的国家建筑规范给出。</p>
+<p>火焰在表面蔓延情况的指示，
+根据管辖材料防火性能的国家建筑规范给出。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SurfaceSpreadOfFlame.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -237,7 +240,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThermalTransmittanceMeasure.htm">IfcThermalTransmittanceMeasure</a></td>
 <td>
-<p>构件在热流方向上的热传导系数（U值）（包含所有材料）。</p>
+<p>构件在热流方向上的传热系数（U值）（包括所有材料）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ThermalTransmittance.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -246,7 +249,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示该构件是否设计用于外部（TRUE）或非外部（FALSE）。若为（TRUE）则表示该构件为外部构件，面向建筑外侧。</p>
+<p>指示元素是否设计用于外部（TRUE）或不是（FALSE）。如果（TRUE），它是外部元素并面向建筑物外部。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsExternal.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -255,7 +258,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>表示对象是否用于承载荷载（TRUE）或不承载荷载（FALSE）。</p>
+<p>指示对象是否用于承载荷载（TRUE）或不承载（FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/LoadBearing.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -264,7 +267,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>表示该对象是否延伸至上方结构（TRUE 表示是，FALSE 表示否）。</p>
+<p>指示对象是否延伸到上方结构（TRUE）或不延伸（FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ExtendToStructure.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -273,12 +276,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示对象是否设计用作防火分区隔离（TRUE）或非防火分区隔离（FALSE）。</p>
+<p>指示对象是否设计用作防火分隔（TRUE）或不是（FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Compartmentation.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.4.23.A<a class="link" href="#-3f4ad313-6507-4173-a235-b88bc7c2aa53"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.4.23.A<a class="link" href="#-5c5b011e-20ef-49d3-a237-09d496013e61"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">

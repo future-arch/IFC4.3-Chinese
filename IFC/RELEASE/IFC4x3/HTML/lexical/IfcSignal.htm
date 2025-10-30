@@ -149,12 +149,13 @@
 <h2><a class="anchor" id="6.6.3.17.1-Semantic-definition-"></a>
     6.6.3.17.1 语义定义（Semantic definition）
 <a class="link" href="#6.6.3.17.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>信号是一种主动设备，通过音频、视觉信号或两者的组合向用户传达信息或指示。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignal.htm">IfcSignal</a>（信号）</p>
+<p>信号是一种主动设备，通过音频、视觉信号或两者组合向用户传递信息或指令。</p>
 <!-- end of short definition -->
 <p>与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSign.htm">IfcSign</a></em> 的主要区别在于信号是主动的，因此是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowTerminal.htm">IfcFlowTerminal</a></em> 的子类型，通常需要电源和数据连接才能运行。
-<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignal.htm">IfcSignal</a></em> 的实例代表一个较大的组件单元或连接系统中的单个信号设备，例如铁路信号中的单个框架、交通信号系统中的单个灯光单元，或安装在导航浮标上的音频信号或灯光。
-信号可以物理地聚合到组件中，该组件可以包含多个信号实例（以及标志实例）和相关的支撑结构元素，例如简单的杆或刚性框架龙门架（请参阅信号组件以获取示例）。
-信号可以逻辑上（功能上）分组到一个信号系统中（一种配电系统），以表示一组连接的信号，例如控制交叉路口的交通信号灯组。</p>
+<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignal.htm">IfcSignal</a></em> 的实例代表较大组装单元或连接系统中的单个信号设备，例如铁路信号中的单个框架、交通灯系统中的单个灯光单元或安装在导航浮标上的音频信号或灯光。
+信号可物理聚合到组件中，该组件可包括多个信号实例（以及标志实例）和相关的支撑结构元素，例如简单杆或刚性框架门架（参见信号组件示例）。
+信号可逻辑（功能）分组到信号系统（一种分布系统）中，以表示连接的信号组，例如控制道路交叉口的一组交通灯。</p>
 <h2><a class="anchor" id="6.6.3.17.2-Entity-inheritance-"></a>
     6.6.3.17.2 实体继承（Entity inheritance）
 <a class="link" href="#6.6.3.17.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -268,7 +269,7 @@
     6.6.3.17.3 特性（Attributes）
 <a class="link" href="#6.6.3.17.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c4ad6ea9-5b79-4965-9507-1402787b3b57"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0bc8abd3-9eb3-41a9-a502-fbb54e057229"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -712,7 +713,7 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a> FOR RelatingFlowElement</td>
 <td data-label="Description">
-<p>引用关联控制构件的关系对象。</p>
+<p>引用关联控制元素的关系对象。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -742,16 +743,16 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignalTypeEnum.htm">IfcSignalTypeEnum</a></td>
 <td data-label="Description">
-<p>标识信号的预定义类型。此类型可能关联额外的特定属性集。
-注释：仅当未分配 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignalType.htm">IfcSignalType</a></em> 时才使用 PredefinedType，后者提供其自身的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignType.htm">IfcSignType</a> .PredefinedType。</p>
+<p>标识信号的预定义类型。此类型可关联额外的特定属性集。
+注意 仅当未分配<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignalType.htm">IfcSignalType</a>（提供其自己的<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignType.htm">IfcSignType</a>.PredefinedType）时，才应使用PredefinedType。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.6.3.17.B<a class="link" href="#-c4ad6ea9-5b79-4965-9507-1402787b3b57"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.6.3.17.B<a class="link" href="#-0bc8abd3-9eb3-41a9-a502-fbb54e057229"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.6.3.17.4-Formal-propositions-"></a>
     6.6.3.17.4 形式化命题（Formal propositions）
 <a class="link" href="#6.6.3.17.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-12c5d081-2d9a-4f27-975c-67778aae4244"></a><table>
+<figure><a class="anchor" id="-6cbf0b0b-4534-4414-bbd5-5077680138d7"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -762,7 +763,7 @@
 <tr>
 <td>CorrectPredefinedType</td>
 <td>
-<p>如果 <em>PredefinedType</em> 属性设置为 USERDEFINED，则 <em>PredefinedType</em> 属性必须未设置（例如，因为关联了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignalType.htm">IfcSignalType</a></em>），或者必须提供继承的 <em>ObjectType</em> 属性。</p>
+<p>要么 <em>PredefinedType</em> 属性未设置（例如因为关联了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignalType.htm">IfcSignalType</a></em>），要么如果 <em>PredefinedType</em> 设置为USERDEFINED，则应提供继承的属性 <em>ObjectType</em>。</p>
 </td>
 </tr>
 <tr>
@@ -775,7 +776,7 @@
 <tr>
 <td>CorrectTypeAssigned</td>
 <td>
-<p>要么没有关联的类型对象，即未提供 <em>IsTypedBy</em> 逆向关系，要么关联的类型对象必须是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignalType.htm">IfcSignalType</a></em> 类型。</p>
+<p>要么没有关联的类型对象，即未提供 <em>IsTypedBy</em> 反向关系，要么关联的类型对象必须是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSignalType.htm">IfcSignalType</a></em> 类型。</p>
 </td>
 </tr>
 <tr>
@@ -785,7 +786,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.6.3.17.D<a class="link" href="#-12c5d081-2d9a-4f27-975c-67778aae4244"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.6.3.17.D<a class="link" href="#-6cbf0b0b-4534-4414-bbd5-5077680138d7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.6.3.17.5-"></a>
     6.6.3.17.5 属性集
 <a class="link" href="#6.6.3.17.5-"><i data-feather="link"></i></a></h2>
@@ -1198,7 +1199,7 @@
 </p><h2><a class="anchor" id="6.6.3.17.6-Concept-usage-"></a>
     6.6.3.17.6 概念用法（Concept usage）
 <a class="link" href="#6.6.3.17.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-fbff0617-c1a6-42bd-b818-2090cc0e76b7"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-74b4b6c2-abb5-442c-877d-7bdf8da48d01"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -2943,7 +2944,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>这表示具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> 为 'Curve3D' 且包含单个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a> 子类型（如 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a>）的构件的 3D 流动路径。对于包含定向端口（<em>FlowDirection</em> 为 SOURCE 或 SINK 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></em>）的构件，曲线的方向表示流动方向，其中 SINK 端口位于曲线的起点，SOURCE 端口位于曲线的终点。此表示最适用于流段（管道、风管、电缆），但也可用于其他构件以定义主要流动路径（如果适用）。</p>
+<p>这表示项目的3D流路，具有'Curve3D'的_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType_，并包含单个IfcBoundedCurve子类型，如<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a>、IfcTrimmedCurve或IfcCompositeCurve。对于包含定向端口（具有SOURCE或SINK流向的<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a>）的元素，曲线的方向表示流向，其中SINK端口位于曲线起点，SOURCE端口位于曲线终点。此表示最适用于流段（管道、风管、电缆），但也可用于其他元素以定义主要流路（如果适用）。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2954,7 +2955,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>这表示具有 RepresentationType 为 'Surface3D' 的构件的 3D 清扫体积。此类清扫区域表示不应与其他构件的“主体”表示相交的空间，但可能与其他构件的“清扫”表示相交。清扫空间可能用于安全、维护或其他目的。</p>
+<p>这表示项目的3D净空体积，具有'Surface3D'的RepresentationType。此类净空区域表示不应与其他元素的'Body'表示相交的空间，但可以与其他元素的'Clearance'表示相交。净空空间的具体用途可能用于安全、维护或其他目的。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -3309,7 +3310,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>这表示具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> 为 'Curve3D' 且包含单个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a> 子类型（如 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a>）的构件的 3D 流动路径。对于包含定向端口（<em>FlowDirection</em> 为 SOURCE 或 SINK 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></em>）的构件，曲线的方向表示流动方向，其中 SINK 端口位于曲线的起点，SOURCE 端口位于曲线的终点。此表示最适用于流段（管道、风管、电缆），但也可用于其他构件以定义主要流动路径（如果适用）。</p>
+<p>这表示项目的3D流路，具有'Curve3D'的_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType_，并包含单个IfcBoundedCurve子类型，如<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a>、IfcTrimmedCurve或IfcCompositeCurve。对于包含定向端口（具有SOURCE或SINK流向的<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a>）的元素，曲线的方向表示流向，其中SINK端口位于曲线起点，SOURCE端口位于曲线终点。此表示最适用于流段（管道、风管、电缆），但也可用于其他元素以定义主要流路（如果适用）。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -3474,7 +3475,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>这表示具有 RepresentationType 为 'Surface3D' 的构件的 3D 清扫体积。此类清扫区域表示不应与其他构件的“主体”表示相交的空间，但可能与其他构件的“清扫”表示相交。清扫空间可能用于安全、维护或其他目的。</p>
+<p>这表示项目的3D净空体积，具有'Surface3D'的RepresentationType。此类净空区域表示不应与其他元素的'Body'表示相交的空间，但可以与其他元素的'Clearance'表示相交。净空空间的具体用途可能用于安全、维护或其他目的。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -3693,7 +3694,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>这表示具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> 为 'Curve3D' 且包含单个 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a> 子类型（如 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a> 或 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurve.htm">IfcCompositeCurve</a>）的构件的 3D 流动路径。对于包含定向端口（<em>FlowDirection</em> 为 SOURCE 或 SINK 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></em>）的构件，曲线的方向表示流动方向，其中 SINK 端口位于曲线的起点，SOURCE 端口位于曲线的终点。此表示最适用于流段（管道、风管、电缆），但也可用于其他构件以定义主要流动路径（如果适用）。</p>
+<p>这表示项目的3D流路，具有'Curve3D'的_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType_，并包含单个IfcBoundedCurve子类型，如<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a>、IfcTrimmedCurve或IfcCompositeCurve。对于包含定向端口（具有SOURCE或SINK流向的<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a>）的元素，曲线的方向表示流向，其中SINK端口位于曲线起点，SOURCE端口位于曲线终点。此表示最适用于流段（管道、风管、电缆），但也可用于其他元素以定义主要流路（如果适用）。</p>
 </td>
 </tr>
 <tr>
@@ -3858,7 +3859,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>这表示具有 RepresentationType 为 'Surface3D' 的构件的 3D 清扫体积。此类清扫区域表示不应与其他构件的“主体”表示相交的空间，但可能与其他构件的“清扫”表示相交。清扫空间可能用于安全、维护或其他目的。</p>
+<p>这表示项目的3D净空体积，具有'Surface3D'的RepresentationType。此类净空区域表示不应与其他元素的'Body'表示相交的空间，但可以与其他元素的'Clearance'表示相交。净空空间的具体用途可能用于安全、维护或其他目的。</p>
 </td>
 </tr>
 <tr>
@@ -4080,7 +4081,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.6.3.17.E<a class="link" href="#-fbff0617-c1a6-42bd-b818-2090cc0e76b7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.6.3.17.E<a class="link" href="#-74b4b6c2-abb5-442c-877d-7bdf8da48d01"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.6.3.17.7-Formal-representation-"></a>
     6.6.3.17.7 形式化表示（Formal representation）
 <a class="link" href="#6.6.3.17.7-Formal-representation-"><i data-feather="link"></i></a></h2>

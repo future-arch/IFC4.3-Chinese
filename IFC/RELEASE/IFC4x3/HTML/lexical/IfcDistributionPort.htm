@@ -149,11 +149,12 @@
 <h2><a class="anchor" id="6.2.3.8.1-Semantic-definition-"></a>
     6.2.3.8.1 语义定义（Semantic definition）
 <a class="link" href="#6.2.3.8.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>配水端口是产品的进出口，物质可以通过其流动。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a>（配电端口）</p>
+<p>分布端口是产品的入口或出口，特定物质可通过其流动。</p>
 <!-- end of short definition -->
-<p>配水端口用于固体、液体或气体的通过，以及用于电力或通信的电力。流段（管道、风管、电缆）可用于连接产品之间的端口。配水端口由系统类型和流向定义，以便两个端口能够连接，它们必须共享相同的系统类型并具有相反的流向（一侧为 <em>SOURCE</em>，另一侧为 <em>SINK</em>）。端口类似于开口，因为它们没有可见的几何形状；此类几何形状在包含的构件或构件类型的形状表示中捕获。端口可以具有指示连接位置和方向的放置。</p>
-<p>端口被分配给配水系统，以指示其在特定系统中的作用，例如冷水入口。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2</aside>
+<p>分布端口用于固体、液体或气体物质以及电力或通信的传输。流段（管道、风管、电缆）可用于跨产品连接端口。分布端口由系统类型和流向定义，因此两个端口要连接，必须共享相同的系统类型并具有相反的流向（一侧为 <em>SOURCE</em>，另一侧为 <em>SINK</em>）。端口类似于开口，因为它们没有任何可见几何图形；此类几何图形在封闭元素或元素类型的形状表示中捕获。端口可具有指示连接位置和方向的放置。</p>
+<p>端口被分配分布系统以指示其在特定系统中的作用，例如冷水入口。</p>
+<aside class="aside-history"><mark>沿革</mark> x2中的新实体</aside>
 <h2><a class="anchor" id="6.2.3.8.2-Entity-inheritance-"></a>
     6.2.3.8.2 实体继承（Entity inheritance）
 <a class="link" href="#6.2.3.8.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -215,7 +216,7 @@
     6.2.3.8.3 特性（Attributes）
 <a class="link" href="#6.2.3.8.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-549775b5-a683-4496-ae92-d230ff0e956f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3ca96bd8-eda7-4d5d-89ed-54fbffd7eaab"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -553,7 +554,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowDirectionEnum.htm">IfcFlowDirectionEnum</a></td>
 <td data-label="Description">
-<p>枚举，用于标识此端口是 SINK（入口）、SOURCE（出口）还是 SINKAndSource（入口和出口）。</p>
+<p>枚举标识此端口是汇（入口）、源（出口）还是既是汇又是源（SinkAndSource）。</p>
 </td>
 </tr>
 <tr>
@@ -578,11 +579,11 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystemEnum.htm">IfcDistributionSystemEnum</a></td>
 <td data-label="Description">
-<p>枚举，用于标识系统类型。如果定义了系统类型，则该端口只能连接到具有相同系统类型的其他端口。</p>
+<p>枚举标识系统类型。如果定义了系统类型，端口只能连接到具有相同系统类型的其他端口。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.2.3.8.B<a class="link" href="#-549775b5-a683-4496-ae92-d230ff0e956f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.2.3.8.B<a class="link" href="#-3ca96bd8-eda7-4d5d-89ed-54fbffd7eaab"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.2.3.8.4-"></a>
     6.2.3.8.4 属性集
 <a class="link" href="#6.2.3.8.4-"><i data-feather="link"></i></a></h2>
@@ -759,7 +760,7 @@
 </p><h2><a class="anchor" id="6.2.3.8.5-Concept-usage-"></a>
     6.2.3.8.5 概念用法（Concept usage）
 <a class="link" href="#6.2.3.8.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b7510cb0-ade2-439b-bed4-3a0a1f8b066a"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-074ff7e8-0b63-4f8e-aea8-34929f403e36"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -1609,14 +1610,14 @@
                 General
             </td>
 <td data-label="Description">
-<p><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></strong> 可通过指示的关系与以下对象连接：</p>
+<p><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></strong> 可使用指示的关系连接到其他对象：</p>
 <ul>
-<li><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></strong> (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPorts.htm">IfcRelConnectsPorts</a>)：指示与具有相同类型和相反流向的另一个端口的连接。对于构件之间的端口连接，<em>RelatingPort</em> 设置为具有 <em>FlowDirection=SOURCE</em> 的端口，<em>RelatedPort</em> 设置为具有 <em>FlowDirection=SINK</em> 的端口。对于聚合场景，设备上的端口可以映射到内部的聚合设备，在这种情况下，外部设备上的端口指示单个 FlowDirection，但具有到内部聚合设备上端口的附加连接。例如，请参阅 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a>。</li>
-<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionElement.htm">IfcDistributionElement</a>（通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a>）：对于动态端口，指示包含的构件。</li>
+<li><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></strong> (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPorts.htm">IfcRelConnectsPorts</a>)：指示连接到具有相同类型和相反流向的另一端口。对于元素间的端口连接，RelatingPort设置为具有 <em>FlowDirection=SOURCE</em> 的端口，RelatedPort设置为具有 <em>FlowDirection=SINK</em> 的端口。对于聚合场景，设备上的端口可映射到内部的聚合设备，其中外部设备上的端口指示单一流向但在内部额外连接到聚合内部设备上的端口。参考IfcUnitaryEquipment的示例。</li>
+<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionElement.htm">IfcDistributionElement</a> (通过<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a>)：对于动态端口，指示包含元素。</li>
 </ul>
-<p>图 6.2.3.8.A 说明了配水端口连接性。</p>
-<figure><a class="anchor" id="-302-"></a><img alt="Connection Use Definition" src="../figures/ifcdistributionport-connection.png"/><figcaption>
-图 6.2.3.8.A — 配水端口连接性<a class="link" href="#-302-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图302说明了分布端口连接性。</p>
+<figure><a class="anchor" id="-302-"></a><img alt="连接使用定义" src="../figures/ifcdistributionport-connection.png"/><figcaption>
+图302 — 分布端口连接性<a class="link" href="#-302-"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
@@ -1642,8 +1643,8 @@
 <td data-label="Description">
 <p><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></strong> 可通过指示的关系分配给以下实体：</p>
 <ul>
-<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystem.htm">IfcDistributionSystem</a>（通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>）：指示包含互连设备的系统。</li>
-<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a>&lt;（通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>）：指示为设备捕获的实时或历史信息。</li>
+<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystem.htm">IfcDistributionSystem</a> (通过<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>)：指示包含互连设备的系统。</li>
+<li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a>&lt; (通过<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a>)：指示为设备捕获的实时或历史信息。</li>
 </ul>
 <p>此概念可应用于以下资源</p>
 <ul>
@@ -1651,14 +1652,14 @@
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystem.htm">IfcDistributionSystem</a>
                         
                         
-                         - 指示由端口托管的系统，作为其起源。
+                         - 指示由端口承载的系统，作为起源点。
                         
                     </li>
 <li>
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionCircuit.htm">IfcDistributionCircuit</a>
                         
                         
-                         - 指示由端口切换的回路，作为其起源。
+                         - 指示由端口切换的回路，作为起源点。
                         
                     </li>
 </ul>
@@ -1901,7 +1902,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.2.3.8.C<a class="link" href="#-b7510cb0-ade2-439b-bed4-3a0a1f8b066a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.2.3.8.C<a class="link" href="#-074ff7e8-0b63-4f8e-aea8-34929f403e36"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.2.3.8.6-Formal-representation-"></a>
     6.2.3.8.6 形式化表示（Formal representation）
 <a class="link" href="#6.2.3.8.6-Formal-representation-"><i data-feather="link"></i></a></h2>
