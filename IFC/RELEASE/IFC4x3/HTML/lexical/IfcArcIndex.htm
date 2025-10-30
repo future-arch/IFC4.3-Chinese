@@ -193,12 +193,12 @@
 <h2><a class="anchor" id="8.9.2.1.1-Semantic-definition-"></a>
     8.9.2.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.2.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 通过提供索引列表来描述多段曲线中的单个圆弧段。第一个索引是圆弧的起点，第二个索引是圆弧上的点，第三个索引是圆弧的终点。这三个点不能共线。</p>
-<!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> The type is used for <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> to point into an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> for providing the Cartesian points of the circular arc segments of the poly curve.</aside><aside class="aside-history"><mark>沿革</mark> New Type in IFC4 ADD1</aside>
-<p><strong>Informal Propositions</strong></p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArcIndex.htm">IfcArcIndex</a></em> 通过提供索引列表来描述多义曲线内的单个圆弧段。第一个索引是圆弧的起点，第二个索引是圆弧上的点，第三个索引是圆弧的终点。这三个点不应共线。</p>
+<!-- 简短定义结束 -->
+<aside class="aside-note"><mark>注释</mark> 该类型用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em>，指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em>，以提供多义曲线圆弧段的笛卡尔点。</aside><aside class="aside-history"><mark>沿革</mark> 在 IFC4 ADD1 中新增的类型</aside>
+<p><strong>非形式命题</strong></p>
 <ol>
-<li>第二个索引，解析为圆弧上的点，应解析为与圆弧的起点和终点距离大致相等的笛卡尔点。这是为了避免当圆弧上的点非常接近起点或终点时出现数值不稳定性。</li>
+<li>第二个索引（解析为圆弧上的点）应解析为与圆弧起点和终点距离大致相等的笛卡尔点。这是为了避免数值不稳定性，如果圆弧上的点太靠近起点或终点。</li>
 </ol>
 <h2><a class="anchor" id="8.9.2.1.2-Formal-representation-"></a>
     8.9.2.1.2 形式化表示（Formal representation）

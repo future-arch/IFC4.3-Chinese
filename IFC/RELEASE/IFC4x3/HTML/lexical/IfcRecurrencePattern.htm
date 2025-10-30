@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.5.3.5 IfcRecurrencePattern - IFC 4.3.2 Documentation</title>
+<title>8.5.3.5 IfcRecurrencePattern（重复模式） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,14 +189,14 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.5.3.5 IfcRecurrencePattern</h1>
+<h1>8.5.3.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a>（重复模式）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.5.3.5.1-Semantic-definition-"></a>
     8.5.3.5.1 语义定义（Semantic definition）
 <a class="link" href="#8.5.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a></em> 在规则重复的基础上定义重复的时间段，例如每周的星期一，或每月的第三个星期二。其余属性（如 <em>DayComponent</em>、<em>Position</em> 和 <em>Interval</em>）的填充取决于指定的重复类型。</p>
-<!-- end of short definition -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a></em> 支持各种重复模式，这些模式通过类型定义 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a>.RecurrenceType</em>) 进行区分，该定义是必需的，以提供给定值的含义。可以通过指定的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimePeriod.htm">IfcTimePeriod</a></em> 实例进一步约束适用时间，从而实现诸如每天、每周或每月 7:00 至 12:00 和 13:00 至 17:00 之间的时间段。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a></em> 基于规则的重复周期定义重复时间段，例如每周的星期一或每月的第三个星期二。其余属性（如 <em>DayComponent</em>、<em>Position</em> 和 <em>Interval</em>）的取值取决于指定的重复类型。</p>
+<!-- 简短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a></em> 支持多种重复模式，这些模式通过类型定义（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a>.RecurrenceType</em>）进行区分，该类型定义用于提供给定值的含义。可通过指定的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimePeriod.htm">IfcTimePeriod</a></em> 实例进一步约束适用的时间，从而为每个适用的日、周或月启用时间段，例如在7:00至12:00之间以及13:00至17:00之间。</p>
 <aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
 <h2><a class="anchor" id="8.5.3.5.2-Entity-inheritance-"></a>
     8.5.3.5.2 实体继承（Entity inheritance）
@@ -213,7 +213,7 @@
     8.5.3.5.3 特性（Attributes）
 <a class="link" href="#8.5.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-90da0bbd-07dc-4203-a3f1-09a38eb66fb2"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-a4c7ea5b-d877-480e-905e-afcb4bfbdd46"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -235,106 +235,8 @@
 <small>(8)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                RecurrenceType
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrenceTypeEnum.htm">IfcRecurrenceTypeEnum</a></td>
-<td data-label="Description">
-<p>定义重复类型，该类型赋予使用属性的含义，并决定可能的属性组合，即哪些属性是完全描述模式类型所必需的。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                DayComponent
-                
-            </td>
-<td data-label="Type">OPTIONAL SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDayInMonthNumber.htm">IfcDayInMonthNumber</a></td>
-<td data-label="Description">
-<p>一周中指定日期的星期几。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                WeekdayComponent
-                
-            </td>
-<td data-label="Type">OPTIONAL SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDayInWeekNumber.htm">IfcDayInWeekNumber</a></td>
-<td data-label="Description">
-<p>一年中指定月份的位置。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                MonthComponent
-                
-            </td>
-<td data-label="Type">OPTIONAL SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonthInYearNumber.htm">IfcMonthInYearNumber</a></td>
-<td data-label="Description">
-<p>组件的指定位置，例如月份中的第 3 个（位置=3）星期二（星期几组件）。负位置值用于定义组件的最后一个位置（-1），倒数第二个位置（-2）等。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                Position
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
-<td data-label="Description">
-<p>可以根据模式类型给出间隔。例如，间隔值为 2 可以表示每两天、两周、两个月或两年。空间隔值视为 1。使用的间隔值应在合理范围内，例如不为 0 或小于 0。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                Interval
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
-<td data-label="Description">
-<p>由重复元素（日）的开始和结束时间定义的时间段列表。列表的顺序应反映时间段的顺序。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">7</td>
-<td data-label="Name">
-                
-                Occurrences
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
-<td data-label="Description">
-<p>定义此模式的发生次数，例如，每周事件可能被定义为发生 5 次后停止。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">8</td>
-<td data-label="Name">
-                
-                TimePeriods
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimePeriod.htm">IfcTimePeriod</a></td>
-<td data-label="Description">
-<p>List of time periods that are defined by a start and end time
-  of the recurring element (day). The order of the list should
-  reflect the sequence of the time periods.</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.5.3.5.A<a class="link" href="#-90da0bbd-07dc-4203-a3f1-09a38eb66fb2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.5.3.5.A<a class="link" href="#-a4c7ea5b-d877-480e-905e-afcb4bfbdd46"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.5.3.5.4-Formal-representation-"></a>
     8.5.3.5.4 形式化表示（Formal representation）
 <a class="link" href="#8.5.3.5.4-Formal-representation-"><i data-feather="link"></i></a></h2>

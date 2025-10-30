@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.48 IfcPointByDistanceExpression (按距离表达式的点) - IFC 4.3.2 Documentation</title>
+<title>8.9.3.48 IfcPointByDistanceExpression（距离表达式点） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,16 +189,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.48 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a> (按距离表达式的点)</h1>
+<h1>8.9.3.48 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a>（距离表达式点）</h1>
 <div class="mvd" title="Included in Single Survey Point Linearly Placed">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.48.1-Semantic-definition-"></a>
     8.9.3.48.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.48.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a></em> 根据基准曲线上的距离来描述相对于基准曲线的点。偏移量默认为曲线相对于其切线的初始上下文，该上下文在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>.Placement</em> 中指定，或者在分段曲线的情况下，在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveSegment.htm">IfcCurveSegment</a></em> <em>StartPlacement</em> 中指定，其中值对应于以下内容：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a></em> 描述了一个相对于基准曲线的点，该点根据沿基准曲线的距离确定。偏移量默认为曲线相对于其切线的初始上下文，该上下文在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>.Placement</em> 中指定，或者在分段曲线的情况下在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveSegment.htm">IfcCurveSegment</a></em> 的 <em>StartPlacement</em> 中指定，其中值对应以下内容：</p>
 <ul>
-<li>侧向于基准曲线</li>
-<li>垂直于基准曲线的偏移</li>
-<li>可选的平行于基准曲线的附加偏移，可用于处理切线不连续的基准曲线可达到的其他位置。</li>
+<li>相对于基准曲线的横向偏移</li>
+<li>相对于基准曲线的垂直偏移</li>
+<li>可选的附加平行于基准曲线的偏移，可用于处理基准曲线在切向不连续时无法到达的位置。</li>
 </ul>
 <!-- end of short definition -->
 <h2><a class="anchor" id="8.9.3.48.2-Entity-inheritance-"></a>
@@ -264,7 +264,7 @@
     8.9.3.48.3 特性（Attributes）
 <a class="link" href="#8.9.3.48.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ef9fd366-de42-4045-9412-e74352d768fe"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0a7edc13-4809-4342-a1ba-dd3a9dfe4491"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -293,8 +293,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -304,8 +304,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -325,7 +325,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointDim.htm">IfcPointDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，由特定于具体子类型的函数处理。通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a> 的坐标分量数量，或在其他情况下通过基准曲线或曲面的维度来确定。</p>
+<p>此抽象类的空间维度，由具体子类型的特定函数处理。在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a> 的情况下由坐标分量的数量确定，在其他情况下由基准曲线或曲面的维度确定。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -367,7 +367,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>默认水平偏移量垂直于基准曲线测量，正值表示在面向基准曲线正参数化方向的左侧，负值表示在右侧。如果 DistanceAlong 与切线不连续点重合（在精度范围内），则以前一段的切线为准。</p>
+<p>默认水平偏移垂直于基准曲线测量，正值表示在基准曲线正参数化方向上的左侧，负值表示右侧。如果 DistanceAlong 与切向不连续点重合（在精度范围内），则前一段的切线起主导作用。</p>
 </td>
 </tr>
 <tr>
@@ -379,7 +379,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>默认垂直于基准曲线的偏移量，正值表示垂直于 DistanceAlong 处的切线，在切线平面内垂直于全局 XY 平面。</p>
+<p>相对于基准曲线的默认垂直偏移，正值表示在垂直于全局 XY 平面的切线平面中，垂直于 DistanceAlong 处的切线。</p>
 </td>
 </tr>
 <tr>
@@ -391,7 +391,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>在应用 DistanceAlong、OffsetLateral 和 OffsetVertical 以到达切线不连续基准曲线情况下的位置后，平行于基准曲线的偏移。</p>
+<p>在应用 DistanceAlong、OffsetLateral 和 OffsetVertical 后，平行于基准曲线的偏移，用于处理切向不连续基准曲线的情况。</p>
 </td>
 </tr>
 <tr>
@@ -409,7 +409,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.48.A<a class="link" href="#-ef9fd366-de42-4045-9412-e74352d768fe"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.48.A<a class="link" href="#-0a7edc13-4809-4342-a1ba-dd3a9dfe4491"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.48.4-Formal-representation-"></a>
     8.9.3.48.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.48.4-Formal-representation-"><i data-feather="link"></i></a></h2>

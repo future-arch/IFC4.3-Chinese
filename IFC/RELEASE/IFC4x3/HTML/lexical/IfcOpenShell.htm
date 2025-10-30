@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -195,26 +195,29 @@
     8.20.3.12.1 语义定义（Semantic definition）
 <a class="link" href="#8.20.3.12.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义<br/>
-开放壳是一个二维壳。其定义域（如果存在）是一个有限、连通、有向、带边界的二维流形，但不是封闭曲面。可以将其视为一个被一个或多个孔洞穿透的封闭壳。开放壳的定义域满足 0 &lt; Ξ &lt; 1。开放壳在功能上比面更通用，因为其定义域可以包含柄。</aside><aside class="aside-note"><mark>注释</mark> 这与面定义域的定义略有不同，面定义域不包含任何边界。例如，面定义域可能排除孤立点或线段，而开放壳定义域则不能（参见下文计算算法）。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>open_shell</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中新增实体。</aside><blockquote>
-<p>该壳由一组面定义，这些面可以是定向面。考虑方向后，每个面的方向应与下文定义的壳法向一致。方向可以直接作为定向面的布尔属性提供，如果壳成员是没有方向属性的面，则默认为 TRUE。</p>
-<p>以下对开放壳的组合约束及其定义域的几何约束，与非正式命题共同确保与开放壳关联的任何定义域都是可定向流形：
-* 每个面引用必须唯一
-* 开放壳必须至少包含一个面
-* 给定面可以存在于多个开放壳中</p>
-<p>开放壳的边界由仅被面边界（环）引用一次的边及其所有顶点组成。开放壳的定义域（如果存在）包含其所有面的边和顶点。</p>
+<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><blockquote>
+<p>注意 根据 ISO/CD 10303-42:1992 的定义<br/>
+开放壳是一个维度为2的壳。其定义域（如果存在）是一个有限、连通、有向、带边界的二维流形，但不是封闭曲面。可以将其视为一个被一个或多个孔洞穿透的封闭壳。开放壳的定义域满足 0 &lt; Ξ &lt; 1。开放壳在功能上比面更通用，因为其定义域可以包含柄。</p>
+<p>该壳由一组面定义，这些面可以是定向面。考虑方向后，每个面的方向应与下面定义的壳法向量一致。方向可以直接作为定向面的布尔属性提供，如果壳成员是没有方向属性的面，则默认为 TRUE。</p>
+<p>以下对开放壳的组合限制及其定义域的几何限制，与非正式命题一起，旨在确保与开放壳关联的任何定义域都是可定向流形：
+* 每个面引用必须是唯一的
+* 开放壳必须至少有一个面
+* 给定的面可以存在于多个开放壳中</p>
+<p>开放壳的边界由仅被其面的边界（环）引用一次的边及其所有顶点组成。开放壳的定义域（如果存在）包含其面的所有边和顶点。</p>
+<p>注意 这与面定义域的定义略有不同，面定义域不包含任何边界。例如，面定义域可能排除孤立点或线段，而开放壳定义域则不能。（参见下面的计算算法）</p>
+<p>注意 实体改编自 ISO 10303-42 中定义的 <strong>open_shell</strong>。</p>
 </blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>每条边必须被面边界精确引用两次</li>
-<li>每条定向边必须唯一</li>
+<li>每条边必须被面的边界环恰好引用两次</li>
+<li>每个定向边必须是唯一的</li>
 <li>任何边不得被两个以上的面引用</li>
-<li>壳中不同面不相交，但可以共享边或顶点</li>
-<li>不同边不相交，但可以共享顶点</li>
-<li>每个面引用必须唯一</li>
-<li>壳的环不能混合使用多边形环和其他环类型（注：由于仅将多边形环定义为面边界，故此条件自然满足）</li>
+<li>壳中不同的面不相交，但可以共享边或顶点</li>
+<li>不同的边不相交，但可以共享顶点</li>
+<li>每个面引用必须是唯一的</li>
+<li>壳的环不应是折线环和其他环类型的混合。注意：这是给定的，因为只有折线环被定义为面边界</li>
 <li>封闭壳必须是定向弧连通二维流形</li>
-<li>必须满足欧拉公式</li>
+<li>必须满足欧拉方程</li>
 </ol>
 <h2><a class="anchor" id="8.20.3.12.2-Entity-inheritance-"></a>
     8.20.3.12.2 实体继承（Entity inheritance）
@@ -259,7 +262,7 @@
     8.20.3.12.3 特性（Attributes）
 <a class="link" href="#8.20.3.12.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-3cfce208-ce4f-462e-970f-2a5dc6ddf633"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7dc4b058-f1bc-4128-974a-86a4dc48b1fd"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -289,7 +292,7 @@
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
 <p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -300,7 +303,7 @@
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
 <p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -330,11 +333,11 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a></td>
 <td data-label="Description">
-<p>通过公共边或顶点实现弧连通的面集合。</p>
+<p>沿公共边或顶点弧连通的面集合。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.20.3.12.A<a class="link" href="#-3cfce208-ce4f-462e-970f-2a5dc6ddf633"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.12.A<a class="link" href="#-7dc4b058-f1bc-4128-974a-86a4dc48b1fd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.12.4-Formal-representation-"></a>
     8.20.3.12.4 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.12.4-Formal-representation-"><i data-feather="link"></i></a></h2>

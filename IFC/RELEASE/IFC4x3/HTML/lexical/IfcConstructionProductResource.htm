@@ -228,7 +228,7 @@
     7.3.3.5.3 特性（Attributes）
 <a class="link" href="#7.3.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-2b30d615-335b-4c3c-ad2e-fd5ae3b0576c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-8f3a4c83-ce5d-4807-8079-346101063843"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -566,11 +566,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.5.B<a class="link" href="#-2b30d615-335b-4c3c-ad2e-fd5ae3b0576c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.5.B<a class="link" href="#-8f3a4c83-ce5d-4807-8079-346101063843"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.3.3.5.4-Formal-propositions-"></a>
     7.3.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#7.3.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b63c12b8-22e7-44db-87c5-0cb67d087d93"></a><table>
+<figure><a class="anchor" id="-aa5225c2-2493-4e3b-b2d2-3a3a4b1cf588"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -594,7 +594,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.5.C<a class="link" href="#-b63c12b8-22e7-44db-87c5-0cb67d087d93"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.5.C<a class="link" href="#-aa5225c2-2493-4e3b-b2d2-3a3a4b1cf588"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.3.3.5.5-"></a>
     7.3.3.5.5 属性集
 <a class="link" href="#7.3.3.5.5-"><i data-feather="link"></i></a></h2>
@@ -618,7 +618,7 @@
 </p><h2><a class="anchor" id="7.3.3.5.6-Concept-usage-"></a>
     7.3.3.5.6 概念用法（Concept usage）
 <a class="link" href="#7.3.3.5.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-1fba33dc-2d51-4738-83f5-e722c3a6e66e"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-280acb9a-a935-42ae-a006-724f2ea14b43"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -831,6 +831,45 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例都可以通过被分配给一个使用此概念的通用对象类型来类型化。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的子类型级别覆盖此概念，引入了一个限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 子类型的特定规则。</p>
+<p>此概念可应用于以下资源</p>
+<ul>
+<li>
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>特性 <em>Name</em> 和可选的 <em>Description</em> 可用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的所有子类型。对于那些具有对象类型定义的子类型，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>，通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例都可以拥有属性集，可以直接在对象实例上作为元素特定的属性集，也可以在对象类型上作为类型属性集。在这种情况下，提供给对象实例的特性是元素特定特性和类型特性的组合。如果在实例和类型特性中都定义了相同的特性（在同一属性集中），则实例特性的特性值将覆盖类型特性的特性值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
 </td>
 <td data-label="Usage">
@@ -857,45 +896,6 @@
                     </small>
 </aside>
 <p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>Any object occurrence can be typed by being assigned to a common object type utilizing this concept. A particular rule, restricting the applicable subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> that can be assigned, is introduced by overriding this concept at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>.</p>
-<p>此概念可应用于以下资源</p>
-<ul>
-<li>
-<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_User_Identity/content.html">Object User Identity</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">Property Sets with Override</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -969,7 +969,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence can be typed by being assigned to a common object type utilizing this concept. A particular rule, restricting the applicable subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> that can be assigned, is introduced by overriding this concept at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>.</p>
+<p>任何对象实例都可以通过被分配给一个使用此概念的通用对象类型来类型化。通过在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的子类型级别覆盖此概念，引入了一个限制可分配的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 子类型的特定规则。</p>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -992,7 +992,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
+<p>特性 <em>Name</em> 和可选的 <em>Description</em> 可用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的所有子类型。对于那些具有对象类型定义的子类型，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>，通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1009,7 +1009,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
+<p>任何对象实例都可以拥有属性集，可以直接在对象实例上作为元素特定的属性集，也可以在对象类型上作为类型属性集。在这种情况下，提供给对象实例的特性是元素特定特性和类型特性的组合。如果在实例和类型特性中都定义了相同的特性（在同一属性集中），则实例特性的特性值将覆盖类型特性的特性值。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1138,7 +1138,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
+<p>特性 <em>Name</em> 和可选的 <em>Description</em> 可用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的所有子类型。对于那些具有对象类型定义的子类型，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>，通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1155,7 +1155,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
+<p>任何对象实例都可以拥有属性集，可以直接在对象实例上作为元素特定的属性集，也可以在对象类型上作为类型属性集。在这种情况下，提供给对象实例的特性是元素特定特性和类型特性的组合。如果在实例和类型特性中都定义了相同的特性（在同一属性集中），则实例特性的特性值将覆盖类型特性的特性值。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1255,7 +1255,7 @@
             </td>
 <td data-label="Description">
 <p>此概念可与以下组合一起应用</p>
-<figure><a class="anchor" id="-c6d9eaf3-b870-439d-9de2-1515932ff1db"></a><table>
+<figure><a class="anchor" id="-fc256c89-64e8-41eb-a42a-063f967989fd"></a><table>
 <thead>
 <tr>
 <th>CostType</th>
@@ -1294,7 +1294,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.5.E<a class="link" href="#-c6d9eaf3-b870-439d-9de2-1515932ff1db"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.5.E<a class="link" href="#-fc256c89-64e8-41eb-a42a-063f967989fd"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
@@ -1306,7 +1306,7 @@
             </td>
 <td data-label="Description">
 <p>此概念可与以下组合一起应用</p>
-<figure><a class="anchor" id="-7ae4c7bd-19d8-4d7f-952a-8e74ed5ff6d5"></a><table>
+<figure><a class="anchor" id="-b97a67c7-f00c-4613-b31d-0c0ac6fde062"></a><table>
 <thead>
 <tr>
 <th>QuantityType</th>
@@ -1327,7 +1327,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.5.F<a class="link" href="#-7ae4c7bd-19d8-4d7f-952a-8e74ed5ff6d5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.5.F<a class="link" href="#-b97a67c7-f00c-4613-b31d-0c0ac6fde062"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
@@ -1380,7 +1380,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>An attribute <em>Name</em> and optionally <em>Description</em> can be used for all subypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>. For those subtypes, that have an object type definition, such as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>, the common <em>Name</em> and optionally <em>Description</em> is associated with the object type.</p>
+<p>特性 <em>Name</em> 和可选的 <em>Description</em> 可用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的所有子类型。对于那些具有对象类型定义的子类型，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em> - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeamType.htm">IfcBeamType</a></em>，通用的 <em>Name</em> 和可选的 <em>Description</em> 与对象类型相关联。</p>
 </td>
 </tr>
 <tr>
@@ -1415,7 +1415,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.</p>
+<p>任何对象实例都可以拥有属性集，可以直接在对象实例上作为元素特定的属性集，也可以在对象类型上作为类型属性集。在这种情况下，提供给对象实例的特性是元素特定特性和类型特性的组合。如果在实例和类型特性中都定义了相同的特性（在同一属性集中），则实例特性的特性值将覆盖类型特性的特性值。</p>
 </td>
 </tr>
 <tr>
@@ -1453,7 +1453,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.5.D<a class="link" href="#-1fba33dc-2d51-4738-83f5-e722c3a6e66e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.5.D<a class="link" href="#-280acb9a-a935-42ae-a006-724f2ea14b43"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.3.3.5.7-Formal-representation-"></a>
     7.3.3.5.7 形式化表示（Formal representation）
 <a class="link" href="#7.3.3.5.7-Formal-representation-"><i data-feather="link"></i></a></h2>

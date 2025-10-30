@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.16.3.13 IfcPropertyTableValue - IFC 4.3.2 Documentation</title>
+<title>8.16.3.13 IfcPropertyTableValue（属性表值） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,94 +189,92 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.16.3.13 IfcPropertyTableValue</h1>
+<h1>8.16.3.13 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a>（属性表值）</h1>
 <div class="mvd" title="Included in Property Sets for Materials, Property Sets for Objects, Property Sets for Types, Property Sets with Override">RV ⓘ</div>
 <div class="mvd" title="Included in Property Sets for Materials, Property Sets for Objects, Property Sets for Types, Property Sets with Override">AbV ⓘ</div>
 <h2><a class="anchor" id="8.16.3.13.1-Semantic-definition-"></a>
     8.16.3.13.1 语义定义（Semantic definition）
 <a class="link" href="#8.16.3.13.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></em> 是一个具有值范围的属性，由一个属性对象定义，该对象具有两个（数值或描述性）值列表。这些值指定了一个两列的表格。定义值提供第一列，并建立定义值（第二列）的范围。可选的 <em>Expression</em> 特性可以给出用于推导范围值的方程，该方程仅供参考。</p>
-<!-- end of short definition -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></em> 定义了一个定义/已定义属性值组合，其中给出了属性名称、具有度量类型（以及可选的定义和已定义值的单位）的表格。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></em> 是一种属性，其值范围由具有两个（数值或描述性）值列表的属性对象定义。这些值指定了一个包含两列的表格。定义值提供第一列并为定义值（第二列）建立范围。可选的 <em>Expression</em> 属性可以给出用于推导范围值的方程，但这仅用于提供信息。</p>
+<!-- 简短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></em> 定义了一个定义/被定义属性值组合，其中给出了属性名称、包含定义值和被定义值的表格及其度量类型（以及可选的用于定义值和被定义值的单位）。</p>
 <aside class="aside-note"><mark>注释</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></em> only captures properties that can be expressed by a table with two columns. Use <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyReferenceValue.htm">IfcPropertyReferenceValue</a> with the PropertyReference being an <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a> to express all those properties that require a table with tree or more columns.</aside>
-<p>单位由 <em>DefiningUnit</em> 和 <em>DefinedUnit</em> 特性处理，表 8.16.3.13.A 显示了表格值属性的示例：</p>
+<p>单位由 <em>DefiningUnit</em> 和 <em>DefinedUnit</em> 属性处理，参见表 8.16.3.13.A 中的表格值属性示例：</p>
 <ul>
-<li>如果未提供 <em>DefiningUnit</em> 或 <em>DefinedUnit</em> 特性，则单位已由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureValue.htm">IfcMeasureValue</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedMeasureValue.htm">IfcDerivedMeasureValue</a></em> 的类型隐含。关联单位可在项目级别全局定义的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a>.UnitsInContext</em>) 中找到。</li>
-<li>如果提供了 <em>DefiningUnit</em> 或 <em>DefinedUnit</em> 特性，则 <em>Unit</em> 特性分配的单位将覆盖全局分配的单位。</li>
+<li>如果未给出 <em>DefiningUnit</em> 或 <em>DefinedUnit</em> 属性，则单位已由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureValue.htm">IfcMeasureValue</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedMeasureValue.htm">IfcDerivedMeasureValue</a></em> 的类型隐含。关联的单位可以在项目级别全局定义的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em> 中找到（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a>.UnitsInContext</em>）。</li>
+<li>如果给出了 <em>DefiningUnit</em> 或 <em>DefinedUnit</em> 属性，则单位属性所分配的单位将覆盖全局分配的单位。</li>
 </ul>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></em> 允许为属性描述指定一个定义/已定义值对的表格。可选的 <em>CurveInterpolation</em> 特性允许确定两个给定值之间的间隔。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></em> 允许为属性描述指定一个定义值/被定义值对的表格。可选属性 <em>CurveInterpolation</em> 允许确定两个给定值之间的区间插值方式。</p>
 <figure><a class="anchor" id="-1-"></a><table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: left;">DefiningValues</th>
-<th style="text-align: left;">定义值类型（通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a>）</th>
-<th style="text-align: left;">DefinedValues</th>
-<th style="text-align: left;">定义值类型（通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a>）</th>
-<th style="text-align: left;">DefiningUnit</th>
-<th style="text-align: left;">DefinedUnit</th>
+<th>名称</th>
+<th>定义值</th>
+<th>定义值类型（通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a>）</th>
+<th>被定义值</th>
+<th>被定义值类型（通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a>）</th>
+<th>定义单位</th>
+<th>被定义单位</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">SoundTransmissionLoss</td>
-<td style="text-align: left;">100</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
-<td style="text-align: left;">20</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
-<td style="text-align: left;">-</td>
-<td style="text-align: left;">dB</td>
+<td>声音传输损失</td>
+<td>100</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
+<td>20</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
+<td>-</td>
+<td>dB</td>
 </tr>
 <tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">200</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
-<td style="text-align: left;">42</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td></td>
+<td>200</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
+<td>42</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">400</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
-<td style="text-align: left;">46</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td></td>
+<td>400</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
+<td>46</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">800</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
-<td style="text-align: left;">56</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td></td>
+<td>800</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
+<td>56</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">1600</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
-<td style="text-align: left;">60</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td></td>
+<td>1600</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
+<td>60</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">3200</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
-<td style="text-align: left;">65</td>
-<td style="text-align: left;"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td></td>
+<td>3200</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
+<td>65</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
-</table><figcaption>表 8.16.3.13.A — 具有值、度量类型和单位的表格值属性<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。</aside><blockquote>
-<p>IFC4 变更：<em>DefiningValues</em> 和 <em>DefinedValues</em> 特性已设为可选，并保持文件交换的向上兼容性。添加了 <em>CurveInterpolation</em> 特性。</p>
-</blockquote>
+</table><figcaption>表 8.16.3.13.A — 包含值、度量类型和单位的表格值属性<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Attributes <em>DefiningValues</em> and <em>DefinedValues</em> have been made OPTIONAL with upward compatibility for file based exchange. The attribute <em>CurveInterpolation</em> has been added.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
 <li><em>DefinedValues</em> 列表和 <em>DefiningValues</em> 列表是对应的列表。</li>
@@ -323,7 +321,7 @@
     8.16.3.13.3 特性（Attributes）
 <a class="link" href="#8.16.3.13.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-51db681f-35b7-4616-94ae-630efee6220d"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d7ee8d17-4a30-44c5-98e3-f3c3dd95e3ce"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -345,107 +343,10 @@
 <small>(1)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasExternalReferences</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
-<td data-label="Description">
-<p>与属性定义关联的外部引用（例如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute.</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a>
 <small>(8)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Name
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<p>此属性的名称。此标签是定义属性语义含义的重要名称字符串。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Specification
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
-<td data-label="Description">
-<p>指向包含属性定义的相关语义定义或信息文本的 URI 引用。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>PartOfPset</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a> FOR HasProperties</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> 所引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute to navigate from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> with upward compatibility for file based exchange.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>PropertyForDependance</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDependencyRelationship.htm">IfcPropertyDependencyRelationship</a> FOR DependingProperty</td>
-<td data-label="Description">
-<p>值依赖于另一个属性的属性。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>PropertyDependsOn</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDependencyRelationship.htm">IfcPropertyDependencyRelationship</a> FOR DependantProperty</td>
-<td data-label="Description">
-<p>值依赖于该属性的关联属性。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>PartOfComplex</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm">IfcComplexProperty</a> FOR HasProperties</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm">IfcComplexProperty</a></em> 中包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> 的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The cardinality has changed to 0..n to allow reuse of instances of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> in several <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm">IfcComplexProperty</a></em> with upward compatibility for file based exchange.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasConstraints</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a> FOR RelatedResourceObjects</td>
-<td data-label="Description">
-<p>属性的用户定义约束。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasApprovals</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a> FOR RelatedResourceObjects</td>
-<td data-label="Description">
-<p>属性的用户定义批准。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -466,94 +367,12 @@
 <small>(6)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                DefiningValues
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF UNIQUE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a></td>
-<td data-label="Description">
-<p>定义已定义值的定义值列表。此列表应只包含唯一值。</p>
-<blockquote>
-<p>IFC4 变更：该特性已设为可选，并保持文件交换的向上兼容性。</p>
-</blockquote>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                DefinedValues
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a></td>
-<td data-label="Description">
-<p>适用于由定义值确定的范围的已定义值。</p>
-<blockquote>
-<p>IFC4 变更：该特性已设为可选，并保持文件交换的向上兼容性。</p>
-</blockquote>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                Expression
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
-<td data-label="Description">
-<p>定义值的单位。如果未提供，则使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 全局单位分配中为定义值类型定义的默认度量类型单位。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                DefiningUnit
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnit.htm">IfcUnit</a></td>
-<td data-label="Description">
-<p>已定义值的单位。如果未提供，则使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 全局单位分配中为已定义值类型定义的默认度量类型单位。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">7</td>
-<td data-label="Name">
-                
-                DefinedUnit
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnit.htm">IfcUnit</a></td>
-<td data-label="Description">
-<p>在提供的两个定义值和已定义值之间的曲线插值。如果未提供，则假定为线性插值。</p>
-<blockquote>
-<p>IFC4 变更：该特性已添加到特性列表的末尾。</p>
-</blockquote>
-</td>
-</tr>
-<tr>
-<td data-label="#">8</td>
-<td data-label="Name">
-                
-                CurveInterpolation
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveInterpolationEnum.htm">IfcCurveInterpolationEnum</a></td>
-<td data-label="Description">
-<p>Interpolation of the curve between two defining and defined values that are provided. if not provided a linear interpolation is assumed.</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been added at the end of the attribute list.</aside>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.16.3.13.B<a class="link" href="#-51db681f-35b7-4616-94ae-630efee6220d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.16.3.13.B<a class="link" href="#-d7ee8d17-4a30-44c5-98e3-f3c3dd95e3ce"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.16.3.13.4-Formal-propositions-"></a>
     8.16.3.13.4 形式化命题（Formal propositions）
 <a class="link" href="#8.16.3.13.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-f0e18e44-d7d6-454c-ad73-d377fd3dd7a0"></a><table>
+<figure><a class="anchor" id="-a6ce7b54-4dd3-467c-a05f-2839adf84c25"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -564,9 +383,7 @@
 <tr>
 <td>WR21</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>要么 <em>DefiningValues</em> 和 <em>DefinedValues</em> 都未提供，要么 <em>DefiningValues</em> 列表中的成员数量应与 <em>DefinedValues</em> 列表中的成员数量相同。</p>
 </td>
 </tr>
 <tr>
@@ -578,9 +395,7 @@ OR (SIZEOF(DefiningValues) = SIZEOF(DefinedValues))</code></pre>
 <tr>
 <td>WR22</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>如果提供了 <em>DefiningValues</em>，则 <em>DefiningValues</em> 列表中的所有值应具有相同的度量类型。</p>
 </td>
 </tr>
 <tr>
@@ -593,9 +408,7 @@ OR (SIZEOF(DefiningValues) = SIZEOF(DefinedValues))</code></pre>
 <tr>
 <td>WR23</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>如果提供了 <em>DefinedValues</em>，则 <em>DefinedValues</em> 列表中的所有值应具有相同的度量类型。</p>
 </td>
 </tr>
 <tr>
@@ -606,7 +419,7 @@ OR (SIZEOF(DefiningValues) = SIZEOF(DefinedValues))</code></pre>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.16.3.13.C<a class="link" href="#-f0e18e44-d7d6-454c-ad73-d377fd3dd7a0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.16.3.13.C<a class="link" href="#-a6ce7b54-4dd3-467c-a05f-2839adf84c25"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.16.3.13.5-Formal-representation-"></a>
     8.16.3.13.5 形式化表示（Formal representation）
 <a class="link" href="#8.16.3.13.5-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7.2.2 IfcAlignmentHorizontalSegmentTypeEnum - IFC 4.3.2 Documentation</title>
+<title>8.7.2.2 IfcAlignmentHorizontalSegmentTypeEnum（线形水平段类型枚举） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,15 +189,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.7.2.2 IfcAlignmentHorizontalSegmentTypeEnum</h1>
+<h1>8.7.2.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontalSegmentTypeEnum.htm">IfcAlignmentHorizontalSegmentTypeEnum</a>（线形水平段类型枚举）</h1>
 <h2><a class="anchor" id="8.7.2.2.1-Semantic-definition-"></a>
     8.7.2.2.1 语义定义（Semantic definition）
 <a class="link" href="#8.7.2.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontalSegmentTypeEnum.htm">IfcAlignmentHorizontalSegmentTypeEnum</a> 指示了水平对齐段 (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontalSegment.htm">IfcAlignmentHorizontalSegment</a>) 的一个段的类型。从几何角度和运动学角度都可以看待水平段。近年来，运动学角度变得越来越重要。枚举值根据这一发展进行了详细说明，尤其是在现代轨道设计中。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontalSegmentTypeEnum.htm">IfcAlignmentHorizontalSegmentTypeEnum</a> 指示水平线形段（<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontalSegment.htm">IfcAlignmentHorizontalSegment</a>）的段类型。水平段可以从几何视角和运动学视角进行观察。近年来，运动学视角的重要性日益凸显。特别是现代轨道设计中，该枚举根据这一发展进行了详细定义。</p>
 <!-- end of short definition -->
-<p><strong>水平对齐段的运动学视角</strong></p>
-<p>运动学视角的核心参数是车辆因方向改变而产生的横向加速度。在水平布局中，这由段的曲率表示。根据曲率值，可以进行以下分类：</p>
-<figure><a class="anchor" id="-bf7dc860-ca65-4e8c-ba88-d7d12e2bf503"></a><table>
+<p><strong>水平线形段的运动学视角</strong></p>
+<p>运动学视角的核心参数是车辆在行驶过程中因方向改变引起的横向加速度。在水平布局中，这由线段的曲率表示。根据曲率值可进行以下分类：</p>
+<figure><a class="anchor" id="-52c00e79-c378-4389-8a74-67d2a73d5fe7"></a><table>
 <thead>
 <tr>
 <th style="text-align: left;">曲率</th>
@@ -212,48 +212,48 @@
 <td style="text-align: left;">LINE</td>
 </tr>
 <tr>
-<td style="text-align: left;">在整个段内恒定，&lt;&gt; 0</td>
+<td style="text-align: left;">在整个段中恒定，&lt;&gt; 0</td>
 <td style="text-align: left;">圆弧</td>
 <td style="text-align: left;">CIRCULARARC</td>
 </tr>
 <tr>
 <td style="text-align: left;">沿段变化</td>
-<td style="text-align: left;">线性曲率变化过渡</td>
+<td style="text-align: left;">具有线性曲率变化的过渡段</td>
 <td style="text-align: left;">CLOTHOID, CUBIC</td>
 </tr>
 <tr>
 <td style="text-align: left;">沿段变化</td>
-<td style="text-align: left;">非线性曲率变化过渡</td>
+<td style="text-align: left;">具有非线性曲率变化的过渡段</td>
 <td style="text-align: left;">HELMERTCURVE, BLOSSCURVE, COSINECURVE, SINECURVE, VIENNESEBEND</td>
 </tr>
 </tbody>
-</table><figcaption>表 8.7.2.2.A<a class="link" href="#-bf7dc860-ca65-4e8c-ba88-d7d12e2bf503"><i data-feather="link"></i></a></figcaption></figure>
-<p><strong>水平对齐段的几何视角</strong></p>
-<p>传统观点在与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignment.htm">IfcAlignment</a> 文档相关的业务术语的背景下被描述。在现代计算机可用之前，对齐设计是使用“传统”绘图技术完成的。在计算机化初期，这种起源导致首先在 x,y 空间中表示，然后第二步检查安全相关属性。这仍然可以在 1980 年或更早生效的规定中看到。当然，基于这些规定设计的图纸反映了文档精度中的“足够好”的态度。</p>
-<p>在后期，可以看到运动学视角的重要性日益增加。在此，精确控制横向加速度（水平和纵坡布局）和垂直加速度（垂直布局）变得普遍。设计者开始使用高性能过渡曲线，尤其是在高速场景中。在运动学视角中，连续段之间的精确曲率拟合需要比传统几何视角中的“足够好”方法更好。核心术语例如“加加速度”、“理论纵坡”或“纵坡不足”。</p>
-<p><strong>给定曲率的内在 x, y 坐标的通用计算</strong></p>
-<p>对于具有已知曲率公式的每个水平对齐段，存在一个计算段内在坐标的通用方法。</p>
+</table><figcaption>表 8.7.2.2.A<a class="link" href="#-52c00e79-c378-4389-8a74-67d2a73d5fe7"><i data-feather="link"></i></a></figcaption></figure>
+<p><strong>水平线形段的几何视角</strong></p>
+<p>传统视角在IFC线形文档相关的业务术语上下文中被称为几何视角。在现代计算机出现之前，线形设计使用"传统"绘图技术进行。在计算机化的第一阶段，这种起源导致首先在x,y空间中进行表示，然后在第二步检查安全相关属性。这在1980年或更早实施的规范中仍然可见。当然，基于这些规范产生的设计反映了文档精度中的"足够好"态度。</p>
+<p>在后期阶段，可以观察到运动学视角的重要性日益增加。在这里，横向加速度（水平和超高布局）和垂直加速度（垂直布局）的精确控制变得普遍。设计师开始使用高性能过渡弯道，特别是在高速场景中。在运动学视角中，连续段之间的精确曲率拟合需要比传统几何视角的"足够好"方法更好。核心术语例如"急动度"、"理论超高"或"欠超高"。</p>
+<p><strong>给定曲率的内禀x,y坐标的通用计算</strong></p>
+<p>对于每个具有已知曲率公式的水平线形段，存在计算段内禀坐标的通用方法。</p>
 <p>$$\displaylines{ \varphi(s) = \int d \varphi = \int \kappa(s) \ d s \\
 x(s) = \int cos \ \varphi(s) \ d s = \int cos( \int \kappa(s) \ d s \ ) d s \\
 y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$</p>
 <aside class="aside-note"><mark>注释</mark> While it is possible to apply the generic calculation also for trivial cases like LINE or CIRCULARARC it is much more efficient to use available formulas.</aside>
 <p><strong>警告</strong></p>
-<p>在将“足够好”的传统设计纳入高精度 3D 模型之前，必须仔细检查。可能需要进行中间校正。幸运的是，曲线在经典几何视角和更新的运动学视角中都与可比的文档质量配合得非常好。幸运的是，绝大多数水平过渡曲线被设计和实现为曲线。</p>
+<p>"足够好"的传统设计在纳入高精度3D模型之前必须仔细检查。可能需要进行中间修正。幸运的是，无论是在经典几何视角还是在较新的运动学视角中，回旋曲线在可比较的文档质量下都表现良好。幸运的是，绝大多数水平过渡弯道都是作为回旋曲线设计和实施的。</p>
 <p><strong>建议</strong></p>
-<p>检查相关网络的相关规定。对齐设计本身在道路或轨道的使用寿命内非常稳定。特别是对于旧设计，必须非常仔细地检查可用文档的质量和精度。在实现高精度 BIM 环境和遗留文档系统之间自动化数据流之前，应建立对局限性的清晰理解。这既适用于遗留的中央数据库，也适用于遗留的单个文档。</p>
+<p>检查相关网络的适用规范。线形设计本身在道路或轨道的使用寿命期间非常稳定。特别是对于旧设计，必须非常仔细地检查可用文档的质量和精度。在实现高精度BIM环境与遗留文档系统之间的自动化数据流之前，应明确了解限制条件。这既适用于遗留的中央数据库，也适用于遗留的单个文档。</p>
 <p><strong>使用的符号及其含义</strong></p>
-<figure><a class="anchor" id="-6a322730-dc4b-4a8d-b36d-3f04e854c052"></a><table>
+<figure><a class="anchor" id="-fdc40503-cdbe-4c2a-b165-984685331033"></a><table>
 <thead>
 <tr>
 <th style="text-align: left;">符号</th>
 <th style="text-align: left;">含义</th>
-<th style="text-align: left;">单位，值范围</th>
+<th style="text-align: left;">单位、值范围</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">L</td>
-<td style="text-align: left;">段的总长度</td>
+<td style="text-align: left;">段的完整长度</td>
 <td style="text-align: left;">正长度 L &gt; 0</td>
 </tr>
 <tr>
@@ -263,53 +263,53 @@ y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$<
 </tr>
 <tr>
 <td style="text-align: left;">ξ</td>
-<td style="text-align: left;">= s / L (希腊字母 "xi") 标准化、无量纲的对齐线/轨道中心线路径长度</td>
+<td style="text-align: left;">= s / L（希腊字母"xi"）沿对齐/轨道中心线的标准化无量纲路径长度</td>
 <td style="text-align: left;">0 &lt; ξ &lt; 1</td>
 </tr>
 <tr>
 <td style="text-align: left;">κ</td>
-<td style="text-align: left;">(希腊字母 "kappa") 俯视图（水平布局）中对齐线/轨道中心线的曲率（曲率半径的倒数）。</td>
+<td style="text-align: left;">（希腊字母"kappa"）平面图（水平布局）中对齐/轨道中心线的曲率（半径倒数）</td>
 <td style="text-align: left;">1/半径</td>
 </tr>
 <tr>
 <td style="text-align: left;">κ<sub>1</sub></td>
-<td style="text-align: left;">俯视图（水平布局）中对齐线/轨道中心线开始处的曲率（曲率半径的倒数）。</td>
+<td style="text-align: left;">平面图（水平布局）中对齐/轨道中心线起始处的曲率（半径倒数）</td>
 <td style="text-align: left;">1/半径</td>
 </tr>
 <tr>
 <td style="text-align: left;">h</td>
-<td style="text-align: left;">计算所用重力中心线高于地面规划中轨道中心线的高度。</td>
+<td style="text-align: left;">用于计算的质心线在地面平面中高于轨道中心线的高度</td>
 <td style="text-align: left;">长度</td>
 </tr>
 <tr>
 <td style="text-align: left;">ψ</td>
-<td style="text-align: left;">(希腊字母 "psi") 纵坡角（横向坡度角、横坡角）</td>
+<td style="text-align: left;">（希腊字母"psi"）超高角（横坡角、倾斜角）</td>
 <td style="text-align: left;">弧度</td>
 </tr>
 <tr>
 <td style="text-align: left;">φ</td>
-<td style="text-align: left;">(希腊字母 "phi") 方向角（方位角、方位）</td>
+<td style="text-align: left;">（希腊字母"phi"）方向角（方位角、轴承角）</td>
 <td style="text-align: left;">弧度</td>
 </tr>
 <tr>
 <td style="text-align: left;">x(s)</td>
-<td style="text-align: left;">对齐线/轨道中心线在地面规划中的投影的可变纵坐标。</td>
+<td style="text-align: left;">对齐/轨道中心线在地面平面中投影的可变纵向坐标</td>
 <td style="text-align: left;">长度</td>
 </tr>
 <tr>
 <td style="text-align: left;">y(s)</td>
-<td style="text-align: left;">对齐线/轨道中心线在地面规划中的投影的可变横坐标。</td>
+<td style="text-align: left;">对齐/轨道中心线在地面平面中投影的可变横向坐标</td>
 <td style="text-align: left;">长度</td>
 </tr>
 </tbody>
-</table><figcaption>表 8.7.2.2.B<a class="link" href="#-6a322730-dc4b-4a8d-b36d-3f04e854c052"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.2.2.B<a class="link" href="#-fdc40503-cdbe-4c2a-b165-984685331033"><i data-feather="link"></i></a></figcaption></figure>
 <p><strong>术语</strong></p>
-<p><strong>内在坐标，对齐段的内在坐标系：</strong></p>
-<p>内在坐标系的原点是段的起点。正 x 轴的方向是段的起始方向。</p>
+<p><strong>内禀坐标，线形段的内禀坐标系：</strong></p>
+<p>内禀坐标系的原点是段的起点。正x轴的方向是段的起始方向。</p>
 <h2><a class="anchor" id="8.7.2.2.2-"></a>
     8.7.2.2.2 类型值
 <a class="link" href="#8.7.2.2.2-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6aa8e25b-909e-47c6-a1e6-ec222b56a0f2"></a><table class="striped type-values">
+<figure><a class="anchor" id="-a492bd42-d95b-4e82-87a8-1b9393ce7beb"></a><table class="striped type-values">
 <thead>
 <tr>
 <th>类型</th>
@@ -320,7 +320,9 @@ y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$<
 <tr>
 <td data-label="Name"><code>BLOSSCURVE
             <td data-label="Description">
-<p>Bloss 过渡是高性能过渡曲线的一种较新形式。于 1936 年提出。现在已在多个铁路网络中使用。没有成熟的粗略几何近似。</p><aside class="aside-note"><mark>注释</mark> 进一步阅读：Constantin Ciobanu, BLOSS TRANSITION – A SHORT DESIGN GUIDE</aside><p><strong>基准公式（曲率）</strong></p><p>$$ \displaylines{
+<p>布洛斯过渡是较新形式的高性能过渡弯道。于1936年提出，现在在几个铁路网络中使用。没有建立的粗略几何近似。</p><blockquote>
+<p>注意：进一步阅读：Constantin Ciobanu, BLOSS TRANSITION – A SHORT DESIGN GUIDE</p>
+</blockquote><p><strong>基本公式（曲率）</strong></p><p>$$ \displaylines{
   \xi = \frac{s}{L} \\
   \kappa(s) = \kappa_{1} + (3 - 2\xi) \  \xi^2 \ \Delta \kappa
 } $$</p>
@@ -329,23 +331,20 @@ y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$<
 <tr>
 <td data-label="Name"><code>CIRCULARARC
             <td data-label="Description">
-<p>在几何视角中，它表示遵循圆形路径的两点之间的连接。在动力学视角中，它表示运动车辆上具有恒定横向加速度的段，即恒定曲率。</p><p><strong>基准公式（曲率）</strong></p><p>$$ \kappa = const, \kappa &lt;&gt; 0 $$</p>
+<p>在几何视角中，它表示沿圆形路径连接两点的线段。在动态视角中，它表示对移动车辆具有恒定横向加速度的段，即恒定曲率。</p><p><strong>基本公式（曲率）</strong></p><p>$$ \kappa = const, \kappa &lt;&gt; 0 $$</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>CLOTHOID
             <td data-label="Description">
-<p>在几何视角中，曲线表示两点之间的连接，其中曲率半径沿段以恒定速率变化。曲线是几何学早期的一项成就，也称为欧拉螺旋线或康努螺旋线。由于有归一化曲线的制表数据，它在道路和铁路设计中非常受欢迎，即使在计算机广泛可用之前也是如此。正确应用所谓的曲线常数可以快速解决在两个连续恒定曲率段之间集成曲线段所需的所有相关参数。在大多数情况下，曲线可以平滑直线和圆弧之间的曲率。
-<br/>
-在动力学视角中，它表示曲率引起的横向加速度变化率恒定的段。曲线的运动学优点可以减少火车对轨道施加的力，改善火车乘客的旅行体验，并通过避免突然转动方向盘来减轻驾驶员的压力。<br/>
-曲线作为平滑段的运动学优点也适用于目前使用的所有其他过渡曲线。</p><p><strong>基准公式（曲率）</strong></p><p>$$ \displaylines{ \xi = \frac{s}{L} \\
+<p>在几何视角中，回旋曲线表示两点之间的连接，其中曲率半径沿段以恒定速率变化。回旋曲线是几何学的早期成就，也称为欧拉螺线或科纽螺线。在计算机广泛普及之前，由于标准化回旋曲线表的可用性，它在道路和铁路设计中变得非常流行。适当应用所谓的回旋曲线常数可以为在两个连续恒定曲率段之间集成回旋曲线段所需的所有相关参数提供快速解决方案。在大多数情况下，回旋曲线平滑了直线和圆弧之间的曲率。<br/></p><p>在动态视角中，它表示由曲率引起的横向加速度变化率恒定的段。回旋曲线的运动学特性既减少了列车对轨道施加的力，改善了列车乘客的旅行体验，也通过避免方向盘的突然移动减少了汽车驾驶员的压力。<br/></p><p>回旋曲线作为平滑段的运动学优势也适用于当前使用的所有其他过渡弯道。</p><p><strong>基本公式（曲率）</strong></p><p>$$ \displaylines{ \xi = \frac{s}{L} \\
 \kappa(s) = \kappa_{1} + \xi \Delta \kappa }$$</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>COSINECURVE
             <td data-label="Description">
-<p>余弦过渡。余弦过渡早在 1868 年就已讨论过。随着高速铁路的出现，它被应用于生产设计。例如，它安装在日本高速线路上。</p><p><strong>基准公式（曲率）</strong></p><p>$$ \displaylines{
+<p>余弦过渡。余弦过渡在1868年已被讨论。随着高速铁路的出现，它被应用于生产设计中。例如，它安装在日本的高速线路上。</p><p><strong>基本公式（曲率）</strong></p><p>$$ \displaylines{
   \xi = \frac{s}{L} \\
   \kappa(s) = \kappa_{1} + \frac{1}{2}(1- cos(\pi\xi) \ ) \Delta \kappa
 } $$</p>
@@ -354,13 +353,15 @@ y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$<
 <tr>
 <td data-label="Name"><code>CUBIC
             <td data-label="Description">
-<p>在 IFC 中，CUBIC 表示 x 和 y 坐标遵循三次公式的过渡段。</p><p><strong>通用公式</strong></p><p>$$ y = a \cdot x^3 + b \cdot x^2 + c \cdot x + d $$</p><p>很早就发现，将 <strong>a</strong> 设置为“1 / 6RL”并将 <strong>b</strong>、<strong>c</strong> 和 <strong>d</strong> 设置为 0 在许多情况下可以得到足够好的曲线近似。</p><p><strong>对齐的立方公式</strong></p><p>$$ y = \frac{x^3}{6 \cdot R \cdot L} $$</p><p>由于立方体的手动计算比理论上合理的曲线容易得多，因此立方过渡作为“足够好”的替换曲线变得非常受欢迎。</p><p>立方体过渡仍然可以在许多基于早期设计规范的遗留对齐中找到。也有一些规定包含新设计的立方过渡。</p><p>显然，简单的近似不能满足运动学正确轨道设计的所有要求。例如，切线连续性的要求常常被为了降低设计成本而使用足够好的立方曲线所忽略。</p><p>立方体有两种变体，称为<strong>立方抛物线</strong>或<strong>立方螺旋线</strong>，分别将偏转角的正弦或余弦设置为 0。</p>
+<p>在IFC中，CUBIC表示x和y坐标遵循三次公式的过渡段。</p><p><strong>通用公式</strong></p><p>$$ y = a \cdot x^3 + b \cdot x^2 + c \cdot x + d $$</p><p>很早就发现，将<strong>a</strong>设置为"1 / 6RL"，将<strong>b</strong>、<strong>c</strong>和<strong>d</strong>设置为0，在许多情况下可以得到足够好的回旋曲线近似。</p><p><strong>线形的三次公式</strong></p><p>$$ y = \frac{x^3}{6 \cdot R \cdot L} $$</p><p>由于三次曲线的手动计算比理论上正确的回旋曲线容易得多，三次过渡作为"足够好"的替代曲线变得非常流行。</p><p>基于早期设计规范的许多遗留线形中仍然可以找到三次过渡弯道。也存在包含新设计三次过渡的规范。</p><p>显然，简单近似无法满足运动学正确轨道设计的所有要求。例如，通过使用足够好的三次曲线来降低设计成本，经常忽略切线连续性的要求。</p><p>三次曲线有两种变体，称为<strong>三次抛物线</strong>或<strong>三次螺线</strong>，将偏角的正弦或余弦设置为0。</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>HELMERTCURVE
             <td data-label="Description">
-<p>Helmert 曲线或 Helmert 过渡是高性能过渡曲线的一个早期示例。现在，相关科学和工程领域普遍认为，曲线的线性变化会在高于 125 km/h 的速度下对运行中的火车产生不希望的运动学影响。</p><p>在几何视角中，Helmert 段是由两个相同长度的部分组成的，它们镜像了曲率半径的相同变化。一种粗略的近似称为双二次抛物线。</p><aside class="aside-note"><mark>注释</mark> 也称为 Schramm 曲线。</aside><p><strong>基准公式（曲率）</strong></p><p>$$ \displaylines{
+<p>赫尔默特曲线或赫尔默特过渡是高性能过渡弯道的早期例子。相关科学和工程现在广泛接受，回旋曲线的线性变化在速度高于125公里/小时时会对运行的列车产生不良的运动学影响。</p><p>在几何视角中，赫尔默特段是相同长度的两部分的组合，它们镜像相同的曲率半径变化。一个粗略的近似被称为双二次抛物线。</p><blockquote>
+<p>注意：也称为施拉姆曲线。</p>
+</blockquote><p><strong>基本公式（曲率）</strong></p><p>$$ \displaylines{
   \xi = \frac{s}{L} \\
   \text{前半部分: } \kappa(s) = \kappa_{1} + 2\xi^2 \Delta \kappa \\
   \text{后半部分: } \kappa(s) = \kappa_{1} + ( 1 - 2 (1 - \xi)^2) \Delta \kappa
@@ -370,13 +371,15 @@ y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$<
 <tr>
 <td data-label="Name"><code>LINE
             <td data-label="Description">
-<p>在几何视角中，它表示两点之间的直线连接。在动力学视角中，它表示曲率为 0 的段。这意味着运动车辆不受横向加速度的影响。</p><p><strong>基准公式（曲率）</strong></p><p>$$ \kappa=0 $$</p>
+<p>在几何视角中，它表示两点之间的直线连接。在动态视角中，它表示曲率值为0的段。这意味着没有横向加速度作用于移动车辆。</p><p><strong>基本公式（曲率）</strong></p><p>$$ \kappa=0 $$</p>
 </td>
 </code></td></tr>
 <tr>
 <td data-label="Name"><code>SINECURVE
             <td data-label="Description">
-<p>正弦过渡或正弦过渡曲线于 1937 年提出。曲率函数由一个周期的正弦函数构成。正弦曲线以其特别有利的端点平滑特性而著称。与曲线相比，它的长度是曲线的两倍。</p><aside class="aside-note"><mark>注释</mark> 也称为 Klein 曲线。</aside><p><strong>基准公式（曲率）</strong></p><p>$$ \displaylines{
+<p>正弦过渡或正弦曲线过渡于1937年提出。曲率函数由一个周期的正弦函数构成。正弦曲线的特点是在端点具有特别有利的平滑特性。与回旋曲线相比，它的长度是两倍。</p><blockquote>
+<p>注意：也称为克莱因曲线。</p>
+</blockquote><p><strong>基本公式（曲率）</strong></p><p>$$ \displaylines{
   \xi = \frac{s}{L} \\
   \kappa(s) = \kappa_{1} + ( \xi - \frac{1}{2\pi}sin(2\pi\xi) \ ) \Delta \kappa
 } $$</p>
@@ -385,7 +388,7 @@ y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$<
 <tr>
 <td data-label="Name"><code>VIENNESEBEND
             <td data-label="Description">
-<p>维也纳弯道 (R) 是一种创新的轨道几何过渡元素。它不是在轨道平面上分析车辆运动，而是将优化目标设定在高于钢轨的指定高度的重力中心线上。</p><p>因此，水平对齐中心线的路径也受到纵坡布局的影响。曲率公式的第一部分与其它过渡曲线一样，由基本函数组成。附加项包含银行角“ψ”和重力中心线高度“h”，并且是维也纳弯道 (R) 所特有的。该项在 x,y 布局中引起一个与主方向相反的小位移。</p><p><strong>曲率公式</strong></p><p>$$ \displaylines{
+<p>维也纳弯道(R)是一种创新的轨道几何过渡元素。优化工作不是分析车辆在轨道平面上的运动，而是针对轨道上方特定高度的质心线。</p><p>因此，水平对齐中心线的路径也受到超高布局的影响。曲率公式的第一部分像其他过渡弯道一样从基本函数组装。附加项包含超高角"ψ"和质心线高度"h"，这是维也纳弯道(R)独有的。该项导致在x,y布局中产生与主方向相反的小运动。</p><p><strong>曲率公式</strong></p><p>$$ \displaylines{
   \xi = \frac{s}{L} \\
   \psi(s) = \psi_1 + \Delta\psi \cdot \xi^4 \cdot (35-84\xi + 70\xi^2-20\xi^3) \\
   \kappa(s) = \kappa_{1} + ( \Delta \kappa \cdot \xi^2 \cdot (35-84\xi + 70\xi^2-20\xi^3) \\
@@ -394,7 +397,7 @@ y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$<
 </td>
 </code></td></tr>
 </tbody>
-</table><figcaption>表 8.7.2.2.C<a class="link" href="#-6aa8e25b-909e-47c6-a1e6-ec222b56a0f2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.2.2.C<a class="link" href="#-a492bd42-d95b-4e82-87a8-1b9393ce7beb"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.2.2.3-Formal-representation-"></a>
     8.7.2.2.3 形式化表示（Formal representation）
 <a class="link" href="#8.7.2.2.3-Formal-representation-"><i data-feather="link"></i></a></h2>

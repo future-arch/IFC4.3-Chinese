@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.4 IfcAsymmetricIShapeProfileDef - IFC 4.3.2 Documentation</title>
+<title>8.15.3.4 IfcAsymmetricIShapeProfileDef（非对称I形轮廓定义） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,26 +189,26 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.15.3.4 IfcAsymmetricIShapeProfileDef</h1>
+<h1>8.15.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a>（非对称I形轮廓定义）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.15.3.4.1-Semantic-definition-"></a>
     8.15.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.15.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> 定义了一个截面轮廓，它提供了单对称 I 形截面的定义参数。其参数和相对于位置坐标系的定向符合以下图示。位置坐标系的中心位于轮廓边界框的中心。</p>
-<!-- end of short definition -->
-<p>轮廓的总宽度由底部翼缘宽度和顶部翼缘宽度的最大值隐式给出。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> 也可以用于模拟钢轨轮廓，前提是应用场景不需要完整的钢轨轮廓显式形状模型。或者，可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></em> 来提供钢轨轮廓的精确形状。无论哪种方式，都应提供对外部文档或库的引用，以进一步定义轮廓，如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 中所述。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> 定义了一个截面轮廓，提供了单对称I形截面的定义参数。其参数和相对于位置坐标系统的方向遵循下图所示。位置坐标系统的中心位于轮廓边界框的中心。</p>
+<!-- 简短定义结束 -->
+<p>轮廓的总宽度隐式地由下翼缘宽度和上翼缘宽度的最大值给出。</p>
+<p>如果应用场景不需要轨道轮廓的完整显式形状模型，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> 也可用于建模轨道轮廓。或者，可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></em> 来提供轨道轮廓的精确形状。无论哪种方式，都应引用外部文档或库以进一步定义轮廓，如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 中所述。</p>
 <aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> All profile origins are now in the center of the bounding box. The attribute <em>CentreOfGravityInY</em> has been made OPTIONAL.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Supertype changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em>. Attributes which were inherited from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></em> are now defined directly at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> and have been partially renamed but were not reordered.
 Bottom flange may be narrower than top flange.
 Type of <em>TopFlangeFilletRadius</em> relaxed to allow for zero radius.
 Trailing attribute <em>CentreOfGravityInY</em> deleted, use respective property in <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> instead.
 Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopFlangeEdgeRadius</em>, <em>TopFlangeSlope</em> added.</aside>
-<p>图 8.15.3.4.A 说明了非对称 I 形截面定义的参数。参数化轮廓定义了自己的位置坐标系。底层坐标系由使用轮廓定义的扫掠区域实体定义。它是：</p>
+<p>图1说明了非对称I形截面定义的参数。参数化轮廓定义了其自身的位置坐标系统。基础坐标系统由使用该轮廓定义的扫描实体定义。它是以下项的xy平面：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em></li>
 </ul>
-<p>的 xy 平面。通过使用位置偏移，参数化轮廓可以居中放置（使用 x,y 偏移量 = 0.），或相对于轮廓的任何位置。参数化轮廓由一组参数属性定义。在所示示例中，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> 中的“CentreOfGravityInY”属性（如果提供）为负值。</p>
-<figure><a class="anchor" id="-1-I-"></a><img alt="asymmetric I shape profile" src="../figures/ifcasymmetricishapeprofiledef.gif" title="图 8.15.3.4.A — 非对称 I 形截面"/><figcaption>图 8.15.3.4.A — 非对称 I 形截面<a class="link" href="#-1-I-"><i data-feather="link"></i></a></figcaption></figure>
+<p>通过使用位置偏移，参数化轮廓可以定心定位（使用x,y偏移=0.），或相对于轮廓的任何位置。参数化轮廓由一组参数属性定义。在所示示例中，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> 中的 'CentreOfGravityInY' 属性（如果提供）为负值。</p>
+<figure><a class="anchor" id="-1-I-"></a><img alt="非对称I形轮廓" src="../figures/ifcasymmetricishapeprofiledef.gif" title="图1 — 非对称I形轮廓"/><figcaption>图1 — 非对称I形轮廓<a class="link" href="#-1-I-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.4.2-Entity-inheritance-"></a>
     8.15.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.15.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -251,7 +251,7 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
     8.15.3.4.3 特性（Attributes）
 <a class="link" href="#8.15.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-40a4da92-287b-4bb2-902d-2b49d8690683"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-cc894e7a-932e-4490-b94d-6903d2c512ba"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -273,68 +273,10 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 <small>(4)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                ProfileType
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
-<td data-label="Description">
-<p>定义此轮廓定义应解析成的几何类型，是曲线还是曲面区域。对于曲线，轮廓应由扫掠曲面引用；对于区域，轮廓应由扫掠面积实体引用。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                ProfileName
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓标识符应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasExternalReference</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
-<td data-label="Description">
-<p>指向与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasProperties</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
-<td data-label="Description">
-<p>轮廓的附加属性，例如机械性能。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
 <small>(1)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                Position
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></td>
-<td data-label="Description">
-<p>参数化轮廓定义的定位坐标系。如果未指定，则不应用平移和旋转。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -355,156 +297,12 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 <small>(12)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                BottomFlangeWidth
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>底部翼缘的宽度，平行于位置坐标系的 x 轴定义。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                OverallDepth
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>总深度，平行于位置坐标系的 y 轴定义。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                WebThickness
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>I 形截面腹板的厚度。腹板位于位置坐标系的 x 轴和 y 轴上。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">7</td>
-<td data-label="Name">
-                
-                BottomFlangeThickness
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>底部翼缘的厚度。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">8</td>
-<td data-label="Name">
-                
-                BottomFlangeFilletRadius
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
-<td data-label="Description">
-<p>腹板和底部翼缘之间的圆角半径。尖角为 0，未知时省略。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">9</td>
-<td data-label="Name">
-                
-                TopFlangeWidth
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>顶部翼缘的宽度，平行于位置坐标系的 x 轴定义。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">10</td>
-<td data-label="Name">
-                
-                TopFlangeThickness
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>顶部翼缘的厚度。此属性仅因历史原因而形式上可选。每当翼缘厚度已知时，都应提供该值。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">11</td>
-<td data-label="Name">
-                
-                TopFlangeFilletRadius
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
-<td data-label="Description">
-<p>腹板和顶部翼缘之间的圆角半径。尖角为 0，未知时省略。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">12</td>
-<td data-label="Name">
-                
-                BottomFlangeEdgeRadius
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
-<td data-label="Description">
-<p>底部翼缘上边缘的半径。尖角为 0，未知时省略。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">13</td>
-<td data-label="Name">
-                
-                BottomFlangeSlope
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
-<td data-label="Description">
-<p>底部翼缘上表面的斜率。在底部翼缘锥形的情况下非零，在底部翼缘平行的情况下为 0，未知时省略。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">14</td>
-<td data-label="Name">
-                
-                TopFlangeEdgeRadius
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
-<td data-label="Description">
-<p>顶部翼缘下边缘的半径。尖角为 0，未知时省略。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">15</td>
-<td data-label="Name">
-                
-                TopFlangeSlope
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
-<td data-label="Description">
-<p>顶部翼缘下表面的斜率。在顶部翼缘锥形的情况下非零，在顶部翼缘平行的情况下为 0，未知时省略。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.15.3.4.B<a class="link" href="#-40a4da92-287b-4bb2-902d-2b49d8690683"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.4.B<a class="link" href="#-cc894e7a-932e-4490-b94d-6903d2c512ba"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.4.4-Formal-propositions-"></a>
     8.15.3.4.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.4.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-e27f0fb5-6b47-4135-80dd-bc4b3c96c198"></a><table>
+<figure><a class="anchor" id="-431155df-2b7b-4dc9-9acb-271212301794"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -515,7 +313,7 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 <tr>
 <td>ValidBottomFilletRadius</td>
 <td>
-<p>底部圆角半径（如果提供）应在允许值的范围内。</p>
+<p>下圆角半径（如果给出）应在允许值范围内。</p>
 </td>
 </tr>
 <tr>
@@ -538,7 +336,7 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 <tr>
 <td>ValidTopFilletRadius</td>
 <td>
-<p>顶部圆角半径（如果提供）应在允许值的范围内。</p>
+<p>上圆角半径（如果给出）应在允许值范围内。</p>
 </td>
 </tr>
 <tr>
@@ -559,7 +357,7 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.4.C<a class="link" href="#-e27f0fb5-6b47-4135-80dd-bc4b3c96c198"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.4.C<a class="link" href="#-431155df-2b7b-4dc9-9acb-271212301794"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.4.5-"></a>
     8.15.3.4.5 属性集
 <a class="link" href="#8.15.3.4.5-"><i data-feather="link"></i></a></h2>
@@ -600,7 +398,7 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 </p><h2><a class="anchor" id="8.15.3.4.6-Concept-usage-"></a>
     8.15.3.4.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.4.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-559938d0-d6e1-4c14-a3f7-62f279da19a0"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-ba7e818f-8854-48d9-9280-bd81696f1376"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -644,7 +442,7 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.4.D<a class="link" href="#-559938d0-d6e1-4c14-a3f7-62f279da19a0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.4.D<a class="link" href="#-ba7e818f-8854-48d9-9280-bd81696f1376"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.4.7-Formal-representation-"></a>
     8.15.3.4.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.4.7-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.45 IfcPlacement (放置) - IFC 4.3.2 Documentation</title>
+<title>8.9.3.45 IfcPlacement（定位） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.45 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a> (放置)</h1>
+<h1>8.9.3.45 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a>（定位）</h1>
 <div class="mvd" title="Included in IfcAxis1Placement, IfcAxis2Placement2D, IfcAxis2Placement3D">RV ⓘ</div>
 <div class="mvd" title="Included in IfcAxis1Placement, IfcAxis2Placement2D, IfcAxis2Placement3D, IfcAxis2PlacementLinear, IfcPolynomialCurve.Position">AbV ⓘ</div>
 <div class="row">
@@ -202,10 +202,10 @@
 <h2><a class="anchor" id="8.9.3.45.1-Semantic-definition-"></a>
     8.9.3.45.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.45.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a></em> 是放置子类型的抽象超类型，它定义了项或整个形状表示的位置，并提供其方向。所有放置子类型都定义右手笛卡尔坐标系，并且不允许镜像。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a></em> 是一个抽象超类型，用于定义项目或整个形状表示的位置并提供其方向的定位子类型。所有定位子类型都定义右手笛卡尔坐标系，且不允许镜像变换。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Cartesian transformations including mirroring and scaling are supported by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em></aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-A placement locates a geometric item with respect to the coordinate system of its geometric context. It locates the item to be defined and, in the case of the axis placement subtypes, gives its orientation.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>placement</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0</aside>
+<aside class="aside-note"><mark>注释</mark> 包括镜像和缩放在内的笛卡尔变换由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em> 支持</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
+定位将几何项目放置于其几何坐标系的上下文中。它确定了待定义项目的位置，在轴定位子类型的情况下还提供了其方向。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>placement</strong>。</aside><aside class="aside-history"><mark>沿革</mark> 在 IFC1.0 中新增的实体</aside>
 <h2><a class="anchor" id="8.9.3.45.2-Entity-inheritance-"></a>
     8.9.3.45.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.45.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -269,7 +269,7 @@ A placement locates a geometric item with respect to the coordinate system of it
     8.9.3.45.3 特性（Attributes）
 <a class="link" href="#8.9.3.45.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-51d924b5-91d6-4f8d-ba60-b1b310f32588"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-862ef384-6149-41bf-9aab-7776a9f05937"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -298,8 +298,8 @@ A placement locates a geometric item with respect to the coordinate system of it
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -309,8 +309,8 @@ A placement locates a geometric item with respect to the coordinate system of it
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -340,7 +340,7 @@ A placement locates a geometric item with respect to the coordinate system of it
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></td>
 <td data-label="Description">
-<p>要定位的项的参考点的几何位置，例如圆心。</p>
+<p>参考点（如圆心）的几何位置，用于确定待定位项目的位置。</p>
 </td>
 </tr>
 <tr>
@@ -354,11 +354,11 @@ A placement locates a geometric item with respect to the coordinate system of it
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">Location.Dim</code></pre>
-<p>此类的空间维度，由位置的维度派生。</p>
+<p>该类的空间维度，由位置坐标的维度推导得出。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.45.A<a class="link" href="#-51d924b5-91d6-4f8d-ba60-b1b310f32588"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.45.A<a class="link" href="#-862ef384-6149-41bf-9aab-7776a9f05937"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.45.4-Formal-representation-"></a>
     8.9.3.45.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.45.4-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7.3.12 IfcGridPlacement - IFC 4.3.2 Documentation</title>
+<title>8.7.3.12 IfcGridPlacement（网格定位） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,43 +189,43 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.7.3.12 IfcGridPlacement</h1>
+<h1>8.7.3.12 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a>（网格定位）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.7.3.12.1-Semantic-definition-"></a>
     8.7.3.12.1 语义定义（Semantic definition）
 <a class="link" href="#8.7.3.12.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <blockquote></blockquote>
-<!-- end of short definition -->
-<p>IFC4.3.0.0 更改：在 IFC 4.3 中，<em>PlacementRelTo</em> 属性已从 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a> 移至其超类型 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a>，后者也是此实体的超类型。这意味着，为了正确的全局定位，<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a> 将通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a>.PlacementRelTo 参考 (a) <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a> 的 ObjectPlacement，并通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a> 参考 (b) 包含在同一网格中的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a> 对。</p>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em> 提供了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 的特化，其中对象坐标系的放置和轴方向由对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 中定义的设计网格的引用定义。</p>
-<p>对象坐标系的位置由 <em>PlacementLocation</em> 属性给出。它被定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em>，即两个网格轴的交点，带有可选的偏移量。</p>
-<p>x 轴的轴方向给出如下：</p>
+<!-- 简短定义结束 -->
+<p>IFC4.3.0.0 变更说明 在IFC 4.3中，_PlacementRelTo_属性已从IfcLocalPlacement移至其超类型IfcObjectPlacement（也是本实体的超类型）。这意味着为了实现正确的全局定位，IfcGridPlacement将通过IfcObjectPlacement.PlacementRelTo引用(a) IfcGrid的ObjectPlacement，并通过IfcVirtualGridIntersection引用(b)同一网格中包含的一对<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a>。</p>
+<p>_IfcGridPlacement_对_IfcObjectPlacement_进行了特殊化定义，其中对象坐标系的位置和轴向通过引用_IfcGrid_中定义的设计网格来确定。</p>
+<p>对象坐标系的位置由属性_PlacementLocation_给出。它被定义为_IfcVirtualGridIntersection_，即两个网格轴之间的交点（可含偏移量）。</p>
+<p>对象坐标系x轴的轴向通过以下方式确定：</p>
 <ul>
-<li><em>PlacementRefDirection</em> = NIL：由虚拟交点处第一条网格轴的切线（如果提供了 <em>PlacementLocation.OffsetDistances</em>，则可能使用偏移曲线）给出；</li>
-<li><em>PlacementRefDirection</em> = <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em>：由明确提供的方向信息给出；</li>
-<li><em>PlacementRefDirection</em> = <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em>：由 <em>PlacementLocation</em> 的虚拟网格交点和 <em>PlacementRefDirection</em> 的虚拟网格交点之间的切线给出。必须考虑 <em>PlacementLocation</em> 和 <em>PlacementRefDirection</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em> 中可能提供的偏移量。</li>
+<li><em>PlacementRefDirection</em> = 空值：通过第一个网格轴（<em>PlacementLocation.IntersectingAxes[1]</em>）在虚拟交点处的切线方向确定（若提供了_PlacementLocation.OffsetDistances_，则可能使用偏移曲线）；</li>
+<li><em>PlacementRefDirection</em> = <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em>：通过显式提供的方向信息确定；</li>
+<li><em>PlacementRefDirection</em> = <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em>：通过_PlacementLocation_的虚拟网格交点与_PlacementRefDirection_的虚拟网格交点之间的切线方向确定。必须考虑_PlacementLocation_和_PlacementRefDirection_的_IfcVirtualGridIntersection_中可能提供的偏移量。</li>
 </ul>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em> 的 y 轴方向是 x 轴的正交补。由 x 轴和 y 轴定义的平面应与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的局部放置的 xy 平面共面。</p>
-<p>z 轴的方向是 x 轴和 y 轴叉积的方向，即 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em> 的 z 轴应与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">IfcGrid</a></em> 的局部放置的 z 轴共线。</p>
+<p>_IfcGridPlacement_的y轴方向为x轴的正交补向量。由x轴和y轴定义的平面应与_IfcGrid_局部定位的xy平面共面。</p>
+<p>z轴方向为x轴与y轴叉积的方向，即_IfcGridPlacement_的z轴应与_IfcGrid_局部定位的z轴共线。</p>
 <aside class="aside-note"><mark>注释</mark> The <em>PlacementLocation.OffsetDistances[3]</em> and the <em>PlacementRefDirection.OffsetDistances[3]</em> shall either not be assigned or should have the same z offset value.</aside>
-<p>以下图/显示了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em> 的放置位置和方向的使用。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="without ref direction" src="../figures/ifcgridplacement-layout1.png"/><figcaption>图 8.7.3.12.A — 网格放置<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.7.3.12.A 说明了未提供 <em>PlacementRefDirection</em> 的情况 - 对象坐标系由以下项定义：</p>
+<p>以下图示展示了_IfcGridPlacement_中定位点和方向的使用方法。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="无参考方向" src="../figures/ifcgridplacement-layout1.png"/><figcaption>图1 — 网格定位<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图1展示了<em>PlacementRefDirection</em><u>未</u>提供的情况——对象坐标系由以下要素定义：</p>
 <ul>
-<li><u>其位置</u>：由 <em>PlacementLocation</em> 的虚拟网格交点给出</li>
-<li><u>其 x 轴方向</u>：由虚拟网格交点处第一条相交轴的切线给出</li>
+<li><u>位置</u>：由<em>PlacementLocation</em>的虚拟网格交点确定</li>
+<li><u>x轴方向</u>：由虚拟网格交点偏移位置处第一条相交轴的切线方向确定</li>
 </ul>
-<figure><a class="anchor" id="-2-"></a><img alt="with ref direction" src="../figures/ifcgridplacement-layout3.png"/><figcaption>图 8.7.3.12.B — 带方向的网格放置<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.7.3.12.B 说明了 <em>PlacementRefDirection</em> 被提供为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em> 的情况 - 对象坐标系由以下项定义：</p>
+<figure><a class="anchor" id="-2-"></a><img alt="含参考方向" src="../figures/ifcgridplacement-layout3.png"/><figcaption>图2 — 带方向的网格定位<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图2展示了<em>PlacementRefDirection</em>以<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em>形式提供的情况——对象坐标系由以下要素定义：</p>
 <ul>
-<li><u>其位置</u>：由 <em>PlacementLocation</em> 的虚拟网格交点给出</li>
-<li><u>其 x 轴方向</u>：由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em> 的 <em>DirectionRatios</em> 给出，仅考虑 x 和 y 的比例</li>
+<li><u>位置</u>：由<em>PlacementLocation</em>的虚拟网格交点确定</li>
+<li><u>x轴方向</u>：由<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em>的<em>DirectionRatios</em>确定，仅考虑x和y方向的比率</li>
 </ul>
-<figure><a class="anchor" id="-3-"></a><img alt="with ref direction" src="../figures/ifcgridplacement-layout2.png"/><figcaption>图 8.7.3.12.C — 带交点的网格放置<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.7.3.12.C 说明了 <em>PlacementRefDirection</em> 被提供为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em> 的情况 - 对象坐标系由以下项定义：</p>
+<figure><a class="anchor" id="-3-"></a><img alt="含参考方向" src="../figures/ifcgridplacement-layout2.png"/><figcaption>图3 — 带交点的网格定位<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图3展示了<em>PlacementRefDirection</em>以<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></em>形式提供的情况——对象坐标系由以下要素定义：</p>
 <ul>
-<li><u>其位置</u>：由 <em>PlacementLocation</em> 的虚拟网格交点给出</li>
-<li><u>其 x 轴方向</u>：由 <em>PlacementLocation</em> 的虚拟网格交点和 <em>PlacementRefDirection</em> 的虚拟网格交点之间的直线的切线给出。</li>
+<li><u>位置</u>：由<em>PlacementLocation</em>的虚拟网格交点确定</li>
+<li><u>x轴方向</u>：由<em>PlacementLocation</em>的虚拟网格交点与<em>PlacementRefDirection</em>的虚拟网格交点之间的连线切线方向确定</li>
 </ul>
 <aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5. The entity name was changed from IfcConstrainedPlacement in IFC2x.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Attribute data type of <em>PlacementRefDirection</em> has been changed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacementDirectionSelect.htm">IfcGridPlacementDirectionSelect</a></em>.</aside>
 <h2><a class="anchor" id="8.7.3.12.2-Entity-inheritance-"></a>
@@ -251,7 +251,7 @@
     8.7.3.12.3 特性（Attributes）
 <a class="link" href="#8.7.3.12.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-5d60418f-5a71-4c8c-89d5-29974e289108"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-f0263eb9-3c37-41a6-86e5-f8e50b33ed35"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -270,57 +270,18 @@
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a>
-<small>(3)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                PlacementRelTo
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></td>
-<td data-label="Description">
-<p>对对象放置的引用，该对象放置提供相对于网格、局部坐标系或线性引用的放置的放置。如果省略，则在線性放置的情况下，由引用的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignment.htm">IfcAlignment</a> Axis 的水平对齐原点建立。在局部放置的情况下，由几何表示上下文建立。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>PlacesObject</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a> FOR ObjectPlacement</td>
-<td data-label="Description">
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 应用于为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 实例提供放置和对象坐标系。</p>
-<blockquote>
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 被许多 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 实例共享，这并不意味着需要维护共享放置的语义。相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 实例可能只是为了减小交换文件大小。</p>
-<p>IFC2x3 更改：新的逆向属性。</p>
-<p>IFC4 变更：基数已更改为 0..n，以允许重用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 实例作为一对多产品的放置对象。它还考虑到它可以作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em> 的放置。</p>
-</blockquote>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ReferencedByPlacements</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a> FOR PlacementRelTo</td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<small>(2)</small>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    点击显示 3 个隐藏的继承特性
+                    点击显示 2 个隐藏的继承特性
                 </small>
 <small class="hide-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    点击隐藏 3 个继承特性
+                    点击隐藏 2 个继承特性
                 </small>
 </td>
 </tr>
@@ -330,33 +291,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                PlacementLocation
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a></td>
-<td data-label="Description">
-<p>由两个网格轴的交点定义的坐标系位置。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                PlacementRefDirection
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacementDirectionSelect.htm">IfcGridPlacementDirectionSelect</a></td>
-<td data-label="Description">
-<p>指向显式方向或第二个网格轴交点的引用，该交点定义了网格放置的方向。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The select of an explicit direction has been added.</aside>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.7.3.12.D<a class="link" href="#-5d60418f-5a71-4c8c-89d5-29974e289108"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.12.B<a class="link" href="#-f0263eb9-3c37-41a6-86e5-f8e50b33ed35"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.12.4-Formal-representation-"></a>
     8.7.3.12.4 形式化表示（Formal representation）
 <a class="link" href="#8.7.3.12.4-Formal-representation-"><i data-feather="link"></i></a></h2>

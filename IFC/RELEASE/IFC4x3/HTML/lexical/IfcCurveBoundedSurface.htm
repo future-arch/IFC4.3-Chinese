@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.27 IfcCurveBoundedSurface - IFC 4.3.2 Documentation</title>
+<title>8.9.3.27 IfcCurveBoundedSurface（曲线边界曲面） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,25 +189,29 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.27 IfcCurveBoundedSurface</h1>
+<h1>8.9.3.27 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a>（曲线边界曲面）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.9.3.27.1-Semantic-definition-"></a>
     8.9.3.27.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.27.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a></em> 是一个参数化曲面，其边界由 p-曲线定义，即一条位于曲面基底上的曲线，并在该曲面的参数空间中定义。p-曲线是一种特殊的复合曲线段类型，只能用于边界曲面。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a></em> 是一种参数曲面，其边界由 p-曲线定义，即位于曲面基础上并在该曲面参数空间中定义的曲线。p-曲线是一种特殊类型的复合曲线段，仅应用于界定曲面边界。</p>
 <!-- end of short definition -->
-<p>外部边界应由以下方式之一定义：</p>
+<p>外部边界应通过以下方式定义：</p>
 <ul>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOuterBoundaryCurve.htm">IfcOuterBoundaryCurve</a></em>：一个用于定义外部边界的闭合曲面复合曲线，在这种情况下，属性 <em>ImplicitOuter</em> 必须设置为 FALSE，或者</li>
-<li>隐式边界：有界曲面的隐式边界，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></em> 的 u1、u2、v1、v2，在这种情况下，属性 <em>ImplicitOuter</em> 必须设置为 TRUE。</li>
+<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOuterBoundaryCurve.htm">IfcOuterBoundaryCurve</a></em>（用于定义外部边界的闭合曲面复合曲线），在这种情况下，属性 <em>ImplicitOuter</em> 必须设置为 FALSE；或</li>
+<li>通过有界曲面的隐式边界，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></em> 的 u1、u2、v1、v2，在这种情况下，属性 <em>ImplicitOuter</em> 必须设置为 TRUE。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> Some surfaces, like <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm">IfcCylindricalSurface</a></em> does not have identifiable implicit boundaries.</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-The curve bounded surface is a parametric surface with curved boundaries defined by one or more boundary curves. One of the boundary curves may be the outer boundary; any number of inner boundaries is permissible. The region of the curve bounded surface in the basis surface is defined to be the portion of the basis surface in the direction of <strong><em>N</em> x <em>T</em></strong> from any point on the boundary, where <strong>N</strong> is the surface normal and <strong>T</strong> the boundary curve tangent vector at this point. The region so defined shall be arcwise connected.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>curve_bounded_surface</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
-<p><strong>Informal Propositions</strong></p>
+<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside><blockquote>
+<p>注意 某些曲面（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm">IfcCylindricalSurface</a></em>）没有可识别的隐式边界。</p>
+<p>注意 根据 ISO/CD 10303-42:1992 的定义
+曲线边界曲面是一种参数曲面，其曲线边界由一条或多条边界曲线定义。其中一条边界曲线可以是外部边界；允许存在任意数量的内部边界。基础曲面中曲线边界曲面的区域定义为从边界上任意点沿 <strong><em>N</em> x <em>T</em></strong> 方向的基础曲面部分，其中 <strong>N</strong> 是曲面法向量，<strong>T</strong> 是该点的边界曲线切向量。如此定义的区域应是弧连通的。</p>
+<p>注意 实体改编自 ISO 10303-42 中定义的 <strong>curve_bounded_surface</strong>。</p>
+</blockquote>
+<p><strong>非正式命题</strong></p>
 <ol>
 <li><em>Boundaries</em> 集合中的每条曲线都应是闭合的。</li>
 <li><em>Boundaries</em> 集合中的任意两条曲线不应相交。</li>
-<li>最多一条边界曲线可以包围另一条边界曲线。如果指定了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOuterBoundaryCurve.htm">IfcOuterBoundaryCurve</a></em>，则只有该曲线可以包围另一条边界曲线。</li>
+<li>最多有一条边界曲线可以包围任何其他边界曲线。如果指定了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOuterBoundaryCurve.htm">IfcOuterBoundaryCurve</a></em>，则只有该曲线可以包围任何其他边界曲线。</li>
 </ol>
 <h2><a class="anchor" id="8.9.3.27.2-Entity-inheritance-"></a>
     8.9.3.27.2 实体继承（Entity inheritance）
@@ -281,7 +285,7 @@ The curve bounded surface is a parametric surface with curved boundaries defined
     8.9.3.27.3 特性（Attributes）
 <a class="link" href="#8.9.3.27.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-7cd995d8-0156-4212-be18-5f1ef335b7af"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0d554a18-ae2d-4ab8-baa6-6142d25ea04b"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -310,8 +314,8 @@ The curve bounded surface is a parametric surface with curved boundaries defined
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -321,8 +325,8 @@ The curve bounded surface is a parametric surface with curved boundaries defined
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -342,7 +346,7 @@ The curve bounded surface is a parametric surface with curved boundaries defined
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是一个三维几何表示项。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是三维几何表示项。</p>
 <aside class="aside-change"><mark>IFC4 变更</mark> Derived attribute promoted from subtypes.</aside>
 </td>
 </tr>
@@ -373,7 +377,7 @@ The curve bounded surface is a parametric surface with curved boundaries defined
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a></td>
 <td data-label="Description">
-<p>需要边界的曲面。</p>
+<p>待界定的基础曲面。</p>
 </td>
 </tr>
 <tr>
@@ -385,7 +389,7 @@ The curve bounded surface is a parametric surface with curved boundaries defined
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundaryCurve.htm">IfcBoundaryCurve</a></td>
 <td data-label="Description">
-<p>曲面的外边界。</p>
+<p>曲面的外部边界。</p>
 </td>
 </tr>
 <tr>
@@ -403,7 +407,7 @@ The curve bounded surface is a parametric surface with curved boundaries defined
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.27.A<a class="link" href="#-7cd995d8-0156-4212-be18-5f1ef335b7af"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.27.A<a class="link" href="#-0d554a18-ae2d-4ab8-baa6-6142d25ea04b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.27.4-Formal-representation-"></a>
     8.9.3.27.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.27.4-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.3 IfcArbitraryProfileDefWithVoids - IFC 4.3.2 Documentation</title>
+<title>8.15.3.3 IfcArbitraryProfileDefWithVoids（带空隙任意轮廓定义） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,28 +189,28 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.15.3.3 IfcArbitraryProfileDefWithVoids</h1>
+<h1>8.15.3.3 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryProfileDefWithVoids.htm">IfcArbitraryProfileDefWithVoids</a>（带空隙任意轮廓定义）</h1>
 <div class="mvd" title="Included in Body SweptSolid PolyCurve Geometry, Reference SweptSolid PolyCurve Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Body SweptSolid PolyCurve Geometry, Reference SweptSolid PolyCurve Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.15.3.3.1-Semantic-definition-"></a>
     8.15.3.3.1 语义定义（Semantic definition）
 <a class="link" href="#8.15.3.3.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryProfileDefWithVoids.htm">IfcArbitraryProfileDefWithVoids</a></em> 定义了一个带孔洞的任意闭合二维轮廓。它由一个外边界和内边界定义。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryProfileDefWithVoids.htm">IfcArbitraryProfileDefWithVoids</a></em> 的常见用法是作为扫掠曲面或扫掠实体创建的横截面。</p>
-<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryProfileDefWithVoids.htm">IfcArbitraryProfileDefWithVoids</a></em> 定义了一个带孔的任意闭合二维轮廓。它由外部边界和内部边界组成。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryProfileDefWithVoids.htm">IfcArbitraryProfileDefWithVoids</a></em> 的常见用途是作为创建扫描曲面或扫描实体的横截面。</p>
+<!-- 简短定义结束 -->
 <aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>外边界曲线和所有内边界曲线都必须是闭合曲线。</li>
-<li>外边界曲线必须包含所有内边界曲线。</li>
-<li>没有内边界曲线可以与外边界曲线或其他内边界曲线相交。也就是说，轮廓定义中的任何两条曲线在考虑几何表示上下文的几何精度因子后，都不能有共同的点或线段。换句话说，曲线既不能交叉也不能接触。</li>
-<li>没有内边界曲线可以包含另一条内边界曲线。</li>
+<li>外部曲线和所有内部曲线应为闭合曲线。</li>
+<li>外部曲线应包围所有内部曲线。</li>
+<li>任何内部曲线不得与外部曲线或其他内部曲线相交。即，考虑到几何表示上下文的几何精度因子，轮廓定义中的任意两条曲线不得有共同点或共同段。换句话说，曲线既不能交叉也不能相互接触。</li>
+<li>任何内部曲线不得包围另一条内部曲线。</li>
 </ol>
-<p>图 8.15.3.3.A 说明了带孔洞的任意闭合轮廓定义。在超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></em> 中定义的外边界曲线和内边界曲线定义在相同的底层坐标系中。公共底层坐标系由使用轮廓定义的扫掠区域实体定义。它是：</p>
+<p>图 8.15.3.3.A 展示了带空隙的任意闭合轮廓定义。在超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></em> 中定义的 <em>OuterCurve</em> 和内部曲线在同一基础坐标系中定义。共同的基础坐标系由使用该轮廓定义的扫描面积实体定义。它是以下项的 xy 平面：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em></li>
 </ul>
-<p>的 xy 平面，或在分段脊线的情况下，是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a>.CrossSectionPositions</em> 的每个列表成员的 xy 平面。<em>OuterCurve</em> 属性定义了一个二维有界闭合曲线，<em>InnerCurves</em> 定义了一组二维有界闭合曲线。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="arbitrary profile with inner boundaries" src="../figures/ifcarbitraryprofiledef-layout2.gif" title="图 8.15.3.3.A — 带孔洞的任意轮廓"/><figcaption>图 8.15.3.3.A — 带孔洞的任意轮廓<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>或在分段脊线的情况下，是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a>.CrossSectionPositions</em> 每个列表成员的 xy 平面。<em>OuterCurve</em> 属性定义了一条二维闭合有界曲线，<em>InnerCurves</em> 定义了一组二维闭合有界曲线。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="带内部边界的任意轮廓" src="../figures/ifcarbitraryprofiledef-layout2.gif" title="图 8.15.3.3.A — 带空隙的任意轮廓"/><figcaption>图 8.15.3.3.A — 带空隙的任意轮廓<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.3.2-Entity-inheritance-"></a>
     8.15.3.3.2 实体继承（Entity inheritance）
 <a class="link" href="#8.15.3.3.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -243,7 +243,7 @@
     8.15.3.3.3 特性（Attributes）
 <a class="link" href="#8.15.3.3.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-67dccac8-df86-424d-8d14-8f3eafb7dbcb"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6cb4f7cb-b412-4a25-bf15-0ee2519b0885"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -265,68 +265,10 @@
 <small>(4)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                ProfileType
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
-<td data-label="Description">
-<p>定义此轮廓定义应解析成的几何类型，是曲线还是曲面区域。对于曲线，轮廓应由扫掠曲面引用；对于区域，轮廓应由扫掠面积实体引用。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                ProfileName
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓标识符应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasExternalReference</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
-<td data-label="Description">
-<p>指向与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasProperties</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
-<td data-label="Description">
-<p>轮廓的附加属性，例如机械性能。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a>
 <small>(1)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                OuterCurve
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
-<td data-label="Description">
-<p>有界曲线，定义了任意轮廓的外边界。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -347,24 +289,12 @@
 <small>(1)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                InnerCurves
-                
-            </td>
-<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
-<td data-label="Description">
-<p>定义任意轮廓内边界的有界曲线集合。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.15.3.3.B<a class="link" href="#-67dccac8-df86-424d-8d14-8f3eafb7dbcb"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.3.B<a class="link" href="#-6cb4f7cb-b412-4a25-bf15-0ee2519b0885"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.3.4-Formal-propositions-"></a>
     8.15.3.3.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.3.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-f1a64be3-d9de-42be-94c2-a11b28caff41"></a><table>
+<figure><a class="anchor" id="-f074d17e-1961-41c3-8a05-0d297355f9db"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -375,7 +305,7 @@
 <tr>
 <td>WR1</td>
 <td>
-<p>轮廓类型必须是 AREA，因为它只能用于定义扫掠区域。</p>
+<p>轮廓的类型应为 AREA，因为它只能参与扫描面积的定义。</p>
 </td>
 </tr>
 <tr>
@@ -386,7 +316,7 @@
 <tr>
 <td>WR2</td>
 <td>
-<p>所有内边界曲线的维度都必须是 2。</p>
+<p>所有内部曲线应具有二维性。</p>
 </td>
 </tr>
 <tr>
@@ -397,7 +327,7 @@
 <tr>
 <td>WR3</td>
 <td>
-<p>任何内边界曲线都不得为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a> 类型，因为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a> 不能是闭合曲线。</p>
+<p>任何内部曲线不得为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a> 类型，因为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a> 不能是闭合曲线。</p>
 </td>
 </tr>
 <tr>
@@ -406,7 +336,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.3.C<a class="link" href="#-f1a64be3-d9de-42be-94c2-a11b28caff41"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.3.C<a class="link" href="#-f074d17e-1961-41c3-8a05-0d297355f9db"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.3.5-"></a>
     8.15.3.3.5 属性集
 <a class="link" href="#8.15.3.3.5-"><i data-feather="link"></i></a></h2>
@@ -495,7 +425,7 @@
 </p><h2><a class="anchor" id="8.15.3.3.6-Concept-usage-"></a>
     8.15.3.3.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.3.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-40972d5a-d626-4564-9824-d2073a92ff7f"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-1e005107-0387-4e54-b918-4531722b6008"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -589,7 +519,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.3.D<a class="link" href="#-40972d5a-d626-4564-9824-d2073a92ff7f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.3.D<a class="link" href="#-1e005107-0387-4e54-b918-4531722b6008"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.3.7-Formal-representation-"></a>
     8.15.3.3.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.3.7-Formal-representation-"><i data-feather="link"></i></a></h2>

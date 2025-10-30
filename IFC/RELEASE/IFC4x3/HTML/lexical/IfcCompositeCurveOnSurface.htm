@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.21 IfcCompositeCurveOnSurface - IFC 4.3.2 Documentation</title>
+<title>8.9.3.21 IfcCompositeCurveOnSurface（曲面上复合曲线） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,22 +189,22 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.21 IfcCompositeCurveOnSurface</h1>
+<h1>8.9.3.21 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveOnSurface.htm">IfcCompositeCurveOnSurface</a>（曲面上复合曲线）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.9.3.21.1-Semantic-definition-"></a>
     8.9.3.21.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.21.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveOnSurface.htm">IfcCompositeCurveOnSurface</a></em> 是由 p-曲线段组成的集合，即一条位于曲面基底上的曲线，并在该曲面的参数空间中定义。p-曲线段是一种特殊的复合曲线段类型，只能用于边界曲面。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCompositeCurveOnSurface.htm">IfcCompositeCurveOnSurface</a></em> 是基于 p 曲线的段集合，即位于曲面基础上并在该曲面参数空间中定义的曲线。p 曲线段是一种特殊类型的复合曲线段，应仅用于限定曲面边界。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-A composite curve on surface is a collection of segments which are curves on a surface. Each segment shall lie on the basis surface.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside><blockquote>
-<p>There shall be at least positional continuity between adjacent segments. The parameterization of the composite curve is obtained from the accumulation of the parametric ranges of the segments. The first segment is parameterized from <em>0</em> to <em>l~1~</em>, and, for <em>i ≥ 2</em>, the <em>i^th^</em> segment is parameterized from</p>
+<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
+曲面上复合曲线是曲面上曲线的段集合。每个段应位于基础曲面上。</aside><aside class="aside-history"><mark>沿革</mark> 在 IFC4 中新增的实体。</aside><blockquote>
+<p>相邻段之间应至少具有位置连续性。复合曲线的参数化通过各段参数范围的累加获得。第一段的参数化范围从 <em>0</em> 到 <em>l~1~</em>，对于 <em>i ≥ 2</em>，第 <em>i^th^</em> 段的参数化范围从</p>
 <blockquote>
 <figure><a class="anchor" id="Figure-8.9.3.21.A"></a><img alt="formula" src="../figures/ifccompositecurveonsurface-math1.gif"/>
-where <em>l~k~</em> is the parametric length (that is, the difference between maximum and minimum parameter values) of the <em>k^th^</em> curve segment.
+其中 <em>l~k~</em> 是第 <em>k^th^</em> 曲线段的参数长度（即最大和最小参数值之差）。
 <figcaption>Figure 8.9.3.21.A<a class="link" href="#Figure-8.9.3.21.A"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
-<p>Entity adapted from <strong>composite_curve_on_surface</strong> defined in ISO 10303-42.</p>
+<p>实体改编自 ISO 10303-42 中定义的 <strong>composite_curve_on_surface</strong>。</p>
 </blockquote>
 <h2><a class="anchor" id="8.9.3.21.2-Entity-inheritance-"></a>
     8.9.3.21.2 实体继承（Entity inheritance）
@@ -297,7 +297,7 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
     8.9.3.21.3 特性（Attributes）
 <a class="link" href="#8.9.3.21.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-9440d8a8-bb70-49cd-b8ce-0a2229942f40"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-90d74d1b-bd26-475e-9aae-d33fab1cc48c"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -326,8 +326,8 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -337,8 +337,8 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -358,7 +358,7 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，为所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）定义不同。</p>
+<p>此抽象类的空间维度，所有子类（如 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）的定义各不相同。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -376,9 +376,9 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
             </td>
 <td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegment.htm">IfcSegment</a></td>
 <td data-label="Description">
-<p>组成有界曲线的段、它们的过渡和感知。最后一个段的过渡属性定义了最后一个段的末尾与第一个段的开头之间的过渡；此过渡属性可以取值为“不连续”，表示一条开放曲线。</p>
+<p>组成的有界曲线、它们的过渡和方向。最后一个段的过渡属性定义了最后一个段的结束和第一个段的开始之间的过渡；此过渡属性可以取不连续值，表示开放曲线。</p>
 <blockquote>
-<p>NOTE : For <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGradientCurve.htm">IfcGradientCurve</a></em> and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegmentedReferenceCurve.htm">IfcSegmentedReferenceCurve</a></em> the segments define the interpolation between segment start and and segment end.</p>
+<p>NOTE ：对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGradientCurve.htm">IfcGradientCurve</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegmentedReferenceCurve.htm">IfcSegmentedReferenceCurve</a></em>，段定义了段开始和段结束之间的插值。</p>
 </blockquote>
 </td>
 </tr>
@@ -391,7 +391,7 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogical.htm">IfcLogical</a></td>
 <td data-label="Description">
-<p>曲线是否自相交的指示；这仅供参考。</p>
+<p>指示曲线是否自相交；这仅为信息用途。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -419,7 +419,7 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">Segments[NSegments].Transition &lt;&gt; Discontinuous</code></pre>
-<p>曲线是否闭合的指示；这是从最后一个段的过渡代码派生的。</p>
+<p>指示曲线是否闭合；这从最后一个段的过渡代码派生。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -451,15 +451,15 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(SELF)</code></pre>
-<p>定义复合曲线的曲面。</p>
+<p>定义复合曲线的基础曲面。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.21.B<a class="link" href="#-9440d8a8-bb70-49cd-b8ce-0a2229942f40"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.21.B<a class="link" href="#-90d74d1b-bd26-475e-9aae-d33fab1cc48c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.21.4-Formal-propositions-"></a>
     8.9.3.21.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.21.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-122a2d59-a381-47c9-a36a-e90c12c49774"></a><table>
+<figure><a class="anchor" id="-b3d701d6-2adb-4a0f-bcb9-f3d1be34409b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -470,7 +470,7 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
 <tr>
 <td>SameSurface</td>
 <td>
-<p><em>BasisSurface</em> 应至少包含一个曲面（且仅包含一个曲面）。这确保所有段都引用同一曲面上的曲线。</p>
+<p><em>BasisSurface</em> 应至少包含一个曲面（且仅包含一个曲面）。这确保所有段引用同一曲面上的曲线。</p>
 </td>
 </tr>
 <tr>
@@ -479,7 +479,7 @@ where <em>l~k~</em> is the parametric length (that is, the difference between ma
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.21.C<a class="link" href="#-122a2d59-a381-47c9-a36a-e90c12c49774"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.21.C<a class="link" href="#-b3d701d6-2adb-4a0f-bcb9-f3d1be34409b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.21.5-Formal-representation-"></a>
     8.9.3.21.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.21.5-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.2 IfcClosedShell - IFC 4.3.2 Documentation</title>
+<title>8.20.3.2 IfcClosedShell（闭合壳） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,33 +189,33 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.20.3.2 IfcClosedShell</h1>
+<h1>8.20.3.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClosedShell.htm">IfcClosedShell</a>（闭合壳）</h1>
 <div class="mvd" title="Included in IfcManifoldSolidBrep.Outer">RV ⓘ</div>
 <div class="mvd" title="Included in IfcManifoldSolidBrep.Outer">AbV ⓘ</div>
 <h2><a class="anchor" id="8.20.3.2.1-Semantic-definition-"></a>
     8.20.3.2.1 语义定义（Semantic definition）
 <a class="link" href="#8.20.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non-zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>closed_shell</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0</aside><blockquote>
-<p>The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with (TRUE) or is opposed to (FALSE) the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute.</p>
-<p>The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2-manifold. It is always topologically equivalent to an <em>H</em>-fold torus for some <em>H</em> ≥ 0. The number <em>H</em> is referred to as the surface genus of the shell. If a shell of genus <em>H</em> has a domain within coordinate space <em>R^3^</em>, then the finite region of space inside it is topologically equivalent to a solid ball with <em>H</em> tunnels drilled through it.</p>
-<p>The Euler equation applies with <em>B</em>=0, because in this case there are no holes. As in the case of open shells, the surface genus <em>H</em> may not be known a priori, but shall be an integer ≥ 0. Thus a necessary, but not sufficient, condition for a well-formed closed shell is the following:</p>
+<!-- 简短定义结束 -->
+<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
+闭合壳是一个二维壳，通常用作 R3 中区域的边界。闭合壳没有边界，且具有非零有限范围。如果壳的域具有坐标空间 R3，则它将该空间划分为两个连通区域，一个有限，另一个无限。在这种情况下，壳的拓扑法向被定义为从有限区域指向无限区域。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>closed_shell</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体</aside><blockquote>
+<p>壳由一组面表示。如果存在壳的域，则该域包含所有这些面及其边界。与壳中的每个面相关联的是一个逻辑值，指示面法向是与壳法向一致（TRUE）还是相反（FALSE）。该逻辑值可以直接作为定向面的 BOOLEAN 属性应用，或者如果壳边界属性成员是没有方向属性的面，则默认为 TRUE。</p>
+<p>对闭合壳的组合限制及其域的几何限制旨在确保与闭合壳关联的任何域都是闭合的、可定向的流形。闭合壳的域（如果存在）是一个连通的、闭合的、定向的二维流形。它在拓扑上总是等价于某个 <em>H</em> ≥ 0 的 <em>H</em> 重环面。数字 <em>H</em> 称为壳的曲面亏格。如果亏格为 <em>H</em> 的壳在坐标空间 <em>R^3^</em> 内有一个域，则其内部的有限空间区域在拓扑上等价于一个钻有 <em>H</em> 个隧道的实心球。</p>
+<p>欧拉方程适用于 <em>B</em>=0，因为在这种情况下没有孔洞。与开壳的情况一样，曲面亏格 <em>H</em> 可能无法先验得知，但应为 ≥ 0 的整数。因此，一个结构良好的闭合壳的必要（但不充分）条件如下：</p>
 <blockquote>
 <figure><a class="anchor" id="Figure-8.20.3.2.A"></a><img alt="Image" src="../figures/ifcopenshell-math1.gif"/><figcaption>Figure 8.20.3.2.A<a class="link" href="#Figure-8.20.3.2.A"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
 </blockquote>
-<p><strong>非正式命题</strong></p>
+<p><strong>非形式化命题</strong></p>
 <ol>
-<li>每个边应被面的环精确引用两次。</li>
-<li>每个定向边应是唯一的。</li>
+<li>每条边应恰好被面的环引用两次。</li>
+<li>每条定向边应是唯一的。</li>
 <li>任何边不应被超过两个面引用。</li>
-<li>不同的面不相交，但可以共享边或顶点。</li>
+<li>壳中不同的面不相交，但可以共享边或顶点。</li>
 <li>不同的边不相交，但可以共享顶点。</li>
 <li>每个面引用应是唯一的。</li>
-<li>壳的环不应是多边形环和其他环类型的混合。注释：由于只有多边形环被定义为面边界定义，因此这一点已给定。</li>
-<li>闭合壳应是一个定向的弧连接2-流形。</li>
-<li>应满足欧拉方程。注释：请参考 ISO 10303-42 获取该方程。</li>
+<li>壳的环不应是折线环和其他环类型的混合。注：这是给定的，因为只有折线环被定义为面边界定义。</li>
+<li>闭合壳应是一个定向的、弧连通的二维流形。</li>
+<li>应满足欧拉方程。注：请参阅 ISO 10303-42 了解该方程。</li>
 </ol>
 <h2><a class="anchor" id="8.20.3.2.2-Entity-inheritance-"></a>
     8.20.3.2.2 实体继承（Entity inheritance）
@@ -260,7 +260,7 @@ A closed shell is a shell of the dimensionality 2 which typically serves as a bo
     8.20.3.2.3 特性（Attributes）
 <a class="link" href="#8.20.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c105e9d1-f753-416a-872a-5b8e73040ff4"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-1ba0e69c-7174-4734-bbe6-9b09eb370021"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -289,8 +289,8 @@ A closed shell is a shell of the dimensionality 2 which typically serves as a bo
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -300,8 +300,8 @@ A closed shell is a shell of the dimensionality 2 which typically serves as a bo
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -331,11 +331,11 @@ A closed shell is a shell of the dimensionality 2 which typically serves as a bo
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a></td>
 <td data-label="Description">
-<p>The set of faces arcwise connected along common edges or vertices.</p>
+<p>沿公共边或顶点弧连通的面集合。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.20.3.2.B<a class="link" href="#-c105e9d1-f753-416a-872a-5b8e73040ff4"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.2.B<a class="link" href="#-1ba0e69c-7174-4734-bbe6-9b09eb370021"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.2.4-Formal-representation-"></a>
     8.20.3.2.4 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.2.4-Formal-representation-"><i data-feather="link"></i></a></h2>

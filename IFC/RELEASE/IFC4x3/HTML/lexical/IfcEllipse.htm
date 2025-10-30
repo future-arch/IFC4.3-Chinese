@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -194,14 +194,14 @@
 <h2><a class="anchor" id="8.9.3.32.1-Semantic-definition-"></a>
     8.9.3.32.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.32.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm">IfcEllipse</a></em> 是由一组到两个固定点距离之和为常数的点构成的曲线。</p>
-<!-- 简短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm">IfcEllipse</a></em> 是一种曲线，由一组到两个固定点距离之和为常数的点构成。</p>
+<!-- end of short definition -->
 <p>继承的属性 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.Location</em> 是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm">IfcEllipse</a></em> 的中心，继承的属性 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.P[1]</em> 是 <em>SemiAxis1</em> 的方向。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="椭圆" src="../figures/ifcellipse-layout1.gif"/><figcaption>图 8.9.3.32.A — 椭圆定位与参数化<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="-1-"></a><img alt="椭圆" src="../figures/ifcellipse-layout1.gif"/><figcaption>图 8.9.3.32.A — 椭圆放置与参数化<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm">IfcEllipse</a></em> 在三维位置坐标系中的定义如图 8.9.3.32.A 所示。</p>
 <p>它被放置在其所属表示元素的物体坐标系内。</p>
 <aside class="aside-note"><mark>注释</mark> 椭圆弧段通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> 定义，其中 <em>BasisCurve</em> 为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipse.htm">IfcEllipse</a></em>。</aside><aside class="aside-reference"><mark>参考</mark> 根据 ISO/CD 10303-42:1992 的定义</aside>
-<p>椭圆是由半长轴和半短轴长度、曲线位置（中心或焦点连线中点）和方向定义的圆锥曲线。数据应按如下方式解释：</p>
+<p>椭圆是一种圆锥曲线，由半长轴和半短轴的长度、曲线位置（中心或焦点连线的中点）以及方向定义。数据应按如下方式解释：</p>
 <pre><code>C = SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.Location
 x = SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.P[1]
 y = SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.P[2]
@@ -211,11 +211,11 @@ R2 = SemiAxis2
 </code></pre>
 <p>椭圆的参数化表示为：</p>
 <p>$$ \lambda(u) = C + (R_1\cos(u))x + (R_2\sin(u))y $$</p>
-<p>参数化范围为 0 ≤ <em>u</em> &lt;≤ 2π（0 ≤ <em>u</em> ≤ 360 度）。在上述定义的定位坐标系中，椭圆满足方程 <em>C</em> = 0，其中</p>
+<p>参数化范围为 0 ≤ <em>u</em> &lt;≤ 2π（0 ≤ <em>u</em> ≤ 360 度）。在上述定义的放置坐标系中，椭圆满足方程 <em>C</em> = 0，其中</p>
 <p>$$ C(x,y,z) = \frac{x^2}{R_1^2} + \frac{y^2}{R_2^2} - 1 $$</p>
-<p>椭圆上任意点的正方向为曲线在该点的切线方向 T，其中</p>
+<p>椭圆上任意点的正方向为曲线在该点处的切线方向 T，其中</p>
 <p>$$ T = (-C_y,C_x,0) $$</p>
-<aside class="aside-history"><mark>沿革</mark> IFC1.0 中新增实体</aside>
+<aside class="aside-history"><mark>沿革</mark> 新实体 in IFC1.0</aside>
 <h2><a class="anchor" id="8.9.3.32.2-Entity-inheritance-"></a>
     8.9.3.32.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.32.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -290,7 +290,7 @@ R2 = SemiAxis2
     8.9.3.32.3 特性（Attributes）
 <a class="link" href="#8.9.3.32.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-339f4feb-0b38-4fde-9aa7-1ce4b12a7199"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-5b66ebb3-17aa-4421-89d4-bfbd804c24ec"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -320,7 +320,7 @@ R2 = SemiAxis2
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
 <p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -331,7 +331,7 @@ R2 = SemiAxis2
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
 <p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -351,7 +351,7 @@ R2 = SemiAxis2
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，对所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）有不同的定义。</p>
+<p>此抽象类的空间维度，所有子类（如 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）的定义各不相同。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -369,7 +369,7 @@ R2 = SemiAxis2
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
 <td data-label="Description">
-<p>圆锥曲线的位置和方向。该属性的详细解释参见各子类型。</p>
+<p>圆锥曲线的位置和方向。该属性的具体解释细节在各子类型中给出。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -399,7 +399,7 @@ R2 = SemiAxis2
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>椭圆的第一半径，应为正值。Placement.Axes[1] 给出了 SemiAxis1 的方向。</p>
+<p>椭圆的第一半径，应为正值。Placement.Axes[1] 给出 SemiAxis1 的方向。</p>
 </td>
 </tr>
 <tr>
@@ -415,7 +415,7 @@ R2 = SemiAxis2
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.32.B<a class="link" href="#-339f4feb-0b38-4fde-9aa7-1ce4b12a7199"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.32.B<a class="link" href="#-5b66ebb3-17aa-4421-89d4-bfbd804c24ec"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.32.4-Formal-representation-"></a>
     8.9.3.32.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.32.4-Formal-representation-"><i data-feather="link"></i></a></h2>

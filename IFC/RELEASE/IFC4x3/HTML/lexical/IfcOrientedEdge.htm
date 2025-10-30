@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,12 +196,16 @@
 <a class="link" href="#8.20.3.13.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrientedEdge.htm">IfcOrientedEdge</a></em> 表示带有方向标志的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em>。它允许在完全遍历两次（一次正向，一次反向）时重用相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em>。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a></em> 的法线方向完全由边决定。如果面的所有边按照边的方向以逆时针方式连接，则面的法线将指向外部。表示该面几何形状的基础 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceSurface.htm">IfcFaceSurface</a></em> 的法线与此无关。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceSurface.htm">IfcFaceSurface</a>.SameSense</em> 属性的目的是为验证提供额外信息。<em>SameSense</em> 为 TRUE 表示表面法线和面法线相同，<em>SameSense</em> 为 FALSE 表示它们方向相反。</aside>
-<p>具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 几何表示的重复使用的边在 3D 坐标空间中定义该边。在某些情况下，特别是在使用基本曲面或扫描曲面时，将 3D (x, y, z) <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 映射到相邻曲面以确定这些曲面的边界可能存在不精确的风险。可选的 <em>CurveOnSurface</em> 在曲面的参数空间内定义 2D (u, v) 边。它可用于确定 3D <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 映射到此曲面上的正确性。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="示例" src="../figures/ifcadvancedbrep_02.png"/><figcaption>图 8.20.3.13.A — 曲面上的曲线表示示例<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图 8.20.3.13.A 展示了一个示例，其中除了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 的曲线几何形状外，还提供了 <em>CurveOnSurface</em>。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-定向边是从另一条边构造的边，并包含一个布尔方向标志，以指示构造边的方向是否与原始边的方向一致。除了方向可能不同外，定向边等同于原始边。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>oriented_edge</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。</aside><blockquote>
+<blockquote>
+<p>注意：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a></em> 的法线方向完全由边决定。如果面的所有边按照边的方向以逆时针方式连接，则面的法线将指向外部。表示该面几何形状的基础 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceSurface.htm">IfcFaceSurface</a></em> 的法线与此无关。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceSurface.htm">IfcFaceSurface</a>.SameSense</em> 属性的目的是为验证目的提供额外信息。<em>SameSense</em> 为 TRUE 表示表面法线和面法线相同，<em>SameSense</em> 为 FALSE 表示它们方向相反。</p>
+</blockquote>
+<p>具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 几何表示的重复使用边在 3D 坐标空间中定义边。在某些情况下，特别是在使用基本曲面或扫描曲面时，存在将 3D (x, y, z) <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 映射到相邻曲面以确定这些曲面边界时的不精确风险。可选的 <em>CurveOnSurface</em> 在曲面的参数空间内定义 2D (u, v) 边。它可用于确定 3D <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 映射到此曲面上的正确性。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="示例" src="../figures/ifcadvancedbrep_02.png"/><figcaption>图 8.20.3.13.A — 曲面上的曲线表示<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> 图 8.20.3.13.A 展示了一个示例，其中除了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 的曲线几何形状外，还提供了 <em>CurveOnSurface</em>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。</aside><blockquote>
+<p>注意：根据 ISO/CD 10303-42:1992 的定义
+定向边是从另一条边构造的边，并包含一个布尔方向标志，以指示构造边的方向是否与原始边的方向一致。除了方向可能不同外，定向边等同于原始边。</p>
 <p>实体建模系统中的常见做法是拥有一个表示边的"使用"或"遍历"的实体。这种"使用"实体明确表示在流形实体中每条边必须被精确遍历两次的要求，每个方向一次。"使用"功能由边子类型定向边提供。</p>
+<p>注意：实体改编自 ISO 10303-42 中定义的 <strong>oriented_edge</strong>。</p>
 <p>IFC4 Add2 变更：添加了 <em>CurveOnSurface</em> 属性。</p>
 </blockquote>
 <h2><a class="anchor" id="8.20.3.13.2-Entity-inheritance-"></a>
@@ -248,7 +252,7 @@
     8.20.3.13.3 特性（Attributes）
 <a class="link" href="#8.20.3.13.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-776174d2-8c26-4db0-95c5-f0ddd92241cb"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-4c228220-c6ec-4c64-af21-2f181a15548d"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -270,56 +274,10 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a>
 <small>(2)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                EdgeStart
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>边的起点（顶点）。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                EdgeEnd
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>边的终点（顶点）。同一个顶点可以同时用于 EdgeStart 和 EdgeEnd。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -340,70 +298,12 @@
 <small>(4)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                EdgeElement
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></td>
-<td data-label="Description">
-<p>用于构造此定向边的边实体。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                Orientation
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p>布尔值，如果为 TRUE，则使用的拓扑方向与边元素从起始顶点到结束顶点的方向一致。如果为 FALSE，则相反。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">1*</td>
-<td data-label="Name">
-                
-                EdgeStart
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanChoose.htm">IfcBooleanChoose</a> 
-(Orientation, EdgeElement.EdgeStart, EdgeElement.EdgeEnd)</code></pre>
-<p>定向边的起始顶点。它在考虑方向后从边元素的顶点派生。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2*</td>
-<td data-label="Name">
-                
-                EdgeEnd
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanChoose.htm">IfcBooleanChoose</a> 
-(Orientation, EdgeElement.EdgeEnd, EdgeElement.EdgeStart)</code></pre>
-<p>定向边的结束顶点。它在考虑方向后从边元素的顶点派生。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.20.3.13.B<a class="link" href="#-776174d2-8c26-4db0-95c5-f0ddd92241cb"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.13.B<a class="link" href="#-4c228220-c6ec-4c64-af21-2f181a15548d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.13.4-Formal-propositions-"></a>
     8.20.3.13.4 形式化命题（Formal propositions）
 <a class="link" href="#8.20.3.13.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-0ccc479a-54bd-48cf-a99b-412aef3fb39c"></a><table>
+<figure><a class="anchor" id="-c5173cf9-4877-48d2-994c-ab379e146021"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -423,7 +323,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.20.3.13.C<a class="link" href="#-0ccc479a-54bd-48cf-a99b-412aef3fb39c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.13.C<a class="link" href="#-c5173cf9-4877-48d2-994c-ab379e146021"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.13.5-Formal-representation-"></a>
     8.20.3.13.5 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.13.5-Formal-representation-"><i data-feather="link"></i></a></h2>

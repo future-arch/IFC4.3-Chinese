@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.30 IfcDirection - IFC 4.3.2 Documentation</title>
+<title>8.9.3.30 IfcDirection（方向） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,16 +189,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.30 IfcDirection</h1>
+<h1>8.9.3.30 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a>（方向）</h1>
 <div class="mvd" title="Included in Body SweptSolid PolyCurve Geometry, Body Tessellation Geometry, IfcAxis1Placement.Axis, Mapped Geometry, Port Nesting, Project Representation Context, Project Representation Context 2D, Project Representation Context 3D, Reference SweptSolid PolyCurve Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Body SweptSolid PolyCurve Geometry, Body Tessellation Geometry, IfcAxis2Placement3D.Axis, Mapped Geometry, Port Nesting, Project Representation Context, Project Representation Context 2D, Project Representation Context 3D, Reference SweptSolid PolyCurve Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.30.1-Semantic-definition-"></a>
     8.9.3.30.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.30.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em> 根据提供的 <em>DirectionRatio</em> 的数量，在二维或三维空间中提供一个方向。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em> 不表示向量长度，并且方向比不必归一化。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em> 根据提供的 <em>DirectionRatio</em> 数量，在二维或三维空间中提供一个方向。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></em> 不隐含向量长度，且方向比率无需归一化。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-This entity defines a general direction vector in two or three dimensional space. The actual magnitudes of the components have no effect upon the direction being defined, only the ratios X:Y:Z or X:Y are significant.</aside><aside class="aside-note"><mark>注释</mark> The components of this entity are not normalized. If a unit vector is required it should be normalized before use.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>direction</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0</aside>
+<aside class="aside-note"><mark>注释</mark> 定义依据 ISO/CD 10303-42:1992
+该实体定义了二维或三维空间中的通用方向向量。分量的实际大小对定义的方向没有影响，只有比率 X:Y:Z 或 X:Y 是重要的。</aside><aside class="aside-note"><mark>注释</mark> 该实体的分量未归一化。如需单位向量，应在使用前进行归一化处理。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>direction</strong>。</aside><aside class="aside-history"><mark>沿革</mark> 新实体，首次出现在 IFC1.0</aside>
 <h2><a class="anchor" id="8.9.3.30.2-Entity-inheritance-"></a>
     8.9.3.30.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.30.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -253,7 +253,7 @@ This entity defines a general direction vector in two or three dimensional space
     8.9.3.30.3 特性（Attributes）
 <a class="link" href="#8.9.3.30.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-597abafe-6c5b-46a3-a24c-5da42b7c19f3"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-bce679aa-8dce-493d-a4ab-c12a25e3e9d4"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -282,8 +282,8 @@ This entity defines a general direction vector in two or three dimensional space
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -293,8 +293,8 @@ This entity defines a general direction vector in two or three dimensional space
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -324,7 +324,7 @@ This entity defines a general direction vector in two or three dimensional space
             </td>
 <td data-label="Type">LIST [2:3] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
-<p>X 轴（DirectionRatios[1]）、Y 轴（DirectionRatios[2]）和 Z 轴（DirectionRatios[3]）方向的分量。</p>
+<p>X轴方向的分量（DirectionRatios[1]）、Y轴方向的分量（DirectionRatios[2]）和Z轴方向的分量（DirectionRatios[3]）</p>
 </td>
 </tr>
 <tr>
@@ -338,15 +338,15 @@ This entity defines a general direction vector in two or three dimensional space
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">HIINDEX(DirectionRatios)</code></pre>
-<p>此类的空间维度，由 DirectionRatios 列表中实数的数量定义。</p>
+<p>该类的空间维度，由 DirectionRatios 列表中实数的数量定义。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.30.A<a class="link" href="#-597abafe-6c5b-46a3-a24c-5da42b7c19f3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.30.A<a class="link" href="#-bce679aa-8dce-493d-a4ab-c12a25e3e9d4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.30.4-Formal-propositions-"></a>
     8.9.3.30.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.30.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-25c700e8-acec-4dbb-8c98-ae88fd074f71"></a><table>
+<figure><a class="anchor" id="-c3c1a884-8761-4685-acbf-04b4dddf28ca"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -357,7 +357,7 @@ This entity defines a general direction vector in two or three dimensional space
 <tr>
 <td>MagnitudeGreaterZero</td>
 <td>
-<p>方向向量的模应大于零。</p>
+<p>方向向量的模量应大于零。</p>
 </td>
 </tr>
 <tr>
@@ -366,7 +366,7 @@ This entity defines a general direction vector in two or three dimensional space
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.30.B<a class="link" href="#-25c700e8-acec-4dbb-8c98-ae88fd074f71"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.30.B<a class="link" href="#-c3c1a884-8761-4685-acbf-04b4dddf28ca"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.30.5-Formal-representation-"></a>
     8.9.3.30.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.30.5-Formal-representation-"><i data-feather="link"></i></a></h2>

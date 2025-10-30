@@ -268,7 +268,7 @@
     7.4.3.48.3 特性（Attributes）
 <a class="link" href="#7.4.3.48.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-6d483e84-7903-498b-ad77-9b2c17c154aa"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d4956659-240a-4576-a99e-adb856973b86"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -557,11 +557,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.3.48.A<a class="link" href="#-6d483e84-7903-498b-ad77-9b2c17c154aa"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.3.48.A<a class="link" href="#-d4956659-240a-4576-a99e-adb856973b86"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.4.3.48.4-Formal-propositions-"></a>
     7.4.3.48.4 形式化命题（Formal propositions）
 <a class="link" href="#7.4.3.48.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-aa663135-d184-4b88-a4da-10d91bf583af"></a><table>
+<figure><a class="anchor" id="-76da746e-1739-455d-8eca-10575d6d31bb"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -584,7 +584,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.3.48.D<a class="link" href="#-aa663135-d184-4b88-a4da-10d91bf583af"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.3.48.D<a class="link" href="#-76da746e-1739-455d-8eca-10575d6d31bb"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.4.3.48.5-"></a>
     7.4.3.48.5 属性集
 <a class="link" href="#7.4.3.48.5-"><i data-feather="link"></i></a></h2>
@@ -996,7 +996,7 @@
 </p><h2><a class="anchor" id="7.4.3.48.6-Concept-usage-"></a>
     7.4.3.48.6 概念用法（Concept usage）
 <a class="link" href="#7.4.3.48.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-53ecb6d1-942f-4486-9288-8515bb088582"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-2f9cbad1-f64b-4f13-9f18-14e171de1731"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -1279,6 +1279,21 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/content.html">Product Type Shape</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
+<p>图 7.4.3.48.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 7.4.3.48.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 7.4.3.48.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 7.4.3.48.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
@@ -1305,21 +1320,6 @@
 <p>
 <em>无可用描述</em>
 </p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/content.html">Product Type Shape</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
-<p>Figure 7.4.3.48.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 7.4.3.48.B — Product type geometry with single placement<a class="link" href="#Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
-<p>Figure 7.4.3.48.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 7.4.3.48.C — Product type geometry with multiple placement<a class="link" href="#Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1506,11 +1506,11 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
-<p>Figure 7.4.3.48.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 7.4.3.48.B — Product type geometry with single placement<a class="link" href="#Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
-<p>Figure 7.4.3.48.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 7.4.3.48.C — Product type geometry with multiple placement<a class="link" href="#Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
+<p>图 7.4.3.48.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 7.4.3.48.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 7.4.3.48.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 7.4.3.48.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1649,11 +1649,11 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
-<p>Figure 7.4.3.48.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 7.4.3.48.B — Product type geometry with single placement<a class="link" href="#Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
-<p>Figure 7.4.3.48.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 7.4.3.48.C — Product type geometry with multiple placement<a class="link" href="#Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
+<p>图 7.4.3.48.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 7.4.3.48.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 7.4.3.48.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 7.4.3.48.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1806,11 +1806,11 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
-<p>Figure 7.4.3.48.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 7.4.3.48.B — Product type geometry with single placement<a class="link" href="#Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
-<p>Figure 7.4.3.48.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 7.4.3.48.C — Product type geometry with multiple placement<a class="link" href="#Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
+<p>图 7.4.3.48.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 7.4.3.48.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 7.4.3.48.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 7.4.3.48.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1906,11 +1906,11 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
-<p>Figure 7.4.3.48.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 7.4.3.48.B — Product type geometry with single placement<a class="link" href="#Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
-<p>Figure 7.4.3.48.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 7.4.3.48.C — Product type geometry with multiple placement<a class="link" href="#Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
+<p>图 7.4.3.48.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 7.4.3.48.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 7.4.3.48.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 7.4.3.48.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2071,11 +2071,11 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
-<p>Figure 7.4.3.48.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 7.4.3.48.B — Product type geometry with single placement<a class="link" href="#Figure-7.4.3.48.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
-<p>Figure 7.4.3.48.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
-<figure><a class="anchor" id="Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 7.4.3.48.C — Product type geometry with multiple placement<a class="link" href="#Figure-7.4.3.48.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
+<p>图 7.4.3.48.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 7.4.3.48.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 7.4.3.48.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 7.4.3.48.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
@@ -2274,7 +2274,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.3.48.E<a class="link" href="#-53ecb6d1-942f-4486-9288-8515bb088582"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.3.48.E<a class="link" href="#-2f9cbad1-f64b-4f13-9f18-14e171de1731"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.4.3.48.7-Formal-representation-"></a>
     7.4.3.48.7 形式化表示（Formal representation）
 <a class="link" href="#7.4.3.48.7-Formal-representation-"><i data-feather="link"></i></a></h2>

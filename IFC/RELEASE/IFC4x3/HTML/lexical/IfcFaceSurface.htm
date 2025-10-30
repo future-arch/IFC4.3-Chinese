@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,8 +196,12 @@
 <a class="link" href="#8.20.3.10.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceSurface.htm">IfcFaceSurface</a></em> 定义了与面相关联的底层曲面几何。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 拓扑用于修剪曲面的几何形状。无需对曲面进行几何修剪以匹配拓扑。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-面曲面是面的一种子类型，其几何形状由相关联的曲面定义。面所使用的曲面部分应可作为开圆盘（可能带孔）嵌入平面。然而，面与其边界环的边和顶点的并集不必可嵌入平面。例如，它可以覆盖整个球体或环面。由于面和几何曲面都具有定义的法线方向，因此使用布尔标志（方向属性）来指示曲面法线是与面法线方向一致（TRUE）还是相反（FALSE）。面环的任何组成部分所关联的几何形状应与曲面几何形状一致，即所有顶点和边曲线的定义域都包含在面几何曲面中。一个曲面可以被多个面曲面引用。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>face_surface</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体</aside><blockquote>
+<p>注意：拓扑用于修剪曲面的几何形状。无需对曲面进行几何修剪以匹配拓扑。</p>
+<p>注意 根据 ISO/CD 10303-42:1992 的定义
+面曲面是面的一种子类型，其几何形状由相关联的曲面定义。面所使用的曲面部分应可作为开圆盘（可能带有孔洞）嵌入平面。然而，面与其边界环的边和顶点的并集不一定能够嵌入平面。例如，它可以覆盖整个球体或环面。由于面和几何曲面都具有定义的法线方向，因此使用布尔标志（方向属性）来指示曲面法线是与面法线方向一致（TRUE）还是相反（FALSE）。面环的任何组成部分所关联的几何形状应与曲面几何形状一致，即所有顶点和边曲线的定义域都包含在面几何曲面中。一个曲面可以被多个面曲面引用。</p>
+<p>注意 实体改编自 ISO 10303-42 中定义的 <strong>face_surface</strong>。</p>
+</blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
 <li>面曲面的定义域被正式定义为其面几何被环修剪后的定义域，该定义域不包括边界环。</li>
@@ -257,7 +261,7 @@
     8.20.3.10.3 特性（Attributes）
 <a class="link" href="#8.20.3.10.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e1686b97-b065-4552-95d1-c5a26845d0b1"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-39edfc1f-b2d2-4b32-ad30-24d5e08f3b28"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -279,56 +283,10 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFace.htm">IfcFace</a>
 <small>(2)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Bounds
-                
-            </td>
-<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceBound.htm">IfcFaceBound</a></td>
-<td data-label="Description">
-<p>面的边界。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasTextureMaps</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureMap.htm">IfcTextureMap</a> FOR MappedTo</td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
 </td>
 </tr>
 <tr class="preview">
@@ -349,32 +307,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                FaceSurface
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a></td>
-<td data-label="Description">
-<p>定义面内部形状的曲面。此曲面可能是无界的。面的定义域由此曲面和继承属性 SELF\FaceBounds 中的边界环定义。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                SameSense
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p>此标志指示曲面法线的方向是与面拓扑法线的方向一致（TRUE）还是相反（FALSE）。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.20.3.10.A<a class="link" href="#-e1686b97-b065-4552-95d1-c5a26845d0b1"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.10.A<a class="link" href="#-39edfc1f-b2d2-4b32-ad30-24d5e08f3b28"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.10.4-Formal-representation-"></a>
     8.20.3.10.4 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.10.4-Formal-representation-"><i data-feather="link"></i></a></h2>

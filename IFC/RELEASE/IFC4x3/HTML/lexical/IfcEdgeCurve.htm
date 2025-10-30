@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -194,21 +194,26 @@
 <h2><a class="anchor" id="8.20.3.5.1-Semantic-definition-"></a>
     8.20.3.5.1 语义定义（Semantic definition）
 <a class="link" href="#8.20.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 定义了两个顶点之间的拓扑连接，并包含连接的几何表示。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 定义了两个顶点之间的拓扑连接关系，并包含连接的几何表示。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> 拓扑用于修剪边的几何形状。无需对边进行几何修剪以匹配拓扑。</aside>
+<blockquote>
+<p>注意：拓扑用于修剪边的几何形状。无需对边进行几何修剪以匹配拓扑关系。</p>
+</blockquote>
 <figure><a class="anchor" id="-1-"></a><img alt="示例" src="../figures/ifcedgecurve.png"/><figcaption>图 8.20.3.5.A — 边曲线<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图 8.20.3.5.A 展示了一个示例，其中边的几何形状由无界曲线（此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em>）给出。边界由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 提供，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 的拓扑方向通过 <em>SameSense</em> = FALSE 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 的方向相反。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-边曲线是边的一种特殊子类型，其几何形状已完全定义。几何形状通过将边与一条可能无界的曲线关联来定义。由于拓扑方向和几何方向可能相反，使用指示符（相同方向）来标识边和曲线的方向是否一致或相反。布尔值指示曲线方向是否与边方向一致（TRUE）或相反（FALSE）。与边顶点关联的任何几何形状应与边的几何形状一致。多个边可以引用同一条曲线。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>edge_curve</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside>
+<aside class="aside-example"><mark>示例</mark> 图 8.20.3.5.A 展示了一个示例，其中边几何由无界曲线（此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em>）给出。边界由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 提供，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 的拓扑方向与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 的方向通过 <em>SameSense</em> = FALSE 形成相反关系。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><blockquote>
+<p>注意：根据 ISO/CD 10303-42:1992 的定义
+边曲线是边的一种特殊子类型，其几何形状被完整定义。通过将边与可能无界的曲线相关联来定义几何形状。由于拓扑方向和几何方向可能相反，使用指示符（相同方向）来标识边和曲线方向是否一致或相反。布尔值指示曲线方向是否与边方向一致（TRUE）或相反（FALSE）。与边顶点相关联的任何几何形状都应与边几何形状保持一致。多个边可以引用同一条曲线。</p>
+<p>注意：实体改编自 ISO 10303-42 中定义的 <strong>edge_curve</strong>。</p>
+</blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>边曲线的域正式定义为其边几何形状被顶点修剪后的域。该域不包括顶点。</li>
+<li>边曲线的域被正式定义为其边几何形状被顶点修剪后的域。该域不包括顶点。</li>
 <li>边曲线具有非零有限范围。</li>
 <li>边曲线是流形。</li>
 <li>边曲线是弧连通的。</li>
 <li>边起点不是边域的一部分。</li>
 <li>边终点不是边域的一部分。</li>
-<li>顶点几何形状应与边几何形状一致。</li>
+<li>顶点几何形状应与边几何形状保持一致。</li>
 </ol>
 <h2><a class="anchor" id="8.20.3.5.2-Entity-inheritance-"></a>
     8.20.3.5.2 实体继承（Entity inheritance）
@@ -254,7 +259,7 @@
     8.20.3.5.3 特性（Attributes）
 <a class="link" href="#8.20.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0b84a9fd-bb8c-474d-a96e-0e4208da687a"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-2f4a5b49-cd7b-4d69-90c1-c6c8731438ed"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -276,56 +281,10 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a>
 <small>(2)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                EdgeStart
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>边的起点（顶点）。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                EdgeEnd
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>边的终点（顶点）。同一个顶点可以同时用于 EdgeStart 和 EdgeEnd。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -346,32 +305,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                EdgeGeometry
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
-<td data-label="Description">
-<p>定义边的形状和空间位置的曲线。该曲线可能是无界的，并隐式被边的顶点修剪；这定义了边域。多个边可以引用同一条曲线。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                SameSense
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p>此逻辑标志指示边和定义边几何形状的曲线的方向是否相同（TRUE）或不同（FALSE）。边的方向是从边起点顶点到边终点顶点；曲线的方向是参数增加的方向。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.20.3.5.B<a class="link" href="#-0b84a9fd-bb8c-474d-a96e-0e4208da687a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.5.B<a class="link" href="#-2f4a5b49-cd7b-4d69-90c1-c6c8731438ed"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.5.4-Formal-representation-"></a>
     8.20.3.5.4 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.5.4-Formal-representation-"><i data-feather="link"></i></a></h2>

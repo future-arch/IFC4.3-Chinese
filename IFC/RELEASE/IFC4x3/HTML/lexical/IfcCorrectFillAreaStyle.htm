@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.6.1 IfcCorrectFillAreaStyle - IFC 4.3.2 Documentation</title>
+<title>8.12.6.1 IfcCorrectFillAreaStyle（正确填充区域样式） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,20 +189,20 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.6.1 IfcCorrectFillAreaStyle</h1>
+<h1>8.12.6.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCorrectFillAreaStyle.htm">IfcCorrectFillAreaStyle</a>（正确填充区域样式）</h1>
 <h2><a class="anchor" id="8.12.6.1.1-Semantic-definition-"></a>
     8.12.6.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.6.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>如果不同的填充区域样式正确地分配给了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em>，则此函数返回 true。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillStyleSelect.htm">IfcFillStyleSelect</a></em> 提供的实体类型仅允许某些组合。</p>
-<!-- end of short definition -->
-<p>返回 false：</p>
+<p>此函数在校验不同填充区域样式是否正确分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 时返回真值。仅允许 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillStyleSelect.htm">IfcFillStyleSelect</a></em> 所提供实体类型的特定组合。</p>
+<!-- 简短定义结束 -->
+<p>返回假值的情况：</p>
 <ul>
-<li>如果分配了多个外部定义的样式</li>
-<li>如果提供了外部定义的样式，并且附加了任何其他内部样式定义</li>
-<li>如果分配了多个背景颜色</li>
-<li>如果同时分配了阴影线和图块</li>
+<li>若分配了多个外部定义样式</li>
+<li>若存在外部定义样式且同时附加了其他内部样式定义</li>
+<li>若分配了多个背景颜色</li>
+<li>若同时存在剖面线填充与平铺填充</li>
 </ul>
-<p>否则返回 true</p>
+<p>其余情况返回真值</p>
 <aside class="aside-history"><mark>沿革</mark> <font color="#0000FF"><small>HISTORY  New function</small></font></aside>
 <h2><a class="anchor" id="8.12.6.1.2-Formal-representation-"></a>
     8.12.6.1.2 形式化表示（Formal representation）

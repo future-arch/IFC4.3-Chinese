@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.30 IfcSurfaceStyleLighting - IFC 4.3.2 Documentation</title>
+<title>8.12.3.30 IfcSurfaceStyleLighting（表面样式-光照） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,16 +189,16 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.30 IfcSurfaceStyleLighting</h1>
+<h1>8.12.3.30 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleLighting.htm">IfcSurfaceStyleLighting</a>（表面样式-光照）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.12.3.30.1-Semantic-definition-"></a>
     8.12.3.30.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.30.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleLighting.htm">IfcSurfaceStyleLighting</a></em> 是一个容器类，用于存储与特定曲面样式相关的物理精确照度计算属性。</p>
-<!-- end of short definition -->
-<p>图1显示了来自入射射线的反射和透射分量。反射和透射分量的总和为1.0，表示入射射线完全分解为反射和透射分量。因此，每个反射和透射值都在0.0到1.0的范围内。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="material reflection components" src="../figures/ifcsurfacelightingproperties_fig1.gif" title="图 8.12.3.30.A — 曲面样式照明"/><figcaption>图 8.12.3.30.A — 曲面样式照明<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>所有这些因子都可以通过物理测量，并且是红、绿、蓝光部分的比例。这些属性在模型中定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRGB</a></em> 类型，每个颜色都有一个因子。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleLighting.htm">IfcSurfaceStyleLighting</a></em> 是一个容器类，用于计算与特定表面样式相关的物理精确照度的属性。</p>
+<!-- 简短定义结束 -->
+<p>图1显示了入射光线的反射和透射分量。反射和透射分量的总和为1.0，表示入射光线完全分解为反射和透射分量。因此，每个反射和透射值的范围在0.0到1.0之间。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="材料反射分量" src="../figures/ifcsurfacelightingproperties_fig1.gif" title="图1 — 表面样式-光照"/><figcaption>图1 — 表面样式-光照<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<p>所有这些因素都可以通过物理方式测量，并且是光线红、绿、蓝部分的比率。这些属性在模型中定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRGB</a></em> 类型，每种颜色都有一个系数。</p>
 <aside class="aside-example"><mark>示例</mark> A green glass transmits only green light, so its transmission factor is 0.0 for red, between 0.0 and 1.0 for green and 0.0 for blue. A green surface reflects only green light, so the reflectance factor is 0.0 for red, between 0.0 and 1.0 for green and 0.0 for blue.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
 <h2><a class="anchor" id="8.12.3.30.2-Entity-inheritance-"></a>
     8.12.3.30.2 实体继承（Entity inheritance）
@@ -237,7 +237,7 @@
     8.12.3.30.3 特性（Attributes）
 <a class="link" href="#8.12.3.30.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-095e41a2-af31-4bf9-8dfe-d1af935c2032"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-854825c3-149e-4fb8-b4c4-56fa958d6165"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -259,62 +259,8 @@
 <small>(4)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                DiffuseTransmissionColour
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
-<td data-label="Description">
-<p>透射光的漫射程度。对于完全透明的材料，没有漫射。扩散能力越强，透射光中直接分量越小，直到只产生漫射光。值为1表示该颜色的光部分完全漫射。</p>
-<aside class="aside-note"><mark>注释</mark> The factor can be measured physically and has three ratios for the red, green and blue part of the light.</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                DiffuseReflectionColour
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
-<td data-label="Description">
-<p>反射光的漫射程度。对于镜面，没有漫射。反射曲面的扩散能力越强，反射光中镜面分量越小，直到只产生漫射光。值为1表示该颜色的光部分完全漫射。</p>
-<aside class="aside-note"><mark>注释</mark> The factor can be measured physically and has three ratios for the red, green and blue part of the light.</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                TransmissionColour
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
-<td data-label="Description">
-<p>描述落在物体上的光被完全或部分透射的情况。</p>
-<blockquote>
-<p>The factor can be measured physically and has three ratios for the red, green and blue part of the light.</p>
-</blockquote>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                ReflectanceColour
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
-<td data-label="Description">
-<p>一个系数，用于确定落在曲面上的光被完全或部分反射的程度。</p>
-<aside class="aside-note"><mark>注释</mark> The factor can be measured physically and has three ratios for the red, green and blue part of the light.</aside>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.12.3.30.B<a class="link" href="#-095e41a2-af31-4bf9-8dfe-d1af935c2032"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.30.B<a class="link" href="#-854825c3-149e-4fb8-b4c4-56fa958d6165"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.30.4-Formal-representation-"></a>
     8.12.3.30.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.30.4-Formal-representation-"><i data-feather="link"></i></a></h2>

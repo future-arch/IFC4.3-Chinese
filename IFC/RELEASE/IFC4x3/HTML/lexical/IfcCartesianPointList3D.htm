@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.10 IfcCartesianPointList3D - IFC 4.3.2 Documentation</title>
+<title>8.8.3.10 IfcCartesianPointList3D（笛卡尔点列表3D） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,19 +189,19 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.10 IfcCartesianPointList3D</h1>
+<h1>8.8.3.10 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a>（笛卡尔点列表3D）</h1>
 <div class="mvd" title="Included in Body AdvancedSwept DiskSolid PolyCurve Geometry, Body Tessellation Geometry, IfcTessellatedFaceSet.Coordinates, Reference Tessellation Geometry, Set Of Survey Points, Surface Tessellation Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Body AdvancedSwept DiskSolid PolyCurve Geometry, Body Tessellation Geometry, IfcTessellatedFaceSet.Coordinates, Reference Tessellation Geometry, Set Of Survey Points, Surface Tessellation Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.8.3.10.1-Semantic-definition-"></a>
     8.8.3.10.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.10.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em> 定义了一个三维笛卡尔点有序集合。每个笛卡尔点由一个固定长度的三个坐标列表提供。<em>CoordList</em> 特性是一个二维列表，其中：</p>
-<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em> 定义了三维笛卡尔点的有序集合。每个笛卡尔点通过三个坐标的固定列表作为三维点提供。属性 <em>CoordList</em> 是一个二维列表，其中：</p>
+<!-- 短定义结束 -->
 <ul>
 <li>第一维是一个无界列表，表示每个三维笛卡尔点；</li>
-<li>第二维是一个固定长度的列表，包含三个列表成员，其中 [1] 是 x 坐标，[2] 是 y 坐标，[3] 是 z 坐标。</li>
+<li>第二维是三个列表成员的固定列表，其中[1]是笛卡尔点的x坐标，[2]是y坐标，[3]是z坐标。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> is introduced to provide a compact representation of larger list of points, such as in point clouds, and in indexable representation of points used as vertices in tessellated items or poly curves.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
+<aside class="aside-note"><mark>注释</mark> 引入 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 是为了提供较大点列表的紧凑表示，例如在点云中，以及在细分项或多段曲线中作为顶点的可索引点表示。</aside><aside class="aside-history"><mark>沿革</mark> IFC4中的新实体。</aside>
 <h2><a class="anchor" id="8.8.3.10.2-Entity-inheritance-"></a>
     8.8.3.10.2 实体继承（Entity inheritance）
 <a class="link" href="#8.8.3.10.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -263,7 +263,7 @@
     8.8.3.10.3 特性（Attributes）
 <a class="link" href="#8.8.3.10.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-3a9fb794-32f7-45aa-ad8d-329ca5f07219"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d84da8c8-bafd-4677-85ec-f800f7993100"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -285,46 +285,10 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a>
 <small>(1)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointListDim.htm">IfcPointListDim</a>(SELF)</code></pre>
-<p>此类别的空间维度，根据子类型为 2 或 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -345,32 +309,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                CoordList
-                
-            </td>
-<td data-label="Type">LIST [1:?] OF LIST [3:3] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>由三个坐标提供的二维笛卡尔点列表。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                TagList
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>与每个点对应的标签列表，可用于根据 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOffsetCurveByDistances.htm">IfcOffsetCurveByDistances</a></em> 上的 Tag 特性来标识基准曲线。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.8.3.10.A<a class="link" href="#-3a9fb794-32f7-45aa-ad8d-329ca5f07219"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.10.A<a class="link" href="#-d84da8c8-bafd-4677-85ec-f800f7993100"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.10.4-Formal-representation-"></a>
     8.8.3.10.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.10.4-Formal-representation-"><i data-feather="link"></i></a></h2>

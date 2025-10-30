@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -194,14 +194,14 @@
 <h2><a class="anchor" id="8.9.3.24.1-Semantic-definition-"></a>
     8.9.3.24.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.24.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCosineSpiral.htm">IfcCosineSpiral</a></em> 是一种螺旋曲线类型，其曲率变化依赖于余弦函数。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCosineSpiral.htm">IfcCosineSpiral</a></em> 是一种曲率变化依赖于余弦函数的螺旋曲线类型。</p>
 <!-- end of short definition -->
-<p>余弦螺旋线由其曲线长度参数化，对于给定参数 \(s\)，航向角 \(\theta(s)\) 和曲率 \(\kappa(s)\) 定义如下。其中，\(A_0\) 对应 <em>ConstantTerm</em>，\(A_1\) 对应 <em>CosineTerm</em>。</p>
+<p>余弦螺旋曲线由其曲线长度参数化，对于给定参数 \(s\)，航向角 \(\theta(s)\) 和曲率 \(\kappa(s)\) 定义如下。其中，\(A_0\) 对应 <em>ConstantTerm</em>，\(A_1\) 对应 <em>CosineTerm</em>。</p>
 <p><strong>航向角：</strong></p>
-<p><em>航向角</em> \(\theta(s)\) 表示在给定弧长处曲线切线的方向。它指示曲线在该点的"指向"方向。当沿曲线移动时，\(\theta(s)\) 会发生变化，显示曲线方向的演变过程。</p>
+<p><em>航向角</em> \(\theta(s)\) 表示给定弧长处曲线切线的方向。它指示曲线在该点的"指向"方向。当沿着曲线移动时，\(\theta(s)\) 会发生变化，显示曲线方向的演变过程。</p>
 <p>$$\theta(s) = \frac{1}{A_0} s \;+\; \frac{L}{\pi A_1} \sin!\biggl(\frac{\pi}{L}s\biggr)$$</p>
 <p><strong>曲率：</strong></p>
-<p><em>曲率</em> \(\kappa(s)\) 描述了航向角相对于弧长 \(s\) 的变化速度。它反映了曲线的"紧密度"。较高的曲率值对应更急的弯道，较低的曲率值对应更平直的线段。</p>
+<p><em>曲率</em> \(\kappa(s)\) 描述航向角相对于弧长 \(s\) 的变化速度。它反映了曲线的"紧密度"。较高的曲率值对应更急的弯道，较低的曲率值对应更平直的线段。</p>
 <p>$$\kappa(s) = \frac{L}{A_0} \;+\; \frac{L}{A_1}\cos!\biggl(\frac{\pi}{L}s\biggr)$$</p>
 <h2><a class="anchor" id="8.9.3.24.2-Entity-inheritance-"></a>
     8.9.3.24.2 实体继承（Entity inheritance）
@@ -281,7 +281,7 @@
     8.9.3.24.3 特性（Attributes）
 <a class="link" href="#8.9.3.24.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-6dc5ff37-6d13-4e0a-b88a-738a05107285"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-940c3fc2-eab0-4565-a749-cc5ff07e2abc"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -311,7 +311,7 @@
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
 <p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -322,7 +322,7 @@
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
 <p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -342,7 +342,7 @@
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，对所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）有不同的定义。</p>
+<p>此抽象类的空间维度，所有子类（如 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）的定义各不相同。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -412,7 +412,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.24.A<a class="link" href="#-6dc5ff37-6d13-4e0a-b88a-738a05107285"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.24.A<a class="link" href="#-940c3fc2-eab0-4565-a749-cc5ff07e2abc"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.24.4-Formal-representation-"></a>
     8.9.3.24.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.24.4-Formal-representation-"><i data-feather="link"></i></a></h2>

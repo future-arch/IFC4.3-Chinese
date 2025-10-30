@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7.3.7 IfcConnectionPointEccentricity - IFC 4.3.2 Documentation</title>
+<title>8.7.3.7 IfcConnectionPointEccentricity（连接点偏心） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,26 +189,26 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.7.3.7 IfcConnectionPointEccentricity</h1>
+<h1>8.7.3.7 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionPointEccentricity.htm">IfcConnectionPointEccentricity</a>（连接点偏心）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.7.3.7.1-Semantic-definition-"></a>
     8.7.3.7.1 语义定义（Semantic definition）
 <a class="link" href="#8.7.3.7.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionPointEccentricity.htm">IfcConnectionPointEccentricity</a></em> 用于描述有助于在具有关联点坐标的点或顶点处连接两个对象的几何约束。连接点之间存在物理距离或偏心距。偏心距可以通过以下方式给出：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionPointEccentricity.htm">IfcConnectionPointEccentricity</a></em> 用于描述在两个对象的点或顶点处进行物理连接的几何约束，这些点具有相关的点坐标。两个对象的连接点之间存在物理距离或偏心量。偏心量可以通过以下方式给出：</p>
 <ul>
-<li>提供 <em>PointOnRelatingElement</em> 和 <em>PointOnRelatedElement</em>，其中两个点坐标在通用父坐标系（最终在世界坐标系）中不相同，</li>
-<li>提供 <em>PointOnRelatingElement</em> 和三个距离度量 <em>EccentricityInX</em>、<em>EccentricityInY</em> 和 <em>EccentricityInZ</em>（如果底层坐标系是二维的，则仅提供 <em>EccentricityInX</em> 和 <em>EccentricityInY</em>），或</li>
-<li>同时提供两者。</li>
+<li>提供 <em>PointOnRelatingElement</em> 和 <em>PointOnRelatedElement</em>，其中两个点坐标在公共父坐标系（最终在世界坐标系内）中不完全相同；</li>
+<li>提供 <em>PointOnRelatingElement</em> 以及三个距离量度 <em>EccentricityInX</em>、<em>EccentricityInY</em> 和 <em>EccentricityInZ</em>（如果底层坐标系是二维的，则仅提供 <em>EccentricityInX</em> 和 <em>EccentricityInY</em>）；或</li>
+<li>同时提供以上两者。</li>
 </ul>
-<!-- end of short definition -->
+<!-- 短定义结束 -->
 <blockquote>
 <p>NOTE  If both, <em>PointOnRelatedElement</em>, and <em>EccentricityInX</em>, <em>EccentricityInY</em>, (<em>EccentricityInZ</em>) are provided, the values should be consistent. In case of any non-consistency, the calculated distance between <em>PointOnRelatingElement</em> and <em>PointOnRelatedElement</em> takes precedence.</p>
 </blockquote>
-<p><em>PointOnRelatingElement</em> 属性中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></em>（或具有关联 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em>）定义了连接元素的基本几何项连接的点。点坐标在 <em>RelatingElement</em> 的局部坐标系中提供，如利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionPointGeometry.htm">IfcConnectionPointGeometry</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a></em> 子类型中所指定。可选地，也可以通过使用 <em>PointOnRelatedElement</em> 属性在 <em>RelatedElement</em> 的局部坐标系中提供相同的点坐标，否则到 RelatedElement 上点的距离必须由三个偏心距值给出。</p>
-<p><em>EccentricityInX</em>、<em>EccentricityInY</em> 和 <em>EccentricityInZ</em> 的显式值始终在以下方向和坐标系中测量（定义值是正还是负）：</p>
+<p><em>PointOnRelatingElement</em> 属性处的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></em>（或带有相关 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em>）定义了被连接元素的基本几何项连接的点。点坐标在 <em>RelatingElement</em> 的局部坐标系内提供，具体在利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionPointGeometry.htm">IfcConnectionPointGeometry</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a></em> 子类型中指定。可选地，相同的点坐标也可以通过 <em>PointOnRelatedElement</em> 属性在 <em>RelatedElement</em> 的局部坐标系内提供，否则必须通过三个偏心值给出到 <em>RelatedElement</em> 处点的距离。</p>
+<p><em>EccentricityInX</em>、<em>EccentricityInY</em> 和 <em>EccentricityInZ</em> 的显式值始终按以下方向和坐标系测量（定义值为正或负的情况）：</p>
 <ul>
-<li>从 <em>PointOnRelatedElement</em> 到 <em>PointOnRelatingElement</em>，在 <em>RelatingElement</em> 的坐标系中。</li>
-<li>此外：当用于指定结构分析模型中的连接时，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralMember.htm">IfcStructuralMember</a></em> 应作为利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionPointEccentricity.htm">IfcConnectionPointEccentricity</a></em> 的关系对象的 <em>RelatingElement</em>，而 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralConnection.htm">IfcStructuralConnection</a></em> 应作为 <em>RelatedElement</em>。</li>
+<li>在 <em>RelatingElement</em> 的坐标系内，从 <em>PointOnRelatedElement</em> 到 <em>PointOnRelatingElement</em>。</li>
+<li>此外：当用于指定结构分析模型中的连接时，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralMember.htm">IfcStructuralMember</a></em> 应作为利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionPointEccentricity.htm">IfcConnectionPointEccentricity</a></em> 的关系对象的 <em>RelatingElement</em>，而 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralConnection.htm">IfcStructuralConnection</a></em> 是 <em>RelatedElement</em>。</li>
 </ul>
 <aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside>
 <h2><a class="anchor" id="8.7.3.7.2-Entity-inheritance-"></a>
@@ -241,7 +241,7 @@
     8.7.3.7.3 特性（Attributes）
 <a class="link" href="#8.7.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c6ff838a-de3b-4528-a687-b9f444cedf8a"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-5c3967ed-9064-4ed4-ab6b-83422cb50cad"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -263,30 +263,6 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                PointOnRelatingElement
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointOrVertexPoint.htm">IfcPointOrVertexPoint</a></td>
-<td data-label="Description">
-<p>连接对象在相关元素处的对齐点，以相关元素的 LCS 提供。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                PointOnRelatedElement
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPointOrVertexPoint.htm">IfcPointOrVertexPoint</a></td>
-<td data-label="Description">
-<p>连接对象在相关元素处的对齐点，以相关元素的 LCS 提供。如果省略该信息，则使用相关元素的坐标系原点。</p>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -305,44 +281,8 @@
 <small>(3)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                EccentricityInX
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>两个点（或顶点）在点连接中的 x 方向距离。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                EccentricityInY
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>两个点（或顶点）在点连接中的 y 方向距离。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                EccentricityInZ
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>两个点（或顶点）在点连接中的 z 方向距离。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.7.3.7.A<a class="link" href="#-c6ff838a-de3b-4528-a687-b9f444cedf8a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.7.A<a class="link" href="#-5c3967ed-9064-4ed4-ab6b-83422cb50cad"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.7.4-Formal-representation-"></a>
     8.7.3.7.4 形式化表示（Formal representation）
 <a class="link" href="#8.7.3.7.4-Formal-representation-"><i data-feather="link"></i></a></h2>

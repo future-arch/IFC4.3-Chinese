@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.37 IfcTextStyleFontModel - IFC 4.3.2 Documentation</title>
+<title>8.12.3.37 IfcTextStyleFontModel（文本样式字体模型） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.37 IfcTextStyleFontModel</h1>
+<h1>8.12.3.37 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyleFontModel.htm">IfcTextStyleFontModel</a>（文本样式字体模型）</h1>
 <div class="mvd" title="Included in Annotation 2D Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Annotation 2D Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.12.3.37.1-Semantic-definition-"></a>
@@ -203,21 +203,21 @@ Setting font properties will be among the most common uses of style sheets. Unfo
 Because there is no accepted, universal taxonomy of font properties, matching of properties to font faces must be done carefully. The properties are matched in a well-defined order to ensure that the results of this matching process are as consistent as possible across user agents (assuming that the same library of font faces is presented to each of them).</p>
 </blockquote>
 <ol>
-<li>用户代理（UA）创建（或访问）一个数据库，其中包含UA所知的ョ所有字体的相关CSS1属性。UA可能因为字体已本地安装或已通过网络下载而知道某个字体。如果存在两个具有完全相同属性的字体，则其中一个将被忽略。</li>
-<li>在给定的元素和该元素中的每个字符处，UA会组合适用于该元素的字体属性。使用完整的属性集，UA使用'font-family'属性选择一个暂定的字体系列。其余属性根据每个属性描述的匹配标准进行测试。如果所有剩余属性都匹配，则该字体字面就是给定元素的匹配字体字面。</li>
-<li>如果在步骤2处理的字体系列中没有匹配的字体字面，并且字体集中有下一个备选的'font-family'，则使用下一个备选的'font-family'重复步骤2。</li>
-<li>如果存在匹配的字体字面，但它不包含当前字符的字形，并且字体集中有下一个备选的'font-family'，则使用下一个备选的'font-family'重复步骤2。</li>
-<li>如果在步骤2选择的字体系列中没有字体，则使用UA依赖的默认'font-family'并重复步骤2，使用默认字体中能获得的最佳匹配。</li>
+<li>用户代理建立（或访问）一个数据库，包含该用户代理所知的所有字体的相关CSS1属性。用户代理可能因字体已本地安装或先前通过网络下载而知晓该字体。如果存在两个属性完全相同的字体，则忽略其中一个。</li>
+<li>在给定元素及该元素中的每个字符处，用户代理汇集适用于该元素的字体属性。使用完整的属性集，用户代理通过'font-family'属性选择暂定字体系列。其余属性根据各属性描述的匹配标准在该系列中进行测试。如果所有剩余属性均匹配，则该字体即为给定元素的匹配字体。</li>
+<li>如果在步骤2处理的'font-family'中没有匹配字体，且字体集中存在下一个备选'font-family'，则使用下一个备选'font-family'重复步骤2。</li>
+<li>如果存在匹配字体，但该字体不包含当前字符的字形，且字体集中存在下一个备选'font-family'，则使用下一个备选'font-family'重复步骤2。</li>
+<li>如果在步骤2选择的系列中没有字体，则使用用户代理相关的默认'font-family'并重复步骤2，使用在默认字体中可获得的最佳匹配。</li>
 </ol>
-<p>（上述算法可以优化，以避免为每个字符重复检查CSS1属性。）</p>
-<p>上述（2）中的每个属性的匹配规则如下：</p>
+<p>（上述算法可进行优化，以避免为每个字符重新访问CSS1属性。）</p>
+<p>上述第(2)步中各属性的匹配规则如下：</p>
 <ol>
-<li>首先尝试'font-style'。'italic'将被满足，如果UA的字体数据库中有标记为CSS关键字'italic'（首选）或'oblique'的字面。否则，值必须精确匹配，否则font-style将失败。</li>
-<li>接下来尝试'font-variant'。'normal'匹配未标记为'small-caps'的字体；'small-caps'匹配（1）标记为'small-caps'的字体，（2）合成小写字体的字体，或（3）将所有小写字母替换为大写字母的字体。可以通过电子缩放正常字体的字母来合成小写字体。</li>
-<li>接下来匹配'font-weight'，它永远不会失败。（参见下面的'font-weight'。）</li>
-<li>'font-size'必须在UA依赖的容差范围内进行匹配。（通常，可伸缩字体的尺寸会四舍五入到最接近的整数像素，而点阵字体的容差可能高达20%。）进一步的计算基于使用的'font-size'值，而不是指定的'font-size'值。</li>
+<li>首先尝试'font-style'。如果用户代理字体数据库中存在标记为CSS关键字'italic'（首选）或'oblique'的字体，则满足'italic'要求。否则必须精确匹配值，否则font-style将匹配失败。</li>
+<li>接着尝试'font-variant'。'normal'匹配未标记为'small-caps'的字体；'small-caps'匹配(1)标记为'small-caps'的字体，(2)合成小型大写字母的字体，或(3)所有小写字母被替换为大写字母的字体。小型大写字体可通过电子缩放普通字体中的大写字母来合成。</li>
+<li>随后匹配'font-weight'，该属性永远不会匹配失败。（参见下文'font-weight'。）</li>
+<li>'font-size'必须在用户代理相关的容差范围内匹配。（通常，可缩放字体的尺寸会四舍五入到最接近的整像素，而位图字体的容差可能高达20%。）进一步计算基于使用的'font-size'值，而非指定的值。</li>
 </ol>
-<p>继承的 <em>Name</em> 属性用于定义字体名称，特别是在未提供（列表）字体系列的情况下。</p>
+<p>继承的_Name_属性用于定义字体名称，特别是在未提供（列表）字体系列的情况下。</p>
 <aside class="aside-note"><mark>注释</mark> Corresponding CSS1 definitions are Font properties ('font-family', 'font-style', 'font-variant', 'font-weight').</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside>
 <h2><a class="anchor" id="8.12.3.37.2-Entity-inheritance-"></a>
     8.12.3.37.2 实体继承（Entity inheritance）
@@ -270,7 +270,7 @@ Because there is no accepted, universal taxonomy of font properties, matching of
     8.12.3.37.3 特性（Attributes）
 <a class="link" href="#8.12.3.37.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-868d9648-96df-4bf6-adef-8e174e802d43"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-786a70a2-6ef3-4572-9f2c-2aeff00f8d52"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -292,18 +292,6 @@ Because there is no accepted, universal taxonomy of font properties, matching of
 <small>(1)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Name
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>用于标识预定义项的字符串。字符串的允许值在子类型级别声明。</p>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -322,76 +310,12 @@ Because there is no accepted, universal taxonomy of font properties, matching of
 <small>(5)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                FontFamily
-                
-            </td>
-<td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextFontName.htm">IfcTextFontName</a></td>
-<td data-label="Description">
-<p>该值是一个优先级的字体系列名称和/或通用字体系列名称列表。第一个列表项具有最高优先级，如果此字体失败，则应使用下一个列表项。最后一个列表项（如果可能）应为通用字体系列。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> Attribute changed to being mandatory.</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                FontStyle
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFontStyle.htm">IfcFontStyle</a></td>
-<td data-label="Description">
-<p>字体样式属性在字体系列中选择正常（有时称为“roman”或“upright”）、斜体和倾斜字面。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                FontVariant
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFontVariant.htm">IfcFontVariant</a></td>
-<td data-label="Description">
-<p>字体变体属性在正常和小型大写字母之间进行选择。</p>
-<aside class="aside-note"><mark>注释</mark> It has been introduced for later compliance to full CSS1 support.</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                FontWeight
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFontWeight.htm">IfcFontWeight</a></td>
-<td data-label="Description">
-<p>字体粗细属性选择字体的粗细。</p>
-<aside class="aside-note"><mark>注释</mark> Values other then 'normal' and 'bold' have been introduced for later compliance to full CSS1 support.</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                FontSize
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSizeSelect.htm">IfcSizeSelect</a></td>
-<td data-label="Description">
-<p>字体大小提供文本字体的大小或高度。</p>
-<aside class="aside-note"><mark>注释</mark> The following values are allowed, &lt;<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></em>, with positive values, the length unit is globally defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></em>.__</aside>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.12.3.37.A<a class="link" href="#-868d9648-96df-4bf6-adef-8e174e802d43"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.37.A<a class="link" href="#-786a70a2-6ef3-4572-9f2c-2aeff00f8d52"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.37.4-Formal-propositions-"></a>
     8.12.3.37.4 形式化命题（Formal propositions）
 <a class="link" href="#8.12.3.37.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d8157ba9-a78f-44cf-9ee9-87bd5939baeb"></a><table>
+<figure><a class="anchor" id="-05a5129b-c36a-4cd9-bf8f-2e3af925a972"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -402,7 +326,7 @@ Because there is no accepted, universal taxonomy of font properties, matching of
 <tr>
 <td>MeasureOfFontSize</td>
 <td>
-<p>大小应由正长度度量给出，</p>
+<p>尺寸应由正长度度量值给出，</p>
 </td>
 </tr>
 <tr>
@@ -412,7 +336,7 @@ Because there is no accepted, universal taxonomy of font properties, matching of
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.37.B<a class="link" href="#-d8157ba9-a78f-44cf-9ee9-87bd5939baeb"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.37.B<a class="link" href="#-05a5129b-c36a-4cd9-bf8f-2e3af925a972"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.37.5-Formal-representation-"></a>
     8.12.3.37.5 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.37.5-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -195,18 +195,22 @@
     8.20.3.15.1 语义定义（Semantic definition）
 <a class="link" href="#8.20.3.15.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-多段环是由直边组成的环，用于界定空间中的平面区域。多段环是一种亏格为1的环，通过按顺序排列的共面点集合表示环的顶点。环由连接集合中某一点与后续点的直线段组成。闭合段是从集合中最后一个点连接到第一个点。环的方向与线段方向一致。</aside><blockquote>
+<blockquote>
+<p>注意 根据 ISO/CD 10303-42:1992 的定义
+多段环是由直边构成的环，用于界定空间中的平面区域。多段环是一种亏格为1的环，通过按顺序排列的共面点集合表示环的顶点。环由连接集合中某一点与其后续点的直线段组成。闭合段是从集合中最后一个点连接到第一个点。环的方向与线段方向一致。</p>
 <figure><a class="anchor" id="Figure-8.20.3.15.A"></a>多段环应符合以下拓扑约束：
 * 环的亏格为1
 * 应满足以下方程 <img alt="Image" src="../figures/ifcpolyloop-math1.gif"/><figcaption>Figure 8.20.3.15.A<a class="link" href="#Figure-8.20.3.15.A"><i data-feather="link"></i></a></figcaption></figure>
 </blockquote>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyLoop.htm">IfcPolyLoop</a></em> 始终是闭合的，最后一段是从 <em>Polygon</em> 列表中的最后一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em> 连接到第一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em>。因此第一个点不应在列表末尾重复出现，既不能引用相同的实例，也不能使用具有与第一个点相同坐标的额外 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em> 实例。</p>
-<aside class="aside-note"><mark>注释</mark> 该实体主要用于促进面化边界表示模型的高效通信。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>poly_loop</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyLoop.htm">IfcPolyLoop</a></em> 始终是闭合的，最后一段是从 <em>Polygon</em> 列表中的最后一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em> 连接到第一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em>。因此第一个点不应在列表末尾重复，既不能引用相同的实例，也不能使用具有与第一个点相同坐标的额外 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></em> 实例。</p>
+<aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体</aside><blockquote>
+<p>注意 该实体主要用于促进面化边界表示模型的高效通信。</p>
+<p>注意 实体改编自 ISO 10303-42 中定义的 <strong>poly_loop</strong>。</p>
+</blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
 <li>定义多段环的多边形中的所有点应共面。</li>
-<li>第一个和最后一个 <em>Polygon</em> 的值应不同。</li>
+<li>第一个和最后一个 <em>Polygon</em> 在数值上应不同。</li>
 </ol>
 <h2><a class="anchor" id="8.20.3.15.2-Entity-inheritance-"></a>
     8.20.3.15.2 实体继承（Entity inheritance）
@@ -252,7 +256,7 @@
     8.20.3.15.3 特性（Attributes）
 <a class="link" href="#8.20.3.15.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-561654a5-4295-4062-8d04-3a2df7a71662"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-eb9e5eb7-bfae-4736-b520-db1556a99ee2"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -274,28 +278,6 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -314,24 +296,12 @@
 <small>(1)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Polygon
-                
-            </td>
-<td data-label="Type">LIST [3:?] OF UNIQUE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></td>
-<td data-label="Description">
-<p>定义环的点列表。列表中不存在重复点。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.20.3.15.B<a class="link" href="#-561654a5-4295-4062-8d04-3a2df7a71662"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.15.B<a class="link" href="#-eb9e5eb7-bfae-4736-b520-db1556a99ee2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.15.4-Formal-propositions-"></a>
     8.20.3.15.4 形式化命题（Formal propositions）
 <a class="link" href="#8.20.3.15.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-3a202c68-439b-428e-93df-efa55b49f666"></a><table>
+<figure><a class="anchor" id="-39913f4e-ed2e-411b-9740-e22931638966"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -351,7 +321,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.20.3.15.C<a class="link" href="#-3a202c68-439b-428e-93df-efa55b49f666"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.15.C<a class="link" href="#-39913f4e-ed2e-411b-9740-e22931638966"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.15.5-Formal-representation-"></a>
     8.20.3.15.5 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.15.5-Formal-representation-"><i data-feather="link"></i></a></h2>

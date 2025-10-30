@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.47 IfcTriangulatedFaceSet - IFC 4.3.2 Documentation</title>
+<title>8.8.3.47 IfcTriangulatedFaceSet（三角化面集） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,53 +189,59 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.47 IfcTriangulatedFaceSet</h1>
+<h1>8.8.3.47 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a>（三角化面集）</h1>
 <div class="mvd" title="Included in Body Tessellation Geometry, Reference Tessellation Geometry, Surface Tessellation Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Body Tessellation Geometry, Reference Tessellation Geometry, Surface Tessellation Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.8.3.47.1-Semantic-definition-"></a>
     8.8.3.47.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.47.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 是一个镶嵌面集，所有面都由三角形边界。面由三个笛卡尔点定义的隐式折线构造。根据继承的属性 <em>Closed</em> 的值，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 的实例表示：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 是一种三角化面集，其中所有面均由三角形边界构成。这些面通过由三个笛卡尔点定义的隐式折线构建。根据继承属性 <em>Closed</em> 的值，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 实例表示：</p>
 <ul>
-<li>如果为 TRUE，则为边界表示（或 B-rep）；</li>
-<li>如果为 FALSE，则为基于面的表面表示。</li>
+<li>如果为 TRUE，表示边界表示（或 B-rep）；</li>
+<li>如果为 FALSE，表示基于面的表面表示。</li>
 </ul>
-<!-- end of short definition -->
-<p>每个点的坐标由一个一维索引提供，该索引指向二维列表 <em>CoordIndex</em> 中提供的笛卡尔点有序列表，其中：</p>
+<!-- 简短定义结束 -->
+<p>每个点的坐标通过二维列表 <em>CoordIndex</em> 提供的有序笛卡尔点列表的基于1的索引来提供，其中：</p>
 <ul>
-<li>二维列表的第一维寻址三角形面列表；</li>
-<li>二维列表的第二维提供正好三个索引。每个索引指向构成三角形顶点的笛卡尔点。</li>
+<li>二维列表的第一个维度对应三角形面的列表；</li>
+<li>二维列表的第二个维度恰好提供三个索引。每个索引指向作为三角形顶点的笛卡尔点。</li>
 </ul>
-<p>根据 <em>PnIndex</em> 的提供情况，索引直接指向超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> 引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em>，或者它们指向 <em>PnIndex</em>，其中该位置的整数值提供了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em> 中坐标值的查找位置。有关点索引的处理，请参见图 8.8.3.47.A。</p>
-<figure><a class="anchor" id="-1-PnIndex-"></a><img alt="IfcTriangulatedFaceSet_01" src="../figures/ifctriangulatedfaceset_03.png" title="图 8.8.3.47.A — _PnIndex_ 的使用"/><figcaption>图 8.8.3.47.A — _PnIndex_ 的使用<a class="link" href="#-1-PnIndex-"><i data-feather="link"></i></a></figcaption></figure>
-<p>参见图 8.8.3.47.B，了解未使用（默认）和使用 <em>PnIndex</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em>。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="IfcTriangulatedFaceSet_02" src="../figures/ifctriangulatedfaceset_01.png" title="图 8.8.3.47.B — 三角形面集"/><figcaption>图 8.8.3.47.B — 三角形面集<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<p>可选地可以提供法线。仅支持每个向量的法线，允许在视觉上弯曲三角形，当三角形的三个顶点的法线与三角形面的法线不共线时。如果它们相同，则应省略法线。</p>
-<aside class="aside-note"><mark>注释</mark> In case of a body representation having triangular faces with curvature, different normals for all three vertices in context of this triangles are exported, describing the curvature for smooth visualisation. In case of triangular faces with no curvature, the three vertex-based normals are identical and could always be computed from the face. Therefore vertices should only be exported to support smooth visualisation by curvature of triangles. In case of faceted representation no vertices should be exported.</aside>
+<p>根据 <em>PnIndex</em> 的提供情况，索引要么直接指向在超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> 中定义的 <em>Coordinates</em> 所引用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em>，要么指向 <em>PnIndex</em>，其中该位置的整数值提供 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em> 内坐标值的位置。有关点索引的处理，请参见图1。</p>
+<figure><a class="anchor" id="-1-PnIndex-"></a><img alt="IfcTriangulatedFaceSet_01" src="../figures/ifctriangulatedfaceset_03.png" title="图1 — _PnIndex_ 的使用"/><figcaption>图1 — _PnIndex_ 的使用<a class="link" href="#-1-PnIndex-"><i data-feather="link"></i></a></figcaption></figure>
+<p>有关不使用（默认）和使用 <em>PnIndex</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 的使用，请参见图2。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="IfcTriangulatedFaceSet_02" src="../figures/ifctriangulatedfaceset_01.png" title="图2 — 三角化面集"/><figcaption>图2 — 三角化面集<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<p>可选地，可以提供法线。仅支持每个向量的法线，当三角形对应三个顶点的三个法线不共线于三角形面的法线时，允许视觉上弯曲的三角形。如果它们相同，则应省略法线。</p>
+<blockquote>
+<p>注意 在具有弯曲三角形面的体表示情况下，导出此三角形上下文中所有三个顶点的不同法线，以描述平滑可视化的曲率。在没有曲率的三角形面情况下，三个基于顶点的法线是相同的，并且总是可以从面计算得出。因此，仅应在支持通过三角形曲率进行平滑可视化时导出顶点。在刻面表示情况下，不应导出顶点。</p>
+</blockquote>
 <p>法线由二维列表 <em>Normals</em> 提供，其中：</p>
 <ul>
-<li>二维列表的第一维寻址三角形面的相应顶点索引列表；</li>
-<li>二维列表的第二维提供三个实数值，用于确定三角形在该顶点处的法线方向。</li>
+<li>二维列表的第一个维度对应三角形面的顶点索引列表；</li>
+<li>二维列表的第二个维度恰好提供三个实数值，以确定此三角形顶点处法线的方向。</li>
 </ul>
-<p><em>CoordIndex</em> 中的索引指向 <em>Normals</em> 列表。<em>CoordIndex</em> 中的索引应用于两个点，直接应用，或通过 <em>PnIndex</em> 和法线应用。有关法线处理，请参见图 8.8.3.47.C。</p>
-<figure><a class="anchor" id="-3-"></a><img alt="IfcTriangulatedFaceSet_02" src="../figures/ifctriangulatedfaceset_02.png" title="图 8.8.3.47.C — 带法线的三角形面集"/><figcaption>图 8.8.3.47.C — 带法线的三角形面集<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> Using corresponding lists of points and normals allows to use only a single list of indices into both at the expense of having non-unique collections of vertices.</aside>
-<p>图 8.8.3.47.D 显示了未使用注释的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 的用法。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 的图表示索引以及索引指向的有序列表。索引从 1 开始（索引为 1 到 N），如果 <em>CoordIndex</em> 中的最大索引为 N，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 应具有 N 个列表，每个列表包含 3:3 个坐标。</p>
-<figure><a class="anchor" id="-4-"></a><img alt="IfcTriangulatedFaceSet_Example-01" src="../figures/ifctriangulatedfaceset_example-01.png"/><figcaption>图 8.8.3.47.D — 三角形面集几何<a class="link" href="#-4-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.8.3.47.D 显示了一个由以下内容表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em>：</p>
+<p><em>CoordIndex</em> 中的索引指向 <em>Normals</em> 列表。<em>CoordIndex</em> 的索引同时应用于点和法线，要么直接应用，要么通过 <em>PnIndex</em> 应用。有关法线的处理，请参见图3。</p>
+<figure><a class="anchor" id="-3-"></a><img alt="IfcTriangulatedFaceSet_02" src="../figures/ifctriangulatedfaceset_02.png" title="图3 — 带法线的三角化面集"/><figcaption>图3 — 带法线的三角化面集<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
+<blockquote>
+<p>注意 使用对应的点和法线列表允许仅使用单个索引列表指向两者，但代价是顶点集合不唯一。</p>
+</blockquote>
+<p>图4显示了未带注释的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 的使用。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 的图表表示索引和索引指向的有序列表。索引从1开始（索引为1到N），如果 <em>CoordIndex</em> 中的最大索引为N，则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></em> 应有N个3:3坐标的列表。</p>
+<figure><a class="anchor" id="-4-"></a><img alt="IfcTriangulatedFaceSet_Example-01" src="../figures/ifctriangulatedfaceset_example-01.png"/><figcaption>图4 — 三角化面集几何<a class="link" href="#-4-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图4显示了一个由以下表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em>：</p>
 <pre><code>CoordIndex:
 ((1,6,5), (1,2,6), (6,2,7), (7,2,3), (7,8,6), (6,8,5), (5,8,1), (1,8,4), (4,2,1), (2,4,3), (4,8,7), (7,3,4))
 
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a>:
 ((0.,0.,0.), (1.,0.,0.), (1.,1.,0.), (0.,1.,0.), (0.,0.,2.), (1.,0.,2.), (1.,1.,2.), (0.,1.,2.))
 </code></pre>
-<aside class="aside-note"><mark>注释</mark> The definition of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> is based on the <strong>indexedFaceSet</strong> and <strong>indexedTriangleSet</strong> defined in ISO/IEC 19775-1. The use of <em>PnIndex</em> has been adopted from <strong>triangulated_surface_set</strong> defined in ISO-10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside><blockquote>
+<p>注意 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em> 的定义基于 ISO/IEC 19775-1 中定义的 <strong>indexedFaceSet</strong> 和 <strong>indexedTriangleSet</strong>。<em>PnIndex</em> 的使用已从 ISO-10303-42 中定义的 <strong>triangulated_surface_set</strong> 采用。</p>
+</blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>如果 <em>Closed</em> = TRUE，则应满足边界表示的相同拓扑约束。特别是：</li>
-<li>每个面都应是唯一的；</li>
-<li>每个边都应被两个面的边界使用；</li>
-<li>三角形面集边界上每一点的拓扑法线应指向实体材料的外部。</li>
+<li>如果 <em>Closed</em> = TRUE，应满足与刻面边界表示相同的拓扑约束。特别是：</li>
+<li>每个面应是唯一的；</li>
+<li>每条边应恰好被两个面边界使用；</li>
+<li>三角化面集边界上每个点的拓扑法线应指向实体材料的外部。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.47.2-Entity-inheritance-"></a>
     8.8.3.47.2 实体继承（Entity inheritance）
@@ -311,7 +317,7 @@
     8.8.3.47.3 特性（Attributes）
 <a class="link" href="#8.8.3.47.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-9dcd0221-cb3c-4b3b-a1f9-fa497a810c98"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-1e9026cc-26f6-4828-8795-45acb8ae90c9"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -333,78 +339,10 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a>
 <small>(4)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Coordinates
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></td>
-<td data-label="Description">
-<p>由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> 子类型在子类型中定义的坐标索引使用的笛卡尔点有序列表。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasColours</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedColourMap.htm">IfcIndexedColourMap</a> FOR MappedTo</td>
-<td data-label="Description">
-<p>指向索引颜色映射的引用，为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> 子类型的面提供相应的 RGB 颜色值。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>HasTextures</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedTextureMap.htm">IfcIndexedTextureMap</a> FOR MappedTo</td>
-<td data-label="Description">
-<p>指向索引纹理贴图的引用，为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> 子类型的面的边界顶点提供相应的纹理坐标。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs">3</code></pre>
-<p>此几何表示项的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -425,75 +363,8 @@
 <small>(5)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Normals
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF LIST [3:3] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterValue.htm">IfcParameterValue</a></td>
-<td data-label="Description">
-<p>法线的有序列表，包含三个方向。它是一个由三个参数值提供的二维方向列表。
-* 第一维对应于 <em>Coordindex</em> 的顶点索引
-* 第二维包含三个值，[1] x 方向，[2] y 方向和 [3] z 方向</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                Closed
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p>指示面集是闭合壳（TRUE）还是开放壳（FALSE）。如果省略，则无法断言此类信息。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                CoordIndex
-                
-            </td>
-<td data-label="Type">LIST [1:?] OF LIST [3:3] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveInteger.htm">IfcPositiveInteger</a></td>
-<td data-label="Description">
-<p>用于基于索引的三角形的二维列表，其中：
-* 第一维表示三角形（从 1 到 N）
-* 第二维包含三个值，表示三个顶点点的索引（从 1 到 3）。</p>
-<aside class="aside-note"><mark>注释</mark> 顶点的坐标由 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a>.Coordinates.CoordList</em> 的索引列表提供。</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                PnIndex
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveInteger.htm">IfcPositiveInteger</a></td>
-<td data-label="Description">
-<p>整数列表，用于定义 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em> 中的位置，以获取 <em>CoordIndex</em> 内索引的点坐标。如果未提供 <em>PnIndex</em>，则索引直接指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></em>。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>NumberOfTriangles</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs">SIZEOF(CoordIndex)</code></pre>
-<p>此三角剖分使用的三角形的派生数量。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.8.3.47.E<a class="link" href="#-9dcd0221-cb3c-4b3b-a1f9-fa497a810c98"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.47.A<a class="link" href="#-1e9026cc-26f6-4828-8795-45acb8ae90c9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.47.4-Formal-representation-"></a>
     8.8.3.47.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.47.4-Formal-representation-"><i data-feather="link"></i></a></h2>

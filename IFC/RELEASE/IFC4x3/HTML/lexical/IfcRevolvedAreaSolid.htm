@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.30 IfcRevolvedAreaSolid - IFC 4.3.2 Documentation</title>
+<title>8.8.3.30 IfcRevolvedAreaSolid（旋转面积实体） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,43 +189,48 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.30 IfcRevolvedAreaSolid</h1>
+<h1>8.8.3.30 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a>（旋转面积实体）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.30.1-Semantic-definition-"></a>
     8.8.3.30.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.30.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a></em> 是通过围绕轴线旋转剖面定义所提供的横截面而创建的实体。</p>
-<!-- end of short definition -->
-<p>实体的位置由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>._Position</em> 相对于对象坐标系定义。如果提供了该属性，则可以重新定位旋转实体。如果未提供，则默认为当前对象坐标系。在进行任何重新定位之前，轴线和横截面应位于同一平面内。</p>
-<aside class="aside-note"><mark>注释</mark> Both the axis and the cross section are required to lie in the xy plane of the object position coordinate system.</aside>
-<figure><a class="anchor" id="-1-"></a><img alt="revolved area solid" src="../figures/ifcrevolvedareasolid-fig1.png"/><figcaption>图 8.8.3.30.A — 旋转实体几何<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> Figure 8.8.3.30.A illustrates geometric parameters of the revolved solid. The revolved area solid defines the revolution of a 2D area (given by a profile definition) by an axis and angle. The result is a solid. The swept area is given by a profile definition.</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a></em> 是通过绕轴旋转由轮廓定义提供的横截面而创建的实体。</p>
+<!-- 简短定义结束 -->
+<p>生成的实体通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>.<em>Position</em> 相对于对象坐标系进行定位。如果提供，它允许重新定位旋转实体。如果未提供，则默认为当前对象坐标系。在进行任何重新定位之前，轴和横截面应位于同一平面内。</p>
+<blockquote>
+<p>注意 轴和横截面都需要位于对象位置坐标系的 xy 平面内。</p>
+</blockquote>
+<figure><a class="anchor" id="-1-"></a><img alt="旋转面积实体" src="../figures/ifcrevolvedareasolid-fig1.png"/><figcaption>图 8.8.3.30.A — 旋转面积实体几何图形<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> 图 8.8.3.30.A 展示了旋转实体的几何参数。旋转面积实体通过轴和角度定义了二维区域（由轮廓定义给出）的旋转。结果是一个实体。扫描区域由轮廓定义给出。</aside>
 <ul>
-<li>剖面定义如下：</li>
-<li>作为二维基元，此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em>，它相对于对象坐标系的 xy 平面放置</li>
-<li>由于未提供二维剖面位置坐标系，此处 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em>. <em>Position</em> = NIL，剖面在未进行变换的情况下放置在对象坐标系的 xy 平面上（默认情况下，中心位于 0.,0.，无旋转）</li>
-<li>由于未提供位置坐标系，此处 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em>. <em>Position</em> = NIL，因此生成的扫掠实体未被重新定位。</li>
+<li>轮廓定义如下：</li>
+<li>作为一个二维图元，此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em>，它相对于对象坐标系的 xy 平面放置</li>
+<li>由于未提供二维轮廓位置坐标系，此处 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em>.<em>Position</em> = NIL，轮廓在未进行变换的情况下定位到对象坐标系的 xy 平面中（默认情况下，以 0.,0. 为中心且无旋转）</li>
+<li>生成的扫描实体未被重新定位，因为未提供位置坐标系，此处 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.<em>Position</em> = NIL。</li>
 </ul>
-<p><em>AxisLine</em> 可以在 xy 平面内具有任何方向，不一定像图中所示那样平行于 y 轴。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="revolved area solid" src="../figures/ifcrevolvedareasolid-fig2.png"/><figcaption>图 8.8.3.30.B — 重新定位的旋转实体几何<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> Figure 8.8.3.30.A illustrates geometric parameters and additional positioning parameters of the revolved area solid. The revolved area solid defines the rotation of a 2D area by an axis and angle. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system (other then by default at 0.,0. with no rotation). The result is a solid that can be repositioned within the object coordinate system.
- * 要扫掠的剖面定义如下：
-  * 作为二维基元，此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em>，它相对于对象坐标系的 xy 平面放置
-  * 提供了二维剖面位置坐标系，该坐标系将剖面相对于 xy 平面进行定位（此处位于矩形的角上）
- * 生成的扫掠实体被重新定位，此处将其移动到局部 z 轴并绕 x 轴旋转 15 度。</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-A revolved area solid is a solid formed by revolving a planar bounded surface about an axis. The axis shall be in the plane of the surface and the axis shall not intersect the interior of the bounded surface. The bounded surface may have holes which will sweep into holes in the solid. The direction of revolution is clockwise when viewed along the axis in the positive direction. More precisely if <strong>A</strong> is the axis location and <strong>d</strong> is the axis direction and <strong>C</strong> is an arc on the surface of revolution generated by an arbitrary point <strong>p</strong> on the boundary of the swept area, then <strong>C</strong> leaves <strong>p</strong> in direction <strong>d</strong> x (<strong>p</strong> - <strong>A</strong>) as the area is revolved.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>revolved_area_solid</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5</aside>
+<p><em>AxisLine</em> 可以在 XY 平面内具有任意方向，它不必如图示那样平行于 y 轴。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="旋转面积实体" src="../figures/ifcrevolvedareasolid-fig2.png"/><figcaption>图 8.8.3.30.B — 重新定位的旋转面积实体几何图形<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> 图 8.8.3.30.A 展示了旋转面积实体的几何参数和附加定位参数。旋转面积实体通过轴和角度定义了二维区域的旋转。由参数化轮廓定义提供的二维区域可以相对于对象坐标系进行定位（而不是默认在 0.,0. 处且无旋转）。结果是一个可以在对象坐标系内重新定位的实体。
+ * 要扫描的轮廓定义如下：
+  * 作为一个二维图元，此处为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></em>，它相对于对象坐标系的 xy 平面放置
+  * 提供了一个二维轮廓位置坐标系，该坐标系将轮廓相对于 xy 平面进行定位（此处位于矩形的一个角点）
+ * 生成的扫描实体被重新定位，此处它被移动到局部 z 轴方向并绕 x 轴旋转了 15 度。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5 中的新实体。</aside><blockquote>
+<p>注意 根据 ISO/CD 10303-42:1992 的定义
+旋转面积实体是通过绕轴旋转平面有界表面而形成的实体。轴应位于表面的平面内，且轴不应与有界表面的内部相交。有界表面可以具有孔洞，这些孔洞将扫描成实体中的孔洞。当沿轴的正方向观察时，旋转方向为顺时针。更准确地说，如果 <strong>A</strong> 是轴的位置，<strong>d</strong> 是轴的方向，<strong>C</strong> 是由扫描区域边界上的任意点 <strong>p</strong> 在旋转表面上生成的弧，则当区域旋转时，<strong>C</strong> 沿方向 <strong>d</strong> x (<strong>p</strong> - <strong>A</strong>) 离开 <strong>p</strong>。</p>
+<p>注意 实体改编自 ISO 10303-42 中定义的 <strong>revolved_area_solid</strong>。</p>
+</blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li><em>AxisLine</em> 应位于 <em>SweptArea</em> 的平面内（如超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 中定义）。</li>
-<li><em>AxisLine</em> 不得与 <em>SweptArea</em> 的内部相交（如超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 中定义）。</li>
-<li><em>Angle</em> 应介于 0° 和 360° 之间，或 0 和 2π 之间（取决于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></em> 的单位类型）。</li>
+<li><em>AxisLine</em> 应位于 <em>SweptArea</em> 的平面内（如超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 中所定义）。</li>
+<li><em>AxisLine</em> 不应与 <em>SweptArea</em> 的内部相交（如超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 中所定义）。</li>
+<li><em>Angle</em> 应在 0° 到 360° 之间，或在 0 到 2π 之间（取决于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></em> 的单位类型）。</li>
 </ol>
 <p>纹理使用定义</p>
-<p>对于侧面，纹理沿侧面垂直对齐，原点位于任意剖面的第一个点，并沿逆时针方向（从上方观察）沿剖面的外边界。对于参数化剖面，原点定义在圆角剖面（无尖锐边缘）的 +Y 延伸处，对于所有其他剖面，则定义在从 +Y 延伸处开始的第一个尖锐边缘的逆时针方向。纹理根据 <em>RepeatS</em> 在每个侧面沿剖面的外边界拉伸或重复。纹理根据 <em>RepeatT</em> 在每个侧面沿最外（最长）的旋转路径拉伸或重复，此时坐标向旋转轴压缩。</p>
-<p>对于顶部和底部盖板，纹理沿前后方向对齐，原点位于最小 X 和 Y 延伸处。纹理根据 <em>RepeatS</em> 和 <em>RepeatT</em> 在顶部和底部按每个面的范围拉伸或重复。</p>
-<p>对于带有孔洞的剖面，纹理沿内侧垂直对齐，原点位于任意剖面的第一个点，并沿顺时针方向（从上方观察）沿剖面的内边界。对于参数化剖面，内侧的原点定义在圆角剖面（无尖锐边缘，如椭圆孔或圆角矩形）的 +Y 延伸处，对于所有其他剖面，则定义在从 +Y 延伸处开始的第一个尖锐边缘的顺时针方向。</p>
-<figure><a class="anchor" id="-3-"></a><img alt="texture" src="../figures/ifcrevolvedareasolid-texture.png"/><figcaption>图 8.8.3.30.C — 旋转实体纹理<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 8.8.3.30.C 说明了具有重复纹理（RepeatS=True 和 RepeatT=True）的默认纹理映射。左侧图像显示了 S 轴指向右侧、T 轴指向上方的纹理。右侧图像显示了应用于几何体的纹理，其中 X 轴指向右后方，Y 轴指向左后方，Z 轴指向上方。对于具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a></em> 剖面且旋转角度为 22.5 度的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a></em>，侧面纹理坐标原点是第一个从 +Y 轴开始的逆时针方向的角，等于 (-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallWidth, +0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallDepth)，而顶部（端盖）纹理坐标从 (-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallWidth, -0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallDepth) 开始。</p>
+<p>对于侧面，纹理沿着侧面朝上对齐，原点位于任意轮廓的第一个点，并逆时针跟随轮廓的外边界（从上方观察）。对于参数化轮廓，原点定义在 +Y 范围处用于圆形轮廓（没有锐利边缘），而对于所有其他轮廓，则定义在从 +Y 范围开始的第一个逆时针锐利边缘处。纹理根据 <em>RepeatS</em> 沿着轮廓的外边界在每个侧面上拉伸或重复。纹理根据 <em>RepeatT</em> 沿着最外层（最长）的旋转路径在每个侧面上拉伸或重复，其中坐标朝向旋转轴压缩。</p>
+<p>对于顶部和底部端盖，纹理朝前对齐，原点位于最小 X 和 Y 范围处。纹理根据 <em>RepeatS</em> 和 <em>RepeatT</em> 在顶部和底部拉伸或重复到每个面的范围。</p>
+<p>对于带有孔洞的轮廓，纹理沿着内侧朝上对齐，原点位于任意轮廓的第一个点，并顺时针跟随轮廓的内边界（从上方观察）。对于参数化轮廓，内侧的原点定义在 +Y 范围处用于圆形轮廓（没有锐利边缘，例如空心椭圆或圆角矩形），而对于所有其他轮廓，则定义在从 +Y 范围开始的第一个顺时针锐利边缘处。</p>
+<figure><a class="anchor" id="-3-"></a><img alt="纹理" src="../figures/ifcrevolvedareasolid-texture.png"/><figcaption>图 8.8.3.30.C — 旋转面积实体纹理<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
+<p>图 8.8.3.30.C 展示了使用重复纹理（RepeatS=True 且 RepeatT=True）的默认纹理映射。左侧的图像显示了纹理，其中 S 轴指向右侧，T 轴指向上方。右侧的图像显示了应用于几何图形的纹理，其中 X 轴指向后方右侧，Y 轴指向后方左侧，Z 轴指向上方。对于具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a></em> 轮廓并旋转了 22.5 度的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a></em>，侧面纹理坐标原点是自 +Y 轴逆时针方向的第一个角点，等于 (-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallWidth, +0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallDepth)，而顶部（端盖）纹理坐标起始于 (-0.5<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallWidth, -0.5</em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a>.OverallDepth)。</p>
 <h2><a class="anchor" id="8.8.3.30.2-Entity-inheritance-"></a>
     8.8.3.30.2 实体继承（Entity inheritance）
 <a class="link" href="#8.8.3.30.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -304,7 +309,7 @@ A revolved area solid is a solid formed by revolving a planar bounded surface ab
     8.8.3.30.3 特性（Attributes）
 <a class="link" href="#8.8.3.30.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-37362be9-6c7a-47d2-a09c-d69f750fed91"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-21c4a1f2-442f-4e71-8524-1721df9a526b"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -326,77 +331,16 @@ A revolved area solid is a solid formed by revolving a planar bounded surface ab
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a>
 <small>(1)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs">3</code></pre>
-<p>此类的空间维度，始终为 3。</p>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>
 <small>(2)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                SweptArea
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
-<td data-label="Description">
-<p>定义要扫掠的区域的曲面。它在位置坐标系的 xy 平面内以轮廓定义的形式给出。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Position
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
-<td data-label="Description">
-<p>扫掠操作所得扫掠实体的放置坐标系。放置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保留在由横截面或用于扫掠操作的导曲线确定的位置内。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to OPTIONAL with upward compatibility for file-based exchange.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -417,51 +361,12 @@ A revolved area solid is a solid formed by revolving a planar bounded surface ab
 <small>(3)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                Axis
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis1Placement.htm">IfcAxis1Placement</a></td>
-<td data-label="Description">
-<p>旋转将发生的轴线。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                Angle
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
-<td data-label="Description">
-<p>扫掠将进行的角度。此角度从位置坐标系 xy 平面提供的扫掠区域平面测量。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>AxisLine</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationItem.htm">IfcRepresentationItem</a>() || <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a> () || <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a>() || <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>(Axis.Location, 
-  <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationItem.htm">IfcRepresentationItem</a>() || <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a> () || <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a>(Axis.Z,1.0))</code></pre>
-<p>旋转轴的线。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.8.3.30.D<a class="link" href="#-37362be9-6c7a-47d2-a09c-d69f750fed91"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.30.D<a class="link" href="#-21c4a1f2-442f-4e71-8524-1721df9a526b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.30.4-Formal-propositions-"></a>
     8.8.3.30.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.30.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-73885584-1ec5-430d-bd37-c97de9d09e28"></a><table>
+<figure><a class="anchor" id="-e84aa512-c52c-4043-88ff-c7f549aae822"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -472,7 +377,7 @@ A revolved area solid is a solid formed by revolving a planar bounded surface ab
 <tr>
 <td>AxisDirectionInXY</td>
 <td>
-<p>轴线方向应平行于位置坐标系的 xy 平面。</p>
+<p>轴的方向应平行于位置坐标系的 XY 平面。</p>
 </td>
 </tr>
 <tr>
@@ -483,7 +388,7 @@ A revolved area solid is a solid formed by revolving a planar bounded surface ab
 <tr>
 <td>AxisStartInXY</td>
 <td>
-<p>轴线的起点应位于位置坐标系的 xy 平面上。</p>
+<p>轴的起点应位于位置坐标系的 XY 平面内。</p>
 </td>
 </tr>
 <tr>
@@ -492,7 +397,7 @@ A revolved area solid is a solid formed by revolving a planar bounded surface ab
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.30.E<a class="link" href="#-73885584-1ec5-430d-bd37-c97de9d09e28"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.30.E<a class="link" href="#-e84aa512-c52c-4043-88ff-c7f549aae822"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.30.5-Formal-representation-"></a>
     8.8.3.30.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.30.5-Formal-representation-"><i data-feather="link"></i></a></h2>

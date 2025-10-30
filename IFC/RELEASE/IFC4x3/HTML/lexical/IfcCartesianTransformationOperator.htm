@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.13 IfcCartesianTransformationOperator - IFC 4.3.2 Documentation</title>
+<title>8.9.3.13 IfcCartesianTransformationOperator（笛卡尔变换算子） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.13 IfcCartesianTransformationOperator</h1>
+<h1>8.9.3.13 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a>（笛卡尔变换算子）</h1>
 <div class="mvd" title="Included in IfcCartesianTransformationOperator2D, IfcCartesianTransformationOperator2DnonUniform, IfcCartesianTransformationOperator3D, IfcCartesianTransformationOperator3DnonUniform">RV ⓘ</div>
 <div class="mvd" title="Included in IfcCartesianTransformationOperator2D, IfcCartesianTransformationOperator2DnonUniform, IfcCartesianTransformationOperator3D, IfcCartesianTransformationOperator3DnonUniform">AbV ⓘ</div>
 <div class="row">
@@ -202,21 +202,21 @@
 <h2><a class="anchor" id="8.9.3.13.1-Semantic-definition-"></a>
     8.9.3.13.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.13.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em> 定义了不同种类几何变换的抽象超类型。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em> 定义了几何变换不同类型的一个抽象超类型。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-A Cartesian transformation operator defines a geometric transformation composed of translation, rotation, mirroring and uniform scaling. The list of normalized vectors u defines the columns of an orthogonal matrix T. These vectors are computed, by the base axis function, from the direction attributes axis1, axis2 and, in Cartesian transformation operator 3d, axis3. If <strong>|T|= -1</strong>, the transformation includes mirroring. The local origin point <strong>A</strong>, the scale value <strong><em>S</em></strong> and the matrix <strong>T</strong> together define a transformation.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>cartesian_transformation_operator</strong> defined in ISO10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><blockquote>
-<p>The transformation for a point with position vector P is defined by</p>
+<aside class="aside-note"><mark>注释</mark> 定义依据 ISO/CD 10303-42:1992
+笛卡尔变换算子定义了一个由平移、旋转、镜像和均匀缩放组成的几何变换。归一化向量列表 u 定义了正交矩阵 T 的列。这些向量通过基轴函数从方向属性 axis1、axis2 以及（在笛卡尔变换算子 3d 中）axis3 计算得出。如果 <strong>|T|= -1</strong>，则该变换包含镜像。局部原点 <strong>A</strong>、缩放值 <strong><em>S</em></strong> 和矩阵 <strong>T</strong> 共同定义了一个变换。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO10303-42 中定义的 <strong>cartesian_transformation_operator</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><blockquote>
+<p>对于位置向量为 P 的点的变换定义为</p>
 <blockquote>
 <p>P -&gt; A + _S_TP
-The transformation for a direction d is defined by</p>
+对于方向 d 的变换定义为</p>
 <p>d -&gt; Td
-The transformation for a vector with orientation d and magnitude k is defined by</p>
-<p>d -&gt; Td, and
+对于方向为 d、大小为 k 的向量的变换定义为</p>
+<p>d -&gt; Td，以及
 <em>k -&gt; Sk</em>
-For those entities whose attributes include an axis2 placement, the transformation is applied, after the derivation, to the derived attributes p defining the placement coordinate directions. For a transformed surface, the direction of the surface normal at any point is obtained by transforming the normal, at the corresponding point, to the original surface. For geometric entities with attributes (such as the radius of a circle) which have the dimensionality of length, the values will be multiplied by <em>S</em>.</p>
+对于那些属性包含 axis2 放置的实体，变换在派生后应用于定义放置坐标方向的派生属性 p。对于变换后的曲面，任意点处曲面法线的方向通过将原始曲面上对应点处的法线变换得到。对于具有长度量纲属性（例如圆的半径）的几何实体，其值将乘以 <em>S</em>。</p>
 </blockquote>
-<p>For curves on surface the p curve.reference to curve will be unaffected by any transformation. The Cartesian transformation operator shall only be applied to geometry defined in a consistent system of units with the same units on each axis. With all optional attributes omitted, the transformation defaults to the identity transformation. The Cartesian transformation operator shall only be instantiated as one of its subtypes.
+<p>对于曲面上的曲线，p 曲线对曲线的引用将不受任何变换的影响。笛卡尔变换算子应仅应用于在一致单位系统中定义的几何，且每个轴上的单位相同。如果所有可选属性均被省略，则变换默认为恒等变换。笛卡尔变换算子应仅作为其子类型之一进行实例化。
 </p>
 </blockquote>
 <h2><a class="anchor" id="8.9.3.13.2-Entity-inheritance-"></a>
@@ -280,7 +280,7 @@ For those entities whose attributes include an axis2 placement, the transformati
     8.9.3.13.3 特性（Attributes）
 <a class="link" href="#8.9.3.13.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-12f2f135-6171-4ec5-9ede-f93f0f8d1cf5"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-9d6ad877-bd60-42d7-b9c1-d1fc73d368fe"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -309,8 +309,8 @@ For those entities whose attributes include an axis2 placement, the transformati
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -320,8 +320,8 @@ For those entities whose attributes include an axis2 placement, the transformati
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -351,7 +351,7 @@ For those entities whose attributes include an axis2 placement, the transformati
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
 <td data-label="Description">
-<p>用于确定 U[1]（派生的 X 轴方向）的方向。</p>
+<p>用于确定 U[1]（派生 X 轴方向）的方向。</p>
 </td>
 </tr>
 <tr>
@@ -363,7 +363,7 @@ For those entities whose attributes include an axis2 placement, the transformati
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
 <td data-label="Description">
-<p>用于确定 U[2]（派生的 Y 轴方向）的方向。</p>
+<p>用于确定 U[2]（派生 Y 轴方向）的方向。</p>
 </td>
 </tr>
 <tr>
@@ -375,7 +375,7 @@ For those entities whose attributes include an axis2 placement, the transformati
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></td>
 <td data-label="Description">
-<p>所需的平移，指定为一个笛卡尔点。变换中包含的实际平移是从几何原点到局部原点。</p>
+<p>所需的平移，指定为笛卡尔点。变换中包含的实际平移是从几何原点到局部原点。</p>
 </td>
 </tr>
 <tr>
@@ -387,7 +387,7 @@ For those entities whose attributes include an axis2 placement, the transformati
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
-<p>变换指定的缩放值。</p>
+<p>为变换指定的缩放值。</p>
 </td>
 </tr>
 <tr>
@@ -401,7 +401,7 @@ For those entities whose attributes include an axis2 placement, the transformati
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">NVL(Scale, 1.0)</code></pre>
-<p>变换的派生缩放值 S，等于 scale（如果存在），否则为 1.0。</p>
+<p>变换的派生缩放 S，如果存在 scale 则等于 scale，否则为 1.0。</p>
 </td>
 </tr>
 <tr>
@@ -415,15 +415,15 @@ For those entities whose attributes include an axis2 placement, the transformati
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">LocalOrigin.Dim</code></pre>
-<p>该类的空间维度，由局部原点的空间维度确定。</p>
+<p>此类的空间维度，由局部原点的空间维度确定。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.13.A<a class="link" href="#-12f2f135-6171-4ec5-9ede-f93f0f8d1cf5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.13.A<a class="link" href="#-9d6ad877-bd60-42d7-b9c1-d1fc73d368fe"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.13.4-Formal-propositions-"></a>
     8.9.3.13.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.13.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-00a9c340-0fee-48ac-afe4-b193cc7b28c5"></a><table>
+<figure><a class="anchor" id="-bd17a1d2-c749-4c47-8a8c-46f60cb966f4"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -434,7 +434,7 @@ For those entities whose attributes include an axis2 placement, the transformati
 <tr>
 <td>ScaleGreaterZero</td>
 <td>
-<p>派生的缩放值 Scl 应大于零。</p>
+<p>派生缩放 Scl 应大于零。</p>
 </td>
 </tr>
 <tr>
@@ -443,7 +443,7 @@ For those entities whose attributes include an axis2 placement, the transformati
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.13.B<a class="link" href="#-00a9c340-0fee-48ac-afe4-b193cc7b28c5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.13.B<a class="link" href="#-bd17a1d2-c749-4c47-8a8c-46f60cb966f4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.13.5-Formal-representation-"></a>
     8.9.3.13.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.13.5-Formal-representation-"><i data-feather="link"></i></a></h2>

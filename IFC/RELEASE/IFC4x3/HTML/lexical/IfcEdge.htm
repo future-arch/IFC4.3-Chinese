@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -194,17 +194,19 @@
 <h2><a class="anchor" id="8.20.3.4.1-Semantic-definition-"></a>
     8.20.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.20.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 定义了两个在拓扑上相连的顶点。如果未使用子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 分配曲线几何图形，则两个顶点之间连接的几何表示默认为直线。因此，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 可用于交换直线边，而无需通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a>.EdgeGeometry</em> 提供由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 定义的关联几何图形。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 定义了两个通过拓扑方式连接的顶点。如果未使用子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 分配曲线几何图形，则两个顶点之间连接的几何表示默认为直线。因此，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 可用于交换直线边，而无需通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a>.EdgeGeometry</em> 提供由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 定义的关联几何图形。</p>
 <!-- 简短定义结束 -->
 <figure><a class="anchor" id="-1-"></a><img alt="边表示" src="../figures/ifcedge.png"/><figcaption>图 8.20.3.4.A — 边表示<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> 图 8.20.3.4.A 展示了一个示例，其中 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 的边界由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 给出；这也决定了边的方向。在坐标空间中的位置由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em> 类型决定。由于未分配边几何图形，它默认为与方向一致的直线。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
-边是对应于两个顶点连接的拓扑构造。更抽象地说，它可以表示两个顶点之间的逻辑关系。边的定义域（如果存在）是 <em>R^M^</em> 中的一条有限、不自交的开曲线，即一个连通的一维流形。边的边界是两个顶点，这两个顶点不必不同。通过选择从第一个顶点到第二个顶点的遍历方向来确定边的方向。如果两个顶点相同，则该边是一个自环。边的定义域不包括其边界，且 0 ≤ Ξ ≤ ∞。边可以关联一个几何曲线以在坐标空间中定位该边；这由边曲线子类型表示。曲线在边的定义域内应是有限且不自交的。边是一个图，因此其重数 M 和图亏格 <em>G^e^</em> 可以通过图遍历算法确定。由于 <em>M</em> = <em>E</em> = 1，欧拉方程 (1) 在这种情况下简化为：</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>edge</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。</aside><blockquote>
+<aside class="aside-example"><mark>示例</mark> 图 8.20.3.4.A 展示了一个示例，其中 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdge.htm">IfcEdge</a></em> 的边界由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 给出；这也决定了边的方向。在坐标空间中的位置由 <em>EdgeStart</em> 和 <em>EdgeEnd</em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em> 类型确定。由于未分配边几何图形，它默认为与方向一致的直线。</aside><aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。</aside><blockquote>
+<p>注意 根据 ISO/CD 10303-42:1992 的定义
+边是对应于两个顶点连接的拓扑构造。更抽象地说，它可以表示两个顶点之间的逻辑关系。边的域（如果存在）是 <em>R^M^</em> 中的一条有限、不自交的开曲线，即一个连通的一维流形。边的边界是两个顶点，这两个顶点不必不同。通过选择从第一个顶点到第二个顶点的遍历方向来确定边的方向。如果两个顶点相同，则该边是一个自环。边的域不包括其边界，且 0 ≤ Ξ ≤ ∞。与边相关联的可能有一条几何曲线，用于在坐标空间中定位该边；这由边曲线子类型表示。该曲线在边的域内应是有限且不自交的。边是一个图，因此其重数 M 和图亏格 <em>G^e^</em> 可以通过图遍历算法确定。由于 <em>M</em> = <em>E</em> = 1，欧拉方程 (1) 在这种情况下简化为：</p>
 <blockquote>
 <figure><a class="anchor" id="Figure-8.20.3.4.B"></a><img alt="图像" src="../figures/ifcedge-math1.gif"/>
-其中 <em>V</em> = 1 或 2，且 <em>G^e^</em> = 1 或 0。具体来说，定义拓扑边的数据应满足： &gt; * 一条边有两个顶点  <img alt="图像" src="../figures/ifcedge-math2.gif"/>
+其中 <em>V</em> = 1 或 2，且 <em>G^e^</em> = 1 或 0。具体来说，拓扑边定义数据应满足： &gt; * 一条边有两个顶点  <img alt="图像" src="../figures/ifcedge-math2.gif"/>
 * 顶点不必不同  <img alt="图像" src="../figures/ifcedge-math3.gif"/>
 * 方程应成立  <img alt="图像" src="../figures/ifcedge-math4.gif"/><figcaption>Figure 8.20.3.4.B<a class="link" href="#Figure-8.20.3.4.B"><i data-feather="link"></i></a></figcaption><figcaption>Figure 8.20.3.4.C</figcaption><figcaption>Figure 8.20.3.4.D</figcaption><figcaption>Figure 8.20.3.4.E</figcaption></figure>
 </blockquote>
+<p>注意 实体改编自 ISO 10303-42 中定义的 <strong>edge</strong>。</p>
 </blockquote>
 <p><strong>非正式命题</strong></p>
 <ol>
@@ -255,7 +257,7 @@
     8.20.3.4.3 特性（Attributes）
 <a class="link" href="#8.20.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-bb496811-1ad1-4477-b196-08e65f21f738"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-98066723-6bea-4286-a388-3700b19049b0"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -277,28 +279,6 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -317,32 +297,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                EdgeStart
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>边的起点（顶点）。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                EdgeEnd
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertex.htm">IfcVertex</a></td>
-<td data-label="Description">
-<p>边的终点（顶点）。同一个顶点可以同时用于 EdgeStart 和 EdgeEnd。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.20.3.4.F<a class="link" href="#-bb496811-1ad1-4477-b196-08e65f21f738"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.4.F<a class="link" href="#-98066723-6bea-4286-a388-3700b19049b0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.4.4-Formal-representation-"></a>
     8.20.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>

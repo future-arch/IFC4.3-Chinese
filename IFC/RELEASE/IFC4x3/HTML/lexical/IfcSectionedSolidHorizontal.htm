@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -194,20 +194,20 @@
 <h2><a class="anchor" id="8.8.3.35.1-Semantic-definition-"></a>
     8.8.3.35.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.35.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><strong><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSolidHorizontal.htm">IfcSectionedSolidHorizontal</a></strong> 是通过沿曲线水平扫掠可能变化的横截面构建的实体模型。</p>
-<!-- 短定义结束 -->
-<p>该实体通过在 <em>CrossSectionPositions</em> 之间扫掠 <em>CrossSections</em> 生成，沿准线对具有相同标签的轮廓点进行线性插值。轮廓法线源自关联的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2PlacementLinear.htm">IfcAxis2PlacementLinear</a></em>，不一定是 <em>Directrix</em> 的切线。轮廓 X 轴是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2PlacementLinear.htm">IfcAxis2PlacementLinear</a></em> 中 <em>RefDirection</em> 的方向，轮廓 Y 轴是 <em>Axis</em> 的方向。</p>
-<p>对于根据单一超高值旋转横截面的情况，可使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a></em> 指示此类旋转，其中每个 <em>ParentProfile</em> 引用相同的底层轮廓。对于根据多个超高值变换横截面且各点独立变化的情况，每个轮廓可以是不同的实例但属于相同类型（例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></em>），并可选择通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList2D.htm">IfcCartesianPointList2D</a>.TagList</em> 匹配标签，将横截面点与字符串线（"引导曲线"）关联。</p>
-<p>图1展示了具有恒定参数化轮廓的四根桥梁梁、具有恒定任意轮廓的两个护栏（其中一个镜像）以及具有可变任意轮廓的桥面。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSolidHorizontal.htm">IfcSectionedSolidHorizontal</a></em> 是一种通过在曲线上水平扫掠可能变化的横截面而构建的实体模型。</p>
+<!-- 简短定义结束 -->
+<p>该实体通过在_截面位置_之间对_截面_进行扫掠生成，沿着准线对具有相同标签的轮廓点之间进行线性插值。轮廓法线源自关联的_IfcAxis2PlacementLinear_，而不一定是_准线_的切线。轮廓X轴是_IfcAxis2PlacementLinear_中_参考方向_的方向，轮廓Y轴是_轴_的方向。</p>
+<p>对于根据单一超高值旋转截面的情况，可使用_IfcDerivedProfileDef_来指示此类旋转，其中每个_父轮廓_引用相同的底层轮廓。对于根据多个超高值变换截面且各点独立变化的情况，每个轮廓可以是不同的实例但属于相同类型（例如_IfcArbitraryClosedProfileDef_），并可选择通过使用带_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList2D.htm">IfcCartesianPointList2D</a>.TagList_的_IfcIndexedPolyCurve_匹配标签，将截面点与字符串线（"引导曲线"）关联。</p>
+<p>图1展示了具有恒定参数化轮廓的四个桥梁梁、具有恒定任意轮廓的两个护栏（其中一个镜像）以及具有可变任意轮廓的桥面板。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="空间结构" src="../figures/ifcsectionedsolidhorizontal.png"/><figcaption>图1 — 水平截面实体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <figure><a class="anchor" id="-2-"></a><img alt="IfcSectionedSolidHorizontal1" src="../figures/IfcSectionedSolidHorizontal1.png"/><figcaption>图2 — 显示多个截面位置的侧视图<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="-3-"></a><img alt="IfcSectionedSolidHorizontal2" src="../figures/IfcSectionedSolidHorizontal2.png"/><figcaption>图3 — 基于两个横截面的红色示例形状，两个横截面均不从起点或终点开始且形状不同。<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="-3-"></a><img alt="IfcSectionedSolidHorizontal2" src="../figures/IfcSectionedSolidHorizontal2.png"/><figcaption>图3 — 基于两个截面的示例形状（红色显示），两个截面均不从起点或终点开始且形状不同。<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
 <p><strong>非正式命题</strong></p>
 <ol>
-<li>任意两个相邻截面不得相交。</li>
-<li>若截面类型不是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>（即任意轮廓），则两个相邻轮廓的点和边数量应相同。</li>
-<li>若准线非切线连续，生成的实体将通过两段线段之间的半角斜接创建。</li>
-<li>非常尖锐的边缘可能导致几乎无法实现的斜接；实施者协议可定义切线不连续性的可接受限制，或要求准线切线连续。</li>
+<li>任何两个相邻截面不得相交。</li>
+<li>如果截面类型不是<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>（即任意轮廓），则两个相邻轮廓的点和边数量应相同。</li>
+<li>如果准线不是切线连续的，则生成的实体将通过两个线段之间的半角斜接创建。</li>
+<li>非常尖锐的边缘可能导致几乎无法实现的斜接；实施者协议可定义切线不连续性的可接受限制，或要求准线为切线连续。</li>
 <li>准线不得自相交。</li>
 </ol>
 <h2><a class="anchor" id="8.8.3.35.2-Entity-inheritance-"></a>
@@ -280,7 +280,7 @@
     8.8.3.35.3 特性（Attributes）
 <a class="link" href="#8.8.3.35.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-b1561bda-7e87-4082-90bb-0f06550d0686"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-b57090e3-daa4-434e-8d3c-ce3e9f9152de"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -302,76 +302,16 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 逆向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了逆向属性 <em>StyledByItem</em>。</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a>
 <small>(1)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs">3</code></pre>
-<p>本类的空间维度，始终为3。</p>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSolid.htm">IfcSectionedSolid</a>
 <small>(2)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Directrix
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></td>
-<td data-label="Description">
-<p>用于定义扫掠操作的曲线。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                CrossSections
-                
-            </td>
-<td data-label="Type">LIST [2:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
-<td data-label="Description">
-<p>沿 <em>Directrix</em> 顺序排列的横截面列表。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -392,24 +332,12 @@
 <small>(1)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                CrossSectionPositions
-                
-            </td>
-<td data-label="Type">LIST [2:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2PlacementLinear.htm">IfcAxis2PlacementLinear</a></td>
-<td data-label="Description">
-<p>按顺序递增的位置坐标系，与 <em>CrossSections</em> 配对，指示相应截面沿 <em>Directrix</em> 的位置。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.8.3.35.B<a class="link" href="#-b1561bda-7e87-4082-90bb-0f06550d0686"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.35.B<a class="link" href="#-b57090e3-daa4-434e-8d3c-ce3e9f9152de"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.35.4-Formal-propositions-"></a>
     8.8.3.35.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.35.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-abdbace1-2839-4fdc-95ac-ab7b8aa4ab9f"></a><table>
+<figure><a class="anchor" id="-bdeab64f-6b7b-41f0-973b-6b946c1c63d1"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -420,7 +348,9 @@
 <tr>
 <td>CorrespondingSectionPositions</td>
 <td>
-<p>横截面集合与横截面位置集合必须具有相同的大小。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -431,7 +361,9 @@
 <tr>
 <td>NoLongitudinalOffsets</td>
 <td>
-<p>距离表达式不得使用纵向偏移量。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -440,7 +372,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.35.C<a class="link" href="#-abdbace1-2839-4fdc-95ac-ab7b8aa4ab9f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.35.C<a class="link" href="#-bdeab64f-6b7b-41f0-973b-6b946c1c63d1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.35.5-Formal-representation-"></a>
     8.8.3.35.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.35.5-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.1.3.30 板 (IfcPlate) - IFC 4.3.2 Documentation</title>
+<title>6.1.3.30 IfcRelCoversSpaces（关系覆盖空间） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -144,7 +144,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>6.1.3.30 板 (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlate.htm">IfcPlate</a>)</h1>
+<h1>6.1.3.30 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a>（关系覆盖空间）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <div class="row">
 <div class="card fluid error deprecation">
@@ -158,20 +158,18 @@
 <h2><a class="anchor" id="6.1.3.30.1-Semantic-definition-"></a>
     6.1.3.30.1 语义定义（Semantic definition）
 <a class="link" href="#6.1.3.30.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>板是建筑构件，可以垂直地围合一个空间。板可以提供下部支撑（地板）或上部构造（屋面板），位于建筑物内的任何空间。</p>
-<!-- end of short definition -->
-<p>只有该构造的核心或结构部分被视为板。上部饰面（地板、屋面）和下部饰面（天花板、吊顶）被视为覆盖层。板的一种特殊类型是平台，描述为楼板的一部分，一个或多个楼梯段或斜坡段连接到该平台。</p>
-<p>板可以有开口，例如楼板开口或凹槽。它们通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOpeningElement.htm">IfcOpeningElement</a></em> 定义，并使用指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">IfcRelVoidsElement</a></em> 的逆向关系 <em>HasOpenings</em> 附加到板上。带有已在封闭几何体中建模的开口的板可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsElements.htm">IfcRelConnectsElements</a></em> 关系将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSlab.htm">IfcSlab</a></em> 与嵌入式构件（如活板门）关联。</p>
-<p>板实例有两种主要表示形式：</p>
+<p>对象化关系 <em>IfcRelCoversSpace</em> 将空间对象与一个或多个覆盖物相关联，这些覆盖物面向（或分配给）该空间。</p>
+<!-- 简短定义结束 -->
+<aside class="aside-note"><mark>注释</mark> Particularly floorings, ceilings and wall coverings, such as claddings or tiling are often considered as space coverings, rather then wall or slab coverings. In some life cycle phases, such as the operation phase, the relationship is always made to the space.</aside>
+<p>IFC规范提供了两种关系：</p>
 <ul>
-<li>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlate.htm">IfcPlate</a></em> 带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 用于所有板实例，这些板是棱柱形的，并且厚度参数可以由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 完全描述。这些板总是通过“SweptSolid”几何体（或基于“SweptSolid”的“Clipping”几何体）来表示，如果分配了 3D 几何表示。</p>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></em> 用于将覆盖物分配给构件。<aside class="aside-note"><mark>注释</mark> 此关系现已弃用，由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 替代。</aside>
 </li>
-<li>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlate.htm">IfcPlate</a></em> 没有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 用于所有其他板实例，特别是对于厚度变化的板、非平面板，以及只有“SweptSolid”或“Brep”几何体的板，或者当不打算使用更参数化的表示时。</p>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></em> 用于将覆盖物分配给空间<aside class="aside-note"><mark>注释</mark> 此关系现已弃用，由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 替代。</aside>
 </li>
 </ul>
-<aside class="aside-reference"><mark>参考</mark> 根据 ISO 6707-1 定义：厚实、平坦或成型的构件，通常大于 300 毫米见方，用于形成覆盖层或从建筑物伸出。</aside><aside class="aside-note"><mark>注释</mark> 无法适用或不相关的任意平面构件应建模为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlate.htm">IfcPlate</a></em>。</aside><aside class="aside-note"><mark>注释</mark> <em>IfcSlabStandardCase</em> 实体已被删除，而是使用带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSlab.htm">IfcSlab</a></em>。<em>IfcSlabElementedCase</em> 实体已被删除，使用带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSlab.htm">IfcSlab</a></em> 来描述由从属构件组成的板实例。</aside><aside class="aside-note"><mark>注释</mark> 还有一个由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralMember.htm">IfcStructuralMember</a></em> 的适当子类型组成的用于结构分析的板的表示，该子类型是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em> 的一部分。</aside><aside class="aside-history"><mark>沿革</mark> IFC2.0 中新增实体；它是 IFC1.0 中引入的两个先前实体 <em>IfcFloor</em> 和 <em>IfcRoofSlab</em> 的合并。</aside>
+<p>覆盖物与空间之间的关系，或覆盖物与构件之间的关系，何者被视为主要关系，必须在模型视图定义的上下文中确定。</p>
+<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside><aside class="aside-deprecation"><mark>IFC4 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> The relationship <em>IfcRelCoversSpace</em> shall not be used anymore, use <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> instead.</aside>
 <h2><a class="anchor" id="6.1.3.30.2-Entity-inheritance-"></a>
     6.1.3.30.2 实体继承（Entity inheritance）
 <a class="link" href="#6.1.3.30.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -227,7 +225,7 @@
     6.1.3.30.3 特性（Attributes）
 <a class="link" href="#6.1.3.30.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-7de57fc9-2511-47bc-8401-6e0fa7122fad"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d921f103-3be6-4a63-a175-3d92fde79f14"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -264,15 +262,15 @@
 <tr class="group">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a>
-<small>(1)</small>
+<small>(2)</small>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.3.30.A<a class="link" href="#-7de57fc9-2511-47bc-8401-6e0fa7122fad"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.30.A<a class="link" href="#-d921f103-3be6-4a63-a175-3d92fde79f14"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.30.4-Concept-usage-"></a>
     6.1.3.30.4 概念用法（Concept usage）
 <a class="link" href="#6.1.3.30.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-064bb4b4-93cb-4645-8828-2918997c5c1a"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-cc007bfb-b1f6-4cc3-8c59-cdb6e954b641"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -442,7 +440,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 6.1.3.30.B<a class="link" href="#-064bb4b4-93cb-4645-8828-2918997c5c1a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 6.1.3.30.B<a class="link" href="#-cc007bfb-b1f6-4cc3-8c59-cdb6e954b641"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="6.1.3.30.5-Formal-representation-"></a>
     6.1.3.30.5 形式化表示（Formal representation）
 <a class="link" href="#6.1.3.30.5-Formal-representation-"><i data-feather="link"></i></a></h2>

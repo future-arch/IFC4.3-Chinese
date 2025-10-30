@@ -209,7 +209,7 @@
     5.4.3.72.3 特性（Attributes）
 <a class="link" href="#5.4.3.72.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-579d6bf4-6c0f-43ec-9d20-9c735a84b0ff"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-9b09e2c8-2738-4926-901f-c3dc9d3555ba"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -436,8 +436,10 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a> FOR RelatingGroup</td>
 <td data-label="Description">
-<p>引用关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a></em>，该关系将一个或多个群组成员分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a></em> 对象。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The cardinality has been changed from 1..1 to 0..n in order to allow the exchange of a group concept without having already group members assigned. It now also allows the use of many instances of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a></em> to assign the group members. The change has been done with upward compatibility for file based exchange.</aside>
+<p>引用将多个组成员分配给_IfcGroup_对象的关系_IfcRelAssignsToGroup_。</p>
+<blockquote>
+<p>IFC4变更 基数已从1..1更改为0..n，以便允许交换组概念而无需已经分配组成员。现在还允许使用多个_IfcRelAssignsToGroup_实例来分配组成员。此更改已考虑基于文件交换的向上兼容性。</p>
+</blockquote>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -447,7 +449,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> FOR RelatedElements</td>
 <td data-label="Description">
-<p>引用关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em>，该关系将群组与空间构件相关联。</p>
+<p>引用将组与空间元素关联的关系_IfcRelReferencedInSpatialStructure_。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -489,7 +491,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.72.A<a class="link" href="#-579d6bf4-6c0f-43ec-9d20-9c735a84b0ff"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.72.A<a class="link" href="#-9b09e2c8-2738-4926-901f-c3dc9d3555ba"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.72.4-"></a>
     5.4.3.72.4 属性集
 <a class="link" href="#5.4.3.72.4-"><i data-feather="link"></i></a></h2>
@@ -598,7 +600,7 @@
 </p><h2><a class="anchor" id="5.4.3.72.5-Concept-usage-"></a>
     5.4.3.72.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.72.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-8d39d748-df73-4b4a-b482-dba3e4363064"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-a3e1e541-18b9-4bf2-a4cc-6a59187026fd"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -920,17 +922,6 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Group_Assignment/content.html">Group Assignment</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a> 通过利用此概念建立对象的任意集合。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
@@ -944,6 +935,17 @@
                     </small>
 </aside>
 <p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Group_Assignment/content.html">Group Assignment</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>The <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a> establishes an arbitrary collection of objects through utilizing this concept.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1146,7 +1148,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a> 通过利用此概念建立对象的任意集合。</p>
+<p>The <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGroup.htm">IfcGroup</a> establishes an arbitrary collection of objects through utilizing this concept.</p>
 </td>
 </tr>
 <tr>
@@ -1235,7 +1237,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.72.B<a class="link" href="#-8d39d748-df73-4b4a-b482-dba3e4363064"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.72.B<a class="link" href="#-a3e1e541-18b9-4bf2-a4cc-6a59187026fd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.72.6-Formal-representation-"></a>
     5.4.3.72.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.72.6-Formal-representation-"><i data-feather="link"></i></a></h2>

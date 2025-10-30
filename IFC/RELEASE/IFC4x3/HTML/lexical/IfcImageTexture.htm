@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.17 IfcImageTexture - IFC 4.3.2 Documentation</title>
+<title>8.12.3.17 IfcImageTexture（图像纹理） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,34 +189,37 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.17 IfcImageTexture</h1>
+<h1>8.12.3.17 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcImageTexture.htm">IfcImageTexture</a>（图像纹理）</h1>
 <div class="mvd" title="Included in Body Tessellation Geometry">RV ⓘ</div>
 <div class="mvd" title="Included in Body Tessellation Geometry">AbV ⓘ</div>
 <h2><a class="anchor" id="8.12.3.17.1-Semantic-definition-"></a>
     8.12.3.17.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.17.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcImageTexture.htm">IfcImageTexture</a></em> 提供了一个二维纹理，可以应用于几何项的表面，并提供其映射到的表面的照明参数。纹理作为图像文件位于外部位置，并提供其 URL。</p>
-<!-- end of short definition -->
-<p>ISO/IEC 19775-1 X3D 体系结构和基本组件（<a href="http://www.web3d.org/x3d/specifications/">X3D 规范</a>）中的以下定义适用：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcImageTexture.htm">IfcImageTexture</a></em> 提供了一种可应用于几何项目表面并为其提供光照参数的二维图像纹理。该纹理以外部图像文件的形式提供，并通过 URL 指定其位置。</p>
+<!-- 短定义结束 -->
+<p>以下定义源自 ISO/IEC 19775-1 X3D 架构与基础组件（<a href="http://www.web3d.org/x3d/specifications/">X3D 规范</a>）：</p>
 <ul>
-<li>具有透明度或简单透明度的灰度像素被视为强度纹理。</li>
-<li>具有透明度或简单透明度的灰度像素被视为强度加透明度纹理。</li>
-<li>没有透明度通道或简单透明度的 RGB 像素被视为完整 RGB 纹理。</li>
-<li>具有透明度通道或简单透明度的 RGB 像素被视为完整 RGB 加透明度纹理。</li>
-<li>如果图像指定颜色为索引颜色（即调色板或颜色图），则应使用以下语义（请注意，`greyscale' 指的是具有相等红、绿、蓝值的调色板条目）：</li>
-<li>如果调色板中的所有颜色都是灰度色且没有透明度块，则将其视为强度纹理。</li>
-<li>如果调色板中的所有颜色都是灰度色且存在透明度块，则将其视为强度加不透明度纹理。</li>
-<li>如果调色板中的任何颜色不是灰色且没有透明度块，则将其视为完整 RGB 纹理。</li>
-<li>如果调色板中的任何颜色不是灰色且存在透明度块，则将其视为完整 RGB 加透明度纹理。</li>
-<li>需要支持 JPEG 文件的纹理节点应按以下方式解释 JPEG 文件：</li>
-<li>灰度文件（组件数为 1）被视为强度纹理。</li>
-<li>YCbCr 文件被视为完整 RGB 纹理。</li>
-<li>不需要其他 JPEG 文件类型。建议将其他 JPEG 文件视为完整 RGB 纹理。</li>
-<li>建议支持 GIF 文件的纹理节点应遵循上述适用于 PNG 格式的语义。</li>
+<li>不含 Alpha 通道或简单透明度的灰度像素被视为强度纹理</li>
+<li>含 Alpha 通道或简单透明度的灰度像素被视为强度加 Alpha 纹理</li>
+<li>不含 Alpha 通道或简单透明度的 RGB 像素被视为完整 RGB 纹理</li>
+<li>含 Alpha 通道或简单透明度的 RGB 像素被视为完整 RGB 加 Alpha 纹理</li>
+<li>若图像采用索引色（即调色板或颜色映射）指定颜色，应遵循以下语义（注意“灰度”指调色板条目中红、绿、蓝值相等的颜色）：</li>
+<li>若调色板中所有颜色均为灰度且无透明通道，则视为强度纹理</li>
+<li>若调色板中所有颜色均为灰度且存在透明通道，则视为强度加不透明度纹理</li>
+<li>若调色板中存在非灰色且无透明通道，则视为完整 RGB 纹理</li>
+<li>若调色板中存在非灰色且存在透明通道，则视为完整 RGB 加 Alpha 纹理</li>
+<li>需要支持 JPEG 文件的纹理节点应按以下方式解析 JPEG 文件：</li>
+<li>灰度文件（分量数等于 1）视为强度纹理</li>
+<li>YCbCr 文件视为完整 RGB 纹理</li>
+<li>不要求支持其他 JPEG 文件类型，建议将其他 JPEG 文件视为完整 RGB 纹理</li>
+<li>建议支持 GIF 文件的纹理节点应遵循上述 PNG 格式的适用语义</li>
 </ul>
-<p>统一资源定位符 (URL) 是 URI 的一种形式，由 IETF 在 <a href="http://www.ietf.org/rfc/rfc1738.txt?number=1738">RFC1738</a> 中定义。它支持通过特定协议（通常是 http）访问特定服务器上的资源，以及访问本地机器上的资源。</p>
-<aside class="aside-note"><mark>注释</mark> Exchange files following the ifcZIP convention may include a sub directory structure for image resources to be stored together with the product data set.</aside><aside class="aside-note"><mark>注释</mark> 此标准中的纹理定义是根据 X3D 的纹理组件开发的。请参阅 ISO/IEC 19775-1.2:2008 X3D 体系结构和基本组件 第二版，第 1 部分，18 纹理组件，了解国际标准中的定义。
-</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
+<p>统一资源定位符（URL）是 URI 的一种形式，由 IETF 在 <a href="http://www.ietf.org/rfc/rfc1738.txt?number=1738">RFC1738</a> 中规范。它支持通过特定协议（通常为 http）访问特定服务器上的资源，以及本地计算机上的资源。</p>
+<aside class="aside-note"><mark>注释</mark> Exchange files following the ifcZIP convention may include a sub directory structure for image resources to be stored together with the product data set.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><blockquote>
+<blockquote>
+<p>注意 本标准中的纹理定义是在参考 X3D 纹理组件的基础上制定的。有关国际标准中的定义，请参见 ISO/IEC 19775-1.2:2008 X3D 架构与基础组件第 2 版，第 1 部分，18 纹理组件。</p>
+</blockquote>
+</blockquote>
 <h2><a class="anchor" id="8.12.3.17.2-Entity-inheritance-"></a>
     8.12.3.17.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.17.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -262,7 +265,7 @@
     8.12.3.17.3 特性（Attributes）
 <a class="link" href="#8.12.3.17.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-4af87804-1317-4504-876a-6943cf6af58f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c46cb012-d7bd-4a0d-b873-cb12f84a5058"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -284,91 +287,6 @@
 <small>(7)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                RepeatS
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p><em>RepeatS</em> 字段指定纹理在S方向上的环绕方式。如果_RepeatS_为TRUE（默认值），则纹理贴图在S方向上超出[0.0, 1.0]纹理坐标范围进行重复，以填充形状。如果_RepeatS_为FALSE，则在S方向上将纹理坐标限制在[0.0, 1.0]范围内。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                RepeatT
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p><em>RepeatT</em> 字段指定纹理在T方向上的环绕方式。如果_RepeatT_为TRUE（默认值），则纹理贴图在T方向上超出[0.0, 1.0]纹理坐标范围进行重复，以填充形状。如果_RepeatT_为FALSE，则在T方向上将纹理坐标限制在[0.0, 1.0]范围内。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                Mode
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<p>Mode应保存此对应的贴图类型，从以下列表中选择：AMBIENT、NORMAL、EMISSIVE、METALLICROUGHNESS、OCCLUSION、SHININESS、SPECULAR、DIFFUSE。</p>
-<p>如果省略Mode，则假定为DIFFUSE。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New attribute replacing previous TextureType.</aside><aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> Attribute has been repurposed to store the type of texture.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                TextureTransform
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator2D.htm">IfcCartesianTransformationOperator2D</a></td>
-<td data-label="Description">
-<p><em>TextureTransform</em> 定义了一个应用于纹理坐标的二维变换。它影响纹理坐标应用于几何表示项表面的方式。二维变换支持纹理在形状上的大小、方向和位置的变化。不允许在_IfcCartesianTransformationOperator_中使用镜像。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                Parameter
-                
-            </td>
-<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>IsMappedBy</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureCoordinate.htm">IfcTextureCoordinate</a> FOR Maps</td>
-<td data-label="Description">
-<p>纹理坐标，由纹理顶点列表提供给基于顶点的几何项，或由纹理坐标生成器提供，用于将曲面纹理应用于几何项的表面。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the attribute list.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>UsedInStyles</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleWithTextures.htm">IfcSurfaceStyleWithTextures</a> FOR Textures</td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -387,20 +305,8 @@
 <small>(1)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                URLReference
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></td>
-<td data-label="Description">
-<p>电子发布图像纹理的位置，以 URI 形式提供。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.12.3.17.A<a class="link" href="#-4af87804-1317-4504-876a-6943cf6af58f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.17.A<a class="link" href="#-c46cb012-d7bd-4a0d-b873-cb12f84a5058"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.17.4-Formal-representation-"></a>
     8.12.3.17.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.17.4-Formal-representation-"><i data-feather="link"></i></a></h2>

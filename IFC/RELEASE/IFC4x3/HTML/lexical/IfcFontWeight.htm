@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.2.8 IfcFontWeight - IFC 4.3.2 Documentation</title>
+<title>8.12.2.8 IfcFontWeight（字体粗细） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,34 +189,38 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.2.8 IfcFontWeight</h1>
+<h1>8.12.2.8 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFontWeight.htm">IfcFontWeight</a>（字体粗细）</h1>
 <h2><a class="anchor" id="8.12.2.8.1-Semantic-definition-"></a>
     8.12.2.8.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.2.8.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFontWeight.htm">IfcFontWeight</a></em> 类型定义了字体的粗细。值为：</p>
+<p><code>_IfcFontWeight_</code> 类型定义字体的粗细。可选值包括：</p>
 <ul>
 <li>normal</li>
 <li>bold</li>
 <li>100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900</li>
 </ul>
-<!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Definition according to Cascading Style Sheets, level 1
-The values '100' to '900' form an ordered sequence, where each number indicates a weight that is at least as dark as its predecessor. The keyword 'normal' is synonymous with '400', and 'bold' is synonymous with '700'. Keywords other than 'normal' and 'bold' have been shown to be often confused with font names and a numerical scale was therefore chosen for the 9-value list.</aside><aside class="aside-note"><mark>注释</mark> Type adopted from <strong>font-weight</strong> defined in <a href="../content/bibliography.htm#CSS1">CSS-1</a>.</aside><aside class="aside-history"><mark>沿革</mark> New type in IFC2x2 Add2.</aside><blockquote>
-<p>Fonts (the font data) typically have one or more properties whose values are names that are descriptive of the "weight" of a font. There is no accepted, universal meaning to these weight names. Their primary role is to distinguish faces of differing darkness within a single font family. Usage across font families is quite variant; for example a font that you might think of as being bold might be described as being <em>Regular, Roman, Book, Medium, Semi-</em> or <em>DemiBold, Bold,</em> or <em>Black,</em> depending on how black the "normal" face of the font is within the design. Because there is no standard usage of names, the weight property values in CSS1 are given on a numerical scale in which the value '400' (or 'normal') corresponds to the "normal" text face for that family. The weight name associated with that face will typically be <em>Book, Regular, Roman, Normal</em> or sometimes <em>Medium</em>.</p>
-<p>The association of other weights within a family to the numerical weight values is intended only to preserve the ordering of darkness within that family. However, the following heuristics tell how the assignment is done in typical cases: &gt; * If the font family already uses a numerical scale with nine values (such as with <em>OpenType</em>), the font weights should be mapped directly.
-* If there is both a face labeled <em>Medium</em> and one labeled <em>Book, Regular, Roman</em> or <em>Normal,</em> then the <em>Medium</em> is normally assigned to the '500'.
-* The font labeled "Bold" will often correspond to the weight value '700'.
-* If there are fewer then 9 weights in the family, the default algorithm for filling the "holes" is as follows. If '500' is unassigned, it will be assigned the same font as '400'. If any of the values '600', '700', '800' or '900' remains unassigned, they are assigned to the same face as the next darker assigned keyword, if any, or the next lighter one otherwise. If any of '300', '200' or '100' remains unassigned, it is assigned to the next lighter assigned keyword, if any, or the next darker otherwise.</p>
-<p>The following two examples illustrate the process. Assume four weights in the "Example1" family, from lightest to darkest: <em>Regular, Medium, Bold, Heavy.</em> And assume six weights in the "Example2" family: <em>Book, Medium, Bold, Heavy, Black, ExtraBlack.</em> Note how in the second example it has been decided <em>not</em> to assign "Example2 ExtraBlack" to anything. </p><pre>Available faces    | Assignments  | Filling the holes<br/>----------------------+---------------+-------------------<br/>"Example1 Regular"  | 400      | 100, 200, 300<br/>"Example1 Medium"   | 500      |<br/>"Example1 Bold"    | 700      | 600<br/>"Example1 Heavy"   | 800      | 900<br/></pre><pre>Available faces    | Assignments  | Filling the holes<br/>----------------------+---------------+-------------------<br/>"Example2 Book"    | 400      | 100, 200, 300<br/>"Example2 Medium"   | 500      |<br/>"Example2 Bold"    | 700      | 600 <br/>"Example2 Heavy"   | 800      |<br/>"Example2 Black"   | 900      |<br/>"Example2 ExtraBlack" | (none)    |<br/></pre>
+<!-- 短定义结束 -->
+<aside class="aside-note"><mark>注释</mark> 根据级联样式表第一级标准定义：
+数值'100'至'900'构成有序序列，每个数字表示的粗细程度至少不低于前一级。关键字'normal'等同于'400'，'bold'等同于'700'。由于除'normal'和'bold'外的关键字常被误认为字体名称，因此9级数值列表采用数字刻度。</aside><blockquote>
+<p>字体数据通常具有一个或多个属性，其值为描述字体"粗细"的名称。这些粗细名称尚未形成公认的通用含义，其主要作用在于区分同一字体系列中不同黑度的字型。不同字体系列间的使用存在显著差异：例如，您认为的粗体字型可能被描述为_Regular、Roman、Book、Medium、Semi-<em>或_DemiBold、Bold_乃至_Black</em>，具体取决于该字体设计中"常规"字型的黑度。由于名称使用缺乏标准，CSS1中的粗细属性值采用数字刻度，其中'400'对应字体系列的"常规"文本字型。该字型关联的粗细名称通常为_Book、Regular、Roman、Normal_或有时为_Medium_。</p>
+<p>字体系列内其他粗细与数值权重的关联仅旨在保持该系列内部的黑度排序。典型情况下的赋值遵循以下启发式规则：
+* 若字体系列已采用九级数值刻度，应直接映射字体粗细
+* 若同时存在标为_Medium_和_Book、Regular、Roman_或_Normal_的字型，则_Medium_通常对应'500'
+* 标为"Bold"的字体通常对应权重值'700'
+* 若系列内粗细等级少于9级，默认补位算法如下：若'500'未分配，则分配与'400'相同字体；若'600'、'700'、'800'或'900'中任一值未分配，则分配至下一更粗的已分配关键字，若无更粗字型则分配至下一较细字型；若'300'、'200'或'100'未分配，则分配至下一较细的已分配关键字，若无较细字型则分配至下一较粗字型</p>
+<p>以下两个示例说明该过程。假设"Example1"系列包含四种由浅至深的粗细：<em>Regular、Medium、Bold、Heavy</em>；"Example2"系列包含六种粗细：<em>Book、Medium、Bold、Heavy、Black、ExtraBlack</em>。注意第二个示例中决定不将"Example2 ExtraBlack"分配至任何数值。</p>
 </blockquote>
+<pre>可用字型        | 分配值    | 补位值<br/>----------------------+---------------+-------------------<br/>"Example1 Regular"  | 400      | 100, 200, 300<br/>"Example1 Medium"   | 500      |<br/>"Example1 Bold"    | 700      | 600<br/>"Example1 Heavy"   | 800      | 900<br/></pre>
+<pre>可用字型        | 分配值    | 补位值<br/>----------------------+---------------+-------------------<br/>"Example2 Book"    | 400      | 100, 200, 300<br/>"Example2 Medium"   | 500      |<br/>"Example2 Bold"    | 700      | 600 <br/>"Example2 Heavy"   | 800      |<br/>"Example2 Black"   | 900      |<br/>"Example2 ExtraBlack" | (未分配) |<br/></pre>
+<aside class="aside-note"><mark>注释</mark> 类型改编自<a href="../content/bibliography.htm#CSS1">CSS-1</a>定义的<strong>font-weight</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 Add2新增类型。</aside>
 <h2><a class="anchor" id="8.12.2.8.2-Formal-propositions-"></a>
     8.12.2.8.2 形式化命题（Formal propositions）
 <a class="link" href="#8.12.2.8.2-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-26724d09-4b52-4d6c-8ae8-2243ad25ee2b"></a><table>
+<figure><a class="anchor" id="-f4dbccd8-bc4c-401c-bc75-062687244905"></a><table>
 <tr>
 <td>WR1</td><td><br/><pre>SELF IN ['normal','small-caps','100','200','300','400','500','600','700','800','900']</pre>
 </td></tr>
-</table><figcaption>表 8.12.2.8.A<a class="link" href="#-26724d09-4b52-4d6c-8ae8-2243ad25ee2b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.2.8.A<a class="link" href="#-f4dbccd8-bc4c-401c-bc75-062687244905"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.2.8.3-Formal-representation-"></a>
     8.12.2.8.3 形式化表示（Formal representation）
 <a class="link" href="#8.12.2.8.3-Formal-representation-"><i data-feather="link"></i></a></h2>

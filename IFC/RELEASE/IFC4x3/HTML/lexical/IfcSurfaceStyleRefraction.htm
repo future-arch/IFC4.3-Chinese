@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.31 IfcSurfaceStyleRefraction - IFC 4.3.2 Documentation</title>
+<title>8.12.3.31 IfcSurfaceStyleRefraction（表面样式-折射） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,12 +189,12 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.12.3.31 IfcSurfaceStyleRefraction</h1>
+<h1>8.12.3.31 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRefraction.htm">IfcSurfaceStyleRefraction</a>（表面样式-折射）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.12.3.31.1-Semantic-definition-"></a>
     8.12.3.31.1 语义定义（Semantic definition）
 <a class="link" href="#8.12.3.31.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRefraction.htm">IfcSurfaceStyleRefraction</a></em> 通过添加不常用的属性来扩展曲面样式照明或曲面样式渲染定义，用于物理精确照度计算。目前这包括折射率（光线穿过棱镜时折射的指数）和色散因子（或阿贝数），它考虑了折射的波长依赖性。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRefraction.htm">IfcSurfaceStyleRefraction</a></em> 扩展了表面样式光照或表面样式渲染定义，通过添加较少使用的属性来计算物理精确的照度。目前包括折射率（光线穿过棱镜时发生折射的比例）和考虑折射率波长依赖性的色散系数（或称阿贝常数）。</p>
 <!-- end of short definition -->
 <aside class="aside-note"><mark>注释</mark> If such refraction properties are used, the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyle.htm">IfcSurfaceStyle</a></em> should include within its set of <em>Styles</em> (depending on whether rendering or lighting is used) an instance of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleLighting.htm">IfcSurfaceStyleLighting</a></em> and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRefraction.htm">IfcSurfaceStyleRefraction</a></em>, or an instance of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRendering.htm">IfcSurfaceStyleRendering</a></em> and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleRefraction.htm">IfcSurfaceStyleRefraction</a></em>.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
 <h2><a class="anchor" id="8.12.3.31.2-Entity-inheritance-"></a>
@@ -234,7 +234,7 @@
     8.12.3.31.3 特性（Attributes）
 <a class="link" href="#8.12.3.31.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-130dfa4a-1f23-47ff-86d0-a55f4c949655"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6f5a0593-17fc-451d-ad56-dc6073411e15"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -256,32 +256,8 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                RefractionIndex
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
-<td data-label="Description">
-<p>所有波长光的折射率。折射率是光在真空中的速度与光在介质中的速度之比。例如，玻璃的折射率为1.5，而水的折射率为1.33。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                DispersionFactor
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
-<td data-label="Description">
-<p>阿贝数，表示材料在不同波长下的折射率之间的固定比率。较低的阿贝数表示较高的色散能力。通常，这会转化为光谱的更大角度展开。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.12.3.31.A<a class="link" href="#-130dfa4a-1f23-47ff-86d0-a55f4c949655"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.31.A<a class="link" href="#-6f5a0593-17fc-451d-ad56-dc6073411e15"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.31.4-Formal-representation-"></a>
     8.12.3.31.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.31.4-Formal-representation-"><i data-feather="link"></i></a></h2>

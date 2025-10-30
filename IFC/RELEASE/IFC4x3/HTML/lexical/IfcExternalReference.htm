@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.6.3.7 IfcExternalReference - IFC 4.3.2 Documentation</title>
+<title>8.6.3.7 IfcExternalReference（外部引用） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,7 +189,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.6.3.7 IfcExternalReference</h1>
+<h1>8.6.3.7 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>（外部引用）</h1>
 <div class="mvd" title="Included in IfcClassificationReference, IfcDocumentReference">RV ⓘ</div>
 <div class="mvd" title="Included in IfcClassificationReference, IfcDocumentReference">AbV ⓘ</div>
 <div class="row">
@@ -202,13 +202,11 @@
 <h2><a class="anchor" id="8.6.3.7.1-Semantic-definition-"></a>
     8.6.3.7.1 语义定义（Semantic definition）
 <a class="link" href="#8.6.3.7.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a></em> 是对当前模型或项目数据库（作为当前模型的实现）中未显式表示的信息的标识。此类信息可能包含在分类、文档或库中。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a></em> 标识一个特定项，例如词典条目、分类符号或外部源中的文档引用。</p>
-<!-- end of short definition -->
-<p>仅提供 <em>Location</em>（作为 URL）来描述信息所在的位置。还提供了一个可选的 <em>Identification</em> 作为键，以允许更具体的引用（例如到节或表）。<em>Identification</em> 定义了一个系统可解释的方法来标识源中的相关信息部分。此外，还可以分配一个人类可读的 <em>Name</em> 来标识信息主题，例如分类代码。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a></em> 用于标识未在当前模型或项目数据库（作为当前模型的实现）中明确表示的信息。此类信息可能包含在分类、文档或库中。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a></em> 标识外部源中的特定项，例如字典条目、分类标记或文档引用。</p>
+<!-- 简短定义结束 -->
+<p>仅提供 <em>Location</em>（作为 URL）来描述可以找到信息的位置。同时提供可选的 <em>Identification</em> 作为键，以允许更具体的引用（如章节或表格）。<em>Identification</em> 定义了一种系统可解释的方法来识别源中信息的相关部分。此外，可以分配一个人类可解释的 <em>Name</em> 来标识信息主题，例如分类代码。</p>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a></em> 是所有外部引用实体的抽象超类型。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><blockquote>
-<p>IFC 2x4 CHANGE Attribute <em>Identification</em> renamed from ItemReference, attribute <em>Location</em> datatype changed, and inverse attribute <em>ExternalReferenceForResources</em> added.</p>
-</blockquote>
+<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><aside class="aside-change"><mark>IFC2x4 变更</mark> 属性 <em>Identification</em> 从 ItemReference 重命名，属性 <em>Location</em> 数据类型更改，并添加了逆向属性 <em>ExternalReferenceForResources</em>。</aside>
 <h2><a class="anchor" id="8.6.3.7.2-Entity-inheritance-"></a>
     8.6.3.7.2 实体继承（Entity inheritance）
 <a class="link" href="#8.6.3.7.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -235,7 +233,7 @@
     8.6.3.7.3 特性（Attributes）
 <a class="link" href="#8.6.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0b354574-eb3e-485f-a874-74dcfeb39345"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-ec3e0c46-ffff-4c64-998d-8c1bcba33d55"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -257,68 +255,12 @@
 <small>(4)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Location
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></td>
-<td data-label="Description">
-<p>外部源（分类、文档或库）可通过电子方式访问的位置。电子位置以 URI 的形式提供，通常是 URL 位置字符串。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The data type has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></em>
-.</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Identification
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<p><em>Identification</em> 在外部源（分类、文档或库）中提供对所引用项的唯一标识符。它可以是：
-* 一个键，例如分类符号，如 NF2.3
-* 一个句柄
-* 一个 uuid 或 guid</p>
-<p>根据其使用上下文（必须由本地协议确定），它可以是人类可读的（如键）或不可读的（如句柄或 uuid）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> Attribute renamed from <em>ItemReference</em> for consistency.
-</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                Name
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>可选名称，用于进一步指定引用。它可以提供人类可读的标识符（不一定需要在文档的内部结构中有对应项）。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#"></td>
-<td data-label="Name">
-<em>ExternalReferenceForResources</em>
-</td>
-<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatingReference</td>
-<td data-label="Description">
-<p>指向此外部引用与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceObjectSelect.htm">IfcResourceObjectSelect</a></em> 中被外部引用标记的对象的所有关联的引用。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute added with upward compatibility.
-</aside>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.6.3.7.A<a class="link" href="#-0b354574-eb3e-485f-a874-74dcfeb39345"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.7.A<a class="link" href="#-ec3e0c46-ffff-4c64-998d-8c1bcba33d55"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.3.7.4-Formal-propositions-"></a>
     8.6.3.7.4 形式化命题（Formal propositions）
 <a class="link" href="#8.6.3.7.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-38061e14-7ce0-4c82-a192-ab7d30fc1df0"></a><table>
+<figure><a class="anchor" id="-166253ff-270a-4fc1-88ae-6ff3996a7045"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -329,7 +271,7 @@
 <tr>
 <td>WR1</td>
 <td>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a> 的一个属性应具有已分配的值。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a> 的属性之一应具有赋值。</p>
 </td>
 </tr>
 <tr>
@@ -338,7 +280,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.6.3.7.B<a class="link" href="#-38061e14-7ce0-4c82-a192-ab7d30fc1df0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.7.B<a class="link" href="#-166253ff-270a-4fc1-88ae-6ff3996a7045"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.3.7.5-Formal-representation-"></a>
     8.6.3.7.5 形式化表示（Formal representation）
 <a class="link" href="#8.6.3.7.5-Formal-representation-"><i data-feather="link"></i></a></h2>

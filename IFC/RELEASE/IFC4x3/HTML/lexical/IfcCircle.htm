@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.18 IfcCircle - IFC 4.3.2 Documentation</title>
+<title>8.9.3.18 IfcCircle（度盘） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,31 +189,32 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.18 IfcCircle</h1>
+<h1>8.9.3.18 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a>（度盘）</h1>
 <div class="mvd" title="Included in Alignment Geometry - Horizontal, Alignment Geometry - Horizontal and Vertical, Alignment Geometry - Horizontal, Vertical and Cant">AbV ⓘ</div>
 <h2><a class="anchor" id="8.9.3.18.1-Semantic-definition-"></a>
     8.9.3.18.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.18.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 是由一组与中心距离相等的点组成的曲线。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 是由一组与中心点距离相等的点构成的曲线。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> A circular arc segment is defined by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> with <em>BasisCurve</em> being an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em>.</aside>
-<p>图 8.9.3.18.A 说明了在放置在元素对象坐标系内的三维位置坐标系中 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 的定义。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="axis1 placement" src="../figures/ifccircle-layout1.gif" title="图 8.9.3.18.A — 圆形布局"/><figcaption>图 8.9.3.18.A — 圆形布局<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-reference"><mark>参考</mark> Definition according to ISO/CD 10303-42:1992</aside>
-<p>圆由半径以及圆的位置和方向定义。数据的解释应如下：</p>
+<aside class="aside-note"><mark>注释</mark> 圆弧段可通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> 定义，其中 <em>BasisCurve</em> 为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em>。</aside>
+<p>图1展示了在构件对象坐标系内放置的三维位置坐标系中 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm">IfcCircle</a></em> 的定义。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="轴1定位" src="../figures/ifccircle-layout1.gif" title="图1 — 度盘布局"/><figcaption>图1 — 度盘布局<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-reference"><mark>参考</mark> 根据 ISO/CD 10303-42:1992 的定义</aside>
+<p>度盘通过半径及其位置和方向定义。数据应按如下方式解释：</p>
 <pre><code>C = SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.Location
 x = SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.P[1]
 y = SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.P[2]
 z = SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a>.Position.P[3]
 R = Radius
 </code></pre>
-<p>圆的参数化为：</p>
+<p>度盘参数化表示为</p>
 <p>$$ \lambda(u) = C + R(\cos(u)x + \sin(u)y) $$</p>
-<p>参数化范围为 0 ≤ <em>u</em> ≤ 2π (0 ≤ <em>u</em> ≤ 360 度)。在上述放置坐标系中，圆的方程为 <em>C</em> = 0，其中：</p>
+<p>参数化范围为 0 ≤ <em>u</em> ≤ 2π（0 ≤ <em>u</em> ≤ 360 度）。
+在上述定义的定位坐标系中，度盘方程为 <em>C</em> = 0，其中</p>
 <p>$$ C(x,y,z) = x^2 + y^2 - R^2 $$</p>
-<p>圆在任何点的正向是切线方向 <strong>T</strong>，其中：</p>
+<p>度盘上任意点的正方向为曲线在该点的切线方向 <strong>T</strong>，其中</p>
 <p>$$ T = (-C_y,C_x,0) $$</p>
-<aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体。</aside>
+<aside class="aside-history"><mark>沿革</mark> 新实体 in IFC1.0</aside>
 <h2><a class="anchor" id="8.9.3.18.2-Entity-inheritance-"></a>
     8.9.3.18.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.18.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -288,7 +289,7 @@ R = Radius
     8.9.3.18.3 特性（Attributes）
 <a class="link" href="#8.9.3.18.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-d3a33400-e59b-4506-8cca-be4e77ca82da"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-8ea22324-3a1d-4cec-afc5-dbea0421b28d"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -317,8 +318,8 @@ R = Radius
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -328,8 +329,8 @@ R = Radius
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -349,7 +350,7 @@ R = Radius
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
-<p>此抽象类的空间维度，为所有子类型（即 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）定义不同。</p>
+<p>此抽象类的空间维度，所有子类（如 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a>、<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a> 和 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a>）的定义各不相同。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -367,7 +368,7 @@ R = Radius
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
 <td data-label="Description">
-<p>圆锥曲线的位置和方向。有关此属性解释的更多详细信息，请参见各个子类型。</p>
+<p>圆锥曲线的位置和方向。该属性的具体解释细节在各子类型中给出。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -397,11 +398,11 @@ R = Radius
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>圆的半径，应大于零。</p>
+<p>度盘的半径，必须大于零。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.18.B<a class="link" href="#-d3a33400-e59b-4506-8cca-be4e77ca82da"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.18.B<a class="link" href="#-8ea22324-3a1d-4cec-afc5-dbea0421b28d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.18.4-Formal-representation-"></a>
     8.9.3.18.4 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.18.4-Formal-representation-"><i data-feather="link"></i></a></h2>

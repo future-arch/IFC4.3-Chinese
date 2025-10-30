@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -193,17 +193,17 @@
 <h2><a class="anchor" id="8.15.4.2.1-Semantic-definition-"></a>
     8.15.4.2.1 语义定义（Semantic definition）
 <a class="link" href="#8.15.4.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>这是预制混凝土构件空心截面轮廓的几何属性集合，当仅靠轮廓名称无法满足信息要求时，需与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryProfileDefWithVoids.htm">IfcArbitraryProfileDefWithVoids</a> 配合使用。</p>
+<p>这是预制混凝土构件空心截面轮廓的几何属性集合，当仅靠轮廓标识无法满足信息要求时，需与IfcArbitraryProfileDefWithVoids配合使用。</p>
 <!-- end of short definition -->
-<p>在所有情况下，无论芯孔数量为奇数还是偶数，芯孔均沿板中心线对称分布。对于中心芯孔几何形状与其他芯孔不同的板，需提供CenterCoreSpacing属性。当芯孔数量为偶数时，不应声明任何中心芯孔属性。</p>
+<p>在所有情况下，无论芯孔数量为奇数还是偶数，芯孔均沿板中心线两侧对称分布。对于中心芯孔几何形状与其他芯孔不同的板材，需提供CenterCoreSpacing属性。当芯孔数量为偶数时，不应声明任何中心芯孔属性。</p>
 <p>关键倒角和拔模倒角均为45度倒角。</p>
-<p>CoreTopRadius和CoreBaseRadius参数可通过推导得出，因此未在属性集中列出。这些参数的显示是为了明确曲线为圆弧。中心芯孔的参数与上述相同，但需添加"Center"前缀。</p>
+<p>CoreTopRadius和CoreBaseRadius参数可通过推导得出，因此未在属性集中列出。这些参数用于定义曲线为圆弧。中心芯孔的参数与上述相同，但需添加"Center"前缀。</p>
 <h2><a class="anchor" id="8.15.4.2.2-"></a>
     8.15.4.2.2 适用实体
 <a class="link" href="#8.15.4.2.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_PROFILEDRIVEN</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集应在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> 实体中编码，并分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a>。
+    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集将被编码在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> 实体中，并分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a>。
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryProfileDefWithVoids.htm">IfcArbitraryProfileDefWithVoids</a></li>
@@ -211,7 +211,7 @@
 <h2><a class="anchor" id="8.15.4.2.3-"></a>
     8.15.4.2.3 属性
 <a class="link" href="#8.15.4.2.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-27eb0af5-5757-49a0-8e28-55461afb9470"></a><table>
+<figure><a class="anchor" id="-fa01af51-9778-454e-98ba-a1f637c8fd1a"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -236,7 +236,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>截面的总深度。</p>
+<p>型材的总深度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/OverallDepth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -245,7 +245,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>轮廓的边缘拔模。</p>
+<p>型材的边缘拔模。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/EdgeDraft.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -254,7 +254,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>型材的基准偏移量。</p>
+<p>型材的拔模基础偏移。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/DraftBaseOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -263,7 +263,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>型材的侧向偏移量。</p>
+<p>型材的拔模侧向偏移。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/DraftSideOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -272,7 +272,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>基准倒角的轮廓。</p>
+<p>型材的底部倒角。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/BaseChamfer.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -281,7 +281,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>轮廓的键深度。</p>
+<p>型材的键槽深度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/KeyDepth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -290,7 +290,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>键高度是型材的键高度。</p>
+<p>型材的键槽高度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/KeyHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -299,7 +299,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>键偏移的轮廓。</p>
+<p>型材的键槽偏移量。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/KeyOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -308,7 +308,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的底部覆盖。</p>
+<p>型材的底部保护层。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/BottomCover.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -317,7 +317,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的核心间距。</p>
+<p>型材的芯部间距。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CoreSpacing.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -326,7 +326,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的核心基准高度。</p>
+<p>型材的芯部基高。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CoreBaseHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -335,7 +335,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>轮廓的核心中间高度。</p>
+<p>型材的芯部中高。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CoreMiddleHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -344,7 +344,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的核心顶部高度。</p>
+<p>型材的芯部顶高。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CoreTopHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -353,7 +353,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的核心基准宽度。</p>
+<p>型材的芯部基宽。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CoreBaseWidth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -362,7 +362,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的核心顶部宽度。</p>
+<p>型材的芯部顶宽。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CoreTopWidth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -371,7 +371,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的中心核心间距。</p>
+<p>型材的中心芯间距。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CenterCoreSpacing.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -380,7 +380,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>剖面的中心核心基础高度。</p>
+<p>型材的中心芯底部高度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CenterCoreBaseHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -389,7 +389,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>剖面的中心核心中间高度。</p>
+<p>型材的中心芯中部高度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CenterCoreMiddleHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -398,7 +398,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的中心核心顶部高度。</p>
+<p>型材的中心芯顶部高度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CenterCoreTopHeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -407,7 +407,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的中心核心基础宽度。</p>
+<p>型材的中心芯底部宽度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CenterCoreBaseWidth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -416,7 +416,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>型材的中心核心顶部宽度。</p>
+<p>型材的中心芯顶部宽度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CenterCoreTopWidth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -430,7 +430,7 @@
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NumberOfCores.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.4.2.A<a class="link" href="#-27eb0af5-5757-49a0-8e28-55461afb9470"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.4.2.A<a class="link" href="#-fa01af51-9778-454e-98ba-a1f637c8fd1a"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">

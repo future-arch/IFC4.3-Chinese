@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.73 IfcToroidalSurface - IFC 4.3.2 Documentation</title>
+<title>8.9.3.73 IfcToroidalSurface（环面） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,43 +189,43 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.3.73 IfcToroidalSurface</h1>
+<h1>8.9.3.73 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm">IfcToroidalSurface</a>（环面）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.9.3.73.1-Semantic-definition-"></a>
     8.9.3.73.1 语义定义（Semantic definition）
 <a class="link" href="#8.9.3.73.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm">IfcToroidalSurface</a></em> 是一个有界的初等曲面。它通过将一个圆绕一条轴线完全旋转来构造。继承的 <em>Position</em> 属性定义了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 并提供：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm">IfcToroidalSurface</a></em> 是一个有界的基本曲面。它通过将一个圆完全绕轴线旋转而构成。继承的 <em>Position</em> 属性定义了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 并提供：</p>
 <ul>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position</em>：原语的坐标系位置和方向。</li>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Location</em>：环面曲面的中心。</li>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Position[3]:</em> 环面曲面的旋转轴。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position</em>：基本体坐标系的位置和方向。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Location</em>：环面的中心。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Position[3]</em>：环面的旋转轴。</li>
 </ul>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-An <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm">IfcToroidalSurface</a></em> is a type of elementary surface, which could be produced by revolving a circle about a line in its plane. The radius of the circle being revolved is referred to here as the <em>MinorRadius</em> and the <em>MajorRadius</em> is the distance from the centre of this circle to the axis of revolution. A toroidal surface is defined by the major and minor radii and the position and orientation of the surface.</aside><blockquote>
+<aside class="aside-note"><mark>注释</mark> 定义依据 ISO/CD 10303-42:1992
+<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcToroidalSurface.htm">IfcToroidalSurface</a></em> 是一种基本曲面类型，可通过将一个圆绕其平面内的一条直线旋转而产生。被旋转的圆的半径在此称为 <em>MinorRadius</em>，而 <em>MajorRadius</em> 是从该圆的中心到旋转轴的距离。环面由主半径、次半径以及曲面的位置和方向定义。</aside><blockquote>
 <p>C = Position.Location
 x = Position.P[1]
 y = Position.P[2]
-z = Position.P[3] (axis of toroidal_surface)
+z = Position.P[3]（环面的轴）
 <em>R</em> = MajorRadius
 <em>r</em> = MinorRadius</p>
 </blockquote>
 <p><em><strong>σ</strong>(u,v)</em> = <strong>C</strong> + <em>(R + r_cos _v</em>)((cos_u_)<strong>x</strong> + (sin <em>u</em>))<strong>y</strong>) + <em>r</em>(sin_v_))<strong>z</strong></p>
-<p>其中参数化范围为 <em>0 ≤ u, v ≤ 360</em> 度。 <em>u</em> 和 <em>v</em> 是角度参数，当指定数值时，应使用当前平面角度测量单位。</p>
-<p>在上述定义的放置坐标系中，曲面由方程 <em>S</em> = 0 表示，其中</p>
+<p>其中参数化范围为 <em>0 ≤ u, v ≤ 360</em> 度。<em>u</em> 和 <em>v</em> 是角度参数，当指定数值时，应使用平面角度测量的当前单位。</p>
+<p>在上面定义的放置坐标系中，曲面由方程 <em>S</em> = 0 表示，其中</p>
 <blockquote>
-<p><em>S(x, y, z) = x^2^ + y^2^ + z^2^ -2R√(x^2^+y^2^) - r^2^ + R^2^.</em></p>
+<p><em>S(x, y, z) = x^2^ + y^2^ + z^2^ -2R√(x^2^+y^2^) - r^2^ + R^2^。</em></p>
 </blockquote>
-<p>曲面上任意点的法线正方向由下式给出</p>
+<p>曲面上任意点处曲面的法向正方向由下式给出</p>
 <blockquote>
-<p><em>( S~x~, S~y~, S~z~ ).</em></p>
+<p><em>( S~x~, S~y~, S~z~ )。</em></p>
 </blockquote>
-<p>单位法线由下式给出</p>
+<p>单位法向量由下式给出</p>
 <blockquote>
-<p><strong>N</strong><em>(u,v)</em> = cos_v_((cos <em>u</em>)<strong>x</strong> + (sin <em>u</em>)<strong>y</strong>) + (sin <em>v</em>)<strong>z</strong>.</p>
+<p><strong>N</strong><em>(u,v)</em> = cos_v_((cos <em>u</em>)<strong>x</strong> + (sin <em>u</em>)<strong>y</strong>) + (sin <em>v</em>)**z。</p>
 </blockquote>
-<p>该法线的方向是从圆心为 <strong>C</strong>、半径为 <em>R</em> 的圆到最近点的方向。如果大半径大于小半径，则会产生一个流形曲面。如果不满足此条件，则生成的曲面将自相交。</p>
-<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>toroidal_surface</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4 Addendum 2.</aside>
+<p>该法向的方向远离以 <strong>C</strong> 为中心、半径为 <em>R</em> 的圆上的最近点。如果主半径大于次半径，将产生一个流形曲面。如果不满足此条件，生成的曲面将自相交。</p>
+<aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>toroidal_surface</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 Addendum 2 中的新实体。</aside>
 <h2><a class="anchor" id="8.9.3.73.2-Entity-inheritance-"></a>
     8.9.3.73.2 实体继承（Entity inheritance）
 <a class="link" href="#8.9.3.73.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -298,7 +298,7 @@ z = Position.P[3] (axis of toroidal_surface)
     8.9.3.73.3 特性（Attributes）
 <a class="link" href="#8.9.3.73.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-786a31b3-7660-4a83-99fb-7f8b4332759f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-07f9ccf2-17cb-4a50-921b-82ff62635794"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -327,8 +327,8 @@ z = Position.P[3] (axis of toroidal_surface)
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -338,8 +338,8 @@ z = Position.P[3] (axis of toroidal_surface)
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -359,7 +359,7 @@ z = Position.P[3] (axis of toroidal_surface)
                     此属性是形式化派生的
                 </p>
 <pre><code class="language-express hljs">3</code></pre>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是一个三维几何表示项。</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a> 的空间维度。它始终是三维几何表示项。</p>
 <aside class="aside-change"><mark>IFC4 变更</mark> Derived attribute promoted from subtypes.</aside>
 </td>
 </tr>
@@ -378,7 +378,7 @@ z = Position.P[3] (axis of toroidal_surface)
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>曲面的位置和方向。此属性用于定义曲面的参数化。</p>
+<p>曲面的位置和方向。该属性用于定义曲面的参数化。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -408,7 +408,7 @@ z = Position.P[3] (axis of toroidal_surface)
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>圆环的大半径。</p>
+<p>环面的主半径。</p>
 </td>
 </tr>
 <tr>
@@ -420,15 +420,15 @@ z = Position.P[3] (axis of toroidal_surface)
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td data-label="Description">
-<p>圆环的小半径。</p>
+<p>环面的次半径。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.73.A<a class="link" href="#-786a31b3-7660-4a83-99fb-7f8b4332759f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.73.A<a class="link" href="#-07f9ccf2-17cb-4a50-921b-82ff62635794"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.73.4-Formal-propositions-"></a>
     8.9.3.73.4 形式化命题（Formal propositions）
 <a class="link" href="#8.9.3.73.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-21d64ff8-f96c-4b1a-81c7-5d44d21d01d7"></a><table>
+<figure><a class="anchor" id="-ccf7d302-d13a-4cd7-b96d-1d6856844838"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -448,7 +448,7 @@ z = Position.P[3] (axis of toroidal_surface)
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.9.3.73.B<a class="link" href="#-21d64ff8-f96c-4b1a-81c7-5d44d21d01d7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.9.3.73.B<a class="link" href="#-ccf7d302-d13a-4cd7-b96d-1d6856844838"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.9.3.73.5-Formal-representation-"></a>
     8.9.3.73.5 形式化表示（Formal representation）
 <a class="link" href="#8.9.3.73.5-Formal-representation-"><i data-feather="link"></i></a></h2>

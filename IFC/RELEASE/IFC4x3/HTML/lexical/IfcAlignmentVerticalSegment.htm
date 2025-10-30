@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7.3.4 IfcAlignmentVerticalSegment - IFC 4.3.2 Documentation</title>
+<title>8.7.3.4 IfcAlignmentVerticalSegment（线形垂直段） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,42 +189,42 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.7.3.4 IfcAlignmentVerticalSegment</h1>
+<h1>8.7.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegment.htm">IfcAlignmentVerticalSegment</a>（线形垂直段）</h1>
 <div class="mvd" title="Included in Alignment Geometry - Segments, Alignment Layout - Horizontal, Vertical and Cant, Alignment Layout - Reusing Horizontal Layout">AbV ⓘ</div>
 <h2><a class="anchor" id="8.7.3.4.1-Semantic-definition-"></a>
     8.7.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.7.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegment.htm">IfcAlignmentVerticalSegment</a></em> 是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVertical.htm">IfcAlignmentVertical</a></em> 的单个段，在距离/z 坐标空间中定义。</p>
-<!-- end of short definition -->
-<p>垂直对齐由连接端点的段定义。垂直对齐曲线的几何形状在平面中定义，其中 x = 水平距离，y = 高度（或标高）。段连接处的过渡不强制为切向，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegment.htm">IfcSegment</a></em> <em>Transition</em> 枚举明确指定了过渡的类型。</p>
-<p>定义了以下垂直段类型：</p>
+<p>沿 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVertical.htm">IfcAlignmentVertical</a></em> 的独立段，在沿程距离/z坐标空间中定义。</p>
+<!-- 短定义结束 -->
+<p>垂直线形由首尾相连的段定义。垂直线形曲线几何在平面中定义，其中x = 沿水平方向的沿程距离，y = 高度（或高程）。段连接处的过渡不强制要求相切，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegment.htm">IfcSegment</a></em> <em>Transition</em> 枚举明确指定了过渡类型。</p>
+<p>定义了以下垂直线形段类型：</p>
 <ul>
-<li>直线段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .LINE.</li>
-<li>圆弧段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .ARC.</li>
-<li>抛物线弧段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .PARABOLICARC. 可以描述对称抛物线，不对称抛物线可以通过定义两个对称抛物线段来创建</li>
-<li>曲率变化线性过渡段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .CLOTHOID.</li>
+<li>直线段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .LINE</li>
+<li>圆弧段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .ARC</li>
+<li>抛物线弧段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .PARABOLICARC（可描述对称抛物线，非对称抛物线可通过定义两个对称抛物线段创建）</li>
+<li>具有线性曲率变化的过渡段 - <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></em> .CLOTHOID</li>
 </ul>
-<p>对于每个垂直段，提供以下非冗余信息：</p>
+<p>对于每个垂直线形段，提供以下非冗余信息：</p>
 <ul>
-<li>起点（以距离/高度坐标表示）</li>
-<li>起始坡度（以比率表示，水平为 0，上坡为正，下坡为负）通常在 1 &lt; n &lt; -1 之间（等于 100% &lt; n &lt; -100% 的百分比，或 45° &lt; n &lt; -45° 的角度，但可能存在更高值）</li>
-<li>长度（作为沿水平对齐的距离长度，而不是曲线段长度）</li>
-<li>圆弧和抛物线弧段所需的曲线参数</li>
+<li>起点（以沿程距离/高度坐标表示）</li>
+<li>起始坡度（以水平为0的比率度量，上坡为正，下坡为负），通常在1 &lt; n &lt; -1之间（相当于100% &lt; n &lt; -100%的百分比，或45° &lt; n &lt; -45°的角度，但可能出现更高值）</li>
+<li>长度（作为沿程距离的水平长度，非曲线段长度）</li>
+<li>圆弧段和抛物线弧段所需的曲线参数</li>
 </ul>
-<p>以下信息可以计算得出（因此不明确交换以避免冗余和不一致）：</p>
+<p>以下信息可计算得出（因此为避免冗余和不一致，不显式交换）：</p>
 <ul>
-<li>结束距离（从距离和段长度计算）</li>
-<li>结束高度（从起始距离、坡度、长度和曲线参数计算）</li>
-<li>结束方向（从起始方向、段长度和曲线参数计算）</li>
-<li>竖曲线交点（从起始方向和结束方向计算）</li>
+<li>终点沿程距离（根据沿程距离和段长度计算）</li>
+<li>终点高度（根据起点沿程距离、坡度、长度和曲线参数计算）</li>
+<li>终点方向（根据起点方向、段长度和曲线参数计算）</li>
+<li>竖向交点（根据起点方向和终点方向计算）</li>
 </ul>
-<p>可以进行以下检查以验证正确的交换：</p>
+<p>可通过以下检查验证正确交换：</p>
 <ul>
-<li>连续性 – 前一个段的计算结束距离是否与本段提供的起始距离匹配</li>
-<li>切向连续性 – 前一个段的计算结束坡度是否与本段提供的起始坡度匹配</li>
+<li>连续性 – 前一段计算得出的终点沿程距离是否与本段提供的起点沿程距离匹配</li>
+<li>切向连续性 – 前一段计算得出的终点坡度是否与本段提供的起点坡度匹配</li>
 </ul>
 <aside class="aside-note"><mark>注释</mark> Specific subtypes of the <span class="self-ref"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegment.htm">IfcAlignmentVerticalSegment</a></span> add specific geometric curve parameters. Connectivity between vertical segments is not necessarily tangential, but this can be enforced as a requirement through the attribute <em>TangentialContinuity</em>.</aside>
-<figure><a class="anchor" id="-1-"></a><img alt="Alignment vertical segment" src="../figures/ifcalignment2dverticalsegment.png" title="图 8.7.3.4.A — 垂直对齐段"/><figcaption>图 8.7.3.4.A — 垂直对齐段<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="-1-"></a><img alt="垂直线形段" src="../figures/ifcalignment2dverticalsegment.png" title="图 8.7.3.4.A — 垂直线形段"/><figcaption>图 8.7.3.4.A — 垂直线形段<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.4.2-Entity-inheritance-"></a>
     8.7.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.7.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -248,7 +248,7 @@
     8.7.3.4.3 特性（Attributes）
 <a class="link" href="#8.7.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-fab4967f-5a35-4f63-b6e6-cb951a0c0eb8"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-56be6a52-cb76-45f3-a8b3-4513035a185f"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -270,30 +270,6 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                StartTag
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>用于注释对齐段起点的标签。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                EndTag
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>用于注释对齐段终点的标签。</p>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -312,100 +288,8 @@
 <small>(7)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                StartDistAlong
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>沿 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontal.htm">IfcAlignmentHorizontal</a></em> 测量的水平对齐距离。</p>
-<aside class="aside-note"><mark>注释</mark> 1 The distance along is measured from the start point of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontal.htm">IfcAlignmentHorizontal</a></em>.
-NOTE 2 The unit of measurement is the global length unit, as set by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcContext.htm">IfcContext</a></em>.UnitInContext</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                HorizontalLength
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
-<td data-label="Description">
-<p>段沿水平对齐的距离长度。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                StartHeight
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>起点相对于 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignment.htm">IfcAlignment</a> 坐标系统的 Z 轴高程。</p>
-<aside class="aside-note"><mark>注释</mark> It is strongly advised to not offset the <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignment.htm">IfcAlignment</a> coordinate system from the project engineering coordinate system.</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">6</td>
-<td data-label="Name">
-                
-                StartGradient
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></td>
-<td data-label="Description">
-<p>段的起始坡度。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">7</td>
-<td data-label="Name">
-                
-                EndGradient
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></td>
-<td data-label="Description">
-<p>段的结束坡度。如果 PredefinedType='.CONSTANTGRADIENT.'，则该值与 <em>StartGradient</em> 相同。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">8</td>
-<td data-label="Name">
-                
-                RadiusOfCurvature
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>抛物线或圆弧的半径。正值表示逆时针方向，负值表示顺时针方向。</p>
-<blockquote>
-<p>NOTE1 For <em>PredefinedType</em> is ARC. The radius of the basis circle for the arc.
-NOTE2 For <em>PredefinedType</em> is PARABOLICARC. Parabola constant (determining the “steepness” of the parabola). The parabola constant is provided by the “minimum parabola radius”, the true radius of a parabola at its vertical axis (the zero-gradient point of the parabola). The minimum radius is twice the focal length of the parabola (the distance between the focal point and the vertex).
-NOTE3 For <em>PredefinedType</em> that is not either ARC or PARABOLICARC the value should be empty.</p>
-</blockquote>
-</td>
-</tr>
-<tr>
-<td data-label="#">9</td>
-<td data-label="Name">
-                
-                PredefinedType
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></td>
-<td data-label="Description">
-<p>垂直对齐段的预定义类型。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.7.3.4.B<a class="link" href="#-fab4967f-5a35-4f63-b6e6-cb951a0c0eb8"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.4.B<a class="link" href="#-56be6a52-cb76-45f3-a8b3-4513035a185f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.4.4-Formal-representation-"></a>
     8.7.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.7.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>

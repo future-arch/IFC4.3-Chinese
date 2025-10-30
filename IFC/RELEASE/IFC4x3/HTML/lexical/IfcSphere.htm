@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.40 IfcSphere - IFC 4.3.2 Documentation</title>
+<title>8.8.3.40 IfcSphere（球体） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,30 +189,30 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8.3.40 IfcSphere</h1>
+<h1>8.8.3.40 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSphere.htm">IfcSphere</a>（球体）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.8.3.40.1-Semantic-definition-"></a>
     8.8.3.40.1 语义定义（Semantic definition）
 <a class="link" href="#8.8.3.40.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSphere.htm">IfcSphere</a></em> 是一个构造实体几何（CSG）三维图元。它是一个实体，其中表面上的所有点到中心点的距离都相同。继承的 <em>Position</em> 特性定义了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 并提供：</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSphere.htm">IfcSphere</a></em> 是一种构造实体几何（CSG）三维图元。它是一个所有表面点到中心点距离相等的实体。继承的 <em>Position</em> 属性定义了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em> 并提供：</p>
 <ul>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position</em>：图元的轴系的位置和方向。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position</em>：图元坐标系的位置和方向。</li>
 <li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position.Location</em>：球体的中心。</li>
-<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position.Position[3]</em>：z 轴的正方向指向北极，负方向指向南极。</li>
+<li><em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>.Position.Position[3]</em>：z轴正方向指向北极，负方向指向南极。</li>
 </ul>
-<!-- end of short definition -->
-<figure><a class="anchor" id="-1-"></a><img alt="sphere" src="../figures/ifcsphere-layout1.png"/><figcaption>图 8.8.3.40.A — 球体几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>示例</mark> Figure 8.8.3.40.A illustrates geometric parameters of the sphere. The sphere is positioned within its own placement coordinate system relative to the object coordinate system. The origin is the center of the sphere.</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-A sphere is a CSG primitive with a spherical shape defined by a centre and a radius.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>sphere</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside>
+<!-- 简短定义结束 -->
+<figure><a class="anchor" id="-1-"></a><img alt="球体" src="../figures/ifcsphere-layout1.png"/><figcaption>图 8.8.3.40.A — 球体几何<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>示例</mark> 图1展示了球体的几何参数。球体被定位在其自身的相对于对象坐标系的放置坐标系内。原点为球体的中心。</aside><aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
+球体是一种CSG图元，其球状形状由中心和半径定义。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>sphere</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x3 中的新实体。</aside>
 <p>纹理使用定义</p>
-<p>纹理向上对齐，原点在后部（+Y 方向）逆时针旋转。纹理根据 RepeatS 和 RepeatT 拉伸或重复到赤道圆周的范围。</p>
-<p>图 8.8.3.40.B 说明了默认纹理映射（纹理被钳制）（RepeatS=False 和 RepeatT=False）。左侧的图像显示了 S 轴指向右侧，T 轴指向上方的纹理。右侧的图像显示了应用于几何体的纹理，其中 X 轴指向右后方，Y 轴指向左后方，Z 轴指向上方。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="texture" src="../figures/ifcsphere-texture.png"/><figcaption>图 8.8.3.40.B — 球体纹理<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<p>纹理朝向正立方向对齐，原点在后部（+Y方向），并逆时针旋转。根据 RepeatS 和 RepeatT，纹理在赤道圆周范围内被拉伸或重复。</p>
+<p>图2展示了使用钳制纹理（RepeatS=False 且 RepeatT=False）的默认纹理映射。左侧图像显示纹理，其中S轴指向右方，T轴指向上方。右侧图像显示应用于几何体的纹理，其中X轴指向后方右侧，Y轴指向后方左侧，Z轴指向上方。</p>
+<figure><a class="anchor" id="-2-"></a><img alt="纹理" src="../figures/ifcsphere-texture.png"/><figcaption>图 8.8.3.40.B — 球体纹理<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 <figure><a class="anchor" id="-3-"></a><table>
 <thead>
 <tr>
-<th>侧面</th>
-<th>法线</th>
+<th>面</th>
+<th>法向量</th>
 <th>原点 X</th>
 <th>原点 Y</th>
 <th>原点 Z</th>
@@ -225,10 +225,10 @@ A sphere is a CSG primitive with a spherical shape defined by a centre and a rad
 <td>侧面</td>
 <td>+Y</td>
 <td>0</td>
-<td>+Radius</td>
+<td>+半径</td>
 <td>0</td>
 <td>(-X，然后逆时针弯曲)</td>
-<td>(+Z，然后朝向顶部弯曲)</td>
+<td>(+Z，然后向顶部弯曲)</td>
 </tr>
 </tbody>
 </table><figcaption>表 8.8.3.40.C — 纹理参数<a class="link" href="#-3-"><i data-feather="link"></i></a></figcaption></figure>
@@ -296,7 +296,7 @@ A sphere is a CSG primitive with a spherical shape defined by a centre and a rad
     8.8.3.40.3 特性（Attributes）
 <a class="link" href="#8.8.3.40.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c2b04dd9-c866-4f42-91aa-bf79c438cc76"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-902d510c-0424-4e43-977c-b0abeaaedd3a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -318,58 +318,10 @@ A sphere is a CSG primitive with a spherical shape defined by a centre and a rad
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>LayerAssignment</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
-<td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#"></td>
-<td data-label="Name">
-<em>StyledByItem</em>
-</td>
-<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
-<td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
-</td>
-</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a>
 <small>(2)</small>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Position
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
-<td data-label="Description">
-<p>适用于每个单独 CSG 图元参数的放置坐标系。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    此属性是形式化派生的
-                </p>
-<pre><code class="language-express hljs">3</code></pre>
-<p>此几何表示项的空间维度，始终为 3。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -390,20 +342,8 @@ A sphere is a CSG primitive with a spherical shape defined by a centre and a rad
 <small>(1)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Radius
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
-<td data-label="Description">
-<p>球体的半径。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.8.3.40.D<a class="link" href="#-c2b04dd9-c866-4f42-91aa-bf79c438cc76"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.40.D<a class="link" href="#-902d510c-0424-4e43-977c-b0abeaaedd3a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.40.4-Formal-representation-"></a>
     8.8.3.40.4 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.40.4-Formal-representation-"><i data-feather="link"></i></a></h2>

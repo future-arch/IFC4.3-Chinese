@@ -284,7 +284,7 @@
     7.5.3.31.3 特性（Attributes）
 <a class="link" href="#7.5.3.31.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c413122d-acab-4268-a9dd-8da0d1b78202"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-18bac193-f7a8-4210-8283-fbc5c749c539"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -513,7 +513,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></td>
 <td data-label="Description">
-<p>这建立了产品在空间中的对象坐标系和位置。位置可以是绝对的（相对于世界坐标系）、相对的（相对于另一个产品的对象位置）或约束的（例如，相对于网格轴或线性定位元素）。位置的类型由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 的各种子类型确定。如果存在表示，则必须提供对象位置。</p>
+<p>这建立了对象坐标系和产品在空间中的位置。位置可以是绝对的（相对于世界坐标系）、相对的（相对于另一个产品的对象位置）或约束的（例如相对于网格轴线或线性定位元素）。位置类型由_IfcObjectPlacement_的各种子类型确定。如果存在表示，则必须提供对象位置。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -525,7 +525,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></td>
 <td data-label="Description">
-<p>引用产品的表示，可以是表示 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></em>) 或作为形状表示 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em>) 的特例。产品定义形状为同一对象坐标系中的形状属性提供了多个几何表示，该坐标系由对象位置确定。</p>
+<p>引用产品的表示，可以是表示（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductRepresentation.htm">IfcProductRepresentation</a></em>）或作为形状表示的特殊情况（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em>）。产品定义形状在由对象位置定义的同一对象坐标系内提供对象形状属性的多个几何表示。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -535,7 +535,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
 <td data-label="Description">
-<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 关系，通过该关系，其他产品、过程、控制、资源或参与者（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的子类型）可以与此产品相关联。</p>
+<p>引用_IfcRelAssignsToProduct_关系，通过该关系，其他产品、流程、控制、资源或参与者（作为_IfcObjectDefinition_的子类型）可以与此产品相关。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -545,7 +545,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a> FOR RelatedProducts</td>
 <td data-label="Description">
-<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> 关系，该关系定义了其与定位元素的关系。</p>
+<p>引用_IfcRelPositions_关系，该关系定义了其与定位元素的关系。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -555,7 +555,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> FOR RelatedElements</td>
 <td data-label="Description">
-<p>引用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em>，可用于将产品与一个或多个空间结构元素相关联，除了它主要包含的那个。</p>
+<p>除了主要包含它的空间结构元素外，还可以使用引用对象化关系_IfcRelReferencedInSpatialStructure_将产品与一个或多个空间结构元素关联。</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -763,11 +763,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.5.3.31.B<a class="link" href="#-c413122d-acab-4268-a9dd-8da0d1b78202"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.5.3.31.B<a class="link" href="#-18bac193-f7a8-4210-8283-fbc5c749c539"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.5.3.31.4-Formal-propositions-"></a>
     7.5.3.31.4 形式化命题（Formal propositions）
 <a class="link" href="#7.5.3.31.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-fa994ebc-f048-410e-be33-5d5f2111f4d3"></a><table>
+<figure><a class="anchor" id="-c9c8c018-7aeb-4260-8fa9-284eeea9f1c5"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -805,7 +805,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.5.3.31.D<a class="link" href="#-fa994ebc-f048-410e-be33-5d5f2111f4d3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.5.3.31.D<a class="link" href="#-c9c8c018-7aeb-4260-8fa9-284eeea9f1c5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.5.3.31.5-"></a>
     7.5.3.31.5 属性集
 <a class="link" href="#7.5.3.31.5-"><i data-feather="link"></i></a></h2>
@@ -1153,7 +1153,7 @@
 </p><h2><a class="anchor" id="7.5.3.31.6-Concept-usage-"></a>
     7.5.3.31.6 概念用法（Concept usage）
 <a class="link" href="#7.5.3.31.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-e45aae2a-c514-42f6-a31c-718be5f3cf83"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-09d76f59-9bb7-43ec-8bac-1c9570d917d8"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -1481,73 +1481,11 @@
                 General
             </td>
 <td data-label="Description">
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
+<p>The body or solid model geometric representation of an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is typically defined using a Tessellation or Brep. Subtypes may provide recommendations on other representation types that may be used. The following attribute values for the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> holding this geometric representation shall be used:</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = Typically 'Tessellation' or 'Brep'</li>
 </ul>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/content.html">Product Geometric Representation</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
-<aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Colour/content.html">Product Geometry Colour</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Layer/content.html">Product Geometry Layer</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Relative_Positioning/content.html">Product Relative Positioning</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Span_Positioning/content.html">Product Span Positioning</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1648,7 +1586,69 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometric_Representation/content.html">Product Geometric Representation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>The geometric representation of any <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is provided by the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> allowing multiple geometric representations. It uses the <em>Product Placement</em> concept utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> to establish an object coordinate system, in which all geometric representations are founded.</p>
+<aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Colour/content.html">Product Geometry Colour</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Geometry_Layer/content.html">Product Geometry Layer</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Shape/Product_Placement/Product_Local_Placement/content.html">Product Local Placement</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Relative_Positioning/content.html">Product Relative Positioning</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>If the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> <em>Product Placement</em> is placed relative to an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> this relationship covers the information on which <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> positions the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Connectivity/Product_Span_Positioning/content.html">Product Span Positioning</a>
 </td>
 <td data-label="Usage">
                 General
@@ -2254,10 +2254,10 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
+<p>The body or solid model geometric representation of an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is typically defined using a Tessellation or Brep. Subtypes may provide recommendations on other representation types that may be used. The following attribute values for the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> holding this geometric representation shall be used:</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = Typically 'Tessellation' or 'Brep'</li>
 </ul>
 </td>
 </tr>
@@ -2390,7 +2390,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<p>The geometric representation of any <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is provided by the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> allowing multiple geometric representations. It uses the <em>Product Placement</em> concept utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> to establish an object coordinate system, in which all geometric representations are founded.</p>
 <aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
 </td>
 </tr>
@@ -2408,7 +2408,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
+<p>If the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> <em>Product Placement</em> is placed relative to an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> this relationship covers the information on which <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> positions the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2669,10 +2669,10 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
+<p>The body or solid model geometric representation of an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is typically defined using a Tessellation or Brep. Subtypes may provide recommendations on other representation types that may be used. The following attribute values for the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> holding this geometric representation shall be used:</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = Typically 'Tessellation' or 'Brep'</li>
 </ul>
 </td>
 </tr>
@@ -2795,7 +2795,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<p>The geometric representation of any <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is provided by the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> allowing multiple geometric representations. It uses the <em>Product Placement</em> concept utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> to establish an object coordinate system, in which all geometric representations are founded.</p>
 <aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
 </td>
 </tr>
@@ -2830,7 +2830,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
+<p>If the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> <em>Product Placement</em> is placed relative to an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> this relationship covers the information on which <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> positions the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -3029,10 +3029,10 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
+<p>The body or solid model geometric representation of an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is typically defined using a Tessellation or Brep. Subtypes may provide recommendations on other representation types that may be used. The following attribute values for the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> holding this geometric representation shall be used:</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = Typically 'Tessellation' or 'Brep'</li>
 </ul>
 </td>
 </tr>
@@ -3155,7 +3155,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<p>The geometric representation of any <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is provided by the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> allowing multiple geometric representations. It uses the <em>Product Placement</em> concept utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> to establish an object coordinate system, in which all geometric representations are founded.</p>
 <aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
 </td>
 </tr>
@@ -3190,7 +3190,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
+<p>If the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> <em>Product Placement</em> is placed relative to an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> this relationship covers the information on which <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> positions the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -3338,10 +3338,10 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
+<p>The body or solid model geometric representation of an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is typically defined using a Tessellation or Brep. Subtypes may provide recommendations on other representation types that may be used. The following attribute values for the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> holding this geometric representation shall be used:</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = Typically 'Tessellation' or 'Brep'</li>
 </ul>
 </td>
 </tr>
@@ -3505,7 +3505,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<p>The geometric representation of any <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is provided by the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> allowing multiple geometric representations. It uses the <em>Product Placement</em> concept utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> to establish an object coordinate system, in which all geometric representations are founded.</p>
 <aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
 </td>
 </tr>
@@ -3540,7 +3540,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
+<p>If the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> <em>Product Placement</em> is placed relative to an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> this relationship covers the information on which <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> positions the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -3685,7 +3685,7 @@
             </td>
 <td data-label="Description">
 <p>此概念可与以下组合一起应用</p>
-<figure><a class="anchor" id="-14be5146-19a2-457e-9b1c-254c9533c295"></a><table>
+<figure><a class="anchor" id="-cd199d8f-4bb9-4ecb-9ecf-f60763765df2"></a><table>
 <thead>
 <tr>
 <th>PortName</th>
@@ -3724,7 +3724,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.5.3.31.F<a class="link" href="#-14be5146-19a2-457e-9b1c-254c9533c295"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.5.3.31.F<a class="link" href="#-cd199d8f-4bb9-4ecb-9ecf-f60763765df2"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
@@ -3837,10 +3837,10 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的主体或实体模型几何表示通常使用镶嵌（Tessellation）或边界表示（Brep）定义。子类型可以提供关于其他可用表示类型的建议。持有此几何表示的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 的以下属性值应被使用：</p>
+<p>The body or solid model geometric representation of an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is typically defined using a Tessellation or Brep. Subtypes may provide recommendations on other representation types that may be used. The following attribute values for the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> holding this geometric representation shall be used:</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationIdentifier</em> = 'Body'</li>
-<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = 通常为 'Tessellation' 或 'Brep'</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.RepresentationType</em> = Typically 'Tessellation' or 'Brep'</li>
 </ul>
 </td>
 </tr>
@@ -3993,7 +3993,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的几何表示由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> 提供，允许进行多个几何表示。它使用 <em>Product Placement</em> 概念，利用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 建立对象坐标系，所有几何表示都基于该坐标系。</p>
+<p>The geometric representation of any <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> is provided by the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductDefinitionShape.htm">IfcProductDefinitionShape</a></em> allowing multiple geometric representations. It uses the <em>Product Placement</em> concept utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> to establish an object coordinate system, in which all geometric representations are founded.</p>
 <aside class="aside-note"><mark>注释</mark> A detailed specification of how to apply the local placement and which shape representations are applicable is provided at the level of subtypes of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and is further determined by the model view definition and implementer agreements.</aside>
 </td>
 </tr>
@@ -4028,7 +4028,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>如果 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>Product Placement</em> 相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 定位，则此关系涵盖了定位 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> 的信息。</p>
+<p>If the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> <em>Product Placement</em> is placed relative to an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> this relationship covers the information on which <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">IfcPositioningElement</a></em> positions the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em>.</p>
 </td>
 </tr>
 <tr>
@@ -4083,7 +4083,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.5.3.31.E<a class="link" href="#-e45aae2a-c514-42f6-a31c-718be5f3cf83"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.5.3.31.E<a class="link" href="#-09d76f59-9bb7-43ec-8bac-1c9570d917d8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.5.3.31.7-Formal-representation-"></a>
     7.5.3.31.7 形式化表示（Formal representation）
 <a class="link" href="#7.5.3.31.7-Formal-representation-"><i data-feather="link"></i></a></h2>

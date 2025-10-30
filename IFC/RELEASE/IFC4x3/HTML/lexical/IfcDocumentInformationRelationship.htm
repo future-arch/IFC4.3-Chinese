@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.6.3.4 IfcDocumentInformationRelationship - IFC 4.3.2 Documentation</title>
+<title>8.6.3.4 IfcDocumentInformationRelationship（文档信息关系） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,14 +189,14 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.6.3.4 IfcDocumentInformationRelationship</h1>
+<h1>8.6.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentInformationRelationship.htm">IfcDocumentInformationRelationship</a>（文档信息关系）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.6.3.4.1-Semantic-definition-"></a>
     8.6.3.4.1 语义定义（Semantic definition）
 <a class="link" href="#8.6.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentInformationRelationship.htm">IfcDocumentInformationRelationship</a></em> 是一个关系实体，它使文档能够引用其他文档。它用于描述一种文档可能引用一个或多个其他子文档的关系，或者一种文档被用作另一种文档的替代（但原始文档和替代文档都需要保留）的关系。</p>
-<!-- end of short definition -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Subtyped from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceLevelRelationship.htm">IfcResourceLevelRelationship</a></em>, order of attributes changed.</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentInformationRelationship.htm">IfcDocumentInformationRelationship</a></em> 是一种关系实体，使文档能够引用其他文档。它用于描述以下关系：一个文档可能引用一个或多个其他子文档，或者某个文档被用作另一个文档的替代（但需要同时保留原始文档和替代文档）。</p>
+<!-- 短定义结束 -->
+<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新增实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceLevelRelationship.htm">IfcResourceLevelRelationship</a></em> 子类型化，属性顺序已更改。</aside>
 <h2><a class="anchor" id="8.6.3.4.2-Entity-inheritance-"></a>
     8.6.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.6.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -226,7 +226,7 @@
     8.6.3.4.3 特性（Attributes）
 <a class="link" href="#8.6.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-fcb0b572-6380-48b9-81c0-d6885faf1735"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d235f5e8-1a86-42fa-a979-41e084153184"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -248,30 +248,6 @@
 <small>(2)</small>
 </td>
 </tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">1</td>
-<td data-label="Name">
-                
-                Name
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>用于标识或限定关系的名称。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Description
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
-<td data-label="Description">
-<p>可能适用于关系的附加信息的描述。</p>
-</td>
-</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -290,44 +266,8 @@
 <small>(3)</small>
 </td>
 </tr>
-<tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                RelatingDocument
-                
-            </td>
-<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentInformation.htm">IfcDocumentInformation</a></td>
-<td data-label="Description">
-<p>在关系中充当父文档、引用文档或原始文档的文档。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                RelatedDocuments
-                
-            </td>
-<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentInformation.htm">IfcDocumentInformation</a></td>
-<td data-label="Description">
-<p>在关系中充当子文档、被引用文档或替代文档的文档。</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">5</td>
-<td data-label="Name">
-                
-                RelationshipType
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
-<td data-label="Description">
-<p>描述文档之间的关系类型。这可能是子文档、替代等。解释必须在应用程序上下文中建立。</p>
-</td>
-</tr>
 </tbody>
-</table><figcaption>表 8.6.3.4.A<a class="link" href="#-fcb0b572-6380-48b9-81c0-d6885faf1735"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.6.3.4.A<a class="link" href="#-d235f5e8-1a86-42fa-a979-41e084153184"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.6.3.4.4-Formal-representation-"></a>
     8.6.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.6.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>

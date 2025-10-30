@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.1 IfcAdvancedFace - IFC 4.3.2 Documentation</title>
+<title>8.20.3.1 IfcAdvancedFace（高级面） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -189,28 +189,28 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.20.3.1 IfcAdvancedFace</h1>
+<h1>8.20.3.1 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a>（高级面）</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.20.3.1.1-Semantic-definition-"></a>
     8.20.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.20.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>高级面是面曲面的一个特例，它必须满足使用特定拓扑和几何表示项来定义面、边和顶点的要求。</p>
-<!-- end of short definition -->
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em> 限制为：</p>
+<p>高级面是一种面曲面的特化形式，必须满足在定义面、边和顶点时使用特定拓扑和几何表示项的要求。</p>
+<!-- 简短定义结束 -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm">IfcAdvancedFace</a></em> 的限制条件包括：</p>
 <ul>
-<li>具有类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm">IfcBSplineSurface</a></em> 的面曲面几何体，</li>
-<li>除封闭曲面外，有一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em> 作为面的边界，</li>
-<li>所有面都必须由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeLoop.htm">IfcEdgeLoop</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexLoop.htm">IfcVertexLoop</a></em> 边界约束，</li>
-<li>所有边都必须具有边曲线几何体，</li>
-<li>边曲线几何体限制为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineCurve.htm">IfcBSplineCurve</a></em>。</li>
+<li>必须具有类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm">IfcBSplineSurface</a></em> 的面曲面几何</li>
+<li>必须具有一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em> 作为面的边界（闭合曲面除外）</li>
+<li>所有面必须由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeLoop.htm">IfcEdgeLoop</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexLoop.htm">IfcVertexLoop</a></em> 界定</li>
+<li>所有边必须具有边曲线几何</li>
+<li>边曲线几何必须限制为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineCurve.htm">IfcBSplineCurve</a></em></li>
 </ul>
-<p>在封闭曲面（如圆柱面或球面）的情况下：</p>
+<p>对于具有周期性曲面的闭合面（如圆柱面或球面），适用以下规则：</p>
 <ul>
-<li>封闭曲面的边，对于圆柱面，上盖和下盖会引用同一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em> 实例两次，</li>
-<li>不提供 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em>，或者 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em> 是使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSeamCurve.htm">IfcSeamCurve</a></em> 构建的，该曲线位于封闭曲面的周期性末端，对于圆柱面，位于0度/360度。</li>
+<li>闭合曲面的边（在圆柱面情况下为上盖和下盖）两次引用同一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVertexPoint.htm">IfcVertexPoint</a></em> 实例</li>
+<li>不提供 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em>，或者 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceOuterBound.htm">IfcFaceOuterBound</a></em> 是在底层闭合曲面的周期性末端使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSeamCurve.htm">IfcSeamCurve</a></em> 构造的（在圆柱面情况下为 0°/360° 处）</li>
 </ul>
-<figure><a class="anchor" id="-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm'&gt;IfcCylindricalSurface&lt;/a&gt;-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm'&gt;IfcAdvancedFace&lt;/a&gt;-"></a><img alt="cylindrical surface" src="../figures/ifcadvancedface_01.png" title="图 8.20.3.1.A — 将 _IfcCylindricalSurface_ 用作 _IfcAdvancedFace_ 的底层曲面"/><figcaption>图 8.20.3.1.A — 将 _IfcCylindricalSurface_ 用作 _IfcAdvancedFace_ 的底层曲面<a class="link" href="#-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm'&gt;IfcCylindricalSurface&lt;/a&gt;-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm'&gt;IfcAdvancedFace&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>advanced_face</strong> defined in ISO 10303-511.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4</aside>
+<figure><a class="anchor" id="-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm'&gt;IfcCylindricalSurface&lt;/a&gt;-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm'&gt;IfcAdvancedFace&lt;/a&gt;-"></a><img alt="圆柱面" src="../figures/ifcadvancedface_01.png" title="图 8.20.3.1.A — 使用 _IfcCylindricalSurface_ 作为 _IfcAdvancedFace_ 的底层曲面"/><figcaption>图 8.20.3.1.A — 使用 _IfcCylindricalSurface_ 作为 _IfcAdvancedFace_ 的底层曲面<a class="link" href="#-1-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCylindricalSurface.htm'&gt;IfcCylindricalSurface&lt;/a&gt;-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAdvancedFace.htm'&gt;IfcAdvancedFace&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-511 中定义的 <strong>advanced_face</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体</aside>
 <h2><a class="anchor" id="8.20.3.1.2-Entity-inheritance-"></a>
     8.20.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.20.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -259,7 +259,7 @@
     8.20.3.1.3 特性（Attributes）
 <a class="link" href="#8.20.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-b70772ed-e9b5-4a29-b9ed-8e35588e87c8"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6b2bb5e4-7b09-482b-9b1a-cd7776256e51"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -288,8 +288,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
 <td data-label="Description">
-<p>表示项到单个或多个图层的分配。<em>LayerAssignments</em> 可以覆盖它在 <em>Items</em> 列表中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 中使用的 <em>LayerAssignments</em>。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -299,8 +299,8 @@
 </td>
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
 <td data-label="Description">
-<p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 的引用，该样式项为表示提供表示信息，例如，为几何曲线提供颜色和厚度的曲线样式。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The inverse attribute <em>StyledByItem</em> has been added.</aside>
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -318,7 +318,7 @@
             </td>
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceBound.htm">IfcFaceBound</a></td>
 <td data-label="Description">
-<p>Boundaries of the face.</p>
+<p>面的边界。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -360,7 +360,7 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a></td>
 <td data-label="Description">
-<p>The surface which defines the internal shape of the face. This surface may be unbounded. The domain of the face is defined by this surface and the bounding loops in the inherited attribute SELF\FaceBounds.</p>
+<p>定义面内部形状的曲面。此曲面可能是无界的。面的定义域由此曲面和继承属性 SELF\FaceBounds 中的边界环定义。</p>
 </td>
 </tr>
 <tr>
@@ -372,15 +372,15 @@
             </td>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td data-label="Description">
-<p>This flag indicates whether the sense of the surface normal agrees with (TRUE), or opposes (FALSE), the sense of the topological normal to the face.</p>
+<p>此标志指示曲面法线的方向是与面的拓扑法线方向一致（TRUE）还是相反（FALSE）。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.20.3.1.B<a class="link" href="#-b70772ed-e9b5-4a29-b9ed-8e35588e87c8"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.1.B<a class="link" href="#-6b2bb5e4-7b09-482b-9b1a-cd7776256e51"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.1.4-Formal-propositions-"></a>
     8.20.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#8.20.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c2de01de-4537-4566-8220-307a932438ce"></a><table>
+<figure><a class="anchor" id="-cb3e7bff-d1d1-415f-a903-59cae4802a4c"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -391,7 +391,7 @@
 <tr>
 <td>ApplicableEdgeCurves</td>
 <td>
-<p>用于定义边几何体的曲线类型应限制为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineCurve.htm">IfcBSplineCurve</a></em>。</p>
+<p>用于定义边几何的曲线类型应限制为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm">IfcLine</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConic.htm">IfcConic</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineCurve.htm">IfcBSplineCurve</a></em>。</p>
 </td>
 </tr>
 <tr>
@@ -412,7 +412,7 @@
 <tr>
 <td>ApplicableSurface</td>
 <td>
-<p>用于定义面的几何体应受到限制。面几何体应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineCurve.htm">IfcBSplineCurve</a></em>。</p>
+<p>面定义中使用的几何应受到限制。面几何应为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementarySurface.htm">IfcElementarySurface</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBSplineSurface.htm">IfcBSplineSurface</a></em>。</p>
 </td>
 </tr>
 <tr>
@@ -427,7 +427,7 @@ TYPEOF(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceSurface.htm">IfcFac
 <tr>
 <td>RequiresEdgeCurve</td>
 <td>
-<p>面的所有边界边的几何体必须完全定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em>。</p>
+<p>面所有边界边的几何应完全定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em>。</p>
 </td>
 </tr>
 <tr>
@@ -443,7 +443,7 @@ TYPEOF(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceSurface.htm">IfcFac
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.20.3.1.C<a class="link" href="#-c2de01de-4537-4566-8220-307a932438ce"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.1.C<a class="link" href="#-cb3e7bff-d1d1-415f-a903-59cae4802a4c"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.1.5-Formal-representation-"></a>
     8.20.3.1.5 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.1.5-Formal-representation-"><i data-feather="link"></i></a></h2>
