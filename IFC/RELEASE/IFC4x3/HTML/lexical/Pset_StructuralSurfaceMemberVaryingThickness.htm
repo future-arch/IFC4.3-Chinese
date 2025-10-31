@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,14 +163,14 @@
 <h2><a class="anchor" id="7.10.4.1.1-Semantic-definition-"></a>
     7.10.4.1.1 语义定义（Semantic definition）
 <a class="link" href="#7.10.4.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>变厚度结构表面构件（结构分析项）的厚度参数，特别是线性变化厚度的情况。厚度通过三个点进行插值/外推计算得出。这些点的位置可以按表面构件的局部x、y坐标给出，也可以按全局X、Y、Z坐标给出。无论采用哪种方式，这些点都必须位于表面构件面域内部或边界上，且不得位于同一直线上。在同一属性集实例中不得混用局部坐标和全局坐标。</p>
-<!-- 简短定义结束 -->
+<p>具有可变厚度的表面构件（结构分析项）的厚度参数，特别是具有线性可变厚度的。厚度通过三个点进行插值/外插。这些点的位置可以是在表面构件的局部 x,y 坐标系中，也可以是在全局 X,Y,Z 坐标系中。无论哪种方式，这些点都必须位于表面构件的面内或边界上，并且不能位于同一条直线上。在同一属性集实例中，不得混合使用局部和全局坐标。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="7.10.4.1.2-"></a>
     7.10.4.1.2 适用实体
 <a class="link" href="#7.10.4.1.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_OCCURRENCEDRIVEN</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集只能分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 的子类型。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralSurfaceMemberVarying.htm">IfcStructuralSurfaceMemberVarying</a></li>
@@ -178,7 +178,7 @@
 <h2><a class="anchor" id="7.10.4.1.3-"></a>
     7.10.4.1.3 属性
 <a class="link" href="#7.10.4.1.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-1f048033-d6e8-4630-9426-c736e9136c6c"></a><table>
+<figure><a class="anchor" id="-00664c44-41ac-4f17-ac97-30a1f11fbac2"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -194,7 +194,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>厚度变化表面构件的第一个厚度参数</p>
+<p>变厚度表面构件的第一个厚度参数</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Thickness1.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -203,7 +203,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>给出 Thickness1 的点的局部 x、y 坐标</p>
+<p>给出厚度1的点的局部x,y坐标</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Location1Local.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -212,7 +212,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>表示给出 Thickness1 的点所在的全局 X、Y、Z 坐标</p>
+<p>给出厚度1的点的全局X,Y,Z坐标</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Location1Global.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -221,7 +221,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>厚度变化的表面构件的第二个厚度参数</p>
+<p>变厚度表面构件的第二个厚度参数</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Thickness2.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -230,7 +230,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>给出 Thickness2 的点的局部 x、y 坐标</p>
+<p>给出厚度2的点的局部x,y坐标</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Location2Local.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -239,7 +239,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>给出 Thickness2 的点的全局 X,Y,Z 坐标</p>
+<p>给出厚度2的点的全局X,Y,Z坐标</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Location2Global.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -248,8 +248,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<h1>厚度3</h1>
-<p>厚度变化表面构件的第三个厚度参数</p>
+<p>变厚度表面构件的第三个厚度参数</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Thickness3.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -258,7 +257,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>给出Thickness3的点的局部x、y坐标</p>
+<p>给出厚度3的点的局部x,y坐标</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Location3Local.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -267,12 +266,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>给出 Thickness3 的点的全局 X、Y、Z 坐标</p>
+<p>给出厚度3的点的全局X,Y,Z坐标</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Location3Global.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.4.1.A<a class="link" href="#-1f048033-d6e8-4630-9426-c736e9136c6c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.4.1.A<a class="link" href="#-00664c44-41ac-4f17-ac97-30a1f11fbac2"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
