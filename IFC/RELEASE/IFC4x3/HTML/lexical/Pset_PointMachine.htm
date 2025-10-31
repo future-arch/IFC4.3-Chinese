@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,14 +163,14 @@
 <h2><a class="anchor" id="7.8.4.103.1-Semantic-definition-"></a>
     7.8.4.103.1 语义定义（Semantic definition）
 <a class="link" href="#7.8.4.103.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>用于铁路的转辙机属性。该属性集可用于预定义类型设置为ELECTRICACTUATOR、HYDRAULICACTUATOR、HANDOPERATEDACTUATOR或PNEUMATICACTUATOR的 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActuator.htm">IfcActuator</a>，表明此类执行器是一种能够转换和锁闭道岔的转辙机。</p>
+<p>铁路使用的道岔机的特性。此属性集可由预定义类型为ELECTRICACTUATOR、HYDRAULICACTUATOR、HANDOPERATEDACTUATOR或PNEUMATICACTUATOR的IfcActuator使用，表明该执行器是道岔机，可以切换和锁定轨道道岔。</p>
 <!-- end of short definition -->
 <h2><a class="anchor" id="7.8.4.103.2-"></a>
     7.8.4.103.2 适用实体
 <a class="link" href="#7.8.4.103.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActuator.htm">IfcActuator</a>/ELECTRICACTUATOR</li>
@@ -185,7 +185,7 @@
 <h2><a class="anchor" id="7.8.4.103.3-"></a>
     7.8.4.103.3 属性
 <a class="link" href="#7.8.4.103.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b00807c8-0f7c-4a99-abf6-36d36893bb23"></a><table>
+<figure><a class="anchor" id="-ff6a2b06-e19d-4cc7-a5da-d45bf77bf52b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -201,7 +201,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>拉动道岔尖轨的杆件的移动距离。</p>
+<p>拉动道岔尖轨的杆的移动距离。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ActionBarMovementLength.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -210,7 +210,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcForceMeasure.htm">IfcForceMeasure</a></td>
 <td>
-<p>道岔转换中点式转辙机的牵引力。</p>
+<p>道岔转换中转辙机的牵引力。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TractionForce.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -219,7 +219,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeMeasure.htm">IfcTimeMeasure</a></td>
 <td>
-<p>转换完成时间。</p>
+<p>道岔转换完成时间。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ConversionTime.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -228,7 +228,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcForceMeasure.htm">IfcForceMeasure</a></td>
 <td>
-<p>道岔电机锁紧力。</p>
+<p>转辙机电机的锁闭力。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/LockingForce.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -237,7 +237,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示锁定装置位于转辙机内部（TRUE）还是外部（FALSE）。</p>
+<p>指示锁定装置在转辙机内部(TRUE)还是外部(FALSE)。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/HasLockInside.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -255,7 +255,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeMeasure.htm">IfcTimeMeasure</a></td>
 <td>
-<p>互锁转为失控状态前，出动动作的最长持续时间。</p>
+<p>联锁转为失控状态前道岔运动的最长持续时间。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/MaximumOperatingTime.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -273,12 +273,13 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
+<p>Current（电流）</p>
 <p>实际电流和可操作范围。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Current.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.8.4.103.A<a class="link" href="#-b00807c8-0f7c-4a99-abf6-36d36893bb23"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.8.4.103.A<a class="link" href="#-ff6a2b06-e19d-4cc7-a5da-d45bf77bf52b"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
