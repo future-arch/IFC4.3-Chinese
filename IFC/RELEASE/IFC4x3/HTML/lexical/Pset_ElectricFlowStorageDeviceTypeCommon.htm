@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,15 +163,15 @@
 <h2><a class="anchor" id="7.4.4.32.1-Semantic-definition-"></a>
     7.4.4.32.1 语义定义（Semantic definition）
 <a class="link" href="#7.4.4.32.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>作为配电系统供电源的电气设备实例所关联的供电特性</p>
-<!-- 简短定义结束 -->
-<p>注：此属性集内的属性应仅在供电情况下使用。当供电未接入电气系统或临时断开时，本属性集、所含属性及其数值均不适用。本属性集内所有属性均视为代表稳态工况。</p>
+<p>作为向电气配电系统供电的电气设备实例相关的供电特性。</p>
+<!-- end of short definition -->
+<p>NOTE: 此属性集中的属性仅应在应用电气供电的情况下使用。该属性集、其中包含的属性及其值不适用于未向电气系统供电或暂时断开连接的情况。此属性集中的所有属性均表示稳态情况。</p>
 <h2><a class="anchor" id="7.4.4.32.2-"></a>
     7.4.4.32.2 适用实体
 <a class="link" href="#7.4.4.32.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricFlowStorageDevice.htm">IfcElectricFlowStorageDevice</a></li>
@@ -180,7 +180,7 @@
 <h2><a class="anchor" id="7.4.4.32.3-"></a>
     7.4.4.32.3 属性
 <a class="link" href="#7.4.4.32.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-1632d208-fe64-4318-962b-a61d9b3d09dc"></a><table>
+<figure><a class="anchor" id="-60e0b591-149f-446c-ae4e-bef6d944e3f3"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -196,8 +196,10 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td>
-<p>此项目中指定类型的基准ID（例如类型"A-1"），也称为"构造类型"。如果软件不支持对象类型且未使用已认可分类系统的分类基准，则应作为"对象类型"名称的替代方案提供。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> Reference属性已被弃用，不应再使用，请改用相关类型上的_Name_属性。</aside>
+<p>此项目中此指定类型的参考ID（例如类型'A-1'），也称为"构造类型"。如果软件不支持对象类型且未使用公认分类系统的分类参考，则应作为"对象类型"名称的替代提供。</p>
+<blockquote>
+<p>IFC4.3.0.0 弃用说明 Reference属性已弃用，不应再使用，请改用相关类型上的_Name_属性。</p>
+</blockquote>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Reference.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -206,7 +208,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ElementStatus.htm">PEnum_ElementStatus</a></td>
 <td>
-<p>构件的状态，主要用于改造或翻新项目。状态可指定为"New"（新建）- 设计为新增构件，"Existing"（现有）- 构件已存在且保留，"Demolish"（拆除）- 构件已存在但将被拆除，"Temporary"（临时）- 构件仅临时存在（如临时支撑结构）。</p>
+<p>Status（状态）</p>
+<p>构件的状态，主要用于翻新或改造项目。状态可指定为“新建”（New）- 作为新增设计的构件，“现有”（Existing）- 构件存在并保留，“拆除”（Demolish）- 构件已存在但将被拆除，“临时”（Temporary）- 构件仅临时存在（如临时支撑结构）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Status.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -215,7 +218,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricVoltageMeasure.htm">IfcElectricVoltageMeasure</a></td>
 <td>
-<p>额定供电电压。</p>
+<p>电源的标称电压。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NominalSupplyVoltage.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -224,7 +227,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricVoltageMeasure.htm">IfcElectricVoltageMeasure</a></td>
 <td>
-<p>允许的供电电压最大和最小值，例如对于额定电压为400V的情况，可以应用380V/440V的边界值。</p>
+<p>电源允许的最大和最小电压，例如对于400V标称电压，可应用380V/440V的边界。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NominalSupplyVoltageOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -233,7 +236,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
 <td>
-<p>额定频率是指电源的额定频率。</p>
+<p>电源的标称频率。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NominalFrequency.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -242,7 +245,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ConductorFunctionEnum.htm">PEnum_ConductorFunctionEnum</a></td>
 <td>
-<p>连接导体功能是指负载所连接的导体的功能。</p>
+<p>负载所连接导体的功能。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ConnectedConductorFunction.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -251,7 +254,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>在供电点提供的最大三极短路电流。</p>
+<p>供电点提供的最大三极短路电流。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit3PoleMaximumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -260,7 +263,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>在供电点提供的最大三极短路电流的功率因数。</p>
+<p>供电点提供的最大三极短路电流功率因数。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit3PolePowerFactorMaximumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -269,7 +272,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>在供电点提供的最小双极短路电流。</p>
+<p>供电点提供的最小双极短路电流。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit2PoleMinimumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -278,7 +281,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>在供电点提供的最小双极短路电流的功率因数。</p>
+<p>供电点提供的最小双极短路电流功率因数。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit2PolePowerFactorMinimumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -287,7 +290,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>在供电点提供的最大单极短路电流，即单相与中性线之间的故障电流。</p>
+<p>供电点提供的最大单极短路电流，即1相与N之间的故障。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit1PoleMaximumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -296,7 +299,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>在供电点提供的最大单极短路电流的功率因数，即单相与中性线之间的故障。</p>
+<p>供电点提供的最大单极短路电流功率因数，即单相与中性线之间的故障。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit1PolePowerFactorMaximumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -305,7 +308,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>在供电点提供的最小单极短路电流，即单相与中性线之间的故障。</p>
+<p>供电点提供的最小单极短路电流，即1相与N之间的故障。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit1PoleMinimumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -314,7 +317,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>在供电点提供的最小单极短路电流的功率因数，即单相与中性线之间的故障。</p>
+<p>供电点提供的最小单极短路电流功率因数，即单相与中性线之间的故障。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuit1PolePowerFactorMinimumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -323,7 +326,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>供电点提供的最大单极接地故障电流，即单相与PE/PEN之间的故障。</p>
+<p>供电点提供的最大单极接地故障电流，即1相与PE/PEN之间的故障。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/EarthFault1PoleMaximumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -341,7 +344,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>在供电点提供的最小单极接地故障电流，即单相与PE/PEN之间的故障。</p>
+<p>供电点提供的最小单极接地故障电流，即1相与PE/PEN之间的故障。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/EarthFault1PoleMinimumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -350,7 +353,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td>
-<p>在供电点提供的最小单极接地故障电流的功率因数，即单相与PE/PEN之间的故障。</p>
+<p>供电点提供的最小单极接地故障电流的功率因数，即单相与PE/PEN之间的故障。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/EarthFault1PolePowerFactorMinimumState.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -359,7 +362,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricVoltageMeasure.htm">IfcElectricVoltageMeasure</a></td>
 <td>
-<p>绝缘体可正常工作的最大电压</p>
+<p>绝缘能正常工作的最大电压。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/MaximumInsulatedVoltage.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -382,7 +385,7 @@
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/PowerCapacity.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.4.32.A<a class="link" href="#-1632d208-fe64-4318-962b-a61d9b3d09dc"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.4.32.A<a class="link" href="#-60e0b591-149f-446c-ae4e-bef6d944e3f3"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
