@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,15 +163,15 @@
 <h2><a class="anchor" id="7.4.4.51.1-Semantic-definition-"></a>
     7.4.4.51.1 语义定义（Semantic definition）
 <a class="link" href="#7.4.4.51.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>脱扣功能适用于电子脱扣单元（即已定义电子脱扣类型属性集的脱扣单元）。该功能不适用于热磁脱扣单元、热磁复合脱扣单元或剩余电流保护单元。</p>
-<!-- 简短定义结束 -->
-<p>本属性集表征电子保护装置的瞬时时间保护功能（I曲线）。</p>
+<p>脱扣函数应用于电子脱扣单元（即具有已定义的电子脱扣单元类型属性集的脱扣单元）。它们不应用于热脱扣单元、热磁脱扣单元或 RCD 脱扣单元。</p>
+<!-- end of short definition -->
+<p>此属性集表示电子保护装置的瞬时延时保护（I 曲线）。</p>
 <h2><a class="anchor" id="7.4.4.51.2-"></a>
     7.4.4.51.2 适用实体
 <a class="link" href="#7.4.4.51.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProtectiveDeviceTrippingUnit.htm">IfcProtectiveDeviceTrippingUnit</a></li>
@@ -180,7 +180,7 @@
 <h2><a class="anchor" id="7.4.4.51.3-"></a>
     7.4.4.51.3 属性
 <a class="link" href="#7.4.4.51.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b1c41d4e-926a-42ea-9693-494ff2ff6179"></a><table>
+<figure><a class="anchor" id="-c734beec-0956-4c7a-9e5a-465a2e8e6050"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -205,7 +205,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示短路保护的脱扣电流是否与额定电流乘以保护装置长延时保护部分的电流调节（如有）的实际设定值相关。</p>
+<p>指示短路保护的脱扣电流是否与标称电流乘以保护装置长时保护部分的电流调整（如有）的实际设定值相关。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NominalCurrentAdjusted.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -214,7 +214,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>S 功能初始跳闸的释放电流（单位：[x In]）。</p>
+<p>S功能初始脱扣的脱扣电流，单位为[x In]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ReleaseCurrent.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -223,7 +223,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeMeasure.htm">IfcTimeMeasure</a></td>
 <td>
-<p>相关部件初始脱扣的释放时间，单位为[s]。该时间表示当电流低于指定释放电流时，脱扣时间将长于指定的释放时间。该值以平均值形式给出。</p>
+<p>相关部件初始脱扣的脱扣时间，单位为[s]。该时间表示对于低于指示脱扣电流的电流，脱扣时间将长于指示的脱扣时间。该值以平均值给出。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ReleaseTime.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -232,7 +232,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>电流/时间-电流曲线的容差，以[%]表示。</p>
+<p>时间/电流曲线中电流的容差，单位为[%]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CurrentTolerance1.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -241,7 +241,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeMeasure.htm">IfcTimeMeasure</a></td>
 <td>
-<p>限制应用电流容差限值1的时间限值（单位：[s]），如果存在该限值。如果该值设置为0，则电流容差限值1的值在整个时间/电流曲线上均有效。</p>
+<p>限制CurrentTolerance1适用性的时间限值，单位为[s]（如存在）。若该值设为0，则CurrentTolerance1的值在整个时间/电流曲线中均有效。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CurrentToleranceLimit1.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -250,7 +250,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>适用于时间超过CurrentToleranceLimit1的时程电流曲线的电流容差，以[%]表示。</p>
+<p>时间/电流曲线中电流的容差，单位为[%]，适用于超过CurrentToleranceLimit1的时间段。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/CurrentTolerance2.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -259,7 +259,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示 <em>CurrentTolerance1</em> 的值是否仅作为正容差提供。若未提供，则该值作为正负容差给出。</p>
+<p>指示 CurrentTolerance1 的值是否仅作为正公差提供。如果不是，则该值作为正负公差提供。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsCurrentTolerancePositiveOnly.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -268,7 +268,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>时间/电流曲线的时间公差，以[%]表示。</p>
+<p>时间/电流曲线中时间容差，单位为[%]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TimeTolerance1.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -277,7 +277,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>当前限制[x In]中限制应用时间公差限值1的限值（如果存在）。如果该值设置为0，则时间公差限值1的值对整个时间/电流曲线有效。</p>
+<p>电流限值，单位为[x In]，用于限制TimeTolerance1的适用范围（如果存在）。如果该值设置为0，则TimeTolerance1的值对整个时间/电流曲线有效。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TimeToleranceLimit1.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -286,7 +286,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>电流高于时间公差限制1时，时间/电流曲线的时间公差，以[%]表示。</p>
+<p>时间/电流曲线中时间容差，单位为[%]，适用于高于TimeToleranceLimit1的电流。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TimeTolerance2.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -295,7 +295,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示 <em>TimeTolerance1</em> 的值是否仅作为正容差提供。若未设置，该值将作为正负容差提供。</p>
+<p>指示TimeTolerance1的值是否仅作为正公差提供，或者不是。如果不是，则该值被视为正负公差。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsTimeTolerancePositiveOnly.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -304,7 +304,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>提供与保护装置Ics分断能力相关的可用电流调整的最大设定值，该保护装置的实际脱扣单元是其中的一部分。除非瞬时时间保护被断言，否则该值不会被断言。</p>
+<p>提供相对于实际脱扣单元所属保护设备的Ics分断能力的可用电流调整的最大设定值。除非瞬时时间保护被断言，否则该值不被断言。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/MaxAdjustmentX_ICS.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -313,12 +313,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示当S功能开启时，I功能是否自动关闭。</p>
+<p>指示当 S 功能开启时，I 功能是否自动关闭。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsOffWhenSFunctionOn.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.4.51.A<a class="link" href="#-b1c41d4e-926a-42ea-9693-494ff2ff6179"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.4.51.A<a class="link" href="#-c734beec-0956-4c7a-9e5a-465a2e8e6050"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
