@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,14 +163,14 @@
 <h2><a class="anchor" id="7.5.5.23.1-Semantic-definition-"></a>
     7.5.5.23.1 语义定义（Semantic definition）
 <a class="link" href="#7.5.5.23.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>定义所有类型和实例的管道配件所通用的基准量。</p>
+<p>所有类型和实例管道配件定义共有的基础特性。</p>
 <!-- end of short definition -->
 <h2><a class="anchor" id="7.5.5.23.2-"></a>
     7.5.5.23.2 适用实体
 <a class="link" href="#7.5.5.23.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>QTO_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的构件数量可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的构件数量覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPipeFitting.htm">IfcPipeFitting</a></li>
@@ -179,7 +179,7 @@
 <h2><a class="anchor" id="7.5.5.23.3-"></a>
     7.5.5.23.3 属性
 <a class="link" href="#7.5.5.23.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c315a286-7d33-4e8c-ac5d-d02b58579c72"></a><table>
+<figure><a class="anchor" id="-d2690a9b-9319-432c-bce9-45077abd678d"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -193,7 +193,7 @@
 <td>Length</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityLength.htm">IfcQuantityLength</a></td>
 <td>
-<p>对象的长度。</p><p>按横截面中点计算，等于从端口入口到端口出口沿流动路径的距离。对于连接配件，表示最长流动路径的长度。</p>
+<p>对象的长度。</p><p>在横截面中点计算，等于从端口入口到端口出口的沿流动路径的距离。对于接头配件，它表示最长流动路径的长度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Length.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -201,7 +201,7 @@
 <td>GrossCrossSectionArea</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>横截面积。</p><p>包括管道配件本身及内部流动空间。</p>
+<p>横截面面积。</p><p>包括管道配件本身和内部流动空间。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/GrossCrossSectionArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -209,7 +209,7 @@
 <td>NetCrossSectionArea</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>对象的净截面面积。</p><p>包括管道配件，不包括内部流动空间。</p>
+<p>对象的横截面积。</p><p>包括管道配件，排除内部流动空间。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NetCrossSectionArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -217,7 +217,7 @@
 <td>OuterSurfaceArea</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>物体的总表面积（不考虑端盖面积），在拉伸情况下通常生成为周长 * 长度。</p>
+<p>对象的表面总面积（不考虑端盖面积），在挤压情况下通常生成为周长 * 长度。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/OuterSurfaceArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -225,7 +225,7 @@
 <td>GrossWeight</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityWeight.htm">IfcQuantityWeight</a></td>
 <td>
-<p>物体的总重量，不包括任何附加部件，且不考虑可能的加工特征（如切口等）或开口和凹槽。</p><p>不包括内部流体。</p>
+<p>对象的总毛重，不包括任何附加部件，也不考虑可能的加工特征（切口等）或开口和凹槽。</p><p>不包括内部流体。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/GrossWeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -233,12 +233,12 @@
 <td>NetWeight</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityWeight.htm">IfcQuantityWeight</a></td>
 <td>
-<p>物体的总净重，不包括附加部件，并考虑可能的加工特征（切口等）或开口和凹槽。</p><p>管道配件的重量，包括设计所含流体。</p>
+<p>不含附加部件的对象净重，考虑可能的加工特征（切口等）或开口和凹槽。</p><p>管道配件的重量，包括设计时包含的流体。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NetWeight.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.5.5.23.A<a class="link" href="#-c315a286-7d33-4e8c-ac5d-d02b58579c72"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.5.5.23.A<a class="link" href="#-d2690a9b-9319-432c-bce9-45077abd678d"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
