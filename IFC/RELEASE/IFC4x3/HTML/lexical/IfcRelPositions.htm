@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.55 IfcRelPositions - IFC 4.3.2 Documentation</title>
+<title>5.4.3.55 IfcRelPositions（关系定位） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -138,7 +138,7 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.4.3.55 IfcRelPositions</h1>
+<h1>5.4.3.55 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a>（关系定位）</h1>
 <div class="mvd" title="Included in Product Relative Positioning, Product Span Positioning">AbV ⓘ</div>
 <h2><a class="anchor" id="5.4.3.55.1-Semantic-definition-"></a>
     5.4.3.55.1 语义定义（Semantic definition）
@@ -146,7 +146,7 @@
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> 关系告知产品与定位元素之间的定位依赖关系。</p>
 <!-- end of short definition -->
 <p>此关系不影响产品的几何表示或其几何放置，这些是通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 的子类型完成的。</p>
-<aside class="aside-example"><mark>示例</mark> To geometrically place an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a></em> along an alignment curve, the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a>.ObjectPlacement</em> is used. To inform that an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a></em> is positioned along an alignment curve, maybe referring to a certain stationing value, <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> is used. This is <strong>independent from the actual geometrical placement</strong> of the referent. For this reason, the semantics of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> shall not be used to calculate the geometry of the placement, but just to inform on the position of the referent on the alignment curve.</aside>
+<aside class="aside-example"><mark>示例</mark> 要沿对齐曲线在几何上放置一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a></em>，则使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a>.ObjectPlacement</em>。要告知一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">IfcReferent</a></em> 沿对齐曲线放置，可能引用某个桩号值，则使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em>。这<strong>独立于参照物的实际几何放置</strong>。因此，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">IfcRelPositions</a></em> 的语义不应用于计算放置的几何体，而仅用于告知参照物在对齐曲线上的位置。</aside>
 <h2><a class="anchor" id="5.4.3.55.2-Entity-inheritance-"></a>
     5.4.3.55.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.55.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -202,7 +202,7 @@
     5.4.3.55.3 特性（Attributes）
 <a class="link" href="#5.4.3.55.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ad6c0e76-7755-4ec5-914a-7e1556532c7f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-bdf52360-13cd-4859-9f4f-1ed5bd3d8e3a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -246,7 +246,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该特性已更改为 OPTIONAL。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -316,11 +316,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.55.A<a class="link" href="#-ad6c0e76-7755-4ec5-914a-7e1556532c7f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.55.A<a class="link" href="#-bdf52360-13cd-4859-9f4f-1ed5bd3d8e3a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.55.4-Formal-propositions-"></a>
     5.4.3.55.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.55.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7474a294-8c4f-4e26-b0e2-f8ba224e0b38"></a><table>
+<figure><a class="anchor" id="-07d1db47-897a-4f45-a76a-de27b727ed72"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -340,11 +340,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.55.B<a class="link" href="#-7474a294-8c4f-4e26-b0e2-f8ba224e0b38"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.55.B<a class="link" href="#-07d1db47-897a-4f45-a76a-de27b727ed72"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.55.5-Concept-usage-"></a>
     5.4.3.55.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.55.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7f486060-b11d-4941-be12-71324bc62927"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-2e4c428e-6dd9-4e62-9145-f0cba24f699d"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -514,7 +514,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.55.C<a class="link" href="#-7f486060-b11d-4941-be12-71324bc62927"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.55.C<a class="link" href="#-2e4c428e-6dd9-4e62-9145-f0cba24f699d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.55.6-Formal-representation-"></a>
     5.4.3.55.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.55.6-Formal-representation-"><i data-feather="link"></i></a></h2>
