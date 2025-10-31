@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,14 +163,15 @@
 <h2><a class="anchor" id="7.4.4.46.1-Semantic-definition-"></a>
     7.4.4.46.1 语义定义（Semantic definition）
 <a class="link" href="#7.4.4.46.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>表示MCB分断能力的一组相关属性。注：一个保护设备可与不同实例的该属性集相关联，以提供与不同基本特性相关的信息。</p>
-<!-- 简短定义结束 -->
+<p>一组连贯的特性，表示微型断路器 (MCB) 的分断能力。
+注释 - 一个保护装置可能与此属性集的多个实例相关联，提供与不同基本特性相关的信息。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="7.4.4.46.2-"></a>
     7.4.4.46.2 适用实体
 <a class="link" href="#7.4.4.46.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProtectiveDevice.htm">IfcProtectiveDevice</a>/CIRCUITBREAKER</li>
@@ -179,7 +180,7 @@
 <h2><a class="anchor" id="7.4.4.46.3-"></a>
     7.4.4.46.3 属性
 <a class="link" href="#7.4.4.46.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-fee44c8f-0514-401f-bc9b-201cf275d9cc"></a><table>
+<figure><a class="anchor" id="-906de385-0742-469a-80c8-0301d97e7276"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -195,7 +196,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPowerMeasure.htm">IfcPowerMeasure</a></td>
 <td>
-<p>以[W]为单位的功率损耗。</p><p>当额定电流流经MCB时，MCB每极的以[W]为单位的功率损耗。</p>
+<p>以[W]为单位的功率损耗。</p><p>当标称电流流过微型断路器 (MCB) 时，每个极的功率损耗 [W]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/PowerLoss.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -204,7 +205,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_VoltageLevels.htm">PEnum_VoltageLevels</a></td>
 <td>
-<p>该实例数据适用的电压等级。枚举中可选择多个值。</p>
+<p>实例数据有效的电压等级。枚举中可以选择多个值。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/VoltageLevel.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -213,7 +214,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>一组提供关于可用于设置保护装置额定电流的可用模块（芯片）信息的值。</p><p>该实例数据有效的以[A]为单位的一组额定电流值。应至少提供一个值。集合中的任何值均不得超过同一断路器单元关联的极限额定电流值。</p>
+<p>提供有关可用于设置保护装置标称电流的可用模块（芯片）信息的一组值。</p><p>一组标称电流值 [A]，此实例数据对此有效。至少应提供一个值。此集合中的任何值均不得超过与同一断路器单元关联的
+UltimateRatedCurrent 值。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NominalCurrents.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -222,7 +224,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>依据IEC 60947系列标准测试对象的最大分断能力，单位为[A]。</p>
+<p>符合 IEC 60947 系列标准的对象的极限分断能力 [A]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ICU60947.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -231,7 +233,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>根据IEC 60947系列标准测试对象的分断能力，单位为[A]。</p>
+<p>符合 IEC 60947 系列标准的对象的使用分断能力 [A]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ICS60947.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -240,7 +242,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>根据IEC 60898系列标准测试的微型断路器额定分断能力，单位为[A]。</p>
+<p>符合 IEC 60898 系列标准的微型断路器的额定分断能力 [A]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ICN60898.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -249,12 +251,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>根据IEC 60898系列标准测试的微型断路器服务分断容量，单位为[A]。</p>
+<p>符合 IEC 60898 系列标准的微型断路器的使用分断能力 [A]。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ICS60898.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.4.46.A<a class="link" href="#-fee44c8f-0514-401f-bc9b-201cf275d9cc"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.4.46.A<a class="link" href="#-906de385-0742-469a-80c8-0301d97e7276"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
