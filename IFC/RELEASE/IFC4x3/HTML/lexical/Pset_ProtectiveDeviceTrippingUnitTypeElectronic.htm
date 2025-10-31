@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,14 +163,14 @@
 <h2><a class="anchor" id="7.4.4.58.1-Semantic-definition-"></a>
     7.4.4.58.1 语义定义（Semantic definition）
 <a class="link" href="#7.4.4.58.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>关于电子式脱扣的脱扣单元信息。</p>
-<!-- 简短定义结束 -->
+<p>关于通过电子触发的脱扣单元的信息。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="7.4.4.58.2-"></a>
     7.4.4.58.2 适用实体
 <a class="link" href="#7.4.4.58.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProtectiveDeviceTrippingUnit.htm">IfcProtectiveDeviceTrippingUnit</a>/ELECTRONIC</li>
@@ -179,7 +179,7 @@
 <h2><a class="anchor" id="7.4.4.58.3-"></a>
     7.4.4.58.3 属性
 <a class="link" href="#7.4.4.58.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d7413b2e-aa89-4726-96c5-6f4fac5c0d56"></a><table>
+<figure><a class="anchor" id="-7ca6b147-09ef-41cc-84bd-18658a16cfcc"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -204,7 +204,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>一组提供关于可用于设置保护装置额定电流的可用模块（芯片）信息的值。</p><p>提供关于可用于设置保护设备额定电流的可用模块（芯片）信息的一组数值。如果该集合为空，则表示该脱扣单元没有可用的额定电流模块。</p>
+<p>提供有关可用于设置保护装置标称电流的可用模块（芯片）信息的一组值。</p><p>一组提供有关用于设置保护装置标称电流的可用模块（芯片）的信息的值。如果集合为空，则脱扣单元没有可用的标称电流模块。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NominalCurrents.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -213,7 +213,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>电子脱扣单元是否对N导体具有单独保护的指示。</p>
+<p>指示电子脱扣单元是否对N导体具有独立保护。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/N_Protection.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -222,7 +222,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>当N导体电流超过相导体电流的50%时，电子脱扣单元是否脱扣的指示。仅当N_Protection属性被声明时，此属性才会被断言。</p>
+<p>指示当N导体中的电流超过相导体电流的50%时，电子脱扣单元是否脱扣。仅当N_Protection属性被声明时，此属性才有效。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/N_Protection_50.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -231,7 +231,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>当N导体中的电流超过相导体电流的100%时，电子脱扣单元是否脱扣的指示。仅当N_Protection属性被声明时，此属性才会被声明。</p>
+<p>指示当N导体中的电流超过相导体电流的100%时，电子脱扣单元是否脱扣。仅当N_Protection属性被声明时，此属性才有效。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/N_Protection_100.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -240,12 +240,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>一个指示用户是否可以选择使用 N_保护。如果同时声明了 N_Protection_50 和 N_Protection_100 属性，则 N_Protection_Select 属性的值设置为 TRUE。仅当声明了 N_Protection 属性时，才会声明此属性。</p>
+<p>指示用户是否可以选择使用N_Protection功能。如果同时声明了N_Protection_50和N_Protection_100属性，则N_Protection_Select属性值设置为TRUE。仅当N_Protection属性被声明时，此属性才有效。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/N_Protection_Select.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.4.58.A<a class="link" href="#-d7413b2e-aa89-4726-96c5-6f4fac5c0d56"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.4.58.A<a class="link" href="#-7ca6b147-09ef-41cc-84bd-18658a16cfcc"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
