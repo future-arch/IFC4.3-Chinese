@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -142,14 +142,14 @@
 <h2><a class="anchor" id="5.4.5.3.1-Semantic-definition-"></a>
     5.4.5.3.1 语义定义（Semantic definition）
 <a class="link" href="#5.4.5.3.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>适用于所有洞口构件实例定义的基准量。</p>
-<!-- 简短定义结束 -->
+<p>洞口元素所有实例定义共有的基础量。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="5.4.5.3.2-"></a>
     5.4.5.3.2 适用实体
 <a class="link" href="#5.4.5.3.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>QTO_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的构件数量可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的构件数量覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOpeningElement.htm">IfcOpeningElement</a></li>
@@ -157,7 +157,7 @@
 <h2><a class="anchor" id="5.4.5.3.3-"></a>
     5.4.5.3.3 属性
 <a class="link" href="#5.4.5.3.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-f7583700-aeb4-43a0-b47b-ea488291e309"></a><table>
+<figure><a class="anchor" id="-f2d44a8f-510b-46ca-a316-ffbccba9cacb"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -171,7 +171,8 @@
 <td>Width</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityLength.htm">IfcQuantityLength</a></td>
 <td>
-<p>对象的宽度。仅当对象具有恒定厚度（棱柱形）时给出。</p><p>洞口宽度，对于墙洞口为水平尺寸，对于楼板洞口为水平尺寸之一。仅当面积为矩形时提供。</p>
+<p>Width（宽度）</p>
+<p>对象的宽度。仅在对象具有恒定厚度（棱柱形）时给出。</p><p>洞口的宽度，对于墙洞，是水平尺寸；对于楼板洞，是水平尺寸之一。仅在面积为矩形时提供。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Width.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -179,7 +180,7 @@
 <td>Height</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityLength.htm">IfcQuantityLength</a></td>
 <td>
-<p>Characteristic height（特征高程）</p><p>洞口高度，对于墙洞口为垂直尺寸，对于楼板洞口为水平尺寸之一。仅当面积为矩形时提供。</p>
+<p>特征高度</p><p>洞口的高度，对于墙洞，是垂直尺寸；对于楼板洞，是水平尺寸之一。仅在面积为矩形时提供。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Height.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -187,7 +188,7 @@
 <td>Depth</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityLength.htm">IfcQuantityLength</a></td>
 <td>
-<p>对象的进深。</p><p>洞口深度（或厚度），对于洞口应与被开洞构件的宽度（或厚度）相同，对于凹槽则应较小。仅当深度为恒定值时提供。</p>
+<p>对象的深度。</p><p>洞口的深度（或厚度），对于洞口，应与被洞口元素（如墙或楼板）的宽度（或厚度）相同，对于凹口，应小于。仅在深度恒定时提供。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Depth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -195,7 +196,7 @@
 <td>Area</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>对象的计算区域。</p><p>洞口面积，对于墙洞口按立面视图计算，对于楼板洞口按底层平面视图计算。</p>
+<p>对象的计算面积。</p><p>洞口在立面视图（墙洞）或地面视图（楼板洞）中的面积。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Area.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -203,12 +204,12 @@
 <td>Volume</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityVolume.htm">IfcQuantityVolume</a></td>
 <td>
-<p>元素的体积。</p><p>洞口体积。这是从被开洞构件（如墙或楼板）中扣除的开口体积。如果洞口的几何体积大于扣除体积，则仅应采用扣除体积。</p>
+<p>构件的体积。</p><p>洞口的体积。它是洞口从被洞口元素（例如墙或楼板）中减去的体积。如果洞口的几何体积大于减去体积，则只使用减去体积。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Volume.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.5.3.A<a class="link" href="#-f7583700-aeb4-43a0-b47b-ea488291e309"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.5.3.A<a class="link" href="#-f2d44a8f-510b-46ca-a316-ffbccba9cacb"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
