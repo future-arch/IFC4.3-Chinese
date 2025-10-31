@@ -1,0 +1,737 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.1.3.3 IfcPermeableCoveringProperties（可渗透覆盖物属性） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.1.3.3 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a>（可渗透覆盖物属性）</h1>
+<p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
+<div class="row">
+<div class="card fluid error deprecation">
+<p>
+<mark class="secondary">弃用
+            <a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark>
+            该定义将在标准的未来主版本中移除。
+        </p>
+</div>
+</div>
+<h2><a class="anchor" id="7.1.3.3.1-Semantic-definition-"></a>
+    7.1.3.3.1 语义定义（Semantic definition）
+<a class="link" href="#7.1.3.3.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p>此实体是对门或窗户中允许空气流通的门扇或窗扇（作为开口填充物）的描述。它由其特性 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></em>) 定义。可渗透覆盖物是一种门框，例如一个组件，固定或可开启，主要由一个框架和填充物组成。填充物通常是格栅、百叶窗或筛网。操作方式在操作类型中定义。</p>
+<!-- end of short definition -->
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></em> 包含在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoorType.htm">IfcDoorType</a></em> 的属性列表 (<em>HasPropertySets</em>) 中。有关可渗透覆盖物的更多信息，可以使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 在窗户或门样式的同一列表中进行动态扩展。这尤其适用于各种操作类型的附加属性。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></em> 不包含几何表示。但是，它定义了可用于创建 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em>（由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindow.htm">IfcWindow</a></em> 插入到项目的空间上下文）或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoorType.htm">IfcDoorType</a></em>（由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoor.htm">IfcDoor</a></em> 插入）形状的参数。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></em> 中的参数定义了一个标准的可渗透覆盖物。门扇的外边界由分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindow.htm">IfcWindow</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoor.htm">IfcDoor</a></em> 的实例参数确定。它还必须考虑门套参数。门扇在整个窗户或门中的位置由 <em>PanelPosition</em> 特性确定。</p>
+<p>图 7.1.3.3.A 说明了应用于门套内位置的门扇，该位置由门扇位置特性定义。以下参数适用于该门扇：<em>FrameDepth</em>（框架深度）、<em>FrameThickness</em>（框架厚度）。</p>
+<figure><a class="anchor" id="-1-"></a><img alt="covering" src="../figures/ifcpermeablecoveringproperties.gif" title="图 7.1.3.3.A — 可渗透覆盖物特性"/><figcaption>图 7.1.3.3.A — 可渗透覆盖物特性<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体，在 IFC2x 中已从 <em>IfcPermeableCovering</em> 重命名。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 超类型更改为新的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></em>。</aside><aside class="aside-deprecation"><mark>IFC4.3.2.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 此实体及 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPredefinedPropertySet</a></em> 的大多数其他子类型现已弃用。请改用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_PermeableCoveringProperties.htm">Pset_PermeableCoveringProperties</a>。</aside>
+<h2><a class="anchor" id="7.1.3.3.2-Entity-inheritance-"></a>
+    7.1.3.3.2 实体继承（Entity inheritance）
+<a class="link" href="#7.1.3.3.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantitySet.htm">IfcQuantitySet</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="deprecated current ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoorPanelProperties.htm">IfcDoorPanelProperties</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReinforcementDefinitionProperties.htm">IfcReinforcementDefinitionProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="7.1.3.3.3-Attributes-"></a>
+    7.1.3.3.3 特性（Attributes）
+<a class="link" href="#7.1.3.3.3-Attributes-"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a class="anchor" id="-42bb3219-7406-4b8c-b967-5426e5a4bd57"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>特性（Attributes）</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>在整个软件世界中分配全局唯一标识符。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该特性已更改为 OPTIONAL。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可选的描述，用于提供信息性注释。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a></em> 关系，从而引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectLibrary.htm">IfcProjectLibrary</a></em>。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a></em> 关系，从而引用那些外部定义的概念，如分类、文档或库信息，这些概念与属性定义相关联。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesType</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
+<td data-label="Description">
+<p>属性集分配到的类型对象。该属性集充当类型对象的所有实例的共享属性集。</p>
+<aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 之间的关系是直接关系，未使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，以保持与本标准早期版本的兼容性。</aside>
+<p>{}</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 基数已从 0..1 更改为 0..n，具有基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDefinedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatedPropertySets</td>
+<td data-label="Description">
+<p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em> 与属性集模板的关系，如果给定，则为属性集或数量集及其属性提供定义模板。
+{}</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向关系，更改时保持基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesOccurrence</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatingPropertyDefinition</td>
+<td data-label="Description">
+<p>引用与一个或多个对象实例的关系，这些对象实例的特征由属性集定义定义。可以使用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> 将单个属性集分配给多个对象实例。
+{}</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性从 <em>PropertyDefinitionOf</em> 重命名，具有基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击显示 9 个隐藏的继承特性
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击隐藏 9 个继承特性
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                OperationType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringOperationEnum.htm">IfcPermeableCoveringOperationEnum</a></td>
+<td data-label="Description">
+<p>可渗透覆盖物操作的类型。也用于根据国家建筑标准分配标准的符号表示。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                PanelPosition
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelPositionEnum.htm">IfcWindowPanelPositionEnum</a></td>
+<td data-label="Description">
+<p>此可渗透覆盖物门扇在整个窗户或门类型中的位置。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                FrameDepth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>门扇框架的深度（用于包含可渗透覆盖物），从前表面到后表面水平测量（即垂直于窗户或门的（立面）平面）。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                FrameThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>门扇框架的宽度（用于包含可渗透覆盖物），从门扇内侧（在可渗透覆盖物处）到门扇外侧（在门套处）测量，即平行于窗户或门的（立面）平面。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                ShapeAspectStyle
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeAspect.htm">IfcShapeAspect</a></td>
+<td data-label="Description">
+<p>指向形状方面（shape aspect）定义的可选链接，该定义指向用于表示可渗透覆盖物的窗户样式的几何表示部分。</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.1.3.3.B<a class="link" href="#-42bb3219-7406-4b8c-b967-5426e5a4bd57"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.1.3.3.4-Concept-usage-"></a>
+    7.1.3.3.4 概念用法（Concept usage）
+<a class="link" href="#7.1.3.3.4-Concept-usage-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-76305a26-29f2-4c39-82f4-63e970f2611c"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>概念</th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    点击显示 8 个隐藏的继承概念
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    点击隐藏 8 个继承概念
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.1.3.3.C<a class="link" href="#-76305a26-29f2-4c39-82f4-63e970f2611c"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.1.3.3.5-Formal-representation-"></a>
+    7.1.3.3.5 形式化表示（Formal representation）
+<a class="link" href="#7.1.3.3.5-Formal-representation-"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a>
+ SUBTYPE OF (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>);
+	OperationType : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringOperationEnum.htm">IfcPermeableCoveringOperationEnum</a>;
+	PanelPosition : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelPositionEnum.htm">IfcWindowPanelPositionEnum</a>;
+	FrameDepth : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	FrameThickness : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	ShapeAspectStyle : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeAspect.htm">IfcShapeAspect</a>;
+END_ENTITY;</code></pre>
+<h2><a class="anchor" id="7.1.3.3.6-"></a>
+    7.1.3.3.6 参考文献
+<a class="link" href="#7.1.3.3.6-"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+</ul>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/domain/IfcArchitectureDomain/Entities/IfcPermeableCoveringProperties.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/domain/IfcArchitectureDomain/Entities/IfcPermeableCoveringProperties.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

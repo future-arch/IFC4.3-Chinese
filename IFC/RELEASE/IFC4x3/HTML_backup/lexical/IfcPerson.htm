@@ -1,0 +1,471 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.1.3.5 IfcPerson（人员） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.1.3.5 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a>（人员）</h1>
+<div class="mvd" title="Included in IfcWorkControl.Creators, Revision Control">RV ⓘ</div>
+<div class="mvd" title="Included in IfcWorkControl.Creators, Revision Control">AbV ⓘ</div>
+<h2><a class="anchor" id="8.1.3.5.1-Semantic-definition-"></a>
+    8.1.3.5.1 语义定义（Semantic definition）
+<a class="link" href="#8.1.3.5.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p>此实体代表一个独立的人类个体。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> 许多国家都有关于在数据库中识别个人身份的法律法规。尽管IFC模型的目的是作为数据交换和共享的规范，但在某些情况下，IFC文件可能被视为能够根据此类法律条款识别特定人员的数据库。用户应了解在使用IFC文件的地方可能适用的法律限制。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自ISO 10303-41中定义的<strong>person</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5.1中的新实体。</aside><blockquote>
+<p>IFC4变更 属性_Id_重命名为_Identification_。WHERE规则放宽，允许在提供_Identification_时省略姓名。</p>
+</blockquote>
+<h2><a class="anchor" id="8.1.3.5.2-Entity-inheritance-"></a>
+    8.1.3.5.2 实体继承（Entity inheritance）
+<a class="link" href="#8.1.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a></li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="8.1.3.5.3-Attributes-"></a>
+    8.1.3.5.3 特性（Attributes）
+<a class="link" href="#8.1.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a class="anchor" id="-d8e0f8cd-01f3-49fa-a049-11fc7842763c"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>特性（Attributes）</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a>
+<small>(9)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Identification
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>人员的身份标识。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                FamilyName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>通过该名称可以识别人员的家族身份。</p>
+<aside class="aside-note"><mark>注释</mark> 根据地理位置和文化，姓氏可能出现在姓名的第一个或最后一个组成部分。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                GivenName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>在家族中为人所知的名称，通过该名称可以熟悉地识别他或她。</p>
+<aside class="aside-note"><mark>注释</mark> 根据地理位置和文化，名字可能出现在姓名的第一个或最后一个组成部分。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                MiddleNames
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>给予人员的附加名称，使其能够与其他可能具有相同或相似姓氏和名字的人员区分开来。</p>
+<aside class="aside-note"><mark>注释</mark> 中间名通常不用于日常交流，但必要时可以声明以提供特定人员的额外识别。当相关人员拥有在该地理区域常见的姓氏时，中间名可能特别有用。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                PrefixTitles
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>指定人员社会地位和/或职业地位的单词或词组，出现在其姓名之前。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                SuffixTitles
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>指定人员社会地位和/或职业地位的单词或词组，出现在其姓名之后。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                Roles
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorRole.htm">IfcActorRole</a></td>
+<td data-label="Description">
+<p>人员扮演的角色。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Addresses
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAddress.htm">IfcAddress</a></td>
+<td data-label="Description">
+<p>人员的邮政和电信地址。</p>
+<aside class="aside-note"><mark>注释</mark> 一个人可能有多个地址。</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 此属性已弃用，不应再使用。改用与IfcActor相关的Pset_Address，其中_TheActor_指向此实体。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>EngagedIn</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPersonAndOrganization.htm">IfcPersonAndOrganization</a> FOR ThePerson</td>
+<td data-label="Description">
+<p>与IfcPersonAndOrganization关系的反向关系，其中IfcPerson参与其中。</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 8.1.3.5.A<a class="link" href="#-d8e0f8cd-01f3-49fa-a049-11fc7842763c"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="8.1.3.5.4-Formal-propositions-"></a>
+    8.1.3.5.4 形式化命题（Formal propositions）
+<a class="link" href="#8.1.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-517bbbe7-3947-461f-b2a9-39687e205ce9"></a><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IdentifiablePerson</td>
+<td>
+<p>要求提供身份标识和/或姓氏和/或名字作为最低信息。</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">EXISTS(Identification) OR EXISTS(FamilyName) OR EXISTS(GivenName)</code></pre>
+</td>
+</tr>
+<tr>
+<td>ValidSetOfNames</td>
+<td>
+<p>如果提供了中间名，则必须同时提供姓氏和/或名字。</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT EXISTS(MiddleNames) OR EXISTS(FamilyName) OR EXISTS(GivenName)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 8.1.3.5.B<a class="link" href="#-517bbbe7-3947-461f-b2a9-39687e205ce9"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="8.1.3.5.5-Formal-representation-"></a>
+    8.1.3.5.5 形式化表示（Formal representation）
+<a class="link" href="#8.1.3.5.5-Formal-representation-"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerson.htm">IfcPerson</a>;
+	Identification : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>;
+	FamilyName : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>;
+	GivenName : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>;
+	MiddleNames : OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>;
+	PrefixTitles : OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>;
+	SuffixTitles : OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>;
+	Roles : OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorRole.htm">IfcActorRole</a>;
+	Addresses : OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAddress.htm">IfcAddress</a>;
+ INVERSE
+	EngagedIn : SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPersonAndOrganization.htm">IfcPersonAndOrganization</a> FOR ThePerson;
+ WHERE
+	IdentifiablePerson : EXISTS(Identification) OR EXISTS(FamilyName) OR EXISTS(GivenName);
+	ValidSetOfNames : NOT EXISTS(MiddleNames) OR EXISTS(FamilyName) OR EXISTS(GivenName);
+END_ENTITY;</code></pre>
+<h2><a class="anchor" id="8.1.3.5.6-"></a>
+    8.1.3.5.6 参考文献
+<a class="link" href="#8.1.3.5.6-"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorSelect.htm">IfcActorSelect</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAddress.htm">IfcAddress</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAsset.htm">IfcAsset</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInventory.htm">IfcInventory</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectReferenceSelect.htm">IfcObjectReferenceSelect</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPersonAndOrganization.htm">IfcPersonAndOrganization</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceObjectSelect.htm">IfcResourceObjectSelect</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWorkControl.htm">IfcWorkControl</a></li>
+</ul>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/resource/IfcActorResource/Entities/IfcPerson.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/resource/IfcActorResource/Entities/IfcPerson.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

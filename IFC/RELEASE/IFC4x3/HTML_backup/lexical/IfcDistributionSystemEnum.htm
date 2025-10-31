@@ -1,0 +1,594 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.2.2.3 IfcDistributionSystemEnum（分布系统枚举） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.2.2.3 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystemEnum.htm">IfcDistributionSystemEnum</a>（分布系统枚举）</h1>
+<h2><a class="anchor" id="6.2.2.3.1-Semantic-definition-"></a>
+    6.2.2.3.1 语义定义（Semantic definition）
+<a class="link" href="#6.2.2.3.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p>此枚举标识不同类型的分布系统。它用于通过其功能指定系统以及此类系统中设备的端口，以限制连接到兼容连接。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> 中的新枚举。</aside>
+<p>电缆桥架的端口可使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierSegment.htm">IfcCableCarrierSegment</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a></em> 连接。不特定于特定系统类型的电缆桥架段和配件的类型对象（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierSegmentType.htm">IfcCableCarrierSegmentType</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCableCarrierFittingType.htm">IfcCableCarrierFittingType</a></em>）可能具有 <em>PredefinedType</em> 为NOTDEFINED的端口，这表示此类对象的实例可连接到任何其他基于电缆桥架的端口。电缆桥架的有效枚举与电缆相同，如果包含的电缆端口均为相同类型，则可断言。</p>
+<h2><a class="anchor" id="6.2.2.3.2-"></a>
+    6.2.2.3.2 类型值
+<a class="link" href="#6.2.2.3.2-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-2f42eb50-bd72-4fcd-a170-cdc091c5c2f2"></a><table class="striped type-values">
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Name"><code>AIRCONDITIONING
+            <td data-label="Description">
+<p>用于维持一个或多个空间内温度范围的空调空气分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>AUDIOVISUAL
+            <td data-label="Description">
+<p>传输具有音频和/或视频流的单一媒体源。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>CATENARY_SYSTEM
+            <td data-label="Description">
+<p>支撑接触线的纵向分布系统，包括悬链线吊弦和缝合线。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>CHEMICAL
+            <td data-label="Description">
+<p>通过属性集进一步限定的任意化学品，例如用于医疗或工业用途。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>CHILLEDWATER
+            <td data-label="Description">
+<p>非饮用水冷冻水，例如通过蒸发器循环。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>COMMUNICATION
+            <td data-label="Description">
+<p>通信</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>COMPRESSEDAIR
+            <td data-label="Description">
+<p>压缩空气系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>CONDENSERWATER
+            <td data-label="Description">
+<p>非饮用水，例如通过冷凝器循环。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>CONTROL
+            <td data-label="Description">
+<p>专用于控制系统使用的传输或网络。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>CONVEYING
+            <td data-label="Description">
+<p>物质的任意供应。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>DATA
+            <td data-label="Description">
+<p>具有通用用途的网络。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>DISPOSAL
+            <td data-label="Description">
+<p>物质的任意处置。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>DOMESTICCOLDWATER
+            <td data-label="Description">
+<p>未加热的饮用水分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>DOMESTICHOTWATER
+            <td data-label="Description">
+<p>加热的饮用水分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>DRAINAGE
+            <td data-label="Description">
+<p>排水收集系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>EARTHING
+            <td data-label="Description">
+<p>用于等电位连接，将电流传导至地面的路径。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>ELECTRICAL
+            <td data-label="Description">
+<p>用于输送电力的电路。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>ELECTROACOUSTIC
+            <td data-label="Description">
+<p>放大音频信号，例如用于扬声器。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>EXHAUST
+            <td data-label="Description">
+<p>从一个或多个空间移除污浊或有毒空气的排风收集系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>FIREPROTECTION
+            <td data-label="Description">
+<p>消防喷淋系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>FIXEDTRANSMISSIONNETWORK
+            <td data-label="Description">
+<p>代表使用光缆、铜缆或两者提供数据传输通道的所有有线网络。它聚合了基于复用方法的许多技术。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>FUEL
+            <td data-label="Description">
+<p>燃料的任意供应。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>GAS
+            <td data-label="Description">
+<p>气相材料，如甲烷或天然气。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>HAZARDOUS
+            <td data-label="Description">
+<p>有害材料或流体收集系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>HEATING
+            <td data-label="Description">
+<p>从锅炉加热并通过散热器循环的水或蒸汽。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>LIGHTING
+            <td data-label="Description">
+<p>专用于照明的电路，例如具有灯座的灯具。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>LIGHTNINGPROTECTION
+            <td data-label="Description">
+<p>将雷电电流传导至地面的路径。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>MOBILENETWORK
+            <td data-label="Description">
+<p>移动网络通过为基础设施操作员（包括驾驶员、调度员、调车团队成员和车站控制器）之间的语音和数据通信提供安全平台来确保无线通信。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>MONITORINGSYSTEM
+            <td data-label="Description">
+<p>基于传感器的建筑和基础设施环境监测和控制系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>MUNICIPALSOLIDWASTE
+            <td data-label="Description">
+<p>消耗和丢弃的物品，通常称为垃圾。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>OIL
+            <td data-label="Description">
+<p>油分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>OPERATIONAL
+            <td data-label="Description">
+<p>操作供应系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>OPERATIONALTELEPHONYSYSTEM
+            <td data-label="Description">
+<p>允许操作中心（例如调度员、交通调节员、操作代理等）和基础设施现场（例如铁路、隧道或道路）的操作员之间通信的系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>OVERHEAD_CONTACTLINE_SYSTEM
+            <td data-label="Description">
+<p>使用架空接触线和悬链系统向牵引单元供电的列车上限以上的架空接触线系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>POWERGENERATION
+            <td data-label="Description">
+<p>发电路径。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>RAINWATER
+            <td data-label="Description">
+<p>直接降落在地块上的雨水。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>REFRIGERATION
+            <td data-label="Description">
+<p>用于实现全部或部分制冷循环的制冷剂分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>RETURN_CIRCUIT
+            <td data-label="Description">
+<p>形成牵引回流和故障条件下电流预期路径的分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>SECURITY
+            <td data-label="Description">
+<p>专用于安全系统使用的传输或网络。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>SEWAGE
+            <td data-label="Description">
+<p>污水收集系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>SIGNAL
+            <td data-label="Description">
+<p>原始模拟信号，例如调制数据或传感器测量值。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>STORMWATER
+            <td data-label="Description">
+<p>从地面径流或流过的雨水。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>TELEPHONE
+            <td data-label="Description">
+<p>专用于电话系统使用的传输或网络。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>TV
+            <td data-label="Description">
+<p>传输多个媒体源，例如模拟有线电视、卫星电视或空中电视。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>VACUUM
+            <td data-label="Description">
+<p>真空分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>VENT
+            <td data-label="Description">
+<p>废水管道系统的通风系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>VENTILATION
+            <td data-label="Description">
+<p>涉及与外部空气交换以及建筑物内空气循环的通风空气分布系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>WASTEWATER
+            <td data-label="Description">
+<p>质量受到人为影响的水，可能源自污水、排水或其他来源。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>WATERSUPPLY
+            <td data-label="Description">
+<p>任意供水。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>USERDEFINED
+            <td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>NOTDEFINED
+            <td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</code></td></tr>
+</tbody>
+</table><figcaption>表 6.2.2.3.A<a class="link" href="#-2f42eb50-bd72-4fcd-a170-cdc091c5c2f2"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="6.2.2.3.3-Formal-representation-"></a>
+    6.2.2.3.3 形式化表示（Formal representation）
+<a class="link" href="#6.2.2.3.3-Formal-representation-"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">TYPE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystemEnum.htm">IfcDistributionSystemEnum</a> = ENUMERATION OF
+	(AIRCONDITIONING
+	,AUDIOVISUAL
+	,CATENARY_SYSTEM
+	,CHEMICAL
+	,CHILLEDWATER
+	,COMMUNICATION
+	,COMPRESSEDAIR
+	,CONDENSERWATER
+	,CONTROL
+	,CONVEYING
+	,DATA
+	,DISPOSAL
+	,DOMESTICCOLDWATER
+	,DOMESTICHOTWATER
+	,DRAINAGE
+	,EARTHING
+	,ELECTRICAL
+	,ELECTROACOUSTIC
+	,EXHAUST
+	,FIREPROTECTION
+	,FIXEDTRANSMISSIONNETWORK
+	,FUEL
+	,GAS
+	,HAZARDOUS
+	,HEATING
+	,LIGHTING
+	,LIGHTNINGPROTECTION
+	,MOBILENETWORK
+	,MONITORINGSYSTEM
+	,MUNICIPALSOLIDWASTE
+	,OIL
+	,OPERATIONAL
+	,OPERATIONALTELEPHONYSYSTEM
+	,OVERHEAD_CONTACTLINE_SYSTEM
+	,POWERGENERATION
+	,RAINWATER
+	,REFRIGERATION
+	,RETURN_CIRCUIT
+	,SECURITY
+	,SEWAGE
+	,SIGNAL
+	,STORMWATER
+	,TELEPHONE
+	,TV
+	,VACUUM
+	,VENT
+	,VENTILATION
+	,WASTEWATER
+	,WATERSUPPLY
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;</code></pre>
+<h2><a class="anchor" id="6.2.2.3.4-"></a>
+    6.2.2.3.4 参考文献
+<a class="link" href="#6.2.2.3.4-"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm">IfcDistributionPort</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystem.htm">IfcDistributionSystem</a></li>
+</ul>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/shared/IfcSharedBldgServiceElements/Types/IfcDistributionSystemEnum.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/shared/IfcSharedBldgServiceElements/Types/IfcDistributionSystemEnum.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

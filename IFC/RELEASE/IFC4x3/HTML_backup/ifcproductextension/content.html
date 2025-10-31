@@ -1,0 +1,1196 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>5.4 IfcProductExtension（产品扩展） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifckernel/content.html">
+                            5.1 IfcKernel
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifccontrolextension/content.html">
+                            5.2 IfcControlExtension
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcprocessextension/content.html">
+                            5.3 IfcProcessExtension
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcproductextension/content.html">
+                            5.4 IfcProductExtension
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>5.4 IfcProductExtension（产品扩展）</h1>
+<h2><a class="anchor" id="5.4.1-"></a>
+    5.4.1 架构定义
+<a class="link" href="#5.4.1-"><i data-feather="link"></i></a></h2>
+<p><em>IfcProductExtension</em> 进一步细化了（物理）产品的概念，即一个很可能在项目上下文中具有形状和位置的组件。产品信息通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的子类型为单个产品实例提供，并通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a></em> 的子类型为常见的特定产品类型提供。这两种定义都源自 <em>IfcKernel</em> 中提供的超类型。在 <em>IfcProductExtension</em> 中引入的基础概念包括：</p>
+<ul>
+<li>空间项目结构，</li>
+<li>元素，</li>
+<li>网格，</li>
+<li>端口，和</li>
+<li>注释。</li>
+</ul>
+<p>空间项目结构定义了</p>
+<ul>
+<li>场地，</li>
+<li>设施（建筑、桥梁、船舶、铁路、道路），</li>
+<li>设施部分（楼层和上述部分的组成部分），以及</li>
+<li>空间</li>
+</ul>
+<p>及其分解结构。此外，系统和区域的概念也在 <em>IfcProductExtension</em> 中引入。定义了空间结构与元素之间的关系，例如空间包含和空间边界。</p>
+<p>元素被分配到空间项目结构，并通过其位置引用网格。引入的基本元素类型包括</p>
+<ul>
+<li>建筑元素</li>
+<li>洞口元素</li>
+<li>装修元素</li>
+<li>分配元素（包括供暖、通风、空调、电气和设备元素）</li>
+<li>交通元素</li>
+</ul>
+<p>引入的其他概念包括</p>
+<ul>
+<li>网格，为元素提供约束定位，</li>
+<li>对齐线，提供线性定位元素以定位地理和城市元素，<br/>
+  通过来自 IfcRepresentationResource 域的实体提供项目地理参考，</li>
+<li>注释，用于捕获建筑模型或图纸的任何附加注释（如解释性文本、尺寸标注等），以及</li>
+<li>端口，提供元素之间的连接性。</li>
+</ul>
+<h2><a class="anchor" id="5.4.2-Types"></a>
+    5.4.2 Types
+<a class="link" href="#5.4.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="5.4.2.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentTypeEnum.htm">
+        
+            IfcAlignmentTypeEnum
+        
+        </a>
+</li><li number="5.4.2.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationTypeEnum.htm">
+        
+            IfcAnnotationTypeEnum
+        
+        </a>
+</li><li number="5.4.2.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAssemblyPlaceEnum.htm">
+        
+            IfcAssemblyPlaceEnum
+        
+        </a>
+</li><li number="5.4.2.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBridgePartTypeEnum.htm">
+        
+            IfcBridgePartTypeEnum
+        
+        </a>
+</li><li number="5.4.2.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBridgeTypeEnum.htm">
+        
+            IfcBridgeTypeEnum
+        
+        </a>
+</li><li number="5.4.2.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltSystemTypeEnum.htm">
+        
+            IfcBuiltSystemTypeEnum
+        
+        </a>
+</li><li number="5.4.2.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementAssemblyTypeEnum.htm">
+        
+            IfcElementAssemblyTypeEnum
+        
+        </a>
+</li><li number="5.4.2.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementCompositionEnum.htm">
+        
+            IfcElementCompositionEnum
+        
+        </a>
+</li><li number="5.4.2.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalSpatialElementTypeEnum.htm">
+        
+            IfcExternalSpatialElementTypeEnum
+        
+        </a>
+</li><li number="5.4.2.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPartCommonTypeEnum.htm">
+        
+            IfcFacilityPartCommonTypeEnum
+        
+        </a>
+</li><li number="5.4.2.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityUsageEnum.htm">
+        
+            IfcFacilityUsageEnum
+        
+        </a>
+</li><li number="5.4.2.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeographicElementTypeEnum.htm">
+        
+            IfcGeographicElementTypeEnum
+        
+        </a>
+</li><li number="5.4.2.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridTypeEnum.htm">
+        
+            IfcGridTypeEnum
+        
+        </a>
+</li><li number="5.4.2.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInterferenceSelect.htm">
+        
+            IfcInterferenceSelect
+        
+        </a>
+</li><li number="5.4.2.15">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInternalOrExternalEnum.htm">
+        
+            IfcInternalOrExternalEnum
+        
+        </a>
+</li><li number="5.4.2.16">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOpeningElementTypeEnum.htm">
+        
+            IfcOpeningElementTypeEnum
+        
+        </a>
+</li><li number="5.4.2.17">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalOrVirtualEnum.htm">
+        
+            IfcPhysicalOrVirtualEnum
+        
+        </a>
+</li><li number="5.4.2.18">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectionElementTypeEnum.htm">
+        
+            IfcProjectionElementTypeEnum
+        
+        </a>
+</li><li number="5.4.2.19">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferentTypeEnum.htm">
+        
+            IfcReferentTypeEnum
+        
+        </a>
+</li><li number="5.4.2.20">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpaceBoundarySelect.htm">
+        
+            IfcSpaceBoundarySelect
+        
+        </a>
+</li><li number="5.4.2.21">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpaceTypeEnum.htm">
+        
+            IfcSpaceTypeEnum
+        
+        </a>
+</li><li number="5.4.2.22">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialReferenceSelect.htm">
+        
+            IfcSpatialReferenceSelect
+        
+        </a>
+</li><li number="5.4.2.23">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZoneTypeEnum.htm">
+        
+            IfcSpatialZoneTypeEnum
+        
+        </a>
+</li><li number="5.4.2.24">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTransportElementTypeEnum.htm">
+        
+            IfcTransportElementTypeEnum
+        
+        </a>
+</li><li number="5.4.2.25">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVehicleTypeEnum.htm">
+        
+            IfcVehicleTypeEnum
+        
+        </a>
+</li><li number="5.4.2.26">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualElementTypeEnum.htm">
+        
+            IfcVirtualElementTypeEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="5.4.3-Entities"></a>
+    5.4.3 Entities
+<a class="link" href="#5.4.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="5.4.3.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignment.htm">
+        
+            IfcAlignment
+        
+        </a>
+</li><li number="5.4.3.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentCant.htm">
+        
+            IfcAlignmentCant
+        
+        </a>
+</li><li number="5.4.3.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontal.htm">
+        
+            IfcAlignmentHorizontal
+        
+        </a>
+</li><li number="5.4.3.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentSegment.htm">
+        
+            IfcAlignmentSegment
+        
+        </a>
+</li><li number="5.4.3.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVertical.htm">
+        
+            IfcAlignmentVertical
+        
+        </a>
+</li><li number="5.4.3.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotation.htm">
+        
+            IfcAnnotation
+        
+        </a>
+</li><li number="5.4.3.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBridge.htm">
+        
+            IfcBridge
+        
+        </a>
+</li><li number="5.4.3.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBridgePart.htm">
+        
+            IfcBridgePart
+        
+        </a>
+</li><li number="5.4.3.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuilding.htm">
+        
+            IfcBuilding
+        
+        </a>
+</li><li number="5.4.3.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuildingStorey.htm">
+        
+            IfcBuildingStorey
+        
+        </a>
+</li><li number="5.4.3.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltElement.htm">
+        
+            IfcBuiltElement
+        
+        </a>
+</li><li number="5.4.3.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltElementType.htm">
+        
+            IfcBuiltElementType
+        
+        </a>
+</li><li number="5.4.3.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltSystem.htm">
+        
+            IfcBuiltSystem
+        
+        </a>
+</li><li number="5.4.3.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCivilElement.htm">
+        
+            IfcCivilElement
+        
+        </a>
+</li><li number="5.4.3.15">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCivilElementType.htm">
+        
+            IfcCivilElementType
+        
+        </a>
+</li><li number="5.4.3.16">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionElement.htm">
+        
+            IfcDistributionElement
+        
+        </a>
+</li><li number="5.4.3.17">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionElementType.htm">
+        
+            IfcDistributionElementType
+        
+        </a>
+</li><li number="5.4.3.18">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">
+        
+            IfcElement
+        
+        </a>
+</li><li number="5.4.3.19">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementAssembly.htm">
+        
+            IfcElementAssembly
+        
+        </a>
+</li><li number="5.4.3.20">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementAssemblyType.htm">
+        
+            IfcElementAssemblyType
+        
+        </a>
+</li><li number="5.4.3.21">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">
+        
+            IfcElementQuantity
+        
+        </a>
+</li><li number="5.4.3.22">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">
+        
+            IfcElementType
+        
+        </a>
+</li><li number="5.4.3.23">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalSpatialElement.htm">
+        
+            IfcExternalSpatialElement
+        
+        </a>
+</li><li number="5.4.3.24">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalSpatialStructureElement.htm">
+        
+            IfcExternalSpatialStructureElement
+        
+        </a>
+</li><li number="5.4.3.25">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacility.htm">
+        
+            IfcFacility
+        
+        </a>
+</li><li number="5.4.3.26">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPart.htm">
+        
+            IfcFacilityPart
+        
+        </a>
+</li><li number="5.4.3.27">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFacilityPartCommon.htm">
+        
+            IfcFacilityPartCommon
+        
+        </a>
+</li><li number="5.4.3.28">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFeatureElement.htm">
+        
+            IfcFeatureElement
+        
+        </a>
+</li><li number="5.4.3.29">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFeatureElementAddition.htm">
+        
+            IfcFeatureElementAddition
+        
+        </a>
+</li><li number="5.4.3.30">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFeatureElementSubtraction.htm">
+        
+            IfcFeatureElementSubtraction
+        
+        </a>
+</li><li number="5.4.3.31">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFurnishingElement.htm">
+        
+            IfcFurnishingElement
+        
+        </a>
+</li><li number="5.4.3.32">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFurnishingElementType.htm">
+        
+            IfcFurnishingElementType
+        
+        </a>
+</li><li number="5.4.3.33">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeographicElement.htm">
+        
+            IfcGeographicElement
+        
+        </a>
+</li><li number="5.4.3.34">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeographicElementType.htm">
+        
+            IfcGeographicElementType
+        
+        </a>
+</li><li number="5.4.3.35">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGrid.htm">
+        
+            IfcGrid
+        
+        </a>
+</li><li number="5.4.3.36">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcImpactProtectionDevice.htm">
+        
+            IfcImpactProtectionDevice
+        
+        </a>
+</li><li number="5.4.3.37">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcImpactProtectionDeviceType.htm">
+        
+            IfcImpactProtectionDeviceType
+        
+        </a>
+</li><li number="5.4.3.38">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLinearElement.htm">
+        
+            IfcLinearElement
+        
+        </a>
+</li><li number="5.4.3.39">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLinearPositioningElement.htm">
+        
+            IfcLinearPositioningElement
+        
+        </a>
+</li><li number="5.4.3.40">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOpeningElement.htm">
+        
+            IfcOpeningElement
+        
+        </a>
+</li><li number="5.4.3.41">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPort.htm">
+        
+            IfcPort
+        
+        </a>
+</li><li number="5.4.3.42">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositioningElement.htm">
+        
+            IfcPositioningElement
+        
+        </a>
+</li><li number="5.4.3.43">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectionElement.htm">
+        
+            IfcProjectionElement
+        
+        </a>
+</li><li number="5.4.3.44">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReferent.htm">
+        
+            IfcReferent
+        
+        </a>
+</li><li number="5.4.3.45">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAdheresToElement.htm">
+        
+            IfcRelAdheresToElement
+        
+        </a>
+</li><li number="5.4.3.46">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">
+        
+            IfcRelAssociatesMaterial
+        
+        </a>
+</li><li number="5.4.3.47">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesProfileDef.htm">
+        
+            IfcRelAssociatesProfileDef
+        
+        </a>
+</li><li number="5.4.3.48">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsElements.htm">
+        
+            IfcRelConnectsElements
+        
+        </a>
+</li><li number="5.4.3.49">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPortToElement.htm">
+        
+            IfcRelConnectsPortToElement
+        
+        </a>
+</li><li number="5.4.3.50">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsPorts.htm">
+        
+            IfcRelConnectsPorts
+        
+        </a>
+</li><li number="5.4.3.51">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsWithRealizingElements.htm">
+        
+            IfcRelConnectsWithRealizingElements
+        
+        </a>
+</li><li number="5.4.3.52">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">
+        
+            IfcRelContainedInSpatialStructure
+        
+        </a>
+</li><li number="5.4.3.53">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelFillsElement.htm">
+        
+            IfcRelFillsElement
+        
+        </a>
+</li><li number="5.4.3.54">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelInterferesElements.htm">
+        
+            IfcRelInterferesElements
+        
+        </a>
+</li><li number="5.4.3.55">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelPositions.htm">
+        
+            IfcRelPositions
+        
+        </a>
+</li><li number="5.4.3.56">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelProjectsElement.htm">
+        
+            IfcRelProjectsElement
+        
+        </a>
+</li><li number="5.4.3.57">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">
+        
+            IfcRelReferencedInSpatialStructure
+        
+        </a>
+</li><li number="5.4.3.58">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelServicesBuildings.htm">
+        
+            IfcRelServicesBuildings
+        
+        </a>
+</li><li number="5.4.3.59">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">
+        
+            IfcRelSpaceBoundary
+        
+        </a>
+</li><li number="5.4.3.60">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary1stLevel.htm">
+        
+            IfcRelSpaceBoundary1stLevel
+        
+        </a>
+</li><li number="5.4.3.61">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary2ndLevel.htm">
+        
+            IfcRelSpaceBoundary2ndLevel
+        
+        </a>
+</li><li number="5.4.3.62">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelVoidsElement.htm">
+        
+            IfcRelVoidsElement
+        
+        </a>
+</li><li number="5.4.3.63">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSite.htm">
+        
+            IfcSite
+        
+        </a>
+</li><li number="5.4.3.64">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">
+        
+            IfcSpace
+        
+        </a>
+</li><li number="5.4.3.65">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpaceType.htm">
+        
+            IfcSpaceType
+        
+        </a>
+</li><li number="5.4.3.66">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElement.htm">
+        
+            IfcSpatialElement
+        
+        </a>
+</li><li number="5.4.3.67">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialElementType.htm">
+        
+            IfcSpatialElementType
+        
+        </a>
+</li><li number="5.4.3.68">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialStructureElement.htm">
+        
+            IfcSpatialStructureElement
+        
+        </a>
+</li><li number="5.4.3.69">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialStructureElementType.htm">
+        
+            IfcSpatialStructureElementType
+        
+        </a>
+</li><li number="5.4.3.70">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZone.htm">
+        
+            IfcSpatialZone
+        
+        </a>
+</li><li number="5.4.3.71">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZoneType.htm">
+        
+            IfcSpatialZoneType
+        
+        </a>
+</li><li number="5.4.3.72">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSystem.htm">
+        
+            IfcSystem
+        
+        </a>
+</li><li number="5.4.3.73">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTransportElement.htm">
+        
+            IfcTransportElement
+        
+        </a>
+</li><li number="5.4.3.74">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTransportElementType.htm">
+        
+            IfcTransportElementType
+        
+        </a>
+</li><li number="5.4.3.75">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTransportationDevice.htm">
+        
+            IfcTransportationDevice
+        
+        </a>
+</li><li number="5.4.3.76">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTransportationDeviceType.htm">
+        
+            IfcTransportationDeviceType
+        
+        </a>
+</li><li number="5.4.3.77">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVehicle.htm">
+        
+            IfcVehicle
+        
+        </a>
+</li><li number="5.4.3.78">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVehicleType.htm">
+        
+            IfcVehicleType
+        
+        </a>
+</li><li number="5.4.3.79">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVibrationDamper.htm">
+        
+            IfcVibrationDamper
+        
+        </a>
+</li><li number="5.4.3.80">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVibrationDamperType.htm">
+        
+            IfcVibrationDamperType
+        
+        </a>
+</li><li number="5.4.3.81">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVirtualElement.htm">
+        
+            IfcVirtualElement
+        
+        </a>
+</li><li number="5.4.3.82">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcZone.htm">
+        
+            IfcZone
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="5.4.4-Property-Sets"></a>
+    5.4.4 Property Sets
+<a class="link" href="#5.4.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="5.4.4.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_AlignmentCantSegmentCommon.htm">
+        
+            Pset_AlignmentCantSegmentCommon
+        
+        </a>
+</li><li number="5.4.4.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_AlignmentVerticalSegmentCommon.htm">
+        
+            Pset_AlignmentVerticalSegmentCommon
+        
+        </a>
+</li><li number="5.4.4.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_AnnotationContourLine.htm">
+        
+            Pset_AnnotationContourLine
+        
+        </a>
+</li><li number="5.4.4.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_AnnotationLineOfSight.htm">
+        
+            Pset_AnnotationLineOfSight
+        
+        </a>
+</li><li number="5.4.4.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_AnnotationSurveyArea.htm">
+        
+            Pset_AnnotationSurveyArea
+        
+        </a>
+</li><li number="5.4.4.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_BridgeCommon.htm">
+        
+            Pset_BridgeCommon
+        
+        </a>
+</li><li number="5.4.4.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_BuildingCommon.htm">
+        
+            Pset_BuildingCommon
+        
+        </a>
+</li><li number="5.4.4.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_BuildingStoreyCommon.htm">
+        
+            Pset_BuildingStoreyCommon
+        
+        </a>
+</li><li number="5.4.4.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_BuildingUse.htm">
+        
+            Pset_BuildingUse
+        
+        </a>
+</li><li number="5.4.4.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_BuildingUseAdjacent.htm">
+        
+            Pset_BuildingUseAdjacent
+        
+        </a>
+</li><li number="5.4.4.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_CivilElementCommon.htm">
+        
+            Pset_CivilElementCommon
+        
+        </a>
+</li><li number="5.4.4.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ElementAssemblyCommon.htm">
+        
+            Pset_ElementAssemblyCommon
+        
+        </a>
+</li><li number="5.4.4.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_EnvironmentalEmissions.htm">
+        
+            Pset_EnvironmentalEmissions
+        
+        </a>
+</li><li number="5.4.4.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_EnvironmentalImpactIndicators.htm">
+        
+            Pset_EnvironmentalImpactIndicators
+        
+        </a>
+</li><li number="5.4.4.15">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_EnvironmentalImpactValues.htm">
+        
+            Pset_EnvironmentalImpactValues
+        
+        </a>
+</li><li number="5.4.4.16">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_LandRegistration.htm">
+        
+            Pset_LandRegistration
+        
+        </a>
+</li><li number="5.4.4.17">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_OpeningElementCommon.htm">
+        
+            Pset_OpeningElementCommon
+        
+        </a>
+</li><li number="5.4.4.18">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ProcessCapacity.htm">
+        
+            Pset_ProcessCapacity
+        
+        </a>
+</li><li number="5.4.4.19">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ProvisionForVoid.htm">
+        
+            Pset_ProvisionForVoid
+        
+        </a>
+</li><li number="5.4.4.20">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SiteCommon.htm">
+        
+            Pset_SiteCommon
+        
+        </a>
+</li><li number="5.4.4.21">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceCommon.htm">
+        
+            Pset_SpaceCommon
+        
+        </a>
+</li><li number="5.4.4.22">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceCoveringRequirements.htm">
+        
+            Pset_SpaceCoveringRequirements
+        
+        </a>
+</li><li number="5.4.4.23">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceFireSafetyRequirements.htm">
+        
+            Pset_SpaceFireSafetyRequirements
+        
+        </a>
+</li><li number="5.4.4.24">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceHVACDesign.htm">
+        
+            Pset_SpaceHVACDesign
+        
+        </a>
+</li><li number="5.4.4.25">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceLightingDesign.htm">
+        
+            Pset_SpaceLightingDesign
+        
+        </a>
+</li><li number="5.4.4.26">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceOccupancyRequirements.htm">
+        
+            Pset_SpaceOccupancyRequirements
+        
+        </a>
+</li><li number="5.4.4.27">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpaceParking.htm">
+        
+            Pset_SpaceParking
+        
+        </a>
+</li><li number="5.4.4.28">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SpatialZoneCommon.htm">
+        
+            Pset_SpatialZoneCommon
+        
+        </a>
+</li><li number="5.4.4.29">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Tolerance.htm">
+        
+            Pset_Tolerance
+        
+        </a>
+</li><li number="5.4.4.30">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_TransportElementCommon.htm">
+        
+            Pset_TransportElementCommon
+        
+        </a>
+</li><li number="5.4.4.31">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_TransportElementElevator.htm">
+        
+            Pset_TransportElementElevator
+        
+        </a>
+</li><li number="5.4.4.32">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_Uncertainty.htm">
+        
+            Pset_Uncertainty
+        
+        </a>
+</li><li number="5.4.4.33">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_VegetationCommon.htm">
+        
+            Pset_VegetationCommon
+        
+        </a>
+</li><li number="5.4.4.34">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ZoneCommon.htm">
+        
+            Pset_ZoneCommon
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="5.4.5-Quantity-Sets"></a>
+    5.4.5 Quantity Sets
+<a class="link" href="#5.4.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="5.4.5.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_BuildingBaseQuantities.htm">
+        
+            Qto_BuildingBaseQuantities
+        
+        </a>
+</li><li number="5.4.5.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_BuildingStoreyBaseQuantities.htm">
+        
+            Qto_BuildingStoreyBaseQuantities
+        
+        </a>
+</li><li number="5.4.5.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_OpeningElementBaseQuantities.htm">
+        
+            Qto_OpeningElementBaseQuantities
+        
+        </a>
+</li><li number="5.4.5.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_ProjectionElementBaseQuantities.htm">
+        
+            Qto_ProjectionElementBaseQuantities
+        
+        </a>
+</li><li number="5.4.5.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_SiteBaseQuantities.htm">
+        
+            Qto_SiteBaseQuantities
+        
+        </a>
+</li><li number="5.4.5.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_SpaceBaseQuantities.htm">
+        
+            Qto_SpaceBaseQuantities
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="5.4.6-Functions"></a>
+    5.4.6 Functions
+<a class="link" href="#5.4.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="5.4.7-Rules"></a>
+    5.4.7 Rules
+<a class="link" href="#5.4.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="5.4.8-PropertyEnumerations"></a>
+    5.4.8 PropertyEnumerations
+<a class="link" href="#5.4.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="5.4.8.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_AcquisitionMethod.htm">
+        
+            PEnum_AcquisitionMethod
+        
+        </a>
+</li><li number="5.4.8.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_LifeCyclePhase.htm">
+        
+            PEnum_LifeCyclePhase
+        
+        </a>
+</li><li number="5.4.8.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ProcessItem.htm">
+        
+            PEnum_ProcessItem
+        
+        </a>
+</li><li number="5.4.8.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_StructureIndicator.htm">
+        
+            PEnum_StructureIndicator
+        
+        </a>
+</li><li number="5.4.8.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ToleranceBasis.htm">
+        
+            PEnum_ToleranceBasis
+        
+        </a>
+</li><li number="5.4.8.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_UncertaintyBasis.htm">
+        
+            PEnum_UncertaintyBasis
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/core/IfcProductExtension/README.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/core/IfcProductExtension/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

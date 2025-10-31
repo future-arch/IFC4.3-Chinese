@@ -1,0 +1,676 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.6 IfcPlumbingFireProtectionDomain（给水排水消防领域） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.6 IfcPlumbingFireProtectionDomain（给水排水消防领域）</h1>
+<h2><a class="anchor" id="7.6.1-"></a>
+    7.6.1 架构定义
+<a class="link" href="#7.6.1-"><i data-feather="link"></i></a></h2>
+<p><em>IfcPlumbingFireProtectionDomain</em> schema 是 IFC 模型域层的一部分。它扩展了 <em>IfcSharedBldgServiceElements</em> schema 中概述的建筑服务理念。它定义了给水排水和消防保护领域的概念。</p>
+<p><em>IfcPlumbingFireProtectionDomain</em> schema 的范围，结合其他建筑服务相关 schema，是为建筑物提供给水排水和消防保护服务。</p>
+<p>在管道方面，范围包括建筑物外部的服务，直至与公共排水/污水服务连接的最终检查井。根据下文所述，为支持建筑规范检查要求而做出了一些特别的例外。</p>
+<p>在消防保护方面，范围包括从消防部门服务连接点或法定供水商终止公共连接的点开始的所有服务。</p>
+<p>特别是，<em>IfcPlumbingFireProtectionDomain</em> schema 支持以下类型的理念：</p>
+<ul>
+<li>与个人和公共卫生相关的卫生设备，</li>
+<li>阻止回流和气味传播的废弃管道上的存水弯，</li>
+<li>用于捕获不需要的液体和固体废物材料并防止其进入排水管道的隔油器，</li>
+<li>废物处理单元，</li>
+<li>终止通风和雨水管在其最高点的罩，</li>
+<li>在发生火灾或需要临时供水时，可激活以扑灭火灾的自动和手动终端点，</li>
+<li>消防栓，在发生火灾或其他需要临时供水时，为软管提供水源。</li>
+</ul>
+<p>以下内容目前被认为不在 <em>IfcPlumbingFireProtectionDomain</em> schema 的范围内：</p>
+<ul>
+<li>公共事业供水和废物服务</li>
+</ul>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新模式</aside>
+<h2><a class="anchor" id="7.6.2-Types"></a>
+    7.6.2 Types
+<a class="link" href="#7.6.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.6.2.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFireSuppressionTerminalTypeEnum.htm">
+        
+            IfcFireSuppressionTerminalTypeEnum
+        
+        </a>
+</li><li number="7.6.2.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInterceptorTypeEnum.htm">
+        
+            IfcInterceptorTypeEnum
+        
+        </a>
+</li><li number="7.6.2.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSanitaryTerminalTypeEnum.htm">
+        
+            IfcSanitaryTerminalTypeEnum
+        
+        </a>
+</li><li number="7.6.2.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStackTerminalTypeEnum.htm">
+        
+            IfcStackTerminalTypeEnum
+        
+        </a>
+</li><li number="7.6.2.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWasteTerminalTypeEnum.htm">
+        
+            IfcWasteTerminalTypeEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.6.3-Entities"></a>
+    7.6.3 Entities
+<a class="link" href="#7.6.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.6.3.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFireSuppressionTerminal.htm">
+        
+            IfcFireSuppressionTerminal
+        
+        </a>
+</li><li number="7.6.3.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFireSuppressionTerminalType.htm">
+        
+            IfcFireSuppressionTerminalType
+        
+        </a>
+</li><li number="7.6.3.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInterceptor.htm">
+        
+            IfcInterceptor
+        
+        </a>
+</li><li number="7.6.3.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInterceptorType.htm">
+        
+            IfcInterceptorType
+        
+        </a>
+</li><li number="7.6.3.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSanitaryTerminal.htm">
+        
+            IfcSanitaryTerminal
+        
+        </a>
+</li><li number="7.6.3.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSanitaryTerminalType.htm">
+        
+            IfcSanitaryTerminalType
+        
+        </a>
+</li><li number="7.6.3.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStackTerminal.htm">
+        
+            IfcStackTerminal
+        
+        </a>
+</li><li number="7.6.3.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStackTerminalType.htm">
+        
+            IfcStackTerminalType
+        
+        </a>
+</li><li number="7.6.3.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWasteTerminal.htm">
+        
+            IfcWasteTerminal
+        
+        </a>
+</li><li number="7.6.3.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWasteTerminalType.htm">
+        
+            IfcWasteTerminalType
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.6.4-Property-Sets"></a>
+    7.6.4 Property Sets
+<a class="link" href="#7.6.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.6.4.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FireSuppressionTerminalTypeBreechingInlet.htm">
+        
+            Pset_FireSuppressionTerminalTypeBreechingInlet
+        
+        </a>
+</li><li number="7.6.4.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FireSuppressionTerminalTypeCommon.htm">
+        
+            Pset_FireSuppressionTerminalTypeCommon
+        
+        </a>
+</li><li number="7.6.4.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FireSuppressionTerminalTypeFireHydrant.htm">
+        
+            Pset_FireSuppressionTerminalTypeFireHydrant
+        
+        </a>
+</li><li number="7.6.4.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FireSuppressionTerminalTypeHoseReel.htm">
+        
+            Pset_FireSuppressionTerminalTypeHoseReel
+        
+        </a>
+</li><li number="7.6.4.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FireSuppressionTerminalTypeSprinkler.htm">
+        
+            Pset_FireSuppressionTerminalTypeSprinkler
+        
+        </a>
+</li><li number="7.6.4.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_InterceptorTypeCommon.htm">
+        
+            Pset_InterceptorTypeCommon
+        
+        </a>
+</li><li number="7.6.4.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeBath.htm">
+        
+            Pset_SanitaryTerminalTypeBath
+        
+        </a>
+</li><li number="7.6.4.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeBidet.htm">
+        
+            Pset_SanitaryTerminalTypeBidet
+        
+        </a>
+</li><li number="7.6.4.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeCistern.htm">
+        
+            Pset_SanitaryTerminalTypeCistern
+        
+        </a>
+</li><li number="7.6.4.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeCommon.htm">
+        
+            Pset_SanitaryTerminalTypeCommon
+        
+        </a>
+</li><li number="7.6.4.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeSanitaryFountain.htm">
+        
+            Pset_SanitaryTerminalTypeSanitaryFountain
+        
+        </a>
+</li><li number="7.6.4.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeShower.htm">
+        
+            Pset_SanitaryTerminalTypeShower
+        
+        </a>
+</li><li number="7.6.4.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeSink.htm">
+        
+            Pset_SanitaryTerminalTypeSink
+        
+        </a>
+</li><li number="7.6.4.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeToiletPan.htm">
+        
+            Pset_SanitaryTerminalTypeToiletPan
+        
+        </a>
+</li><li number="7.6.4.15">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeUrinal.htm">
+        
+            Pset_SanitaryTerminalTypeUrinal
+        
+        </a>
+</li><li number="7.6.4.16">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SanitaryTerminalTypeWashHandBasin.htm">
+        
+            Pset_SanitaryTerminalTypeWashHandBasin
+        
+        </a>
+</li><li number="7.6.4.17">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_StackTerminalTypeCommon.htm">
+        
+            Pset_StackTerminalTypeCommon
+        
+        </a>
+</li><li number="7.6.4.18">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeCommon.htm">
+        
+            Pset_WasteTerminalTypeCommon
+        
+        </a>
+</li><li number="7.6.4.19">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeFloorTrap.htm">
+        
+            Pset_WasteTerminalTypeFloorTrap
+        
+        </a>
+</li><li number="7.6.4.20">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeFloorWaste.htm">
+        
+            Pset_WasteTerminalTypeFloorWaste
+        
+        </a>
+</li><li number="7.6.4.21">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeGullySump.htm">
+        
+            Pset_WasteTerminalTypeGullySump
+        
+        </a>
+</li><li number="7.6.4.22">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeGullyTrap.htm">
+        
+            Pset_WasteTerminalTypeGullyTrap
+        
+        </a>
+</li><li number="7.6.4.23">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeRoofDrain.htm">
+        
+            Pset_WasteTerminalTypeRoofDrain
+        
+        </a>
+</li><li number="7.6.4.24">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeWasteDisposalUnit.htm">
+        
+            Pset_WasteTerminalTypeWasteDisposalUnit
+        
+        </a>
+</li><li number="7.6.4.25">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WasteTerminalTypeWasteTrap.htm">
+        
+            Pset_WasteTerminalTypeWasteTrap
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.6.5-Quantity-Sets"></a>
+    7.6.5 Quantity Sets
+<a class="link" href="#7.6.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.6.5.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_FireSuppressionTerminalBaseQuantities.htm">
+        
+            Qto_FireSuppressionTerminalBaseQuantities
+        
+        </a>
+</li><li number="7.6.5.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_InterceptorBaseQuantities.htm">
+        
+            Qto_InterceptorBaseQuantities
+        
+        </a>
+</li><li number="7.6.5.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_SanitaryTerminalBaseQuantities.htm">
+        
+            Qto_SanitaryTerminalBaseQuantities
+        
+        </a>
+</li><li number="7.6.5.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_StackTerminalBaseQuantities.htm">
+        
+            Qto_StackTerminalBaseQuantities
+        
+        </a>
+</li><li number="7.6.5.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_WasteTerminalBaseQuantities.htm">
+        
+            Qto_WasteTerminalBaseQuantities
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.6.6-Functions"></a>
+    7.6.6 Functions
+<a class="link" href="#7.6.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="7.6.7-Rules"></a>
+    7.6.7 Rules
+<a class="link" href="#7.6.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="7.6.8-PropertyEnumerations"></a>
+    7.6.8 PropertyEnumerations
+<a class="link" href="#7.6.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.6.8.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_BathType.htm">
+        
+            PEnum_BathType
+        
+        </a>
+</li><li number="7.6.8.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_BreechingInletCouplingType.htm">
+        
+            PEnum_BreechingInletCouplingType
+        
+        </a>
+</li><li number="7.6.8.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_BreechingInletType.htm">
+        
+            PEnum_BreechingInletType
+        
+        </a>
+</li><li number="7.6.8.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_CisternHeight.htm">
+        
+            PEnum_CisternHeight
+        
+        </a>
+</li><li number="7.6.8.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_FireHydrantType.htm">
+        
+            PEnum_FireHydrantType
+        
+        </a>
+</li><li number="7.6.8.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_FlushType.htm">
+        
+            PEnum_FlushType
+        
+        </a>
+</li><li number="7.6.8.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_FountainType.htm">
+        
+            PEnum_FountainType
+        
+        </a>
+</li><li number="7.6.8.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_HoseNozzleType.htm">
+        
+            PEnum_HoseNozzleType
+        
+        </a>
+</li><li number="7.6.8.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_HoseReelMountingType.htm">
+        
+            PEnum_HoseReelMountingType
+        
+        </a>
+</li><li number="7.6.8.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_HoseReelType.htm">
+        
+            PEnum_HoseReelType
+        
+        </a>
+</li><li number="7.6.8.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_InletPatternType.htm">
+        
+            PEnum_InletPatternType
+        
+        </a>
+</li><li number="7.6.8.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ShowerType.htm">
+        
+            PEnum_ShowerType
+        
+        </a>
+</li><li number="7.6.8.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SinkType.htm">
+        
+            PEnum_SinkType
+        
+        </a>
+</li><li number="7.6.8.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SprinklerActivation.htm">
+        
+            PEnum_SprinklerActivation
+        
+        </a>
+</li><li number="7.6.8.15">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SprinklerBulbLiquidColour.htm">
+        
+            PEnum_SprinklerBulbLiquidColour
+        
+        </a>
+</li><li number="7.6.8.16">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SprinklerResponse.htm">
+        
+            PEnum_SprinklerResponse
+        
+        </a>
+</li><li number="7.6.8.17">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SprinklerType.htm">
+        
+            PEnum_SprinklerType
+        
+        </a>
+</li><li number="7.6.8.18">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ToiletPanType.htm">
+        
+            PEnum_ToiletPanType
+        
+        </a>
+</li><li number="7.6.8.19">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ToiletType.htm">
+        
+            PEnum_ToiletType
+        
+        </a>
+</li><li number="7.6.8.20">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_UrinalType.htm">
+        
+            PEnum_UrinalType
+        
+        </a>
+</li><li number="7.6.8.21">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_WashHandBasinType.htm">
+        
+            PEnum_WashHandBasinType
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/domain/IfcPlumbingFireProtectionDomain/README.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/domain/IfcPlumbingFireProtectionDomain/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

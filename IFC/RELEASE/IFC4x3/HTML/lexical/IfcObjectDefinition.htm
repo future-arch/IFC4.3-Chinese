@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251031 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -193,7 +193,7 @@
     5.1.3.7.3 特性（Attributes）
 <a class="link" href="#5.1.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-cdff911f-4826-41f9-9017-3faf5b89623b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-67c48246-efa2-47f6-b720-cf65e657f1ff"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -358,11 +358,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.7.A<a class="link" href="#-cdff911f-4826-41f9-9017-3faf5b89623b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.7.A<a class="link" href="#-67c48246-efa2-47f6-b720-cf65e657f1ff"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.7.4-Concept-usage-"></a>
     5.1.3.7.4 概念用法（Concept usage）
 <a class="link" href="#5.1.3.7.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-9a5368b5-189a-498f-857c-ed0b7d10763c"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-1c07cd12-514e-4c30-bcf6-a2f8a2ddc286"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -436,9 +436,17 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>聚合表示整体结构（称为“复合体”）与从属组件（称为“部分”）之间的内部无序部分组成关系。聚合的概念有多种用法。例如：</p>
+<ul>
+<li>聚合用于建筑构件，以指示墙体内的龙骨等部分；</li>
+<li>聚合用于空间元素，以指示空间结构，例如建筑物内的楼层；</li>
+<li>聚合用于系统，以指示子系统，例如分支电路。</li>
+</ul>
+<p>聚合是一种双向关系，从复合体到其部分的这种关系称为分解（Decomposition），从部分到其复合体的这种关系称为组合（Composition）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsDecomposedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a>:RelatingObject
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -449,9 +457,15 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>概念 <em>批准关联</em> 描述了对象或对象类型如何关联批准，指示谁需要批准数据、是否已批准的状态以及批准的日期/时间。批准可能需要多个方扮演各种角色。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatingApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:TimeOfApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Status -&gt; IfcLabel_1
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -462,9 +476,35 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>概念 <em>约束关联</em> 描述了对象或对象类型如何关联约束，指示需要满足的定性目标或定量指标。</p>
+<p>基于指标的约束是可衡量的，使得指标有效的状态是计算机可解释的。指标约束基于简单的条件逻辑，例如大于特定值或包含在指定列表或表中。约束可以使用布尔逻辑（如 AND、OR、XOR 或 NOT）组合多个指标。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatingConstraint -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:BenchmarkValues -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:ObjectiveQualifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectiveEnum.htm">IfcObjectiveEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:LogicalAggregator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogicalOperatorEnum.htm">IfcLogicalOperatorEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetricValueSelect.htm">IfcMetricValueSelect</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; IfcAppliedValue_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Benchmark -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBenchmarkEnum.htm">IfcBenchmarkEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:ReferencePath -&gt; IfcReference_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Description -&gt; IfcText_1
+    IfcAppliedValue_0:ArithmeticOperator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArithmeticOperatorEnum.htm">IfcArithmeticOperatorEnum</a>
+    IfcAppliedValue_0:Components -&gt; IfcAppliedValue_1
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Rows -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Columns -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Identifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Description -&gt; IfcText_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:ReferencePath -&gt; IfcReference_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue[binding="DataValue"]
+    IfcReference_1:AttributeIdentifier[binding="Attribute1"]
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -475,9 +515,19 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>概念 <em>文档关联</em> 描述了对象或对象类型如何关联文档，指示外部文件。文档可以整体引用，例如用于捕获产品手册、数据表、多媒体内容或缩略图。文档中的内容可以从任何对象引用，并可用于同步其他文件中的信息，例如项目管理应用程序的项目计划。</p>
+<p>文档的典型元数据，如发布日期、编辑者等，可以与关联一起捕获，但文档内容仍保留在外部文件中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatingDocument -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name[binding="Name"]
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -488,9 +538,19 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>概念 <em>库关联</em> 描述了对象和对象类型如何关联库实体，指示另一个数据源，例如来自模型服务器、产品库或外部数据库或系统，这些数据源用更多详细信息丰富数据。库可以整体从项目或项目库中引用，指示数据的源和版本。库中的内容可以从项目或项目库中的任何对象、类型对象、属性和某些资源模式实体中引用。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Language -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLanguageId.htm">IfcLanguageId</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:ReferencedLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary[binding="RelatingLibrary"]
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -501,9 +561,18 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>任何产品或产品类型都可以关联材料，以指示对象的物理组成。</p>
+<aside class="aside-example"><mark>示例</mark> 对象可以由单一材料或具有特定布局的材料集组成。几个例子包括：
+* 楼板可以关联一层混凝土；
+* 梁可以关联钢的 I 形剖面；
+* 门可以关联用于框架和玻璃的构成件；
+* 端口可以关联流过它的剖面和/或材料，例如热水。</aside>
+<p>材料可以具有用于表面样式的表示，指示 3D 渲染的颜色、纹理和光反射率。材料可以具有用于填充样式的表示，指示 2D 渲染的颜色、图案和阴影线。材料可以具有密度、弹性、热阻等属性，如本规范中所定义。材料也可以根据引用的行业标准进行分类。</p>
+<aside class="aside-example"><mark>示例</mark> 材料信息也可以在对象类型级别提供，定义相同类型的所有实例的通用材料数据。然后可以通过逆向 <em>IsTypedBy</em> 关系访问对象类型，并通过其 <em>HasAssociations</em> 逆向关系和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>.RelatingMaterial</em> 指向材料信息。如果两者都提供，则直接分配给对象实例的材料将覆盖分配给对象类型的材料。</aside>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -514,9 +583,14 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>材料直接与产品和产品类型关联，以表示整个对象的均匀材料。</p>
+<p>材料也可以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 关联，为该类型的实例定义材料。如果材料同时在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 上进行关联，则直接分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的材料具有优先权。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatingMaterial -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a> -&gt; Material
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -527,9 +601,18 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>嵌套表示主体结构（称为“主机”）与附加组件（称为“被托管元素”）之间的外部有序部分组成关系。嵌套的概念有多种用法。例如：</p>
+<ul>
+<li>嵌套用于产品构件，以指示外部可连接部件，例如安装在水槽上的水龙头或安装在接线盒内的开关。</li>
+<li>嵌套用于控制对象，以指示规范层次结构。</li>
+<li>嵌套用于过程对象，以指示可能并行或串行发生的从属过程。</li>
+<li>嵌套用于资源对象，以指示可能并行或串行发生的从属资源分配。</li>
+</ul>
+<p>嵌套是一种双向关系，从主机结构到其附加组件的关系称为嵌套（Nesting），从组件到其包含结构的关系称为托管（Hosting）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsNestedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>:RelatingObject
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -567,7 +650,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.7.B<a class="link" href="#-9a5368b5-189a-498f-857c-ed0b7d10763c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.7.B<a class="link" href="#-1c07cd12-514e-4c30-bcf6-a2f8a2ddc286"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.7.5-Formal-representation-"></a>
     5.1.3.7.5 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.7.5-Formal-representation-"><i data-feather="link"></i></a></h2>

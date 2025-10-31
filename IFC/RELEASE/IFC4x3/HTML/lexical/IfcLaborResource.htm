@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251031 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -229,7 +229,7 @@
     7.3.3.11.3 特性（Attributes）
 <a class="link" href="#7.3.3.11.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-a7ab1f5c-e546-4990-9c56-493059ffe0b5"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-36916874-6b50-46da-95d9-93a65b9a2c54"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -571,11 +571,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.11.A<a class="link" href="#-a7ab1f5c-e546-4990-9c56-493059ffe0b5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.11.A<a class="link" href="#-36916874-6b50-46da-95d9-93a65b9a2c54"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.3.3.11.4-Formal-propositions-"></a>
     7.3.3.11.4 形式化命题（Formal propositions）
 <a class="link" href="#7.3.3.11.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-cdb1532a-3d1b-4c2f-8dad-792e7e02b33d"></a><table>
+<figure><a class="anchor" id="-a2d90ee1-bd31-4234-9a78-24c8360f0a70"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -599,7 +599,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.11.C<a class="link" href="#-cdb1532a-3d1b-4c2f-8dad-792e7e02b33d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.11.C<a class="link" href="#-a2d90ee1-bd31-4234-9a78-24c8360f0a70"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.3.3.11.5-"></a>
     7.3.3.11.5 属性集
 <a class="link" href="#7.3.3.11.5-"><i data-feather="link"></i></a></h2>
@@ -630,7 +630,7 @@
 </p><h2><a class="anchor" id="7.3.3.11.6-Concept-usage-"></a>
     7.3.3.11.6 概念用法（Concept usage）
 <a class="link" href="#7.3.3.11.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-858bdf97-04cc-4881-8dcf-bb3ee1160247"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-9060b2ee-54bb-4a57-a492-6aeed6764052"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -675,15 +675,34 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
 </td>
 <td data-label="Usage">
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>聚合表示整体结构（称为“复合体”）与从属组件（称为“部分”）之间的内部无序部分组成关系。聚合的概念有多种用法。例如：</p>
+<ul>
+<li>聚合用于建筑构件，以指示墙体内的龙骨等部分；</li>
+<li>聚合用于空间元素，以指示空间结构，例如建筑物内的楼层；</li>
+<li>聚合用于系统，以指示子系统，例如分支电路。</li>
+</ul>
+<p>聚合是一种双向关系，从复合体到其部分的这种关系称为分解（Decomposition），从部分到其复合体的这种关系称为组合（Composition）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsDecomposedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a>:RelatingObject
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -694,20 +713,15 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
+<p>概念 <em>批准关联</em> 描述了对象或对象类型如何关联批准，指示谁需要批准数据、是否已批准的状态以及批准的日期/时间。批准可能需要多个方扮演各种角色。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatingApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:TimeOfApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Status -&gt; IfcLabel_1
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -718,9 +732,35 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>概念 <em>约束关联</em> 描述了对象或对象类型如何关联约束，指示需要满足的定性目标或定量指标。</p>
+<p>基于指标的约束是可衡量的，使得指标有效的状态是计算机可解释的。指标约束基于简单的条件逻辑，例如大于特定值或包含在指定列表或表中。约束可以使用布尔逻辑（如 AND、OR、XOR 或 NOT）组合多个指标。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatingConstraint -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:BenchmarkValues -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:ObjectiveQualifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectiveEnum.htm">IfcObjectiveEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:LogicalAggregator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogicalOperatorEnum.htm">IfcLogicalOperatorEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetricValueSelect.htm">IfcMetricValueSelect</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; IfcAppliedValue_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Benchmark -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBenchmarkEnum.htm">IfcBenchmarkEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:ReferencePath -&gt; IfcReference_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Description -&gt; IfcText_1
+    IfcAppliedValue_0:ArithmeticOperator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArithmeticOperatorEnum.htm">IfcArithmeticOperatorEnum</a>
+    IfcAppliedValue_0:Components -&gt; IfcAppliedValue_1
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Rows -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Columns -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Identifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Description -&gt; IfcText_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:ReferencePath -&gt; IfcReference_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue[binding="DataValue"]
+    IfcReference_1:AttributeIdentifier[binding="Attribute1"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -731,9 +771,19 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>概念 <em>文档关联</em> 描述了对象或对象类型如何关联文档，指示外部文件。文档可以整体引用，例如用于捕获产品手册、数据表、多媒体内容或缩略图。文档中的内容可以从任何对象引用，并可用于同步其他文件中的信息，例如项目管理应用程序的项目计划。</p>
+<p>文档的典型元数据，如发布日期、编辑者等，可以与关联一起捕获，但文档内容仍保留在外部文件中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatingDocument -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name[binding="Name"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -744,9 +794,19 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>概念 <em>库关联</em> 描述了对象和对象类型如何关联库实体，指示另一个数据源，例如来自模型服务器、产品库或外部数据库或系统，这些数据源用更多详细信息丰富数据。库可以整体从项目或项目库中引用，指示数据的源和版本。库中的内容可以从项目或项目库中的任何对象、类型对象、属性和某些资源模式实体中引用。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Language -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLanguageId.htm">IfcLanguageId</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:ReferencedLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary[binding="RelatingLibrary"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -757,9 +817,18 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>任何产品或产品类型都可以关联材料，以指示对象的物理组成。</p>
+<aside class="aside-example"><mark>示例</mark> 对象可以由单一材料或具有特定布局的材料集组成。几个例子包括：
+* 楼板可以关联一层混凝土；
+* 梁可以关联钢的 I 形剖面；
+* 门可以关联用于框架和玻璃的构成件；
+* 端口可以关联流过它的剖面和/或材料，例如热水。</aside>
+<p>材料可以具有用于表面样式的表示，指示 3D 渲染的颜色、纹理和光反射率。材料可以具有用于填充样式的表示，指示 2D 渲染的颜色、图案和阴影线。材料可以具有密度、弹性、热阻等属性，如本规范中所定义。材料也可以根据引用的行业标准进行分类。</p>
+<aside class="aside-example"><mark>示例</mark> 材料信息也可以在对象类型级别提供，定义相同类型的所有实例的通用材料数据。然后可以通过逆向 <em>IsTypedBy</em> 关系访问对象类型，并通过其 <em>HasAssociations</em> 逆向关系和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>.RelatingMaterial</em> 指向材料信息。如果两者都提供，则直接分配给对象实例的材料将覆盖分配给对象类型的材料。</aside>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -770,9 +839,14 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>材料直接与产品和产品类型关联，以表示整个对象的均匀材料。</p>
+<p>材料也可以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 关联，为该类型的实例定义材料。如果材料同时在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 上进行关联，则直接分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的材料具有优先权。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatingMaterial -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a> -&gt; Material
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -783,9 +857,18 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>嵌套表示主体结构（称为“主机”）与附加组件（称为“被托管元素”）之间的外部有序部分组成关系。嵌套的概念有多种用法。例如：</p>
+<ul>
+<li>嵌套用于产品构件，以指示外部可连接部件，例如安装在水槽上的水龙头或安装在接线盒内的开关。</li>
+<li>嵌套用于控制对象，以指示规范层次结构。</li>
+<li>嵌套用于过程对象，以指示可能并行或串行发生的从属过程。</li>
+<li>嵌套用于资源对象，以指示可能并行或串行发生的从属资源分配。</li>
+</ul>
+<p>嵌套是一种双向关系，从主机结构到其附加组件的关系称为嵌套（Nesting），从组件到其包含结构的关系称为托管（Hosting）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsNestedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>:RelatingObject
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -825,7 +908,59 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>
-<small>(8)</small>
+<small>(16)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>聚合表示整体结构（称为“复合体”）与从属组件（称为“部分”）之间的内部无序部分组成关系。聚合的概念有多种用法。例如：</p>
+<ul>
+<li>聚合用于建筑构件，以指示墙体内的龙骨等部分；</li>
+<li>聚合用于空间元素，以指示空间结构，例如建筑物内的楼层；</li>
+<li>聚合用于系统，以指示子系统，例如分支电路。</li>
+</ul>
+<p>聚合是一种双向关系，从复合体到其部分的这种关系称为分解（Decomposition），从部分到其复合体的这种关系称为组合（Composition）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsDecomposedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a>:RelatingObject
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>批准关联</em> 描述了对象或对象类型如何关联批准，指示谁需要批准数据、是否已批准的状态以及批准的日期/时间。批准可能需要多个方扮演各种角色。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatingApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:TimeOfApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Status -&gt; IfcLabel_1
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -836,9 +971,13 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>_分配到组_建立对象到组的分配，组是对象的任意集合。它是_组分配_的补充概念模板，定义了对象如何被组分配。</p>
+<p>分组关系除了将对象分组外，不具有任何其他含义。它是非层次化的，意味着对象可以被分配到多个组，并且不干扰其他关系概念，例如_元素分解_。分组关系允许子组被分组到组中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments[binding="IsAssigned"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -855,7 +994,190 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Constraint_Association/content.html">Constraint Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>约束关联</em> 描述了对象或对象类型如何关联约束，指示需要满足的定性目标或定量指标。</p>
+<p>基于指标的约束是可衡量的，使得指标有效的状态是计算机可解释的。指标约束基于简单的条件逻辑，例如大于特定值或包含在指定列表或表中。约束可以使用布尔逻辑（如 AND、OR、XOR 或 NOT）组合多个指标。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatingConstraint -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:BenchmarkValues -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:ObjectiveQualifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectiveEnum.htm">IfcObjectiveEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:LogicalAggregator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogicalOperatorEnum.htm">IfcLogicalOperatorEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetricValueSelect.htm">IfcMetricValueSelect</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; IfcAppliedValue_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Benchmark -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBenchmarkEnum.htm">IfcBenchmarkEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:ReferencePath -&gt; IfcReference_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Description -&gt; IfcText_1
+    IfcAppliedValue_0:ArithmeticOperator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArithmeticOperatorEnum.htm">IfcArithmeticOperatorEnum</a>
+    IfcAppliedValue_0:Components -&gt; IfcAppliedValue_1
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Rows -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Columns -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Identifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Description -&gt; IfcText_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:ReferencePath -&gt; IfcReference_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue[binding="DataValue"]
+    IfcReference_1:AttributeIdentifier[binding="Attribute1"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Document_Association/content.html">Document Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>文档关联</em> 描述了对象或对象类型如何关联文档，指示外部文件。文档可以整体引用，例如用于捕获产品手册、数据表、多媒体内容或缩略图。文档中的内容可以从任何对象引用，并可用于同步其他文件中的信息，例如项目管理应用程序的项目计划。</p>
+<p>文档的典型元数据，如发布日期、编辑者等，可以与关联一起捕获，但文档内容仍保留在外部文件中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatingDocument -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name[binding="Name"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Library_Association/content.html">Library Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>库关联</em> 描述了对象和对象类型如何关联库实体，指示另一个数据源，例如来自模型服务器、产品库或外部数据库或系统，这些数据源用更多详细信息丰富数据。库可以整体从项目或项目库中引用，指示数据的源和版本。库中的内容可以从项目或项目库中的任何对象、类型对象、属性和某些资源模式实体中引用。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Language -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLanguageId.htm">IfcLanguageId</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:ReferencedLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary[binding="RelatingLibrary"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/content.html">Material Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何产品或产品类型都可以关联材料，以指示对象的物理组成。</p>
+<aside class="aside-example"><mark>示例</mark> 对象可以由单一材料或具有特定布局的材料集组成。几个例子包括：
+* 楼板可以关联一层混凝土；
+* 梁可以关联钢的 I 形剖面；
+* 门可以关联用于框架和玻璃的构成件；
+* 端口可以关联流过它的剖面和/或材料，例如热水。</aside>
+<p>材料可以具有用于表面样式的表示，指示 3D 渲染的颜色、纹理和光反射率。材料可以具有用于填充样式的表示，指示 2D 渲染的颜色、图案和阴影线。材料可以具有密度、弹性、热阻等属性，如本规范中所定义。材料也可以根据引用的行业标准进行分类。</p>
+<aside class="aside-example"><mark>示例</mark> 材料信息也可以在对象类型级别提供，定义相同类型的所有实例的通用材料数据。然后可以通过逆向 <em>IsTypedBy</em> 关系访问对象类型，并通过其 <em>HasAssociations</em> 逆向关系和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>.RelatingMaterial</em> 指向材料信息。如果两者都提供，则直接分配给对象实例的材料将覆盖分配给对象类型的材料。</aside>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/Material_Single/content.html">Material Single</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>材料直接与产品和产品类型关联，以表示整个对象的均匀材料。</p>
+<p>材料也可以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 关联，为该类型的实例定义材料。如果材料同时在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 上进行关联，则直接分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的材料具有优先权。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatingMaterial -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a> -&gt; Material
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Nesting/content.html">Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>嵌套表示主体结构（称为“主机”）与附加组件（称为“被托管元素”）之间的外部有序部分组成关系。嵌套的概念有多种用法。例如：</p>
+<ul>
+<li>嵌套用于产品构件，以指示外部可连接部件，例如安装在水槽上的水龙头或安装在接线盒内的开关。</li>
+<li>嵌套用于控制对象，以指示规范层次结构。</li>
+<li>嵌套用于过程对象，以指示可能并行或串行发生的从属过程。</li>
+<li>嵌套用于资源对象，以指示可能并行或串行发生的从属资源分配。</li>
+</ul>
+<p>嵌套是一种双向关系，从主机结构到其附加组件的关系称为嵌套（Nesting），从组件到其包含结构的关系称为托管（Hosting）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsNestedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>:RelatingObject
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -866,9 +1188,25 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>======================</p>
+<p>许多对象实例具有一个名为 <em>PredefinedType</em> 的特性，该特性是一个特定的枚举。这种预定义类型本质上提供了另一种级别的“通过继承进行分类”，以在无需额外子类型的情况下进一步区分对象。预定义类型不仅是信息性的；各种规则适用，例如适用的属性集、部件组成和分配端口。此类预定义类型通过为 <em>PredefinedType</em> 特性选择正确的枚举值来添加。如果需要自定义值，则必须使用 <em>ObjectType</em> 特性来定义此类自定义类型，而 <em>PredefinedType</em> 则设置为 <em>USERDEFINED</em>。</p>
+<p>为 <em>Object Occurrence Predefined Type</em> 提供的主要特性是：</p>
+<ul>
+<li><em>PredefinedType</em>：包含实体特定的预定义类型枚举，以进一步分类实体</li>
+<li><em>ObjectType</em>：允许自定义值，如果没有适用的枚举值</li>
+</ul>
+<p>如果对象通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 进行类型化，则仅当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 处的 <em>PredefinedType</em> 设置为 <em>NOTDEFINED</em> 时，才能使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 实例处的 <em>PredefinedType</em>。</p>
+<p>请注意，PredefinedType 特性本身是在继承层次结构的叶类中定义的，并为该给定叶类提供了一个特定的枚举特性。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:IsTypedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatingType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType[binding="UserDefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:PredefinedType[binding="PredefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:ElementType[binding="TypeUserdefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:PredefinedType[binding="TypePredefinedType"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -947,7 +1285,82 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>
-<small>(6)</small>
+<small>(16)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>聚合表示整体结构（称为“复合体”）与从属组件（称为“部分”）之间的内部无序部分组成关系。聚合的概念有多种用法。例如：</p>
+<ul>
+<li>聚合用于建筑构件，以指示墙体内的龙骨等部分；</li>
+<li>聚合用于空间元素，以指示空间结构，例如建筑物内的楼层；</li>
+<li>聚合用于系统，以指示子系统，例如分支电路。</li>
+</ul>
+<p>聚合是一种双向关系，从复合体到其部分的这种关系称为分解（Decomposition），从部分到其复合体的这种关系称为组合（Composition）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsDecomposedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a>:RelatingObject
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>批准关联</em> 描述了对象或对象类型如何关联批准，指示谁需要批准数据、是否已批准的状态以及批准的日期/时间。批准可能需要多个方扮演各种角色。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatingApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:TimeOfApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Status -&gt; IfcLabel_1
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>_分配到组_建立对象到组的分配，组是对象的任意集合。它是_组分配_的补充概念模板，定义了对象如何被组分配。</p>
+<p>分组关系除了将对象分组外，不具有任何其他含义。它是非层次化的，意味着对象可以被分配到多个组，并且不干扰其他关系概念，例如_元素分解_。分组关系允许子组被分组到组中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments[binding="IsAssigned"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -964,7 +1377,225 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Constraint_Association/content.html">Constraint Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>约束关联</em> 描述了对象或对象类型如何关联约束，指示需要满足的定性目标或定量指标。</p>
+<p>基于指标的约束是可衡量的，使得指标有效的状态是计算机可解释的。指标约束基于简单的条件逻辑，例如大于特定值或包含在指定列表或表中。约束可以使用布尔逻辑（如 AND、OR、XOR 或 NOT）组合多个指标。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatingConstraint -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:BenchmarkValues -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:ObjectiveQualifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectiveEnum.htm">IfcObjectiveEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:LogicalAggregator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogicalOperatorEnum.htm">IfcLogicalOperatorEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetricValueSelect.htm">IfcMetricValueSelect</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; IfcAppliedValue_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Benchmark -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBenchmarkEnum.htm">IfcBenchmarkEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:ReferencePath -&gt; IfcReference_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Description -&gt; IfcText_1
+    IfcAppliedValue_0:ArithmeticOperator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArithmeticOperatorEnum.htm">IfcArithmeticOperatorEnum</a>
+    IfcAppliedValue_0:Components -&gt; IfcAppliedValue_1
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Rows -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Columns -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Identifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Description -&gt; IfcText_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:ReferencePath -&gt; IfcReference_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue[binding="DataValue"]
+    IfcReference_1:AttributeIdentifier[binding="Attribute1"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Document_Association/content.html">Document Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>文档关联</em> 描述了对象或对象类型如何关联文档，指示外部文件。文档可以整体引用，例如用于捕获产品手册、数据表、多媒体内容或缩略图。文档中的内容可以从任何对象引用，并可用于同步其他文件中的信息，例如项目管理应用程序的项目计划。</p>
+<p>文档的典型元数据，如发布日期、编辑者等，可以与关联一起捕获，但文档内容仍保留在外部文件中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatingDocument -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name[binding="Name"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Library_Association/content.html">Library Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>库关联</em> 描述了对象和对象类型如何关联库实体，指示另一个数据源，例如来自模型服务器、产品库或外部数据库或系统，这些数据源用更多详细信息丰富数据。库可以整体从项目或项目库中引用，指示数据的源和版本。库中的内容可以从项目或项目库中的任何对象、类型对象、属性和某些资源模式实体中引用。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Language -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLanguageId.htm">IfcLanguageId</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:ReferencedLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary[binding="RelatingLibrary"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/content.html">Material Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何产品或产品类型都可以关联材料，以指示对象的物理组成。</p>
+<aside class="aside-example"><mark>示例</mark> 对象可以由单一材料或具有特定布局的材料集组成。几个例子包括：
+* 楼板可以关联一层混凝土；
+* 梁可以关联钢的 I 形剖面；
+* 门可以关联用于框架和玻璃的构成件；
+* 端口可以关联流过它的剖面和/或材料，例如热水。</aside>
+<p>材料可以具有用于表面样式的表示，指示 3D 渲染的颜色、纹理和光反射率。材料可以具有用于填充样式的表示，指示 2D 渲染的颜色、图案和阴影线。材料可以具有密度、弹性、热阻等属性，如本规范中所定义。材料也可以根据引用的行业标准进行分类。</p>
+<aside class="aside-example"><mark>示例</mark> 材料信息也可以在对象类型级别提供，定义相同类型的所有实例的通用材料数据。然后可以通过逆向 <em>IsTypedBy</em> 关系访问对象类型，并通过其 <em>HasAssociations</em> 逆向关系和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>.RelatingMaterial</em> 指向材料信息。如果两者都提供，则直接分配给对象实例的材料将覆盖分配给对象类型的材料。</aside>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/Material_Single/content.html">Material Single</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>材料直接与产品和产品类型关联，以表示整个对象的均匀材料。</p>
+<p>材料也可以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 关联，为该类型的实例定义材料。如果材料同时在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 上进行关联，则直接分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的材料具有优先权。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatingMaterial -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a> -&gt; Material
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Nesting/content.html">Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>嵌套表示主体结构（称为“主机”）与附加组件（称为“被托管元素”）之间的外部有序部分组成关系。嵌套的概念有多种用法。例如：</p>
+<ul>
+<li>嵌套用于产品构件，以指示外部可连接部件，例如安装在水槽上的水龙头或安装在接线盒内的开关。</li>
+<li>嵌套用于控制对象，以指示规范层次结构。</li>
+<li>嵌套用于过程对象，以指示可能并行或串行发生的从属过程。</li>
+<li>嵌套用于资源对象，以指示可能并行或串行发生的从属资源分配。</li>
+</ul>
+<p>嵌套是一种双向关系，从主机结构到其附加组件的关系称为嵌套（Nesting），从组件到其包含结构的关系称为托管（Hosting）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsNestedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>:RelatingObject
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>======================</p>
+<p>许多对象实例具有一个名为 <em>PredefinedType</em> 的特性，该特性是一个特定的枚举。这种预定义类型本质上提供了另一种级别的“通过继承进行分类”，以在无需额外子类型的情况下进一步区分对象。预定义类型不仅是信息性的；各种规则适用，例如适用的属性集、部件组成和分配端口。此类预定义类型通过为 <em>PredefinedType</em> 特性选择正确的枚举值来添加。如果需要自定义值，则必须使用 <em>ObjectType</em> 特性来定义此类自定义类型，而 <em>PredefinedType</em> 则设置为 <em>USERDEFINED</em>。</p>
+<p>为 <em>Object Occurrence Predefined Type</em> 提供的主要特性是：</p>
+<ul>
+<li><em>PredefinedType</em>：包含实体特定的预定义类型枚举，以进一步分类实体</li>
+<li><em>ObjectType</em>：允许自定义值，如果没有适用的枚举值</li>
+</ul>
+<p>如果对象通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 进行类型化，则仅当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 处的 <em>PredefinedType</em> 设置为 <em>NOTDEFINED</em> 时，才能使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 实例处的 <em>PredefinedType</em>。</p>
+<p>请注意，PredefinedType 特性本身是在继承层次结构的叶类中定义的，并为该给定叶类提供了一个特定的枚举特性。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:IsTypedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatingType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType[binding="UserDefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:PredefinedType[binding="PredefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:ElementType[binding="TypeUserdefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:PredefinedType[binding="TypePredefinedType"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1061,7 +1692,81 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">IfcConstructionResource</a>
-<small>(8)</small>
+<small>(18)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Constraint_Association/content.html">Constraint Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>约束关联</em> 描述了对象或对象类型如何关联约束，指示需要满足的定性目标或定量指标。</p>
+<p>基于指标的约束是可衡量的，使得指标有效的状态是计算机可解释的。指标约束基于简单的条件逻辑，例如大于特定值或包含在指定列表或表中。约束可以使用布尔逻辑（如 AND、OR、XOR 或 NOT）组合多个指标。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatingConstraint -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:BenchmarkValues -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:ObjectiveQualifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectiveEnum.htm">IfcObjectiveEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:LogicalAggregator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogicalOperatorEnum.htm">IfcLogicalOperatorEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetricValueSelect.htm">IfcMetricValueSelect</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; IfcAppliedValue_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Benchmark -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBenchmarkEnum.htm">IfcBenchmarkEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:ReferencePath -&gt; IfcReference_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Description -&gt; IfcText_1
+    IfcAppliedValue_0:ArithmeticOperator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArithmeticOperatorEnum.htm">IfcArithmeticOperatorEnum</a>
+    IfcAppliedValue_0:Components -&gt; IfcAppliedValue_1
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Rows -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Columns -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Identifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Description -&gt; IfcText_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:ReferencePath -&gt; IfcReference_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue[binding="DataValue"]
+    IfcReference_1:AttributeIdentifier[binding="Attribute1"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Document_Association/content.html">Document Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>文档关联</em> 描述了对象或对象类型如何关联文档，指示外部文件。文档可以整体引用，例如用于捕获产品手册、数据表、多媒体内容或缩略图。文档中的内容可以从任何对象引用，并可用于同步其他文件中的信息，例如项目管理应用程序的项目计划。</p>
+<p>文档的典型元数据，如发布日期、编辑者等，可以与关联一起捕获，但文档内容仍保留在外部文件中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatingDocument -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name[binding="Name"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1121,6 +1826,81 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>聚合表示整体结构（称为“复合体”）与从属组件（称为“部分”）之间的内部无序部分组成关系。聚合的概念有多种用法。例如：</p>
+<ul>
+<li>聚合用于建筑构件，以指示墙体内的龙骨等部分；</li>
+<li>聚合用于空间元素，以指示空间结构，例如建筑物内的楼层；</li>
+<li>聚合用于系统，以指示子系统，例如分支电路。</li>
+</ul>
+<p>聚合是一种双向关系，从复合体到其部分的这种关系称为分解（Decomposition），从部分到其复合体的这种关系称为组合（Composition）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsDecomposedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a>:RelatingObject
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>批准关联</em> 描述了对象或对象类型如何关联批准，指示谁需要批准数据、是否已批准的状态以及批准的日期/时间。批准可能需要多个方扮演各种角色。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatingApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:TimeOfApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Status -&gt; IfcLabel_1
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>_分配到组_建立对象到组的分配，组是对象的任意集合。它是_组分配_的补充概念模板，定义了对象如何被组分配。</p>
+<p>分组关系除了将对象分组外，不具有任何其他含义。它是非层次化的，意味着对象可以被分配到多个组，并且不干扰其他关系概念，例如_元素分解_。分组关系允许子组被分组到组中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments[binding="IsAssigned"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
@@ -1133,7 +1913,151 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Library_Association/content.html">Library Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>库关联</em> 描述了对象和对象类型如何关联库实体，指示另一个数据源，例如来自模型服务器、产品库或外部数据库或系统，这些数据源用更多详细信息丰富数据。库可以整体从项目或项目库中引用，指示数据的源和版本。库中的内容可以从项目或项目库中的任何对象、类型对象、属性和某些资源模式实体中引用。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Language -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLanguageId.htm">IfcLanguageId</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:ReferencedLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary[binding="RelatingLibrary"]
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/content.html">Material Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何产品或产品类型都可以关联材料，以指示对象的物理组成。</p>
+<aside class="aside-example"><mark>示例</mark> 对象可以由单一材料或具有特定布局的材料集组成。几个例子包括：
+* 楼板可以关联一层混凝土；
+* 梁可以关联钢的 I 形剖面；
+* 门可以关联用于框架和玻璃的构成件；
+* 端口可以关联流过它的剖面和/或材料，例如热水。</aside>
+<p>材料可以具有用于表面样式的表示，指示 3D 渲染的颜色、纹理和光反射率。材料可以具有用于填充样式的表示，指示 2D 渲染的颜色、图案和阴影线。材料可以具有密度、弹性、热阻等属性，如本规范中所定义。材料也可以根据引用的行业标准进行分类。</p>
+<aside class="aside-example"><mark>示例</mark> 材料信息也可以在对象类型级别提供，定义相同类型的所有实例的通用材料数据。然后可以通过逆向 <em>IsTypedBy</em> 关系访问对象类型，并通过其 <em>HasAssociations</em> 逆向关系和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>.RelatingMaterial</em> 指向材料信息。如果两者都提供，则直接分配给对象实例的材料将覆盖分配给对象类型的材料。</aside>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/Material_Single/content.html">Material Single</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>材料直接与产品和产品类型关联，以表示整个对象的均匀材料。</p>
+<p>材料也可以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 关联，为该类型的实例定义材料。如果材料同时在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 上进行关联，则直接分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的材料具有优先权。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatingMaterial -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a> -&gt; Material
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Nesting/content.html">Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>嵌套表示主体结构（称为“主机”）与附加组件（称为“被托管元素”）之间的外部有序部分组成关系。嵌套的概念有多种用法。例如：</p>
+<ul>
+<li>嵌套用于产品构件，以指示外部可连接部件，例如安装在水槽上的水龙头或安装在接线盒内的开关。</li>
+<li>嵌套用于控制对象，以指示规范层次结构。</li>
+<li>嵌套用于过程对象，以指示可能并行或串行发生的从属过程。</li>
+<li>嵌套用于资源对象，以指示可能并行或串行发生的从属资源分配。</li>
+</ul>
+<p>嵌套是一种双向关系，从主机结构到其附加组件的关系称为嵌套（Nesting），从组件到其包含结构的关系称为托管（Hosting）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsNestedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>:RelatingObject
+}
+</code></pre>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>======================</p>
+<p>许多对象实例具有一个名为 <em>PredefinedType</em> 的特性，该特性是一个特定的枚举。这种预定义类型本质上提供了另一种级别的“通过继承进行分类”，以在无需额外子类型的情况下进一步区分对象。预定义类型不仅是信息性的；各种规则适用，例如适用的属性集、部件组成和分配端口。此类预定义类型通过为 <em>PredefinedType</em> 特性选择正确的枚举值来添加。如果需要自定义值，则必须使用 <em>ObjectType</em> 特性来定义此类自定义类型，而 <em>PredefinedType</em> 则设置为 <em>USERDEFINED</em>。</p>
+<p>为 <em>Object Occurrence Predefined Type</em> 提供的主要特性是：</p>
+<ul>
+<li><em>PredefinedType</em>：包含实体特定的预定义类型枚举，以进一步分类实体</li>
+<li><em>ObjectType</em>：允许自定义值，如果没有适用的枚举值</li>
+</ul>
+<p>如果对象通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 进行类型化，则仅当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 处的 <em>PredefinedType</em> 设置为 <em>NOTDEFINED</em> 时，才能使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 实例处的 <em>PredefinedType</em>。</p>
+<p>请注意，PredefinedType 特性本身是在继承层次结构的叶类中定义的，并为该给定叶类提供了一个特定的枚举特性。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:IsTypedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatingType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType[binding="UserDefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:PredefinedType[binding="PredefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:ElementType[binding="TypeUserdefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:PredefinedType[binding="TypePredefinedType"]
+}
+</code></pre>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1208,18 +2132,18 @@
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 35 个隐藏的继承概念
+                    点击显示 63 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 35 个继承概念
+                    点击隐藏 63 个继承概念
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="3">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResource.htm">IfcLaborResource</a>
-<small>(12)</small>
+<small>(22)</small>
 </td>
 </tr>
 <tr>
@@ -1254,6 +2178,31 @@
                 General
             </td>
 <td data-label="Description">
+<p>任何对象的专门化都可以与多个数量集实例相关联。一个数量集包含多个数量实例。数量实例值的类型是计数、长度、面积、体积、重量、时间，或数量的组合。每个数量由其名称、值以及可选的描述和公式定义。</p>
+<p>数量集通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a></em> 的实例来表示，其中 <em>Name</em> 属性确定了数量集的通用标识符。本规范包含一些预定义数量集，每个数量集都提供了模板定义。模板的名称必须用作 <em>Name</em> 属性的值。<em>MethodOfMeasurement</em> 属性指定了计算各个数量值的方法。对于本规范中包含的数量集模板，<em>MethodOfMeasurement</em> 的值应为“BaseQuantities”。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:IsDefinedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a>:RelatingPropertyDefinition -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:MethodOfMeasurement -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Quantities -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityLength.htm">IfcQuantityLength</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Quantities -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Quantities -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityVolume.htm">IfcQuantityVolume</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Quantities -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityWeight.htm">IfcQuantityWeight</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Quantities -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Quantities -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityTime.htm">IfcQuantityTime</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityLength.htm">IfcQuantityLength</a> -&gt; Length_Quantity
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityArea.htm">IfcQuantityArea</a> -&gt; Area_Quantity
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityVolume.htm">IfcQuantityVolume</a> -&gt; Volume_Quantity
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityWeight.htm">IfcQuantityWeight</a> -&gt; Weight_Quantity
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a> -&gt; Count_Quantity
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityTime.htm">IfcQuantityTime</a> -&gt; Time_Quantity
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:PredefinedType[binding="PredefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Name[binding="QsetName"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>:Quantities[binding="Quantities"]
+}
+</code></pre>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -1270,6 +2219,14 @@
                 General
             </td>
 <td data-label="Description">
+<p>资源可能拥有指示可用资源（可供使用）的分配。此类分配的一个示例是满足木工劳动力资源的人员。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResource.htm">IfcResource</a>:ResourceOf -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToResource.htm">IfcRelAssignsToResource</a>:RelatingResource
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToResource.htm">IfcRelAssignsToResource</a>:RelatedObjects -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActor.htm">IfcActor</a>:HasAssignments
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToResource.htm">IfcRelAssignsToResource</a>:RelatedObjects -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a>:HasAssignments
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToResource.htm">IfcRelAssignsToResource</a>:RelatedObjects[binding="Type"]
+}
+</code></pre>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -1290,8 +2247,18 @@
                 General
             </td>
 <td data-label="Description">
+<p>资源可以关联成本，指示根据指定基本数量产生的财务成本和环境影响。</p>
+<p>每个成本值都可以使用固定金额定义，或根据指定的公式计算。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">IfcConstructionResource</a>:BaseCosts -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">IfcConstructionResource</a>:BaseCosts[binding="CostType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a>:Name[binding="CostName"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a>:AppliedValue[binding="ValueType"]
+}
+</code></pre>
 <p>此概念可与以下组合一起应用</p>
-<figure><a class="anchor" id="-f6cdc702-7c8b-4c5a-9870-a88d6ff9bfce"></a><table>
+<figure><a class="anchor" id="-f52c0f6c-719a-4dcc-9e41-861f2fb1e339"></a><table>
 <thead>
 <tr>
 <th>CostType</th>
@@ -1330,7 +2297,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.11.E<a class="link" href="#-f6cdc702-7c8b-4c5a-9870-a88d6ff9bfce"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.11.E<a class="link" href="#-f52c0f6c-719a-4dcc-9e41-861f2fb1e339"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
@@ -1341,8 +2308,17 @@
                 General
             </td>
 <td data-label="Description">
+<p>资源可以根据基本数量定义，其中分配的任务消耗相对于输出数量的该数量的资源。</p>
+<p>对于人工和设备等基于工作的资源，数量基于时间。对于基于产品的资源，数量基于计数。对于基于材料的资源，数量基于体积。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">IfcConstructionResource</a>:BaseQuantity -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">IfcConstructionResource</a>:BaseQuantity[binding="QuantityType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a>:Name[binding="QuantityName"]
+}
+</code></pre>
 <p>此概念可与以下组合一起应用</p>
-<figure><a class="anchor" id="-c129b7e7-caf0-4f98-86f7-d4ac9678ae76"></a><table>
+<figure><a class="anchor" id="-82016b95-108c-462a-8955-804cee4852f8"></a><table>
 <thead>
 <tr>
 <th>QuantityType</th>
@@ -1363,7 +2339,82 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.11.F<a class="link" href="#-c129b7e7-caf0-4f98-86f7-d4ac9678ae76"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.11.F<a class="link" href="#-82016b95-108c-462a-8955-804cee4852f8"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>聚合表示整体结构（称为“复合体”）与从属组件（称为“部分”）之间的内部无序部分组成关系。聚合的概念有多种用法。例如：</p>
+<ul>
+<li>聚合用于建筑构件，以指示墙体内的龙骨等部分；</li>
+<li>聚合用于空间元素，以指示空间结构，例如建筑物内的楼层；</li>
+<li>聚合用于系统，以指示子系统，例如分支电路。</li>
+</ul>
+<p>聚合是一种双向关系，从复合体到其部分的这种关系称为分解（Decomposition），从部分到其复合体的这种关系称为组合（Composition）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsDecomposedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a>:RelatingObject
+}
+</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>批准关联</em> 描述了对象或对象类型如何关联批准，指示谁需要批准数据、是否已批准的状态以及批准的日期/时间。批准可能需要多个方扮演各种角色。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a>:RelatingApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:TimeOfApproval -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a>:Status -&gt; IfcLabel_1
+}
+</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Assignment/Assignment_to_Group/content.html">Assignment to Group</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>_分配到组_建立对象到组的分配，组是对象的任意集合。它是_组分配_的补充概念模板，定义了对象如何被组分配。</p>
+<p>分组关系除了将对象分组外，不具有任何其他含义。它是非层次化的，意味着对象可以被分配到多个组，并且不干扰其他关系概念，例如_元素分解_。分组关系允许子组被分组到组中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToGroup.htm">IfcRelAssignsToGroup</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:HasAssignments[binding="IsAssigned"]
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -1380,7 +2431,190 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
+<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Constraint_Association/content.html">Constraint Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>约束关联</em> 描述了对象或对象类型如何关联约束，指示需要满足的定性目标或定量指标。</p>
+<p>基于指标的约束是可衡量的，使得指标有效的状态是计算机可解释的。指标约束基于简单的条件逻辑，例如大于特定值或包含在指定列表或表中。约束可以使用布尔逻辑（如 AND、OR、XOR 或 NOT）组合多个指标。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a>:RelatingConstraint -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:BenchmarkValues -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:ObjectiveQualifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectiveEnum.htm">IfcObjectiveEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a>:LogicalAggregator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLogicalOperatorEnum.htm">IfcLogicalOperatorEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetricValueSelect.htm">IfcMetricValueSelect</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; IfcAppliedValue_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Benchmark -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBenchmarkEnum.htm">IfcBenchmarkEnum</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:ReferencePath -&gt; IfcReference_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:Description -&gt; IfcText_1
+    IfcAppliedValue_0:ArithmeticOperator -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArithmeticOperatorEnum.htm">IfcArithmeticOperatorEnum</a>
+    IfcAppliedValue_0:Components -&gt; IfcAppliedValue_1
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>
+    IfcAppliedValue_0:AppliedValue -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Rows -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTable.htm">IfcTable</a>:Columns -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Identifier -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:Description -&gt; IfcText_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a>:ReferencePath -&gt; IfcReference_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMetric.htm">IfcMetric</a>:DataValue[binding="DataValue"]
+    IfcReference_1:AttributeIdentifier[binding="Attribute1"]
+}
+</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Document_Association/content.html">Document Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>文档关联</em> 描述了对象或对象类型如何关联文档，指示外部文件。文档可以整体引用，例如用于捕获产品手册、数据表、多媒体内容或缩略图。文档中的内容可以从任何对象引用，并可用于同步其他文件中的信息，例如项目管理应用程序的项目计划。</p>
+<p>文档的典型元数据，如发布日期、编辑者等，可以与关联一起捕获，但文档内容仍保留在外部文件中。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name -&gt; IfcLabel_0
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:RelatingDocument -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Name -&gt; IfcLabel_1
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a>:Name[binding="Name"]
+}
+</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Library_Association/content.html">Library Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>概念 <em>库关联</em> 描述了对象和对象类型如何关联库实体，指示另一个数据源，例如来自模型服务器、产品库或外部数据库或系统，这些数据源用更多详细信息丰富数据。库可以整体从项目或项目库中引用，指示数据的源和版本。库中的内容可以从项目或项目库中的任何对象、类型对象、属性和某些资源模式实体中引用。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Location -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Identification -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:Language -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLanguageId.htm">IfcLanguageId</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryReference.htm">IfcLibraryReference</a>:ReferencedLibrary -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLibraryInformation.htm">IfcLibraryInformation</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a>:RelatingLibrary[binding="RelatingLibrary"]
+}
+</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/content.html">Material Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>任何产品或产品类型都可以关联材料，以指示对象的物理组成。</p>
+<aside class="aside-example"><mark>示例</mark> 对象可以由单一材料或具有特定布局的材料集组成。几个例子包括：
+* 楼板可以关联一层混凝土；
+* 梁可以关联钢的 I 形剖面；
+* 门可以关联用于框架和玻璃的构成件；
+* 端口可以关联流过它的剖面和/或材料，例如热水。</aside>
+<p>材料可以具有用于表面样式的表示，指示 3D 渲染的颜色、纹理和光反射率。材料可以具有用于填充样式的表示，指示 2D 渲染的颜色、图案和阴影线。材料可以具有密度、弹性、热阻等属性，如本规范中所定义。材料也可以根据引用的行业标准进行分类。</p>
+<aside class="aside-example"><mark>示例</mark> 材料信息也可以在对象类型级别提供，定义相同类型的所有实例的通用材料数据。然后可以通过逆向 <em>IsTypedBy</em> 关系访问对象类型，并通过其 <em>HasAssociations</em> 逆向关系和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>.RelatingMaterial</em> 指向材料信息。如果两者都提供，则直接分配给对象实例的材料将覆盖分配给对象类型的材料。</aside>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+}
+</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Material_Association/Material_Single/content.html">Material Single</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>材料直接与产品和产品类型关联，以表示整个对象的均匀材料。</p>
+<p>材料也可以与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 关联，为该类型的实例定义材料。如果材料同时在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 上进行关联，则直接分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的材料具有优先权。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:HasAssociations -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a>:RelatingMaterial -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a> -&gt; Material
+}
+</code></pre>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Nesting/content.html">Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>嵌套表示主体结构（称为“主机”）与附加组件（称为“被托管元素”）之间的外部有序部分组成关系。嵌套的概念有多种用法。例如：</p>
+<ul>
+<li>嵌套用于产品构件，以指示外部可连接部件，例如安装在水槽上的水龙头或安装在接线盒内的开关。</li>
+<li>嵌套用于控制对象，以指示规范层次结构。</li>
+<li>嵌套用于过程对象，以指示可能并行或串行发生的从属过程。</li>
+<li>嵌套用于资源对象，以指示可能并行或串行发生的从属资源分配。</li>
+</ul>
+<p>嵌套是一种双向关系，从主机结构到其附加组件的关系称为嵌套（Nesting），从组件到其包含结构的关系称为托管（Hosting）。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a>:IsNestedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a>:RelatingObject
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -1400,6 +2634,41 @@
 <p>资源可以通过_IfcRelNests_关系分解为分配池，如图181所示。例如，“电工”的_IfcLaborResource_可以分解为三个特定任务的_IfcLaborResource_对象：“电气布线”、“一楼电路”和“二楼电路”。相关方和被相关方都可以表示相同的_ResourceTime.ScheduleUsage_数量（例如，6名工人分时使用），或者被相关方可以分解_ResourceTime.ScheduleUsage_数量以供保留使用（例如，4名工人和2名工人）。</p>
 <p>一种常见的情况是两个嵌套级别，其中第一级资源没有任务分配；而第二级资源有特定的任务分配，表明资源被细分为特定任务的分配。虽然模型允许无限嵌套资源，但实施协议可能会限制为两个嵌套级别，并且任务分配专门在第二级进行。</p>
 <figure><a class="anchor" id="-181-"></a><img alt="Composition Use Definition" src="../figures/ifcconstructionresource-composition.png" title="图181 — 施工资源组成使用"/><figcaption>图181 — 施工资源组成使用<a class="link" href="#-181-"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Object_Predefined_Type/content.html">Object Predefined Type</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>======================</p>
+<p>许多对象实例具有一个名为 <em>PredefinedType</em> 的特性，该特性是一个特定的枚举。这种预定义类型本质上提供了另一种级别的“通过继承进行分类”，以在无需额外子类型的情况下进一步区分对象。预定义类型不仅是信息性的；各种规则适用，例如适用的属性集、部件组成和分配端口。此类预定义类型通过为 <em>PredefinedType</em> 特性选择正确的枚举值来添加。如果需要自定义值，则必须使用 <em>ObjectType</em> 特性来定义此类自定义类型，而 <em>PredefinedType</em> 则设置为 <em>USERDEFINED</em>。</p>
+<p>为 <em>Object Occurrence Predefined Type</em> 提供的主要特性是：</p>
+<ul>
+<li><em>PredefinedType</em>：包含实体特定的预定义类型枚举，以进一步分类实体</li>
+<li><em>ObjectType</em>：允许自定义值，如果没有适用的枚举值</li>
+</ul>
+<p>如果对象通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 进行类型化，则仅当 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 处的 <em>PredefinedType</em> 设置为 <em>NOTDEFINED</em> 时，才能使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 实例处的 <em>PredefinedType</em>。</p>
+<p>请注意，PredefinedType 特性本身是在继承层次结构的叶类中定义的，并为该给定叶类提供了一个特定的枚举特性。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:IsTypedBy -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatedObjects
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a>:RelatingType -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:ObjectType[binding="UserDefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a>:PredefinedType[binding="PredefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:ElementType[binding="TypeUserdefinedType"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a>:PredefinedType[binding="TypePredefinedType"]
+}
+</code></pre>
 </td>
 </tr>
 <tr>
@@ -1489,7 +2758,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.3.3.11.D<a class="link" href="#-858bdf97-04cc-4881-8dcf-bb3ee1160247"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.3.3.11.D<a class="link" href="#-9060b2ee-54bb-4a57-a492-6aeed6764052"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.3.3.11.7-Formal-representation-"></a>
     7.3.3.11.7 形式化表示（Formal representation）
 <a class="link" href="#7.3.3.11.7-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -1,0 +1,943 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.1.3.4 IfcWindowLiningProperties（窗框属性） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.1.3.4 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a>（窗框属性）</h1>
+<p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
+<div class="row">
+<div class="card fluid error deprecation">
+<p>
+<mark class="secondary">弃用
+            <a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark>
+            该定义将在标准的未来主版本中移除。
+        </p>
+</div>
+</div>
+<h2><a class="anchor" id="7.1.3.4.1-Semantic-definition-"></a>
+    7.1.3.4.1 语义定义（Semantic definition）
+<a class="link" href="#7.1.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p>窗户门套是用于固定窗户的外部框架。窗户门套用于容纳窗扇或其他门框。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 的参数定义了门套在几何上的相关参数。</p>
+<!-- end of short definition -->
+<aside class="aside-note"><mark>注释</mark> 仅当属性 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em>.ParameterTakesPrecedence 设置为 TRUE 时，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 才应用于构建窗户的三维形状。</aside>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 包含在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a>.HasPropertySets</em> 的属性集中。有关窗户门套的更多信息，可以使用另一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em> 在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 的同一属性集中进行动态扩展。</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 不包含几何表示。但是，它定义了可用于创建窗户类型形状的参数（该形状由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindow.htm">IfcWindow</a></em> 插入到项目的空间上下文中），如图 7.1.3.4.F 所示。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> 中的参数定义了一个标准的窗户门套，包括（如果给定）一个竖挺和一个横梁（用于水平和垂直分隔）。门套的外边界由分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindow.htm">IfcWindow</a></em> 的“轮廓”形状表示确定，该轮廓由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IfcWindowType</a></em> 插入。</p>
+<figure><a class="anchor" id="-1-"></a><table>
+<thead>
+<tr>
+<th>图示</th>
+<th>OperationType</th>
+<th>适用参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><figure><a class="anchor" id="Figure-7.1.3.4.A"></a><img alt="lining 5" src="../figures/ifcwindowliningproperties-fig05.png"/><figcaption>Figure 7.1.3.4.A<a class="link" href="#Figure-7.1.3.4.A"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>All</td>
+<td>LiningDepth（门套深度）、LiningThickness（门套厚度）、LiningOffset（门套偏移）、LiningToPanelOffsetX（门套到门扇的 X 轴偏移）、LiningToPanelOffsetY（门套到门扇的 Y 轴偏移）（注意：内侧定义为窗扇开启操作的方向。）</td>
+</tr>
+<tr>
+<td><figure><a class="anchor" id="Figure-7.1.3.4.B"></a><img alt="lining 1" src="../figures/ifcwindowliningproperties-fig01.png"/><figcaption>Figure 7.1.3.4.B<a class="link" href="#Figure-7.1.3.4.B"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>DoublePanelVertical（双扇垂直，显示）<br/>TriplePanelBottom（三扇底部）<br/>TriplePanelTop（三扇顶部）<br/>TriplePanelLeft（三扇左侧）<br/>TriplePanelRight（三扇右侧）</td>
+<td>MullionThickness（竖挺厚度）、FirstMullionOffset（第一个竖挺偏移）（沿 XZ 平面的 Z 轴测量，作为归一化比例度量）</td>
+</tr>
+<tr>
+<td><figure><a class="anchor" id="Figure-7.1.3.4.C"></a><img alt="lining 2" src="../figures/ifcwindowliningproperties-fig02.png"/><figcaption>Figure 7.1.3.4.C<a class="link" href="#Figure-7.1.3.4.C"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>DoublePanelHorizontal（双扇水平）<br/>TriplePanelBottom（三扇底部）<br/>TriplePanelTop（三扇顶部）<br/>TriplePanelLeft（三扇左侧）<br/>TriplePanelRight（三扇右侧）</td>
+<td>TransomThickness（横梁厚度）、FirstTransomOffset（第一个横梁偏移）（沿 XZ 平面的 X 轴测量，作为归一化比例度量）</td>
+</tr>
+<tr>
+<td><figure><a class="anchor" id="Figure-7.1.3.4.D"></a><img alt="lining 3" src="../figures/ifcwindowliningproperties-fig03.png"/><figcaption>Figure 7.1.3.4.D<a class="link" href="#Figure-7.1.3.4.D"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>TriplePanelVertical（三扇垂直）</td>
+<td>SecondMullionOffset（第二个竖挺偏移）（沿 XZ 平面的 Z 轴测量，作为归一化比例度量）</td>
+</tr>
+<tr>
+<td><figure><a class="anchor" id="Figure-7.1.3.4.E"></a><img alt="lining 4" src="../figures/ifcwindowliningproperties-fig04.png"/><figcaption>Figure 7.1.3.4.E<a class="link" href="#Figure-7.1.3.4.E"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>TriplePanelHorizontal（三扇水平）</td>
+<td>SecondTransomOffset（第二个横梁偏移）（沿 XZ 平面的 X 轴测量，作为归一化比例度量）</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.1.3.4.F — 窗户门套特性<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新实体。在 IFC2x 中已从 <em>IfcWindowLining</em> 重命名而来。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 新增以下属性：<em>LiningOffset</em>、<em>LiningToPanelOffsetX</em>、<em>LiningToPanelOffsetY</em>。属性 <em>ShapeAspectStyle</em> 已弃用，不应再使用。超类型更改为新的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></em>。</aside><aside class="aside-deprecation"><mark>IFC4.3.2.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 此实体及 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPredefinedPropertySet</a></em> 的大多数其他子类型现已弃用。请改用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_WindowLiningProperties.htm">Pset_WindowLiningProperties</a>。</aside>
+<h2><a class="anchor" id="7.1.3.4.2-Entity-inheritance-"></a>
+    7.1.3.4.2 实体继承（Entity inheritance）
+<a class="link" href="#7.1.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantitySet.htm">IfcQuantitySet</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="deprecated current ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoorPanelProperties.htm">IfcDoorPanelProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReinforcementDefinitionProperties.htm">IfcReinforcementDefinitionProperties</a></li>
+<li class="deprecated"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="7.1.3.4.3-Attributes-"></a>
+    7.1.3.4.3 特性（Attributes）
+<a class="link" href="#7.1.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a class="anchor" id="-7e33b0d1-e983-4426-83ae-92d002d743eb"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>特性（Attributes）</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>在整个软件世界中分配全局唯一标识符。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该特性已更改为 OPTIONAL。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可选的描述，用于提供信息性注释。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a></em> 关系，从而引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectLibrary.htm">IfcProjectLibrary</a></em>。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>引用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a></em> 关系，从而引用那些外部定义的概念，如分类、文档或库信息，这些概念与属性定义相关联。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesType</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
+<td data-label="Description">
+<p>属性集分配到的类型对象。该属性集充当类型对象的所有实例的共享属性集。</p>
+<aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 之间的关系是直接关系，未使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，以保持与本标准早期版本的兼容性。</aside>
+<p>{}</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 基数已从 0..1 更改为 0..n，具有基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDefinedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatedPropertySets</td>
+<td data-label="Description">
+<p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em> 与属性集模板的关系，如果给定，则为属性集或数量集及其属性提供定义模板。
+{}</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向关系，更改时保持基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesOccurrence</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatingPropertyDefinition</td>
+<td data-label="Description">
+<p>引用与一个或多个对象实例的关系，这些对象实例的特征由属性集定义定义。可以使用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> 将单个属性集分配给多个对象实例。
+{}</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性从 <em>PropertyDefinitionOf</em> 重命名，具有基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击显示 9 个隐藏的继承特性
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击隐藏 9 个继承特性
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a>
+<small>(12)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                LiningDepth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>窗户门套的深度（垂直于窗户立面平面的尺寸）。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                LiningThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>窗户门套的厚度，如上图所示。如果 <em>LiningThickness</em> 值为 0（零），则表示没有门套的窗户（在这种情况下，所有其他门套参数应设置为 NIL）。如果 <em>LiningThickness</em> 为 NIL，则表示信息不可用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型已修改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                TransomThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>横梁的厚度（窗户内窗扇的水平分隔物），平行于窗户立面平面测量。横梁是门套的一部分，横梁深度假定与门套深度相同。如果 <em>TransomThickness</em> 设置为零（并且 <em>TransomOffset</em> 设置为正长度），则窗户垂直分隔而没有物理分隔。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Data type changed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                MullionThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>竖挺的厚度（窗户内窗扇的垂直分隔物），平行于窗户立面平面测量。竖挺是门套的一部分，竖挺深度假定与门套深度相同。如果 <em>MullionThickness</em> 设置为零（并且 <em>MullionOffset</em> 设置为正长度），则窗户水平分隔而没有物理分隔。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> Data type changed to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                FirstTransomOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>第一个横梁中心的偏移量，沿窗户放置坐标系的 Z 轴测量。偏移量值 = 0.5 表示横梁位于窗户的中间。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                SecondTransomOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>第二个横梁中心的偏移量，沿窗户放置坐标系的 X 轴测量。偏移量值 = 0.666 表示第二个横梁位于窗户的三分之二处。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                FirstMullionOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>第一个竖挺中心的偏移量，沿窗户放置坐标系的 X 轴测量。偏移量值 = 0.5 表示竖挺位于窗户的中间。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">12</td>
+<td data-label="Name">
+                
+                SecondMullionOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>第二个竖挺中心的偏移量，沿窗户放置坐标系的 X 轴测量。偏移量值 = 0.666 表示第二个竖挺位于窗户的三分之二处。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">13</td>
+<td data-label="Name">
+                
+                ShapeAspectStyle
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeAspect.htm">IfcShapeAspect</a></td>
+<td data-label="Description">
+<p>指向形状方面（shape aspect）定义的可选链接，该定义指向用于表示门套的窗户样式的几何表示部分。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">14</td>
+<td data-label="Name">
+                
+                LiningOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>窗户门套的偏移。偏移量是相对于局部坐标系 Y 轴的距离（垂直于窗户平面）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">15</td>
+<td data-label="Name">
+                
+                LiningToPanelOffsetX
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>门套与窗扇之间沿局部坐标系 X 轴测量的偏移。应小于或等于 <em>LiningThickness</em>。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">16</td>
+<td data-label="Name">
+                
+                LiningToPanelOffsetY
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>门套与窗扇之间沿局部坐标系 Y 轴测量的偏移。应小于或等于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a>.PanelThickness</em>。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.1.3.4.G<a class="link" href="#-7e33b0d1-e983-4426-83ae-92d002d743eb"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.1.3.4.4-Formal-propositions-"></a>
+    7.1.3.4.4 形式化命题（Formal propositions）
+<a class="link" href="#7.1.3.4.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-3f29f768-0198-4c3d-91df-c8afc01109a1"></a><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WR31</td>
+<td>
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(EXISTS(LiningDepth) AND NOT(EXISTS(LiningThickness)))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR32</td>
+<td>
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(NOT(EXISTS(FirstTransomOffset)) AND EXISTS(SecondTransomOffset))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR33</td>
+<td>
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(NOT(EXISTS(FirstMullionOffset)) AND EXISTS(SecondMullionOffset))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR34</td>
+<td>
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(EXISTS(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
+AND 
+('IFC4X3_DEV_62887e3f.<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IFCWINDOWTYPE</a>' IN TYPEOF(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.1.3.4.H<a class="link" href="#-3f29f768-0198-4c3d-91df-c8afc01109a1"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.1.3.4.5-Concept-usage-"></a>
+    7.1.3.4.5 概念用法（Concept usage）
+<a class="link" href="#7.1.3.4.5-Concept-usage-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-f5a97333-88c7-4726-a950-4bd01e568d10"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>概念</th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    点击显示 8 个隐藏的继承概念
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    点击隐藏 8 个继承概念
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 7.1.3.4.I<a class="link" href="#-f5a97333-88c7-4726-a950-4bd01e568d10"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="7.1.3.4.6-Formal-representation-"></a>
+    7.1.3.4.6 形式化表示（Formal representation）
+<a class="link" href="#7.1.3.4.6-Formal-representation-"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a>
+ SUBTYPE OF (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>);
+	LiningDepth : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	LiningThickness : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	TransomThickness : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	MullionThickness : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	FirstTransomOffset : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	SecondTransomOffset : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	FirstMullionOffset : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	SecondMullionOffset : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	ShapeAspectStyle : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeAspect.htm">IfcShapeAspect</a>;
+	LiningOffset : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	LiningToPanelOffsetX : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	LiningToPanelOffsetY : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+ WHERE
+	WR31 : NOT(EXISTS(LiningDepth) AND NOT(EXISTS(LiningThickness)));
+	WR32 : NOT(NOT(EXISTS(FirstTransomOffset)) AND EXISTS(SecondTransomOffset));
+	WR33 : NOT(NOT(EXISTS(FirstMullionOffset)) AND EXISTS(SecondMullionOffset));
+	WR34 : (EXISTS(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
+AND 
+('IFC4X3_DEV_62887e3f.<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWindowType.htm">IFCWINDOWTYPE</a>' IN TYPEOF(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]));
+END_ENTITY;</code></pre>
+<h2><a class="anchor" id="7.1.3.4.7-"></a>
+    7.1.3.4.7 参考文献
+<a class="link" href="#7.1.3.4.7-"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+</ul>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/domain/IfcArchitectureDomain/Entities/IfcWindowLiningProperties.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/domain/IfcArchitectureDomain/Entities/IfcWindowLiningProperties.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

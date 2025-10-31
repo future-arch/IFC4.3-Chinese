@@ -1,0 +1,468 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>4.1.2.4 Document Association - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>4.1.2.4 Document Association</h1>
+<p>概念 <em>文档关联</em> 描述了对象或对象类型如何关联文档，指示外部文件。文档可以整体引用，例如用于捕获产品手册、数据表、多媒体内容或缩略图。文档中的内容可以从任何对象引用，并可用于同步其他文件中的信息，例如项目管理应用程序的项目计划。</p>
+<p>文档的典型元数据，如发布日期、编辑者等，可以与关联一起捕获，但文档内容仍保留在外部文件中。</p>
+<p>
+    下图展示了应用此概念时使用的通用类和关系。
+    
+    此外，概念可能对常见或标准化的行业实践和场景具有特殊意义。对于这些特定的使用场景，下表展示了用户可采用的推荐通用使用模式列表。
+    
+</p>
+<figure><a class="anchor" id="Figure-4.1.2.4.A"></a><svg height="438px" viewbox="0.00 0.00 1315.00 585.00" width="984px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 581)">
+<title>G</title>
+<polygon fill="none" points="-4,4 -4,-581 1310.75,-581 1310.75,4 -4,4" stroke="none"></polygon>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm'>IfcObjectDefinition</a> -->
+<g class="node" id="node1">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm'&gt;IfcObjectDefinition&lt;/a&gt;</title>
+<polygon fill="#1976d2" points="8,-544.5 8,-573 258,-573 258,-544.5 8,-544.5" stroke="none"></polygon>
+<polyline fill="none" points="8,-544.5 258,-544.5" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="14" xml:space="preserve" y="-554.7"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></text>
+<polygon fill="#1976d2" points="258,-544.5 258,-573 296.25,-573 296.25,-544.5 258,-544.5" stroke="none"></polygon>
+<polyline fill="none" points="258,-544.5 296.25,-544.5" stroke="black"></polyline>
+<polygon fill="white" points="8,-516 8,-544.5 258,-544.5 258,-516 8,-516" stroke="none"></polygon>
+<polyline fill="none" points="8,-516 258,-516" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-525.2">1. GlobalId</text>
+<polygon fill="white" points="258,-516 258,-544.5 296.25,-544.5 296.25,-516 258,-516" stroke="none"></polygon>
+<polyline fill="none" points="258,-516 296.25,-516" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264" xml:space="preserve" y="-525.2">[1:1]</text>
+<polygon fill="white" points="8,-487.5 8,-516 258,-516 258,-487.5 8,-487.5" stroke="none"></polygon>
+<polyline fill="none" points="8,-487.5 258,-487.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-496.7">2. OwnerHistory</text>
+<polygon fill="white" points="258,-487.5 258,-516 296.25,-516 296.25,-487.5 258,-487.5" stroke="none"></polygon>
+<polyline fill="none" points="258,-487.5 296.25,-487.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264" xml:space="preserve" y="-496.7">[0:1]</text>
+<polygon fill="white" points="8,-459 8,-487.5 258,-487.5 258,-459 8,-459" stroke="none"></polygon>
+<polyline fill="none" points="8,-459 258,-459" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-468.2">3. Name</text>
+<polygon fill="white" points="258,-459 258,-487.5 296.25,-487.5 296.25,-459 258,-459" stroke="none"></polygon>
+<polyline fill="none" points="258,-459 296.25,-459" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264" xml:space="preserve" y="-468.2">[0:1]</text>
+<polygon fill="white" points="8,-430.5 8,-459 258,-459 258,-430.5 8,-430.5" stroke="none"></polygon>
+<polyline fill="none" points="8,-430.5 258,-430.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-439.7">4. Description</text>
+<polygon fill="white" points="258,-430.5 258,-459 296.25,-459 296.25,-430.5 258,-430.5" stroke="none"></polygon>
+<polyline fill="none" points="258,-430.5 296.25,-430.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264" xml:space="preserve" y="-439.7">[0:1]</text>
+<polygon fill="white" points="8,-402 8,-430.5 258,-430.5 258,-402 8,-402" stroke="none"></polygon>
+<polyline fill="none" points="8,-402 258,-402" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-411.2">      HasAssignments</text>
+<polygon fill="white" points="258,-402 258,-430.5 296.25,-430.5 296.25,-402 258,-402" stroke="none"></polygon>
+<polyline fill="none" points="258,-402 296.25,-402" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.75" xml:space="preserve" y="-411.2">[0:?]</text>
+<polygon fill="white" points="8,-373.5 8,-402 258,-402 258,-373.5 8,-373.5" stroke="none"></polygon>
+<polyline fill="none" points="8,-373.5 258,-373.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-382.7">      Nests</text>
+<polygon fill="white" points="258,-373.5 258,-402 296.25,-402 296.25,-373.5 258,-373.5" stroke="none"></polygon>
+<polyline fill="none" points="258,-373.5 296.25,-373.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264" xml:space="preserve" y="-382.7">[0:1]</text>
+<polygon fill="white" points="8,-345 8,-373.5 258,-373.5 258,-345 8,-345" stroke="none"></polygon>
+<polyline fill="none" points="8,-345 258,-345" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-354.2">      IsNestedBy</text>
+<polygon fill="white" points="258,-345 258,-373.5 296.25,-373.5 296.25,-345 258,-345" stroke="none"></polygon>
+<polyline fill="none" points="258,-345 296.25,-345" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.75" xml:space="preserve" y="-354.2">[0:?]</text>
+<polygon fill="white" points="8,-316.5 8,-345 258,-345 258,-316.5 8,-316.5" stroke="none"></polygon>
+<polyline fill="none" points="8,-316.5 258,-316.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-325.7">      HasContext</text>
+<polygon fill="white" points="258,-316.5 258,-345 296.25,-345 296.25,-316.5 258,-316.5" stroke="none"></polygon>
+<polyline fill="none" points="258,-316.5 296.25,-316.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264" xml:space="preserve" y="-325.7">[0:1]</text>
+<polygon fill="white" points="8,-288 8,-316.5 258,-316.5 258,-288 8,-288" stroke="none"></polygon>
+<polyline fill="none" points="8,-288 258,-288" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-297.2">      IsDecomposedBy</text>
+<polygon fill="white" points="258,-288 258,-316.5 296.25,-316.5 296.25,-288 258,-288" stroke="none"></polygon>
+<polyline fill="none" points="258,-288 296.25,-288" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.75" xml:space="preserve" y="-297.2">[0:?]</text>
+<polygon fill="white" points="8,-259.5 8,-288 258,-288 258,-259.5 8,-259.5" stroke="none"></polygon>
+<polyline fill="none" points="8,-259.5 258,-259.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-268.7">      Decomposes</text>
+<polygon fill="white" points="258,-259.5 258,-288 296.25,-288 296.25,-259.5 258,-259.5" stroke="none"></polygon>
+<polyline fill="none" points="258,-259.5 296.25,-259.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264" xml:space="preserve" y="-268.7">[0:1]</text>
+<polygon fill="#dddddd" points="8,-231 8,-259.5 258,-259.5 258,-231 8,-231" stroke="none"></polygon>
+<polyline fill="none" points="8,-231 258,-231" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14" xml:space="preserve" y="-240.2">      HasAssociations</text>
+<polygon fill="#dddddd" points="258,-231 258,-259.5 296.25,-259.5 296.25,-231 258,-231" stroke="none"></polygon>
+<polyline fill="none" points="258,-231 296.25,-231" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.75" xml:space="preserve" y="-240.2">[0:?]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'>IfcRelAssociatesDocument</a> -->
+<g class="node" id="node2">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'&gt;IfcRelAssociatesDocument&lt;/a&gt;</title>
+<polygon fill="#1976d2" points="348.25,-402.5 348.25,-431 598.25,-431 598.25,-402.5 348.25,-402.5" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-402.5 598.25,-402.5" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="354.25" xml:space="preserve" y="-412.7"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm">IfcRelAssociatesDocument</a></text>
+<polygon fill="#1976d2" points="598.25,-402.5 598.25,-431 636.5,-431 636.5,-402.5 598.25,-402.5" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-402.5 636.5,-402.5" stroke="black"></polyline>
+<polygon fill="white" points="348.25,-374 348.25,-402.5 598.25,-402.5 598.25,-374 348.25,-374" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-374 598.25,-374" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="354.25" xml:space="preserve" y="-383.2">1. GlobalId</text>
+<polygon fill="white" points="598.25,-374 598.25,-402.5 636.5,-402.5 636.5,-374 598.25,-374" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-374 636.5,-374" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="604.25" xml:space="preserve" y="-383.2">[1:1]</text>
+<polygon fill="white" points="348.25,-345.5 348.25,-374 598.25,-374 598.25,-345.5 348.25,-345.5" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-345.5 598.25,-345.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="354.25" xml:space="preserve" y="-354.7">2. OwnerHistory</text>
+<polygon fill="white" points="598.25,-345.5 598.25,-374 636.5,-374 636.5,-345.5 598.25,-345.5" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-345.5 636.5,-345.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="604.25" xml:space="preserve" y="-354.7">[0:1]</text>
+<polygon fill="#eeeeee" points="348.25,-317 348.25,-345.5 598.25,-345.5 598.25,-317 348.25,-317" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-317 598.25,-317" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="456" xml:space="preserve" y="-327.2">Name</text>
+<polygon fill="#eeeeee" points="598.25,-317 598.25,-345.5 636.5,-345.5 636.5,-317 598.25,-317" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-317 636.5,-317" stroke="black"></polyline>
+<polygon fill="#dddddd" points="348.25,-288.5 348.25,-317 598.25,-317 598.25,-288.5 348.25,-288.5" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-288.5 598.25,-288.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="354.25" xml:space="preserve" y="-297.7">3. Name</text>
+<polygon fill="#dddddd" points="598.25,-288.5 598.25,-317 636.5,-317 636.5,-288.5 598.25,-288.5" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-288.5 636.5,-288.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="604.25" xml:space="preserve" y="-297.7">[0:1]</text>
+<polygon fill="white" points="348.25,-260 348.25,-288.5 598.25,-288.5 598.25,-260 348.25,-260" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-260 598.25,-260" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="354.25" xml:space="preserve" y="-269.2">4. Description</text>
+<polygon fill="white" points="598.25,-260 598.25,-288.5 636.5,-288.5 636.5,-260 598.25,-260" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-260 636.5,-260" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="604.25" xml:space="preserve" y="-269.2">[0:1]</text>
+<polygon fill="#dddddd" points="348.25,-231.5 348.25,-260 598.25,-260 598.25,-231.5 348.25,-231.5" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-231.5 598.25,-231.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="354.25" xml:space="preserve" y="-240.7">5. RelatedObjects</text>
+<polygon fill="#dddddd" points="598.25,-231.5 598.25,-260 636.5,-260 636.5,-231.5 598.25,-231.5" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-231.5 636.5,-231.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="605" xml:space="preserve" y="-240.7">[1:?]</text>
+<polygon fill="#dddddd" points="348.25,-203 348.25,-231.5 598.25,-231.5 598.25,-203 348.25,-203" stroke="none"></polygon>
+<polyline fill="none" points="348.25,-203 598.25,-203" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="354.25" xml:space="preserve" y="-212.2">6. RelatingDocument</text>
+<polygon fill="#dddddd" points="598.25,-203 598.25,-231.5 636.5,-231.5 636.5,-203 598.25,-203" stroke="none"></polygon>
+<polyline fill="none" points="598.25,-203 636.5,-203" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="604.25" xml:space="preserve" y="-212.2">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm'>IfcObjectDefinition</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'>IfcRelAssociatesDocument</a> -->
+<g class="edge" id="edge1">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm'&gt;IfcObjectDefinition&lt;/a&gt;:HasAssociations1-&gt;&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'&gt;IfcRelAssociatesDocument&lt;/a&gt;:RelatedObjects0</title>
+<path d="M308.35,-245.36C323.08,-245.51 347.25,-245.75 347.25,-245.75" fill="none" stroke="black"></path>
+<polygon fill="black" points="308.8,-241.87 298.76,-245.27 308.73,-248.87 308.8,-241.87" stroke="black"></polygon>
+</g>
+<!-- IfcLabel_0 -->
+<g class="node" id="node3">
+<title>IfcLabel_0</title>
+<polygon fill="#1976d2" points="697.62,-316.75 697.62,-345.25 947.62,-345.25 947.62,-316.75 697.62,-316.75" stroke="none"></polygon>
+<polyline fill="none" points="697.62,-316.75 947.62,-316.75" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="703.62" xml:space="preserve" y="-326.95"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="947.62,-316.75 947.62,-345.25 967.62,-345.25 967.62,-316.75 947.62,-316.75" stroke="none"></polygon>
+<polyline fill="none" points="947.62,-316.75 967.62,-316.75" stroke="black"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'>IfcRelAssociatesDocument</a>&#45;&gt;IfcLabel_0 -->
+<g class="edge" id="edge2">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'&gt;IfcRelAssociatesDocument&lt;/a&gt;:Name1-&gt;IfcLabel_0:IfcLabel0</title>
+<path d="M637.5,-331.25C637.5,-331.25 668.04,-331.12 685.23,-331.05" fill="none" stroke="black"></path>
+<polygon fill="black" points="685.13,-334.55 695.11,-331.01 685.1,-327.55 685.13,-334.55" stroke="black"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'>IfcDocumentReference</a> -->
+<g class="node" id="node4">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'&gt;IfcDocumentReference&lt;/a&gt;</title>
+<polygon fill="#1976d2" points="688.5,-203.5 688.5,-232 938.5,-232 938.5,-203.5 688.5,-203.5" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-203.5 938.5,-203.5" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="694.5" xml:space="preserve" y="-213.7"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm">IfcDocumentReference</a></text>
+<polygon fill="#1976d2" points="938.5,-203.5 938.5,-232 976.75,-232 976.75,-203.5 938.5,-203.5" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-203.5 976.75,-203.5" stroke="black"></polyline>
+<polygon fill="#dddddd" points="688.5,-175 688.5,-203.5 938.5,-203.5 938.5,-175 688.5,-175" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-175 938.5,-175" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="694.5" xml:space="preserve" y="-184.2">1. Location</text>
+<polygon fill="#dddddd" points="938.5,-175 938.5,-203.5 976.75,-203.5 976.75,-175 938.5,-175" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-175 976.75,-175" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="944.5" xml:space="preserve" y="-184.2">[0:1]</text>
+<polygon fill="#dddddd" points="688.5,-146.5 688.5,-175 938.5,-175 938.5,-146.5 688.5,-146.5" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-146.5 938.5,-146.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="694.5" xml:space="preserve" y="-155.7">2. Identification</text>
+<polygon fill="#dddddd" points="938.5,-146.5 938.5,-175 976.75,-175 976.75,-146.5 938.5,-146.5" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-146.5 976.75,-146.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="944.5" xml:space="preserve" y="-155.7">[0:1]</text>
+<polygon fill="#dddddd" points="688.5,-118 688.5,-146.5 938.5,-146.5 938.5,-118 688.5,-118" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-118 938.5,-118" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="694.5" xml:space="preserve" y="-127.2">3. Name</text>
+<polygon fill="#dddddd" points="938.5,-118 938.5,-146.5 976.75,-146.5 976.75,-118 938.5,-118" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-118 976.75,-118" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="944.5" xml:space="preserve" y="-127.2">[0:1]</text>
+<polygon fill="white" points="688.5,-89.5 688.5,-118 938.5,-118 938.5,-89.5 688.5,-89.5" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-89.5 938.5,-89.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="694.5" xml:space="preserve" y="-98.7">      ExternalReferenceForResources</text>
+<polygon fill="white" points="938.5,-89.5 938.5,-118 976.75,-118 976.75,-89.5 938.5,-89.5" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-89.5 976.75,-89.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.25" xml:space="preserve" y="-98.7">[0:?]</text>
+<polygon fill="#dddddd" points="688.5,-61 688.5,-89.5 938.5,-89.5 938.5,-61 688.5,-61" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-61 938.5,-61" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="694.5" xml:space="preserve" y="-70.2">4. Description</text>
+<polygon fill="#dddddd" points="938.5,-61 938.5,-89.5 976.75,-89.5 976.75,-61 938.5,-61" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-61 976.75,-61" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="944.5" xml:space="preserve" y="-70.2">[0:1]</text>
+<polygon fill="white" points="688.5,-32.5 688.5,-61 938.5,-61 938.5,-32.5 688.5,-32.5" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-32.5 938.5,-32.5" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="694.5" xml:space="preserve" y="-41.7">5. ReferencedDocument</text>
+<polygon fill="white" points="938.5,-32.5 938.5,-61 976.75,-61 976.75,-32.5 938.5,-32.5" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-32.5 976.75,-32.5" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="944.5" xml:space="preserve" y="-41.7">[0:1]</text>
+<polygon fill="white" points="688.5,-4 688.5,-32.5 938.5,-32.5 938.5,-4 688.5,-4" stroke="none"></polygon>
+<polyline fill="none" points="688.5,-4 938.5,-4" stroke="black"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="694.5" xml:space="preserve" y="-13.2">      DocumentRefForObjects</text>
+<polygon fill="white" points="938.5,-4 938.5,-32.5 976.75,-32.5 976.75,-4 938.5,-4" stroke="none"></polygon>
+<polyline fill="none" points="938.5,-4 976.75,-4" stroke="black"></polyline>
+<text font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.25" xml:space="preserve" y="-13.2">[0:?]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'>IfcRelAssociatesDocument</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'>IfcDocumentReference</a> -->
+<g class="edge" id="edge3">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesDocument.htm'&gt;IfcRelAssociatesDocument&lt;/a&gt;:RelatingDocument1-&gt;&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'&gt;IfcDocumentReference&lt;/a&gt;:IfcDocumentReference0</title>
+<path d="M637.5,-217.25C637.5,-217.25 661.67,-217.49 676.4,-217.64" fill="none" stroke="black"></path>
+<polygon fill="black" points="675.95,-221.13 685.99,-217.73 676.02,-214.13 675.95,-221.13" stroke="black"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm'>IfcURIReference</a> -->
+<g class="node" id="node5">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm'&gt;IfcURIReference&lt;/a&gt;</title>
+<polygon fill="#1976d2" points="1028.75,-191.75 1028.75,-220.25 1278.75,-220.25 1278.75,-191.75 1028.75,-191.75" stroke="none"></polygon>
+<polyline fill="none" points="1028.75,-191.75 1278.75,-191.75" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1034.75" xml:space="preserve" y="-201.95"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm">IfcURIReference</a></text>
+<polygon fill="#1976d2" points="1278.75,-191.75 1278.75,-220.25 1298.75,-220.25 1298.75,-191.75 1278.75,-191.75" stroke="none"></polygon>
+<polyline fill="none" points="1278.75,-191.75 1298.75,-191.75" stroke="black"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'>IfcDocumentReference</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm'>IfcURIReference</a> -->
+<g class="edge" id="edge4">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'&gt;IfcDocumentReference&lt;/a&gt;:Location1-&gt;&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcURIReference.htm'&gt;IfcURIReference&lt;/a&gt;:IfcURIReference0</title>
+<path d="M977.75,-189.25C977.75,-189.25 1002.47,-197.53 1017.15,-202.45" fill="none" stroke="black"></path>
+<polygon fill="black" points="1015.72,-205.66 1026.31,-205.52 1017.94,-199.02 1015.72,-205.66" stroke="black"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm'>IfcIdentifier</a> -->
+<g class="node" id="node6">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm'&gt;IfcIdentifier&lt;/a&gt;</title>
+<polygon fill="#1976d2" points="1028.75,-147.75 1028.75,-176.25 1278.75,-176.25 1278.75,-147.75 1028.75,-147.75" stroke="none"></polygon>
+<polyline fill="none" points="1028.75,-147.75 1278.75,-147.75" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1034.75" xml:space="preserve" y="-157.95"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></text>
+<polygon fill="#1976d2" points="1278.75,-147.75 1278.75,-176.25 1298.75,-176.25 1298.75,-147.75 1278.75,-147.75" stroke="none"></polygon>
+<polyline fill="none" points="1278.75,-147.75 1298.75,-147.75" stroke="black"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'>IfcDocumentReference</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm'>IfcIdentifier</a> -->
+<g class="edge" id="edge5">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'&gt;IfcDocumentReference&lt;/a&gt;:Identification1-&gt;&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm'&gt;IfcIdentifier&lt;/a&gt;:IfcIdentifier0</title>
+<path d="M977.75,-160.75C977.75,-160.75 1001.92,-161.35 1016.65,-161.72" fill="none" stroke="black"></path>
+<polygon fill="black" points="1016.15,-165.21 1026.24,-161.96 1016.33,-158.21 1016.15,-165.21" stroke="black"></polygon>
+</g>
+<!-- IfcLabel_1 -->
+<g class="node" id="node7">
+<title>IfcLabel_1</title>
+<polygon fill="#1976d2" points="1028.75,-103.75 1028.75,-132.25 1278.75,-132.25 1278.75,-103.75 1028.75,-103.75" stroke="none"></polygon>
+<polyline fill="none" points="1028.75,-103.75 1278.75,-103.75" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1034.75" xml:space="preserve" y="-113.95"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="1278.75,-103.75 1278.75,-132.25 1298.75,-132.25 1298.75,-103.75 1278.75,-103.75" stroke="none"></polygon>
+<polyline fill="none" points="1278.75,-103.75 1298.75,-103.75" stroke="black"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'>IfcDocumentReference</a>&#45;&gt;IfcLabel_1 -->
+<g class="edge" id="edge6">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'&gt;IfcDocumentReference&lt;/a&gt;:Name1-&gt;IfcLabel_1:IfcLabel0</title>
+<path d="M977.75,-132.25C977.75,-132.25 1002.47,-125.21 1017.15,-121.02" fill="none" stroke="black"></path>
+<polygon fill="black" points="1017.64,-124.52 1026.29,-118.41 1015.72,-117.79 1017.64,-124.52" stroke="black"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm'>IfcText</a> -->
+<g class="node" id="node8">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm'&gt;IfcText&lt;/a&gt;</title>
+<polygon fill="#1976d2" points="1028.75,-59.75 1028.75,-88.25 1278.75,-88.25 1278.75,-59.75 1028.75,-59.75" stroke="none"></polygon>
+<polyline fill="none" points="1028.75,-59.75 1278.75,-59.75" stroke="black"></polyline>
+<text fill="white" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1034.75" xml:space="preserve" y="-69.95"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></text>
+<polygon fill="#1976d2" points="1278.75,-59.75 1278.75,-88.25 1298.75,-88.25 1298.75,-59.75 1278.75,-59.75" stroke="none"></polygon>
+<polyline fill="none" points="1278.75,-59.75 1298.75,-59.75" stroke="black"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'>IfcDocumentReference</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm'>IfcText</a> -->
+<g class="edge" id="edge7">
+<title>&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDocumentReference.htm'&gt;IfcDocumentReference&lt;/a&gt;:Description1-&gt;&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm'&gt;IfcText&lt;/a&gt;:IfcText0</title>
+<path d="M977.75,-75.25C977.75,-75.25 1001.92,-74.65 1016.65,-74.28" fill="none" stroke="black"></path>
+<polygon fill="black" points="1016.33,-77.79 1026.24,-74.04 1016.15,-70.79 1016.33,-77.79" stroke="black"></polygon>
+</g>
+</g>
+</svg><figcaption>Figure 4.1.2.4.A<a class="link" href="#Figure-4.1.2.4.A"><i data-feather="link"></i></a></figcaption></figure>
+<h3><a class="anchor" id="General-Usage"></a>General Usage<a class="link" href="#General-Usage"><i data-feather="link"></i></a></h3><figure><a class="anchor" id="-6db9f7f9-6dca-45b4-92f9-bd9e002ed6d1"></a><table>
+<thead>
+<tr><th>ApplicableEntity<br/> </th></tr>
+</thead>
+<tbody>
+<tr><td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a> </td></tr>
+</tbody>
+</table><figcaption>表 4.1.2.4.B<a class="link" href="#-6db9f7f9-6dca-45b4-92f9-bd9e002ed6d1"><i data-feather="link"></i></a></figcaption></figure>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/templates/Object Association/Document Association/README.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/templates/Object Association/Document Association/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

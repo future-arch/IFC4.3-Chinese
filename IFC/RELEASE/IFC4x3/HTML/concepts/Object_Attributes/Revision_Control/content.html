@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251031 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -127,11 +127,12 @@
 </div>
 <div class="col-md-8" id="main-content">
 <h1>4.1.3.6 Revision Control</h1>
-<p>虽然对象可能反映最终状态，但它们也可能在项目生命周期中持续修订并反映瞬态状态。对于多个用户更新同一信息的场景，存在基于支持多用户的共享存储库的信息本地副本概念。此类共享存储库通常称为 <em>模型服务器</em>。模型服务器在概念上类似于文档修订服务器，但能够识别基于每个对象声明的变更，而不是从文本差异推断变更。模型服务器具有基于每个项目的修订概念，其中每个修订包含特定用户在特定时间对包含对象的一组更改。</p>
-<p>为支持模型服务器场景，每个对象可能标记有 <em>变更操作</em>，指示自项目在特定修订序列从服务器检索以来，该对象已被添加、修改、删除或未发生变更。给定对象的身份（IFC-GUID）和变更操作，对象的状态在提交到模型服务器时可以合并。当对象的任何直接属性发生变化、引用的资源定义（任何不派生自 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 的实体）上的属性发生变化、集合中添加或移除项，或列表内添加、移除或重新排序项时，对象被视为已修改。</p>
-<p>对于多个用户对同一对象进行冲突更改的情况，用户在提交到服务器时可以选择保留自己的更改、接受他人的更改、合并双方的更改或组合使用这些方式。或者，为避免此类合并场景并协调工作，可以锁定对象，使得特定用户在当前时间对特定对象具有独占的读取和/或写入权限。</p>
-<p>项目库也可以从具有特定修订的模型服务器中检索，并且可能具有与引用项目不同的服务器URI。由于一个项目可能包含同一项目库的多个修订（当多个用户使用他人修订的库时的常见场景），<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>.ObjectIdentifier IFC-GUID仅在引用项目的范围内有效，并且单独的 <em>库引用</em> 在其原始模型服务器中标识基于项目库的对象。</p>
-<p>最后，对象还可能携带信息性属性，指示对象何时创建、谁、何时以及使用什么应用程序最后修改了对象，以及谁当前拥有该对象，可能根据其锁定状态具有独占使用权。</p>
+<p>================</p>
+<p>虽然对象可能反映最终状态，但它们也可能在项目生命周期过程中不断被修改并反映瞬态状态。对于多个用户对同一信息进行更新的场景，存在基于支持多用户共享存储库的本地信息副本的概念。这种共享存储库通常被称为 <em>模型服务器</em>。模型服务器的概念类似于文档修订服务器，但能够按对象识别声明的更改，而不是从文本差异中推断更改。模型服务器具有按项目进行修订的概念，其中每次修订由特定用户在特定时间对包含的对象进行的一组更改组成。</p>
+<p>为了支持模型服务器场景，每个对象都可以标记一个 <em>change action</em>（更改操作），指示自项目从服务器检索以来，该对象是添加、修改、删除还是没有更改。给定对象的标识符 (IFC-GUID) 和更改操作，在提交到模型服务器时可以合并对象的状态。当任何直接特性、引用的资源定义（任何不派生自 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 的实体）上的特性发生更改、集合中添加或删除项，或列表中的项被添加、删除或重新排序时，对象被视为已修改。</p>
+<p>对于多个用户对同一对象进行冲突更改的情况，用户可以选择在提交到服务器时保留自己的更改、接受他人的更改、合并两者的更改，或两者的组合。或者，为了避免此类合并场景并协调工作，对象可以被锁定，以便特定用户在当前时间对特定对象具有独占的读和/或写访问权限。</p>
+<p>项目库也可以从具有特定修订版并且可能与引用项目具有不同服务器 URI 的模型服务器检索。由于项目可能包含同一项目库的多个修订版（当多个用户使用他人修订的库时，这是常见场景），<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a>.ObjectIdentifier IFC-GUID 仅在引用项目的范围内有效，并且单独的 <em>library reference</em> 标识了其原始模型服务器内的项目库基于对象的引用。</p>
+<p>最后，对象还可以携带信息性特性，指示对象的创建时间、创建者、最后修改对象的时间和应用程序，以及当前所有者，可能根据其锁定状态拥有独占使用权。</p>
 <p>
     下图展示了应用此概念时使用的通用类和关系。
     
@@ -1119,14 +1120,14 @@
 </g>
 </g>
 </svg><figcaption>Figure 4.1.3.6.A<a class="link" href="#Figure-4.1.3.6.A"><i data-feather="link"></i></a></figcaption></figure>
-<h3><a class="anchor" id="General-Usage"></a>General Usage<a class="link" href="#General-Usage"><i data-feather="link"></i></a></h3><figure><a class="anchor" id="-7d9b59f8-4eb2-45b2-a2d4-9ca3181fc947"></a><table>
+<h3><a class="anchor" id="General-Usage"></a>General Usage<a class="link" href="#General-Usage"><i data-feather="link"></i></a></h3><figure><a class="anchor" id="-b2f6300f-87d0-46dc-9106-3c6fbad890d1"></a><table>
 <thead>
 <tr><th>ApplicableEntity<br/> </th></tr>
 </thead>
 <tbody>
 <tr><td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> </td></tr>
 </tbody>
-</table><figcaption>表 4.1.3.6.B<a class="link" href="#-7d9b59f8-4eb2-45b2-a2d4-9ca3181fc947"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 4.1.3.6.B<a class="link" href="#-b2f6300f-87d0-46dc-9106-3c6fbad890d1"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">

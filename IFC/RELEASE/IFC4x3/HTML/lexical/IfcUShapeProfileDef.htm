@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251031 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -247,7 +247,7 @@
     8.15.3.27.3 特性（Attributes）
 <a class="link" href="#8.15.3.27.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c98aa869-572e-44c2-9486-3ac07157c3ba"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0966c3db-28ff-4d93-bcda-12a420eec961"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -436,11 +436,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.27.B<a class="link" href="#-c98aa869-572e-44c2-9486-3ac07157c3ba"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.27.B<a class="link" href="#-0966c3db-28ff-4d93-bcda-12a420eec961"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.27.4-Formal-propositions-"></a>
     8.15.3.27.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.27.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-513955d4-366d-4bfc-8381-b0ec6a7207cf"></a><table>
+<figure><a class="anchor" id="-ed50ccca-faa8-4caf-abfe-17758ffe6f3d"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -471,7 +471,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.27.C<a class="link" href="#-513955d4-366d-4bfc-8381-b0ec6a7207cf"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.27.C<a class="link" href="#-ed50ccca-faa8-4caf-abfe-17758ffe6f3d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.27.5-"></a>
     8.15.3.27.5 属性集
 <a class="link" href="#8.15.3.27.5-"><i data-feather="link"></i></a></h2>
@@ -512,7 +512,7 @@
 </p><h2><a class="anchor" id="8.15.3.27.6-Concept-usage-"></a>
     8.15.3.27.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.27.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-3c3a2ea1-a4ee-4b2c-bdff-4c521ee35f2c"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-33a27c1d-4d64-4199-b82a-b200fb76a666"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -535,6 +535,30 @@
                 General
             </td>
 <td data-label="Description">
+<p><em>用于剖面的属性集</em> 概念模板描述了剖面如何与一个或多个属性集相关联。一个属性集包含一个或多个属性。单个属性的数据类型可以是单值、枚举值、表值、引用值或列表值，以及属性实例的组合。</p>
+<p>注释：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 不是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>。出于历史原因，此概念列在 <em>对象定义</em> 下。在标准未来版本中，各种属性集关联机制可能会得到统一。</p>
+<p>适用于此模板的属性集将带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplateTypeEnum.htm">IfcPropertySetTemplateTypeEnum</a></em> "PSET_PROFILEDRIVEN"。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a>:HasProperties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:ProfileDefinition
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a>
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a> -&gt; Single_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a> -&gt; Bounded_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a> -&gt; Enumerated_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a> -&gt; List_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a> -&gt; Table_Value
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Name[binding="PsetName"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties[binding="Properties"]
+}
+</code></pre>
 <p>此概念可应用于以下资源</p>
 <ul>
 <li>
@@ -543,20 +567,112 @@
 </ul>
 </td>
 </tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Profiles/content.html">Property Sets for Profiles</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><em>用于剖面的属性集</em> 概念模板描述了剖面如何与一个或多个属性集相关联。一个属性集包含一个或多个属性。单个属性的数据类型可以是单值、枚举值、表值、引用值或列表值，以及属性实例的组合。</p>
+<p>注释：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 不是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>。出于历史原因，此概念列在 <em>对象定义</em> 下。在标准未来版本中，各种属性集关联机制可能会得到统一。</p>
+<p>适用于此模板的属性集将带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplateTypeEnum.htm">IfcPropertySetTemplateTypeEnum</a></em> "PSET_PROFILEDRIVEN"。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a>:HasProperties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:ProfileDefinition
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a>
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a> -&gt; Single_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a> -&gt; Bounded_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a> -&gt; Enumerated_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a> -&gt; List_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a> -&gt; Table_Value
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Name[binding="PsetName"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties[binding="Properties"]
+}
+</code></pre>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 1 个隐藏的继承概念
+                    点击显示 2 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 1 个继承概念
+                    点击隐藏 2 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUShapeProfileDef.htm">IfcUShapeProfileDef</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Definition/Property_Sets/Property_Sets_for_Profiles/content.html">Property Sets for Profiles</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><em>用于剖面的属性集</em> 概念模板描述了剖面如何与一个或多个属性集相关联。一个属性集包含一个或多个属性。单个属性的数据类型可以是单值、枚举值、表值、引用值或列表值，以及属性实例的组合。</p>
+<p>注释：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em> 不是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em>。出于历史原因，此概念列在 <em>对象定义</em> 下。在标准未来版本中，各种属性集关联机制可能会得到统一。</p>
+<p>适用于此模板的属性集将带有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplateTypeEnum.htm">IfcPropertySetTemplateTypeEnum</a></em> "PSET_PROFILEDRIVEN"。</p>
+<pre><code>concept {
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a>:HasProperties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:ProfileDefinition
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Name -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Description -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a>
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties -&gt; <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a>
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a> -&gt; Single_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a> -&gt; Bounded_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a> -&gt; Enumerated_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyListValue.htm">IfcPropertyListValue</a> -&gt; List_Value
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a> -&gt; Table_Value
+
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Name[binding="PsetName"]
+    <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a>:Properties[binding="Properties"]
+}
+</code></pre>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.15.3.27.D<a class="link" href="#-3c3a2ea1-a4ee-4b2c-bdff-4c521ee35f2c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.27.D<a class="link" href="#-33a27c1d-4d64-4199-b82a-b200fb76a666"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.27.7-Formal-representation-"></a>
     8.15.3.27.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.27.7-Formal-representation-"><i data-feather="link"></i></a></h2>

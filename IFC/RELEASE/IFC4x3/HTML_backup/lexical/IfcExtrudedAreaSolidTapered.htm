@@ -1,0 +1,569 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.8.3.16 IfcExtrudedAreaSolidTapered（锥形拉伸面积实体） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.8.3.16 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a>（锥形拉伸面积实体）</h1>
+<p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
+<h2><a class="anchor" id="8.8.3.16.1-Semantic-definition-"></a>
+    8.8.3.16.1 语义定义（Semantic definition）
+<a class="link" href="#8.8.3.16.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a></em> 通过沿线性脊线扫掠横截面来定义。横截面在扫掠过程中可能从起始横截面的形状逐渐变化为末端横截面的形状。生成的实体由三个或更多面界定：一个起始面、一个终止面（分别由起始和终止平面及截面定义）以及一个或多个侧面。每个侧面是由起始和末端截面的一对对应边定义的直纹曲面。</p>
+<!-- 简短定义结束 -->
+<blockquote>
+<p>注意 由于起始和末端截面由多边形提供，起始和末端横截面的对应顶点相互连接，在每对对应顶点之间形成四边形多边形。由边界四边形多边形定义的曲面是直纹曲面，可通过三角剖分进行近似。</p>
+</blockquote>
+<p>线性脊线由以下要素定义：</p>
+<ul>
+<li>起始点：<em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.Location</em></li>
+<li>方向：<em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.ExtrudedDirection</em></li>
+<li>距离：<em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.Depth</em></li>
+</ul>
+<p>起始横截面由 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.SweptArea</em> 定义：</p>
+<ul>
+<li>位于由 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.P[1]</em> 和 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position.P[2]</em> 定义的位置坐标系 XY 平面内的有界平面</li>
+<li>线性脊线起始于起始横截面的平面。脊线不一定垂直于该平面。</li>
+</ul>
+<p>末端横截面由 <em>EndSweptArea</em> 定义：</p>
+<ul>
+<li>位于通过将 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em> 提供的起始位置坐标沿脊线方向平移脊线距离而生成的位置坐标系 XY 平面内的有界平面。末端横截面的平面与起始横截面的平面共面。
+*</li>
+<li>末端横截面在拓扑上与起始横截面相似（即具有相同数量的顶点和边）。</li>
+<li>末端横截面可以通过使用不同参数值的相同参数化轮廓定义，也可以通过起始轮廓在末端横截面平面内的二维笛卡尔变换定义。</li>
+</ul>
+<p>对于两个参数化轮廓的情况，形状构建如下：</p>
+<ul>
+<li>通过基于与起始轮廓相同轮廓参数化的横截面定义的末端轮廓，沿脊线方向平移脊线距离。</li>
+<li>它可以在末端位置坐标系的 XY 平面内平移，并可以使用旋转参数进行扭转。</li>
+<li>平移和旋转参数由类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em> 的末端横截面提供，其中：</li>
+<li>平移是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>.Position.Location</em></li>
+<li>旋转是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>.Position.RefDirection</em></li>
+<li>起始和末端横截面的对应顶点相互连接。侧面构建为起始和末端横截面对应边之间的直纹曲面。</li>
+</ul>
+<p>对于起始横截面的笛卡尔变换情况，形状构建如下：</p>
+<ul>
+<li>起始作为位置坐标系 XY 平面内曲线的横截面曲线，首先绕原点按比例参数缩放。然后沿脊线方向平移脊线距离。可以使用旋转参数进行扭转。</li>
+<li>比例和旋转参数由类型为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a></em> 的末端横截面提供，其中：</li>
+<li>比例是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator.Scale</em></li>
+<li>旋转是 <em>EndSweptArea\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator.Axis1</em></li>
+<li>起始和末端横截面的对应顶点相互连接。侧面构建为起始和末端横截面对应边之间的直纹曲面。</li>
+</ul>
+<aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
+<p><strong>非正式命题</strong></p>
+<ol>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a>.Operator</em> 中不得使用镜像变换</li>
+</ol>
+<h2><a class="anchor" id="8.8.3.16.2-Entity-inheritance-"></a>
+    8.8.3.16.2 实体继承（Entity inheritance）
+<a class="link" href="#8.8.3.16.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationItem.htm">IfcRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTopologicalRepresentationItem.htm">IfcTopologicalRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm">IfcBooleanResult</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundingBox.htm">IfcBoundingBox</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPointList.htm">IfcCartesianPointList</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricSet.htm">IfcGeometricSet</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLightSource.htm">IfcLightSource</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlacement.htm">IfcPlacement</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlanarExtent.htm">IfcPlanarExtent</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPoint.htm">IfcPoint</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSegment.htm">IfcSegment</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShellBasedSurfaceModel.htm">IfcShellBasedSurfaceModel</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurface.htm">IfcSurface</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTessellatedItem.htm">IfcTessellatedItem</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextLiteral.htm">IfcTextLiteral</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCsgSolid.htm">IfcCsgSolid</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSolid.htm">IfcSectionedSolid</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li class="abstract"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirectrixCurveSweptAreaSolid.htm">IfcDirectrixCurveSweptAreaSolid</a></li>
+<li class=""><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a></li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="8.8.3.16.3-Attributes-"></a>
+    8.8.3.16.3 特性（Attributes）
+<a class="link" href="#8.8.3.16.3-Attributes-"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a class="anchor" id="-35343f9e-e996-416d-b1e3-1acc520f357b"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>特性（Attributes）</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationItem.htm">IfcRepresentationItem</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">3</code></pre>
+<p>本类的空间维度，恒为3。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                SweptArea
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
+<td data-label="Description">
+<p>定义要扫掠的面积的面。它在位置坐标系的 xy 平面内作为轮廓定义给出。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
+<td data-label="Description">
+<p>扫掠操作生成的扫掠实体的位置坐标系。位置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保持在由横截面或用于扫掠操作的准线确定的位置内。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选，并保持基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                ExtrudedDirection
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>由 <em>SweptArea</em> 提供的曲面要沿此方向扫掠。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Depth
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>曲面要沿 <em>ExtrudedDirection</em> 扫掠的距离。</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击显示 7 个隐藏的继承特性
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    点击隐藏 7 个继承特性
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                EndSweptArea
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
+<td data-label="Description">
+<p>定义扫掠区域末端的面。它作为轮廓定义给出。<em>EndSwptArea</em> 的位置坐标系是通过将 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em> 沿 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.ExtrudedDirection</em> 平移 <em>SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>.Depth</em> 的距离而生成的。</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 8.8.3.16.A<a class="link" href="#-35343f9e-e996-416d-b1e3-1acc520f357b"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="8.8.3.16.4-Formal-propositions-"></a>
+    8.8.3.16.4 形式化命题（Formal propositions）
+<a class="link" href="#8.8.3.16.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-2d527825-ee0c-43b9-88d4-45b2db1da0ba"></a><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CorrectProfileAssignment</td>
+<td>
+<p>作为起始轮廓的 <em>SweptArea</em> 和作为末端轮廓的 <em>EndSweptArea</em> 应当兼容。</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaperedSweptAreaProfiles.htm">IfcTaperedSweptAreaProfiles</a>(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.SweptArea, SELF.EndSweptArea)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>表 8.8.3.16.B<a class="link" href="#-2d527825-ee0c-43b9-88d4-45b2db1da0ba"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="8.8.3.16.5-Formal-representation-"></a>
+    8.8.3.16.5 形式化表示（Formal representation）
+<a class="link" href="#8.8.3.16.5-Formal-representation-"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolidTapered.htm">IfcExtrudedAreaSolidTapered</a>
+ SUBTYPE OF (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a>);
+	EndSweptArea : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a>;
+ WHERE
+	CorrectProfileAssignment : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaperedSweptAreaProfiles.htm">IfcTaperedSweptAreaProfiles</a>(SELF\<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.SweptArea, SELF.EndSweptArea);
+END_ENTITY;</code></pre>
+<h2><a class="anchor" id="8.8.3.16.6-"></a>
+    8.8.3.16.6 参考文献
+<a class="link" href="#8.8.3.16.6-"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+</ul>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/resource/IfcGeometricModelResource/Entities/IfcExtrudedAreaSolidTapered.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/resource/IfcGeometricModelResource/Entities/IfcExtrudedAreaSolidTapered.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

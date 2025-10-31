@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.1.2.22 IfcWallTypeEnum（墙类型枚举） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.1.2.22 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallTypeEnum.htm">IfcWallTypeEnum</a>（墙类型枚举）</h1>
+<h2><a class="anchor" id="6.1.2.22.1-Semantic-definition-"></a>
+    6.1.2.22.1 语义定义（Semantic definition）
+<a class="link" href="#6.1.2.22.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p>此枚举定义了可进一步指定 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallType.htm">IfcWallType</a></em> 的墙体类型。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中新增枚举项。</aside><aside class="aside-change"><mark>IFC2x2 变更</mark> 枚举项 <em>POLYGON</em> 已更改为 <em>POLYGONAL</em>。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> 新增枚举项 <em>ELEMENTEDWALL</em> 和 <em>PLUMBINGWALL</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 新增枚举项 MOVABLE、PARAPET、PARTITIONING 和 SOLIDWALL。</aside><aside class="aside-note"><mark>注释</mark> 可能引起误解的术语 <em>SHEAR</em> 不应表示特定的抗剪力，而是表示特定的形状。</aside>
+<h2><a class="anchor" id="6.1.2.22.2-"></a>
+    6.1.2.22.2 类型值
+<a class="link" href="#6.1.2.22.2-"><i data-feather="link"></i></a></h2>
+<figure><a class="anchor" id="-8beb436e-0ec4-463b-806f-33dc968be0d0"></a><table class="striped type-values">
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Name"><code>ELEMENTEDWALL
+            <td data-label="Description">
+<p>由立柱构成框架，并覆盖有板材、壁板、墙板或抹灰的墙体。</p><aside class="aside-change"><mark>IFC4.3.2.0 变更</mark> 此枚举值不再被弃用。</aside><aside class="aside-note"><mark>注释</mark> 元素化墙体可通过多种构件的聚合进行建模（使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 关联至 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a></em>），但当不需要或无法实现此详细程度时，可使用此枚举值替代。</aside>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>MOVABLE
+            <td data-label="Description">
+<p>可移动墙体，例如折叠墙或推拉墙，或者易于拆卸的隔断墙或安装墙。可移动墙体通常不定义空间边界，并且经常属于家具系统。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>PARAPET
+            <td data-label="Description">
+<p>类似墙体的屏障，用于保护人员或车辆免于坠落，或防止火势蔓延。通常设计在阳台、露台或屋顶边缘，或沿桥梁边缘。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>PARTITIONING
+            <td data-label="Description">
+<p>用于分隔空间的墙体，通常采用轻质夹层结构（例如使用石膏板）。隔断墙通常不承重。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>PLUMBINGWALL
+            <td data-label="Description">
+<p>柱子、围护结构或罩体，通常用于封闭卫生间的管道。这类墙体通常不延伸至天花板。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>POLYGONAL
+            <td data-label="Description">
+<p>多边形墙体，垂直挤出，墙体厚度沿墙体路径变化。</p><aside class="aside-deprecation"><mark>IFC4 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 该值已弃用且不应继续使用。</aside>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>RETAININGWALL
+            <td data-label="Description">
+<p>用于防止后方土层滑动的支撑墙。挡土墙的特殊类型可以是例如加固石笼墙和格宾墙。挡土墙的例子包括翼墙、墙头、墙身、桥墩墙和防护墙。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>SHEAR
+            <td data-label="Description">
+<p>用于承受剪切荷载的墙体。剪力墙的例子包括箱梁内的隔膜，通常位于桥墩上，用于抵抗侧向力并将其传递给支撑。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>SOLIDWALL
+            <td data-label="Description">
+<p>实心墙体结构，墙体核心为单层或有多层附着。这类墙体通常是砖石或混凝土墙（现浇或预制），具有承重和防火功能。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>STANDARD
+            <td data-label="Description">
+<p>标准墙体，沿墙体路径垂直挤出，厚度恒定。</p><aside class="aside-deprecation"><mark>IFC4 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 该值已弃用，现通过实例中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 表达。</aside>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>WAVEWALL
+            <td data-label="Description">
+<p>用于阻挡海浪越过防波堤的防护墙或屏幕。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>USERDEFINED
+            <td data-label="Description">
+<p>用户定义的墙体构件。</p>
+</td>
+</code></td></tr>
+<tr>
+<td data-label="Name"><code>NOTDEFINED
+            <td data-label="Description">
+<p>未定义的墙体构件。</p>
+</td>
+</code></td></tr>
+</tbody>
+</table><figcaption>表 6.1.2.22.A<a class="link" href="#-8beb436e-0ec4-463b-806f-33dc968be0d0"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a class="anchor" id="6.1.2.22.3-Formal-representation-"></a>
+    6.1.2.22.3 形式化表示（Formal representation）
+<a class="link" href="#6.1.2.22.3-Formal-representation-"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">TYPE <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallTypeEnum.htm">IfcWallTypeEnum</a> = ENUMERATION OF
+	(ELEMENTEDWALL
+	,MOVABLE
+	,PARAPET
+	,PARTITIONING
+	,PLUMBINGWALL
+	,POLYGONAL
+	,RETAININGWALL
+	,SHEAR
+	,SOLIDWALL
+	,STANDARD
+	,WAVEWALL
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;</code></pre>
+<h2><a class="anchor" id="6.1.2.22.4-"></a>
+    6.1.2.22.4 参考文献
+<a class="link" href="#6.1.2.22.4-"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWall.htm">IfcWall</a></li>
+<li><i data-feather="paperclip"></i><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWallType.htm">IfcWallType</a></li>
+</ul>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/shared/IfcSharedBldgElements/Types/IfcWallTypeEnum.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/shared/IfcSharedBldgElements/Types/IfcWallTypeEnum.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,817 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.2 IfcBuildingControlsDomain（建筑控制领域） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.2 IfcBuildingControlsDomain（建筑控制领域）</h1>
+<h2><a class="anchor" id="7.2.1-"></a>
+    7.2.1 架构定义
+<a class="link" href="#7.2.1-"><i data-feather="link"></i></a></h2>
+<p><em>IfcBuildingControlsDomain</em> schema是IFC模型领域层的一部分。它扩展了_IfcSharedBldgServiceElements_ schema中关于楼宇服务的概念。它定义了楼宇自动化、控制、仪表和报警的概念。</p>
+<p><em>IfcBuildingControlsDomain</em> schema支持以下概念的类型和实例：</p>
+<ul>
+<li>执行器 (actuator)</li>
+<li>报警 (alarm)</li>
+<li>控制器 (controller)</li>
+<li>传感器 (sensor)</li>
+<li>流量仪表 (flow instrument)</li>
+<li>单元控制元件 (unitary control element)</li>
+</ul>
+<p>执行控制动作的元件，如阀门和风门，主要是配气流元件的类型，位于_IfcHvacDomain_和_IfcElectricalDomain_ schema中。</p>
+<p>控制元件的实例捕获设计信息，而实时设备状态则在_IfcPerformanceHistory_上捕获，控制元件可以被分配给它。为性能历史定义了各种标准属性集，以捕获直接控制数据。</p>
+<p>控制元件在控制系统中通过_IfcRelAssociatesClassification_进行标识，以指示网关的URL以及设备和数据点的地址。</p>
+<p>为了支持多个生命周期阶段，实时控制数据（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a></em>）和设计数据（<em>IfcDistributionElement_子类型）是分开的，以便它们可以独立使用，而无需对方的存在。然而，两者都可以通过_IfcRelAssignsToControl_进行关联。如果在设计时已知设备寻址，并且分类应用于实例实体，那么在连接到控制系统时，控制元件实例可以根据匹配的分类自动分配给实时设备数据（_<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a></em>）。</p>
+<p>为了将控制元件连接到被测量或控制的物理流元件，使用了_IfcRelFlowControlElements_关系。例如，这种关系可以将执行器映射到风门，或将温度传感器映射到蒸发器盘管。可以通过遍历这些关系来派生_IfcDistributionFlowElement_实体的性能数据。</p>
+<p><em>IfcBuildingControlsDomain</em> schema不指定楼宇自动化协议，但可以映射到标准的协议或供应商实现，以实现调试和操作互操作性。常见的适用实体描述如下：</p>
+<ul>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a></em>：以属性集的形式捕获实时设备数据。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em>：捕获一组实时设备数据，可以使用预定义的 数据结构或自定义信息。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em>：捕获自定义属性的元数据，如名称、描述、数据类型、单位和范围。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesClassification.htm">IfcRelAssociatesClassification</a></em>：将设备和控制点的地址关联起来，以便在控制系统中唯一标识。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcController.htm">IfcController</a></em>：捕获基于硬件或软件的任意模拟和数字数据的非实时实例信息。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlarm.htm">IfcAlarm</a></em>：捕获基于硬件或软件的报警源的非实时实例信息。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEvent.htm">IfcEvent</a></em>：捕获报警事件处理信息。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProcedure.htm">IfcProcedure</a></em>：捕获可以任意运行或响应事件的设备过程。</li>
+<li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm">IfcTask</a></em>：捕获可以安排在不同时间的设备程序。</li>
+</ul>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新架构。</aside>
+<h2><a class="anchor" id="7.2.2-Types"></a>
+    7.2.2 Types
+<a class="link" href="#7.2.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.2.2.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActuatorTypeEnum.htm">
+        
+            IfcActuatorTypeEnum
+        
+        </a>
+</li><li number="7.2.2.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlarmTypeEnum.htm">
+        
+            IfcAlarmTypeEnum
+        
+        </a>
+</li><li number="7.2.2.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcControllerTypeEnum.htm">
+        
+            IfcControllerTypeEnum
+        
+        </a>
+</li><li number="7.2.2.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowInstrumentTypeEnum.htm">
+        
+            IfcFlowInstrumentTypeEnum
+        
+        </a>
+</li><li number="7.2.2.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSensorTypeEnum.htm">
+        
+            IfcSensorTypeEnum
+        
+        </a>
+</li><li number="7.2.2.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitaryControlElementTypeEnum.htm">
+        
+            IfcUnitaryControlElementTypeEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.2.3-Entities"></a>
+    7.2.3 Entities
+<a class="link" href="#7.2.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.2.3.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActuator.htm">
+        
+            IfcActuator
+        
+        </a>
+</li><li number="7.2.3.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActuatorType.htm">
+        
+            IfcActuatorType
+        
+        </a>
+</li><li number="7.2.3.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlarm.htm">
+        
+            IfcAlarm
+        
+        </a>
+</li><li number="7.2.3.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlarmType.htm">
+        
+            IfcAlarmType
+        
+        </a>
+</li><li number="7.2.3.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcController.htm">
+        
+            IfcController
+        
+        </a>
+</li><li number="7.2.3.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcControllerType.htm">
+        
+            IfcControllerType
+        
+        </a>
+</li><li number="7.2.3.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowInstrument.htm">
+        
+            IfcFlowInstrument
+        
+        </a>
+</li><li number="7.2.3.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowInstrumentType.htm">
+        
+            IfcFlowInstrumentType
+        
+        </a>
+</li><li number="7.2.3.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSensor.htm">
+        
+            IfcSensor
+        
+        </a>
+</li><li number="7.2.3.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSensorType.htm">
+        
+            IfcSensorType
+        
+        </a>
+</li><li number="7.2.3.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitaryControlElement.htm">
+        
+            IfcUnitaryControlElement
+        
+        </a>
+</li><li number="7.2.3.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitaryControlElementType.htm">
+        
+            IfcUnitaryControlElementType
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.2.4-Property-Sets"></a>
+    7.2.4 Property Sets
+<a class="link" href="#7.2.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.2.4.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ActuatorPHistory.htm">
+        
+            Pset_ActuatorPHistory
+        
+        </a>
+</li><li number="7.2.4.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ActuatorTypeCommon.htm">
+        
+            Pset_ActuatorTypeCommon
+        
+        </a>
+</li><li number="7.2.4.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ActuatorTypeElectricActuator.htm">
+        
+            Pset_ActuatorTypeElectricActuator
+        
+        </a>
+</li><li number="7.2.4.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ActuatorTypeHydraulicActuator.htm">
+        
+            Pset_ActuatorTypeHydraulicActuator
+        
+        </a>
+</li><li number="7.2.4.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ActuatorTypeLinearActuation.htm">
+        
+            Pset_ActuatorTypeLinearActuation
+        
+        </a>
+</li><li number="7.2.4.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ActuatorTypePneumaticActuator.htm">
+        
+            Pset_ActuatorTypePneumaticActuator
+        
+        </a>
+</li><li number="7.2.4.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ActuatorTypeRotationalActuation.htm">
+        
+            Pset_ActuatorTypeRotationalActuation
+        
+        </a>
+</li><li number="7.2.4.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_AlarmPHistory.htm">
+        
+            Pset_AlarmPHistory
+        
+        </a>
+</li><li number="7.2.4.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_AlarmTypeCommon.htm">
+        
+            Pset_AlarmTypeCommon
+        
+        </a>
+</li><li number="7.2.4.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerPHistory.htm">
+        
+            Pset_ControllerPHistory
+        
+        </a>
+</li><li number="7.2.4.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerTypeCommon.htm">
+        
+            Pset_ControllerTypeCommon
+        
+        </a>
+</li><li number="7.2.4.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerTypeFloating.htm">
+        
+            Pset_ControllerTypeFloating
+        
+        </a>
+</li><li number="7.2.4.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerTypeMultiPosition.htm">
+        
+            Pset_ControllerTypeMultiPosition
+        
+        </a>
+</li><li number="7.2.4.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerTypeProgrammable.htm">
+        
+            Pset_ControllerTypeProgrammable
+        
+        </a>
+</li><li number="7.2.4.15">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerTypeProportional.htm">
+        
+            Pset_ControllerTypeProportional
+        
+        </a>
+</li><li number="7.2.4.16">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ControllerTypeTwoPosition.htm">
+        
+            Pset_ControllerTypeTwoPosition
+        
+        </a>
+</li><li number="7.2.4.17">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FlowInstrumentPHistory.htm">
+        
+            Pset_FlowInstrumentPHistory
+        
+        </a>
+</li><li number="7.2.4.18">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FlowInstrumentTypeCommon.htm">
+        
+            Pset_FlowInstrumentTypeCommon
+        
+        </a>
+</li><li number="7.2.4.19">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FlowInstrumentTypePressureGauge.htm">
+        
+            Pset_FlowInstrumentTypePressureGauge
+        
+        </a>
+</li><li number="7.2.4.20">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_FlowInstrumentTypeThermometer.htm">
+        
+            Pset_FlowInstrumentTypeThermometer
+        
+        </a>
+</li><li number="7.2.4.21">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorPHistory.htm">
+        
+            Pset_SensorPHistory
+        
+        </a>
+</li><li number="7.2.4.22">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeCO2Sensor.htm">
+        
+            Pset_SensorTypeCO2Sensor
+        
+        </a>
+</li><li number="7.2.4.23">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeCommon.htm">
+        
+            Pset_SensorTypeCommon
+        
+        </a>
+</li><li number="7.2.4.24">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeConductanceSensor.htm">
+        
+            Pset_SensorTypeConductanceSensor
+        
+        </a>
+</li><li number="7.2.4.25">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeContactSensor.htm">
+        
+            Pset_SensorTypeContactSensor
+        
+        </a>
+</li><li number="7.2.4.26">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeFireSensor.htm">
+        
+            Pset_SensorTypeFireSensor
+        
+        </a>
+</li><li number="7.2.4.27">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeFlowSensor.htm">
+        
+            Pset_SensorTypeFlowSensor
+        
+        </a>
+</li><li number="7.2.4.28">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeFrostSensor.htm">
+        
+            Pset_SensorTypeFrostSensor
+        
+        </a>
+</li><li number="7.2.4.29">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeGasSensor.htm">
+        
+            Pset_SensorTypeGasSensor
+        
+        </a>
+</li><li number="7.2.4.30">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeHeatSensor.htm">
+        
+            Pset_SensorTypeHeatSensor
+        
+        </a>
+</li><li number="7.2.4.31">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeHumiditySensor.htm">
+        
+            Pset_SensorTypeHumiditySensor
+        
+        </a>
+</li><li number="7.2.4.32">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeIdentifierSensor.htm">
+        
+            Pset_SensorTypeIdentifierSensor
+        
+        </a>
+</li><li number="7.2.4.33">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeIonConcentrationSensor.htm">
+        
+            Pset_SensorTypeIonConcentrationSensor
+        
+        </a>
+</li><li number="7.2.4.34">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeLevelSensor.htm">
+        
+            Pset_SensorTypeLevelSensor
+        
+        </a>
+</li><li number="7.2.4.35">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeLightSensor.htm">
+        
+            Pset_SensorTypeLightSensor
+        
+        </a>
+</li><li number="7.2.4.36">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeMoistureSensor.htm">
+        
+            Pset_SensorTypeMoistureSensor
+        
+        </a>
+</li><li number="7.2.4.37">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeMovementSensor.htm">
+        
+            Pset_SensorTypeMovementSensor
+        
+        </a>
+</li><li number="7.2.4.38">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypePHSensor.htm">
+        
+            Pset_SensorTypePHSensor
+        
+        </a>
+</li><li number="7.2.4.39">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypePressureSensor.htm">
+        
+            Pset_SensorTypePressureSensor
+        
+        </a>
+</li><li number="7.2.4.40">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeRadiationSensor.htm">
+        
+            Pset_SensorTypeRadiationSensor
+        
+        </a>
+</li><li number="7.2.4.41">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeRadioactivitySensor.htm">
+        
+            Pset_SensorTypeRadioactivitySensor
+        
+        </a>
+</li><li number="7.2.4.42">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeSmokeSensor.htm">
+        
+            Pset_SensorTypeSmokeSensor
+        
+        </a>
+</li><li number="7.2.4.43">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeSoundSensor.htm">
+        
+            Pset_SensorTypeSoundSensor
+        
+        </a>
+</li><li number="7.2.4.44">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeTemperatureSensor.htm">
+        
+            Pset_SensorTypeTemperatureSensor
+        
+        </a>
+</li><li number="7.2.4.45">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_SensorTypeWindSensor.htm">
+        
+            Pset_SensorTypeWindSensor
+        
+        </a>
+</li><li number="7.2.4.46">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_UnitaryControlElementPHistory.htm">
+        
+            Pset_UnitaryControlElementPHistory
+        
+        </a>
+</li><li number="7.2.4.47">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_UnitaryControlElementTypeCommon.htm">
+        
+            Pset_UnitaryControlElementTypeCommon
+        
+        </a>
+</li><li number="7.2.4.48">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_UnitaryControlElementTypeIndicatorPanel.htm">
+        
+            Pset_UnitaryControlElementTypeIndicatorPanel
+        
+        </a>
+</li><li number="7.2.4.49">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_UnitaryControlElementTypeThermostat.htm">
+        
+            Pset_UnitaryControlElementTypeThermostat
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.2.5-Quantity-Sets"></a>
+    7.2.5 Quantity Sets
+<a class="link" href="#7.2.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.2.5.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_ActuatorBaseQuantities.htm">
+        
+            Qto_ActuatorBaseQuantities
+        
+        </a>
+</li><li number="7.2.5.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_AlarmBaseQuantities.htm">
+        
+            Qto_AlarmBaseQuantities
+        
+        </a>
+</li><li number="7.2.5.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_ControllerBaseQuantities.htm">
+        
+            Qto_ControllerBaseQuantities
+        
+        </a>
+</li><li number="7.2.5.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_FlowInstrumentBaseQuantities.htm">
+        
+            Qto_FlowInstrumentBaseQuantities
+        
+        </a>
+</li><li number="7.2.5.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_SensorBaseQuantities.htm">
+        
+            Qto_SensorBaseQuantities
+        
+        </a>
+</li><li number="7.2.5.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_UnitaryControlElementBaseQuantities.htm">
+        
+            Qto_UnitaryControlElementBaseQuantities
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.2.6-Functions"></a>
+    7.2.6 Functions
+<a class="link" href="#7.2.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="7.2.7-Rules"></a>
+    7.2.7 Rules
+<a class="link" href="#7.2.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="7.2.8-PropertyEnumerations"></a>
+    7.2.8 PropertyEnumerations
+<a class="link" href="#7.2.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.2.8.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ActuatorApplication.htm">
+        
+            PEnum_ActuatorApplication
+        
+        </a>
+</li><li number="7.2.8.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerApplication.htm">
+        
+            PEnum_ControllerApplication
+        
+        </a>
+</li><li number="7.2.8.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerMultiPositionType.htm">
+        
+            PEnum_ControllerMultiPositionType
+        
+        </a>
+</li><li number="7.2.8.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerProportionalType.htm">
+        
+            PEnum_ControllerProportionalType
+        
+        </a>
+</li><li number="7.2.8.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerTwoPositionType.htm">
+        
+            PEnum_ControllerTwoPositionType
+        
+        </a>
+</li><li number="7.2.8.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerTypeFloating.htm">
+        
+            PEnum_ControllerTypeFloating
+        
+        </a>
+</li><li number="7.2.8.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ControllerTypeProgrammable.htm">
+        
+            PEnum_ControllerTypeProgrammable
+        
+        </a>
+</li><li number="7.2.8.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ElectricActuatorType.htm">
+        
+            PEnum_ElectricActuatorType
+        
+        </a>
+</li><li number="7.2.8.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_FailPosition.htm">
+        
+            PEnum_FailPosition
+        
+        </a>
+</li><li number="7.2.8.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_MovementSensingType.htm">
+        
+            PEnum_MovementSensingType
+        
+        </a>
+</li><li number="7.2.8.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_PressureGaugeType.htm">
+        
+            PEnum_PressureGaugeType
+        
+        </a>
+</li><li number="7.2.8.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_TemperatureSensorType.htm">
+        
+            PEnum_TemperatureSensorType
+        
+        </a>
+</li><li number="7.2.8.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ThermometerType.htm">
+        
+            PEnum_ThermometerType
+        
+        </a>
+</li><li number="7.2.8.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_UnitaryControlElementApplication.htm">
+        
+            PEnum_UnitaryControlElementApplication
+        
+        </a>
+</li><li number="7.2.8.15">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_WindSensorType.htm">
+        
+            PEnum_WindSensorType
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/domain/IfcBuildingControlsDomain/README.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/domain/IfcBuildingControlsDomain/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>

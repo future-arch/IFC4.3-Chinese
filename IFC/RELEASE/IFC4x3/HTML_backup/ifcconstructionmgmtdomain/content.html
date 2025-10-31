@@ -1,0 +1,420 @@
+<html lang="en">
+<head>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/mini-default.css" rel="stylesheet"/>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.3 IfcConstructionMgmtDomain（施工管理领域） - IFC 4.3.2 Documentation</title>
+<link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script>window.is_iso = false;</script>
+</head>
+<body class="">
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
+                        
+                            <small>under development</small>
+</p>
+<ul>
+<li>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/">
+<i data-feather="message-circle"></i>
+                                帮助提出改进建议
+                            </a>
+</li>
+<li>
+<a href="https://forums.buildingsmart.org/">
+<i data-feather="help-circle"></i>
+                            获取用户或开发者支持
+                        </a>
+</li>
+<!--
+                    <li>
+                        <a href="#todo">
+                            <i data-feather="code"></i>
+                            Get started with software development
+                        </a>
+                    </li>
+                    -->
+</ul>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<form action="/search" class="search" method="get" style="padding:0px;">
+<div class="row">
+<div class="col-md-8">
+<input class="search-input" name="query" placeholder="搜索" type="text" value=""/>
+</div>
+<div class="col-md-4">
+<button class="primary" type="submit" value="Search">
+<span class="icon-search inverse"></span>
+</button>
+</div>
+</div>
+</form>
+<nav>
+<div>
+<a href="/">
+                             封面
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/toc.html">
+                             目录
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/foreword.htm">
+                             前言
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/introduction.htm">
+                             引言
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/scope.htm">
+                            1 范围
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/normative_references.htm">
+                            2 规范性引用文件
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm">
+                            3 术语, 定义, 和缩略语
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/content.html">
+                            4 基本概念和假设
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-5/">
+                            5 核心数据模式
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-6/">
+                            6 共享元素数据模式
+                        </a>
+<a class="current" href="/IFC/RELEASE/IFC4x3/HTML/chapter-7/">
+                            7 特定领域数据模式
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1 current" href="/IFC/RELEASE/IFC4x3/HTML/ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="/IFC/RELEASE/IFC4x3/HTML/ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/chapter-8/">
+                            8 资源定义数据模式
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-a.html">
+                            A 计算机可解释列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-b.html">
+                            B 按字母顺序排列的列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-c.html">
+                            C 继承列表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-d.html">
+                            D 图表
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-e.html">
+                            E 示范
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/annex-f.html">
+                            F 变更日志
+                        </a>
+</div>
+<div>
+<a href="/IFC/RELEASE/IFC4x3/HTML/content/bibliography.htm">
+                             参考文献
+                        </a>
+<a href="/IFC/RELEASE/IFC4x3/HTML/index.htm">
+                             索引
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.3 IfcConstructionMgmtDomain（施工管理领域）</h1>
+<h2><a class="anchor" id="7.3.1-"></a>
+    7.3.1 架构定义
+<a class="link" href="#7.3.1-"><i data-feather="link"></i></a></h2>
+<p><em>IfcConstructionMgmtDomain</em> 模式定义了施工管理领域中的资源概念。它与 <em>IfcProcessExtension</em> 和 <em>IfcSharedMgmtElements</em> 模式一起，提供了一套可用于在施工管理应用程序之间交换信息的模型。</p>
+<p><em>IfcConstructionMgmtDomain</em> 模式扩展了适用于施工的资源和资源类型。<em>IfcConstructionMgmtDomain</em> 模式的目标是捕获支持特定业务流程和资源需求的信息，这些信息完全属于施工经理的关注领域。目的是支持计算机辅助管理应用程序中的信息交换和共享。</p>
+<p>本模式的范围包括：</p>
+<ul>
+<li>施工过程中使用的资源，包括材料、劳动力、设备、产品、班组和分包资源；</li>
+<li>识别在未来过程中用作资源的、通过执行过程产生的的产品。</li>
+<li>资源生产力计算，以确定工作的、使用的以及最终的任务持续时间。</li>
+<li>资源时间信息，以支持分配和均衡。</li>
+<li>资源成本信息，以支持挣值计算。</li>
+<li>资源数量，以支持成本表中的派生成本。</li>
+<li>按时间划分的数据，以指示特定时间段内的计划和实际工作、使用和成本。</li>
+<li>资源类型定义，描述可应用于资源实例的通用生产力和成本费率。</li>
+</ul>
+<p>资源是任何有限可用实体（物理或虚拟）的使用。资源可以通过特定人员或设备等有形对象来满足，但资源本身并不代表这些对象，而是代表这些对象的一种特定用途，例如劳动力。施工资源将资源的概念扩展到包括在施工过程中使用所产生的数量、成本、计划和其他影响。</p>
+<p>施工管理活动可以在整个产品（整体）、产品的某一部分或一组作为单个产品实体（复合体）的产品上进行。通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 关系类的聚合或嵌套子类型，可以实现识别部分、整体和复合体的产品组合结构。</p>
+<h2><a class="anchor" id="7.3.2-Types"></a>
+    7.3.2 Types
+<a class="link" href="#7.3.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.3.2.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionEquipmentResourceTypeEnum.htm">
+        
+            IfcConstructionEquipmentResourceTypeEnum
+        
+        </a>
+</li><li number="7.3.2.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionMaterialResourceTypeEnum.htm">
+        
+            IfcConstructionMaterialResourceTypeEnum
+        
+        </a>
+</li><li number="7.3.2.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionProductResourceTypeEnum.htm">
+        
+            IfcConstructionProductResourceTypeEnum
+        
+        </a>
+</li><li number="7.3.2.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCrewResourceTypeEnum.htm">
+        
+            IfcCrewResourceTypeEnum
+        
+        </a>
+</li><li number="7.3.2.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResourceTypeEnum.htm">
+        
+            IfcLaborResourceTypeEnum
+        
+        </a>
+</li><li number="7.3.2.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSubContractResourceTypeEnum.htm">
+        
+            IfcSubContractResourceTypeEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.3.3-Entities"></a>
+    7.3.3 Entities
+<a class="link" href="#7.3.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.3.3.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionEquipmentResource.htm">
+        
+            IfcConstructionEquipmentResource
+        
+        </a>
+</li><li number="7.3.3.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionEquipmentResourceType.htm">
+        
+            IfcConstructionEquipmentResourceType
+        
+        </a>
+</li><li number="7.3.3.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionMaterialResource.htm">
+        
+            IfcConstructionMaterialResource
+        
+        </a>
+</li><li number="7.3.3.4">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionMaterialResourceType.htm">
+        
+            IfcConstructionMaterialResourceType
+        
+        </a>
+</li><li number="7.3.3.5">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionProductResource.htm">
+        
+            IfcConstructionProductResource
+        
+        </a>
+</li><li number="7.3.3.6">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionProductResourceType.htm">
+        
+            IfcConstructionProductResourceType
+        
+        </a>
+</li><li number="7.3.3.7">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResource.htm">
+        
+            IfcConstructionResource
+        
+        </a>
+</li><li number="7.3.3.8">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstructionResourceType.htm">
+        
+            IfcConstructionResourceType
+        
+        </a>
+</li><li number="7.3.3.9">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCrewResource.htm">
+        
+            IfcCrewResource
+        
+        </a>
+</li><li number="7.3.3.10">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCrewResourceType.htm">
+        
+            IfcCrewResourceType
+        
+        </a>
+</li><li number="7.3.3.11">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResource.htm">
+        
+            IfcLaborResource
+        
+        </a>
+</li><li number="7.3.3.12">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResourceType.htm">
+        
+            IfcLaborResourceType
+        
+        </a>
+</li><li number="7.3.3.13">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSubContractResource.htm">
+        
+            IfcSubContractResource
+        
+        </a>
+</li><li number="7.3.3.14">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSubContractResourceType.htm">
+        
+            IfcSubContractResourceType
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.3.4-Property-Sets"></a>
+    7.3.4 Property Sets
+<a class="link" href="#7.3.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.3.4.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Pset_ConstructionResource.htm">
+        
+            Pset_ConstructionResource
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.3.5-Quantity-Sets"></a>
+    7.3.5 Quantity Sets
+<a class="link" href="#7.3.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.3.5.1">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_ConstructionEquipmentResourceBaseQuantities.htm">
+        
+            Qto_ConstructionEquipmentResourceBaseQuantities
+        
+        </a>
+</li><li number="7.3.5.2">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_ConstructionMaterialResourceBaseQuantities.htm">
+        
+            Qto_ConstructionMaterialResourceBaseQuantities
+        
+        </a>
+</li><li number="7.3.5.3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/Qto_LaborResourceBaseQuantities.htm">
+        
+            Qto_LaborResourceBaseQuantities
+        
+        </a>
+</li>
+</ol>
+<h2><a class="anchor" id="7.3.6-Functions"></a>
+    7.3.6 Functions
+<a class="link" href="#7.3.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="7.3.7-Rules"></a>
+    7.3.7 Rules
+<a class="link" href="#7.3.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+<h2><a class="anchor" id="7.3.8-PropertyEnumerations"></a>
+    7.3.8 PropertyEnumerations
+<a class="link" href="#7.3.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<p>
+    此类别中没有可用资源。
+</p>
+</div>
+<div class="col-md-2 rightpanel">
+<div class="card fluid shadowed">
+<p>
+<a class="button primary edit-github" href="https://github.com/buildingSMART/IFC4.3.x-development/blob/master//docs_zh/schemas/domain/IfcConstructionMgmtDomain/README.md"><span class="icon-edit inverse"></span> 在Github上编辑</a>
+</p>
+<p>
+<small>
+<span id="contributors"></span><br/>
+<span id="last-change"></span>
+</small>
+</p>
+<p>
+<small>
+<a href="https://github.com/buildingSMART/IFC4.3.x-development/issues/371">这个页面难以理解吗？告诉我们！</a>
+</small>
+</p>
+</div>
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>跳转到章节</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2025 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://app.box.com/s/rg081ahyq1euw8uw6efql6m2fcofm558">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs_zh/schemas/domain/IfcConstructionMgmtDomain/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
+</body>
+</html>
