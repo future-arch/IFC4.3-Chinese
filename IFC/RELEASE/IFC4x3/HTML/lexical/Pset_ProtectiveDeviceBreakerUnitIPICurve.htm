@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,14 +163,15 @@
 <h2><a class="anchor" id="7.4.4.45.1-Semantic-definition-"></a>
     7.4.4.45.1 语义定义（Semantic definition）
 <a class="link" href="#7.4.4.45.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>表示保护设备允通电流曲线的一组相关属性。注：一个保护设备可与不同实例的该属性集关联，以提供与不同基本特性相关的信息。</p>
-<!-- 简短定义结束 -->
+<p>一组连贯的特性，表示保护装置的泄放电流曲线。
+注释 - 一个保护装置可能与此属性集的多个实例相关联，提供与不同基本特性相关的信息。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="7.4.4.45.2-"></a>
     7.4.4.45.2 适用实体
 <a class="link" href="#7.4.4.45.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProtectiveDevice.htm">IfcProtectiveDevice</a></li>
@@ -179,7 +180,7 @@
 <h2><a class="anchor" id="7.4.4.45.3-"></a>
     7.4.4.45.3 属性
 <a class="link" href="#7.4.4.45.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-832de064-b222-47ce-9267-b6edc394ea74"></a><table>
+<figure><a class="anchor" id="-dd96d760-ccc0-4987-b326-14edf6b7fb67"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -195,7 +196,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_VoltageLevels.htm">PEnum_VoltageLevels</a></td>
 <td>
-<p>该实例数据适用的电压等级。枚举中可选择多个值。</p>
+<p>实例数据有效的电压等级。枚举中可以选择多个值。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/VoltageLevel.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -204,7 +205,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>额定电流是指设计用于测量的标称电流值。</p><p>该实例数据有效的额定电流值集合，单位为[A]。应至少提供一个值。集合中的任何值均不得超过同一断路器单元关联的UltimateRatedCurrent值。</p>
+<p>设计用于测量的标称电流。</p><p>一组标称电流值 [A]，此实例数据对此有效。至少应提供一个值。此集合中的任何值均不得超过与同一断路器单元关联的
+UltimateRatedCurrent 值。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NominalCurrent.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -213,14 +215,14 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyTableValue.htm">IfcPropertyTableValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a>/<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>一条曲线，用于确定在施加特定预期电流时断路器单元的允通峰值电流。请注意，断路器单元IPI曲线在笛卡尔坐标系中定义，这一事实必须在属性集中声明：</p>
-<p>(1) 定义值：一个包含最少2个、最多16个数字的列表，提供I/Î对数/对数坐标空间中各点的电流值，单位为[A]。曲线在两个连续点之间绘制为直线。
-(2) 确定值：一个包含最少2个、最多16个数字的列表，提供I/Î对数/对数坐标空间中各点的允通峰值电流值Î，单位为[A]。曲线在两个连续点之间绘制为直线。</p>
+<p>定义断路器单元在特定预期电流作用下的允通峰值电流曲线。注意断路器单元IPI曲线在笛卡尔坐标系中定义，这一事实必须在属性集中声明：</p>
+<p>(1) 定义值：包含2到16个数字的列表，提供I/Î对数/对数坐标空间中各点的电流值，单位为[A]。曲线在相邻两点之间以直线连接。
+(2) 定义值：包含2到16个数字的列表，提供I/Î对数/对数坐标空间中各点的允通峰值电流Î，单位为[A]。曲线在相邻两点之间以直线连接。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/BreakerUnitIPICurve.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.4.45.A<a class="link" href="#-832de064-b222-47ce-9267-b6edc394ea74"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.4.45.A<a class="link" href="#-dd96d760-ccc0-4987-b326-14edf6b7fb67"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
