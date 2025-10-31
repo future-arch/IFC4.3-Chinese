@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,14 +163,14 @@
 <h2><a class="anchor" id="7.4.4.80.1-Semantic-definition-"></a>
     7.4.4.80.1 语义定义（Semantic definition）
 <a class="link" href="#7.4.4.80.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>一种将电能从一个电路传输到另一个电路的感应式静止设备。</p>
-<!-- 简短定义结束 -->
+<p>一种感应式静止设备，将电能从一个电路转移到另一个电路。</p>
+<!-- end of short definition -->
 <h2><a class="anchor" id="7.4.4.80.2-"></a>
     7.4.4.80.2 适用实体
 <a class="link" href="#7.4.4.80.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTransformer.htm">IfcTransformer</a></li>
@@ -179,7 +179,7 @@
 <h2><a class="anchor" id="7.4.4.80.3-"></a>
     7.4.4.80.3 属性
 <a class="link" href="#7.4.4.80.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-3b60dc84-f0d0-4869-ba95-76c9dc38ba1e"></a><table>
+<figure><a class="anchor" id="-27029000-79a2-44a6-aefe-ab441775a2a6"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -195,8 +195,10 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td>
-<p>此项目中指定类型的基准ID（例如类型"A-1"），也称为"构造类型"。如果软件不支持对象类型且未使用已认可分类系统的分类基准，则应作为"对象类型"名称的替代方案提供。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> Reference属性已被弃用，不应再使用，请改用相关类型上的_Name_属性。</aside>
+<p>此项目中此指定类型的参考ID（例如类型'A-1'），也称为"构造类型"。如果软件不支持对象类型且未使用公认分类系统的分类参考，则应作为"对象类型"名称的替代提供。</p>
+<blockquote>
+<p>IFC4.3.0.0 弃用说明 Reference属性已弃用，不应再使用，请改用相关类型上的_Name_属性。</p>
+</blockquote>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Reference.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -205,7 +207,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ElementStatus.htm">PEnum_ElementStatus</a></td>
 <td>
-<p>构件的状态，主要用于改造或翻新项目。状态可指定为"New"（新建）- 设计为新增构件，"Existing"（现有）- 构件已存在且保留，"Demolish"（拆除）- 构件已存在但将被拆除，"Temporary"（临时）- 构件仅临时存在（如临时支撑结构）。</p>
+<p>Status（状态）</p>
+<p>构件的状态，主要用于翻新或改造项目。状态可指定为“新建”（New）- 作为新增设计的构件，“现有”（Existing）- 构件存在并保留，“拆除”（Demolish）- 构件已存在但将被拆除，“临时”（Temporary）- 构件仅临时存在（如临时支撑结构）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Status.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -214,7 +217,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricVoltageMeasure.htm">IfcElectricVoltageMeasure</a></td>
 <td>
-<p>将被转换并从一次侧流入变压器的电压。</p>
+<p>将要被变换并在变压器一次侧运行的电压。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/PrimaryVoltage.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -223,7 +226,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricVoltageMeasure.htm">IfcElectricVoltageMeasure</a></td>
 <td>
-<p>变压器经过变换后，从二次侧输出的电压。</p>
+<p>经过变换并在变压器次级侧输出的电压。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SecondaryVoltage.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -232,7 +235,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>将被转换且流入变压器一次侧的电流。</p>
+<p>将要被变换并在变压器一次侧运行的电流。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/PrimaryCurrent.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -241,7 +244,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElectricCurrentMeasure.htm">IfcElectricCurrentMeasure</a></td>
 <td>
-<p>从变压器二次侧流出、经过变换后的电流。</p>
+<p>经过变换并在变压器次级侧输出的电流。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SecondaryCurrent.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -250,7 +253,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
 <td>
-<p>流经变压器一次侧并即将被转换的频率。</p>
+<p>将要被变换并在变压器一次侧运行的频率。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/PrimaryFrequency.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -259,7 +262,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
 <td>
-<p>变压器二次侧经过变换后输出的频率。</p>
+<p>经过变换并在变压器次级侧输出的频率。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SecondaryFrequency.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -268,7 +271,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPowerMeasure.htm">IfcPowerMeasure</a></td>
 <td>
-<p>在变压器一次侧输入并完成变换的视在功率，单位为伏安(VA)。</p>
+<p>已转换并在变压器一次侧输入的以VA（伏安）为单位的功率。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/PrimaryApparentPower.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -277,7 +280,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPowerMeasure.htm">IfcPowerMeasure</a></td>
 <td>
-<p>经过变压器转换并从二次侧输出的以伏安（VA）为单位的功率。</p>
+<p>变压器二次侧输出的视在功率，单位为VA（伏安）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SecondaryApparentPower.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -286,7 +289,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPowerMeasure.htm">IfcPowerMeasure</a></td>
 <td>
-<p>以伏安（VA）为单位的最大视在功率/容量。</p>
+<p>最大视在功率/容量，单位为伏安(VA)。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/MaximumApparentPower.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -295,7 +298,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SecondaryCurrentType.htm">PEnum_SecondaryCurrentType</a></td>
 <td>
-<p>变压器输出可能产生的二次电流类型列表。</p>
+<p>变压器输出可能产生的次级电流类型列表。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SecondaryCurrentType.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -304,7 +307,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexNumber.htm">IfcComplexNumber</a></td>
 <td>
-<p>一个复数，用于指定变压器额定电流下短路电压的实部和虚部，以百分比表示。</p>
+<p>指定变压器额定电流下短路电压实部和虚部的复数，以%表示。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ShortCircuitVoltage.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -313,7 +316,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></td>
 <td>
-<p>变压器零序阻抗实部与正序阻抗实部（即短路电压实部）之比。<br/>
+<p>变压器零序阻抗实部与正序阻抗实部（即短路电压实部）的比值。
 用于包含N导体的三相变压器。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/RealImpedanceRatio.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
@@ -324,7 +327,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></td>
 <td>
 <p>变压器零序阻抗虚部与正序阻抗虚部（即短路电压虚部）之比。
-用于包含N导体的三相变压器。</p>
+用于包含 N 导线的三相变压器。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ImaginaryImpedanceRatio.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -333,11 +336,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_TransformerVectorGroup.htm">PEnum_TransformerVectorGroup</a></td>
 <td>
-<p>变压器可能采用的向量组列表，可从中设置所需的向量组。枚举列表中的值遵循国际标准代码，其中第一个字母描述初级绕组的连接方式，第二个字母描述次级绕组的连接方式，数字描述电压和电流从初级侧到次级侧的旋转角度（以30度的倍数表示）。</p>
-<p>D：表示绕组采用三角形连接。
-Y：表示绕组采用星形连接。
-Z：表示绕组采用曲折形连接（一种特殊的星形连接，可提供较低的电抗）；
-该连接方式仅适用于三相变压器。</p>
+<p>变压器可能矢量组列表，可从中选择所需类型。枚举列表中的值遵循国际标准代码，其中第一个字母描述一次绕组连接方式，
+第二个字母描述二次绕组连接方式，数字描述从一次侧到二次侧的电压和电流旋转角度（以30度的倍数表示）。</p>
+<p>D：表示绕组为三角形连接。
+Y：表示绕组为星形连接。
+Z：表示绕组为曲折连接（一种特殊的星形连接，提供变压器的低电抗）；
+连接方式仅与三相变压器相关。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TransformerVectorGroup.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -346,7 +350,7 @@ Z：表示绕组采用曲折形连接（一种特殊的星形连接，可提供�
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示一次绕组中性点是否可作为端子使用（=TRUE 表示可用，=FALSE 表示不可用）。</p>
+<p>指示初级绕组的中性点是否可作为端子使用（=TRUE）或不可用（= FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsNeutralPrimaryTerminalAvailable.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -355,12 +359,12 @@ Z：表示绕组采用曲折形连接（一种特殊的星形连接，可提供�
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>指示二次绕组的中性点是否可作为端子使用（=TRUE 表示可用，=FALSE 表示不可用）。</p>
+<p>指示次级绕组的中性点是否可作为端子使用（=TRUE）或不可用（= FALSE）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/IsNeutralSecondaryTerminalAvailable.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.4.4.80.A<a class="link" href="#-3b60dc84-f0d0-4869-ba95-76c9dc38ba1e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.4.4.80.A<a class="link" href="#-27029000-79a2-44a6-aefe-ab441775a2a6"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
