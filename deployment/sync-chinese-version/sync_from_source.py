@@ -754,13 +754,14 @@ def check_changes():
     print("\n" + "=" * 80)
 
 
-def sync_changes(files: Optional[List[Path]] = None, auto_commit: bool = False, force: bool = False):
+def sync_changes(files: Optional[List[Path]] = None, auto_commit: bool = False, auto_push: bool = False, force: bool = False):
     """
     同步更改
 
     Args:
         files: 要同步的文件列表（None 表示同步所有检测到的更改）
         auto_commit: 是否自动提交
+        auto_push: 是否自动推送到 GitHub（需要 auto_commit=True）
         force: 是否强制同步（忽略进度记录）
     """
     print("=" * 80)
@@ -808,6 +809,13 @@ def sync_changes(files: Optional[List[Path]] = None, auto_commit: bool = False, 
     print("\n" + "=" * 80)
     print(f"📊 同步完成: 成功 {success_count} 个，失败 {fail_count} 个，跳过 {skip_count} 个")
     print("=" * 80)
+
+    # 如果需要自动推送
+    if auto_push and auto_commit and success_count > 0:
+        print("\n🚀 推送更改到 GitHub...")
+        push_to_github()
+    elif auto_push and not auto_commit:
+        print("\n⚠️  警告: 使用 --push 需要先提交更改（不能与 --no-commit 同时使用）")
 
 
 def auto_mode():
@@ -858,6 +866,7 @@ def main():
 示例:
   python sync_from_source.py --check
   python sync_from_source.py --sync
+  python sync_from_source.py --sync --push          # 同步并推送到 GitHub
   python sync_from_source.py --file /path/to/file.md
   python sync_from_source.py --auto
   python sync_from_source.py --progress
@@ -870,6 +879,7 @@ def main():
     parser.add_argument("--file", type=str, help="同步指定的单个文件")
     parser.add_argument("--auto", action="store_true", help="自动模式（检测+同步+提交+推送）")
     parser.add_argument("--no-commit", action="store_true", help="不自动提交（与 --sync 配合使用）")
+    parser.add_argument("--push", action="store_true", help="自动推送到 GitHub（与 --sync 配合使用，需要先提交）")
     parser.add_argument("--force", action="store_true", help="强制同步所有文件（忽略进度记录）")
     parser.add_argument("--progress", action="store_true", help="查看同步进度统计")
     parser.add_argument("--reset-progress", action="store_true", help="重置同步进度记录")
@@ -901,14 +911,14 @@ def main():
         check_changes()
 
     if args.sync:
-        sync_changes(auto_commit=not args.no_commit, force=args.force)
+        sync_changes(auto_commit=not args.no_commit, auto_push=args.push, force=args.force)
 
     if args.file:
         file_path = Path(args.file)
         if not file_path.exists():
             print(f"❌ 文件不存在: {file_path}")
             return
-        sync_changes([file_path], auto_commit=not args.no_commit, force=args.force)
+        sync_changes([file_path], auto_commit=not args.no_commit, auto_push=args.push, force=args.force)
 
     if args.auto:
         auto_mode()
