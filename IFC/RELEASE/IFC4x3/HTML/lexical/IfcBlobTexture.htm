@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,9 +196,9 @@
 <a class="link" href="#8.12.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBlobTexture.htm">IfcBlobTexture</a></em> 提供表面光照参数的二维分布，该表面是纹理映射的目标。纹理本身以单个二进制数据块形式给出，表示像素格式文件的内容。像素文件的格式由 <em>RasterFormat</em> 属性指定，允许的格式受 <em>SupportedRasterFormat</em> 规则约束。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Toolbox specific implementations of the binary datatype may restrict the maximum length of the binary blob to capture the raster file content.</aside>
+<aside class="aside-note"><mark>注释</mark> 工具箱对二进制数据类型的特定实现可能会限制二进制大对象的最大长度，以捕获栅格文件内容。</aside>
 <p>关于纹理节点的解释，请参阅 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcImageTexture.htm">IfcImageTexture</a></em> 定义。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Data type of <em>RasterCode</em> has been corrected to BINARY.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x3 中的新增实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> <em>RasterCode</em> 的数据类型已修正为 BINARY。</aside>
 <h2><a class="anchor" id="8.12.3.1.2-Entity-inheritance-"></a>
     8.12.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -244,7 +244,7 @@
     8.12.3.1.3 特性（Attributes）
 <a class="link" href="#8.12.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-4e3bce11-b232-4a56-b8c7-f6447e462914"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-f4a2528a-95c1-4c37-a57b-740be295c8df"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -266,6 +266,91 @@
 <small>(7)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                RepeatS
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p><em>RepeatS</em> 字段指定纹理在 S 方向上的包裹方式。如果 <em>RepeatS</em> 为 TRUE（默认值），纹理贴图在 S 方向的 [0.0, 1.0] 纹理坐标范围外重复，以填充形状。如果 <em>RepeatS</em> 为 FALSE，纹理坐标在 S 方向上被限制在 [0.0, 1.0] 范围内。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                RepeatT
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p><em>RepeatT</em> 字段指定纹理在 T 方向上的包裹方式。如果 <em>RepeatT</em> 为 TRUE（默认值），纹理贴图在 T 方向的 [0.0, 1.0] 纹理坐标范围外重复，以填充形状。如果 <em>RepeatT</em> 为 FALSE，纹理坐标在 T 方向上被限制在 [0.0, 1.0] 范围内。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Mode
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>Mode 应保存此纹理对应的贴图类型，从以下列表中选择：AMBIENT、NORMAL、EMISSIVE、METALLICROUGHNESS、OCCLUSION、SHININESS、SPECULAR、DIFFUSE。</p>
+<p>如果省略 Mode，则假定为 DIFFUSE。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增属性替代原有的TextureType。</aside><aside class="aside-change"><mark>IFC4.3.0.0 变更</mark> 该属性已被重新用于存储纹理类型。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                TextureTransform
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator2D.htm">IfcCartesianTransformationOperator2D</a></td>
+<td data-label="Description">
+<p><em>TextureTransform</em> 定义应用于纹理坐标的二维变换。它影响纹理坐标应用于几何表示项表面的方式。二维变换支持更改形状上纹理的大小、方向和位置。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em> 中不允许使用镜像。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Parameter
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 该属性已弃用，不应再继续使用。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsMappedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextureCoordinate.htm">IfcTextureCoordinate</a> FOR Maps</td>
+<td data-label="Description">
+<p>纹理坐标，由相应的纹理顶点列表提供给基于顶点的几何项，或由纹理坐标生成器提供，将表面纹理应用于几何项的表面。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 在属性列表末尾新增属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>UsedInStyles</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSurfaceStyleWithTextures.htm">IfcSurfaceStyleWithTextures</a> FOR Textures</td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -284,12 +369,36 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                RasterFormat
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p><em>RasterCode</em> 的格式，通常使用压缩。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                RasterCode
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBinary.htm">IfcBinary</a></td>
+<td data-label="Description">
+<p>以单个二进制形式给出的数据块，用于以常见文件（压缩）格式捕获纹理。文件格式由 <em>RasterFormat</em> 属性提供。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.12.3.1.A<a class="link" href="#-4e3bce11-b232-4a56-b8c7-f6447e462914"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.1.A<a class="link" href="#-f4a2528a-95c1-4c37-a57b-740be295c8df"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.1.4-Formal-propositions-"></a>
     8.12.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#8.12.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-2893c487-9501-4438-b183-43a042349af1"></a><table>
+<figure><a class="anchor" id="-766bd44d-2ac2-429d-b382-5ddffbcc29fe"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -320,7 +429,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.1.B<a class="link" href="#-2893c487-9501-4438-b183-43a042349af1"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.1.B<a class="link" href="#-766bd44d-2ac2-429d-b382-5ddffbcc29fe"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.1.5-Formal-representation-"></a>
     8.12.3.1.5 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.1.5-Formal-representation-"><i data-feather="link"></i></a></h2>

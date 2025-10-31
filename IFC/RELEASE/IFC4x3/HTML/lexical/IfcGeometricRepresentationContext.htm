@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -202,11 +202,11 @@
 <p>图1中的"CAD中看到的真北"展示了 <em>TrueNorth</em> 方向的正确解释。</p>
 <p>如果通过 <em>HasCoordinateOperation</em> 属性包含了到地理坐标系的转换，则应省略 <em>TrueNorth</em> 属性，或仅将其用于信息目的。不应将其添加到已由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> 应用的任何变换中。</p>
 <p>必须使用一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 实例来表示模型（3D）视图，可选使用第二个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 实例来表示平面（2D）视图（但如果存在比例相关的平面视图，则需要提供），额外的比例或视图相关上下文需要通过使用指向模型视图（或平面视图）作为 <em>ParentContext</em> 的子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 来处理。见图2中为3D和2D使用几何表示上下文并分配子上下文的示例。</p>
-<aside class="aside-note"><mark>注释</mark> The inherited attribute <em>ContextType</em> shall have one of the following recognized values: 'Model', 'Plan', 'NotDefined'.</aside>
+<aside class="aside-note"><mark>注释</mark> 继承属性 <em>ContextType</em> 应具有以下认可值之一：'Model'、'Plan'、'NotDefined'。</aside>
 <figure><a class="anchor" id="-2-"></a><img alt="representation context" src="../figures/ifcgeometricrepresentationcontext_layout.png"/><figcaption>图2 — 使用几何表示上下文的示例<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
 <p>在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 处为3D模型和2D平面上下文定义的表示上下文的使用，包括针对不同目标比例的子上下文定义。对于2D和3D坐标空间，应始终最多各有一个几何表示上下文。</p>
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-42:1992
-A geometric representation context is a representation context in which the geometric representation items are geometrically founded.</aside><aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>geometric_representation_context</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2.0.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> Applicable values for <em>ContextType</em> are only 'Model', 'Plan', and 'NotDefined'. All other contexts are now handled by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em>.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Mapping to Geographic coordinate system added by inverse attribute <em>HasCoordinateOperation</em>.</aside>
+<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-42:1992 的定义
+几何表示上下文是一种表示上下文，其中几何表示项具有几何基础。</aside><aside class="aside-note"><mark>注释</mark> 实体改编自 ISO 10303-42 中定义的 <strong>geometric_representation_context</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2.0 中的新增实体。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> <em>ContextType</em> 的适用值仅为 'Model'、'Plan' 和 'NotDefined'。所有其他上下文现由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> 处理。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 通过逆向属性 <em>HasCoordinateOperation</em> 添加了地理坐标系映射。</aside>
 <h2><a class="anchor" id="8.18.3.4.2-Entity-inheritance-"></a>
     8.18.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.18.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -234,7 +234,7 @@ A geometric representation context is a representation context in which the geom
     8.18.3.4.3 特性（Attributes）
 <a class="link" href="#8.18.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-6e4bd322-469f-4ff8-a10f-a99b96cf81e0"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-1a9ce75b-cb47-4cbf-8bfe-61c6f9b1a1b7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -256,6 +256,40 @@ A geometric representation context is a representation context in which the geom
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ContextIdentifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>表示上下文的可选标识符，在项目内部使用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ContextType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>表示上下文类型的描述。上下文类型支持的具体取值需通过实施方协议确定。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>RepresentationsInContext</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a> FOR ContextOfItems</td>
+<td data-label="Description">
+<p>在同一表示上下文中定义的所有几何表示。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -274,12 +308,83 @@ A geometric representation context is a representation context in which the geom
 <small>(6)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                CoordinateSpaceDimension
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>在几何表示上下文中建模的坐标空间的整数维度计数。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Precision
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>几何模型的模型精度值。它是一个双精度值（REAL），通常在 1E-5 到 1E-8 范围内，表示在此容差下两个给定点仍被视为相同。该值可用于例如在 brep 模型中设置从边曲线到底层面曲面的最大距离。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                WorldCoordinateSystem
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
+<td data-label="Description">
+<p>为项目使用的所有表示上下文建立工程坐标系（在CAD中通常称为世界坐标系）。</p>
+<aside class="aside-note"><mark>注释</mark> 当建筑物位置远离原点时，可用于提供更好的数值稳定性。但在大多数情况下，它将被设置为原点：(0.,0.,0.) 和方向 x(1.,0.,0.)、y(0.,1.,0.)、z(0.,0.,1.)。</aside>
+<p>如果使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 提供了地理放置，则 <em>WorldCoordinateSystem</em> 属性用于定义局部工程坐标系的零点与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 偏移所关联的地理参考点之间的偏移。在首选实践中，这两个点（也称为"项目基点"和"测量点"）应重合。但是，可以将地理参考点从局部零点偏移。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                TrueNorth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>真北方向或地理北向方向相对于基础项目坐标系的方向。它由项目坐标系xy平面内的二维方向给出。如果未提供，则默认为 0. 1.，意味着项目坐标系的正Y轴等于地理北向方向。</p>
+<aside class="aside-note"><mark>注释</mark> If a geographic placement is provided using <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> then the true north is for information only. In case of inconsistency, the value provided with <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> shall take precedence.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasSubContexts</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a> FOR ParentContext</td>
+<td data-label="Description">
+<p>引用此 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> 的 <em>IfcGeometricRepresentationSubContexts</em> 集合。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasCoordinateOperation</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a> FOR SourceCRS</td>
+<td data-label="Description">
+<p>指示坐标系之间的转换。特别是指地理地图坐标参考系与此建筑项目的工程坐标系之间的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>。如果向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a></em> 提供了多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em>，则所有上下文应具有相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> 实例作为 <em>HasCoordinateOperation</em>，引用相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></em> 实例。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.18.3.4.A<a class="link" href="#-6e4bd322-469f-4ff8-a10f-a99b96cf81e0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.4.A<a class="link" href="#-1a9ce75b-cb47-4cbf-8bfe-61c6f9b1a1b7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.4.4-Formal-propositions-"></a>
     8.18.3.4.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.4.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-1ae0af93-52cd-483a-8914-f9740fa0a584"></a><table>
+<figure><a class="anchor" id="-e210710c-4649-4548-bde0-94cdfaffca23"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -290,7 +395,9 @@ A geometric representation context is a representation context in which the geom
 <tr>
 <td>North2D</td>
 <td>
-<p>如果提供了 <em>TrueNorth</em> 方向，它应是一个二维方向。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -299,7 +406,7 @@ A geometric representation context is a representation context in which the geom
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.4.C<a class="link" href="#-1ae0af93-52cd-483a-8914-f9740fa0a584"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.4.C<a class="link" href="#-e210710c-4649-4548-bde0-94cdfaffca23"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.4.5-Formal-representation-"></a>
     8.18.3.4.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.4.5-Formal-representation-"><i data-feather="link"></i></a></h2>

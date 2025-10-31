@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8 IfcGeometricModelResource - IFC 4.3.2 Documentation</title>
+<title>8.8 IfcGeometricModelResource（几何模型资源） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,26 +189,26 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.8 IfcGeometricModelResource</h1>
+<h1>8.8 IfcGeometricModelResource（几何模型资源）</h1>
 <h2><a class="anchor" id="8.8.1-"></a>
     8.8.1 架构定义
 <a class="link" href="#8.8.1-"><i data-feather="link"></i></a></h2>
-<p>该模式 <em>IfcGeometricModelResource</em> 定义了用于几何模型表示的资源。此资源的主要应用是表示产品模型的形状或几何形式。</p>
+<p><em>IfcGeometricModelResource</em>（几何模型资源）模式定义了用于几何模型表示的资源。该资源主要用于表示产品模型的形状或几何形式。</p>
 <p>当前版本的几何模型资源中，几何模型表示的范围包括：</p>
 <ul>
 <li>描述三维实体对象精确几何形式的数据；</li>
-<li>构造实体几何 (CSG) 模型；</li>
-<li>半空间定义；</li>
+<li>构造实体几何（CSG）模型；</li>
+<li>半空间的定义；</li>
 <li>通过扫描操作创建实体模型；</li>
-<li>流形边界表示 (brep) 模型；</li>
+<li>流形边界表示（B-rep）模型；</li>
 <li>曲面模型；</li>
-<li>镶嵌模型；</li>
-<li>几何集合。</li>
+<li>细分模型；</li>
+<li>几何集。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 该模式的许多定义改编自 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a> 中定义的。<em>IfcGeometricModelResource</em> 引用 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a> 的第 6 条“几何模型”。从 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a> 引用的几何和拓扑表示的定义，明确排除在本规范的版权之外。</aside><aside class="aside-reference"><mark>参考</mark> 根据 ISO 10303-42 定义</aside>
-<p>构造实体几何模型由其组件图元和用于构造它们的布尔运算（并集、交集或差集）序列表示。传达布尔运算逻辑序列的实体是布尔结果 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm">IfcBooleanResult</a></em>)，它标识一个运算符和两个操作数。由于操作数本身可以是布尔结果，从而支持嵌套操作。扫描实体和半空间实体是允许的布尔操作数。扫描实体是旋转实体和线性扫描实体。扫描实体是通过扫描包含平面面的平面来获得的。半空间实体本质上定义为曲面一侧的半无限实体；它可能受盒子域的限制。</p>
-<aside class="aside-reference"><mark>参考</mark> 根据 ISO 10303-42 定义</aside>
-<p>Brep 模型由定义外部或内部边界的壳集表示。分面 Brep 被限制为表示所有面都是平面且每个环都是多边形环的 Brep。对于这样的实体，该实体提供了一种更有效的表示形式。基于壳的曲面模型、基于面的曲面模型和几何集合实体不强制执行流形实体 Brep 的完整性检查，可用于传达不完整的模型（包括二维模型）。</p>
+<aside class="aside-note"><mark>注释</mark> Many definitions of this schema are adapted from definitions defined within <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>. The <em>IfcGeometricModelResource</em> refers to the clause 6, "Geometric Model" of <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>. The definitions of geometric and topological representation, when quoted from <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>, are explicitly excluded from the copyright of this specification.</aside><aside class="aside-reference"><mark>参考</mark> Definition according to ISO 10303-42</aside>
+<p>构造实体几何模型通过其组成的基本体素和构造过程中使用的布尔操作序列（并集、交集或差集）来表示。传达布尔操作逻辑序列的实体是布尔结果（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBooleanResult.htm">IfcBooleanResult</a></em>），它标识了一个运算符和两个操作数。由于操作数本身可以是布尔结果，因此支持嵌套操作。扫描实体和半空间实体是允许的布尔操作数。扫描实体包括旋转实体和线性拉伸实体。扫描实体通过拉伸或扫描可能包含孔的平面面获得。半空间实体本质上定义为曲面一侧的半无限实体；它可以通过一个盒子域来限制。</p>
+<aside class="aside-reference"><mark>参考</mark> Definition according to ISO 10303-42</aside>
+<p>B-rep模型通过定义外部或内部边界的壳集合来表示。面片化B-rep仅限于表示所有面都是平面且每个环都是多边形的B-rep。对于这样的实体，该实体提供了一种更高效的表示形式。基于壳的曲面模型、基于面的曲面模型和几何集实体不强制执行流形实体B-rep的完整性检查，可用于不完整模型（包括二维模型）的通信。</p>
 <h2><a class="anchor" id="8.8.2-Types"></a>
     8.8.2 Types
 <a class="link" href="#8.8.2-Types"><i data-feather="link"></i></a></h2>
@@ -626,5 +626,6 @@
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>

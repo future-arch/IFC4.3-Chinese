@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -149,7 +149,7 @@
 <li>'View'：通过 <em>RelatingProduct</em> 分配一个产品（根据学科视图分解），到另一个产品（通过 <em>RelatedObjects</em>）（根据不同的学科视图分解）。例如，将建筑楼板分配给预制混凝土学科视图下的楼板预制部分的另一种分解。</li>
 </ul>
 <!-- end of short definition -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> The reference of a product within a spatial structure is now handled by a new relationship object <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em>. The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> shall not be used to represent this relation from IFC2x3 onwards.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> 空间结构内产品的引用现由新关系对象 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 处理。自 IFC2x3 起，不得使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 表示此关系。</aside>
 <h2><a class="anchor" id="5.1.3.27.2-Entity-inheritance-"></a>
     5.1.3.27.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.27.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -195,7 +195,7 @@
     5.1.3.27.3 特性（Attributes）
 <a class="link" href="#5.1.3.27.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-47bb34a0-bee6-4806-bd18-762b09327950"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d860627e-8fdd-4830-8ff5-70d793cddae8"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -239,7 +239,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -294,7 +294,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a></td>
 <td data-label="Description">
 <p>分配关系的特定类型。它可以约束适用对象类型，在 <em>RelatedObjects</em> 的角色中使用。</p>
-<aside class="aside-deprecation"><mark>IFC4 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> The attribute is deprecated and shall no longer be used. A NIL value should always be assigned.</aside><aside class="aside-change"><mark>IFC4.3.0.1 变更</mark> The attribute type has been changed to <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a> given that IfcObjectTypeEnum has been deleted.</aside>
+<aside class="aside-deprecation"><mark>IFC4 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 该属性已被弃用，不应继续使用。应始终赋予NIL值。</aside><aside class="aside-change"><mark>IFC4.3.0.1 变更</mark> 由于_IfcObjectTypeEnum_已被删除，属性类型已更改为_IfcStrippedOptional_。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -325,15 +325,15 @@
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProductSelect.htm">IfcProductSelect</a></td>
 <td data-label="Description">
 <p>引用对象被分配到的产品或产品类型。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> Datatype expanded to include <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a></em>.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 数据类型扩展至包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeProduct.htm">IfcTypeProduct</a></em>。</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.27.A<a class="link" href="#-47bb34a0-bee6-4806-bd18-762b09327950"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.27.A<a class="link" href="#-d860627e-8fdd-4830-8ff5-70d793cddae8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.27.4-Formal-propositions-"></a>
     5.1.3.27.4 形式化命题（Formal propositions）
 <a class="link" href="#5.1.3.27.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d7eb6715-18c1-455f-a3d8-322d6326a7e5"></a><table>
+<figure><a class="anchor" id="-9c072c66-5e65-43a4-b48d-0173b126e4b2"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -353,11 +353,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.27.B<a class="link" href="#-d7eb6715-18c1-455f-a3d8-322d6326a7e5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.27.B<a class="link" href="#-9c072c66-5e65-43a4-b48d-0173b126e4b2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.27.5-Concept-usage-"></a>
     5.1.3.27.5 概念用法（Concept usage）
 <a class="link" href="#5.1.3.27.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-90b2fbbd-a24a-4eac-8045-3351cdd3c340"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-18930444-0df7-46ae-8e65-c054c560bc26"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -527,7 +527,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.27.C<a class="link" href="#-90b2fbbd-a24a-4eac-8045-3351cdd3c340"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.27.C<a class="link" href="#-18930444-0df7-46ae-8e65-c054c560bc26"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.27.6-Formal-representation-"></a>
     5.1.3.27.6 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.27.6-Formal-representation-"><i data-feather="link"></i></a></h2>

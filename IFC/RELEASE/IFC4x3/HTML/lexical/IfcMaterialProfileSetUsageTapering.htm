@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -231,7 +231,7 @@
     8.10.3.14.3 特性（Attributes）
 <a class="link" href="#8.10.3.14.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-61ed4549-1c51-4cec-a3eb-d491ba8c66ee"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-83bbb4a1-4363-46d3-a11d-5d715c21cfe2"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -253,10 +253,60 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>AssociatedTo</em>
+</td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a> FOR RelatingMaterial</td>
+<td data-label="Description">
+<p>在元素实例的材料关联中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialUsageDefinition.htm">IfcMaterialUsageDefinition</a></em> 子类型。该关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a>
 <small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ForProfileSet
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSet.htm">IfcMaterialProfileSet</a></td>
+<td data-label="Description">
+<p>应用此用法的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSet.htm">IfcMaterialProfileSet</a></em> 集合。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                CardinalPoint
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCardinalPointReference.htm">IfcCardinalPointReference</a></td>
+<td data-label="Description">
+<p>对截面轮廓中关键点的索引引用。描述截面相对于其所关联构件（纵向）轴线的对齐方式。此轮廓对齐的参数化规范可冗余提供，与 ForProfileSet.MaterialProfiles[*].Profile 定义的显式对齐方式并存。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                ReferenceExtent
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>应用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> 的构件体量形状表示拉伸范围。用作 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileWithOffsets.htm">IfcMaterialProfileWithOffsets</a></em> 子类型为所包含材料轮廓提供的上部 <em>OffsetValues[2]</em> 的参考值。</p>
+<blockquote>
+<p>注意 如果 <em>ForProfileSet.MaterialProfiles</em> 材料层列表中包含 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileWithOffsets.htm">IfcMaterialProfileWithOffsets</a></em>，则应声明 <em>ReferenceExtent</em> 属性。</p>
+<p>注意 对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBeam.htm">IfcBeam</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColumn.htm">IfcColumn</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMember.htm">IfcMember</a></em>，<em>ReferenceExtent</em> 是指从对象坐标系中 z=0 的 XY 平面开始的参考长度。</p>
+</blockquote>
 </td>
 </tr>
 <tr class="preview">
@@ -277,8 +327,32 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                ForProfileEndSet
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSet.htm">IfcMaterialProfileSet</a></td>
+<td data-label="Description">
+<p>应用用法的第二个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSet.htm">IfcMaterialProfileSet</a></em> 集。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                CardinalEndPoint
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCardinalPointReference.htm">IfcCardinalPointReference</a></td>
+<td data-label="Description">
+<p>第二个截面轮廓中重要点的索引引用。描述该截面相对于其所关联构件轴线的对齐方式。这种轮廓对齐的参数化规范可以冗余地提供给由 ForProfileSet.MaterialProfiles[*].Profile 定义的显式对齐。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.10.3.14.A<a class="link" href="#-61ed4549-1c51-4cec-a3eb-d491ba8c66ee"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.14.A<a class="link" href="#-83bbb4a1-4363-46d3-a11d-5d715c21cfe2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.14.4-Formal-representation-"></a>
     8.10.3.14.4 形式化表示（Formal representation）
 <a class="link" href="#8.10.3.14.4-Formal-representation-"><i data-feather="link"></i></a></h2>

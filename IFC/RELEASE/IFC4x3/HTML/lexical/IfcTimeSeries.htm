@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -204,7 +204,7 @@
 <p>时间序列是一组带有时间戳的数据条目。它允许对随时间间隔收集的数据进行自然关联。时间序列可以是规则的或不规则的。在规则时间序列中，数据可预测地在预定义间隔到达。在不规则时间序列中，部分或全部时间戳不遵循重复模式，不可预测的数据突发可能在不指定的时间点到达。</p>
 <!-- 简短定义结束 -->
 <p>建筑及其性能的建模涉及在一段时间内生成和记录的数据。这些数据涵盖范围广泛，从气象数据到各类计划安排，从状态测量到报告，再到所有其他具有时间相关性的内容。它们在时间轴上的准确定位对于正确理解和使用至关重要，而 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeSeries.htm">IfcTimeSeries</a></em> 子类型提供了适当的数据结构来容纳这些类型的数据。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside>
 <h2><a class="anchor" id="8.5.3.12.2-Entity-inheritance-"></a>
     8.5.3.12.2 实体继承（Entity inheritance）
 <a class="link" href="#8.5.3.12.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -227,7 +227,7 @@
     8.5.3.12.3 特性（Attributes）
 <a class="link" href="#8.5.3.12.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-a855ce41-01f1-4c95-98c3-24741986849c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-20d50008-e59b-4dcd-9ed5-dd76e21d7633"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -249,8 +249,115 @@
 <small>(9)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>时间序列的唯一名称。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>对序列所代表数据的文本描述。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                StartTime
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>时间序列的开始时间。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                EndTime
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>时间序列的结束时间。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                TimeSeriesDataType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeSeriesDataTypeEnum.htm">IfcTimeSeriesDataTypeEnum</a></td>
+<td data-label="Description">
+<p>时间序列的数据类型。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                DataOrigin
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDataOriginEnum.htm">IfcDataOriginEnum</a></td>
+<td data-label="Description">
+<p>时间序列数据的来源。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                UserDefinedDataOrigin
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>当数据来源属性为 USERDEFINED 时的数据来源值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Unit
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnit.htm">IfcUnit</a></td>
+<td data-label="Description">
+<p>要分配给时间序列内所有值的单位。注意不允许混合使用单位。如果未给出该值，则使用在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a>.UnitsInContext</em> 中定义的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a></em> 类型的全局单位。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>与 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeSeries.htm">IfcTimeSeries</a> 关联的外部引用（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.5.3.12.A<a class="link" href="#-a855ce41-01f1-4c95-98c3-24741986849c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.5.3.12.A<a class="link" href="#-20d50008-e59b-4dcd-9ed5-dd76e21d7633"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.5.3.12.4-Formal-representation-"></a>
     8.5.3.12.4 形式化表示（Formal representation）
 <a class="link" href="#8.5.3.12.4-Formal-representation-"><i data-feather="link"></i></a></h2>

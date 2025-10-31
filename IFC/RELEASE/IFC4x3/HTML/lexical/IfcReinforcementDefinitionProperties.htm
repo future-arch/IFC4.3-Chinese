@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -168,7 +168,7 @@
 <!-- end of short definition -->
 <p>此 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> 的子类型用于在设计早期阶段定义钢筋属性，例如在需求定义或方案设计阶段。在后期设计阶段，使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReinforcingElement.htm">IfcReinforcingElement</a></em> 子类型的显式实例。预期的用途可以通过 <em>DefinitionType</em> 属性值作为标识符来指示：推荐值是“Reinforcement area requirement”（钢筋面积要求）或“Reinforcement configuration requirement”（钢筋配置要求）。根据当地标准可以使用其他值。</p>
 <p>对于每个混凝土建筑构件，在 <em>DefinitionType</em> 属性值指示的每个预期用途下，只使用一种此类属性集定义。然后，该集合定义了在离散数量的纵向截面中，作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionReinforcementProperties.htm">IfcSectionReinforcementProperties</a></em> 实例（每个结构钢筋角色一个）的横截面属性列表，而这些截面又将截面横截面属性定义为截面和数量钢筋属性，每个钢筋等级/钢筋类型一个。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2</aside><aside class="aside-change"><mark>IFC4 变更</mark> Supertype changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></em></aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体</aside><aside class="aside-change"><mark>IFC4 变更</mark> 超类型从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></em></aside>
 <h2><a class="anchor" id="7.11.3.9.2-Entity-inheritance-"></a>
     7.11.3.9.2 实体继承（Entity inheritance）
 <a class="link" href="#7.11.3.9.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -218,7 +218,7 @@
     7.11.3.9.3 特性（Attributes）
 <a class="link" href="#7.11.3.9.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-1433069f-bec6-4eb8-8c67-bbc36c45247f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3a9f9df0-43c8-41e3-825b-3dc6b7932245"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -262,7 +262,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -329,9 +329,9 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
 <td data-label="Description">
 <p>属性集分配到的类型对象。该属性集充当类型对象的所有实例的共享属性集。</p>
-<aside class="aside-note"><mark>注释</mark> The relationship between the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> and the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> is a direct relationship, not utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>, for maintaining compatibility with earlier releases of this standard.</aside>
+<aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 之间的关系是直接关系，未使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，以保持与本标准早期版本的兼容性。</aside>
 <p>{}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The cardinality has been changed from 0..1 to 0..n with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 基数已从 0..1 更改为 0..n，具有基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -343,7 +343,7 @@
 <td data-label="Description">
 <p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em> 与属性集模板的关系，如果给定，则为属性集或数量集及其属性提供定义模板。
 {}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, change made with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向关系，更改时保持基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -355,7 +355,7 @@
 <td data-label="Description">
 <p>引用与一个或多个对象实例的关系，这些对象实例的特征由属性集定义定义。可以使用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> 将单个属性集分配给多个对象实例。
 {}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> Inverse attribute renamed from <em>PropertyDefinitionOf</em> with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性从 <em>PropertyDefinitionOf</em> 重命名，具有基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -401,11 +401,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.11.3.9.A<a class="link" href="#-1433069f-bec6-4eb8-8c67-bbc36c45247f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.11.3.9.A<a class="link" href="#-3a9f9df0-43c8-41e3-825b-3dc6b7932245"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.11.3.9.4-Concept-usage-"></a>
     7.11.3.9.4 概念用法（Concept usage）
 <a class="link" href="#7.11.3.9.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-4f36ef51-5f09-4b5a-9674-fe9fa8f69714"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-57df1fd4-4ed4-452e-b158-352477de2505"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -615,7 +615,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.11.3.9.B<a class="link" href="#-4f36ef51-5f09-4b5a-9674-fe9fa8f69714"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.11.3.9.B<a class="link" href="#-57df1fd4-4ed4-452e-b158-352477de2505"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.11.3.9.5-Formal-representation-"></a>
     7.11.3.9.5 形式化表示（Formal representation）
 <a class="link" href="#7.11.3.9.5-Formal-representation-"><i data-feather="link"></i></a></h2>

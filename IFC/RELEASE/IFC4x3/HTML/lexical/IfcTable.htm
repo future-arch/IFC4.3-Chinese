@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -201,7 +201,7 @@
 <figure><a class="anchor" id="-1-"></a><img alt="表的使用" src="../figures/ifctable_image1.gif"/><figcaption>图1 — 表的使用<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p>图2描述了IFC4之前版本中表的结构。</p>
 <figure><a class="anchor" id="-2-"></a><img alt="表的使用替代方案" src="../figures/ifctable_image2.gif"/><figcaption>图2 — 表的使用替代方案<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Columns attribute added.</aside>
+<aside class="aside-history"><mark>沿革</mark> 在 IFC1.5 中新增实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 增加了列属性。</aside>
 <h2><a class="anchor" id="8.21.3.3.2-Entity-inheritance-"></a>
     8.21.3.3.2 实体继承（Entity inheritance）
 <a class="link" href="#8.21.3.3.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -217,7 +217,7 @@
     8.21.3.3.3 特性（Attributes）
 <a class="link" href="#8.21.3.3.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-7b4f08ae-2f81-46b9-8dd9-fdf2e34edc60"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-8e7642e9-30e9-47e8-b0dc-7e30dd18792f"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -239,12 +239,92 @@
 <small>(6)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Rows
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableRow.htm">IfcTableRow</a></td>
+<td data-label="Description">
+<p>对行信息内容的引用。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Columns
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTableColumn.htm">IfcTableColumn</a></td>
+<td data-label="Description">
+<p>与此表关联的列信息。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>NumberOfCellsInRow</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">HIINDEX(Rows[1].RowCells)</code></pre>
+<p>每行中的单元格数量，对应表中的列数。参见确保每行具有相同单元格数的WR2。实际值从Rows列表的首个成员推导得出。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>NumberOfHeadings</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">SIZEOF(QUERY( Temp &lt;* Rows | Temp.IsHeading))</code></pre>
+<p>表中的标题行数量。WR3将其限制为最多一行。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>NumberOfDataRows</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">SIZEOF(QUERY( Temp &lt;* Rows | NOT(Temp.IsHeading)))</code></pre>
+<p>表中包含数据的行数，即总行数减去表中的标题行数。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.21.3.3.A<a class="link" href="#-7b4f08ae-2f81-46b9-8dd9-fdf2e34edc60"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.21.3.3.A<a class="link" href="#-8e7642e9-30e9-47e8-b0dc-7e30dd18792f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.21.3.3.4-Formal-propositions-"></a>
     8.21.3.3.4 形式化命题（Formal propositions）
 <a class="link" href="#8.21.3.3.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-44efdc70-9d45-47f3-98ca-4248c1b96595"></a><table>
+<figure><a class="anchor" id="-1eb9ab1f-f089-4988-9769-003396018b7b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -275,7 +355,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.21.3.3.C<a class="link" href="#-44efdc70-9d45-47f3-98ca-4248c1b96595"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.21.3.3.C<a class="link" href="#-1eb9ab1f-f089-4988-9769-003396018b7b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.21.3.3.5-Formal-representation-"></a>
     8.21.3.3.5 形式化表示（Formal representation）
 <a class="link" href="#8.21.3.3.5-Formal-representation-"><i data-feather="link"></i></a></h2>

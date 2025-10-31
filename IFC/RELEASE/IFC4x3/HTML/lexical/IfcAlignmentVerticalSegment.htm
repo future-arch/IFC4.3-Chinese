@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -223,7 +223,7 @@
 <li>连续性 – 前一段计算得出的终点沿程距离是否与本段提供的起点沿程距离匹配</li>
 <li>切向连续性 – 前一段计算得出的终点坡度是否与本段提供的起点坡度匹配</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> Specific subtypes of the <span class="self-ref"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegment.htm">IfcAlignmentVerticalSegment</a></span> add specific geometric curve parameters. Connectivity between vertical segments is not necessarily tangential, but this can be enforced as a requirement through the attribute <em>TangentialContinuity</em>.</aside>
+<aside class="aside-note"><mark>注释</mark> <span class="self-ref"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegment.htm">IfcAlignmentVerticalSegment</a></span>的特定子类型会添加特定的几何曲线参数。垂直段之间的连接不一定是相切的，但可以通过_TangentialContinuity_属性强制要求相切连续性。</aside>
 <figure><a class="anchor" id="-1-"></a><img alt="垂直线形段" src="../figures/ifcalignment2dverticalsegment.png" title="图 8.7.3.4.A — 垂直线形段"/><figcaption>图 8.7.3.4.A — 垂直线形段<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.4.2-Entity-inheritance-"></a>
     8.7.3.4.2 实体继承（Entity inheritance）
@@ -248,7 +248,7 @@
     8.7.3.4.3 特性（Attributes）
 <a class="link" href="#8.7.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-56be6a52-cb76-45f3-a8b3-4513035a185f"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-8eca44a9-61d9-453d-90e5-b313fdde3ec5"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -270,6 +270,30 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                StartTag
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于注释线形段起点的标签。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                EndTag
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于注释线形段终点的标签。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -288,8 +312,100 @@
 <small>(7)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                StartDistAlong
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>沿对应 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentHorizontal.htm">IfcAlignmentHorizontal</a></em> 测量的水平线形沿程距离。</p>
+<aside class="aside-note"><mark>注释</mark> 1 沿程距离是从_IfcAlignmentHorizontal_的起点开始测量的。
+NOTE 2 计量单位是全局长度单位，由_IfcContext_.UnitInContext设置。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                HorizontalLength
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>作为段沿水平线形的沿程距离测量的长度。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                StartHeight
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>起点相对于 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignment.htm">IfcAlignment</a> 坐标系在 Z 方向的高程。</p>
+<aside class="aside-note"><mark>注释</mark> 强烈建议不要将IfcAlignment坐标系从项目工程坐标系中偏移。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                StartGradient
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></td>
+<td data-label="Description">
+<p>段的起始坡度。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                EndGradient
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRatioMeasure.htm">IfcRatioMeasure</a></td>
+<td data-label="Description">
+<p>段的终点坡度。对于 PredefinedType='.CONSTANTGRADIENT.' 的情况，该值与 <em>StartGradient</em> 相同。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                RadiusOfCurvature
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>抛物线或圆弧的半径。正值表示逆时针方向，负值表示顺时针方向。</p>
+<blockquote>
+<p>NOTE1 对于_PredefinedType_为ARC的情况。表示圆弧基准圆的半径。
+NOTE2 对于_PredefinedType_为PARABOLICARC的情况。抛物线常数（决定抛物线的“陡峭程度”）。该抛物线常数通过“最小抛物线半径”提供，即抛物线在其垂直轴（抛物线零梯度点）处的真实半径。最小半径是抛物线焦距（焦点与顶点之间的距离）的两倍。
+NOTE3 对于_PredefinedType_既不是ARC也不是PARABOLICARC的情况，该值应为空。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                PredefinedType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a></td>
+<td data-label="Description">
+<p>垂直线形段的预定义类型。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.7.3.4.B<a class="link" href="#-56be6a52-cb76-45f3-a8b3-4513035a185f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.4.B<a class="link" href="#-8eca44a9-61d9-453d-90e5-b313fdde3ec5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.4.4-Formal-representation-"></a>
     8.7.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.7.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>

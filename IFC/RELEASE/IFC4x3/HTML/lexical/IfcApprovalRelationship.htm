@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,7 +196,7 @@
 <a class="link" href="#8.2.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApprovalRelationship.htm">IfcApprovalRelationship</a></em> 关联多个审批（一个关联审批和一个或多个被关联审批），随着审批流程或审批对象的发展，每个审批具有不同的状态或级别。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Subtyped from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceLevelRelationship.htm">IfcResourceLevelRelationship</a></em>, order of attributes changed.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceLevelRelationship.htm">IfcResourceLevelRelationship</a></em> 子类型化，属性顺序已更改。</aside>
 <h2><a class="anchor" id="8.2.3.2.2-Entity-inheritance-"></a>
     8.2.3.2.2 实体继承（Entity inheritance）
 <a class="link" href="#8.2.3.2.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -226,7 +226,7 @@
     8.2.3.2.3 特性（Attributes）
 <a class="link" href="#8.2.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-8ccae4d8-32e7-483f-8614-ade9c4d7f42a"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-fca687ae-fc12-42c3-8288-630cff0f60a5"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -248,6 +248,30 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于标识或限定关系的名称。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可为关系提供附加信息的描述说明。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -266,8 +290,33 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                RelatingApproval
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a></td>
+<td data-label="Description">
+<p>其他审批所关联的审批。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                RelatedApprovals
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcApproval.htm">IfcApproval</a></td>
+<td data-label="Description">
+<p>与另一个（关联）审批相关联的审批集合。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 此属性的基数已更改为 SET。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.2.3.2.A<a class="link" href="#-8ccae4d8-32e7-483f-8614-ade9c4d7f42a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.2.3.2.A<a class="link" href="#-fca687ae-fc12-42c3-8288-630cff0f60a5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.2.3.2.4-Formal-representation-"></a>
     8.2.3.2.4 形式化表示（Formal representation）
 <a class="link" href="#8.2.3.2.4-Formal-representation-"><i data-feather="link"></i></a></h2>

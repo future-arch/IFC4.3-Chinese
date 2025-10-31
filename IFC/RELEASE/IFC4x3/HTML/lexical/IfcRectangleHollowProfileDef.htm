@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,7 +196,7 @@
 <a class="link" href="#8.15.3.19.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleHollowProfileDef.htm">IfcRectangleHollowProfileDef</a></em> 定义了一个截面轮廓，提供用于扫描表面几何或扫描面积实体的矩形（或方形）空心截面的定义参数。其参数和相对于位置坐标系统的方向如下所示。方形空心截面可以通过 h 和 b 的相等值来定义。位置坐标系统的中心位于轮廓边界框的中心（对于对称轮廓，与重心相同）。通常，较长的边平行于 y 轴，较短的边平行于 x 轴。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Types of <em>InnerFilletRadius</em> and <em>OuterFilletRadius</em> relaxed to allow for zero values.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> <em>InnerFilletRadius</em> 和 <em>OuterFilletRadius</em> 的类型放宽以允许零值。</aside>
 <p>图 8.15.3.19.A 说明了矩形或方形空心轮廓定义的参数。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="空心矩形形状轮廓" src="../figures/ifcrectanglehollowprofiledef.gif"/><figcaption>图 8.15.3.19.A — 矩形空心轮廓<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p><u>位置</u></p>
@@ -254,7 +254,7 @@
     8.15.3.19.3 特性（Attributes）
 <a class="link" href="#8.15.3.19.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f761b550-672b-452d-adbe-50899e0813fa"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-b12ff613-5eeb-4b91-967a-3b30bbbe37a9"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -276,16 +276,98 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ProfileType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
+<td data-label="Description">
+<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ProfileName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
+<td data-label="Description">
+<p>轮廓的附加属性，例如机械属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></td>
+<td data-label="Description">
+<p>参数化轮廓定义的位置坐标系。如果未指定，则不应用平移和旋转。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a>
 <small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                XDim
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>矩形沿x轴方向的尺寸。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                YDim
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>矩形沿y轴方向的尺寸。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -306,12 +388,48 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                WallThickness
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>材料厚度。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                InnerFilletRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>内角半径。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                OuterFilletRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>外角半径。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.15.3.19.B<a class="link" href="#-f761b550-672b-452d-adbe-50899e0813fa"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.19.B<a class="link" href="#-b12ff613-5eeb-4b91-967a-3b30bbbe37a9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.19.4-Formal-propositions-"></a>
     8.15.3.19.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.19.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-0e1dfbe8-67ec-4a6b-bd98-054fb05d6e18"></a><table>
+<figure><a class="anchor" id="-7d88b3e3-76e1-44eb-a973-eb5bb6da5ac6"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -359,7 +477,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.19.C<a class="link" href="#-0e1dfbe8-67ec-4a6b-bd98-054fb05d6e18"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.19.C<a class="link" href="#-7d88b3e3-76e1-44eb-a973-eb5bb6da5ac6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.19.5-"></a>
     8.15.3.19.5 属性集
 <a class="link" href="#8.15.3.19.5-"><i data-feather="link"></i></a></h2>
@@ -400,7 +518,7 @@
 </p><h2><a class="anchor" id="8.15.3.19.6-Concept-usage-"></a>
     8.15.3.19.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.19.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-a9891619-4763-48df-aa0e-36538db31c59"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-bbd57492-6ba2-4347-a753-497ec3e2f207"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -444,7 +562,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.19.D<a class="link" href="#-a9891619-4763-48df-aa0e-36538db31c59"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.19.D<a class="link" href="#-bbd57492-6ba2-4347-a753-497ec3e2f207"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.19.7-Formal-representation-"></a>
     8.15.3.19.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.19.7-Formal-representation-"><i data-feather="link"></i></a></h2>

@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -199,7 +199,7 @@
 <p>图1显示了入射光线的反射和透射分量。反射和透射分量的总和为1.0，表示入射光线完全分解为反射和透射分量。因此，每个反射和透射值的范围在0.0到1.0之间。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="材料反射分量" src="../figures/ifcsurfacelightingproperties_fig1.gif" title="图1 — 表面样式-光照"/><figcaption>图1 — 表面样式-光照<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p>所有这些因素都可以通过物理方式测量，并且是光线红、绿、蓝部分的比率。这些属性在模型中定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRGB</a></em> 类型，每种颜色都有一个系数。</p>
-<aside class="aside-example"><mark>示例</mark> A green glass transmits only green light, so its transmission factor is 0.0 for red, between 0.0 and 1.0 for green and 0.0 for blue. A green surface reflects only green light, so the reflectance factor is 0.0 for red, between 0.0 and 1.0 for green and 0.0 for blue.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
+<aside class="aside-example"><mark>示例</mark> 绿色玻璃仅透射绿光，因此其对红光的透射系数为0.0，对绿光的透射系数介于0.0至1.0之间，对蓝光的透射系数为0.0。绿色表面仅反射绿光，因此其对红光的反射系数为0.0，对绿光的反射系数介于0.0至1.0之间，对蓝光的反射系数为0.0。</aside><aside class="aside-history"><mark>沿革</mark> 在IFC2x2版本中新增的实体。</aside>
 <h2><a class="anchor" id="8.12.3.30.2-Entity-inheritance-"></a>
     8.12.3.30.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.30.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -237,7 +237,7 @@
     8.12.3.30.3 特性（Attributes）
 <a class="link" href="#8.12.3.30.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-854825c3-149e-4fb8-b4c4-56fa958d6165"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7775f6fe-4823-4cd5-81f2-b54cd8667598"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -259,8 +259,62 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                DiffuseTransmissionColour
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
+<td data-label="Description">
+<p>透射光的漫射程度。对于完全透明的材料，没有漫射。漫射能力越强，透射光的直接分量越小，直至仅产生漫射光。值为1表示该颜色部分的光线完全漫射。</p>
+<aside class="aside-note"><mark>注释</mark> 该系数可通过物理方式测量，并包含红光、绿光和蓝光部分的三个比率。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                DiffuseReflectionColour
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
+<td data-label="Description">
+<p>反射光的漫射程度。对于镜面，没有漫射。反射表面的漫射能力越强，反射光的镜面分量越小，直至仅产生漫射光。值为1表示该颜色部分的光线完全漫射。</p>
+<aside class="aside-note"><mark>注释</mark> 该系数可通过物理方式测量，并包含红光、绿光和蓝光部分的三个比率。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                TransmissionColour
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
+<td data-label="Description">
+<p>描述照射到物体上的光线如何完全或部分透射。</p>
+<blockquote>
+<p>该系数可通过物理方式测量，并包含红光、绿光和蓝光部分的三个比率。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                ReflectanceColour
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcColourRgb.htm">IfcColourRgb</a></td>
+<td data-label="Description">
+<p>决定照射到表面的光线完全或部分反射程度的系数。</p>
+<aside class="aside-note"><mark>注释</mark> 该系数可通过物理方式测量，并包含红光、绿光和蓝光部分的三个比率。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.12.3.30.B<a class="link" href="#-854825c3-149e-4fb8-b4c4-56fa958d6165"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.30.B<a class="link" href="#-7775f6fe-4823-4cd5-81f2-b54cd8667598"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.30.4-Formal-representation-"></a>
     8.12.3.30.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.30.4-Formal-representation-"><i data-feather="link"></i></a></h2>

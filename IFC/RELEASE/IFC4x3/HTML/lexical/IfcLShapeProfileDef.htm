@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,15 +196,15 @@
 <a class="link" href="#8.15.3.13.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLShapeProfileDef.htm">IfcLShapeProfileDef</a></em> 定义了一个截面轮廓，提供了用于扫掠面积实体的L形截面（等边L形轮廓也由此实体涵盖）的定义参数。其参数和相对于位置坐标系统的方向遵循下图说明。较短的腿与正 <em>Position.P[1]</em> 轴方向相同，较长或相等的腿与正 <em>Position.P[2]</em> 轴方向相同。位置坐标系统的中心位于轮廓边界框的中心。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> All profile origins are now in the center of the bounding box.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Types of <em>FilletRadius</em> and <em>EdgeRadius</em> were relaxed to allow for zero values.
-Trailing attributes <em>CentreOfGravityInX</em> and <em>CentreOfGravityInY</em> deleted, use respective properties in <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> instead.
-WHERE rule which required <em>Width</em> &lt;= <em>Depth</em> removed.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> 所有轮廓原点现位于边界框中心。</aside><aside class="aside-change"><mark>IFC4 变更</mark> <em>FilletRadius</em> 和 <em>EdgeRadius</em> 的类型已放宽以允许零值。
+删除尾部属性 <em>CentreOfGravityInX</em> 和 <em>CentreOfGravityInY</em>，改用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> 中的相应属性。
+删除要求 <em>Width</em> &lt;= <em>Depth</em> 的 WHERE 规则。</aside>
 <p>图1和图2说明了等边和非等边L形截面定义的参数。</p>
 <figure><a class="anchor" id="-1-L-"></a><img alt="非等边L形" src="../figures/ifclshapeprofiledef_layout1.gif"/><figcaption>图1 — 非等边L形轮廓<a class="link" href="#-1-L-"><i data-feather="link"></i></a></figcaption></figure>
 <p>参数化轮廓定义了其自身的位置坐标系统。基础坐标系统由使用该轮廓定义的扫掠面积实体定义。它是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em> 的xy平面，通过使用位置偏移量，参数化轮廓可以居中定位（使用x,y偏移量=0.），或相对于轮廓的任何位置定位。</p>
 <p>在所示示例中，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a></em> 中的 'CentreOfGravityInX' 和 'CentreOfGravityInY' 属性（如果提供）均为负值。</p>
 <figure><a class="anchor" id="-2-L-"></a><img alt="等边L形" src="../figures/ifclshapeprofiledef_layout2.gif"/><figcaption>图2 — 等边L形轮廓<a class="link" href="#-2-L-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid</aside>
+<aside class="aside-note"><mark>注释</mark> 黑色坐标轴显示扫描曲面或扫描实体区域的底层坐标系</aside>
 <p>通过使用 <em>Position</em> 属性，轮廓被插入到扫掠面积实体的基础坐标系统中。在此示例（重心基点）中，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></em> 的属性值为：</p>
 <pre><code>Location = <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a>(+|CentreOfGravityInX|, +|CentreOfGravityInY|)
 RefDirection = NIL（默认为 1.,0.）
@@ -252,7 +252,7 @@ RefDirection = NIL（默认为 1.,0.）
     8.15.3.13.3 特性（Attributes）
 <a class="link" href="#8.15.3.13.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c0ee66be-fc2a-4895-b0a7-2ff95f49ae30"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-bea2d088-987d-485b-aa25-6cbf98492a78"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -274,10 +274,68 @@ RefDirection = NIL（默认为 1.,0.）
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ProfileType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
+<td data-label="Description">
+<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ProfileName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
+<td data-label="Description">
+<p>轮廓的附加属性，例如机械属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></td>
+<td data-label="Description">
+<p>参数化轮廓定义的位置坐标系。如果未指定，则不应用平移和旋转。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -298,12 +356,84 @@ RefDirection = NIL（默认为 1.,0.）
 <small>(6)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Depth
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>腿长，见上图说明 (= h)。与总深度相同。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Width
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>腿长，见上图说明 (= b)。与总宽度相同。由于历史原因，此属性在形式上是可选的。只要宽度已知，就应提供其值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Thickness
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>轮廓的恒定壁厚，见上图说明 (= ts)。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                FilletRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>根据上图说明的圆角半径 (= r1)。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                EdgeRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>根据上图说明的边缘半径 (= r2)。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                LegSlope
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
+<td data-label="Description">
+<p>轮廓每个腿内表面的斜率。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.15.3.13.A<a class="link" href="#-c0ee66be-fc2a-4895-b0a7-2ff95f49ae30"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.13.A<a class="link" href="#-bea2d088-987d-485b-aa25-6cbf98492a78"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.13.4-Formal-propositions-"></a>
     8.15.3.13.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.13.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-9f4a9382-12bc-4041-a146-f20b3fbf35ab"></a><table>
+<figure><a class="anchor" id="-979f42d6-d6f3-4cc4-8467-3a4570e78dbd"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -323,7 +453,7 @@ RefDirection = NIL（默认为 1.,0.）
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.13.C<a class="link" href="#-9f4a9382-12bc-4041-a146-f20b3fbf35ab"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.13.C<a class="link" href="#-979f42d6-d6f3-4cc4-8467-3a4570e78dbd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.13.5-"></a>
     8.15.3.13.5 属性集
 <a class="link" href="#8.15.3.13.5-"><i data-feather="link"></i></a></h2>
@@ -364,7 +494,7 @@ RefDirection = NIL（默认为 1.,0.）
 </p><h2><a class="anchor" id="8.15.3.13.6-Concept-usage-"></a>
     8.15.3.13.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.13.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-d6a08597-9088-48bc-b096-c5f2b9e3a4c5"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-cfef6c65-c2e2-42cb-8322-0d292fcbafc0"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -408,7 +538,7 @@ RefDirection = NIL（默认为 1.,0.）
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.13.D<a class="link" href="#-d6a08597-9088-48bc-b096-c5f2b9e3a4c5"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.13.D<a class="link" href="#-cfef6c65-c2e2-42cb-8322-0d292fcbafc0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.13.7-Formal-representation-"></a>
     8.15.3.13.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.13.7-Formal-representation-"><i data-feather="link"></i></a></h2>

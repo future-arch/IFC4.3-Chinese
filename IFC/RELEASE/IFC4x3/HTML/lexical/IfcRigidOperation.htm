@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -197,7 +197,7 @@
 <a class="link" href="#8.18.3.14.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p>刚性操作指定了坐标参考系中的偏移量。它不指定任何转换或变形。这是一种坐标操作，表示整个虚拟模型以<strong>相同的方式</strong>进行平移。例如，使用长度沿x、y、z轴进行平移；或使用角度进行二维平移（如λ、φ），再加上高度的变化。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-example"><mark>示例</mark> If data is in truncated map coordinates (i.e., the map coordinates have the leading digits removed in x and y), then <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRigidOperation.htm">IfcRigidOperation</a></em> simply translates the data in x and y to replace the ignored leading digits. This is also known as subtraction.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4X3_ADD1</aside>
+<aside class="aside-example"><mark>示例</mark> 如果数据采用截断地图坐标（即地图坐标的 x 和 y 方向被移除了前导数字），则 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRigidOperation.htm">IfcRigidOperation</a></em> 会简单地在 x 和 y 方向平移数据以替换被忽略的前导数字。这也被称为减法。</aside><aside class="aside-history"><mark>沿革</mark> IFC4X3_ADD1 中的新实体</aside>
 <h2><a class="anchor" id="8.18.3.14.2-Entity-inheritance-"></a>
     8.18.3.14.2 实体继承（Entity inheritance）
 <a class="link" href="#8.18.3.14.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -220,7 +220,7 @@
     8.18.3.14.3 特性（Attributes）
 <a class="link" href="#8.18.3.14.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-811983de-e276-4643-ae29-491eb5e252a4"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-204725c6-fd1b-4ff2-b124-7c7487b4c9f6"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -242,6 +242,30 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                SourceCRS
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystemSelect.htm">IfcCoordinateReferenceSystemSelect</a></td>
+<td data-label="Description">
+<p>操作的源坐标参考系。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                TargetCRS
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></td>
+<td data-label="Description">
+<p>操作的目标坐标参考系。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -260,12 +284,49 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                FirstCoordinate
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureValue.htm">IfcMeasureValue</a></td>
+<td data-label="Description">
+<p>平移的第一个坐标。在地图坐标系中可以是长度度量，在地理参考系中可以是平面角度度量。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                SecondCoordinate
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureValue.htm">IfcMeasureValue</a></td>
+<td data-label="Description">
+<p>平移的第二个坐标。在地图坐标系中可以是长度度量，在地理参考系中可以是平面角度度量。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Height
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>坐标表面上方的平移（正值）或下方的平移（负值）。</p>
+<aside class="aside-note"><mark>注释</mark> 对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeographicCRS.htm">IfcGeographicCRS</a></em>，<em>Height</em> 是相对于大地基准椭球面的平移。对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></em>，<em>Height</em> 是相对于垂直基准的平移。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.18.3.14.A<a class="link" href="#-811983de-e276-4643-ae29-491eb5e252a4"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.14.A<a class="link" href="#-204725c6-fd1b-4ff2-b124-7c7487b4c9f6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.14.4-Formal-propositions-"></a>
     8.18.3.14.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.14.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-182e01c1-d244-47c2-9fb3-a922e204ec19"></a><table>
+<figure><a class="anchor" id="-d7712da6-ffca-43a1-8a47-3b655b25c921"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -276,9 +337,7 @@
 <tr>
 <td>SameCoordinateType</td>
 <td>
-<p>
-<em>无可用描述</em>
-</p>
+<p>限制_FirstCoordinate_和_SecondCoordinate_的值类型为_IfcLengthMeasure_或_IfcPlaneAngleMeasure_，并确保两者使用相同的类型。</p>
 </td>
 </tr>
 <tr>
@@ -287,7 +346,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.14.B<a class="link" href="#-182e01c1-d244-47c2-9fb3-a922e204ec19"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.14.B<a class="link" href="#-d7712da6-ffca-43a1-8a47-3b655b25c921"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.14.5-Formal-representation-"></a>
     8.18.3.14.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.14.5-Formal-representation-"><i data-feather="link"></i></a></h2>

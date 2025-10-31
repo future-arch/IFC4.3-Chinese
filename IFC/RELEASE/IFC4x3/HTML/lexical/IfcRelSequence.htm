@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -146,7 +146,7 @@
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 是进程之间的顺序关系，其中一个进程必须在时间上先于另一个进程发生，并且关系的时间可以描述为一种序列类型。关联进程（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>.RelatingProcess</em>）被视为关系中的前驱（具有优先权），而关联的进程（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a>.RelatedProcess</em>）是后继。</p>
 <!-- end of short definition -->
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 定义为一对一关系；因此，它将一个前驱分配给一个后继。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Relocated to <em>IfcProcessExtension</em> schema. <em>TimeLag</em> and <em>SequenceType</em> made optional. <em>USERDEFINED</em> added to the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSequenceEnum.htm">IfcSequenceEnum</a></em> enumeration. <em>UserDefinedSequenceType</em> attribute added. WHERE rule controlling use of the <em>USERDEFINED</em> enumeration added.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC1.0 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 已迁移至 <em>IfcProcessExtension</em> 模式。 <em>TimeLag</em> 和 <em>SequenceType</em> 设为可选。 <em>USERDEFINED</em> 已添加至 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSequenceEnum.htm">IfcSequenceEnum</a></em> 枚举。 已添加 <em>UserDefinedSequenceType</em> 属性。 已添加控制 <em>USERDEFINED</em> 枚举使用的 WHERE 规则。</aside>
 <p><strong>Use definitions</strong></p>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 用于描述两个进程之间存在的逻辑顺序关系。这种逻辑关系表明存在一个前驱或关联进程和一个后继或关联进程。在 IFC 中，关系中可以有一个前驱和一个后继。可以存在许多 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSequence.htm">IfcRelSequence</a></em> 实例来描述一个前驱任务与多个后继任务之间的顺序关系，或者描述多个前驱任务与一个后继任务之间的顺序关系，从而实现任务之间的 m:n 顺序关系。请注意，顺序关系可用于定义进程实例之间的依赖关系，也可用于定义进程类型之间的依赖关系（有关更多信息，请参阅 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskType.htm">IfcTaskType</a></em>）。在定义进程实例之间的依赖关系时，顺序关系应保持在有向无环图中。</p>
 <p>可以为序列设置序列类型。对于分配给工作计划的任务，预期将断言序列类型。对于流程图，其中进程之间的顺序关系仅仅是逻辑流，则不必断言。</p>
@@ -206,7 +206,7 @@
     5.3.3.5.3 特性（Attributes）
 <a class="link" href="#5.3.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-69b08506-0efb-4f5f-ad70-9399ede3e69e"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-973e5ad0-e243-4739-9e6b-50e5594ee1fe"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -250,7 +250,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -353,15 +353,15 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
 <p>允许指定序列的用户定义类型，超出 <em>SequenceType</em> 特性（<em>START_START</em>、<em>START_FINISH</em> <em>FINISH_START</em>、<em>FINISH_FINISH</em>）提供的枚举值。当在属性 <em>UserDefinedSequenceType</em> 中提供值时，属性 <em>SequenceType</em> 应具有枚举值 <em>USERDEFINED</em>。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> Attribute added</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加属性。</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.3.3.5.A<a class="link" href="#-69b08506-0efb-4f5f-ad70-9399ede3e69e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.3.3.5.A<a class="link" href="#-973e5ad0-e243-4739-9e6b-50e5594ee1fe"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.3.3.5.4-Formal-propositions-"></a>
     5.3.3.5.4 形式化命题（Formal propositions）
 <a class="link" href="#5.3.3.5.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-79b4d6ac-db2c-4507-8af2-c8466e9b4d83"></a><table>
+<figure><a class="anchor" id="-981a6060-f373-48c1-811f-78e63160a9fd"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -392,11 +392,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.3.3.5.B<a class="link" href="#-79b4d6ac-db2c-4507-8af2-c8466e9b4d83"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.3.3.5.B<a class="link" href="#-981a6060-f373-48c1-811f-78e63160a9fd"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.3.3.5.5-Concept-usage-"></a>
     5.3.3.5.5 概念用法（Concept usage）
 <a class="link" href="#5.3.3.5.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-1a55e8bc-a767-45ab-a22f-4d26a43c2563"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-9fe2f687-2f26-4cd3-a90d-08b712fa9bb6"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -566,7 +566,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.3.3.5.C<a class="link" href="#-1a55e8bc-a767-45ab-a22f-4d26a43c2563"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.3.3.5.C<a class="link" href="#-9fe2f687-2f26-4cd3-a90d-08b712fa9bb6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.3.3.5.6-Formal-representation-"></a>
     5.3.3.5.6 形式化表示（Formal representation）
 <a class="link" href="#5.3.3.5.6-Formal-representation-"><i data-feather="link"></i></a></h2>

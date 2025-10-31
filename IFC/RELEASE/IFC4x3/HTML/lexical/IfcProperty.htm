@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -204,7 +204,7 @@
 <a class="link" href="#8.16.3.4.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em> 是通过属性集机制与IFC对象关联的所有属性类型的抽象概括。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.0.</aside>
+<aside class="aside-history"><mark>沿革</mark> 在IFC1.0中的新实体。</aside>
 <h2><a class="anchor" id="8.16.3.4.2-Entity-inheritance-"></a>
     8.16.3.4.2 实体继承（Entity inheritance）
 <a class="link" href="#8.16.3.4.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -236,7 +236,7 @@
     8.16.3.4.3 特性（Attributes）
 <a class="link" href="#8.16.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-867fa8c8-54bf-47fd-a1e1-42a087fbc914"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-3e83ab7c-0465-43c9-9b42-46927e658135"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -258,6 +258,17 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与属性定义相关联的外部引用，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向属性。</aside>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -276,8 +287,94 @@
 <small>(8)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>此属性的名称。该标签是定义属性语义含义的重要名称字符串。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Specification
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>指向具有语义定义或解释性文本位置的URI引用，用于说明该属性。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PartOfPset</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a> FOR HasProperties</td>
+<td data-label="Description">
+<p>通过该属性被引用的_IfcPropertySet_的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性，用于从_IfcProperty_导航至_IfcPropertySet_，同时保持基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PropertyForDependance</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDependencyRelationship.htm">IfcPropertyDependencyRelationship</a> FOR DependingProperty</td>
+<td data-label="Description">
+<p>其他属性的值所依赖的属性。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PropertyDependsOn</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDependencyRelationship.htm">IfcPropertyDependencyRelationship</a> FOR DependantProperty</td>
+<td data-label="Description">
+<p>该属性的值所依赖的相关属性。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PartOfComplex</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexProperty.htm">IfcComplexProperty</a> FOR HasProperties</td>
+<td data-label="Description">
+<p>包含该_IfcProperty_的_IfcComplexProperty_的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 基数已更改为0..n，允许在多个_IfcComplexProperty_中重用_IfcProperty_实例，同时保持基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasConstraints</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>用户定义的属性约束。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasApprovals</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>用户定义的属性审批。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.16.3.4.A<a class="link" href="#-867fa8c8-54bf-47fd-a1e1-42a087fbc914"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.16.3.4.A<a class="link" href="#-3e83ab7c-0465-43c9-9b42-46927e658135"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.16.3.4.4-Formal-representation-"></a>
     8.16.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.16.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>

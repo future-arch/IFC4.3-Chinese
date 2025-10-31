@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -165,13 +165,13 @@
 <a class="link" href="#7.1.4.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p>门套线的特性。</p>
 <!-- end of short definition -->
-<aside class="aside-history"><mark>沿革</mark> New property set in IFC4.3.2.0 to replace the entity IfcDoorLiningProperties</aside>
+<aside class="aside-history"><mark>沿革</mark> 在 IFC4.3.2.0 中新增属性集以替代实体 IfcDoorLiningProperties</aside>
 <h2><a class="anchor" id="7.1.4.1.2-"></a>
     7.1.4.1.2 适用实体
 <a class="link" href="#7.1.4.1.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 的子类型处被同名属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDoor.htm">IfcDoor</a></li>
@@ -182,7 +182,7 @@
 <h2><a class="anchor" id="7.1.4.1.3-"></a>
     7.1.4.1.3 属性
 <a class="link" href="#7.1.4.1.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-c7258525-c9e6-4270-8c28-c63da7f460cc"></a><table>
+<figure><a class="anchor" id="-93838b73-176f-4b93-bc76-4c38d314816f"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -216,8 +216,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>ThresholdDepth（门槛深度）</p>
-<p>门槛的深度（垂直于门扇的平面上的尺寸）。仅当门套包含门槛时提供。如果省略（并给出了门槛厚度的值），则表示可调节深度（即，可根据插入此门样式实例的墙体厚度进行调节的深度）。</p>
+<p>门槛深度（垂直于门扇平面方向的尺寸）。仅当门框包含门槛时提供。如果省略（且已给定门槛厚度值），则表示可调深度（即能够适应安装此门样式的墙体厚度的可调节深度）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ThresholdDepth.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -226,8 +225,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>ThresholdThickness（门槛厚度）</p>
-<p>门槛的厚度，如上图所示。如果 <em>ThresholdThickness</em> 的值为 0（零），则表示没有门槛的门（此时 <em>ThresholdDepth</em> 应设置为 NIL）。如果 <em>ThresholdThickness</em> 为 NIL，则表示没有关于门槛的信息。</p>
+<p>如上图所示的门槛厚度。如果_ThresholdThickness_值为0（零），表示无门槛门（此时_ThresholdDepth_应设置为NIL）。如果_ThresholdThickness_为NIL，表示门槛信息不可用。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ThresholdThickness.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -236,7 +234,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
 <td>
-<p>窗扇的厚度。</p><p>横档（如果提供，即 TransomOffset 属性设置为正值）的厚度（宽度，平行于门扇的平面），该横档将门扇与上方的玻璃（或窗户）分开。如果 TransomThickness 设置为零（且 TransomOffset 设置为正长度），则门垂直分为门扇和横档窗区域，没有物理框架。</p>
+<p>横梁厚度。</p><p>横档（如果提供，即 TransomOffset 属性设置为正值）的厚度（宽度，平行于门扇的平面），该横档将门扇与上方的玻璃（或窗户）分开。如果 TransomThickness 设置为零（且 TransomOffset 设置为正长度），则门垂直分为门扇和横档窗区域，没有物理框架。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TransomThickness.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -245,7 +243,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>窗扇（如果给出）的偏移量，窗扇将门扇与上方的玻璃（或窗户）分开。偏移量从门洞底部给出。</p>
+<p>横梁（如果存在）的偏移量，该横梁将门扇与上方的玻璃（或窗户）分开。偏移量从门洞底部给出。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TransomOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -263,8 +261,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td>
-<p>ThresholdOffset（门槛偏移）</p>
-<p>门槛的偏移量（垂直于门扇的平面上的尺寸）。偏移量表示为到局部放置的x轴的距离。仅当门套包含门槛且参数已知时提供。</p>
+<p>门槛偏移量（垂直于门扇平面方向的尺寸）。该偏移量以相对于局部放置坐标系的X轴距离表示。仅当门框包含门槛且该参数已知时提供。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ThresholdOffset.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -305,7 +302,7 @@
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/LiningToPanelOffsetY.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.1.4.1.A<a class="link" href="#-c7258525-c9e6-4270-8c28-c63da7f460cc"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.1.4.1.A<a class="link" href="#-93838b73-176f-4b93-bc76-4c38d314816f"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">

@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -204,7 +204,7 @@
 <li><em>TextFontStyle</em>：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyleFontModel.htm">IfcTextStyleFontModel</a></em></li>
 </ul>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em> 通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em> 实体分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextLiteral.htm">IfcTextLiteral</a></em>。</p>
-<aside class="aside-note"><mark>注释</mark> Entity adopted from font properties (font-family, font-style, font-variant, font-weight, font-size), Color and background properties (color, background-color) and text properties (word-spacing, letter-spacing, text-decoration, text-transform, text-align, text-indent, line-height) defined in <a href="../content/bibliography.htm#CSS1">CSS-1</a>.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em> has been changed by adding <em>TextFontStyle</em> and different data types for <em>TextStyle</em> and <em>IfcTextCharacterAppearance</em>.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em> has been simplified by removing old vector based text style definitions.</aside>
+<aside class="aside-note"><mark>注释</mark> 实体采纳自<a href="../content/bibliography.htm#CSS1">CSS-1</a>中定义的字体属性（font-family、font-style、font-variant、font-weight、font-size）、颜色与背景属性（color、background-color）以及文本属性（word-spacing、letter-spacing、text-decoration、text-transform、text-align、text-indent、line-height）。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 新增实体。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> 通过添加 <em>TextFontStyle</em> 并为 <em>TextStyle</em> 和 <em>IfcTextCharacterAppearance</em> 采用不同数据类型，对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em> 进行了修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 通过移除旧版基于矢量的文本样式定义，对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em> 进行了简化。</aside>
 <h2><a class="anchor" id="8.12.3.36.2-Entity-inheritance-"></a>
     8.12.3.36.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.36.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -229,7 +229,7 @@
     8.12.3.36.3 特性（Attributes）
 <a class="link" href="#8.12.3.36.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-2b6781ec-bd4b-4982-b1f5-8f93a9c456c1"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-6e4cc460-6bd3-49d5-b417-758c2883d5aa"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -251,6 +251,18 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>表现样式的名称。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -269,8 +281,62 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                TextCharacterAppearance
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyleForDefinedFont.htm">IfcTextStyleForDefinedFont</a></td>
+<td data-label="Description">
+<p>用于呈现文本的字符样式。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 冗余的选择类型 IfcCharacterStyleSelect 已被移除。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                TextStyle
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyleTextModel.htm">IfcTextStyleTextModel</a></td>
+<td data-label="Description">
+<p>应用于文本块视觉外观的样式。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 属性 <em>TextBlockStyle</em> 已由 SET[1:?] 更改为非聚合可选属性，并重命名为 <em>TextStyles</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> IfcTextStyleWithBoxCharacteristics 及现已冗余的选择类型 IfcTextStyleSelect 已被移除。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                TextFontStyle
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextFontSelect.htm">IfcTextFontSelect</a></td>
+<td data-label="Description">
+<p>应用于文本字体视觉外观的样式。用于定义字体系列、字体样式、字重和字号。</p>
+<blockquote>
+<p>IFC2x2 Add2 CHANGE 属性 <em>TextFontStyle</em> 是附加至 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTextStyle.htm">IfcTextStyle</a></em> 的新属性。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ModelOrDraughting
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>指示为呈现样式提供的长度度量是基于模型还是基于制图。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增属性。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.12.3.36.A<a class="link" href="#-2b6781ec-bd4b-4982-b1f5-8f93a9c456c1"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.36.A<a class="link" href="#-6e4cc460-6bd3-49d5-b417-758c2883d5aa"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.36.4-Formal-representation-"></a>
     8.12.3.36.4 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.36.4-Formal-representation-"><i data-feather="link"></i></a></h2>

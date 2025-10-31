@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15 IfcProfileResource - IFC 4.3.2 Documentation</title>
+<title>8.15 IfcProfileResource（轮廓资源） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,61 +189,61 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.15 IfcProfileResource</h1>
+<h1>8.15 IfcProfileResource（轮廓资源）</h1>
 <h2><a class="anchor" id="8.15.1-"></a>
     8.15.1 架构定义
 <a class="link" href="#8.15.1-"><i data-feather="link"></i></a></h2>
 <p>模式 <em>IfcProfileResource</em> 定义了用于定义几何形状表示的二维轮廓或横截面。轮廓定义应用于：</p>
 <ul>
-<li>扫掠曲面</li>
-<li>扫掠面积实体</li>
-<li>截面脊</li>
+<li>扫描曲面</li>
+<li>扫描实体</li>
+<li>截面脊线</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 轮廓定义不是几何表示项的子类型，不能直接用于几何表示对象。</aside>
-<p>轮廓可用于定义曲线或面积。如果是曲线，则只有边界属于轮廓定义的域；如果是面积，则边界和内部都属于轮廓定义的域。曲线可用于：</p>
+<aside class="aside-note"><mark>注释</mark> Profile definitions are not subtypes of geometric representation item and can not be used directly to geometrically represent an object.</aside>
+<p>轮廓可用于定义曲线或区域。对于曲线，仅边界属于轮廓定义域；对于区域，边界和内部均属于轮廓定义域。曲线可用于：</p>
 <ul>
-<li>扫掠曲面</li>
-<li>截面脊</li>
+<li>扫描曲面</li>
+<li>截面脊线</li>
 </ul>
-<p>面积可用于：</p>
+<p>而区域可用于：</p>
 <ul>
-<li>扫掠面积实体</li>
-<li>截面脊</li>
+<li>扫描实体</li>
+<li>截面脊线</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 使用轮廓定义是定义棱柱形以表示产品的首选方式。</aside>
-<p>轮廓定义 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em>) 可由各种子类型实例化。有四种不同类别的轮廓定义：</p>
+<aside class="aside-note"><mark>注释</mark> The use of profile definitions is the preferred way to define prismatic shapes to represent products.</aside>
+<p>轮廓定义（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em>）可通过各种子类型实例化。轮廓定义分为四类不同组别：</p>
 <ul>
-<li>参数化定义的轮廓：这些轮廓由二维位置坐标系和尺寸参数定义，以生成二维形状。</li>
-<li>显式定义的轮廓：这些轮廓由父坐标系中定义的二维曲线（单个或多个）定义。</li>
-<li>派生轮廓：这些轮廓是通过父轮廓的笛卡尔变换创建的。</li>
-<li>复合轮廓：这些轮廓由其他轮廓的组合构成。</li>
+<li>参数化定义轮廓：这些轮廓通过二维位置坐标系和尺寸参数生成二维形状。</li>
+<li>显式定义轮廓：这些轮廓通过在父坐标系中定义的（单个或多个）二维曲线定义。</li>
+<li>派生轮廓：这些轮廓通过对父轮廓进行笛卡尔变换创建。</li>
+<li>复合轮廓：这些轮廓由其他轮廓组合而成</li>
 </ul>
-<p>当用作扫掠到曲面或实体中的曲线或面积时，轮廓的二维坐标系被映射到扫掠曲面（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a></em> 的子类型）、扫掠面积实体（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 的子类型）或截面脊（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em>）的三维坐标系的 xy 平面。挤出方向沿三维坐标系的 z 轴（或一个与 z 轴不垂直的挤出向量，或在原点处切线指向 z 轴的旋转）。</p>
-<p>IFC 中坐标轴的使用与结构分析中坐标轴的一般约定不完全相同。应使用以下转换，如表 8.15.B 所示：</p>
+<p>当用作要扫描成曲面或实体的曲线或区域时，轮廓的二维坐标系将映射到扫描曲面（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a></em> 子类型）、扫描实体（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a></em> 子类型）或截面脊线（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a></em>）的三维坐标系的 xy 平面。拉伸方向沿三维坐标系的 z 轴（或与 z 轴不垂直的拉伸向量，或在原点处具有与 z 轴相切的旋转）。</p>
+<p>IFC 中坐标轴的使用与结构分析中坐标轴使用的通用约定不同。应使用以下转换，如表 8.15.B 所示：</p>
 <figure><a class="anchor" id="-1-"></a><table>
 <thead>
 <tr>
-<th style="text-align: left;">IFC 轴约定</th>
-<th style="text-align: left;">结构分析轴约定</th>
+<th>IFC 坐标轴约定</th>
+<th>结构分析坐标轴约定</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">+X</td>
-<td style="text-align: left;">-Y</td>
+<td>+X</td>
+<td>-Y</td>
 </tr>
 <tr>
-<td style="text-align: left;">+Y</td>
-<td style="text-align: left;">-Z</td>
+<td>+Y</td>
+<td>-Z</td>
 </tr>
 <tr>
-<td style="text-align: left;">+Z</td>
-<td style="text-align: left;">+X</td>
+<td>+Z</td>
+<td>+X</td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.B — 轴转换<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<figure><a class="anchor" id="-1-"></a><img alt="IFC 和结构中的坐标" src="../figures/ifcprofileresource-coordinatesystem.gif" title="图 8.15.B — 轮廓坐标系"/><figcaption>图 8.15.B — 轮廓坐标系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新模式，定义曾包含在早期 IFC 版本中的 <em>IfcGeometryResource</em> 中。<em>IfcProfilePropertyResource</em> 模式在 IFC4 中合并到 <em>IfcProfileResource</em>。</aside>
+</table><figcaption>表 8.15.B — 坐标轴转换<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a class="anchor" id="-1-"></a><img alt="IFC 和结构分析中的坐标系" src="../figures/ifcprofileresource-coordinatesystem.gif" title="图 8.15.B — 轮廓坐标系"/><figcaption>图 8.15.B — 轮廓坐标系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>沿革</mark> New schema in IFC2x, definitions had been part of the <em>IfcGeometryResource</em> in earlier IFC Releases. <em>IfcProfilePropertyResource</em> schema merged into <em>IfcProfileResource</em> in IFC4.</aside>
 <h2><a class="anchor" id="8.15.2-Types"></a>
     8.15.2 Types
 <a class="link" href="#8.15.2-Types"><i data-feather="link"></i></a></h2>
@@ -547,5 +547,6 @@
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>

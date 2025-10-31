@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -195,8 +195,8 @@
     8.11.3.1.1 语义定义（Semantic definition）
 <a class="link" href="#8.11.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO/CD 10303-41:1992
-A context dependent unit is a unit which is not related to the SI system.</aside><aside class="aside-note"><mark>注释</mark> The number of parts in an assembly is a physical quantity measured in units that may be called "parts" but which cannot be related to an SI unit.</aside><aside class="aside-note"><mark>注释</mark> Corresponding ISO 10303 name: context_dependent_unit, please refer to ISO/IS 10303-41 for the final definition of the formal standard.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.1.</aside>
+<aside class="aside-note"><mark>注释</mark> 根据 ISO/CD 10303-41:1992 的定义
+上下文相关单位是指与SI系统无关的计量单位。</aside><aside class="aside-note"><mark>注释</mark> 装配体中的零件数量是以"件"为单位进行测量的物理量，但该单位无法与SI单位建立关联。</aside><aside class="aside-note"><mark>注释</mark> 对应的 ISO 10303 名称：context_dependent_unit，请参考 ISO/IS 10303-41 获取正式标准的最终定义。</aside><aside class="aside-history"><mark>沿革</mark> IFC1.5.1 版本新增实体</aside>
 <h2><a class="anchor" id="8.11.3.1.2-Entity-inheritance-"></a>
     8.11.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.11.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -220,7 +220,7 @@ A context dependent unit is a unit which is not related to the SI system.</aside
     8.11.3.1.3 特性（Attributes）
 <a class="link" href="#8.11.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-3eb789e7-d003-4ee3-8449-7c91588eafe6"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-94688919-7e0a-48ec-bd50-70d98bac25b9"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -242,6 +242,30 @@ A context dependent unit is a unit which is not related to the SI system.</aside
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Dimensions
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionalExponents.htm">IfcDimensionalExponents</a></td>
+<td data-label="Description">
+<p>通过国际单位制基本单位的量纲指数来定义命名单位。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                UnitType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitEnum.htm">IfcUnitEnum</a></td>
+<td data-label="Description">
+<p>单位的类型。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -260,8 +284,31 @@ A context dependent unit is a unit which is not related to the SI system.</aside
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于指代上下文相关单位的单词或词组。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>与上下文相关单位相关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.11.3.1.A<a class="link" href="#-3eb789e7-d003-4ee3-8449-7c91588eafe6"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.11.3.1.A<a class="link" href="#-94688919-7e0a-48ec-bd50-70d98bac25b9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.11.3.1.4-Formal-representation-"></a>
     8.11.3.1.4 形式化表示（Formal representation）
 <a class="link" href="#8.11.3.1.4-Formal-representation-"><i data-feather="link"></i></a></h2>

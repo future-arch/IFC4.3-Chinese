@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,14 +196,14 @@
 <a class="link" href="#8.15.3.11.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEllipseProfileDef.htm">IfcEllipseProfileDef</a></em> 定义了一个椭圆作为扫掠表面几何体或扫掠面积实体所使用的轮廓定义。它通过其半轴属性给出，并位于由 <em>Position</em> 属性建立的二维位置坐标系内。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x</aside>
+<aside class="aside-history"><mark>沿革</mark> 在 IFC2x 中新增的实体</aside>
 <p>图1展示了椭圆形轮廓定义的参数。参数化轮廓定义了其自身的位置坐标系。基础坐标系由使用该轮廓定义的扫掠表面或扫掠面积实体定义。它是以下任一情况的xy平面：</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptSurface.htm">IfcSweptSurface</a>.Position</em></li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em></li>
 </ul>
 <p>或者在截面脊线的情况下，它是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionedSpine.htm">IfcSectionedSpine</a>.CrossSectionPositions</em> 每个列表成员的xy平面。通过使用位置坐标的偏移量，参数化轮廓可以居中定位（使用x,y偏移量=0.），或相对于轮廓的任何位置。显式坐标偏移用于定义基点（例如，左上边界）。位置坐标系的位置定义了椭圆的中心。<em>SemiAxis1</em> 属性定义了沿X轴方向的椭圆第一个半径，<em>SemiAxis2</em> 属性定义了沿Y轴方向的椭圆第二个半径。</p>
-<aside class="aside-note"><mark>注释</mark> The semi axes of the ellipse are rectangular to each other by definition.</aside>
+<aside class="aside-note"><mark>注释</mark> 根据定义，椭圆的半轴彼此垂直</aside>
 <figure><a class="anchor" id="-1-"></a><img alt="椭圆形轮廓" src="../figures/ifcellipseprofiledef-layout1.gif" title="图1 — 椭圆形轮廓"/><figcaption>图1 — 椭圆形轮廓<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.11.2-Entity-inheritance-"></a>
     8.15.3.11.2 实体继承（Entity inheritance）
@@ -247,7 +247,7 @@
     8.15.3.11.3 特性（Attributes）
 <a class="link" href="#8.15.3.11.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-00a32873-df84-49fc-b797-0e1eb6d9bcff"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-a5fd322e-9754-4b29-a56f-1177a590ace3"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -269,10 +269,68 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ProfileType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
+<td data-label="Description">
+<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ProfileName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
+<td data-label="Description">
+<p>轮廓的附加属性，例如机械属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></td>
+<td data-label="Description">
+<p>参数化轮廓定义的位置坐标系。如果未指定，则不应用平移和旋转。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -293,8 +351,32 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                SemiAxis1
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>椭圆的第一半径。沿 Position.P[1] 方向测量。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                SemiAxis2
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>椭圆的第二半径。沿 Position.P[2] 方向测量。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.15.3.11.B<a class="link" href="#-00a32873-df84-49fc-b797-0e1eb6d9bcff"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.11.B<a class="link" href="#-a5fd322e-9754-4b29-a56f-1177a590ace3"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.11.4-"></a>
     8.15.3.11.4 属性集
 <a class="link" href="#8.15.3.11.4-"><i data-feather="link"></i></a></h2>
@@ -335,7 +417,7 @@
 </p><h2><a class="anchor" id="8.15.3.11.5-Concept-usage-"></a>
     8.15.3.11.5 概念用法（Concept usage）
 <a class="link" href="#8.15.3.11.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-e0d3c23c-6bc3-4fd2-b1fe-558442934b5f"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-bc1ba93e-6a47-4840-b592-a239d6a862ed"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -379,7 +461,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.11.C<a class="link" href="#-e0d3c23c-6bc3-4fd2-b1fe-558442934b5f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.11.C<a class="link" href="#-bc1ba93e-6a47-4840-b592-a239d6a862ed"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.11.6-Formal-representation-"></a>
     8.15.3.11.6 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.11.6-Formal-representation-"><i data-feather="link"></i></a></h2>

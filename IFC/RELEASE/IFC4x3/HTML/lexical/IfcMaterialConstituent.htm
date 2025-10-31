@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -227,7 +227,7 @@
     8.10.3.3.3 特性（Attributes）
 <a class="link" href="#8.10.3.3.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ffd2b4a9-9c9e-405b-8d3b-e13ef95a7381"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-efeaa16c-8085-47d9-88da-cec374b9eded"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -249,6 +249,39 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>AssociatedTo</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a> FOR RelatingMaterial</td>
+<td data-label="Description">
+<p>在构件实例或构件类型的材料关联中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型。该关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与材料相关的外部参考，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProperties.htm">IfcMaterialProperties</a> FOR Material</td>
+<td data-label="Description">
+<p>分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型实例的材料属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -267,8 +300,78 @@
 <small>(6)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>材料成分的名称。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>用描述性术语定义材料成分。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Material
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></td>
+<td data-label="Description">
+<p>对构成成分的材料的引用。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Fraction
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>可选提供由该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituent.htm">IfcMaterialConstituent</a></em> 贡献给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em> 的总量（体积或重量）的分数。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Category
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>材料成分的类别，例如在其所属的成分集中所扮演的角色。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ToMaterialConstituentSet</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a> FOR MaterialConstituents</td>
+<td data-label="Description">
+<p>包含此材料成分的材料成分集。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.10.3.3.A<a class="link" href="#-ffd2b4a9-9c9e-405b-8d3b-e13ef95a7381"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.3.A<a class="link" href="#-efeaa16c-8085-47d9-88da-cec374b9eded"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.3.4-Formal-representation-"></a>
     8.10.3.3.4 形式化表示（Formal representation）
 <a class="link" href="#8.10.3.3.4-Formal-representation-"><i data-feather="link"></i></a></h2>

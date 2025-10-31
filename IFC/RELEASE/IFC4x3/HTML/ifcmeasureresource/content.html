@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.11 IfcMeasureResource - IFC 4.3.2 Documentation</title>
+<title>8.11 IfcMeasureResource（测量资源） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,23 +189,22 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.11 IfcMeasureResource</h1>
+<h1>8.11 IfcMeasureResource（测量资源）</h1>
 <h2><a class="anchor" id="8.11.1-"></a>
     8.11.1 架构定义
 <a class="link" href="#8.11.1-"><i data-feather="link"></i></a></h2>
-<p>==================</p>
-<p><em>IfcMeasureResource</em> 模式指定了可分配给数量的单位和定义的度量类型。</p>
-<aside class="aside-note"><mark>注释</mark> 本模式中使用的基本单位类型基于 ISO 1000+A1, 1992, 1998 中定义的 SI 系统。可以使用本模式推导非 SI 测量系统中的单位。<em>IfcMeasureResource</em> 模式中的许多定义改编自 <a href="../content/bibliography.htm#iso-10303-41">ISO 10303-41</a></aside><aside class="aside-note"><mark>注释</mark> 在单位指数的定义中省略了上标字体。因此，m2 表示平方米，m3 表示立方米。</aside>
-<p>不同类型的单位有五种基本情况：</p>
+<p><em>IfcMeasureResource</em> 模式规定了可分配给数量的单位和已定义的度量类型。</p>
+<aside class="aside-note"><mark>注释</mark> The fundamental unit types used in this schema are based on the SI system defined in ISO 1000+A1, 1992, 1998. Units in measurement systems other than SI may be derived using this schema. Many definitions declared in the <em>IfcMeasureResource</em> schema is adapted from <a href="../content/bibliography.htm#iso-10303-41">ISO 10303-41</a></aside><aside class="aside-note"><mark>注释</mark> In the definitions of the unit exponents the use of superscript font has been omitted. Therefore, m2 means square metre, m3 means cubic meter.</aside>
+<p>在不同类型的单位中，有五种基本情况：</p>
 <ul>
-<li>基本 SI 单位，涵盖了 <a href="../content/bibliography.htm#iso-1000">ISO-1000</a>{ .int-ref} 定义的许多物理量的基础单位，例如长度度量的米或毫米，或面积度量的平方米。单位可以带有缩放前缀（例如：毫、千）。</li>
-<li>派生 SI 单位，定义为基本 SI 单位的派生，例如，牛顿（kg m / s2）作为力的单位。基本 SI 单位和派生 SI 单位在 IFC 中都由 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnit.htm">IfcSIUnit</a> 表示。</li>
-<li>基于转换的单位，可以从 SI 单位通过比例因子派生；例如，英寸可以通过长度度量的 SI 单位定义，即一英寸等于 25.4 毫米。</li>
-<li>派生单位，可以定义为多个基本单位的派生或组合。在派生单位中，每个基本单位“组成部分”在定义派生单位时都有一个量纲指数；例如，kg / m2，其中千克（kg）的量纲指数为 1，米（m）的指数为 -2。</li>
-<li>上下文相关单位，不能作为基于 SI 单位的转换单位来定义。</li>
+<li>基本 SI 单位，涵盖了一系列主要由 <a href="../content/bibliography.htm#iso-1000">ISO-1000</a>{ .int-ref} 定义的物理量的基本单位，例如米或毫米作为长度度量的单位，或平方米作为面积度量的单位。单位可以具有缩放前缀（例如：毫、千）。</li>
+<li>派生 SI 单位，定义为基本 SI 单位的派生，例如，牛顿 (kg m / s2) 作为力的单位。基本和派生 SI 单位在 IFC 中均由 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnit.htm">IfcSIUnit</a> 表示。</li>
+<li>基于转换的单位，可以通过缩放因子从 SI 单位导出；例如，英寸可以使用长度度量的 SI 单位定义，即一英寸等于 25.4 毫米。</li>
+<li>派生单位，可以定义为多个基本单位的派生或组合。在派生单位中，每个基本单位"分量"在定义派生单位时都具有维度指数；例如，kg / m2，其中千克 (kg) 的维度指数为 1，米 (m) 的指数为 -2。</li>
+<li>上下文相关单位，不能使用 SI 单位定义为基于转换的单位。</li>
 </ul>
-<p>关于度量定义类型（例如，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeMeasure.htm">IfcTimeMeasure</a></em>）作为本规范中属性数据类型的使用，有三种基本情况：</p>
-<p>首先，实体类型的属性数据类型本身就是度量定义类型，在实例级别无法定义度量值的单位：</p>
+<p>关于在本规范中将度量定义类型（例如，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTimeMeasure.htm">IfcTimeMeasure</a></em>）用作属性数据类型，有三种基本情况：</p>
+<p>首先，实体类型的属性数据类型是度量定义类型本身，在实例级别无法定义度量值的单位：</p>
 <pre><code>ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundingBox.htm">IfcBoundingBox</a>
 SUBTYPE OF(<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a>);
 Corner : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a>;
@@ -214,8 +213,8 @@ YDim : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">I
 ZDim : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
 END_ENTITY;
 </code></pre>
-<p>在这种情况下，度量类型对应单位的全局单位赋值定义了该定义度量类型所有用法的单位（除了下面的情况 2 和 3）。</p>
-<p>其次，属性的数据类型是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a>，它允许为该实体类型的实例定义每单位的度量，独立于且可能覆盖全局单位赋值：</p>
+<p>在这种情况下，由对应度量类型的全局单位分配来定义此定义度量类型所有使用的单位（以下情况 2 和 3 除外）。</p>
+<p>其次，属性的数据类型是 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a>，它允许为该实体类型的每个实例定义单位，独立且可能覆盖全局单位分配：</p>
 <pre><code>ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>
  SUPERTYPE OF (ONEOF
   (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>))
@@ -224,17 +223,17 @@ END_ENTITY;
   ConversionFactor : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a>;
 END_ENTITY;
 </code></pre>
-<p>在这种情况下，相关的度量定义类型（来自 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a>.ValueComponent : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a> 选择列表）并非由模式精确定义，而是由上下文隐含。</p>
-<p>第三，实体类型有一个单独的“unit”属性，允许为实体类型的另一个属性定义单位，以表示实际值：</p>
+<p>在这种情况下，相关的度量定义类型（来自 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a>.ValueComponent : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a> 选择列表）并未由模式精确定义，而是由上下文暗示。</p>
+<p>第三，实体类型具有单独的"单位"属性，允许为实体类型的另一个表示实际值的属性定义单位：</p>
 <pre><code>ENTITY <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a>
 SUBTYPE OF (<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSimpleProperty.htm">IfcSimpleProperty</a>);
 NominalValue : <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcValue.htm">IfcValue</a>;
 Unit : OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnit.htm">IfcUnit</a>;
 END_ENTITY;
 </code></pre>
-<p>尽管在情况 2 和 3 中，同一实体类型的不同实例或不同实体类型属性中的相同度量类型可以使用不同的单位，但建议避免混合使用相同的定义度量类型的不同单位，如果可以避免的话。下面给出上述每种基本情况的一些示例。</p>
-<aside class="aside-note"><mark>注释</mark> 在以 IFC 数据交换文件形式给出的示例实例化中，主要给出度量和单位相关的属性值；其他属性不赋值（以“-”号表示），无论它们是否应实际有值，因为它们是非可选属性。</aside>
-<p>表 8.11.A 显示了度量、单位和对应的数据类型。</p>
+<p>尽管在情况 2 和 3 中，对于同一实体类型的不同实例或对于不同实体类型属性中的相同度量类型，可以使用不同的单位，但如果可以避免，建议不要对相同的度量定义类型混合使用不同的单位。下面给出了上述每种基本情况的一些示例。</p>
+<aside class="aside-note"><mark>注释</mark> In the example instantiations in the form of IFC data exchange files, mainly the measure and unit -relevant attributes are given the values; the other attributes are given no values (in the form of $-sign) independent of whether they should actually have values because of being nonoptional attributes.</aside>
+<p>表 8.11.A 显示了度量、单位和相应的数据类型。</p>
 <figure><a class="anchor" id="-1-"></a><table>
 <thead>
 <tr>
@@ -242,16 +241,16 @@ END_ENTITY;
 <th>类型</th>
 <th>单位</th>
 <th>符号</th>
-<th>推导</th>
+<th>派生</th>
 <th>IfcSIUnitEnum</th>
 <th><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitEnum.htm">IfcUnitEnum</a></th>
 <th><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a></th>
-<th>定义值类型</th>
+<th>定义的值类型</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>吸收剂量、比能量入射、克、吸收剂量指数</td>
+<td>吸收剂量、比能、比释动能、吸收剂量指数</td>
 <td>SI / 派生</td>
 <td>戈瑞</td>
 <td>Gy</td>
@@ -284,9 +283,9 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPHMeasure.htm">IfcPHMeasure</a></td>
 </tr>
 <tr>
-<td>活度（放射性核素）</td>
+<td>（放射性核素的）活度</td>
 <td>SI / 派生</td>
-<td>贝可勒尔</td>
+<td>贝克勒尔</td>
 <td>Bq</td>
 <td>1 / s</td>
 <td>BECQUEREL</td>
@@ -295,7 +294,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRadioActivityMeasure.htm">IfcRadioActivityMeasure</a></td>
 </tr>
 <tr>
-<td>物质的量</td>
+<td>物质量</td>
 <td>SI/基本</td>
 <td>摩尔</td>
 <td>mol</td>
@@ -328,7 +327,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAreaMeasure.htm">IfcAreaMeasure</a></td>
 </tr>
 <tr>
-<td>面积密度</td>
+<td>面密度</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -361,7 +360,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcComplexNumber.htm">IfcComplexNumber</a></td>
 </tr>
 <tr>
-<td>复合平面角度</td>
+<td>复合平面角</td>
 <td>复合</td>
 <td></td>
 <td></td>
@@ -446,7 +445,7 @@ END_ENTITY;
 <td></td>
 <td></td>
 <td></td>
-<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a> (ISO 8601 格式表示)</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a> (根据 ISO 8601 的词法表示)</td>
 </tr>
 <tr>
 <td>-</td>
@@ -457,7 +456,7 @@ END_ENTITY;
 <td></td>
 <td></td>
 <td></td>
-<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a> (ISO 8601 格式表示)</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a> (根据 ISO 8601 的词法表示)</td>
 </tr>
 <tr>
 <td>剂量当量、剂量当量指数</td>
@@ -479,7 +478,7 @@ END_ENTITY;
 <td></td>
 <td></td>
 <td></td>
-<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a> (ISO 8601 格式表示)</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a> (根据 ISO 8601 的词法表示)</td>
 </tr>
 <tr>
 <td>动力粘度</td>
@@ -581,7 +580,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFrequencyMeasure.htm">IfcFrequencyMeasure</a></td>
 </tr>
 <tr>
-<td>热通量密度</td>
+<td>热流密度</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -647,7 +646,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
 </tr>
 <tr>
-<td>(整数)计数率</td>
+<td>（整数）计数率</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -669,7 +668,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIonConcentrationMeasure.htm">IfcIonConcentrationMeasure</a></td>
 </tr>
 <tr>
-<td>等温湿气容量</td>
+<td>等温 moisture capacity</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -724,7 +723,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLinearForceMeasure.htm">IfcLinearForceMeasure</a></td>
 </tr>
 <tr>
-<td>线动量</td>
+<td>线矩</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -779,7 +778,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLuminousFluxMeasure.htm">IfcLuminousFluxMeasure</a></td>
 </tr>
 <tr>
-<td>光强</td>
+<td>发光强度</td>
 <td>SI / 基本</td>
 <td>坎德拉</td>
 <td>cd</td>
@@ -790,7 +789,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLuminousIntensityMeasure.htm">IfcLuminousIntensityMeasure</a></td>
 </tr>
 <tr>
-<td>光强分布</td>
+<td>发光强度分布</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -812,7 +811,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMagneticFluxMeasure.htm">IfcMagneticFluxMeasure</a></td>
 </tr>
 <tr>
-<td>磁通量密度</td>
+<td>磁通密度</td>
 <td>SI / 派生</td>
 <td>特斯拉</td>
 <td>T</td>
@@ -845,7 +844,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMassDensityMeasure.htm">IfcMassDensityMeasure</a></td>
 </tr>
 <tr>
-<td>质量流率</td>
+<td>质量流量</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -878,7 +877,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcModulusOfElasticityMeasure.htm">IfcModulusOfElasticityMeasure</a></td>
 </tr>
 <tr>
-<td>线地基反作用模量</td>
+<td>线性地基反力模量</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -889,7 +888,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcModulusOfLinearSubgradeReactionMeasure.htm">IfcModulusOfLinearSubgradeReactionMeasure</a></td>
 </tr>
 <tr>
-<td>转地基反作用模量</td>
+<td>旋转地基反力模量</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -900,7 +899,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcModulusOfRotationalSubgradeReactionMeasure.htm">IfcModulusOfRotationalSubgradeReactionMeasure</a></td>
 </tr>
 <tr>
-<td>地基反作用模量</td>
+<td>地基反力模量</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -911,7 +910,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcModulusOfSubgradeReactionMeasure.htm">IfcModulusOfSubgradeReactionMeasure</a></td>
 </tr>
 <tr>
-<td>湿气扩散率</td>
+<td>湿扩散率</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -933,7 +932,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMolecularWeightMeasure.htm">IfcMolecularWeightMeasure</a></td>
 </tr>
 <tr>
-<td>转动惯量</td>
+<td>惯性矩</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -955,7 +954,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryMeasure.htm">IfcMonetaryMeasure</a></td>
 </tr>
 <tr>
-<td>(非负长度)</td>
+<td>（非负长度）</td>
 <td></td>
 <td></td>
 <td>m</td>
@@ -999,7 +998,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcParameterValue.htm">IfcParameterValue</a></td>
 </tr>
 <tr>
-<td>平面力</td>
+<td>面力</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -1021,7 +1020,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
 </tr>
 <tr>
-<td>(正长度)</td>
+<td>（正长度）</td>
 <td></td>
 <td></td>
 <td>m</td>
@@ -1032,7 +1031,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 </tr>
 <tr>
-<td>(正平面角)</td>
+<td>（正平面角）</td>
 <td></td>
 <td></td>
 <td>rad</td>
@@ -1098,18 +1097,18 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 </tr>
 <tr>
-<td>转速</td>
+<td>旋转频率</td>
 <td>派生</td>
 <td></td>
 <td></td>
-<td>cycles / s</td>
+<td>周期 / s</td>
 <td></td>
 <td></td>
 <td>ROTATIONALFREQUENCYUNIT</td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRotationalFrequencyMeasure.htm">IfcRotationalFrequencyMeasure</a></td>
 </tr>
 <tr>
-<td>转动质量</td>
+<td>转动惯量</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -1120,7 +1119,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRotationalMassMeasure.htm">IfcRotationalMassMeasure</a></td>
 </tr>
 <tr>
-<td>转动刚度</td>
+<td>旋转刚度</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -1142,7 +1141,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSectionalAreaIntegralMeasure.htm">IfcSectionalAreaIntegralMeasure</a></td>
 </tr>
 <tr>
-<td>截面模数</td>
+<td>截面模量</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -1241,7 +1240,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTemperatureGradientMeasure.htm">IfcTemperatureGradientMeasure</a></td>
 </tr>
 <tr>
-<td>温度变化率</td>
+<td>温度变化</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1274,7 +1273,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThermalAdmittanceMeasure.htm">IfcThermalAdmittanceMeasure</a></td>
 </tr>
 <tr>
-<td>热导率</td>
+<td>导热系数</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -1307,7 +1306,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThermalResistanceMeasure.htm">IfcThermalResistanceMeasure</a></td>
 </tr>
 <tr>
-<td>热透系数</td>
+<td>传热系数</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -1337,7 +1336,7 @@ END_ENTITY;
 <td></td>
 <td></td>
 <td></td>
-<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTime.htm">IfcTime</a> (ISO 8601 格式表示)</td>
+<td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTime.htm">IfcTime</a> (根据 ISO 8601 的词法表示)</td>
 </tr>
 <tr>
 <td>时间</td>
@@ -1373,7 +1372,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTorqueMeasure.htm">IfcTorqueMeasure</a></td>
 </tr>
 <tr>
-<td>蒸汽渗透性</td>
+<td>蒸汽渗透率</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -1395,7 +1394,7 @@ END_ENTITY;
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVolumeMeasure.htm">IfcVolumeMeasure</a></td>
 </tr>
 <tr>
-<td>体积流量率</td>
+<td>体积流量</td>
 <td>派生</td>
 <td></td>
 <td></td>
@@ -2290,5 +2289,6 @@ END_ENTITY;
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>

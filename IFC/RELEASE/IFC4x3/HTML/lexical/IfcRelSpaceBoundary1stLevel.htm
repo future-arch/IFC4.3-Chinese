@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -152,10 +152,10 @@
 </ul>
 <!-- end of short definition -->
 <p>1 级空间边界在不考虑边界元素另一侧的任何内容的情况下，通过其边界表面定义空间。</p>
-<aside class="aside-note"><mark>注释</mark> 1st level space boundaries are used e.g. in quantity take-off and facility management as they describe the surfaces for finishes. They cannot be directly used for thermal analysis. However 1st level space boundaries can provide the input to preprocessors to thermal analysis software that take 1st level space boundaries and perform the necessary transformation into 2nd level space boundaries that are required for energy analysis.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
+<aside class="aside-note"><mark>注释</mark> 一级空间边界用于工程量计算和设施管理，因为它们描述了饰面层表面。它们不能直接用于热工分析。但一级空间边界可为热分析软件的前处理器提供输入数据，这些前处理器会获取一级空间边界并执行必要转换，生成能源分析所需的二级空间边界。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 新增实体。</aside>
 <p>关系使用定义</p>
 <p>如图 5.4.3.60.A 所示，<em>ParentBoundary</em> 属性和反向 <em>InnerBoundaries</em> 用于将门、窗和开口的空间边界链接到父边界，例如墙壁或楼板的父边界。</p>
-<aside class="aside-note"><mark>注释</mark> The space boundary of the parent is not cut by the inner boundary - both overlap.</aside>
+<aside class="aside-note"><mark>注释</mark> 父级空间边界不会被内部边界切割——两者会重叠。</aside>
 <figure><a class="anchor" id="-1-"></a><img alt="IfcRelSpaceBoundary1stLevel" src="../figures/ifcrelspaceboundary1stlevel-fig1.png" title="图 5.4.3.60.A — 空间边界第一级关系"/><figcaption>图 5.4.3.60.A — 空间边界第一级关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <p>几何使用定义</p>
 <p>有关为第一级空间边界使用连接几何体的指导，请参见超类 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a> 的定义。</p>
@@ -226,7 +226,7 @@
     5.4.3.60.3 特性（Attributes）
 <a class="link" href="#5.4.3.60.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-cb570b2a-f8e8-47d6-a78b-40685c912c76"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7463a531-083d-4952-a709-11abc5cd540a"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -270,7 +270,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -325,7 +325,7 @@
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></td>
 <td data-label="Description">
 <p>指向定义空间边界的元素的引用。</p>
-<aside class="aside-change"><mark>IFC2x 变更</mark> The data type has been changed from <em>IfcBuildingElement</em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> with upward compatibility for file based exchange.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be mandatory.</aside>
+<aside class="aside-change"><mark>IFC2x 变更</mark> 数据类型已从 <em>IfcBuildingElement</em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em>，保持基于文件交换的向上兼容性。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为必需属性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -338,7 +338,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></td>
 <td data-label="Description">
 <p>空间边界的物理表示。以空间局部坐标系中的曲线或曲面形式提供。</p>
-<aside class="aside-change"><mark>IFC2x 变更</mark> The data type has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em> with upward compatibility for file based exchange.</aside>
+<aside class="aside-change"><mark>IFC2x 变更</mark> 数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em>，保持基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -406,11 +406,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.60.B<a class="link" href="#-cb570b2a-f8e8-47d6-a78b-40685c912c76"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.60.B<a class="link" href="#-7463a531-083d-4952-a709-11abc5cd540a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.60.4-Concept-usage-"></a>
     5.4.3.60.4 概念用法（Concept usage）
 <a class="link" href="#5.4.3.60.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-44e04eff-7526-47d4-b15b-058e382c990e"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-6252647e-09b1-486e-bed6-18e906222842"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -620,7 +620,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.60.C<a class="link" href="#-44e04eff-7526-47d4-b15b-058e382c990e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.60.C<a class="link" href="#-6252647e-09b1-486e-bed6-18e906222842"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.60.5-Formal-representation-"></a>
     5.4.3.60.5 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.60.5-Formal-representation-"><i data-feather="link"></i></a></h2>

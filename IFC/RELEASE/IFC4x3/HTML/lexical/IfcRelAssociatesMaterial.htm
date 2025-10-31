@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -156,31 +156,33 @@
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em>，用于具有层方向和单个层厚指示的分层元素</li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em>，即带有沿元素参考轴或表面的定位信息的材料层集。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 由于材料层集用法是基于实例的信息，适用于每个单独的元素，因此不能将其分配给元素类型。</aside>
+<aside class="aside-note"><mark>注释</mark> 由于材料层集使用是基于实例的信息，适用于每个单独的元素，因此不能分配给元素类型。</aside>
 <p>材料可以应用于型材。使用型材材料的典型元素是梁、柱、构件</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSet.htm">IfcMaterialProfileSet</a></em>，即分配给一组型材的材料集，其中为单个型材分配了单一材料作为默认值。</li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em>，即具有相对于构件轴（也称为基点）的定位信息的材料型材集。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 由于材料型材集用法是基于实例的信息，适用于每个单独的元素，因此不能将其分配给元素类型。</aside>
+<aside class="aside-note"><mark>注释</mark> 由于材料轮廓集使用是基于实例的信息，适用于每个单独的元素，因此不能分配给元素类型。</aside>
 <p>材料可以按组件化元素的已识别部分进行排列。典型元素是门/窗（带有衬里、框架和玻璃等组件）或分布元件。</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em>，用于组件化元素，并带有关键字指示适用的材料组成部分。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 请参阅每个适用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 子类型的材料使用定义，以获取这些关键字的提供。</aside>
+<aside class="aside-note"><mark>注释</mark> 有关这些关键字的定义，请参见 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 各适用子类型中的材料使用定义。</aside>
 <p>作为后备，或在只需要单一材料信息的情况下，材料信息可以直接关联</p>
 <ul>
 <li>任何不禁止直接关联材料使用的元素的单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></em></li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialList.htm">IfcMaterialList</a></em>，例如用于复合元素，不带有关如何排列不同材料的信息。</li>
 </ul>
-<aside class="aside-deprecation"><mark>IFC4 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> 从 IFC4 开始，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialList.htm">IfcMaterialList</a></em> 的使用已弃用。请改用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em>。</aside>
+<blockquote>
+<p>IFC4 弃用说明 从IFC4开始不推荐使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialList.htm">IfcMaterialList</a></em>，请改用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em>。</p>
+</blockquote>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociates.htm">IfcRelAssociates</a></em> 关系的特殊类型。它可以应用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 的子类型和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 的子类型。</p>
 <ul>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 通过继承自 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a></em> 的 <em>HasAssociations</em> 属性与其材料定义具有逆向关系。</li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 通过继承自 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的 <em>HasAssociations</em> 属性与其材料定义具有逆向关系。</li>
 </ul>
 <p>如果元素实例（通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 的实例）和元素类型（通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 的实例，通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 连接）都具有关联材料，则分配给元素实例的材料将覆盖分配给元素类型的材料。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x中的新实体。</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> 不得与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementType.htm">IfcElementType</a></em> 的子类型关联，它只能与单个实例关联</li>
@@ -232,7 +234,7 @@
     5.4.3.46.3 特性（Attributes）
 <a class="link" href="#5.4.3.46.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-7f898e16-ed63-420e-adc6-043c3e137fa8"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-492e1741-e332-407d-8c04-3fb598580ce7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -276,7 +278,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -319,7 +321,7 @@
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDefinitionSelect.htm">IfcDefinitionSelect</a></td>
 <td data-label="Description">
 <p>一组对象或属性定义，外部引用或信息与之相关联。它包括对象和类型对象、属性集模板、属性模板和属性集以及上下文。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute datatype has been changed from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> to <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDefinitionSelect.htm">IfcDefinitionSelect</a></em>.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 属性数据类型已从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDefinitionSelect.htm">IfcDefinitionSelect</a></em></aside>
 </td>
 </tr>
 <tr class="preview">
@@ -353,11 +355,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.46.A<a class="link" href="#-7f898e16-ed63-420e-adc6-043c3e137fa8"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.46.A<a class="link" href="#-492e1741-e332-407d-8c04-3fb598580ce7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.46.4-Formal-propositions-"></a>
     5.4.3.46.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.46.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-50b2a18f-bf9e-4596-a80c-57590b3ea852"></a><table>
+<figure><a class="anchor" id="-db06022d-7d19-423c-a4e6-dcc0a4f3e0b2"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -368,7 +370,9 @@
 <tr>
 <td>AllowedElements</td>
 <td>
-<p>材料信息（使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialSelect.htm">IfcMaterialSelect</a></em>）应与元素实例（包括结构构件）或元素类型相关联。端口也可以分配材料，此处指示从端口流出的流体。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -385,7 +389,9 @@
 <tr>
 <td>NoVoidElement</td>
 <td>
-<p>材料信息不得与减法特征（如开洞）或虚拟元素相关联。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -397,11 +403,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.46.B<a class="link" href="#-50b2a18f-bf9e-4596-a80c-57590b3ea852"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.46.B<a class="link" href="#-db06022d-7d19-423c-a4e6-dcc0a4f3e0b2"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.46.5-Concept-usage-"></a>
     5.4.3.46.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.46.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-ea9186c9-24c8-4aaf-ab68-385d9e151119"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-28571d03-f362-4be3-9519-437f6b582952"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -571,7 +577,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.46.C<a class="link" href="#-ea9186c9-24c8-4aaf-ab68-385d9e151119"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.46.C<a class="link" href="#-28571d03-f362-4be3-9519-437f6b582952"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.46.6-Formal-representation-"></a>
     5.4.3.46.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.46.6-Formal-representation-"><i data-feather="link"></i></a></h2>

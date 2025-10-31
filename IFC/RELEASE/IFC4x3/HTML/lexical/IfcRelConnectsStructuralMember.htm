@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.10.3.2 IfcRelConnectsStructuralMember（关系连接结构构件） - IFC 4.3.2 Documentation</title>
+<title>7.10.3.2 IfcRelConnectsStructuralMember - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -159,14 +159,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>7.10.3.2 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a>（关系连接结构构件）</h1>
+<h1>7.10.3.2 IfcRelConnectsStructuralMember</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="7.10.3.2.1-Semantic-definition-"></a>
     7.10.3.2.1 语义定义（Semantic definition）
 <a class="link" href="#7.10.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a>（关系连接结构构件）</p>
 <p>实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></em> 定义了描述结构构件与结构连接对象（节点或支座）之间连接所需的所有属性。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新增实体。</aside>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> 在 IFC2x2 中新增的实体。</aside>
 <p><strong>使用定义</strong></p>
 <p><em>点连接</em>
 实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></em> 的实例应用于描述 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralPointConnection.htm">IfcStructuralPointConnection</a></em> 实例与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralCurveMember.htm">IfcStructuralCurveMember</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralSurfaceMember.htm">IfcStructuralSurfaceMember</a></em> 实例之间的连接。点连接的 <em>RelatedStructuralConnection</em> 必须为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralPointConnection.htm">IfcStructuralPointConnection</a></em> 类型。</p>
@@ -177,8 +178,8 @@
 <p><em>应用条件的坐标系</em>
 由 <em>AppliedCondition</em> 或 <em>AdditionalConditions</em> 定义的所有值均在 <em>ConditionCoordinateSystem</em> 提供的坐标系内给出，该坐标系相对于结构构件的局部坐标系定义。如果未定义 <em>ConditionCoordinateSystem</em>，则使用结构构件的局部坐标系。</p>
 <p><em>支承长度</em>
-可选择性地给出支承长度，该长度指定沿曲线连接的物理连接的长度（或宽度）。</p>
-<p>图 7.10.3.2.A 说明了支承长度的适当定义。</p>
+可选择性地提供支承长度，该长度指定沿曲线连接的物理连接长度（或宽度）。</p>
+<p>图 7.10.3.2.A 说明了支承长度的正确定义。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="支承长度" src="../figures/ifcrelconnectsstructuralmember-fig1.gif"/><figcaption>图 7.10.3.2.A — 结构构件支承长度<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.2.2-Entity-inheritance-"></a>
     7.10.3.2.2 实体继承（Entity inheritance）
@@ -241,7 +242,7 @@
     7.10.3.2.3 特性（Attributes）
 <a class="link" href="#7.10.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-c9eace1d-def1-4e2d-ab13-b3f3a7ad6097"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-2f18a385-35bf-49bf-9cf2-05ad3ddf9bb7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -284,8 +285,8 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
-<p>分配关于该对象当前所有权信息，包括所有者参与者、应用程序、本地标识以及对象近期变更的捕获信息。</p>
-<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改——无论是添加、删除还是修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已改为可选项。</aside>
+<p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -297,7 +298,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>供参与软件系统或用户使用的可选名称。对于IfcRoot的某些子类型，可能需要插入Name属性，这将通过where规则强制执行。</p>
+<p>供参与的软件系统或用户使用的可选名称。对于某些 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 的子类型，可能需要插入 Name 特性。这将通过 where 规则强制执行。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -309,7 +310,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
 <td data-label="Description">
-<p>用于交换信息性注释的可选描述。</p>
+<p>可选的描述，用于提供信息性注释。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -363,7 +364,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundaryCondition.htm">IfcBoundaryCondition</a></td>
 <td data-label="Description">
-<p>定义连接属性的条件。连接条件通常称为"释放"，但不仅用于定义铰链等机制，还用于定义刚性、弹性及其他条件。</p>
+<p>定义连接属性的条件。连接条件通常称为"释放"，但不仅用于定义铰链等机制，还包括刚性、弹性及其他条件。</p>
 </td>
 </tr>
 <tr>
@@ -387,7 +388,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
-<p>定义此结构连接的"支承长度"。更多细节参见图示。</p>
+<p>定义此结构连接的"支承长度"。更多详细信息请参见图示。</p>
 </td>
 </tr>
 <tr>
@@ -399,15 +400,15 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
 <td data-label="Description">
-<p>定义一个坐标系，用于描述 <em>ConnectionCondition</em> 中相对于 <em>RelatingStructuralMember</em> 局部坐标系的连接属性。如果未指定，则隐含使用位置 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em>((x,y,z), ?, ?)，其中 x,y,z 为连接处的局部构件坐标，默认轴方向与 <em>RelatingStructuralMember</em> 的局部轴平行。</p>
+<p>定义一个坐标系，用于描述 <em>ConnectionCondition</em> 中连接属性相对于 <em>RelatingStructuralMember</em> 局部坐标系的位置。如果未指定，则默认使用位置 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em>((x,y,z), ?, ?)，其中 x,y,z 为连接处的局部构件坐标，默认轴方向与 <em>RelatingStructuralMember</em> 的局部轴平行。</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 7.10.3.2.B<a class="link" href="#-c9eace1d-def1-4e2d-ab13-b3f3a7ad6097"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.2.B<a class="link" href="#-2f18a385-35bf-49bf-9cf2-05ad3ddf9bb7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.2.4-Concept-usage-"></a>
     7.10.3.2.4 概念用法（Concept usage）
 <a class="link" href="#7.10.3.2.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-88149c3a-a9c2-4780-bca2-1cb9537bbce6"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-916f8308-45f1-42c9-80ec-f5fc2cb9cc6d"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -430,9 +431,7 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -443,25 +442,143 @@
                 General
             </td>
 <td data-label="Description">
-<p>
-<em>无可用描述</em>
-</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelationship.htm">IfcRelationship</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
 </td>
 </tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击显示 2 个隐藏的继承概念
+                    点击显示 6 个隐藏的继承概念
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    点击隐藏 2 个继承概念
+                    点击隐藏 6 个继承概念
                 </small>
 </td>
 </tr>
+<tr class="group">
+<td colspan="3">
+<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p>使用 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> 捕获所有权、历史记录和合并状态。</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        这是对继承概念的进一步阐述
+                    </small>
+</aside>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a> 分配全局唯一 ID。此外，它还可以为概念提供名称和描述。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 7.10.3.2.C<a class="link" href="#-88149c3a-a9c2-4780-bca2-1cb9537bbce6"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.10.3.2.C<a class="link" href="#-916f8308-45f1-42c9-80ec-f5fc2cb9cc6d"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="7.10.3.2.5-Formal-representation-"></a>
     7.10.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#7.10.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>

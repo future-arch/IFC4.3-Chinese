@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9 IfcGeometryResource - IFC 4.3.2 Documentation</title>
+<title>8.9 IfcGeometryResource(几何资源) - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,47 +189,36 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9 IfcGeometryResource</h1>
+<h1>8.9 IfcGeometryResource(几何资源)</h1>
 <h2><a class="anchor" id="8.9.1-"></a>
     8.9.1 架构定义
 <a class="link" href="#8.9.1-"><i data-feather="link"></i></a></h2>
-<h1>IfcGeometryResource</h1>
-<p>模式 <em>IfcGeometryResource</em> 定义了用于几何表示的资源。此资源的主要应用是表示元素的形状或几何形式。此处定义的几何表示项也用于描述模式 <em>IfcGeometricModelResource</em> 中的几何模型。</p>
-<p>几何资源范围内包括：</p>
+<p>模式 <em>IfcGeometryResource</em> 定义了用于几何表示的资源。该资源的主要应用是表示元素的形状或几何形式。此处定义的几何表示项也用于描述模式 <em>IfcGeometricModelResource</em> 内的几何模型。</p>
+<p>几何资源范围内包括以下内容：</p>
 <ul>
 <li>通过坐标值以及曲线和曲面上的参数值直接定义点</li>
-<li>定义方向、向量和轴放置</li>
-<li>定义均匀和非均匀的变换算子</li>
-<li>定义参数曲线</li>
+<li>定义方向、矢量和轴定位</li>
+<li>定义变换运算符，包括均匀和非均匀变换</li>
+<li>定义参数化曲线</li>
 <li>定义圆锥曲线</li>
-<li>定义参数曲面上的曲线</li>
+<li>定义在参数化曲面上的曲线</li>
 <li>定义偏移曲线</li>
 <li>定义基本曲面</li>
-<li>定义扫描曲面</li>
-<li>定义参数 B 样条曲线和曲面</li>
-<li>定义使用变换算子映射源表示的映射项</li>
+<li>定义扫掠曲面</li>
+<li>定义参数化样条曲线和曲面</li>
+<li>定义使用变换运算符映射源表示的映射项</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 此模式的许多定义改编自 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a> 中的定义。<em>IfcGeometryResource</em> 指的是该标准的第 4 章“几何”。从 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a> 引用的几何和拓扑表示的定义，不包含在此规范的版权范围内。</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-42
-<strong>Placement coordinate system</strong>
-A rectangular Cartesian coordinate system associated with the placement of a geometric entity in space, used to describe the interpretation of the attributes and to associate a unique parameterization with curve and surface entities."
+<aside class="aside-note"><mark>注释</mark> 1 本模式的许多定义改编自 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a> 中定义的定义。<em>IfcGeometryResource</em> 参考了该标准的第 4 条"几何"。当引用自 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a> 时，几何和拓扑表示的定义明确排除在本规范的版权之外。</aside><aside class="aside-note"><mark>注释</mark> 2 根据 ISO 10303-42 的定义
 <strong>放置坐标系</strong>
-与空间中几何实体的放置相关联的直角笛卡尔坐标系，用于描述属性的解释并将唯一的参数化与曲线和曲面实体相关联。</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-42
-<strong>Space Dimensionality</strong>
-All geometry shall be defined in a right-handed rectangular Cartesian coordinate system with the same units on each axis. A common scheme has been used for the definition of both two-dimensional and three-dimensional geometry. Points and directions exists in both a two-dimensional and a three-dimensional form, these forms are distinguished solely by the presence, or absence, of a third coordinate value. Complex geometric entities are all defined using points and directions from which their space dimensionality can be deduced.
+与几何实体在空间中的放置相关联的直角笛卡尔坐标系，用于描述属性的解释并将唯一的参数化与曲线和曲面实体相关联。"</aside><aside class="aside-note"><mark>注释</mark> 3 根据 ISO 10303-42 的定义
 <strong>空间维度</strong>
-所有几何图形都应在右手直角笛卡尔坐标系中定义，每个轴上的单位相同。已使用通用方案定义二维和三维几何图形。点和方向都存在二维和三维形式，这些形式仅通过第三个坐标值的存在或缺失来区分。复杂的几何实体都使用点和方向定义，可以从中推断出它们的空间维度。</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-42
-<strong>Parameterization of analytic curves and surfaces</strong>
-Each curve on surface specified here has a defined parameterization. In some instances the definitions are in parametric terms. In others, the conic curves and elementary surfaces, the definitions are in geometric terms. In this latter case a placement coordinate system is used to define the parameterization. The geometric definitions contain some, but not all, of the data required for this. The relevant data to define this placement coordinate system is contained in the axis2 placement associated with the individual curve and surface entities.
+所有几何应在右手直角笛卡尔坐标系中定义，各轴单位相同。二维和三维几何的定义采用了通用方案。点和方向均存在于二维和三维形式中，这些形式仅通过第三个坐标值的存在与否来区分。复杂几何实体均使用点和方向定义，从中可以推导出其空间维度。</aside><aside class="aside-note"><mark>注释</mark> 4 根据 ISO 10303-42 的定义
 <strong>解析曲线和曲面的参数化</strong>
-此处指定的每条曲面上的曲线都有定义的参数化。在某些情况下，定义是参数化的。在其他情况下，圆锥曲线和基本曲面，定义是几何的。在后一种情况下，使用放置坐标系来定义参数化。几何定义包含部分但并非全部所需数据。定义此放置坐标系的相关数据包含在与各个曲线和曲面实体关联的 axis2 放置中。</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-42
-<strong>Curves</strong>
-The curve entities include lines, some elementary conics, and some referentially or procedurally defined curves. All the curves have a well defined parameterization which makes it possible to trim a curve or identify points on the curve by parameter value. For the conic curves a method of representation is used which separates their geometric form from their orientation and position in space. In each case, the position and orientation information is conveyed by an axis2 placement. A composite curve entity, which includes the facility to communicate continuity information at the curve-to-curve transition points, is provided for the construction of more complex curves. The offset curve type is a curve defined with reference to other geometry. Separate offset curves entities exist for 2D and 3D applications.
+此处指定的曲面上每条曲线都有定义的参数化。在某些情况下，定义是参数化的。在其他情况下，圆锥曲线和基本曲面的定义是几何化的。在后一种情况下，使用放置坐标系来定义参数化。几何定义包含部分但非全部所需数据。定义此放置坐标系的相关数据包含在与各个曲线和曲面实体关联的 axis2 放置中。</aside><aside class="aside-note"><mark>注释</mark> 5 根据 ISO 10303-42 的定义
 <strong>曲线</strong>
-曲线实体包括直线、一些基本圆锥曲线以及一些引用式或过程式定义的曲线。所有曲线都有明确定义的参数化，可以根据参数值修剪曲线或识别曲线上的点。对于圆锥曲线，使用一种表示方法，将其几何形状与其在空间中的方向和位置分开。在每种情况下，位置和方向信息都通过 axis2 放置来传递。提供了一个复合曲线实体，其中包括在曲线到曲线过渡点处传达连续性信息的功能，用于构建更复杂的曲线。偏移曲线类型是相对于其他几何图形定义的曲线。2D 和 3D 应用存在单独的偏移曲线实体。</aside><aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-42
-<strong>Surfaces</strong>
-The simple surfaces are the planar surface, a surface of revolution and a surface of linear extrusion. As with curves, all surfaces have an associated standard parameterization. In many cases the surfaces, as defined, are unbounded; it is assumed that they will be bounded either explicitly or implicitly. Explicit bounding is achieved with the bounded surface; implicit bounding requires the association of additional topological information to define a face.
+曲线实体包括直线、一些基本圆锥曲线以及一些通过引用或过程定义的曲线。所有曲线都有明确定义的参数化，使得可以通过参数值修剪曲线或识别曲线上的点。对于圆锥曲线，使用了一种表示方法，将其几何形式与其在空间中的方向和位置分开。在每种情况下，位置和方向信息由 axis2 放置传递。提供了一个复合曲线实体，用于构建更复杂的曲线，它包括在曲线到曲线过渡点传递连续性信息的功能。偏移曲线类型是参考其他几何定义的曲线。存在分别用于 2D 和 3D 应用的单独偏移曲线实体。</aside><aside class="aside-note"><mark>注释</mark> 6 根据 ISO 10303-42 的定义
 <strong>曲面</strong>
-简单曲面包括平面、旋转曲面和线性扫描曲面。与曲线一样，所有曲面都有关联的标准参数化。在许多情况下，定义的曲面是无界的；假定它们将显式或隐式地有界。显式有界通过有界曲面实现；隐式有界需要关联额外的拓扑信息来定义面。</aside>
+简单曲面包括平面、旋转曲面和线性拉伸曲面。与曲线一样，所有曲面都有相关的标准参数化。在许多情况下，定义的曲面是无界的；假定它们将通过显式或隐式方式进行边界限定。显式边界通过有界曲面实现；隐式边界需要关联额外的拓扑信息来定义面。</aside>
 <h2><a class="anchor" id="8.9.2-Types"></a>
     8.9.2 Types
 <a class="link" href="#8.9.2-Types"><i data-feather="link"></i></a></h2>
@@ -1025,5 +1014,6 @@ The simple surfaces are the planar surface, a surface of revolution and a surfac
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>

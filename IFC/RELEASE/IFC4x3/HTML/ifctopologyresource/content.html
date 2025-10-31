@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20 IfcTopologyResource - IFC 4.3.2 Documentation</title>
+<title>8.20 IfcTopologyResource（拓扑资源） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,28 +189,28 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.20 IfcTopologyResource</h1>
+<h1>8.20 IfcTopologyResource（拓扑资源）</h1>
 <h2><a class="anchor" id="8.20.1-"></a>
     8.20.1 架构定义
 <a class="link" href="#8.20.1-"><i data-feather="link"></i></a></h2>
-<p><em>IfcTopologyResource</em> 模式定义了用于拓扑表示的资源。此资源的主要应用是在产品模型的边界表示（Boundary representation）中。</p>
-<aside class="aside-note"><mark>注释</mark> IFC 模型中此资源的定义取自 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>{ .int-ref}。IfcTopologyResource 引用了该标准的第 5 章“拓扑”。引用为 ISO/IS 10303-42:1994，第 122 页。在适用时，使用了 1999 年发布的 ISO/DIS 10303-42 第二版中改进的定义。</aside>
-<p>从 ISO/IS 10303-42:1994 中采用的定义已经过一个适应过程，其特点是：</p>
+<p>模式 <em>IfcTopologyResource</em> 定义了用于拓扑表示的资源。该资源的主要应用是在产品模型形状或几何形式的边界表示中使用。</p>
+<aside class="aside-note"><mark>注释</mark> 本 IFC 模型资源的定义取自 <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>{ .int-ref}。IfcTopologyResource 参考了该标准的第 5 条"拓扑"。参考标准为 ISO/IS 10303-42:1994，第 122 页。在适用的情况下，使用了第二版 ISO/DIS 10303-42:1999 的改进定义。</aside>
+<p>取自 ISO/IS 10303-42:1994 的定义经过了适配过程，其特点包括：</p>
 <ul>
-<li>适应 IFC 命名约定（内部大写字母和 Ifc 前缀）</li>
-<li>适应 ISO 10303 实体，其中使用了多重继承或非排他性继承（即 AND 或 ANDOR 子类型约束）</li>
-<li>通过子类型和选择修剪来选择 IR 的子集</li>
-<li>省略表示项（representation item）上的 name 属性</li>
+<li>适配 IFC 命名约定（内部大写和 Ifc 前缀）</li>
+<li>适配使用多重继承或非排他性继承（即 AND 或 ANDOR 子类型约束）的 ISO 10303 实体</li>
+<li>使用子类型和选择修剪来选择 IR 的子集</li>
+<li>在表示项处省略名称属性</li>
 </ul>
-<p>形状的拓扑表示遵循 10303-42 的改编。类型、类和函数语义定义部分遵循工作草案的改编措辞，并在每次引用时明确标示和引用。本规范的版权明确排除了几何和拓扑表示（当取自 ISO/CD 10303-42:1992 时）的定义。</p>
+<p>形状的拓扑表示遵循 10303-42 的适配定义。类型、类和函数语义定义部分遵循工作草案的适配措辞，这在每个引用处都有明确指示和引用。关于几何和拓扑表示的定义（当取自 ISO/CD 10303-42:1992 时）明确排除在本规范的版权之外。</p>
 <p>{ .note}</p>
 <blockquote>
-<p>有关 ISO 正式标准中定义的更多信息，请参阅：ISO/IS 10303-42:1994，工业自动化系统和集成：产品数据表示和交换 - 第 42 部分：集成通用资源。几何和拓扑表示。正式标准可通过每个国家的本地标准出版商获得。</p>
+<p>有关正式 ISO 标准中定义的更多信息，请参考：ISO/IS 10303-42:1994，工业自动化系统与集成：产品数据表示与交换 - 第 42 部分：集成通用资源。几何与拓扑表示。正式标准可通过各国当地的标准出版商获取。</p>
 </blockquote>
 <p>拓扑模式的范围包括：</p>
 <ul>
-<li>定义基本的拓扑实体顶点（vertex）、边（edge）和面（face），每个实体都有一个专门的子类型，使其能够分别与点、曲线或曲面的几何形状相关联；</li>
-<li>将基本实体组合成路径（path）、环（loop）和壳（shell）的拓扑结构，并进行约束以确保这些结构的完整性；</li>
+<li>定义基本拓扑实体顶点、边和面，每个实体都有一个专门的子类型，使其能够分别与点、曲线或曲面的几何相关联；</li>
+<li>基本实体的集合形成路径、环和壳的拓扑结构，以及确保这些结构完整性的约束；</li>
 <li>拓扑实体的方向。</li>
 </ul>
 <h2><a class="anchor" id="8.20.2-Types"></a>
@@ -450,5 +450,6 @@
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>

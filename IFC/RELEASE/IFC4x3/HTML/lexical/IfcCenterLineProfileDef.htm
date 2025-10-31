@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -203,7 +203,7 @@
 <li>轮廓属性</li>
 </ul>
 <p>或它们的组合。有关轮廓外部引用的指导，请参阅 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></em>。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside>
+<aside class="aside-history"><mark>沿革</mark> 在 IFC2x3 中的新实体。</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
 <li><em>Curve</em> 必须为开放曲线</li>
@@ -247,7 +247,7 @@
     8.15.3.6.3 特性（Attributes）
 <a class="link" href="#8.15.3.6.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-2cd895cc-1465-4f1f-9603-41be7adbe52a"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-f68f5ecb-43d5-466a-9fd8-e09ed95f1982"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -269,10 +269,68 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ProfileType
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
+<td data-label="Description">
+<p>定义此轮廓定义应解析的几何类型，是曲线还是曲面区域。如果是曲线，轮廓应由扫描曲面引用；如果是区域，轮廓应由扫描实体引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ProfileName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>轮廓的人类可读名称，例如根据标准轮廓表。如上所述，机器可读的标准轮廓名称应在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em> 中提供。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>与轮廓关联的外部信息（例如库、分类或文档信息）的引用。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
+<td data-label="Description">
+<p>轮廓的附加属性，例如机械属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryOpenProfileDef.htm">IfcArbitraryOpenProfileDef</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Curve
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoundedCurve.htm">IfcBoundedCurve</a></td>
+<td data-label="Description">
+<p>定义轮廓的开放有界曲线。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -293,8 +351,20 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Thickness
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>沿中心线应用的恒定厚度。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.15.3.6.B<a class="link" href="#-2cd895cc-1465-4f1f-9603-41be7adbe52a"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.6.B<a class="link" href="#-f68f5ecb-43d5-466a-9fd8-e09ed95f1982"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.6.4-"></a>
     8.15.3.6.4 属性集
 <a class="link" href="#8.15.3.6.4-"><i data-feather="link"></i></a></h2>
@@ -335,7 +405,7 @@
 </p><h2><a class="anchor" id="8.15.3.6.5-Concept-usage-"></a>
     8.15.3.6.5 概念用法（Concept usage）
 <a class="link" href="#8.15.3.6.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7ba871d3-712e-48ea-984a-3c25ac71ede3"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-78085e94-f03c-44ef-94af-93267b4d8f15"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -379,7 +449,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.6.C<a class="link" href="#-7ba871d3-712e-48ea-984a-3c25ac71ede3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.6.C<a class="link" href="#-78085e94-f03c-44ef-94af-93267b4d8f15"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.6.6-Formal-representation-"></a>
     8.15.3.6.6 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.6.6-Formal-representation-"><i data-feather="link"></i></a></h2>

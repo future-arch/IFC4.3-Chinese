@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -197,11 +197,11 @@
 <a class="link" href="#8.12.3.15.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 用于定义基于样式化直线的简单矢量剖面线图案。曲线字体、颜色和厚度由 <em>HatchLineAppearance</em> 给出，角度由 <em>HatchLineAngle</em> 给出，到下一条剖面线的距离由 <em>StartOfNextHatchLine</em> 给出，可以是偏移距离或矢量。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> Definition according to ISO 10303-46:
-The fill area style hatching defines a styled pattern of curves for hatching an annotation fill area or a surface.</aside><aside class="aside-note"><mark>注释</mark> If the hatch pattern involves two (potentially crossing) rows of hatch lines, then two instances of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> should be assigned to the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em>. Both share the same (virtual) point of origin of the hatching that is used by the reference hatch line (or the <em>PointOfReferenceHatchLine</em> if there is an offset).</aside>
+<aside class="aside-note"><mark>注释</mark> 根据 ISO 10303-46 的定义：
+填充区域样式影线定义了用于注释填充区域或曲面影线的样式化曲线图案。</aside><aside class="aside-note"><mark>注释</mark> 如果影线图案涉及两行（可能交叉的）影线，则应将两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 实例分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em>。两者共享相同的（虚拟）影线原点，该原点由参考影线使用（或者如果有偏移，则由 <em>PointOfReferenceHatchLine</em> 使用）。</aside>
 <p>为了更好地控制剖面线外观，当使用非连续的其他字体的剖面线时，<em>PatternStart</em> 允许沿着参考剖面线偏移曲线字体图案的开始位置（如果未给出，则 <em>PatternStart</em> 距离虚拟原点的距离为零）。如果参考剖面线不经过（虚拟剖面线坐标系的）原点，则可以通过使用 <em>PatternStart</em> 来偏移它。</p>
-<aside class="aside-note"><mark>注释</mark> The coordinates of the <em>PatternStart</em> are given relative to the origin of the object coordinate of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em>, or if present, the <em>FillAreaTarget</em> attribute of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em>. The measure values are given in global drawing length units, representing a model hatching, and can be translated into drawing units by the <em>TargetScale</em> for a scale depended <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em>, if provided.</aside><blockquote>
-<p>DEPRECATION The use of <em>PointOfReferenceHatchLine</em> is deprecated.</p>
+<aside class="aside-note"><mark>注释</mark> <em>PatternStart</em> 的坐标是相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em> 的对象坐标系原点给出的，或者如果存在，则相对于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em> 的 <em>FillAreaTarget</em> 属性给出。测量值以全局绘图长度单位给出，表示模型影线，并且可以通过 <em>TargetScale</em> 转换为绘图单位，用于依赖于比例的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em>（如果提供）。</aside><blockquote>
+<p>DEPRECATION <em>PointOfReferenceHatchLine</em> 的使用已弃用。</p>
 </blockquote>
 <figure><a class="anchor" id="-1-1"></a><img alt="剖面线示例 1" src="../figures/ifcfillareastylehatching_fig1.gif"/><figcaption>图 8.12.3.15.A — 示例 1<a class="link" href="#-1-1"><i data-feather="link"></i></a></figcaption></figure>
 <p>图 8.12.3.15.A 显示了通过在 <em>HatchLineAppearance</em> 处使用曲线字体 "continuous" 给出的简单剖面线。</p>
@@ -220,7 +220,7 @@ The fill area style hatching defines a styled pattern of curves for hatching an 
 <figure><a class="anchor" id="-6-5"></a><img alt="图 8.12.3.15.E" src="../figures/ifcfillareastylehatching_fig6.gif"/><figcaption>图 8.12.3.15.E — 示例 5<a class="link" href="#-6-5"><i data-feather="link"></i></a></figcaption></figure>
 <p>此示例显示了在一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 内两个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 属性的使用。</p>
 <p>请注意，<em>PatternStart</em> 现在既偏移了参考剖面线相对于原点的位置，也偏移了曲线图案的起始位置。这可以在一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em> 中使用多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 的情况下使用，以便放置相互偏移的剖面线行。</p>
-<aside class="aside-note"><mark>注释</mark> Entity adapted from <strong>fill_area_style_hatching</strong> defined in ISO10303-46</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> The <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> has been changed by making the attributes <em>PatternStart</em> and <em>PointOfReferenceHatchLine</em> OPTIONAL. The attribute <em>StartOfNextHatchLine</em> has changed to a SELECT with the additional choice of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></em>. Upward compatibility for file based exchange is guaranteed.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute data type for <em>StartOfNextHatchLine</em> has been changed to be a select of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></em> and <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em>.</aside>
+<aside class="aside-note"><mark>注释</mark> 实体改编自 ISO10303-46 中定义的 <strong>fill_area_style_hatching</strong>。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> 已通过将属性 <em>PatternStart</em> 和 <em>PointOfReferenceHatchLine</em> 设为 OPTIONAL 进行更改。属性 <em>StartOfNextHatchLine</em> 已更改为 SELECT，并增加了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></em> 的选择。基于文件交换的向上兼容性得到保证。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>StartOfNextHatchLine</em> 的数据类型已更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em> 的选择。</aside>
 <h2><a class="anchor" id="8.12.3.15.2-Entity-inheritance-"></a>
     8.12.3.15.2 实体继承（Entity inheritance）
 <a class="link" href="#8.12.3.15.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -275,7 +275,7 @@ The fill area style hatching defines a styled pattern of curves for hatching an 
     8.12.3.15.3 特性（Attributes）
 <a class="link" href="#8.12.3.15.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-82554581-16fe-48b8-a19d-563f67664e61"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-95c2bfe4-2666-4eaa-bea2-4b228e039835"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -297,6 +297,28 @@ The fill area style hatching defines a styled pattern of curves for hatching an 
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -315,12 +337,79 @@ The fill area style hatching defines a styled pattern of curves for hatching an 
 <small>(5)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                HatchLineAppearance
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveStyle.htm">IfcCurveStyle</a></td>
+<td data-label="Description">
+<p>剖面线的曲线样式。任何曲线样式图案应从每条剖面线的原点开始。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                StartOfNextHatchLine
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcHatchLineDistanceSelect.htm">IfcHatchLineDistanceSelect</a></td>
+<td data-label="Description">
+<p>一个重复因子，确定相邻剖面线之间的距离。该因子可以通过平行偏移定义，也可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em> 提供的重复因子定义。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 属性 <em>StartOfNextHatchLine</em> 的类型已更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></em>（新）和 <em>IfcOneDirectionRepeatFactor</em> 的 SELECT。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>StartOfNextHatchLine</em> 的类型已更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></em>（新）和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcVector.htm">IfcVector</a></em> 的 SELECT。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                PointOfReferenceHatchLine
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></td>
+<td data-label="Description">
+<p>一个笛卡尔点，定义参考剖面线从（虚拟）剖面线坐标系原点的偏移。该原点用于将填充区域样式-剖面线映射到注释填充区域或曲面。然后，参考剖面线将以此偏移量出现在填充样式目标点处。
+如果未给出，则参考剖面线经过（虚拟）剖面线坐标系的原点。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 属性 <em>PointOfReferenceHatchLine</em> 的用法已更改为不提供作为映射原点的笛卡尔点，而是提供映射原点的偏移量。该属性已设为 OPTIONAL。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                PatternStart
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></td>
+<td data-label="Description">
+<p>沿着参考剖面线的一个距离，是参考剖面线的曲线样式字体图案的起始点。
+如果未给出，则曲线样式字体图案的起始点位于（虚拟）剖面线坐标系。</p>
+<blockquote>
+<p>IFC2x2 Add2 CHANGE 属性 <em>PatternStart</em> 已设为 OPTIONAL。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                HatchLineAngle
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
+<td data-label="Description">
+<p>一个平面角度度量，确定平行剖面线的方向。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.12.3.15.F<a class="link" href="#-82554581-16fe-48b8-a19d-563f67664e61"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.15.F<a class="link" href="#-95c2bfe4-2666-4eaa-bea2-4b228e039835"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.15.4-Formal-propositions-"></a>
     8.12.3.15.4 形式化命题（Formal propositions）
 <a class="link" href="#8.12.3.15.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-77250c53-551e-41b0-a5a8-40136a33cd7c"></a><table>
+<figure><a class="anchor" id="-3eff2be2-e76e-48a8-8aa7-861c705b8e2a"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -352,7 +441,7 @@ The fill area style hatching defines a styled pattern of curves for hatching an 
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.12.3.15.G<a class="link" href="#-77250c53-551e-41b0-a5a8-40136a33cd7c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.12.3.15.G<a class="link" href="#-3eff2be2-e76e-48a8-8aa7-861c705b8e2a"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.12.3.15.5-Formal-representation-"></a>
     8.12.3.15.5 形式化表示（Formal representation）
 <a class="link" href="#8.12.3.15.5-Formal-representation-"><i data-feather="link"></i></a></h2>

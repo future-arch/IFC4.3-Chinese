@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,7 +196,7 @@
 <a class="link" href="#8.19.3.19.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p>实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStructuralLoadTemperature.htm">IfcStructuralLoadTemperature</a></em> 的实例应用于定义由温度变化引起的荷载作用。如图1所示，温度变化通过施加于整个截面的恒定值以及截面外缘之间的温差值给出。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside>
 <figure><a class="anchor" id="-1-"></a><img alt="结构荷载温度" src="../figures/structuralloadtemperature.gif" title="图1 — 结构荷载温度"/><figcaption>图1 — 结构荷载温度<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.19.3.19.2-Entity-inheritance-"></a>
     8.19.3.19.2 实体继承（Entity inheritance）
@@ -237,7 +237,7 @@
     8.19.3.19.3 特性（Attributes）
 <a class="link" href="#8.19.3.19.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-ee03f650-ad06-44d9-a656-15cb12ed6a6c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c53287d2-5a35-4ab4-9062-823a0b74608e"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -259,6 +259,18 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>可选定义此结构荷载的名称。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -277,8 +289,47 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                DeltaTConstant
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThermodynamicTemperatureMeasure.htm">IfcThermodynamicTemperatureMeasure</a></td>
+<td data-label="Description">
+<p>影响结构构件整个截面或非均匀温度变化中均匀部分的温度变化。</p>
+<aside class="aside-note"><mark>注释</mark> 正值表示温度升高。即，正的恒定温度变化会导致构件伸长，如果存在相应约束则会导致构件受压。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                DeltaTY
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThermodynamicTemperatureMeasure.htm">IfcThermodynamicTemperatureMeasure</a></td>
+<td data-label="Description">
+<p>非均匀温度变化，定义为分析构件正y方向外缘的温度变化减去负y方向外缘的温度变化所得的差值。</p>
+<aside class="aside-note"><mark>注释</mark> y 方向的正非均匀温度变化会导致构件绕 z 轴产生负曲率，如果存在相应约束则会产生绕 z 轴的正弯矩。y 和 z 是局部构件轴。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                DeltaTZ
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcThermodynamicTemperatureMeasure.htm">IfcThermodynamicTemperatureMeasure</a></td>
+<td data-label="Description">
+<p>非均匀温度变化，定义为分析构件正z方向外缘的温度变化减去负z方向外缘的温度变化所得的差值。</p>
+<aside class="aside-note"><mark>注释</mark> z 方向的正非均匀温度变化会导致构件绕 y 轴产生正曲率，如果存在相应约束则会产生绕 y 轴的负弯矩。y 和 z 是局部构件轴。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.19.3.19.B<a class="link" href="#-ee03f650-ad06-44d9-a656-15cb12ed6a6c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.19.3.19.B<a class="link" href="#-c53287d2-5a35-4ab4-9062-823a0b74608e"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.19.3.19.4-Formal-representation-"></a>
     8.19.3.19.4 形式化表示（Formal representation）
 <a class="link" href="#8.19.3.19.4-Formal-representation-"><i data-feather="link"></i></a></h2>

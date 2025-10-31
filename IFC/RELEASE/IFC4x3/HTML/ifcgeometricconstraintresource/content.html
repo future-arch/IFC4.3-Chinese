@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7 IfcGeometricConstraintResource - IFC 4.3.2 Documentation</title>
+<title>8.7 8.7.1.1 Placement（定位） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,49 +189,50 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.7 IfcGeometricConstraintResource</h1>
+<h1>8.7 8.7.1.1 Placement（定位）</h1>
 <h2><a class="anchor" id="8.7.1-"></a>
     8.7.1 架构定义
 <a class="link" href="#8.7.1-"><i data-feather="link"></i></a></h2>
-<p>模式 <em>IfcGeometricConstraintResource</em> 定义了用于确定项目几何表示上下文中的产品形状表示的放置的资源。它还包含要分配给产品连接定义的资源定义，以确定这些产品之间的连接几何约束。</p>
-<p>此资源的主要应用是：</p>
+<h1>IfcGeometricConstraintResource</h1>
+<p>模式 <em>IfcGeometricConstraintResource</em> 定义了用于确定产品形状表示在项目几何表示上下文中定位的资源。它还包含分配给产品连接性定义的资源定义，以确定这些产品之间的连接几何约束。</p>
+<p>该资源的主要应用包括：</p>
 <ul>
-<li>确定对象形状表示所使用的对象放置</li>
-<li>确定应用于两个对象形状之间连接的约束</li>
+<li>确定用于对象形状表示的对象定位</li>
+<li>确定应用于两个对象形状之间连接性的约束</li>
 </ul>
-<h4><a class="anchor" id="8.7.1.1-"></a>8.7.1.1 放置<a class="link" href="#8.7.1.1-"><i data-feather="link"></i></a></h4>
-<p>产品形状的放置由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 提供，由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>ObjectPlacement</em> 属性使用。对象放置定义了该产品所有形状表示所定义的局部对象坐标系。它通过以下方式给出：</p>
+<h4><a class="anchor" id="8.7.1.1-"></a>8.7.1.1 定位<a class="link" href="#8.7.1.1-"><i data-feather="link"></i></a></h4>
+<p>产品形状的定位由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 给出，通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 的 <em>ObjectPlacement</em> 属性使用。对象定位定义了局部对象坐标系，该产品的所有形状表示都在此坐标系中定义。它可以通过以下方式给出：</p>
 <ul>
-<li>绝对放置，<ul>
-<li>绝对放置通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 并省略 <em>PlacementRelTo</em> 属性来指定；</li>
+<li>绝对定位，<ul>
+<li>绝对定位通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 并省略 <em>PlacementRelTo</em> 属性来指定；</li>
 </ul>
 </li>
-<li>相对放置，<ul>
-<li>相对放置通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 并将 <em>PlacementRelTo</em> 属性指向另一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 实例中使用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 来指定；</li>
+<li>相对定位，<ul>
+<li>相对定位通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></em> 并将 <em>PlacementRelTo</em> 属性指向另一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProduct.htm">IfcProduct</a></em> 实例中使用的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectPlacement.htm">IfcObjectPlacement</a></em> 来指定；</li>
 </ul>
 </li>
-<li>相对于网格的放置，<ul>
-<li>相对于网格的放置通过使用指向一个（或两个）<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> 虚拟交点的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em> 来指定。如果引用了两个虚拟交点，则第二个虚拟交点指定了对象放置的方向。或者，也可以通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a> 显式提供方向。</li>
+<li>相对于网格的定位，<ul>
+<li>相对于网格的定位通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridPlacement.htm">IfcGridPlacement</a></em> 指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGridAxis.htm">IfcGridAxis</a></em> 的一个（或两个）虚拟交点来指定。如果引用两个虚拟交点，则第二个虚拟交点指定对象定位的方向。或者，方向也可以通过 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a> 显式提供。</li>
 </ul>
 </li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> 使用相对放置时，每个产品的形状表示定义在 <em>ObjectPlacement</em> 提供的局部对象坐标系中。该局部对象坐标系相对于 <em>PlacementRelTo</em> 引用的对象坐标系定义，而 <em>PlacementRelTo</em> 本身也可以是相对放置。最后，未定义 <em>PlacementRelTo</em> 属性的 <em>ObjectPlacement</em> 将转换到全局坐标系。必须按此顺序应用当前坐标系到父坐标系的转换。</aside>
+<aside class="aside-note"><mark>注释</mark> When using relative placement the shape representation of each product is defined in the local object coordinate system provided by <em>ObjectPlacement</em>. That local object coordinate system is defined relative to the object coordinate system referred to by <em>PlacementRelTo</em> which may be a relative placement as well. Finally the <em>ObjectPlacement</em> not having an <em>PlacementRelTo</em> attribute defined the transformation into the global coordinate system. The transformation of the current coordinate system into the parent coordinate systems have to be applied in that order.</aside>
 <h4><a class="anchor" id="8.7.1.2-"></a>8.7.1.2 连接几何<a class="link" href="#8.7.1.2-"><i data-feather="link"></i></a></h4>
-<p>连接几何定义了两个产品形状之间的连接。约束可以通过以下几何表示项定义：</p>
+<p>连接几何定义了两个产品形状之间的连接性。约束可以通过几何表示项定义：</p>
 <ul>
 <li>点</li>
 <li>曲线</li>
 <li>曲面</li>
-<li>体</li>
+<li>实体</li>
 </ul>
-<p>或通过具有相关几何的拓扑表示项：</p>
+<p>或通过具有关联几何的拓扑表示项：</p>
 <ul>
 <li>顶点</li>
-<li>边</li>
-<li>面</li>
-<li>封闭壳</li>
+<li>边曲线</li>
+<li>面曲面</li>
+<li>闭合壳</li>
 </ul>
-<p>作为一种特殊类型的点连接，它包括表达偏心距的规定，即连接中两个点之间的物理距离。</p>
+<p>作为一种特殊类型的点连接，包括表达偏心距的规定，即连接中涉及的两个点之间的物理距离。</p>
 <h2><a class="anchor" id="8.7.2-Types"></a>
     8.7.2 Types
 <a class="link" href="#8.7.2-Types"><i data-feather="link"></i></a></h2>
@@ -475,5 +476,6 @@
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>

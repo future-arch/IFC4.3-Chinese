@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -197,9 +197,9 @@
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> 用于描述促进两个对象在曲线处或具有关联曲线几何的边缘处物理连接的几何约束。它被设想为一种应用于元素连接关系的控制。</p>
 <!-- 简短定义结束 -->
 <p>在 <em>CurveOnRelatingElement</em> 属性处的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></em>（或具有关联 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurve.htm">IfcCurve</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em>）定义了连接元素的基本几何项连接的曲线。曲线几何和坐标在 <em>RelatingElement</em> 的局部坐标系内提供，如使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a></em> 子类型中所指定。可选地，相同的曲线几何和坐标也可以通过使用 <em>CurveOnRelatedElement</em> 属性在 <em>RelatedElement</em> 的局部坐标系内提供。</p>
-<aside class="aside-example"><mark>示例</mark> The connection relationship between two walls has a geometric constraint which describes the end caps (or cut-off of the wall ends) by a <em>CurveOnRelatingElement</em> for the first wall and a <em>CurveOnRelatedElement</em> for the second wall. The exact usage of the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> is further defined in the geometry use sections of the elements that use it.</aside>
+<aside class="aside-example"><mark>示例</mark> 两个墙体之间的连接关系具有几何约束，通过第一个墙体的 <em>CurveOnRelatingElement</em> 和第二个墙体的 <em>CurveOnRelatedElement</em> 来描述端部封口（或墙端切割）。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> 的具体用法在使用该元素的几何应用章节中进一步定义。</aside>
 <p>连接约束的可用几何可以通过仅应用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm">IfcPolyline</a></em> 进一步限制为仅允许直线段。这样的使用约束在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElement.htm">IfcElement</a></em> 子类型的对象定义中提供，通过引用具有关联 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> 的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelConnects.htm">IfcRelConnects</a></em> 子类型来利用元素连接。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC1.5.</aside><aside class="aside-change"><mark>IFC2x 变更</mark> Renamed from IfcLineConnectionGeometry.</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> The provision of topology with associated geometry, <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em>, is enabled by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveOrEdgeCurve.htm">IfcCurveOrEdgeCurve</a></em>.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC1.5 版本新增实体。</aside><aside class="aside-change"><mark>IFC2x 变更</mark> 从 IfcLineConnectionGeometry 重命名而来。</aside><aside class="aside-change"><mark>IFC2x3 变更</mark> 通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveOrEdgeCurve.htm">IfcCurveOrEdgeCurve</a></em> 实现了具有关联几何的拓扑结构 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcEdgeCurve.htm">IfcEdgeCurve</a></em> 的提供。</aside>
 <h2><a class="anchor" id="8.7.3.5.2-Entity-inheritance-"></a>
     8.7.3.5.2 实体继承（Entity inheritance）
 <a class="link" href="#8.7.3.5.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -224,7 +224,7 @@
     8.7.3.5.3 特性（Attributes）
 <a class="link" href="#8.7.3.5.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e4077625-a233-428b-9cce-49e28bafab85"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0b0454cf-4d3f-41b6-86cb-64a6358d6922"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -246,8 +246,32 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                CurveOnRelatingElement
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveOrEdgeCurve.htm">IfcCurveOrEdgeCurve</a></td>
+<td data-label="Description">
+<p>在关联元素处连接对象对齐的有界曲线，在关联元素的局部坐标系中给出。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                CurveOnRelatedElement
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurveOrEdgeCurve.htm">IfcCurveOrEdgeCurve</a></td>
+<td data-label="Description">
+<p>在相关元素处连接对象对齐的有界曲线，在相关元素的局部坐标系中给出。如果省略此信息，则使用相关元素的原点。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.7.3.5.A<a class="link" href="#-e4077625-a233-428b-9cce-49e28bafab85"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.7.3.5.A<a class="link" href="#-0b0454cf-4d3f-41b6-86cb-64a6358d6922"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.7.3.5.4-Formal-representation-"></a>
     8.7.3.5.4 形式化表示（Formal representation）
 <a class="link" href="#8.7.3.5.4-Formal-representation-"><i data-feather="link"></i></a></h2>

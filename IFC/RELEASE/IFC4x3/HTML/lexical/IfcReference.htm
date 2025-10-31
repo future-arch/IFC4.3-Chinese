@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -275,7 +275,7 @@
     8.3.3.4.3 特性（Attributes）
 <a class="link" href="#8.3.3.4.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-75dc7bc3-b351-47f8-898e-ee935e1537d3"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-4b666207-a0e4-451a-bbc1-9825a6b222b0"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -297,8 +297,74 @@
 <small>(5)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                TypeIdentifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>实体或类型的可选标识符，例如'<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a>'。对于集合中基于实体、类型或选择的引用，此属性将引用解析到相应类型。
+如果省略，则假定类型与声明的引用属性相同。</p>
+<aside class="aside-example"><mark>示例</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>.<em>RelatingMaterial</em> 可解析为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em>。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                AttributeIdentifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>可选标识实体中的直接或反向属性，例如'MaterialLayers'。
+如果指定了 <em>TypeIdentifier</em> 并指向某个实体，则该属性必须存在于被引用的实体中。
+空值表示对类型或实体本身的引用，例如用于指示值的类型必须符合指定的约束条件。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                InstanceName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>根据名称可选标识集合中的实例。如果实例具有名为'Name'的属性，则使用该属性进行比较；否则使用实体的第一个基于字符串的属性。</p>
+<aside class="aside-example"><mark>示例</mark> 基于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm">IfcRoot</a></em> 的实体（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySet.htm">IfcPropertySet</a></em>）使用 <em>Name</em> 属性；<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 实体使用 <em>RepresentationIdentifier</em> 属性。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                ListPositions
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>根据位置可选标识集合中的实例，起始位置为1。对于引用单层集合，此属性包含单个成员；对于引用多层集合，此LIST属性包含多个成员，从最外层索引开始。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                InnerReference
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReference.htm">IfcReference</a></td>
+<td data-label="Description">
+<p>对ENTITY、SELECT、SET或LIST属性内部值的可选引用。
+可以通过将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReference.htm">IfcReference</a></em> 实例链接在一起来形成路径。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.3.3.4.B<a class="link" href="#-75dc7bc3-b351-47f8-898e-ee935e1537d3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.3.3.4.B<a class="link" href="#-4b666207-a0e4-451a-bbc1-9825a6b222b0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.3.3.4.4-Formal-representation-"></a>
     8.3.3.4.4 形式化表示（Formal representation）
 <a class="link" href="#8.3.3.4.4-Formal-representation-"><i data-feather="link"></i></a></h2>

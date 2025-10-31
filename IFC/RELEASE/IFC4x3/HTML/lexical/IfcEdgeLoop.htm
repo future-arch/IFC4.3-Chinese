@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -250,7 +250,7 @@
     8.20.3.6.3 特性（Attributes）
 <a class="link" href="#8.20.3.6.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-9ef5d448-9b0d-4001-bbb2-4bf622116c70"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-a4d97f26-edf3-4b38-97f4-c10bf1959512"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -272,6 +272,28 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -290,12 +312,38 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                EdgeList
+                
+            </td>
+<td data-label="Type">LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOrientedEdge.htm">IfcOrientedEdge</a></td>
+<td data-label="Description">
+<p>构成此路径的定向边实体列表。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Ne</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">SIZEOF(EdgeList)</code></pre>
+<p>边列表中的元素数量。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.20.3.6.A<a class="link" href="#-9ef5d448-9b0d-4001-bbb2-4bf622116c70"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.6.A<a class="link" href="#-a4d97f26-edf3-4b38-97f4-c10bf1959512"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.6.4-Formal-propositions-"></a>
     8.20.3.6.4 形式化命题（Formal propositions）
 <a class="link" href="#8.20.3.6.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-38103016-b909-4816-89ec-eaf4ea99104d"></a><table>
+<figure><a class="anchor" id="-f804e0d2-44ab-48cb-9451-8137997124ae"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -326,7 +374,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.20.3.6.B<a class="link" href="#-38103016-b909-4816-89ec-eaf4ea99104d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.20.3.6.B<a class="link" href="#-f804e0d2-44ab-48cb-9451-8137997124ae"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.20.3.6.5-Formal-representation-"></a>
     8.20.3.6.5 形式化表示（Formal representation）
 <a class="link" href="#8.20.3.6.5-Formal-representation-"><i data-feather="link"></i></a></h2>

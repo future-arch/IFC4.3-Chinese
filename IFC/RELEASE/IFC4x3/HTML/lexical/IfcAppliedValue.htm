@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -201,7 +201,7 @@
 <p>可选地，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 可具有适用日期。此日期用于确定该数值开始适用的时间点，可以是数值在模型中设置的日期，也可以是数值开始生效的过去或未来日期。类似地，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 可具有"固定至"日期，用于确定该数值停止适用的时间点。</p>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 实例可声明单位基准，该基准定义为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></em>，用于确定应用场景中单位数值的范围。当声明此属性时，假定赋予 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em> 的数值为单位数量值。此约束未在模式中强制实施，需在应用程序中进行控制。</p>
 <p>应用值可从文档（如价格表）中引用。通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a></em> 实现一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></em>（或其子类型）实例与文档的关联，其中文档作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a>.RelatingExtReference</em>，而数值实例作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a>.RelatedResourceObjects</em>。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Entity made non-abstract to support general formula expressions of constraints, data type of date-based attributes changed into <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></em>, <em>ValueType</em> and <em>Condition</em> promoted from <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em>, <em>Components</em> and <em>ArithmeticOperator</em> attributes added to replace <em>IfcAppliedValueRelationship</em> for more efficient encoding and reference tracking.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 实体改为非抽象以支持约束的通用公式表达式，基于日期的属性数据类型更改为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></em>，<em>ValueType</em> 和 <em>Condition</em> 从 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCostValue.htm">IfcCostValue</a></em> 提升，新增 <em>Components</em> 和 <em>ArithmeticOperator</em> 属性以替代 <em>IfcAppliedValueRelationship</em> 实现更高效的编码和引用跟踪。</aside>
 <p><strong>非正式命题</strong></p>
 <ol>
 <li>当 <em>ArithmeticOperator</em> 等于 <code>MODULO</code> 时，<em>Components</em> 列表应恰好包含两个值，且必须为正整数。</li>
@@ -227,7 +227,7 @@
     8.4.3.1.3 特性（Attributes）
 <a class="link" href="#8.4.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-321086a8-17b3-4afc-a8c6-504ff2e63a7d"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-798015f3-0283-4bba-9c2d-6e7643784e86"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -249,8 +249,146 @@
 <small>(11)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>为成本值提供的名称或补充说明。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可为成本值提供附加信息的描述。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                AppliedValue
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValueSelect.htm">IfcAppliedValueSelect</a></td>
+<td data-label="Description">
+<p>应用值的范围、数量或金额。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                UnitBasis
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></td>
+<td data-label="Description">
+<p>单位成本所依据的数量和计量单位。</p>
+<p>注意：除了通常预期的长度、面积、体积等计量单位外，成本也可基于需要定义的计量单位（如袋、桶、托盘、件等）。单位成本可基于大于（或小于）基准计量单位值的数量。例如，木材的单位成本费率可能基于 X 米（其中 X &gt; 1）；电缆、管道及许多其他物品亦同理。基准数可以是整数或实数值。</p>
+<p>注意：对于所有按单位数量应用成本的场景，均应声明此属性。即使对于使用物品价格的场景也可声明此属性，此时单位成本基准应按物品（或等效定义）计算。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ApplicableDate
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></td>
+<td data-label="Description">
+<p>应用值开始适用的日期。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 类型从 IfcDateTimeSelect 更改。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                FixedUntilDate
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDate.htm">IfcDate</a></td>
+<td data-label="Description">
+<p>应用值停止适用的日期。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 类型从 IfcDateTimeSelect 更改。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                Category
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>所用成本类型的规范说明。</p>
+<aside class="aside-note"><mark>注释</mark> 成本值可能存在多种可识别类型。虽然对不同成本类型名称的含义存在广泛共识，但成本类型命名尚无通用标准，也没有广泛定义的分类。为兼容所有成本值类型，采用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></em> 数据类型。</aside>
+<p>在缺乏明确定义标准的情况下，建议通过本地协议来定义项目或区域内允许且可理解的成本值类型。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Condition
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>成本值适用的条件。</p>
+<p>例如，在投标提交场景中，此属性可能指向一项可选或可不选的选项。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                ArithmeticOperator
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArithmeticOperatorEnum.htm">IfcArithmeticOperatorEnum</a></td>
+<td data-label="Description">
+<p>应用于组件值的算术运算符。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                Components
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a></td>
+<td data-label="Description">
+<p>用于计算 <em>AppliedValue</em> 的可选组件值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>关联至 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAppliedValue.htm">IfcAppliedValue</a> 的外部引用（如库、分类或文档信息）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> New inverse attribute.</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.4.3.1.A<a class="link" href="#-321086a8-17b3-4afc-a8c6-504ff2e63a7d"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.4.3.1.A<a class="link" href="#-798015f3-0283-4bba-9c2d-6e7643784e86"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.4.3.1.4-Formal-representation-"></a>
     8.4.3.1.4 形式化表示（Formal representation）
 <a class="link" href="#8.4.3.1.4-Formal-representation-"><i data-feather="link"></i></a></h2>

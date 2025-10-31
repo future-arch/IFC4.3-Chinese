@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -228,7 +228,7 @@
     8.5.3.10.3 特性（Attributes）
 <a class="link" href="#8.5.3.10.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-9d971af8-cb20-4a86-9e14-24beba74ea54"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-87f72bc6-eb45-42c8-b051-1090298895d4"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -250,10 +250,257 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>时间定义的可选名称。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                DataOrigin
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDataOriginEnum.htm">IfcDataOriginEnum</a></td>
+<td data-label="Description">
+<p>指定调度时间实体的来源。当前可区分预测值、模拟值、测量值和用户定义值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                UserDefinedDataOrigin
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Value of the data origin if DataOrigin attribute is USERDEFINED.</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm">IfcTaskTime</a>
 <small>(17)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                DurationType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskDurationEnum.htm">IfcTaskDurationEnum</a></td>
+<td data-label="Description">
+<p>允许为 <em>ScheduleDuration</em>、<em>ActualDuration</em> 和 <em>RemainingTime</em> 指定持续时间值的类型。持续时间类型可以是工作时间或经过时间。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ScheduleDuration
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
+<td data-label="Description">
+<p>计划用于完成任务的时间量。该值可能是测量值或以某种方式计算得出的值，具体由 <em>ScheduleDataOrigin</em> 定义。该值可以是经过时间或工作时间，具体由 <em>DurationType</em> 定义。</p>
+<aside class="aside-note"><mark>注释</mark> Scheduled Duration may be calculated as the time from scheduled start date to scheduled finish date.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                ScheduleStart
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务计划开始的日期。该值可能是测量值或以某种方式计算得出的值，具体由 <em>ScheduleDataOrigin</em> 定义。</p>
+<aside class="aside-note"><mark>注释</mark> The scheduled start date must be greater than or equal to the earliest start date.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                ScheduleFinish
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务计划完成的日期。该值可能是测量值或以某种方式计算得出的值，具体由 <em>ScheduleDataOrigin</em> 定义。</p>
+<aside class="aside-note"><mark>注释</mark> The scheduled finish date must be greater than or equal to the earliest finish date.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                EarlyStart
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务可以开始的最早日期。这是一个计算值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                EarlyFinish
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务可以完成的最早日期。这是一个计算值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                LateStart
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务可以开始的最晚日期。这是一个计算值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                LateFinish
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务可以完成的最晚日期。这是一个计算值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">12</td>
+<td data-label="Name">
+                
+                FreeFloat
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
+<td data-label="Description">
+<p>任务的开始或结束可以变动而不影响整体工作进度的时间量。这是一个计算的经过时间值。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">13</td>
+<td data-label="Name">
+                
+                TotalFloat
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
+<td data-label="Description">
+<p>可用于执行任务的持续时间与任务的计划持续时间之间的差值。这是一个计算的经过时间值。</p>
+<aside class="aside-note"><mark>注释</mark> Total Float time may be calculated as being the difference between the scheduled duration of a task and the available duration from earliest start to latest finish. Float time may be either positive, zero or negative. Where it is zero or negative, the task becomes critical.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">14</td>
+<td data-label="Name">
+                
+                IsCritical
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>标识计划中的任务是否为关键项的标志。</p>
+<aside class="aside-note"><mark>注释</mark> A task becomes critical when the float time becomes zero or negative.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">15</td>
+<td data-label="Name">
+                
+                StatusTime
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>分析计划中任务状态的日期或时间。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">16</td>
+<td data-label="Name">
+                
+                ActualDuration
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
+<td data-label="Description">
+<p>任务的实际持续时间。这是一个测量值。该值可以是经过时间或工作时间，具体由 <em>DurationType</em> 定义。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">17</td>
+<td data-label="Name">
+                
+                ActualStart
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务实际开始的日期。这是一个测量值。</p>
+<aside class="aside-note"><mark>注释</mark> The scheduled start date must be greater than or equal to the earliest start date. No constraint is applied to the actual start date with respect to the scheduled start date since a task may be started earlier than had originally been scheduled if circumstances allow.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">18</td>
+<td data-label="Name">
+                
+                ActualFinish
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>任务实际完成的日期。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">19</td>
+<td data-label="Name">
+                
+                RemainingTime
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDuration.htm">IfcDuration</a></td>
+<td data-label="Description">
+<p>完成任务所需的剩余时间量。这是一个预测值。该值可以是经过时间或工作时间，具体由 <em>DurationType</em> 定义。</p>
+<aside class="aside-note"><mark>注释</mark> The time remaining in which to complete a task may be determined both for tasks which have not yet started and those which have. Remaining time for a task not yet started has the same value as the scheduled duration. For a task already started, remaining time is calculated as the difference between the scheduled finish and the point of analysis.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">20</td>
+<td data-label="Name">
+                
+                Completion
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
+<td data-label="Description">
+<p>以比率或百分比表示的完成程度。这是一个测量值。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -274,8 +521,22 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">21</td>
+<td data-label="Name">
+                
+                Recurrence
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRecurrencePattern.htm">IfcRecurrencePattern</a></td>
+<td data-label="Description">
+<p>
+<em>无可用描述</em>
+</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.5.3.10.A<a class="link" href="#-9d971af8-cb20-4a86-9e14-24beba74ea54"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.5.3.10.A<a class="link" href="#-87f72bc6-eb45-42c8-b051-1090298895d4"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.5.3.10.4-Formal-representation-"></a>
     8.5.3.10.4 形式化表示（Formal representation）
 <a class="link" href="#8.5.3.10.4-Formal-representation-"><i data-feather="link"></i></a></h2>

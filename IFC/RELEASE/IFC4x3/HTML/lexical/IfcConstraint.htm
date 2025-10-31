@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -207,7 +207,7 @@
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a></em> 可通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a></em> 关系与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a></em> 的任何子类型关联以指示系统定义约束，或通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceObjectSelect.htm">IfcResourceObjectSelect</a></em>（如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></em>）关联以指示用户定义约束。</p>
 <p>约束必须通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.Name</em> 属性设置名称，并可选择通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.Description</em> 设置描述。约束等级（强制、建议、咨询）必须通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.ConstraintGrade</em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.UserDefinedGrade</em> 指定，而约束来源、创建者和创建时间可选择通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.ConstraintSource</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.CreatingActor</em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.CreationTime</em> 声明。</p>
 <p>约束还可通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a></em> 关联其他外部信息（如分类或文档信息），可通过逆向属性 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a>.HasExternalReferences</em> 访问。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2.0</aside><aside class="aside-change"><mark>IFC4 变更</mark> CreationTime changed to <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a> for ISO 8601 representation, HasExternalReferences new inverse attribute.</aside>
+<aside class="aside-history"><mark>沿革</mark> 新实体在 IFC2.0 中引入</aside><aside class="aside-change"><mark>IFC4 变更</mark> CreationTime 更改为 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a> 以符合 ISO 8601 表示法，新增反向属性 HasExternalReferences。</aside>
 <h2><a class="anchor" id="8.3.3.1.2-Entity-inheritance-"></a>
     8.3.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.3.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -230,7 +230,7 @@
     8.3.3.1.3 特性（Attributes）
 <a class="link" href="#8.3.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-88c3f0f7-1238-451f-ad8f-52ed1dfb6aaf"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-730cbd1a-7996-4ac7-be48-504bdc1a3a58"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -252,12 +252,118 @@
 <small>(9)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>约束的可读名称。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>约束的可读描述，可提供关于约束的附加信息。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                ConstraintGrade
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraintEnum.htm">IfcConstraintEnum</a></td>
+<td data-label="Description">
+<p>限定约束类型的枚举。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                ConstraintSource
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>约束来源的任何原始材料，如规范或标准。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                CreatingActor
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcActorSelect.htm">IfcActorSelect</a></td>
+<td data-label="Description">
+<p>创建约束的个人和/或组织。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                CreationTime
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>指定约束实例的信息创建时间。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                UserDefinedGrade
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>允许在 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraintEnum.htm">IfcConstraintEnum</a></em> 类型的 ConstraintGrade 属性提供的枚举值（强制、建议、咨询）之外指定用户定义的约束等级。
+当为 UserDefinedGrade 属性提供值时，ConstraintGrade 属性应同时设置为 USERDEFINED 枚举值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与约束关联的外部参考，如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PropertiesForConstraint</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a> FOR RelatingConstraint</td>
+<td data-label="Description">
+<p>引用应用约束的属性。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.3.3.1.A<a class="link" href="#-88c3f0f7-1238-451f-ad8f-52ed1dfb6aaf"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.3.3.1.A<a class="link" href="#-730cbd1a-7996-4ac7-be48-504bdc1a3a58"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.3.3.1.4-Formal-propositions-"></a>
     8.3.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#8.3.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-4748b7e0-2579-4987-ae7c-7e4de5363197"></a><table>
+<figure><a class="anchor" id="-4dfff5cd-6f40-4b87-afe4-f82c2dc38e5b"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -278,7 +384,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.3.3.1.B<a class="link" href="#-4748b7e0-2579-4987-ae7c-7e4de5363197"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.3.3.1.B<a class="link" href="#-4dfff5cd-6f40-4b87-afe4-f82c2dc38e5b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.3.3.1.5-Formal-representation-"></a>
     8.3.3.1.5 形式化表示（Formal representation）
 <a class="link" href="#8.3.3.1.5-Formal-representation-"><i data-feather="link"></i></a></h2>

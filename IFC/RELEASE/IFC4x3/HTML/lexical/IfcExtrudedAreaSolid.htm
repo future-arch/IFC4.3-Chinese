@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -302,7 +302,7 @@
     8.8.3.15.3 特性（Attributes）
 <a class="link" href="#8.8.3.15.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-a50a304d-761d-4c0c-9f6f-2474cc0b621b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-1124a342-53a2-43e7-93fb-ff57a343bd62"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -324,16 +324,77 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>将表示项分配给单个或多个层。<em>LayerAssignments</em> 可以覆盖其所在的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentation.htm">IfcRepresentation</a></em> 的 <em>Items</em> 列表中的 <em>LayerAssignments</em>。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>LayerAssignments</em>。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 反向属性 <em>LayerAssignment</em> 已被限制为最多 1 个。保证了基于文件交换的向上兼容性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>引用为表示提供表现信息的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStyledItem.htm">IfcStyledItem</a></em>，例如，为几何曲线提供曲线样式，包括颜色和厚度。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 添加了反向属性 <em>StyledByItem</em>。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSolidModel.htm">IfcSolidModel</a>
 <small>(1)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    此属性是形式化派生的
+                </p>
+<pre><code class="language-express hljs">3</code></pre>
+<p>本类的空间维度，恒为3。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>
 <small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                SweptArea
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
+<td data-label="Description">
+<p>定义要扫掠的面积的面。它在位置坐标系的 xy 平面内作为轮廓定义给出。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
+<td data-label="Description">
+<p>扫掠操作生成的扫掠实体的位置坐标系。位置坐标系允许重新定位扫掠实体。如果未提供，扫掠实体将保持在由横截面或用于扫掠操作的准线确定的位置内。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选，并保持基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -354,12 +415,36 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                ExtrudedDirection
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>由 <em>SweptArea</em> 提供的曲面要沿此方向扫掠。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Depth
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>曲面要沿 <em>ExtrudedDirection</em> 扫掠的距离。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.8.3.15.D<a class="link" href="#-a50a304d-761d-4c0c-9f6f-2474cc0b621b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.15.D<a class="link" href="#-1124a342-53a2-43e7-93fb-ff57a343bd62"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.15.4-Formal-propositions-"></a>
     8.8.3.15.4 形式化命题（Formal propositions）
 <a class="link" href="#8.8.3.15.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-b02fcaf7-8e3c-4007-ae8f-c09762b90abe"></a><table>
+<figure><a class="anchor" id="-b27a26d4-4d10-49be-bc37-1c4d65a7e0cc"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -379,7 +464,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.8.3.15.E<a class="link" href="#-b02fcaf7-8e3c-4007-ae8f-c09762b90abe"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.8.3.15.E<a class="link" href="#-b27a26d4-4d10-49be-bc37-1c4d65a7e0cc"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.8.3.15.5-Formal-representation-"></a>
     8.8.3.15.5 形式化表示（Formal representation）
 <a class="link" href="#8.8.3.15.5-Formal-representation-"><i data-feather="link"></i></a></h2>

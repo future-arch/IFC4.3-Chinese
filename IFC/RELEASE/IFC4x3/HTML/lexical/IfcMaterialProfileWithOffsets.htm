@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -231,7 +231,7 @@
     8.10.3.15.3 特性（Attributes）
 <a class="link" href="#8.10.3.15.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f75292fa-5c94-43bd-b2a3-a585437cb708"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-e38a4a09-ed8d-42ce-a59c-bd82272cb431"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -253,10 +253,128 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>AssociatedTo</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a> FOR RelatingMaterial</td>
+<td data-label="Description">
+<p>在构件实例或构件类型的材料关联中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型。该关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与材料相关的外部参考，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProperties.htm">IfcMaterialProperties</a> FOR Material</td>
+<td data-label="Description">
+<p>分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型实例的材料属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfile.htm">IfcMaterialProfile</a>
 <small>(7)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>材料轮廓的标识名称。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>用描述性术语定义材料轮廓。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Material
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterial.htm">IfcMaterial</a></td>
+<td data-label="Description">
+<p>对构成轮廓的材料进行可选引用。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Profile
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm">IfcProfileDef</a></td>
+<td data-label="Description">
+<p>标识与此材料轮廓关联材料的轮廓。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Priority
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>轮廓的相对优先级，以标准化整数范围[0..100]表示。控制建筑构件连接处和转角处轮廓的相交方式：在构件连接节点中，若前者的轮廓优先级高于后者，则一个构件的轮廓会伸入（即取代）另一个构件的轮廓。构件中材料轮廓的优先级值需由软件应用程序根据连接构件中的材料轮廓进行设置和维护。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Category
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>材料轮廓的类别，例如在其所属轮廓集中承担的角色。关键词列表可通过模型视图定义扩展，但以下关键词通常适用：
+* 'LoadBearing' —— 具有承重功能的材料轮廓
+* 'Insulation' —— 具有保温功能的材料轮廓<br/>
+* 'Finish' —— 作为饰面的材料轮廓</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ToMaterialProfileSet</em>
+</td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProfileSet.htm">IfcMaterialProfileSet</a> FOR MaterialProfiles</td>
+<td data-label="Description">
+<p>包含此材料轮廓的材料轮廓集。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -277,8 +395,20 @@
 <small>(1)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                OffsetValues
+                
+            </td>
+<td data-label="Type">ARRAY [1:2] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>轮廓偏移量的数值，沿轴线方向（始终为 AXIS1，即沿拉伸路径的轴线）。<em>OffsetValues[1]</em> 表示沿轴线方向从较低位置（通常是标准拉伸的起点）的偏移量，<em>OffsetValues[2]</em> 表示沿轴线方向从较高位置（通常是标准拉伸的终点）的偏移量。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.10.3.15.A<a class="link" href="#-f75292fa-5c94-43bd-b2a3-a585437cb708"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.15.A<a class="link" href="#-e38a4a09-ed8d-42ce-a59c-bd82272cb431"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.15.4-Formal-representation-"></a>
     8.10.3.15.4 形式化表示（Formal representation）
 <a class="link" href="#8.10.3.15.4-Formal-representation-"><i data-feather="link"></i></a></h2>

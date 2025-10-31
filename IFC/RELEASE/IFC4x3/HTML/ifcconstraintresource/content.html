@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.3 IfcConstraintResource - IFC 4.3.2 Documentation</title>
+<title>8.3 IfcConstraintResource（约束资源） - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251009 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,19 +189,18 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.3 IfcConstraintResource</h1>
+<h1>8.3 IfcConstraintResource（约束资源）</h1>
 <h2><a class="anchor" id="8.3.1-"></a>
     8.3.1 架构定义
 <a class="link" href="#8.3.1-"><i data-feather="link"></i></a></h2>
-<p>=====================</p>
-<p><em>IfcConstraintResource</em> schema 提供了约束 (<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a></em>) 的规范，这些约束可以应用于任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a></em> 的子类型（通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a></em> 关系类提供）。此外，约束还可以应用于特定的资源对象，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em>（通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a></em> 关系类提供）。</p>
-<p>可以为约束设置一个等级，以确定它是硬约束（必须满足）、软约束（应该满足）还是仅为建议性约束。</p>
-<p>约束必须命名，并且可以选择性地包含一个或多个来源，约束在其内部定义或从中获取。此外，约束还可以选择性地分配一个创建者、创建日期和描述。</p>
-<p>约束可以是定性的（目标约束）或定量的（测量约束或度量）。可以通过限定符应用于目标约束，该限定符确定其应用的用途。它可以用于定义超出建筑规范可能违反的约束值，或者限制规范中的值选择范围（例如，值 A 必须大于 A 但小于 B）。通过枚举提供了几种可能的用途。</p>
-<p>测量约束或度量定义了约束的实际值。值可以根据基准要求定义，该基准要求设定了约束的意图，例如，基准是大于（&gt;）还是小于（&lt;）。约束的值可以根据通过选择机制提供的数据类型来定义。</p>
-<aside class="aside-example"><mark>示例</mark> 由制造商建议的约束，超出该约束后必须对泵进行维护，可以将其限定为“TriggerCondition”，命名为“PumpMaintenanceCondition”，来源为“ManufacturerData”，等级为“Advisory”。其单一值为 10^-2 / 秒的振动频率，基准为“GreaterThanOrEqualTo”。</aside><aside class="aside-history"><mark>沿革</mark> IFC2x 中新增 schema。</aside>
+<p><em>IfcConstraintResource</em> 模式提供了约束（<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConstraint.htm">IfcConstraint</a></em>）的规范，这些约束可应用于任何 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 或 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyDefinition.htm">IfcPropertyDefinition</a></em> 子类型的对象（通过关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesConstraint.htm">IfcRelAssociatesConstraint</a></em> 提供）。此外，约束也可应用于特定的资源对象，例如 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProperty.htm">IfcProperty</a></em>（通过关系类 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a></em> 提供）。</p>
+<p>可为约束设置等级，以确定它是硬约束（必须满足）、软约束（应满足）还是仅为建议性约束。</p>
+<p>约束必须命名，并可选择性地具有一个或多个定义来源或引用来源。此外，约束可选择性地分配创建者、创建日期和描述。</p>
+<p>约束可以是定性的（目标约束）或定量的（测量约束或度量指标）。可对目标约束应用限定符，以确定其应用目的。它可用于定义超出建筑规范可能违反的约束值，或限制可选值范围（例如，A 的值必须大于 A 但小于 B）。通过枚举提供了几种可能的目的。</p>
+<p>测量约束或度量指标定义了约束的实际值。可根据设定约束意图的基准要求来定义值，例如，基准是大于（&gt;）还是小于（&lt;）。约束的值可根据通过选择机制可用的多种数据类型来定义。</p>
+<aside class="aside-example"><mark>示例</mark> A constraint advised by a manufacturer beyond which maintenance must be undertaken on a pump might be qualified as a 'TriggerCondition', named 'PumpMaintenanceCondition', have as its source 'ManufacturerData' and be graded as 'Advisory'. It could have as a single value 10\^-2 / sec as the frequency of vibration and have a benchmark of 'GreaterThanOrEqualTo'.</aside><aside class="aside-history"><mark>沿革</mark> New schema in IFC2x.</aside>
 <p>{ .change-ifc2x4}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> 不再使用 <em>IfcConstraintClassificationRelationship</em> 对约束进行分类（实体已删除）；已通过 <em>IfcExternalReferenceResource</em> schema 中的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a></em> 引入了将外部引用关联到约束的功能，应使用该功能。不再使用 <em>IfcConstraintAggregationRelationship</em> 对约束进行聚合（实体已删除）；聚合约束的关联功能现在由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a></em> 上的一个特性处理。</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> The classification of constraints shall not be done using <em>IfcConstraintClassificationRelationship</em> anymore (entity deleted); the capability of associating external references to constraints has been introduced by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a></em> in <em>IfcExternalReferenceResource</em> schema and should be used instead. The aggregation of constraints shall not be done using <em>IfcConstraintAggregationRelationship</em> anymore (entity deleted); the capability of associating aggregated constraints is now handled by an attribute at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjective.htm">IfcObjective</a></em>.</aside>
 <h2><a class="anchor" id="8.3.2-Types"></a>
     8.3.2 Types
 <a class="link" href="#8.3.2-Types"><i data-feather="link"></i></a></h2>
@@ -355,5 +354,6 @@
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/app.js" type="text/javascript"></script>
+<script src="/IFC/RELEASE/IFC4x3/HTML/assets/js/pagefind_search.js" type="text/javascript"></script>
 </body>
 </html>

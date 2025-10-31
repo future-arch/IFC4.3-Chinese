@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,7 +196,7 @@
 <a class="link" href="#8.15.3.12.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></em> 定义了一个截面轮廓，提供'I'形或'H'形截面的定义参数。I形轮廓具有总高度、宽度以及腹板和翼缘厚度的值。此外，还可以提供圆角半径、翼缘边缘半径和翼缘坡度。此轮廓定义表示一个关于其主轴和次轴对称的I形截面；顶部和底部翼缘相等且以腹板为中心。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Type of <em>FilletRadius</em> relaxed to allow for zero radius. Attributes <em>FlangeEdgeRadius</em> and <em>FlangeSlope</em> added.</aside>
+<aside class="aside-history"><mark>沿革</mark> 新实体，在IFC2x中引入。</aside><aside class="aside-change"><mark>IFC4 变更</mark> <em>FilletRadius</em> 的类型放宽以允许零半径。添加了 <em>FlangeEdgeRadius</em> 和 <em>FlangeSlope</em> 属性。</aside>
 <p>图1说明了I形轮廓定义的参数。</p>
 <figure><a class="anchor" id="Figure-8.15.3.12.A"></a><img alt="I形轮廓" src="../figures/ifcishapeprofiledef-layout1.gif"/><figcaption>Figure 8.15.3.12.A<a class="link" href="#Figure-8.15.3.12.A"><i data-feather="link"></i></a></figcaption></figure>
 <p><u>位置</u></p>
@@ -208,7 +208,7 @@
 <p><u>参数</u></p>
 <p>参数化轮廓由一组参数属性定义，参见下面的属性定义。</p>
 <figure><a class="anchor" id="-1-I-"></a><img alt="带圆角的I形" src="../figures/ifcishapeprofiledef-layout2.gif"/><figcaption>图1 — I形轮廓<a class="link" href="#-1-I-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-note"><mark>注释</mark> The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid</aside>
+<aside class="aside-note"><mark>注释</mark> 黑色坐标轴显示扫描曲面或扫描体实体的基础坐标系。</aside>
 <p><u>位置</u></p>
 <p>通过使用<em>Position</em>属性将轮廓插入到扫描面积实体的基础坐标系中。在此示例中（左下角基点），<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></em>的属性值为：</p>
 <pre><code>Location = <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a>(&lt;1/2 OverallWidth&gt;,&lt;1/2 OverallDepth&gt;)
@@ -258,7 +258,7 @@ RefDirection = NIL（默认为1.,0.）
     8.15.3.12.3 特性（Attributes）
 <a class="link" href="#8.15.3.12.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0d4494d6-898a-4bb2-9bbf-a2e3292b19fe"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-c5a61d4c-324f-47d9-9861-b29c3790b963"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -301,15 +301,15 @@ RefDirection = NIL（默认为1.,0.）
 <tr class="group">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>
-<small>(7)</small>
+<small>(6)</small>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.12.C<a class="link" href="#-0d4494d6-898a-4bb2-9bbf-a2e3292b19fe"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.12.C<a class="link" href="#-c5a61d4c-324f-47d9-9861-b29c3790b963"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.12.4-Formal-propositions-"></a>
     8.15.3.12.4 形式化命题（Formal propositions）
 <a class="link" href="#8.15.3.12.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6bab3344-a7d4-4f92-9af4-a3ed6477de6f"></a><table>
+<figure><a class="anchor" id="-9fe55167-d3c2-4223-9c14-eba36f058160"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -320,7 +320,9 @@ RefDirection = NIL（默认为1.,0.）
 <tr>
 <td>ValidFilletRadius</td>
 <td>
-<p>如果给出圆角半径，则应在允许值范围内。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -333,7 +335,9 @@ RefDirection = NIL（默认为1.,0.）
 <tr>
 <td>ValidFlangeThickness</td>
 <td>
-<p>翼缘厚度之和应小于总高度。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -344,7 +348,9 @@ RefDirection = NIL（默认为1.,0.）
 <tr>
 <td>ValidWebThickness</td>
 <td>
-<p>腹板厚度应小于翼缘宽度。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -353,7 +359,7 @@ RefDirection = NIL（默认为1.,0.）
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.12.D<a class="link" href="#-6bab3344-a7d4-4f92-9af4-a3ed6477de6f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.12.D<a class="link" href="#-9fe55167-d3c2-4223-9c14-eba36f058160"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.12.5-"></a>
     8.15.3.12.5 属性集
 <a class="link" href="#8.15.3.12.5-"><i data-feather="link"></i></a></h2>
@@ -394,7 +400,7 @@ RefDirection = NIL（默认为1.,0.）
 </p><h2><a class="anchor" id="8.15.3.12.6-Concept-usage-"></a>
     8.15.3.12.6 概念用法（Concept usage）
 <a class="link" href="#8.15.3.12.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-0fb059af-6393-4526-8a32-fd4eb61ad828"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-9f053d9e-7c85-4502-b0ea-d0095d1095e9"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -438,7 +444,7 @@ RefDirection = NIL（默认为1.,0.）
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.15.3.12.E<a class="link" href="#-0fb059af-6393-4526-8a32-fd4eb61ad828"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.15.3.12.E<a class="link" href="#-9f053d9e-7c85-4502-b0ea-d0095d1095e9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.15.3.12.7-Formal-representation-"></a>
     8.15.3.12.7 形式化表示（Formal representation）
 <a class="link" href="#8.15.3.12.7-Formal-representation-"><i data-feather="link"></i></a></h2>

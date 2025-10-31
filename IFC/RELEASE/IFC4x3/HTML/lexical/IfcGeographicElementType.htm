@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -158,7 +158,7 @@
 <li>通过属性集，其中一些将在 IFC 属性集目录中专门定义，而另一些将为本地使用而创建；这是预期最广泛使用的捕获形式</li>
 <li>通过使用 IFC 分类模型，其中特征可以通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcClassificationReference.htm">IfcClassificationReference</a></em> 进行标识，并附带附加描述；在这种情况下，任何其他所需的属性仍需在属性集中捕获。</li>
 </ul>
-<aside class="aside-note"><mark>注释</mark> This is due to the range of choices of element type that are available and their expression in different languages. It is not considered possible to create a reasonably full list of types within an enumeration. It is suggested that selection of the relevant type be drawn from an available 'feature catalog'.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
+<aside class="aside-note"><mark>注释</mark> 这是由于可用的构件类型选择范围及其在不同语言中的表达方式所致。在枚举中创建合理完整的类型列表被认为是不可能的。建议从可用的"特征目录"中选择相关类型。</aside><aside class="aside-history"><mark>沿革</mark> IFC4 中的新实体。</aside>
 <h2><a class="anchor" id="5.4.3.34.2-Entity-inheritance-"></a>
     5.4.3.34.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.34.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -218,7 +218,7 @@
     5.4.3.34.3 特性（Attributes）
 <a class="link" href="#5.4.3.34.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-0ead5ab1-01aa-411a-b95b-0608bd318bb0"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-e5ee74d1-f910-4910-abe6-29c267ab96ef"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -262,7 +262,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -313,7 +313,7 @@
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
 <td data-label="Description">
 <p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的一部分。对象实例或类型只能是单个分解的一部分（仅允许分层结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>Decomposes</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>Decomposes</em> 分离。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -324,7 +324,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
 <td data-label="Description">
 <p>引用作为嵌套的分解关系。它确定此对象定义是顺序整体/部分分解关系中的整体。对象或对象类型可以被多个其他对象（实例或类型）嵌套。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added and separated from <em>IsDecomposedBy</em> defined at <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性数据类型，并与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 中定义的 <em>IsDecomposedBy</em> 分离。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -335,7 +335,7 @@
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
 <td data-label="Description">
 <p>引用提供上下文信息的上下文，例如项目单位或表示上下文。它只应断言在最上层的非空间对象上。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been added.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性数据类型。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -346,7 +346,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
 <td data-label="Description">
 <p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的整体。对象定义可以被多个其他对象（实例或部分）聚合。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -357,7 +357,7 @@
 <td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
 <td data-label="Description">
 <p>引用作为聚合的分解关系。它确定此对象定义是无序整体/部分分解关系中的一部分。对象定义只能是单个分解的一部分（仅允许分层结构）。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The inverse attribute datatype has been changed from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性数据类型已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 更改为子类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em>。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -391,7 +391,7 @@
 <li>可选地在“/”（正斜杠）之后，以大写形式跟上预定义类型。</li>
 <li>如果一个类型对象适用于多个实例对象，则这些实例对象名称应以逗号“,”分隔，形成一个逗号分隔的字符串。</li>
 </ul>
-<aside class="aside-example"><mark>示例</mark> Referring to a furniture as applicable occurrence entity would be expressed as '<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFurnishingElement.htm">IfcFurnishingElement</a>', referring to a brace as applicable entity would be expressed as '<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMember.htm">IfcMember</a>/BRACE'.</aside>
+<aside class="aside-example"><mark>示例</mark> 引用适用的家具实例实体将表示为'<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFurnishingElement.htm">IfcFurnishingElement</a>'，引用适用的支撑构件实体将表示为'<a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMember.htm">IfcMember</a>/BRACE'。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -404,7 +404,9 @@
 <td data-label="Type">OPTIONAL SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></td>
 <td data-label="Description">
 <p>与对象类型关联的、并且是引用此对象类型的全部实例对象共有的属性集集合。</p>
-<aside class="aside-change"><mark>IFC2x3 变更</mark> The attribute aggregate type has been changed from LIST to SET.</aside>
+<blockquote>
+<p>IFC2x3变更 属性聚合类型已从LIST更改为SET。</p>
+</blockquote>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -455,7 +457,7 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
 <td data-label="Description">
 <p>指向 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> 关系的引用，通过该关系，其他产品、进程、控制、资源或参与者（作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的子类型）可以与此产品类型相关联。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增逆向关系。</aside>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -507,11 +509,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.34.A<a class="link" href="#-0ead5ab1-01aa-411a-b95b-0608bd318bb0"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.34.A<a class="link" href="#-e5ee74d1-f910-4910-abe6-29c267ab96ef"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.34.4-Formal-propositions-"></a>
     5.4.3.34.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.34.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-857ba90f-4417-4942-8237-743362c0e785"></a><table>
+<figure><a class="anchor" id="-59518b65-84e8-4e33-a591-0e98d1735747"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -522,7 +524,9 @@
 <tr>
 <td>CorrectPredefinedType</td>
 <td>
-<p>如果 <em>PredefinedType</em> 设置为 USERDEFINED，则应提供继承的 <em>ElementType</em> 特性。</p>
+<p>
+<em>无可用描述</em>
+</p>
 </td>
 </tr>
 <tr>
@@ -532,7 +536,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.34.D<a class="link" href="#-857ba90f-4417-4942-8237-743362c0e785"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.34.D<a class="link" href="#-59518b65-84e8-4e33-a591-0e98d1735747"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.34.5-"></a>
     5.4.3.34.5 属性集
 <a class="link" href="#5.4.3.34.5-"><i data-feather="link"></i></a></h2>
@@ -763,7 +767,7 @@
 </p><h2><a class="anchor" id="5.4.3.34.6-Concept-usage-"></a>
     5.4.3.34.6 概念用法（Concept usage）
 <a class="link" href="#5.4.3.34.6-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-34dfbe76-1348-4ad4-b959-1f08216d5871"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-1398a7fb-7d69-4ad6-a3be-a43fbd89f3a1"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -808,17 +812,6 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
 </td>
 <td data-label="Usage">
@@ -841,6 +834,17 @@
 <p>
 <em>无可用描述</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -975,7 +979,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1046,21 +1050,6 @@
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/content.html">Product Type Shape</a>
-</td>
-<td data-label="Usage">
-                General
-            </td>
-<td data-label="Description">
-<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
-<p>图 5.4.3.34.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 5.4.3.34.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 5.4.3.34.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 5.4.3.34.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
 </td>
 <td data-label="Usage">
@@ -1073,7 +1062,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1087,6 +1076,21 @@
 <p>
 <em>无可用描述</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="/IFC/RELEASE/IFC4x3/HTML/concepts/Product_Type_Shape/content.html">Product Type Shape</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
+<p>Figure 5.4.3.34.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
+<figure><a class="anchor" id="Figure-5.4.3.34.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 5.4.3.34.B — Product type geometry with single placement<a class="link" href="#Figure-5.4.3.34.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p>Figure 5.4.3.34.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
+<figure><a class="anchor" id="Figure-5.4.3.34.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 5.4.3.34.C — Product type geometry with multiple placement<a class="link" href="#Figure-5.4.3.34.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1256,7 +1260,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1273,11 +1277,11 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
-<p>图 5.4.3.34.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 5.4.3.34.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 5.4.3.34.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 5.4.3.34.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
+<p>Figure 5.4.3.34.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
+<figure><a class="anchor" id="Figure-5.4.3.34.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 5.4.3.34.B — Product type geometry with single placement<a class="link" href="#Figure-5.4.3.34.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p>Figure 5.4.3.34.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
+<figure><a class="anchor" id="Figure-5.4.3.34.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 5.4.3.34.C — Product type geometry with multiple placement<a class="link" href="#Figure-5.4.3.34.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1411,7 +1415,7 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p>任何对象实例或对象类型都可以具有对特定分类引用的引用，即对分类系统中特定方面的引用。</p>
+<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
 </td>
 </tr>
 <tr>
@@ -1428,11 +1432,11 @@
                         这是对继承概念的进一步阐述
                     </small>
 </aside>
-<p><em>RepresentationMaps</em> 定义了类型产品形状，并且可以分配多个几何表示。如果通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> 关系将产品实例分配给该类型，则这些实例必须引用表示映射。该引用由一个或多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 创建，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> 具有 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 作为其 <em>Items</em>，该 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> 将类型产品的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 放置在空间上下文中，即通过使用笛卡尔变换算子将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> 转换为产品实例的对象坐标系。</p>
-<p>图 5.4.3.34.B 说明了通过产品实例的形状表示引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。</p>
-<figure><a class="anchor" id="-1-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>图 5.4.3.34.B — 具有单一放置的产品类型几何体<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<p>图 5.4.3.34.C 说明了通过产品实例的形状表示多次引用表示映射的示例。在此示例中，笛卡尔变换算子仅使用平移，而不使用旋转、镜像或缩放。不同的平移值决定了多个放置的模式。</p>
-<figure><a class="anchor" id="-2-"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>图 5.4.3.34.C — 具有多个放置的产品类型几何体<a class="link" href="#-2-"><i data-feather="link"></i></a></figcaption></figure>
+<p>The <em>RepresentationMaps</em> define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMappedItem.htm">IfcMappedItem</a></em> as <em>Items</em>, that places the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> of the type product into the spatial contexts, i.e. by using a Cartesian transformation operator to transform the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRepresentationMap.htm">IfcRepresentationMap</a></em> into the object coordinate system of the product occurrence.</p>
+<p>Figure 5.4.3.34.B illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
+<figure><a class="anchor" id="Figure-5.4.3.34.B-Product-type-geometry-with-single-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png"/><figcaption>Figure 5.4.3.34.B — Product type geometry with single placement<a class="link" href="#Figure-5.4.3.34.B-Product-type-geometry-with-single-placement"><i data-feather="link"></i></a></figcaption></figure>
+<p>Figure 5.4.3.34.C illustrates an example of referencing a representation multiple times by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.</p>
+<figure><a class="anchor" id="Figure-5.4.3.34.C-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png"/><figcaption>Figure 5.4.3.34.C — Product type geometry with multiple placement<a class="link" href="#Figure-5.4.3.34.C-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
 </td>
 </tr>
 <tr>
@@ -1470,7 +1474,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.34.E<a class="link" href="#-34dfbe76-1348-4ad4-b959-1f08216d5871"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.34.E<a class="link" href="#-1398a7fb-7d69-4ad6-a3be-a43fbd89f3a1"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.34.7-Formal-representation-"></a>
     5.4.3.34.7 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.34.7-Formal-representation-"><i data-feather="link"></i></a></h2>

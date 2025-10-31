@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,7 +196,7 @@
 <a class="link" href="#8.17.3.7.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityNumber.htm">IfcQuantityNumber</a>（数量-数值）是一种物理量，用于定义派生数值度量（整数或非整数）以提供元素的物理属性。通常根据特定计量规则下的元素物理属性推导得出。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-history"><mark>沿革</mark> IFC4.3.0.0 New entity. It has been introduced to provide additional clarity to have <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a> strictly constrained to an integer.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC4.3.0.0 新增实体。引入该实体旨在通过将 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantityCount.htm">IfcQuantityCount</a></em> 严格约束为整型数值来提供更明确的定义。</aside>
 <h2><a class="anchor" id="8.17.3.7.2-Entity-inheritance-"></a>
     8.17.3.7.2 实体继承（Entity inheritance）
 <a class="link" href="#8.17.3.7.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -231,7 +231,7 @@
     8.17.3.7.3 特性（Attributes）
 <a class="link" href="#8.17.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-53fca8aa-11ca-4fdf-8160-dcd5308232e9"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7f979f4c-54be-4ea4-8013-e85b92cfd81b"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -253,10 +253,67 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>元素数量或度量的名称。名称属性需要通过进一步协议使其可识别。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可能为数量提供的进一步说明。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与数量关联的外部引用，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PartOfComplex</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a> FOR HasQuantities</td>
+<td data-label="Description">
+<p>引用可能包含该物理数量的物理复合数量。</p>
+</td>
+</tr>
 <tr class="group-inherited">
 <td colspan="4">
 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a>
 <small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Unit
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNamedUnit.htm">IfcNamedUnit</a></td>
+<td data-label="Description">
+<p>单位的可选赋值。若未指定单位，则采用在 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProject.htm">IfcProject</a> 中建立的全局单位赋值作为数量测量值的单位标准。</p>
 </td>
 </tr>
 <tr class="preview">
@@ -277,8 +334,32 @@
 <small>(2)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                NumberValue
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNumericMeasure.htm">IfcNumericMeasure</a></td>
+<td data-label="Description">
+<p>当前数量的数值度量值。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Formula
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于计算数量的公式。除实际数值外可额外指定。公式可以是数学计算（如宽度×高度）、数据库链接或组合形式。该公式仅用于参考说明。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.17.3.7.A<a class="link" href="#-53fca8aa-11ca-4fdf-8160-dcd5308232e9"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.17.3.7.A<a class="link" href="#-7f979f4c-54be-4ea4-8013-e85b92cfd81b"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.17.3.7.4-Formal-representation-"></a>
     8.17.3.7.4 形式化表示（Formal representation）
 <a class="link" href="#8.17.3.7.4-Formal-representation-"><i data-feather="link"></i></a></h2>

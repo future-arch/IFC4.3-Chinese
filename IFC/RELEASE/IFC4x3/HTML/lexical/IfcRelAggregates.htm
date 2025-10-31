@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -147,9 +147,9 @@
 <p>聚合关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 是一种特殊的通用组合/分解（或整体/部分）关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em>。 聚合关系可以应用于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></em> 的所有子类型。</p>
 <!-- end of short definition -->
 <p>在将物理构件聚合为物理集合体的情况下，整体的形状表达（在相同的表达标识符内）可以取自各部分的形状表达的总和。</p>
-<aside class="aside-example"><mark>示例</mark> A roof is the aggregation of the roof elements, such as roof slabs, rafters, purlins, etc. Within the same representation identifier (such as the body geometric representation), the shape representation of the roof is given by the shape representation of its parts.</aside>
+<aside class="aside-example"><mark>示例</mark> 屋顶是屋顶构件的聚合体，例如屋面板、椽子、檩条等。在同一表示标识符（如实体几何表示）内，屋顶的形状表示由其构件的形状表示给出。</aside>
 <p>分解意味着一种依赖关系，意味着整体依赖于部分的定义，而部分依赖于整体的存在。 依赖关系所隐含的行为必须在应用程序内部建立。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attributes <em>RelatingObject</em> and <em>RelatedObjects</em> are demoted from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em>.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x 中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 属性 <em>RelatingObject</em> 和 <em>RelatedObjects</em> 已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 中降级。</aside>
 <h2><a class="anchor" id="5.1.3.20.2-Entity-inheritance-"></a>
     5.1.3.20.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.20.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -194,7 +194,7 @@
     5.1.3.20.3 特性（Attributes）
 <a class="link" href="#5.1.3.20.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-75b07269-b552-4996-8f3c-4b46287b814e"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-7ab2dc92-8db8-4d2d-882e-8492beab6725"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -238,7 +238,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -293,7 +293,7 @@
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></td>
 <td data-label="Description">
 <p>对象定义，可以是对象类型或对象实例，表示聚合。 它是整体/部分关系中的整体。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been demoted from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> and defines the non-ordered aggregation relationship.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 中降级，并定义了非有序聚合关系。</aside>
 </td>
 </tr>
 <tr>
@@ -306,15 +306,15 @@
 <td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObjectDefinition.htm">IfcObjectDefinition</a></td>
 <td data-label="Description">
 <p>正在聚合的对象定义，可以是对象实例或对象类型。 它们被定义为整体/部分关系中的部分。 各部分之间没有隐含的顺序。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been demoted from the supertype <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> and defines the non-ordered set of parts within the aggregation.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已从超类型 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDecomposes.htm">IfcRelDecomposes</a></em> 中降级，并定义了聚合中的非有序部件集合。</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.20.A<a class="link" href="#-75b07269-b552-4996-8f3c-4b46287b814e"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.20.A<a class="link" href="#-7ab2dc92-8db8-4d2d-882e-8492beab6725"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.20.4-Formal-propositions-"></a>
     5.1.3.20.4 形式化命题（Formal propositions）
 <a class="link" href="#5.1.3.20.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-007d8c74-6011-4f4c-a644-65830b2d5279"></a><table>
+<figure><a class="anchor" id="-248e2600-3ba1-4d6d-a2f0-318ce92aee1e"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -334,11 +334,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.20.B<a class="link" href="#-007d8c74-6011-4f4c-a644-65830b2d5279"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.20.B<a class="link" href="#-248e2600-3ba1-4d6d-a2f0-318ce92aee1e"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.20.5-Concept-usage-"></a>
     5.1.3.20.5 概念用法（Concept usage）
 <a class="link" href="#5.1.3.20.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-3a607403-6ece-4932-8c5e-a87997395014"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-735c4975-e381-4d4a-a84d-5e285325e4ef"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -508,7 +508,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.20.C<a class="link" href="#-3a607403-6ece-4932-8c5e-a87997395014"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.20.C<a class="link" href="#-735c4975-e381-4d4a-a84d-5e285325e4ef"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.20.6-Formal-representation-"></a>
     5.1.3.20.6 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.20.6-Formal-representation-"><i data-feather="link"></i></a></h2>

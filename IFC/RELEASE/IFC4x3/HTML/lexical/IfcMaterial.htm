@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -232,7 +232,7 @@
     8.10.3.1.3 特性（Attributes）
 <a class="link" href="#8.10.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-b646d6c0-08bf-4b62-9a35-8d0ed524e7db"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0dc2c894-8a97-4ae7-ab42-e91b8cd793de"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -254,6 +254,39 @@
 <small>(3)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>AssociatedTo</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a> FOR RelatingMaterial</td>
+<td data-label="Description">
+<p>在构件实例或构件类型的材料关联中使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型。该关联通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em> 关系建立。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与材料相关的外部参考，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialProperties.htm">IfcMaterialProperties</a> FOR Material</td>
+<td data-label="Description">
+<p>分配给 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em> 子类型实例的材料属性。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已添加反向属性。</aside>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -272,8 +305,83 @@
 <small>(6)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>材料的名称。</p>
+<aside class="aside-example"><mark>示例</mark> 某个视图定义可能要求每个 <em>Name</em> 属性是唯一的，例如，项目中使用的每个混凝土或钢材等级，在这种情况下，<em>Category</em> 应取值为 'concrete' 或 'steel'。</aside><blockquote>
+<p>注意 材料等级在不同的视图定义中可能具有不同的含义，例如，结构设计和分析中的强度等级，或建筑应用中的可见外观等级。此外，更详细的材料等级定义可以通过反向属性 <em>HasExternalReferences</em> 作为分类进行关联。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>以比属性 <em>Name</em> 或 <em>Category</em> 更具描述性的术语对材料进行的定义。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已添加到属性列表的末尾。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Category
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>以比属性 <em>Name</em> 更通用的术语对材料类别（组或类型）进行的定义。</p>
+<p>建议对材料类别使用通用术语，以下列表提供了此类建议：'concrete'、'steel'、'aluminium'、'block'、'brick'、'stone'、'wood'、'glass'、'gypsum'、'plastic'、'earth'。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 该属性已添加到属性列表的末尾。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasRepresentation</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinitionRepresentation.htm">IfcMaterialDefinitionRepresentation</a> FOR RepresentedMaterial</td>
+<td data-label="Description">
+<p>对 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialDefinitionRepresentation.htm">IfcMaterialDefinitionRepresentation</a></em> 的引用，该表达为样式定义中此材料的通用表达提供表达信息。</p>
+<aside class="aside-change"><mark>IFC2x3 变更</mark> 增加了反向属性 <em>HasRepresentation</em>。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsRelatedWith</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialRelationship.htm">IfcMaterialRelationship</a> FOR RelatedMaterials</td>
+<td data-label="Description">
+<p>对材料关系的引用，表明此材料是复合材料中的一部分（或成分）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 增加了反向属性。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>RelatesTo</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMaterialRelationship.htm">IfcMaterialRelationship</a> FOR RelatingMaterial</td>
+<td data-label="Description">
+<p>对材料关系的引用，表明此复合材料包含部分（或成分）。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 增加了反向属性。</aside>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.10.3.1.A<a class="link" href="#-b646d6c0-08bf-4b62-9a35-8d0ed524e7db"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.1.A<a class="link" href="#-0dc2c894-8a97-4ae7-ab42-e91b8cd793de"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.1.4-"></a>
     8.10.3.1.4 属性集
 <a class="link" href="#8.10.3.1.4-"><i data-feather="link"></i></a></h2>
@@ -532,7 +640,7 @@
 </p><h2><a class="anchor" id="8.10.3.1.5-Concept-usage-"></a>
     8.10.3.1.5 概念用法（Concept usage）
 <a class="link" href="#8.10.3.1.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-5bf7a377-6a87-452b-8948-8db65a21adae"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-900b17d1-f641-4286-9d0e-96affd5b52e7"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -618,7 +726,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.10.3.1.B<a class="link" href="#-5bf7a377-6a87-452b-8948-8db65a21adae"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.10.3.1.B<a class="link" href="#-900b17d1-f641-4286-9d0e-96affd5b52e7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.10.3.1.6-Formal-representation-"></a>
     8.10.3.1.6 形式化表示（Formal representation）
 <a class="link" href="#8.10.3.1.6-Formal-representation-"><i data-feather="link"></i></a></h2>

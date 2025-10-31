@@ -4,7 +4,7 @@
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.7 IfcMapConversionScaled（地图缩放转换） - IFC 4.3.2 Documentation</title>
+<title>8.18.3.7 IfcMapConversionScaled - IFC 4.3.2 Documentation</title>
 <link href="/IFC/RELEASE/IFC4x3/HTML/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <script>window.is_iso = false;</script>
 </head>
@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -189,28 +189,31 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.18.3.7 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>（地图缩放转换）</h1>
+<h1>8.18.3.7 IfcMapConversionScaled</h1>
 <p><aside class="aside-note"><mark>注释</mark>  该实体不是标准化模式子集或实现级别的一部分。</aside></p>
 <h2><a class="anchor" id="8.18.3.7.1-Semantic-definition-"></a>
     8.18.3.7.1 语义定义（Semantic definition）
 <a class="link" href="#8.18.3.7.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 是一种提供坐标转换因子的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 类型。其使用仅限于需要明确交换因子的情况。</p>
-<!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> Typically, these are relatively smaller facilities such as buildings where constant factors are agreed on a project.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4X3_ADD1</aside>
-<p>对于此转换，<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 数据用于：</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>（地图缩放转换）</p>
+<p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 是一种 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm">IfcMapConversion</a></em> 类型，用于提供坐标转换的缩放因子。该实体仅在需要显式交换缩放因子的场景下使用。</p>
+<!-- end of short definition -->
+<aside class="aside-history"><mark>沿革</mark> 新增实体于 IFC4X3_ADD1</aside><blockquote>
+<p>请注意 通常这类转换适用于规模相对较小的设施（如建筑项目），项目中会约定采用恒定缩放因子。</p>
+</blockquote>
+<p>该地图缩放转换过程按以下步骤执行：</p>
 <ol>
-<li>通过相同的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.Scale</em> 对三个轴（x、y、z）进行缩放</li>
-<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.FactorX</em> 对 x 轴进行乘法运算</li>
-<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.FactorY</em> 对 y 轴进行乘法运算</li>
-<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.FactorZ</em> 对 z 轴进行乘法运算</li>
-<li>随后绕 z 轴<strong>逆时针</strong>旋转 <em>θ</em> 角度，其中：
+<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.Scale</em> 对三轴（x,y,z）进行统一缩放</li>
+<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.FactorX</em> 对 x 轴进行缩放</li>
+<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.FactorY</em> 对 y 轴进行缩放</li>
+<li>通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.FactorZ</em> 对 z 轴进行缩放</li>
+<li>绕 z 轴进行<strong>逆时针</strong>旋转 <em>θ</em> 角度，其中：
  $$
  \theta=arctan\left(\frac{\text{XAxisOrdinate}}{\text{XAxisAbscissa}}\right)
  $$</li>
-<li>然后在 (x,y,z) 方向上进行 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.Eastings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.Northings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.OrthogonalHeight</em> 的平移。</li>
+<li>最后通过 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.Eastings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.Northings</em>、<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>.OrthogonalHeight</em> 实现 (x,y,z) 方向的平移</li>
 </ol>
-<p><strong>方程式</strong></p>
-<p>以下是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 的相关方程式。方程式以两种形式给出：a) 变换矩阵形式，便于程序员理解精确的操作顺序；b) 简化方程形式，足以计算单个点。</p>
+<p><strong>坐标变换公式</strong></p>
+<p>以下是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a></em> 的坐标变换公式。公式提供两种形式：a) 变换矩阵形式，便于程序员理解精确的运算顺序；b) 简化方程形式，适用于单点坐标计算。</p>
 <p>a) 矩阵形式</p>
 <p>$$
 \begin{bmatrix}
@@ -280,7 +283,7 @@ $$</p>
     8.18.3.7.3 特性（Attributes）
 <a class="link" href="#8.18.3.7.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-890f9f60-78e7-4ced-83f5-ca64f3f21447"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-cc1d07d2-4b5f-474a-a31f-869f77c0f3c7"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -342,7 +345,7 @@ $$</p>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
 <p>指定目标地图坐标参考系坐标系中东向的位置。</p>
-<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the x axis.</aside>
+<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 x 轴的位置。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -355,7 +358,7 @@ $$</p>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
 <p>指定目标地图坐标参考系坐标系中北向的位置。</p>
-<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the y axis</aside>
+<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 y 轴的位置。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -368,7 +371,7 @@ $$</p>
 <td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
 <p>相对于指定垂直基准面的正交高度。</p>
-<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the z axis</aside>
+<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 z 轴的位置。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -381,7 +384,7 @@ $$</p>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
 <p>指定表示工程坐标参考系局部 x 轴位置的向量终点在东向轴上的值。</p>
-<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the x axis</aside><aside class="aside-note"><mark>注释</mark> together with the <em>XAxisOrdinate</em> it provides the direction of the local x axis within the horizontal plane of the map coordinate system</aside>
+<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 x 轴的位置。</aside><aside class="aside-note"><mark>注释</mark> 与 <em>XAxisOrdinate</em> 共同确定地图坐标系水平面内局部 x 轴的方向。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -394,7 +397,7 @@ $$</p>
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
 <p>指定表示工程坐标参考系局部 x 轴位置的向量终点在北向轴上的值。</p>
-<aside class="aside-note"><mark>注释</mark> for right-handed Cartesian coordinate systems this would establish the location along the y axis</aside>
+<aside class="aside-note"><mark>注释</mark> 对于右手笛卡尔坐标系，这将确定沿 y 轴的位置。</aside>
 <p>与 <em>XAxisAbscissa</em> 一起，提供了局部 x 轴在地图坐标系水平面内的方向。</p>
 </td>
 </tr>
@@ -471,7 +474,7 @@ $$</p>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.7.A<a class="link" href="#-890f9f60-78e7-4ced-83f5-ca64f3f21447"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.7.A<a class="link" href="#-cc1d07d2-4b5f-474a-a31f-869f77c0f3c7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.7.4-Formal-representation-"></a>
     8.18.3.7.4 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.7.4-Formal-representation-"><i data-feather="link"></i></a></h2>

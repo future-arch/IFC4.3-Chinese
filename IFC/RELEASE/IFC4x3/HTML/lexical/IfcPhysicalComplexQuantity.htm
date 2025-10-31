@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -196,9 +196,9 @@
 <a class="link" href="#8.17.3.1.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p>复合物理量 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a></em> 是一个实体，用于保存一组适用于元素给定组件或方面的单个数量测量值（定义于 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a></em> 子类型中）。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-example"><mark>示例</mark> A layered element, like a wall, may have several material layers, each having individual quantities, like footprint area, side area and volume. An instance of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a></em> would group these individual quantities (given by a subtype of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a></em>) and name them according to the material layer name by using the <em>Name</em> attribute. The <em>Discrimination</em> attribute would then be 'layer'.</aside>
+<aside class="aside-example"><mark>示例</mark> 分层构件（如墙体）可能包含多个材料层，每个材料层具有独立的工程量（如投影面积、侧面积和体积）。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a></em> 实例将对这些独立工程量（由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a></em> 子类型提供）进行分组，并通过 <em>Name</em> 属性按材料层名称命名。此时 <em>Discrimination</em> 属性应为 'layer'。</aside>
 <p>在作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcBuiltElement.htm">IfcBuiltElement</a></em> 子类型的各个实体中，"工程量使用定义"章节对使用 <em>Name</em> 和 <em>Discrimination</em> 属性来表征复合工程量提供了指导。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x2 Addendum 1.</aside><aside class="aside-change"><mark>IFC2x2 新增</mark> 1 CHANGE The entity <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a></em> has been added. Upward compatibility for file based exchange is guaranteed.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x2 增补1 新增实体。</aside><aside class="aside-change"><mark>IFC2x2 新增</mark> 1 CHANGE: 新增实体 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a></em>。基于文件交换的向上兼容性得到保证。</aside>
 <h2><a class="anchor" id="8.17.3.1.2-Entity-inheritance-"></a>
     8.17.3.1.2 实体继承（Entity inheritance）
 <a class="link" href="#8.17.3.1.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -221,7 +221,7 @@
     8.17.3.1.3 特性（Attributes）
 <a class="link" href="#8.17.3.1.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-b0ccc8f4-d170-4cb5-acc8-8c62efe0989c"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-d5437fc4-2615-4829-ad2a-624735a861b8"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -243,6 +243,51 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>元素数量或度量的名称。名称属性需要通过进一步协议使其可识别。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>可能为数量提供的进一步说明。</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>引用与数量关联的外部引用，例如库、分类或文档信息。</p>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向属性。</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>PartOfComplex</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalComplexQuantity.htm">IfcPhysicalComplexQuantity</a> FOR HasQuantities</td>
+<td data-label="Description">
+<p>引用可能包含该物理数量的物理复合数量。</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
@@ -261,12 +306,60 @@
 <small>(4)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                HasQuantities
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></td>
+<td data-label="Description">
+<p>根据给定区分标准，由此复合物理量分组的物理量集合。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Discrimination
+                
+            </td>
+<td data-label="Type"><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于区分此物理复合属性的标识。区分标准的示例包括 'layer'、'steel bar diameter' 等。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Quality
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>在此物理复合量下分组的工程量质量的附加指示。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Usage
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>在此物理复合量下分组的工程量使用类型的附加指示。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.17.3.1.A<a class="link" href="#-b0ccc8f4-d170-4cb5-acc8-8c62efe0989c"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.17.3.1.A<a class="link" href="#-d5437fc4-2615-4829-ad2a-624735a861b8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.17.3.1.4-Formal-propositions-"></a>
     8.17.3.1.4 形式化命题（Formal propositions）
 <a class="link" href="#8.17.3.1.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-442fa445-1458-42d4-91da-da81a93debb2"></a><table>
+<figure><a class="anchor" id="-1401864a-7b42-484f-94f2-58cabe2602c9"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -289,7 +382,7 @@
 <td>UniqueQuantityNames</td>
 <td>
 <p>集合 <em>HasQuantities</em> 中的每个单独 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></em> 应具有唯一的 <em>Name</em> 属性值。</p>
-<aside class="aside-history"><mark>沿革</mark> New rule in IFC4</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC4 新增规则。</aside>
 </td>
 </tr>
 <tr>
@@ -298,7 +391,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.17.3.1.B<a class="link" href="#-442fa445-1458-42d4-91da-da81a93debb2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.17.3.1.B<a class="link" href="#-1401864a-7b42-484f-94f2-58cabe2602c9"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.17.3.1.5-Formal-representation-"></a>
     8.17.3.1.5 形式化表示（Formal representation）
 <a class="link" href="#8.17.3.1.5-Formal-representation-"><i data-feather="link"></i></a></h2>

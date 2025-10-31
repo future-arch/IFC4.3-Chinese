@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -158,7 +158,7 @@
 <li><strong>类型对象</strong>：通过逆向属性 <em>DefinesType</em> 进行直接链接。</li>
 </ul>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></em> 可以分配给对象和对象类型，但没有定义属性集模板。</p>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC4</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC4 新增实体</aside>
 <h2><a class="anchor" id="5.1.3.8.2-Entity-inheritance-"></a>
     5.1.3.8.2 实体继承（Entity inheritance）
 <a class="link" href="#5.1.3.8.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -208,7 +208,7 @@
     5.1.3.8.3 特性（Attributes）
 <a class="link" href="#5.1.3.8.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-f422259f-ab8c-45b2-8176-1cd4b63f97f2"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-0fef5e77-45a4-4ad7-b142-0088fb5f6486"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -252,7 +252,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -331,9 +331,9 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
 <td data-label="Description">
 <p>属性集分配到的类型对象。该属性集充当类型对象的所有实例的共享属性集。</p>
-<aside class="aside-note"><mark>注释</mark> The relationship between the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> and the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> is a direct relationship, not utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>, for maintaining compatibility with earlier releases of this standard.</aside>
+<aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 之间的关系是直接关系，未使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，以保持与本标准早期版本的兼容性。</aside>
 <p>{}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The cardinality has been changed from 0..1 to 0..n with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 基数已从 0..1 更改为 0..n，具有基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr>
@@ -345,7 +345,7 @@
 <td data-label="Description">
 <p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em> 与属性集模板的关系，如果给定，则为属性集或数量集及其属性提供定义模板。
 {}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, change made with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向关系，更改时保持基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr>
@@ -357,15 +357,15 @@
 <td data-label="Description">
 <p>引用与一个或多个对象实例的关系，这些对象实例的特征由属性集定义定义。可以使用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> 将单个属性集分配给多个对象实例。
 {}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> Inverse attribute renamed from <em>PropertyDefinitionOf</em> with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性从 <em>PropertyDefinitionOf</em> 重命名，具有基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.8.A<a class="link" href="#-f422259f-ab8c-45b2-8176-1cd4b63f97f2"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.8.A<a class="link" href="#-0fef5e77-45a4-4ad7-b142-0088fb5f6486"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.8.4-Concept-usage-"></a>
     5.1.3.8.4 概念用法（Concept usage）
 <a class="link" href="#5.1.3.8.4-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-82edb7b5-5049-4ba0-b95b-81872e1a7160"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-1504ebce-c5db-4162-9a79-617ea8610036"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -535,7 +535,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.1.3.8.B<a class="link" href="#-82edb7b5-5049-4ba0-b95b-81872e1a7160"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.1.3.8.B<a class="link" href="#-1504ebce-c5db-4162-9a79-617ea8610036"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.1.3.8.5-Formal-representation-"></a>
     5.1.3.8.5 形式化表示（Formal representation）
 <a class="link" href="#5.1.3.8.5-Formal-representation-"><i data-feather="link"></i></a></h2>

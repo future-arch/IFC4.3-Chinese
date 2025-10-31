@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -147,9 +147,9 @@
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a></em> 定义了元素物理特性的派生度量集。元素可以是空间结构元素（如建筑、楼层或空间）或建筑元素（如墙、楼板、饰面）。<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a></em> 通过使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> 关系分配给元素。</p>
 <!-- end of short definition -->
 <p>可选的 <em>MethodOfMeasurement</em> 属性定义了用于计算元素数量的测量标准代码（例如，来自标准的测量方法）。</p>
-<aside class="aside-note"><mark>注释</mark> The recognizable values for the name and the method of measurement attributes have to be agreed upon in further agreement documents, such as implementers agreements. Some of these agreements might be limited to a certain region, to which the method of measurement applies.</aside>
+<aside class="aside-note"><mark>注释</mark> 名称和测量方法属性的可识别值必须在进一步的协议文件（如实施者协议）中达成一致。其中一些协议可能仅限于特定区域，测量方法适用于该区域。</aside>
 <p><em>Quantities</em> 中每个单独的 <em>Quantities</em> 属性提供的名称属性提供了元素数量的可识别语义含义。这两个信息对于建立度量值的精确含义是必需的。每个数量都可以选择性地分配描述。由单个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a></em> 实例分配的所有数量被认为是根据相同的测量方法生成的。然而，多个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a></em> 实例可以分配给一个元素，从而允许一个元素具有根据多种测量方法生成的数量。</p>
-<aside class="aside-example"><mark>示例</mark> To exchange the net floor area of spaces in the German region (as <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em>), the name might be 'Netto-Grundfläche' (net floor area), and the method of measurement might be accordingly 'DIN277-2' (German industry norm no. 277 edition 2).</aside><aside class="aside-example"><mark>示例</mark> The same instance of <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em> may have a different area measure assigned in the German region according to a housing regulation, the name would be 'Wohnfläche' and the method of measurement would be '2.BV'. It would be attached to the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em> by a separate <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> relationship.</aside>
+<aside class="aside-example"><mark>示例</mark> 要在德国地区交换空间的净楼面面积（如_IfcSpace_），名称可能是'Netto-Grundfläche'（净楼面面积），测量方法可能是相应的'DIN277-2'（德国工业标准第277号第2版）。</aside><aside class="aside-example"><mark>示例</mark> 同一_IfcSpace_实例在德国地区根据住房法规可能分配有不同的面积度量，名称将是'Wohnfläche'，测量方法将是'2.BV'。它将通过单独的_IfcRelDefinesByProperties_关系附加到_IfcSpace_。</aside>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a></em> 可以在其 <em>Quantities</em> 的 SET 中包含以下 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></em> 的子类型，这些子类型计入了使用的基本度量类型：</p>
 <ul>
 <li>计数度量</li>
@@ -166,7 +166,7 @@
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>.MethodOfMeasurement</em> = 'BaseQuantities'</li>
 <li><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm">IfcElementQuantity</a>.Quantities</em> = <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a></em> 的子类型的 SET，其 <em>Name</em> 属性值已在此规范中发布。</li>
 </ul>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC4 变更</mark> Subtyped from new intermediate <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcQuantitySet.htm">IfcQuantitySet</a></em> supertype.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x中的新实体。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 从新的中间_IfcQuantitySet_超类型子类型化。</aside>
 <h2><a class="anchor" id="5.4.3.21.2-Entity-inheritance-"></a>
     5.4.3.21.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.21.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -211,7 +211,7 @@
     5.4.3.21.3 特性（Attributes）
 <a class="link" href="#5.4.3.21.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-2e54d5d8-e298-42c5-bdf3-cc3d2779a9c7"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-35b20af4-8844-49a7-b70f-5c97c908b2e6"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -255,7 +255,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -322,9 +322,9 @@
 <td data-label="Type">SET [0:?] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
 <td data-label="Description">
 <p>属性集分配到的类型对象。该属性集充当类型对象的所有实例的共享属性集。</p>
-<aside class="aside-note"><mark>注释</mark> The relationship between the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> and the <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> is a direct relationship, not utilizing <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>, for maintaining compatibility with earlier releases of this standard.</aside>
+<aside class="aside-note"><mark>注释</mark> <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> 与 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a></em> 之间的关系是直接关系，未使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>，以保持与本标准早期版本的兼容性。</aside>
 <p>{}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The cardinality has been changed from 0..1 to 0..n with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 基数已从 0..1 更改为 0..n，具有基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -336,7 +336,7 @@
 <td data-label="Description">
 <p>通过对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em> 与属性集模板的关系，如果给定，则为属性集或数量集及其属性提供定义模板。
 {}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> New inverse relationship, change made with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 新增反向关系，更改时保持基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -348,7 +348,7 @@
 <td data-label="Description">
 <p>引用与一个或多个对象实例的关系，这些对象实例的特征由属性集定义定义。可以使用对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> 将单个属性集分配给多个对象实例。
 {}</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> Inverse attribute renamed from <em>PropertyDefinitionOf</em> with upward compatibility for file-based exchange.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 反向属性从 <em>PropertyDefinitionOf</em> 重命名，具有基于文件交换的向上兼容性。</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -380,7 +380,7 @@
 <td data-label="Description">
 <p>计算元素数量所用测量方法的名称。测量方法属性必须通过进一步的协议使其可识别。</p>
 <blockquote>
-<p>IFC2x2-Addendum-1 change: The attribute has been changed to be optional</p>
+<p>IFC2x2-Addendum-1 变更：该属性已更改为可选。</p>
 </blockquote>
 </td>
 </tr>
@@ -397,11 +397,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.21.A<a class="link" href="#-2e54d5d8-e298-42c5-bdf3-cc3d2779a9c7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.21.A<a class="link" href="#-35b20af4-8844-49a7-b70f-5c97c908b2e6"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.21.4-Formal-propositions-"></a>
     5.4.3.21.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.21.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-5cd98a15-62d5-4f43-98ba-d772d06540f3"></a><table>
+<figure><a class="anchor" id="-4f7b6047-7997-43a3-a457-55208ef2d8da"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -413,7 +413,7 @@
 <td>UniqueQuantityNames</td>
 <td>
 <p><em>Quantities</em> 集合中的每个单独的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></em> 都应具有唯一的 <em>Name</em> 属性值。</p>
-<aside class="aside-history"><mark>沿革</mark> New rule in IFC4</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC4中的新规则。</aside>
 </td>
 </tr>
 <tr>
@@ -422,11 +422,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.21.B<a class="link" href="#-5cd98a15-62d5-4f43-98ba-d772d06540f3"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.21.B<a class="link" href="#-4f7b6047-7997-43a3-a457-55208ef2d8da"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.21.5-Concept-usage-"></a>
     5.4.3.21.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.21.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-7b68603b-cccc-4ef0-9ff1-d8419a1564d7"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-25b30fa4-bb21-4105-b7c6-cd153044668f"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -636,7 +636,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.21.C<a class="link" href="#-7b68603b-cccc-4ef0-9ff1-d8419a1564d7"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.21.C<a class="link" href="#-25b30fa4-bb21-4105-b7c6-cd153044668f"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.21.6-Formal-representation-"></a>
     5.4.3.21.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.21.6-Formal-representation-"><i data-feather="link"></i></a></h2>

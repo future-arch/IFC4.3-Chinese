@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -146,9 +146,9 @@
 <a class="link" href="#5.4.3.57.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p>对象化关系 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 用于将元素分配给项目空间结构中除其主要包含的层级之外的其他层级。它还用于将系统连接到其服务的相关空间元素。</p>
 <!-- end of short definition -->
-<aside class="aside-note"><mark>注释</mark> The primary containment relationship between an element and the spatial structure is handled by <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em>.</aside>
+<aside class="aside-note"><mark>注释</mark> 构件与空间结构之间的主要包含关系由 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 处理。</aside>
 <p>任何元素都可以被引用到零个、一个或多个空间结构层级。而 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 关系要求是层次化的（一个元素只能包含在一个空间结构元素中），<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 不限于层次化。</p>
-<aside class="aside-example"><mark>示例</mark> A curtain wall might span through several stories, in this case it can be contained within the ground floor, but it would be referenced by all additional stories it spans.</aside>
+<aside class="aside-example"><mark>示例</mark> 幕墙可能跨越多个楼层，在这种情况下它可以被包含在首层中，但会被其跨越的所有其他楼层引用。</aside>
 <p>可以分配给元素的预定义空间结构元素包括：</p>
 <ul>
 <li>场地，作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSite.htm">IfcSite</a></em></li>
@@ -158,7 +158,7 @@
 <p>元素也可以被引用到作为 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZone.htm">IfcSpatialZone</a></em> 提供的空间区域。</p>
 <p>图 5.4.3.57.A 显示了 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></em> 和 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> 的用法，将一个 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCurtainWall.htm">IfcCurtainWall</a></em> 分配给空间结构中的两个不同层级。它主要包含在底层中，并在第一层和第二层中被额外引用。</p>
 <figure><a class="anchor" id="-1-"></a><img alt="reference and containment" src="../figures/ifcrelreferencedinspatialstructure-fig1.png" title="图 5.4.3.57.A — 空间结构引用的关系"/><figcaption>图 5.4.3.57.A — 空间结构引用的关系<a class="link" href="#-1-"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-history"><mark>沿革</mark> New entity in IFC2x3.</aside>
+<aside class="aside-history"><mark>沿革</mark> IFC2x3 中的新增实体。</aside>
 <h2><a class="anchor" id="5.4.3.57.2-Entity-inheritance-"></a>
     5.4.3.57.2 实体继承（Entity inheritance）
 <a class="link" href="#5.4.3.57.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -214,7 +214,7 @@
     5.4.3.57.3 特性（Attributes）
 <a class="link" href="#5.4.3.57.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-e658dfcb-8d67-40d4-bcc8-fb9b56e0e83b"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-80225ddb-eaa0-487c-a4fb-db8d965a4adb"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -258,7 +258,7 @@
 <td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
 <td data-label="Description">
 <p>分配有关该对象当前所有权的信息，包括所有者参与者、应用程序、本地标识以及捕获到的关于对象近期更改的信息。</p>
-<aside class="aside-note"><mark>注释</mark> Only the last modification is stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4 变更</mark> The attribute has been changed to be OPTIONAL.</aside>
+<aside class="aside-note"><mark>注释</mark> 仅存储最后一次修改 - 无论是添加、删除或修改。</aside><aside class="aside-change"><mark>IFC4 变更</mark> 该属性已更改为可选。</aside>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -328,11 +328,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.57.B<a class="link" href="#-e658dfcb-8d67-40d4-bcc8-fb9b56e0e83b"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.57.B<a class="link" href="#-80225ddb-eaa0-487c-a4fb-db8d965a4adb"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.57.4-Formal-propositions-"></a>
     5.4.3.57.4 形式化命题（Formal propositions）
 <a class="link" href="#5.4.3.57.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-9c2d8fb5-3627-43c4-9215-c767b299b306"></a><table>
+<figure><a class="anchor" id="-e269abc3-4306-4adc-aca0-a365877c81ec"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -344,7 +344,7 @@
 <td>AllowedRelatedElements</td>
 <td>
 <p>关系对象不得用于将其他空间结构元素包含到空间结构元素中。空间结构的层次结构使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelAggregates.htm">IfcRelAggregates</a></em> 定义。例外：<em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em> 可以被另一个空间结构元素引用，特别是 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpatialZone.htm">IfcSpatialZone</a></em>。</p>
-<aside class="aside-change"><mark>IFC4 变更</mark> The relaxation to allow <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em> has been included.</aside>
+<aside class="aside-change"><mark>IFC4 变更</mark> 已包含允许使用 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpace.htm">IfcSpace</a></em> 的放宽规定。</aside>
 </td>
 </tr>
 <tr>
@@ -354,11 +354,11 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.57.C<a class="link" href="#-9c2d8fb5-3627-43c4-9215-c767b299b306"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.57.C<a class="link" href="#-e269abc3-4306-4adc-aca0-a365877c81ec"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.57.5-Concept-usage-"></a>
     5.4.3.57.5 概念用法（Concept usage）
 <a class="link" href="#5.4.3.57.5-Concept-usage-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-992fb44e-8faa-4da0-85bb-3a739e63bd16"></a><table class="striped grouped concepts">
+<figure><a class="anchor" id="-6d9b902b-b40f-4067-a192-2b4814d9c4e5"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>概念</th>
@@ -528,7 +528,7 @@
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 5.4.3.57.D<a class="link" href="#-992fb44e-8faa-4da0-85bb-3a739e63bd16"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 5.4.3.57.D<a class="link" href="#-6d9b902b-b40f-4067-a192-2b4814d9c4e5"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="5.4.3.57.6-Formal-representation-"></a>
     5.4.3.57.6 形式化表示（Formal representation）
 <a class="link" href="#5.4.3.57.6-Formal-representation-"><i data-feather="link"></i></a></h2>

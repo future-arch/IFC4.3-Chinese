@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251029 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -204,10 +204,10 @@
 <a class="link" href="#8.18.3.2.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
 <p><em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></em> 是通过限定标识符定义坐标参考系统的方式。接收软件应能正确解读该标识符的含义。</p>
 <!-- 简短定义结束 -->
-<aside class="aside-note"><mark>注释</mark> Definition from OpenGIS Abstract Specification, Topic 2:
-A coordinate reference system is a coordinate system which is related to the real world by a datum. The coordinate system is composed of a set of coordinate axes with specified units of measure. The datum specifies the relationship of a coordinate system to the earth. The resulting combination of coordinate system and datum is a coordinate reference system.</aside>
+<aside class="aside-note"><mark>注释</mark> 定义源自 OpenGIS 抽象规范主题2：
+坐标参照系是通过基准面与现实世界关联的坐标系。该坐标系由一组具有指定度量单位的坐标轴组成。基准面规定了坐标系与地球的关系。坐标系和基准面组合的结果即为坐标参照系。</aside>
 <p>坐标参考系统的明确标识符存储在 <em>Name</em> 属性中。明确定义的标识符包括大地测量基准和垂直基准，每个基准都有其自身的基准面。在这些情况下，可以省略 <em>GeodeticDatum</em>。</p>
-<aside class="aside-example"><mark>示例</mark> The code 'EPSG:5555' identifies the combination of <em>ETRS89 / UTM zone 32N + DHHN92 height</em> (i.e., a projected CRS + a vertical CRS). The code <strong>'EPSG:6258'</strong> identifies the <strong>geodetic datum</strong> of the projected CRS <em>ETRS89 / UTM zone 32N</em> (itself identified as EPSG:25832). The code <strong>'EPSG:5181'</strong> identifies the <strong>vertical datum</strong> of the vertical CRS <em>DHHN92 height</em> (itself identified as EPSG:5783).</aside><aside class="aside-note"><mark>注释</mark> One widely-used, publicly-available authority is the European Petroleum Survey Group (EPSG), and use of this authority is currently specified in several OGC Implementation Specifications. Software used to transport IFC engineering models into GIS applications (and vice versa) is expected to have knowledge about the OGC Implementation Specifications.</aside><aside class="aside-history"><mark>沿革</mark> New entity in IFC4.</aside>
+<aside class="aside-example"><mark>示例</mark> 代码'EPSG:5555'标识了<em>ETRS89 / UTM 32N 带 + DHHN92 高程</em>的组合（即投影CRS + 垂直CRS）。代码<strong>'EPSG:6258'</strong>标识了投影CRS <em>ETRS89 / UTM 32N 带</em>的<strong>大地基准面</strong>（其本身标识为EPSG:25832）。代码<strong>'EPSG:5181'</strong>标识了垂直CRS <em>DHHN92 高程</em>的<strong>垂直基准面</strong>（其本身标识为EPSG:5783）。</aside><aside class="aside-note"><mark>注释</mark> 欧洲石油调查组（EPSG）是一个广泛使用的公开授权机构，目前多个OGC实施规范中规定了该机构的使用标准。用于将IFC工程模型转换到GIS应用（或反向转换）的软件应掌握OGC实施规范的相关知识。</aside><aside class="aside-history"><mark>沿革</mark> IFC4新增实体。</aside>
 <h2><a class="anchor" id="8.18.3.2.2-Entity-inheritance-"></a>
     8.18.3.2.2 实体继承（Entity inheritance）
 <a class="link" href="#8.18.3.2.2-Entity-inheritance-"><i data-feather="link"></i></a></h2>
@@ -230,7 +230,7 @@ A coordinate reference system is a coordinate system which is related to the rea
     8.18.3.2.3 特性（Attributes）
 <a class="link" href="#8.18.3.2.3-Attributes-"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a class="anchor" id="-207f9595-66ce-445f-b586-dfb52381d599"></a><table class="striped grouped attributes">
+<figure><a class="anchor" id="-f7de02ac-497f-420c-b8e7-13302feb9ea0"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -252,12 +252,74 @@ A coordinate reference system is a coordinate system which is related to the rea
 <small>(5)</small>
 </td>
 </tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>用于标识坐标参考系统的名称。</p>
+<aside class="aside-note"><mark>注释</mark> 名称应从欧洲石油调查组EPSG认可的列表中选取，并通过EPSG命名空间进行限定，例如'EPSG:5555'。</aside><aside class="aside-note"><mark>注释</mark> <em>名称</em>应仅包含一个EPSG代码。当不存在能明确标识CRS的单一EPSG代码时，应使用_IfcWellKnownText_。不允许在<em>名称</em>中将多个EPSG代码组合成字符串（例如'EPSG:2056,EPSG:5728'）。</aside><aside class="aside-note"><mark>注释</mark> 若坐标参照系（CRS）不存在对应的EPSG代码，则名称应为'WKT'。此时应使用_IfcWellKnownText_实体进一步定义CRS。</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>此坐标参考系统的非正式描述。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                GeodeticDatum
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>用于标识此基准面的名称。大地测量基准与坐标参考系统相关联，表示旋转椭球体的形状和大小，以及该椭球体与实际地球的连接和方向。如果 <em>Name</em> 标识符没有明确定义大地测量基准，则需要提供此属性。</p>
+<aside class="aside-example"><mark>示例</mark> 大地基准面包括：</aside><blockquote>
+<p><strong>EPSG:6326</strong>（WGS84世界大地坐标系1984，用于GPS）；
+<strong>ED50</strong>（欧洲基准1950，亦标识为EPSG:6230）；
+<strong>EUREF89</strong>（欧洲陆地参考框架1989，亦标识为EPSG:1178）。</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasCoordinateOperation</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a> FOR SourceCRS</td>
+<td data-label="Description">
+<p>表示坐标参考系统之间的转换。特别是指此坐标参考系统与另一个坐标参考系统之间的 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>。</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>WellKnownText</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a> FOR CoordinateReferenceSystem</td>
+<td data-label="Description">
+<p>此坐标参考系统的已知文本（WKT）定义，以 <em><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcWellKnownText.htm">IfcWellKnownText</a></em> 实体形式反向关联。</p>
+</td>
+</tr>
 </tbody>
-</table><figcaption>表 8.18.3.2.A<a class="link" href="#-207f9595-66ce-445f-b586-dfb52381d599"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.2.A<a class="link" href="#-f7de02ac-497f-420c-b8e7-13302feb9ea0"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.2.4-Formal-propositions-"></a>
     8.18.3.2.4 形式化命题（Formal propositions）
 <a class="link" href="#8.18.3.2.4-Formal-propositions-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-409e0a53-2718-4c54-978f-06a0164bf674"></a><table>
+<figure><a class="anchor" id="-87da1179-388e-4a0c-8c9a-b2ab0c4c55f8"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -277,7 +339,7 @@ A coordinate reference system is a coordinate system which is related to the rea
 </td>
 </tr>
 </tbody>
-</table><figcaption>表 8.18.3.2.B<a class="link" href="#-409e0a53-2718-4c54-978f-06a0164bf674"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 8.18.3.2.B<a class="link" href="#-87da1179-388e-4a0c-8c9a-b2ab0c4c55f8"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a class="anchor" id="8.18.3.2.5-Formal-representation-"></a>
     8.18.3.2.5 形式化表示（Formal representation）
 <a class="link" href="#8.18.3.2.5-Formal-representation-"><i data-feather="link"></i></a></h2>
