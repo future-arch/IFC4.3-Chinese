@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -163,15 +163,15 @@
 <h2><a class="anchor" id="7.5.4.87.1-Semantic-definition-"></a>
     7.5.4.87.1 语义定义（Semantic definition）
 <a class="link" href="#7.5.4.87.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p>空间加热器类型通用属性。</p>
-<!-- 简短定义结束 -->
-<p>SoundLevel 属性已在 IFC2x2 Pset 增补中删除：请改用 IfcSoundProperties。属性已在 IFC4 中添加。</p>
+<p>空间加热器类型的通用特性。</p>
+<!-- end of short definition -->
+<p>SoundLevel 特性已在 IFC2x2 Pset Addendum 中删除：请使用 IfcSoundProperties。IFC4 中添加了特性。</p>
 <h2><a class="anchor" id="7.5.4.87.2-"></a>
     7.5.4.87.2 适用实体
 <a class="link" href="#7.5.4.87.2-"><i data-feather="link"></i></a></h2>
 <aside>
 <mark>PSET_TYPEDRIVENOVERRIDE</mark>
-    由此 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> 定义的属性集可以分配给 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTypeObject.htm">IfcTypeObject</a> 的子类型，并且可以被 <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcObject.htm">IfcObject</a> 子类型中同名的属性集覆盖。
+    None
 </aside>
 <ul>
 <li><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSpaceHeater.htm">IfcSpaceHeater</a></li>
@@ -180,7 +180,7 @@
 <h2><a class="anchor" id="7.5.4.87.3-"></a>
     7.5.4.87.3 属性
 <a class="link" href="#7.5.4.87.3-"><i data-feather="link"></i></a></h2>
-<figure><a class="anchor" id="-6a9203b4-b9ee-48f9-89fa-46c03c469d31"></a><table>
+<figure><a class="anchor" id="-d10db07e-313d-4c8e-b64d-683f66f2da01"></a><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -196,8 +196,10 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcIdentifier.htm">IfcIdentifier</a></td>
 <td>
-<p>此项目中指定类型的基准ID（例如类型"A-1"），也称为"构造类型"。如果软件不支持对象类型且未使用已认可分类系统的分类基准，则应作为"对象类型"名称的替代方案提供。</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0 弃用<a href="/IFC/RELEASE/IFC4x3/HTML/content/terms_and_definitions.htm#deprecation"><i data-feather="link"></i></a></mark> Reference属性已被弃用，不应再使用，请改用相关类型上的_Name_属性。</aside>
+<p>此项目中此指定类型的参考ID（例如类型'A-1'），也称为"构造类型"。如果软件不支持对象类型且未使用公认分类系统的分类参考，则应作为"对象类型"名称的替代提供。</p>
+<blockquote>
+<p>IFC4.3.0.0 弃用说明 Reference属性已弃用，不应再使用，请改用相关类型上的_Name_属性。</p>
+</blockquote>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Reference.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -206,7 +208,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_ElementStatus.htm">PEnum_ElementStatus</a></td>
 <td>
-<p>构件的状态，主要用于改造或翻新项目。状态可指定为"New"（新建）- 设计为新增构件，"Existing"（现有）- 构件已存在且保留，"Demolish"（拆除）- 构件已存在但将被拆除，"Temporary"（临时）- 构件仅临时存在（如临时支撑结构）。</p>
+<p>Status（状态）</p>
+<p>构件的状态，主要用于翻新或改造项目。状态可指定为“新建”（New）- 作为新增设计的构件，“现有”（Existing）- 构件存在并保留，“拆除”（Demolish）- 构件已存在但将被拆除，“临时”（Temporary）- 构件仅临时存在（如临时支撑结构）。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/Status.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -215,7 +218,8 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SpaceHeaterPlacementType.htm">PEnum_SpaceHeaterPlacementType</a></td>
 <td>
-<p>表示空间加热器的设计布置方式。</p>
+<p>SpaceHeaterPlacement（空间加热器布置）
+指示空间加热器的设计放置方式。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/SpaceHeaterPlacement.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -224,11 +228,9 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SpaceHeaterTemperatureClassification.htm">PEnum_SpaceHeaterTemperatureClassification</a></td>
 <td>
-<p>枚举定义空间加热器表面温度的温度分类。</p>
-<ul>
-<li>低温 - 表面温度相对较低，通常通过热水或电力加热。</li>
-<li>高温 - 表面温度相对较高，通常通过燃气或蒸汽加热。</li>
-</ul>
+<p>定义空间加热器表面温度分类的枚举。
+低温 - 表面温度相对较低，通常通过热水或电力加热。
+高温 - 表面温度相对较高，通常通过燃气或蒸汽加热。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/TemperatureClassification.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -237,7 +239,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_SpaceHeaterHeatTransferDimension.htm">PEnum_SpaceHeaterHeatTransferDimension</a></td>
 <td>
-<p>表示根据空间加热器的形状如何传递热量。</p>
+<p>根据空间加热器的形状指示热量如何传递。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/HeatTransferDimension.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -246,7 +248,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_HeatTransferMedium.htm">PEnum_HeatTransferMedium</a></td>
 <td>
-<p>枚举定义适用的传热介质类型。</p>
+<p>如果适用，定义传热介质的枚举。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/HeatTransferMedium.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -255,7 +257,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/PEnum_EnergySource.htm">PEnum_EnergySource</a></td>
 <td>
-<p>枚举定义燃烧的能源或燃料类型。</p><p>注：水力加热器应使用 UNSET；水力/电力双用加热器应使用 ELECTRICITY。</p>
+<p>定义能源或燃烧燃料的枚举。</p><p>注释：水力加热器应使用 UNSET；双用途水力/电加热器应使用 ELECTRICITY。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/EnergySource.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -264,7 +266,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMassMeasure.htm">IfcMassMeasure</a></td>
 <td>
-<p>加热器的整体主体质量。</p>
+<p>加热器的整体质量。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/BodyMass.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -291,7 +293,7 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
 <td>
-<p>整体热效率定义为传热设备的总能量输出除以能量输入。</p>
+<p>总热效率定义为传热装置的总能量输出除以能量输入。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/ThermalEfficiency.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -309,12 +311,12 @@
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCountMeasure.htm">IfcCountMeasure</a></td>
 <td>
-<p>段数。</p><p>垂直段数量，按流向测量。</p>
+<p>节的数量。</p><p>垂直段数，按流动方向测量。</p>
 </td>
 <td><a class="button" href="/IFC/RELEASE/IFC4x3/HTML/property/NumberOfSections.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
 </tbody>
-</table><figcaption>表 7.5.4.87.A<a class="link" href="#-6a9203b4-b9ee-48f9-89fa-46c03c469d31"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>表 7.5.4.87.A<a class="link" href="#-d10db07e-313d-4c8e-b64d-683f66f2da01"><i data-feather="link"></i></a></figcaption></figure>
 </div>
 <div class="col-md-2 rightpanel">
 <div class="card fluid shadowed">
