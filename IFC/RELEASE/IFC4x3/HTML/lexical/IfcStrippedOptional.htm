@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.2.20251011 (IFC4X3_ADD2)
+<p>IFC 4.3.2.20251030 (IFC4X3_ADD2)
                         
                             <small>under development</small>
 </p>
@@ -142,15 +142,15 @@
 <h2><a class="anchor" id="5.1.2.10.1-Semantic-definition-"></a>
     5.1.2.10.1 语义定义（Semantic definition）
 <a class="link" href="#5.1.2.10.1-Semantic-definition-"><i data-feather="link"></i></a></h2>
-<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a>（精简可选）是一种永远不会在实例化模型中实例化的类型，但用于确保交换模型的兼容性。</p>
-<!-- 简短定义结束 -->
-<p>IFC-SPF（Step物理文件；ISO 10303第21部分）依赖于仅在模式中定义而不在模型文件中定义的固定属性顺序。这在两种情况下会产生影响：</p>
+<p><a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a> 是一种永远不会在填充模型中实例化的类型，但它对交换模型的兼容性有意义。</p>
+<!-- end of short definition -->
+<p>IFC-SPF (Step Physical File; ISO 10303 part 21) 依赖于模式中定义的属性的固定顺序，而不是模型文件中定义的属性。这在两种情况下会产生影响：</p>
 <ul>
 <li>
-<p><strong>部分模式生成</strong> - 当某些实体树在特定交换中超出范围，并且此交换被形式化为EXPRESS模式时，指向超出范围类型的实体属性可以更改为<em>OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a></em>类型，以在实例化模型中保持与完整EXPRESS模式一致的属性顺序和数量。</p>
+<p><strong>部分模式生成</strong> - 当某些实体树在特定交换中超出范围时，并且此交换被形式化为 EXPRESS 模式时，指向超出范围类型的实体属性可以更改为 <em>OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a></em> 类型，以在填充模型中维护与完整 EXPRESS 模式一致的属性顺序和计数。</p>
 </li>
 <li>
-<p><strong>从模式中删除类型</strong> - 在极少数情况下，类型从模式中删除，而其他实体仍指向该类型。在这些情况下，指向已删除类型的实体属性可以更改为<em>OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a></em>类型，以在实例化模型中保持向后兼容的属性顺序和数量。</p>
+<p><strong>从模式中删除类型</strong> - 在极少数情况下，类型会从模式中删除，而其他实体仍然指向该类型。在这些情况下，指向已删除类型的实体属性可以更改为 <em>OPTIONAL <a href="/IFC/RELEASE/IFC4x3/HTML/lexical/IfcStrippedOptional.htm">IfcStrippedOptional</a></em> 类型，以在填充模型中维护向后兼容的属性顺序和计数。</p>
 </li>
 </ul>
 <h2><a class="anchor" id="5.1.2.10.2-Formal-representation-"></a>
