@@ -11,6 +11,19 @@
     }
 
     function initSearch() {
+        // 添加搜索结果高亮样式
+        const style = document.createElement('style');
+        style.textContent = `
+            /* 搜索结果中的关键词高亮样式 */
+            mark {
+                background-color: #e0e0e0;
+                color: inherit;
+                padding: 0 2px;
+                border-radius: 2px;
+            }
+        `;
+        document.head.appendChild(style);
+
         // 查找搜索表单
         const searchForm = document.querySelector('form.search');
         if (!searchForm) {
