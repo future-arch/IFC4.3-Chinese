@@ -30,27 +30,8 @@
             performSearch(searchInput.value.trim());
         });
 
-        // 实时搜索建议（可选）
-        let searchTimeout;
-        searchInput.addEventListener('input', function(e) {
-            clearTimeout(searchTimeout);
-            const query = e.target.value.trim();
-
-            if (query.length >= 2) {
-                searchTimeout = setTimeout(function() {
-                    showSearchSuggestions(query);
-                }, 300);
-            } else {
-                hideSearchSuggestions();
-            }
-        });
-
-        // 点击外部关闭建议
-        document.addEventListener('click', function(e) {
-            if (!searchForm.contains(e.target)) {
-                hideSearchSuggestions();
-            }
-        });
+        // 禁用实时搜索建议，避免冲突
+        // 实时搜索建议在 Pagefind 初始化时可能导致问题，暂时禁用
     }
 
     async function performSearch(query) {
@@ -86,31 +67,48 @@
         }
     }
 
+    // Pagefind 加载状态
+    let pagefindLoading = null;
+
     async function loadPagefind() {
-        // 动态加载 Pagefind
+        // 如果已经加载完成，直接返回
         if (window.pagefind) {
+            console.log('Pagefind 已加载，直接返回');
             return window.pagefind;
         }
 
-        try {
-            // 使用动态 import 加载 Pagefind 模块
-            console.log('开始加载 Pagefind...');
-            const pagefind = await import('/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js');
-
-            console.log('Pagefind 模块加载完成，开始初始化...');
-
-            // 初始化 Pagefind（这会自动检测和加载索引）
-            await pagefind.init();
-
-            console.log('Pagefind 初始化成功');
-
-            window.pagefind = pagefind;
-            return pagefind;
-        } catch(e) {
-            console.error('Pagefind 加载失败:', e);
-            console.error('错误堆栈:', e.stack);
-            throw new Error('无法加载 Pagefind: ' + e.message);
+        // 如果正在加载中，等待加载完成
+        if (pagefindLoading) {
+            console.log('Pagefind 正在加载中，等待...');
+            return await pagefindLoading;
         }
+
+        // 开始加载
+        console.log('开始加载 Pagefind...');
+        pagefindLoading = (async () => {
+            try {
+                // 使用动态 import 加载 Pagefind 模块
+                const pagefind = await import('/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js');
+                console.log('Pagefind 模块加载完成');
+                console.log('可用方法:', Object.keys(pagefind));
+
+                // 初始化 Pagefind
+                console.log('开始初始化 Pagefind...');
+                await pagefind.init();
+                console.log('Pagefind 初始化成功');
+
+                window.pagefind = pagefind;
+                return pagefind;
+            } catch(e) {
+                console.error('Pagefind 加载失败:', e);
+                console.error('错误详情:', e.message);
+                console.error('错误堆栈:', e.stack);
+                pagefindLoading = null; // 重置加载状态，允许重试
+                throw new Error('无法加载 Pagefind: ' + e.message);
+            }
+        })();
+
+        return await pagefindLoading;
     }
 
     function showSearchLoading() {
