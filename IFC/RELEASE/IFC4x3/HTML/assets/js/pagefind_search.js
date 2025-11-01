@@ -92,29 +92,25 @@
             return window.pagefind;
         }
 
-        const script = document.createElement('script');
-        script.type = 'module';  // 必须指定为模块类型
-        script.src = '/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js';
-        document.head.appendChild(script);
+        try {
+            // 使用动态 import 加载 Pagefind 模块
+            console.log('开始加载 Pagefind...');
+            const pagefind = await import('/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js');
 
-        return new Promise((resolve, reject) => {
-            script.onload = async function() {
-                // 等待 pagefind 初始化
-                let attempts = 0;
-                const checkPagefind = setInterval(() => {
-                    if (window.pagefind) {
-                        clearInterval(checkPagefind);
-                        resolve(window.pagefind);
-                    } else if (attempts++ > 50) {
-                        clearInterval(checkPagefind);
-                        reject(new Error('Pagefind 加载超时'));
-                    }
-                }, 100);
-            };
-            script.onerror = function() {
-                reject(new Error('无法加载 Pagefind'));
-            };
-        });
+            console.log('Pagefind 模块加载完成，开始初始化...');
+
+            // 初始化 Pagefind（这会自动检测和加载索引）
+            await pagefind.init();
+
+            console.log('Pagefind 初始化成功');
+
+            window.pagefind = pagefind;
+            return pagefind;
+        } catch(e) {
+            console.error('Pagefind 加载失败:', e);
+            console.error('错误堆栈:', e.stack);
+            throw new Error('无法加载 Pagefind: ' + e.message);
+        }
     }
 
     function showSearchLoading() {
