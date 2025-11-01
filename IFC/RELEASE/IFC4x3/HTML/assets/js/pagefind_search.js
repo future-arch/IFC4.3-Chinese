@@ -93,13 +93,23 @@
         }
 
         const script = document.createElement('script');
+        script.type = 'module';  // 必须指定为模块类型
         script.src = '/IFC/RELEASE/IFC4x3/HTML/pagefind/pagefind.js';
         document.head.appendChild(script);
 
         return new Promise((resolve, reject) => {
             script.onload = async function() {
-                await window.pagefind.init();
-                resolve(window.pagefind);
+                // 等待 pagefind 初始化
+                let attempts = 0;
+                const checkPagefind = setInterval(() => {
+                    if (window.pagefind) {
+                        clearInterval(checkPagefind);
+                        resolve(window.pagefind);
+                    } else if (attempts++ > 50) {
+                        clearInterval(checkPagefind);
+                        reject(new Error('Pagefind 加载超时'));
+                    }
+                }, 100);
             };
             script.onerror = function() {
                 reject(new Error('无法加载 Pagefind'));
